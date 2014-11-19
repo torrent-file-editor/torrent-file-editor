@@ -1,0 +1,151 @@
+#!Nsis Installer Command Script
+#
+# This is an NSIS Installer Command Script generated automatically
+# by the Fedora nsiswrapper program.  For more information see:
+#
+#   http://fedoraproject.org/wiki/MinGW
+#
+# To build an installer from the script you would normally do:
+#
+#   makensis this_script
+#
+# which will generate the output file 'installer.exe' which is a Windows
+# installer containing your program.
+
+!include MUI2.nsh
+!include FileFunc.nsh
+
+!define Name "Torrent File Editor"
+!define ExecName torrent-file-editor
+Name "Torrent File Editor"
+!ifdef WIN32
+InstallDir "$ProgramFiles\${Name}"
+OutFile "TorrentFileEditor-${Version}-x32.exe"
+!else
+InstallDir "$ProgramFiles64\${Name}"
+OutFile "TorrentFileEditor-${Version}-x64.exe"
+!endif
+InstallDirRegKey HKLM "SOFTWARE\${Name}" "Install_Dir"
+ShowInstDetails hide
+ShowUninstDetails hide
+
+# Uncomment this to enable BZip2 compression, which results in
+# slightly smaller files but uses more memory at install time.
+SetCompressor lzma
+RequestExecutionLevel admin
+XPStyle on
+
+!define MUI_PAGE_PRE preFunc
+!insertmacro MUI_PAGE_WELCOME
+!insertmacro MUI_PAGE_DIRECTORY
+!insertmacro MUI_PAGE_INSTFILES
+
+!define MUI_FINISHPAGE_NOAUTOCLOSE
+!define MUI_FINISHPAGE_RUN
+!define MUI_FINISHPAGE_RUN_CHECKED
+!define MUI_FINISHPAGE_RUN_TEXT "$(Start) ${Name}"
+!define MUI_FINISHPAGE_RUN_FUNCTION "LaunchLink"
+!insertmacro MUI_PAGE_FINISH
+
+!insertmacro MUI_UNPAGE_CONFIRM
+!insertmacro MUI_UNPAGE_INSTFILES
+!insertmacro MUI_UNPAGE_FINISH
+
+!insertmacro MUI_LANGUAGE "English"
+!insertmacro MUI_LANGUAGE "Russian"
+
+LangString Start ${LANG_ENGLISH} "Start"
+LangString Remove ${LANG_ENGLISH} "Remove"
+
+LangString Start ${LANG_RUSSIAN} "Запустить"
+LangString Remove ${LANG_RUSSIAN} "Удалить"
+
+!macro VerifyUserIsAdmin
+UserInfo::GetAccountType
+pop $0
+${If} $0 != "admin" ;Require admin rights on NT4+
+        messageBox mb_iconstop "Administrator rights required!"
+        setErrorLevel 740 ;ERROR_ELEVATION_REQUIRED
+        quit
+${EndIf}
+!macroend
+
+function .onInit
+	setShellVarContext all
+	!insertmacro VerifyUserIsAdmin
+functionEnd
+
+Section "${Name}"
+  SectionIn RO
+  SetOutPath "$INSTDIR"
+
+!ifdef WIN32
+    File "/usr/i686-w64-mingw32/sys-root/mingw/bin/QtCore4.dll"
+    File "/usr/i686-w64-mingw32/sys-root/mingw/bin/QtGui4.dll"
+    File "/usr/i686-w64-mingw32/sys-root/mingw/bin/libgcc_s_sjlj-1.dll"
+    File "/usr/i686-w64-mingw32/sys-root/mingw/bin/libpng16-16.dll"
+    File "/usr/i686-w64-mingw32/sys-root/mingw/bin/libstdc++-6.dll"
+    File "/usr/i686-w64-mingw32/sys-root/mingw/bin/zlib1.dll"
+    File "/usr/i686-w64-mingw32/sys-root/mingw/bin/libqjson.dll"
+    File "win32/${ExecName}.exe"
+!else
+    File "/usr/x86_64-w64-mingw32/sys-root/mingw/bin/QtCore4.dll"
+    File "/usr/x86_64-w64-mingw32/sys-root/mingw/bin/QtGui4.dll"
+    File "/usr/x86_64-w64-mingw32/sys-root/mingw/bin/libgcc_s_seh-1.dll"
+    File "/usr/x86_64-w64-mingw32/sys-root/mingw/bin/libpng16-16.dll"
+    File "/usr/x86_64-w64-mingw32/sys-root/mingw/bin/libstdc++-6.dll"
+    File "/usr/x86_64-w64-mingw32/sys-root/mingw/bin/zlib1.dll"
+    File "/usr/x86_64-w64-mingw32/sys-root/mingw/bin/libqjson.dll"
+    File "win64/${ExecName}.exe"
+!endif
+
+  SetOutPath "$INSTDIR"
+
+  WriteRegStr HKLM "SOFTWARE\${Name}" "Install_Dir" "$INSTDIR"
+
+  CreateDirectory "$SMPROGRAMS\${Name}"
+  CreateShortCut "$SMPROGRAMS\${Name}\$(Remove) ${Name}.lnk" "$INSTDIR\Uninstall ${ExecName}.exe" "" "$INSTDIR\Uninstall ${ExecName}.exe" 0
+  CreateShortCut "$SMPROGRAMS\${Name}\${Name}.lnk" "$INSTDIR\${ExecName}.exe" "" "" 0
+
+  CreateShortCut "$DESKTOP\${Name}.lnk" "$INSTDIR\${ExecName}.exe" "" "" 0
+SectionEnd
+
+function un.onInit
+	SetShellVarContext all
+	!insertmacro VerifyUserIsAdmin
+functionEnd
+ 
+Section "Uninstall"
+  Delete /rebootok "$DESKTOP\${Name}.lnk"
+  Delete /rebootok "$SMPROGRAMS\${Name}\${Name}.lnk"
+  Delete /rebootok "$SMPROGRAMS\${Name}\$(Remove) ${Name}.lnk"
+  RMDir "$SMPROGRAMS\${Name}"
+
+  Delete /rebootok "$INSTDIR\${ExecName}.exe"
+  Delete /rebootok "$INSTDIR\Uninstall ${ExecName}.exe"
+
+  Delete /rebootok "$INSTDIR\zlib1.dll"
+  Delete /rebootok "$INSTDIR\libstdc++-6.dll"
+  Delete /rebootok "$INSTDIR\libpng16-16.dll"
+  Delete /rebootok "$INSTDIR\QtGui4.dll"
+  Delete /rebootok "$INSTDIR\QtCore4.dll"
+  Delete /rebootok "$INSTDIR\libqjson.dll"
+!ifdef WIN32
+    Delete /rebootok "$INSTDIR\libgcc_s_sjlj-1.dll"
+!else
+    Delete /rebootok "$INSTDIR\libgcc_s_seh-1.dll"
+!endif
+  RMDir "$INSTDIR"
+
+  DeleteRegKey HKLM "SOFTWARE\${Name}"
+  DeleteRegKey /ifempty HKLM "SOFTWARE\${Name}"
+SectionEnd
+
+Section -post
+  WriteUninstaller "$INSTDIR\Uninstall ${ExecName}.exe"
+SectionEnd
+
+
+Function LaunchLink
+  ExecShell "" "$SMPROGRAMS\${Name}\${Name}.lnk"
+FunctionEnd

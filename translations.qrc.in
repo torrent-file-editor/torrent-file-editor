@@ -1,0 +1,6 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/translations">
+<file>./torrentfileeditor_en.qm</file>
+<file>./torrentfileeditor_ru.qm</file>
+</qresource>
+</RCC>

@@ -1,0 +1,55 @@
+/*
+ * Copyright (C) 2014  Ivan Romanov <drizt@land.ru>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+#include "folderedit.h"
+
+#include <QUrl>
+#include <QPushButton>
+#include <QApplication>
+#include <QStyle>
+#include <QFileDialog>
+
+FolderEdit::FolderEdit(QWidget *parent)
+    : LineEditWidget(parent)
+    , _pbOpenFolder(new QPushButton(this))
+{
+    _pbOpenFolder->setObjectName("pbOpenUrl");
+    _pbOpenFolder->setIcon(qApp->style()->standardIcon(QStyle::SP_DirOpenIcon));
+    _pbOpenFolder->setContentsMargins(0, 0, 0, 0);
+    _pbOpenFolder->setFocusPolicy(Qt::NoFocus);
+    _pbOpenFolder->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    _pbOpenFolder->setIconSize(QSize(16, 16));
+    _pbOpenFolder->setAutoFillBackground(true);
+    _pbOpenFolder->setCursor(Qt::PointingHandCursor);
+    _pbOpenFolder->resize(0, 0);
+    _pbOpenFolder->setFlat(true);
+    _pbOpenFolder->setToolTip(tr("Choose folder"));
+    addWidget(_pbOpenFolder);
+
+    connect(_pbOpenFolder, SIGNAL(clicked()), SLOT(openFolder()));
+}
+
+void FolderEdit::openFolder()
+{
+    QString path = QFileDialog::getExistingDirectory(this, tr("Add Folder"));
+    if (path.isEmpty())
+        return;
+
+    setText(path);
+    emit textEdited(path);
+}
