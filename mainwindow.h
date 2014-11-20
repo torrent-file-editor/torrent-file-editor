@@ -23,6 +23,7 @@
 #include <QMainWindow>
 
 class QProgressDialog;
+class QTextCodec;
 
 class Worker : public QObject
 {
@@ -77,6 +78,8 @@ public slots:
     void updateBencodeFromComment();
     void updateBencodeFromTrackers();
 
+    void updateEncoding(const QString &encoding);
+
     // Files tab
     void makeTorrent();
     void addFile();
@@ -90,6 +93,10 @@ public slots:
 
 private:
     enum Tabs { SimpleTab, FilesTab, RawTab, LogTab };
+
+    void fillCoding();
+    QString toUnicode(const QByteArray &encoded) const;
+    QByteArray fromUnicode(const QString &unicode) const;
 
     bool isModified() const;
     void updateTitle();
@@ -114,4 +121,5 @@ private:
     QProgressDialog *_progressDialog;
 
     static MainWindow *_instance;
+    QTextCodec *_textCodec;
 };

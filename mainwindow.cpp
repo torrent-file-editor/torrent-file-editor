@@ -34,6 +34,7 @@
 #include <QDirIterator>
 #include <QProgressDialog>
 #include <QThread>
+#include <QTextCodec>
 
 #include <qjson/serializer.h>
 #include <qjson/parser.h>
@@ -112,6 +113,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
     , _fileName(QString())
     , _progressDialog(new QProgressDialog(this))
+    , _textCodec(QTextCodec::codecForName("UTF-8"))
 {
     ui->setupUi(this);
 
@@ -156,6 +158,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->btnAbout->setIcon(qApp->style()->standardIcon(QStyle::SP_MessageBoxQuestion));
 
+    fillCoding();
     updateFilesSize();
 }
 
@@ -265,6 +268,53 @@ void MainWindow::openUrl()
         QDesktopServices::openUrl(url);
 }
 
+// Take from qmmp
+void MainWindow::fillCoding()
+{
+    QMap<QString, QTextCodec*> codecMap;
+    QRegExp iso8859RegExp("ISO[- ]8859-([0-9]+).*");
+
+    foreach (int mib, QTextCodec::availableMibs())
+    {
+        QTextCodec *codec = QTextCodec::codecForMib(mib);
+
+        QString sortKey = codec->name().toUpper();
+        int rank;
+
+        if (sortKey.startsWith("UTF-8")) {
+            rank = 1;
+        }
+        else if (sortKey.startsWith("UTF-16")) {
+            rank = 2;
+        }
+        else if (iso8859RegExp.exactMatch(sortKey)) {
+            if (iso8859RegExp.cap(1).size() == 1)
+                rank = 3;
+            else
+                rank = 4;
+        }
+        else {
+            rank = 5;
+        }
+        sortKey.prepend(QChar('0' + rank));
+        codecMap.insert(sortKey, codec);
+    }
+
+    foreach (QTextCodec *textCodec, codecMap.values()) {
+        ui->cmbCoding->addItem(textCodec->name());
+    }
+}
+
+QString MainWindow::toUnicode(const QByteArray &encoded) const
+{
+    return _textCodec->toUnicode(encoded);
+}
+
+QByteArray MainWindow::fromUnicode(const QString &unicode) const
+{
+    return _textCodec->fromUnicode(unicode);
+}
+
 bool MainWindow::isModified() const
 {
     return _bencode != _originBencode;
@@ -301,7 +351,7 @@ void MainWindow::updateBencodeFromSimple()
     // checkAndFixBencode();
 
     if (!ui->leUrl->text().toUtf8().isEmpty()) {
-        _bencode["publisher-url"] = ui->leUrl->text().toUtf8();
+        _bencode["publisher-url"] = fromUnicode(ui->leUrl->text());
     }
     else {
         _bencode.dictionary.remove("publisher-url");
@@ -309,21 +359,21 @@ void MainWindow::updateBencodeFromSimple()
 
 
     if (!ui->lePublisher->text().toUtf8().isEmpty()) {
-        _bencode["publisher"] = ui->lePublisher->text().toUtf8();
+        _bencode["publisher"] = fromUnicode(ui->lePublisher->text());
     }
     else {
         _bencode.dictionary.remove("publisher");
     }
 
     if (!ui->leCreatedBy->text().toUtf8().isEmpty()) {
-        _bencode["created by"] = ui->leCreatedBy->text().toUtf8();
+        _bencode["created by"] = fromUnicode(ui->leCreatedBy->text());
     }
     else {
         _bencode.dictionary.remove("created by");
     }
 
     if (!ui->leName->text().toUtf8().isEmpty()) {
-        _bencode["info"]["name"] = ui->leName->text().toUtf8();
+        _bencode["info"]["name"] = fromUnicode(ui->leName->text());
     }
     else {
         _bencode["info"].dictionary.remove("name");
@@ -349,7 +399,7 @@ void MainWindow::updateBencodeFromSimple()
 void MainWindow::updateBencodeFromComment()
 {
     if (!ui->pteComment->toPlainText().toUtf8().isEmpty()) {
-        _bencode["comment"] = ui->pteComment->toPlainText().toUtf8();
+        _bencode["comment"] = fromUnicode(ui->pteComment->toPlainText());
     }
     else {
         _bencode.dictionary.remove("comment");
@@ -371,7 +421,7 @@ void MainWindow::updateBencodeFromTrackers()
 
         QList<Bencode> list;
         list << Bencode();
-        list[0] = tracker.toUtf8();
+        list[0] = fromUnicode(tracker);
         int size = _bencode.dictionary["announce-list"].list.size();
         _bencode.dictionary["announce-list"].list << Bencode();
         _bencode.dictionary["announce-list"][size] = list;
@@ -386,6 +436,16 @@ void MainWindow::updateBencodeFromTrackers()
     }
 
     updateTitle();
+}
+
+void MainWindow::updateEncoding(const QString &encoding)
+{
+    _textCodec = QTextCodec::codecForName(encoding.toUtf8());
+    updateSimple();
+
+    QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->viewFiles->model());
+    model->removeRows(0, model->rowCount());
+    updateFiles();
 }
 
 void MainWindow::makeTorrent()
@@ -450,10 +510,10 @@ void MainWindow::makeTorrent()
         QString file = files.first();
 
         _bencode["info"]["length"] = totalSize;
-        _bencode["info"]["name"] = QFileInfo(file).fileName().toUtf8();
+        _bencode["info"]["name"] = fromUnicode(QFileInfo(file).fileName());
     }
     else {
-        _bencode["info"]["name"] = baseDir.dirName().toUtf8();
+        _bencode["info"]["name"] = fromUnicode(baseDir.dirName());
 
         _bencode["info"]["files"] = BencodeList();
         foreach (const QString &file, files) {
@@ -462,7 +522,7 @@ void MainWindow::makeTorrent()
             QStringList pathList = baseDir.relativeFilePath(file).split("/");
             fileItem["path"] = BencodeList();
             foreach (const QString &path, pathList) {
-                fileItem["path"].list << path.toUtf8();
+                fileItem["path"].list << fromUnicode(path);
             }
             _bencode["info"]["files"].list << fileItem;
         }
@@ -591,7 +651,7 @@ void MainWindow::updateFiles()
 
         // Torrent contains only one file
         if (!_bencode["info"].dictionary.contains("files")) {
-            QString baseName = QString::fromUtf8(_bencode["info"]["name"].string);
+            QString baseName = toUnicode(_bencode["info"]["name"].string);
             QList<QStandardItem*> list;
             list << new QStandardItem(baseName);
             list << new QStandardItem(smartSize(_bencode["info"]["length"].integer));
@@ -602,7 +662,7 @@ void MainWindow::updateFiles()
             foreach (const Bencode &item, list) {
                 QStringList path;
                 foreach (const Bencode &pathItem, item.dictionary["path"].list) {
-                    path << QString::fromUtf8(pathItem.string);
+                    path << toUnicode(pathItem.string);
                 }
 
                 QList<QStandardItem*> list2;
@@ -657,32 +717,32 @@ void MainWindow::updateSimple()
     qApp->processEvents();
 
     if (_bencode.dictionary.contains("publisher-url"))
-        ui->leUrl->setText(QString::fromUtf8(_bencode.dictionary["publisher-url"].string));
+        ui->leUrl->setText(toUnicode(_bencode.dictionary["publisher-url"].string));
     else
         ui->leUrl->setText("");
 
     if (_bencode.dictionary.contains("publisher"))
-        ui->lePublisher->setText(QString::fromUtf8(_bencode.dictionary["publisher"].string));
+        ui->lePublisher->setText(toUnicode(_bencode.dictionary["publisher"].string));
     else
         ui->lePublisher->setText("");
 
     if (_bencode.dictionary.contains("created by"))
-        ui->leCreatedBy->setText(QString::fromUtf8(_bencode.dictionary["created by"].string));
+        ui->leCreatedBy->setText(toUnicode(_bencode.dictionary["created by"].string));
     else
         ui->leCreatedBy->setText("");
 
     if (_bencode.dictionary.contains("publisher-url"))
-        ui->leUrl->setText(QString::fromUtf8(_bencode.dictionary["publisher-url"].string));
+        ui->leUrl->setText(toUnicode(_bencode.dictionary["publisher-url"].string));
     else
         ui->leUrl->setText("");
 
     if (_bencode.dictionary.contains("comment"))
-        ui->pteComment->setPlainText(QString::fromUtf8(_bencode.dictionary["comment"].string));
+        ui->pteComment->setPlainText(toUnicode(_bencode.dictionary["comment"].string));
     else
         ui->pteComment->setPlainText("");
 
     if (_bencode.dictionary.contains("info") && _bencode.dictionary["info"].dictionary.contains("name"))
-        ui->leName->setText(QString::fromUtf8(_bencode.dictionary["info"].dictionary["name"].string));
+        ui->leName->setText(toUnicode(_bencode.dictionary["info"].dictionary["name"].string));
     else
         ui->leName->setText("");
 
@@ -708,12 +768,12 @@ void MainWindow::updateSimple()
 
     foreach (const Bencode &bencode, list) {
         if (bencode.isList() && bencode.list.size() == 1 && bencode.list.at(0).isString())
-            trackers << QString::fromUtf8(bencode.list.at(0).string);
+            trackers << toUnicode(bencode.list.at(0).string);
     }
 
     if (trackers.isEmpty()) {
         if (_bencode.dictionary.contains("announce") &&  _bencode.dictionary["announce"].isString())
-            trackers << QString::fromUtf8(_bencode.dictionary["announce"].string);
+            trackers << toUnicode(_bencode.dictionary["announce"].string);
     }
 
 
