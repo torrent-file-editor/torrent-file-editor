@@ -39,7 +39,7 @@
 #include <qjson/serializer.h>
 #include <qjson/parser.h>
 
-#define APP_NAME "Torrent File Editor beta"
+#define APP_NAME "Torrent File Editor beta2"
 
 Worker::Worker()
     : QObject()
