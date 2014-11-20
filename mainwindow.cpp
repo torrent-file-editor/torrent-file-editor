@@ -350,7 +350,7 @@ void MainWindow::updateBencodeFromSimple()
 {
     // checkAndFixBencode();
 
-    if (!ui->leUrl->text().toUtf8().isEmpty()) {
+    if (!ui->leUrl->text().isEmpty()) {
         _bencode["publisher-url"] = fromUnicode(ui->leUrl->text());
     }
     else {
@@ -358,21 +358,21 @@ void MainWindow::updateBencodeFromSimple()
     }
 
 
-    if (!ui->lePublisher->text().toUtf8().isEmpty()) {
+    if (!ui->lePublisher->text().isEmpty()) {
         _bencode["publisher"] = fromUnicode(ui->lePublisher->text());
     }
     else {
         _bencode.dictionary.remove("publisher");
     }
 
-    if (!ui->leCreatedBy->text().toUtf8().isEmpty()) {
+    if (!ui->leCreatedBy->text().isEmpty()) {
         _bencode["created by"] = fromUnicode(ui->leCreatedBy->text());
     }
     else {
         _bencode.dictionary.remove("created by");
     }
 
-    if (!ui->leName->text().toUtf8().isEmpty()) {
+    if (!ui->leName->text().isEmpty()) {
         _bencode["info"]["name"] = fromUnicode(ui->leName->text());
     }
     else {
@@ -398,7 +398,7 @@ void MainWindow::updateBencodeFromSimple()
 
 void MainWindow::updateBencodeFromComment()
 {
-    if (!ui->pteComment->toPlainText().toUtf8().isEmpty()) {
+    if (!ui->pteComment->toPlainText().isEmpty()) {
         _bencode["comment"] = fromUnicode(ui->pteComment->toPlainText());
     }
     else {
