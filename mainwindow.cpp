@@ -39,7 +39,7 @@
 #include <qjson/serializer.h>
 #include <qjson/parser.h>
 
-#define APP_NAME "Torrent File Editor beta2"
+#define APP_NAME "Torrent File Editor beta3"
 
 Worker::Worker()
     : QObject()
@@ -258,7 +258,9 @@ void MainWindow::saveAs()
 
 void MainWindow::showAbout()
 {
-    AboutDlg(this).exec();
+    AboutDlg dlg(this);
+    dlg.setWindowTitle(QString(tr("About %1")).arg(APP_NAME));
+    dlg.exec();
 }
 
 void MainWindow::openUrl()
