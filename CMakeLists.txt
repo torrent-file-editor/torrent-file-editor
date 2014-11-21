@@ -45,7 +45,16 @@ qt4_add_resources(QRC_SOURCES ${RESOURCES})
 qt4_wrap_cpp(MOC_SOURCES ${HEADERS})
 qt4_wrap_ui(UI_SOURCES ${FORMS})
 
+if(WIN32)
+  add_definitions(-DQT_NODLL)
+  add_definitions(-DQJSON_STATIC)
+
+  set(START_STATIC -Wl,-Bstatic)
+  set(END_STATIC z jpeg png tiff stdc++ -Wl,-Bdynamic  ws2_32 winmm imm32)
+  set(QJSON_LIBRARIES qjson.a)
+endif()
+
 add_executable(${PROJECT_NAME} WIN32 ${QM} ${HEADERS} ${SOURCES} ${MOC_SOURCES} ${QRC_SOURCES} ${UI_SOURCES})
-target_link_libraries(${PROJECT_NAME} ${QT_LIBRARIES} ${QJSON_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} ${START_STATIC} ${QJSON_LIBRARIES} ${START_STATIC} ${QT_LIBRARIES} ${END_STATIC})
 
 add_subdirectory(translations)
