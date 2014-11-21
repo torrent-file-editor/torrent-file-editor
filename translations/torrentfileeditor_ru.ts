@@ -181,7 +181,7 @@
     <message>
         <location filename="../mainwindow.ui" line="320"/>
         <location filename="../linux/ui_mainwindow.h" line="590"/>
-        <location filename="../mainwindow.cpp" line="556"/>
+        <location filename="../mainwindow.cpp" line="558"/>
         <source>Add Folder</source>
         <translation>Добавить папку</translation>
     </message>
@@ -309,58 +309,63 @@
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="465"/>
-        <location filename="../mainwindow.cpp" line="470"/>
+        <location filename="../mainwindow.cpp" line="262"/>
+        <source>About %1</source>
+        <translation>О программе %1</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="467"/>
+        <location filename="../mainwindow.cpp" line="472"/>
         <source>Warning</source>
         <translation>Предупреждение</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="465"/>
+        <location filename="../mainwindow.cpp" line="467"/>
         <source>Can&apos;t make torrent for file without full path. Need to set base folder.</source>
         <translation>Невозможно создать торрент для файла без полного пути. Необходимо выбрать базовую папку.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="470"/>
+        <location filename="../mainwindow.cpp" line="472"/>
         <source>Base folder is not common.</source>
         <translation>Базовая папка не общая для всех файлов.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="534"/>
+        <location filename="../mainwindow.cpp" line="536"/>
         <source>Add File</source>
         <translation>Добавить файл</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="711"/>
+        <location filename="../mainwindow.cpp" line="713"/>
         <source>Line: %1 of %2 Col: %3</source>
         <translation>Строка: %1 из %2 Кол: %3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="804"/>
+        <location filename="../mainwindow.cpp" line="806"/>
         <source>Error on %1 line: %2</source>
         <translation>Ошибка в строке %1: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="914"/>
+        <location filename="../mainwindow.cpp" line="916"/>
         <source>B</source>
         <translation>Б</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="918"/>
+        <location filename="../mainwindow.cpp" line="920"/>
         <source>KiB</source>
         <translation>КБ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="922"/>
+        <location filename="../mainwindow.cpp" line="924"/>
         <source>MiB</source>
         <translation>МБ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="926"/>
+        <location filename="../mainwindow.cpp" line="928"/>
         <source>GiB</source>
         <translation>ГБ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="930"/>
+        <location filename="../mainwindow.cpp" line="932"/>
         <source>TiB</source>
         <translation>ТБ</translation>
     </message>
