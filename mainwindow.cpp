@@ -205,18 +205,15 @@ void MainWindow::create()
     ui->cmbPieceSizes->setCurrentIndex(0);
 }
 
-void MainWindow::open()
+void MainWindow::open(const QString &fileName)
 {
-    _fileName = QFileDialog::getOpenFileName(this, tr("Open"), "", tr("Torrents (*.torrent)"));
-
-     if (_fileName.isEmpty())
-        return;
-
-    QFile file(_fileName);
+    QFile file(fileName);
     if (!file.open(QIODevice::ReadOnly)) {
         QMessageBox::warning(this, tr("Error"), tr("Can't open file"));
         return;
     }
+
+    _fileName = fileName;
 
     _originBencode = _bencode = Bencode::fromRaw(file.readAll());
     file.close();
@@ -227,6 +224,16 @@ void MainWindow::open()
     QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->viewFiles->model());
     model->removeRows(0, model->rowCount());
     updateFiles();
+}
+
+void MainWindow::open()
+{
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open"), "", tr("Torrents (*.torrent)"));
+
+    if (fileName.isEmpty())
+        return;
+
+    open(fileName);
 }
 
 void MainWindow::save()

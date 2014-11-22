@@ -21,6 +21,7 @@
 #include <QApplication>
 #include <QTranslator>
 #include <QLocale>
+#include <QFile>
 
 #ifdef HAVE_QT5
 void debugHandler(QtMsgType type, const QMessageLogContext &context, const QString &msg)
@@ -54,6 +55,9 @@ int main(int argc, char *argv[])
 
     MainWindow w;
     w.show();
+
+    if (argc == 2 && QFile::exists(argv[1]))
+        w.open(argv[1]);
 
     return a.exec();
 }

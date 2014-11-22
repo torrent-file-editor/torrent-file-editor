@@ -64,6 +64,7 @@ signals:
 
 public slots:
     void create();
+    void open(const QString &fileName);
     void open();
     void save();
     void saveAs();
