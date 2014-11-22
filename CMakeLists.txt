@@ -1,10 +1,27 @@
 project(torrent-file-editor)
 cmake_minimum_required(VERSION 2.8.11)
 include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
-find_package(Qt4 REQUIRED)
-find_package(QJSON REQUIRED)
 
-include(${QT_USE_FILE})
+option(QT5_BUILD OFF "Force Qt5 build")
+
+if(QT5_BUILD)
+  find_package(Qt5Core REQUIRED)
+  find_package(Qt5Gui REQUIRED)
+  find_package(Qt5Widgets REQUIRED)
+  find_package(Qt5LinguistTools REQUIRED)
+
+  include_directories(${Qt5Core_INCLUDE_DIRS})
+  include_directories(${Qt5Gui_INCLUDE_DIRS})
+  include_directories(${Qt5Widgets_INCLUDE_DIRS})
+  add_definitions(${Qt5Core_DEFINITIONS})
+  add_definitions(${Qt5Gui_DEFINITIONS})
+  add_definitions(${Qt5Widgets_DEFINITIONS})
+  add_definitions(-DHAVE_QT5)
+else()
+  find_package(Qt4 REQUIRED)
+  find_package(QJSON REQUIRED)
+  include(${QT_USE_FILE})
+endif()
 
 configure_file(translations.qrc.in translations.qrc COPYONLY)
 
@@ -39,11 +56,17 @@ set(RESOURCES
   ${CMAKE_BINARY_DIR}/translations.qrc
   resources.qrc)
 
-QT4_ADD_TRANSLATION(QM ${TRANSLATIONS})
-
-qt4_add_resources(QRC_SOURCES ${RESOURCES})
-qt4_wrap_cpp(MOC_SOURCES ${HEADERS})
-qt4_wrap_ui(UI_SOURCES ${FORMS})
+if(QT5_BUILD)
+  qt5_add_translation(QM ${TRANSLATIONS})
+  qt5_add_resources(QRC_SOURCES ${RESOURCES})
+  qt5_wrap_cpp(MOC_SOURCES ${HEADERS})
+  qt5_wrap_ui(UI_SOURCES ${FORMS})
+else()
+  QT4_ADD_TRANSLATION(QM ${TRANSLATIONS})
+  qt4_add_resources(QRC_SOURCES ${RESOURCES})
+  qt4_wrap_cpp(MOC_SOURCES ${HEADERS})
+  qt4_wrap_ui(UI_SOURCES ${FORMS})
+endif()
 
 if(WIN32)
   add_definitions(-DQT_NODLL)
@@ -61,6 +84,11 @@ if(WIN32)
 endif()
 
 add_executable(${PROJECT_NAME} WIN32 ${QM} ${HEADERS} ${SOURCES} ${MOC_SOURCES} ${QRC_SOURCES} ${UI_SOURCES})
-target_link_libraries(${PROJECT_NAME} ${START_STATIC} ${QJSON_LIBRARIES} ${START_STATIC} ${QT_LIBRARIES} ${END_STATIC})
+
+if(QT5_BUILD)
+  target_link_libraries(${PROJECT_NAME} ${START_STATIC} ${Qt5Core_LIBRARIES} ${Qt5Gui_LIBRARIES} ${Qt5Widgets_LIBRARIES}  ${END_STATIC})
+else()
+  target_link_libraries(${PROJECT_NAME} ${START_STATIC} ${QJSON_LIBRARIES} ${START_STATIC} ${QT_LIBRARIES} ${END_STATIC})
+endif()
 
 add_subdirectory(translations)

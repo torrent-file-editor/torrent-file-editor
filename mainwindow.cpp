@@ -36,8 +36,12 @@
 #include <QThread>
 #include <QTextCodec>
 
-#include <qjson/serializer.h>
-#include <qjson/parser.h>
+#ifdef HAVE_QT5
+# include <QJsonDocument>
+#else
+# include <qjson/serializer.h>
+# include <qjson/parser.h>
+#endif
 
 #define APP_NAME "Torrent File Editor beta4"
 
@@ -139,9 +143,13 @@ MainWindow::MainWindow(QWidget *parent)
     model->horizontalHeaderItem(1)->setTextAlignment(Qt::AlignLeft);
 
     ui->viewFiles->setModel(model);
+#ifdef HAVE_QT5
+    ui->viewFiles->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->viewFiles->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
+#else
     ui->viewFiles->horizontalHeader()->setResizeMode(QHeaderView::ResizeToContents);
-
     ui->viewFiles->verticalHeader()->setResizeMode(QHeaderView::Fixed);
+#endif
 
     ui->btnNew->setIcon(QIcon(":/icons/text-x-generic.png"));
     ui->btnOpen->setIcon(qApp->style()->standardIcon(QStyle::SP_DialogOpenButton));
@@ -804,15 +812,23 @@ void MainWindow::updateBencodeFromRaw()
         return;
     }
 
-    QByteArray ba = ui->pteEditor->toPlainText().toUtf8();
+    QByteArray ba = ui->pteEditor->toPlainText().toLatin1();
+#ifdef HAVE_QT5
+    QJsonParseError error;
+    QVariant variant = QJsonDocument::fromJson(ba, &error).toVariant();
+    if (error.error) {
+        ui->lblRawError->setText(QString(tr("Error on %1 line: %2")).arg(error.offset).arg(error.errorString()));
+        return;
+    }
+#else
     QJson::Parser parser;
-
     bool ok;
     QVariant variant = parser.parse(ba, &ok);
     if (!ok) {
         ui->lblRawError->setText(QString(tr("Error on %1 line: %2")).arg(parser.errorLine()).arg(parser.errorString()));
         return;
     }
+#endif
 
     ui->lblRawError->setText("");
     _bencode = Bencode::fromJson(variant);
@@ -830,12 +846,14 @@ void MainWindow::updateRaw()
     }
 
     QVariant res = _bencode.toJson();
-
+#ifdef HAVE_QT5
+    QByteArray ba = QJsonDocument::fromVariant(res).toJson();
+#else
     QJson::Serializer serializer;
     serializer.setIndentMode(QJson::IndentFull);
     QByteArray ba = serializer.serialize(res);
-
-    ui->pteEditor->setPlainText(ba);
+#endif
+    ui->pteEditor->setPlainText(QString::fromLatin1(ba));
 }
 
 void MainWindow::checkAndFixBencode()
