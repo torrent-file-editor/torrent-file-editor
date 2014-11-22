@@ -137,6 +137,9 @@
                 <height>16777215</height>
                </size>
               </property>
+              <property name="focusPolicy">
+               <enum>Qt::ClickFocus</enum>
+              </property>
               <property name="maxLength">
                <number>40</number>
               </property>
@@ -224,6 +227,9 @@
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="focusPolicy">
+               <enum>Qt::ClickFocus</enum>
+              </property>
               <property name="readOnly">
                <bool>true</bool>
               </property>
@@ -236,6 +242,9 @@
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::ClickFocus</enum>
               </property>
               <property name="readOnly">
                <bool>true</bool>
@@ -258,7 +267,11 @@
               </widget>
              </item>
              <item>
-              <widget class="QPlainTextEdit" name="pteComment"/>
+              <widget class="QPlainTextEdit" name="pteComment">
+               <property name="tabChangesFocus">
+                <bool>true</bool>
+               </property>
+              </widget>
              </item>
             </layout>
            </widget>
@@ -272,7 +285,11 @@
               </widget>
              </item>
              <item>
-              <widget class="QPlainTextEdit" name="pteTrackers"/>
+              <widget class="QPlainTextEdit" name="pteTrackers">
+               <property name="tabChangesFocus">
+                <bool>true</bool>
+               </property>
+              </widget>
              </item>
             </layout>
            </widget>
@@ -393,6 +410,9 @@
           <property name="editTriggers">
            <set>QAbstractItemView::NoEditTriggers</set>
           </property>
+          <property name="tabKeyNavigation">
+           <bool>false</bool>
+          </property>
           <property name="selectionBehavior">
            <enum>QAbstractItemView::SelectRows</enum>
           </property>
@@ -443,6 +463,9 @@
               <width>80</width>
               <height>16777215</height>
              </size>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::ClickFocus</enum>
             </property>
             <property name="readOnly">
              <bool>true</bool>
@@ -578,6 +601,38 @@
    <header>folderedit.h</header>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>btnNew</tabstop>
+  <tabstop>btnOpen</tabstop>
+  <tabstop>btnSave</tabstop>
+  <tabstop>btnSaveAs</tabstop>
+  <tabstop>cmbCoding</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>leName</tabstop>
+  <tabstop>leUrl</tabstop>
+  <tabstop>lePublisher</tabstop>
+  <tabstop>leCreatedBy</tabstop>
+  <tabstop>dateCreated</tabstop>
+  <tabstop>lePieceSize</tabstop>
+  <tabstop>lePieces</tabstop>
+  <tabstop>leHash</tabstop>
+  <tabstop>pteComment</tabstop>
+  <tabstop>pteTrackers</tabstop>
+  <tabstop>btnAbout</tabstop>
+  <tabstop>btnMakeTorrent</tabstop>
+  <tabstop>btnAddFile</tabstop>
+  <tabstop>btnAddFolder</tabstop>
+  <tabstop>btnRemoveFiles</tabstop>
+  <tabstop>btnUpFile</tabstop>
+  <tabstop>btnDownFile</tabstop>
+  <tabstop>viewFiles</tabstop>
+  <tabstop>cmbPieceSizes</tabstop>
+  <tabstop>leTotalSize</tabstop>
+  <tabstop>leBaseFolder</tabstop>
+  <tabstop>pteEditor</tabstop>
+  <tabstop>pteLog</tabstop>
+  <tabstop>pushButton_4</tabstop>
+ </tabstops>
  <resources>
   <include location="resources.qrc"/>
  </resources>
