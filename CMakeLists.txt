@@ -52,6 +52,12 @@ if(WIN32)
   set(START_STATIC -Wl,-Bstatic)
   set(END_STATIC z jpeg png tiff stdc++ -Wl,-Bdynamic  ws2_32 winmm imm32)
   set(QJSON_LIBRARIES qjson.a)
+
+  # resource compilation for MinGW
+  add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/app.o
+                     COMMAND ${CMAKE_RC_COMPILER} -I${CMAKE_CURRENT_SOURCE_DIR} -i${CMAKE_CURRENT_SOURCE_DIR}/app.rc
+                             -o ${CMAKE_CURRENT_BINARY_DIR}/app.o)
+  set(SOURCES ${SOURCES} ${CMAKE_CURRENT_BINARY_DIR}/app.o)
 endif()
 
 add_executable(${PROJECT_NAME} WIN32 ${QM} ${HEADERS} ${SOURCES} ${MOC_SOURCES} ${QRC_SOURCES} ${UI_SOURCES})

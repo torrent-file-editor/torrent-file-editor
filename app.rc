@@ -1,0 +1,30 @@
+# if defined(UNDER_CE)
+#  include <winbase.h>
+# else
+#  include <winver.h>
+# endif
+
+TORRENT_FILE_EDITOR_ICON ICON DISCARDABLE "icons/app.ico"
+
+VS_VERSION_INFO VERSIONINFO
+	FILEVERSION 0,0,0,1
+	PRODUCTVERSION 0,0,0,1
+	FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+	FILEFLAGS VS_FF_DEBUG
+#else
+	FILEFLAGS 0x0L
+#endif
+	FILEOS VOS__WINDOWS32
+	FILETYPE VFT_APP
+	FILESUBTYPE 0x0L
+	BEGIN
+		BLOCK "StringFileInfo"
+		BEGIN
+			BLOCK "040904B0"
+			BEGIN
+				VALUE "FileVersion", "beta4\0"
+			END
+		END
+	END
+/* End of Version info */
