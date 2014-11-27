@@ -67,6 +67,7 @@ public:
 
     static Bencode fromRaw(const QByteArray &raw);
     static Bencode fromJson(const QVariant &json);
+    static QString typeToStr(Type type);
 
     Bencode &operator=(qlonglong integer);
     Bencode &operator=(const QByteArray &string);

@@ -21,6 +21,7 @@
 #include "bencode.h"
 
 #include <QMainWindow>
+#include <QStandardItem>
 
 class QProgressDialog;
 class QTextCodec;
@@ -79,6 +80,8 @@ public slots:
     void updateBencodeFromComment();
     void updateBencodeFromTrackers();
 
+    void updateBencodeFromJsonTree();
+
     void updateEncoding(const QString &encoding);
 
     // Files tab
@@ -92,8 +95,14 @@ public slots:
     void setPieces(const QByteArray &pieces);
     void updateRawPosition();
 
+    // Tree tab
+    void addTreeItem();
+    void removeTreeItem();
+    void upTreeItem();
+    void downTreeItem();
+
 private:
-    enum Tabs { SimpleTab, FilesTab, RawTab, LogTab };
+    enum Tabs { SimpleTab, FilesTab, JsonTreeTab, RawTab, LogTab };
 
     void fillCoding();
     QString toUnicode(const QByteArray &encoded) const;
@@ -104,6 +113,9 @@ private:
 
     void updateSimple();
     void updateRaw();
+    void updateJsonTree();
+    void bencodeToStandardItem(QStandardItem *parent, const Bencode &bencode);
+    void standardItemToBencode(Bencode &parent, QStandardItem *item);
 
     void checkAndFixBencode();
 

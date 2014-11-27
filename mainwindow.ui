@@ -486,6 +486,89 @@
         </item>
        </layout>
       </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>Tree</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QToolButton" name="btnAddTreeItem">
+            <property name="toolTip">
+             <string>Add Tree Item</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="btnRemoveTreeItem">
+            <property name="toolTip">
+             <string>Remove Tree Items</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="btnUpTreeItem">
+            <property name="toolTip">
+             <string>Up List Item</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="btnDownTreeItem">
+            <property name="toolTip">
+             <string>Down List Item</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTreeView" name="treeJson">
+          <property name="selectionMode">
+           <enum>QAbstractItemView::ExtendedSelection</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
       <widget class="QWidget" name="tab_2">
        <attribute name="title">
         <string>Raw</string>
@@ -616,9 +699,6 @@
   <tabstop>lePublisher</tabstop>
   <tabstop>leCreatedBy</tabstop>
   <tabstop>dateCreated</tabstop>
-  <tabstop>lePieceSize</tabstop>
-  <tabstop>lePieces</tabstop>
-  <tabstop>leHash</tabstop>
   <tabstop>pteComment</tabstop>
   <tabstop>pteTrackers</tabstop>
   <tabstop>btnAbout</tabstop>
@@ -630,11 +710,15 @@
   <tabstop>btnDownFile</tabstop>
   <tabstop>viewFiles</tabstop>
   <tabstop>cmbPieceSizes</tabstop>
-  <tabstop>leTotalSize</tabstop>
   <tabstop>leBaseFolder</tabstop>
   <tabstop>pteEditor</tabstop>
   <tabstop>pteLog</tabstop>
   <tabstop>pushButton_4</tabstop>
+  <tabstop>treeJson</tabstop>
+  <tabstop>btnAddTreeItem</tabstop>
+  <tabstop>btnRemoveTreeItem</tabstop>
+  <tabstop>btnUpTreeItem</tabstop>
+  <tabstop>btnDownTreeItem</tabstop>
  </tabstops>
  <resources>
   <include location="resources.qrc"/>
@@ -695,8 +779,8 @@
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>119</x>
-     <y>111</y>
+     <x>1111</x>
+     <y>511</y>
     </hint>
     <hint type="destinationlabel">
      <x>101</x>
@@ -711,8 +795,8 @@
    <slot>updateBencodeFromRaw()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>101</x>
-     <y>75</y>
+     <x>112</x>
+     <y>136</y>
     </hint>
     <hint type="destinationlabel">
      <x>702</x>
@@ -775,8 +859,8 @@
    <slot>updateBencodeFromSimple()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>333</x>
-     <y>131</y>
+     <x>440</x>
+     <y>98</y>
     </hint>
     <hint type="destinationlabel">
      <x>400</x>
@@ -791,8 +875,8 @@
    <slot>updateBencodeFromSimple()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>333</x>
-     <y>193</y>
+     <x>440</x>
+     <y>160</y>
     </hint>
     <hint type="destinationlabel">
      <x>620</x>
@@ -807,8 +891,8 @@
    <slot>updateBencodeFromSimple()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>333</x>
-     <y>224</y>
+     <x>440</x>
+     <y>191</y>
     </hint>
     <hint type="destinationlabel">
      <x>2</x>
@@ -824,7 +908,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>260</x>
-     <y>256</y>
+     <y>223</y>
     </hint>
     <hint type="destinationlabel">
      <x>629</x>
@@ -839,8 +923,8 @@
    <slot>updateBencodeFromSimple()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>333</x>
-     <y>162</y>
+     <x>440</x>
+     <y>129</y>
     </hint>
     <hint type="destinationlabel">
      <x>905</x>
@@ -871,8 +955,8 @@
    <slot>updateFiles()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>119</x>
-     <y>114</y>
+     <x>540</x>
+     <y>511</y>
     </hint>
     <hint type="destinationlabel">
      <x>1133</x>
@@ -887,8 +971,8 @@
    <slot>updateRawPosition()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>101</x>
-     <y>75</y>
+     <x>112</x>
+     <y>136</y>
     </hint>
     <hint type="destinationlabel">
      <x>1134</x>
@@ -951,8 +1035,8 @@
    <slot>removeFile()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>119</x>
-     <y>102</y>
+     <x>171</x>
+     <y>103</y>
     </hint>
     <hint type="destinationlabel">
      <x>841</x>
@@ -967,8 +1051,8 @@
    <slot>upFile()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>119</x>
-     <y>102</y>
+     <x>208</x>
+     <y>103</y>
     </hint>
     <hint type="destinationlabel">
      <x>686</x>
@@ -983,8 +1067,8 @@
    <slot>downFile()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>119</x>
-     <y>102</y>
+     <x>245</x>
+     <y>103</y>
     </hint>
     <hint type="destinationlabel">
      <x>792</x>
@@ -1015,12 +1099,76 @@
    <slot>updateEncoding(QString)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>150</x>
-     <y>83</y>
+     <x>502</x>
+     <y>33</y>
     </hint>
     <hint type="destinationlabel">
      <x>4</x>
      <y>112</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnAddTreeItem</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>addTreeItem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>43</x>
+     <y>87</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>565</x>
+     <y>28</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnRemoveTreeItem</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>removeTreeItem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>74</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>549</x>
+     <y>32</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnUpTreeItem</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>upTreeItem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>117</x>
+     <y>95</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>10</x>
+     <y>3</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnDownTreeItem</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>downTreeItem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>144</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>163</x>
+     <y>-5</y>
     </hint>
    </hints>
   </connection>
@@ -1046,5 +1194,9 @@
   <slot>updateRawPosition()</slot>
   <slot>showAbout()</slot>
   <slot>updateEncoding(QString)</slot>
+  <slot>addTreeItem()</slot>
+  <slot>removeTreeItem()</slot>
+  <slot>upTreeItem()</slot>
+  <slot>downTreeItem()</slot>
  </slots>
 </ui>

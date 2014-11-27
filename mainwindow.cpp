@@ -35,6 +35,9 @@
 #include <QProgressDialog>
 #include <QThread>
 #include <QTextCodec>
+#include <QAbstractItemDelegate>
+#include <QPersistentModelIndex>
+#include <QInputDialog>
 
 #ifdef HAVE_QT5
 # include <QJsonDocument>
@@ -141,7 +144,6 @@ MainWindow::MainWindow(QWidget *parent)
     model->setHorizontalHeaderLabels(headers);
     model->horizontalHeaderItem(0)->setTextAlignment(Qt::AlignLeft);
     model->horizontalHeaderItem(1)->setTextAlignment(Qt::AlignLeft);
-
     ui->viewFiles->setModel(model);
 #ifdef HAVE_QT5
     ui->viewFiles->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
@@ -150,6 +152,25 @@ MainWindow::MainWindow(QWidget *parent)
     ui->viewFiles->horizontalHeader()->setResizeMode(QHeaderView::ResizeToContents);
     ui->viewFiles->verticalHeader()->setResizeMode(QHeaderView::Fixed);
 #endif
+
+    model = new QStandardItemModel(0, 3, this);
+    headers.clear();
+    headers << tr("Name") << tr("Type") << tr("Value");
+    model->invisibleRootItem()->setData(Bencode::Dictionary);
+    model->setHorizontalHeaderLabels(headers);
+    model->horizontalHeaderItem(0)->setTextAlignment(Qt::AlignLeft);
+    model->horizontalHeaderItem(1)->setTextAlignment(Qt::AlignLeft);
+    model->horizontalHeaderItem(2)->setTextAlignment(Qt::AlignLeft);
+    ui->treeJson->setModel(model);
+#ifdef HAVE_QT5
+    ui->treeJson->header()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
+    ui->treeJson->header()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
+#else
+    ui->treeJson->header()->setResizeMode(0, QHeaderView::ResizeToContents);
+    ui->treeJson->header()->setResizeMode(1, QHeaderView::ResizeToContents);
+#endif
+    QAbstractItemDelegate *delegate = ui->treeJson->itemDelegate();
+    connect(delegate, SIGNAL(closeEditor(QWidget*, QAbstractItemDelegate::EndEditHint)), SLOT(updateBencodeFromJsonTree()));
 
     ui->btnNew->setIcon(QIcon(":/icons/text-x-generic.png"));
     ui->btnOpen->setIcon(qApp->style()->standardIcon(QStyle::SP_DialogOpenButton));
@@ -165,6 +186,11 @@ MainWindow::MainWindow(QWidget *parent)
     ui->btnDownFile->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowDown));
 
     ui->btnAbout->setIcon(qApp->style()->standardIcon(QStyle::SP_MessageBoxQuestion));
+
+    ui->btnAddTreeItem->setIcon(QIcon::fromTheme("list-add", QIcon(":/icons/list-add.png")));
+    ui->btnRemoveTreeItem->setIcon(QIcon::fromTheme("list-remove", QIcon(":/icons/list-remove.png")));
+    ui->btnUpTreeItem->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowUp));
+    ui->btnDownTreeItem->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowDown));
 
     fillCoding();
     updateFilesSize();
@@ -354,6 +380,10 @@ void MainWindow::updateTab(int n)
         updateSimple();
         break;
 
+    case JsonTreeTab:
+        updateJsonTree();
+        break;
+
     case RawTab:
         updateRaw();
         break;
@@ -455,14 +485,26 @@ void MainWindow::updateBencodeFromTrackers()
     updateTitle();
 }
 
+void MainWindow::updateBencodeFromJsonTree()
+{
+    QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->treeJson->model());
+    if (model->invisibleRootItem()->rowCount())
+        standardItemToBencode(_bencode, model->invisibleRootItem()->child(0, 0));
+    else
+        _bencode = Bencode();
+
+    updateTitle();
+}
+
 void MainWindow::updateEncoding(const QString &encoding)
 {
     _textCodec = QTextCodec::codecForName(encoding.toUtf8());
-    updateSimple();
 
     QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->viewFiles->model());
     model->removeRows(0, model->rowCount());
     updateFiles();
+
+    updateTab(ui->tabWidget->currentIndex());
 }
 
 void MainWindow::makeTorrent()
@@ -728,6 +770,131 @@ void MainWindow::updateRawPosition()
     ui->lblCursorPos->setText(QString(tr("Line: %1 of %2 Col: %3")).arg(textCursor.blockNumber() + 1).arg(ui->pteEditor->blockCount()).arg(textCursor.positionInBlock() + 1));
 }
 
+void MainWindow::addTreeItem()
+{
+    QItemSelectionModel *selectionModel = ui->treeJson->selectionModel();
+
+    if (!selectionModel->hasSelection())
+        return;
+
+    QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->treeJson->model());
+    QStandardItem *item = model->itemFromIndex(selectionModel->selectedRows().at(0));
+    if (item->data() != Bencode::List && item->data() != Bencode::Dictionary)
+        return;
+
+    QStringList items;
+    items << Bencode::typeToStr(Bencode::Dictionary)
+          << Bencode::typeToStr(Bencode::List)
+          << Bencode::typeToStr(Bencode::String)
+          << Bencode::typeToStr(Bencode::Integer);
+
+    bool ok;
+    QString type = QInputDialog::getItem(this, tr("New item type"), tr("Select a type of the new item"), items, 0, false, &ok);
+    if (!ok)
+        return;
+
+    QList<QStandardItem*> row;
+    row << new QStandardItem();
+    row << new QStandardItem(type);
+    row << new QStandardItem();
+    row[1]->setEditable(false);
+    if (Bencode::typeToStr(Bencode::Dictionary) == type) {
+        row[2]->setEditable(false);
+        row[0]->setData(Bencode::Dictionary);
+    }
+    else if (Bencode::typeToStr(Bencode::List) == type) {
+        row[2]->setEditable(false);
+        row[0]->setData(Bencode::List);
+    }
+    else if (Bencode::typeToStr(Bencode::Integer) == type) {
+        row[0]->setData(Bencode::Integer);
+    }
+    else if (Bencode::typeToStr(Bencode::String) == type) {
+        row[0]->setData(Bencode::String);
+    }
+
+    if (item->data() == Bencode::List) {
+        row[0]->setEditable(false);
+        row[0]->setText(QString::number(item->rowCount()));
+    }
+    else {
+        row[0]->setText("new item");
+    }
+
+    item->appendRow(row);
+
+    selectionModel->select(model->indexFromItem(row[0]), QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
+    selectionModel->setCurrentIndex(model->indexFromItem(row[0]), QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
+}
+
+void MainWindow::removeTreeItem()
+{
+    QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->treeJson->model());
+    QItemSelectionModel *selectionModel = ui->treeJson->selectionModel();
+
+    if (!selectionModel->hasSelection())
+        return;
+
+    QList<QPersistentModelIndex> indexes;
+    foreach (const QModelIndex &index, ui->treeJson->selectionModel()->selectedIndexes()) {
+        indexes << index;
+    }
+
+    foreach (const QPersistentModelIndex &index, indexes) {
+        if (index.isValid())
+            ui->treeJson->model()->removeRow(index.row(), index.parent());
+    }
+
+    updateBencodeFromJsonTree();
+    updateJsonTree();
+}
+
+void MainWindow::upTreeItem()
+{
+    QItemSelectionModel *selectionModel = ui->treeJson->selectionModel();
+
+    if (!selectionModel->hasSelection())
+        return;
+
+    QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->treeJson->model());
+    QStandardItem *item = model->itemFromIndex(selectionModel->selectedRows().at(0));
+    QStandardItem *parent = item->parent();
+    int row = item->row();
+    if (!parent || row == 0 || parent->data().toInt() != Bencode::List)
+        return;
+
+    QList<QStandardItem*> list = parent->takeRow(row);
+    parent->insertRow(row - 1, list);
+    parent->child(row)->setText(QString::number(row));
+    parent->child(row - 1)->setText(QString::number(row - 1));
+    ui->treeJson->expand(model->indexFromItem(item));
+    selectionModel->select(model->indexFromItem(item), QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
+    selectionModel->setCurrentIndex(model->indexFromItem(item), QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
+}
+
+void MainWindow::downTreeItem()
+{
+    QItemSelectionModel *selectionModel = ui->treeJson->selectionModel();
+
+    if (!selectionModel->hasSelection())
+        return;
+
+    QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->treeJson->model());
+    QStandardItem *item = model->itemFromIndex(selectionModel->selectedRows().at(0));
+    QStandardItem *parent = item->parent();
+    int row = item->row();
+    if (!parent || row == parent->rowCount() - 1 || parent->data().toInt() != Bencode::List)
+        return;
+
+    QList<QStandardItem*> list = parent->takeRow(row);
+    parent->insertRow(row + 1, list);
+    parent->child(row)->setText(QString::number(row));
+    parent->child(row + 1)->setText(QString::number(row + 1));
+    ui->treeJson->expand(model->indexFromItem(item));
+    selectionModel->select(model->indexFromItem(item), QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
+    selectionModel->setCurrentIndex(model->indexFromItem(item), QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
+}
+
 void MainWindow::updateSimple()
 {
     // Avoid freezes
@@ -854,6 +1021,196 @@ void MainWindow::updateRaw()
     QByteArray ba = serializer.serialize(res);
 #endif
     ui->pteEditor->setPlainText(QString::fromLatin1(ba));
+}
+
+void MainWindow::updateJsonTree()
+{
+    QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->treeJson->model());
+    model->removeRows(0, model->rowCount());
+
+    QList<QStandardItem*> row;
+    row << new QStandardItem("root");
+    row << new QStandardItem(Bencode::typeToStr(Bencode::Dictionary));
+    row << new QStandardItem();
+    row[0]->setData(Bencode::Dictionary);
+    row[0]->setEditable(false);
+    row[1]->setEditable(false);
+    row[2]->setEditable(false);
+    model->appendRow(row);
+
+    if (!_bencode.isDictionary())
+        return;
+
+    qApp->processEvents();
+
+    bencodeToStandardItem(row[0], _bencode);
+    ui->treeJson->expandAll();
+}
+
+void MainWindow::bencodeToStandardItem(QStandardItem *parent, const Bencode &bencode)
+{
+    switch (bencode.type) {
+    case Bencode::Dictionary: {
+        BencodeMap map = bencode.dictionary;
+        QList<QByteArray> keys = map.keys();
+        // Will hope key is always in ascii
+        foreach (const QByteArray &key, keys) {
+
+            QList<QStandardItem*> row;
+            row << new QStandardItem(QString::fromLatin1(key));
+            row << new QStandardItem();
+            row << new QStandardItem();
+            row[1]->setEditable(false);
+
+            row[0]->setData(map[key].type);
+
+            switch (map[key].type) {
+            case Bencode::List:
+                row[2]->setEditable(false);
+                row[1]->setText(Bencode::typeToStr(Bencode::List));
+                bencodeToStandardItem(row[0], map[key]);
+                break;
+
+            case Bencode::Dictionary:
+                row[2]->setEditable(false);
+                row[1]->setText(Bencode::typeToStr(Bencode::Dictionary));
+                bencodeToStandardItem(row[0], map[key]);
+                break;
+
+            case Bencode::String:
+                row[1]->setText(Bencode::typeToStr(Bencode::String));
+                if (key != QByteArray("pieces"))
+                    row[2]->setText(toUnicode(map[key].string));
+                else
+                    row[2]->setText(QString::fromLatin1(map[key].string.toHex()));
+                break;
+
+            case Bencode::Integer:
+                row[1]->setText(Bencode::typeToStr(Bencode::Integer));
+                row[2]->setText(QString::number(map[key].integer));
+                break;
+
+            default:
+                break;
+            }
+            parent->appendRow(row);
+        }
+        break; }
+
+    case Bencode::List: {
+        BencodeList list = bencode.list;
+        for (int i = 0; i < list.size(); ++i) {
+            QList<QStandardItem*> row;
+            row << new QStandardItem(QString::number(i));
+            row << new QStandardItem();
+            row << new QStandardItem();
+            row[0]->setEditable(false);
+            row[1]->setEditable(false);
+
+            row[0]->setData(list[i].type);
+
+            switch (list[i].type) {
+            case Bencode::List:
+                row[2]->setEditable(false);
+                row[1]->setText(Bencode::typeToStr(Bencode::List));
+                bencodeToStandardItem(row[0], list[i]);
+                break;
+
+            case Bencode::Dictionary:
+                row[2]->setEditable(false);
+                row[1]->setText(Bencode::typeToStr(Bencode::Dictionary));
+                bencodeToStandardItem(row[0], list[i]);
+                break;
+
+            case Bencode::String:
+                row[1]->setText(Bencode::typeToStr(Bencode::String));
+                row[2]->setText(toUnicode(list[i].string));
+                break;
+
+            case Bencode::Integer:
+                row[1]->setText(Bencode::typeToStr(Bencode::Integer));
+                row[2]->setText(QString::number(list[i].integer));
+                break;
+
+            default:
+                break;
+            }
+            parent->appendRow(row);
+        }
+        break; }
+
+    default:
+        break;
+    }
+}
+
+void MainWindow::standardItemToBencode(Bencode &parent, QStandardItem *item)
+{
+    switch (item->data().toInt()) {
+    case Bencode::Dictionary:
+        parent = BencodeMap();
+        for (int i = 0; i < item->rowCount(); ++i) {
+            QByteArray key = item->child(i)->text().toLatin1();
+            switch (item->child(i)->data().toInt()) {
+            case Bencode::Dictionary:
+                parent[key] = BencodeMap();
+                standardItemToBencode(parent[key], item->child(i));
+                break;
+
+            case Bencode::List:
+                parent[key] = BencodeList();
+                standardItemToBencode(parent[key], item->child(i));
+                break;
+
+            case Bencode::Integer:
+                parent[key] = item->child(i, 2)->text().toLongLong();
+                break;
+
+            case Bencode::String:
+                if (key != QByteArray("pieces"))
+                    parent[key] = fromUnicode(item->child(i, 2)->text());
+                else
+                    parent[key] = QByteArray::fromHex(item->child(i, 2)->text().toLatin1());
+                break;
+
+            default:
+                break;
+            }
+        }
+        break;
+
+    case Bencode::List:
+        parent = BencodeList();
+        for (int i = 0; i < item->rowCount(); ++i) {
+            parent.list << Bencode();
+            switch (item->child(i)->data().toInt()) {
+            case Bencode::Dictionary:
+                parent[i] = BencodeMap();
+                standardItemToBencode(parent[i], item->child(i));
+                break;
+
+            case Bencode::List:
+                parent[i] = BencodeList();
+                standardItemToBencode(parent[i], item->child(i));
+                break;
+
+            case Bencode::Integer:
+                parent[i] = item->child(i, 2)->text().toLongLong();
+                break;
+
+            case Bencode::String:
+                parent[i] = fromUnicode(item->child(i, 2)->text());
+                break;
+
+            default:
+                break;
+            }
+        }
+        break;
+
+    default:
+        break;
+    }
 }
 
 void MainWindow::checkAndFixBencode()

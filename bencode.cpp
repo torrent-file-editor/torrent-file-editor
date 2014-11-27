@@ -168,6 +168,19 @@ Bencode Bencode::fromJson(const QVariant &json)
     return res;
 }
 
+QString Bencode::typeToStr(Type type)
+{
+    switch (type) {
+    case List:        return QObject::tr("list");        break;
+    case Dictionary:  return QObject::tr("dictionary");  break;
+    case Integer:     return QObject::tr("integer");     break;
+    case String:      return QObject::tr("string");      break;
+    case Invalid:     return QObject::tr("invalid");     break;
+    }
+
+    return "";
+}
+
 Bencode &Bencode::operator=(qlonglong integer)
 {
     string = QByteArray();
