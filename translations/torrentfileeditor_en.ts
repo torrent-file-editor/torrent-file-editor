@@ -67,7 +67,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="28"/>
-        <location filename="../mainwindow.cpp" line="239"/>
+        <location filename="../mainwindow.cpp" line="265"/>
         <source>Open</source>
         <translation>Open</translation>
     </message>
@@ -78,7 +78,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="42"/>
-        <location filename="../mainwindow.cpp" line="261"/>
+        <location filename="../mainwindow.cpp" line="287"/>
         <source>Save As</source>
         <translation>Save As</translation>
     </message>
@@ -119,6 +119,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="208"/>
+        <location filename="../mainwindow.cpp" line="158"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
@@ -159,7 +160,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="337"/>
-        <location filename="../mainwindow.cpp" line="573"/>
+        <location filename="../mainwindow.cpp" line="611"/>
         <source>Add Folder</source>
         <translation>Add Folder</translation>
     </message>
@@ -179,7 +180,32 @@
         <translation>Down File</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="572"/>
+        <location filename="../mainwindow.ui" line="491"/>
+        <source>Tree</source>
+        <translation>Tree</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="499"/>
+        <source>Add Tree Item</source>
+        <translation>Add Tree Item</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="512"/>
+        <source>Remove Tree Items</source>
+        <translation>Remove Tree Items</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="525"/>
+        <source>Up List Item</source>
+        <translation>Up List Item</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="538"/>
+        <source>Down List Item</source>
+        <translation>Down List Item</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="658"/>
         <source>Coding</source>
         <translation>Coding</translation>
     </message>
@@ -199,133 +225,181 @@
         <translation>Base folder </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="491"/>
+        <location filename="../mainwindow.ui" line="574"/>
         <source>Raw</source>
         <translation>Raw</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="532"/>
+        <location filename="../mainwindow.ui" line="618"/>
         <source>Log</source>
         <translation>Log</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="556"/>
+        <location filename="../mainwindow.ui" line="642"/>
         <source>Clear</source>
         <translation>Clear</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="125"/>
+        <location filename="../mainwindow.cpp" line="128"/>
         <source>Need to calculate piece hashes</source>
         <translation>Need to calculate piece hashes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="126"/>
+        <location filename="../mainwindow.cpp" line="129"/>
         <source>Please wait</source>
         <translation>Please wait</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="132"/>
+        <location filename="../mainwindow.cpp" line="135"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="140"/>
+        <location filename="../mainwindow.cpp" line="143"/>
         <source>Path</source>
         <translation>Path</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="140"/>
+        <location filename="../mainwindow.cpp" line="143"/>
         <source>Size</source>
         <translation>Size</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="193"/>
+        <location filename="../mainwindow.cpp" line="219"/>
         <source>Create a new file</source>
         <translation>Create a new file</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="194"/>
+        <location filename="../mainwindow.cpp" line="220"/>
         <source>Current file is not saved. Save the file?</source>
         <translation>Current file is not saved. Save the file?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="239"/>
-        <location filename="../mainwindow.cpp" line="261"/>
+        <location filename="../mainwindow.cpp" line="265"/>
+        <location filename="../mainwindow.cpp" line="287"/>
         <source>Torrents (*.torrent)</source>
         <translation>Torrents (*.torrent)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="220"/>
+        <location filename="../mainwindow.cpp" line="246"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="220"/>
+        <location filename="../mainwindow.cpp" line="158"/>
+        <source>Type</source>
+        <translation>Type</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="158"/>
+        <source>Value</source>
+        <translation>Value</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="246"/>
         <source>Can&apos;t open file</source>
         <translatorcomment>Не могу открыть файл</translatorcomment>
         <translation>Can&apos;t open file</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="277"/>
+        <location filename="../mainwindow.cpp" line="303"/>
         <source>About %1</source>
         <translation>About %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="482"/>
-        <location filename="../mainwindow.cpp" line="487"/>
+        <location filename="../mainwindow.cpp" line="520"/>
+        <location filename="../mainwindow.cpp" line="525"/>
         <source>Warning</source>
         <translation>Warning</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="482"/>
+        <location filename="../mainwindow.cpp" line="520"/>
         <source>Can&apos;t make torrent for file without full path. Need to set base folder.</source>
         <translation>Can&apos;t make torrent for file without full path. Need to set base folder.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="487"/>
+        <location filename="../mainwindow.cpp" line="525"/>
         <source>Base folder is not common.</source>
         <translation>Base folder is not common.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="551"/>
+        <location filename="../mainwindow.cpp" line="589"/>
         <source>Add File</source>
         <translation>Add File</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="728"/>
+        <location filename="../mainwindow.cpp" line="766"/>
         <source>Line: %1 of %2 Col: %3</source>
         <translation>Line: %1 of %2 Col: %3</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="820"/>
-        <location filename="../mainwindow.cpp" line="828"/>
+        <location filename="../mainwindow.cpp" line="788"/>
+        <source>New item type</source>
+        <translation>New item type</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="788"/>
+        <source>Select a type of the new item</source>
+        <translation>Select a type of the new item</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="983"/>
+        <location filename="../mainwindow.cpp" line="991"/>
         <source>Error on %1 line: %2</source>
         <translation>Error on %1 line: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="941"/>
+        <location filename="../mainwindow.cpp" line="1292"/>
         <source>B</source>
         <translation>B</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="945"/>
+        <location filename="../mainwindow.cpp" line="1296"/>
         <source>KiB</source>
         <translation>KiB</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="949"/>
+        <location filename="../mainwindow.cpp" line="1300"/>
         <source>MiB</source>
         <translation>MiB</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="953"/>
+        <location filename="../mainwindow.cpp" line="1304"/>
         <source>GiB</source>
         <translation>GiB</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="957"/>
+        <location filename="../mainwindow.cpp" line="1308"/>
         <source>TiB</source>
         <translation>TiB</translation>
+    </message>
+</context>
+<context>
+    <name>QObject</name>
+    <message>
+        <location filename="../bencode.cpp" line="174"/>
+        <source>list</source>
+        <translation>list</translation>
+    </message>
+    <message>
+        <location filename="../bencode.cpp" line="175"/>
+        <source>dictionary</source>
+        <translation>dictionary</translation>
+    </message>
+    <message>
+        <location filename="../bencode.cpp" line="176"/>
+        <source>integer</source>
+        <translation>integer</translation>
+    </message>
+    <message>
+        <location filename="../bencode.cpp" line="177"/>
+        <source>string</source>
+        <translation>string</translation>
+    </message>
+    <message>
+        <location filename="../bencode.cpp" line="178"/>
+        <source>invalid</source>
+        <translation>invalid</translation>
     </message>
 </context>
 <context>
