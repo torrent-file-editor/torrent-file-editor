@@ -11,5 +11,7 @@
 <file>./icons/document-new.png</file>
 <file>./icons/folder-new.png</file>
 <file>./icons/hammer.png</file>
+<file>./icons/app_32.png</file>
+<file>./icons/app_64.png</file>
 </qresource>
 </RCC>
