@@ -301,6 +301,9 @@ void MainWindow::showAbout()
 {
     AboutDlg dlg(this);
     dlg.setWindowTitle(QString(tr("About %1")).arg(APP_NAME));
+    dlg.ensurePolished();
+    dlg.adjustSize();
+    dlg.setFixedSize(dlg.size());
     dlg.exec();
 }
 
