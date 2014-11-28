@@ -100,6 +100,7 @@ public slots:
     void removeTreeItem();
     void upTreeItem();
     void downTreeItem();
+    void sortJsonTree(QStandardItem *item);
 
 private:
     enum Tabs { SimpleTab, FilesTab, JsonTreeTab, RawTab, LogTab };

@@ -171,6 +171,7 @@ MainWindow::MainWindow(QWidget *parent)
 #endif
     QAbstractItemDelegate *delegate = ui->treeJson->itemDelegate();
     connect(delegate, SIGNAL(closeEditor(QWidget*, QAbstractItemDelegate::EndEditHint)), SLOT(updateBencodeFromJsonTree()));
+    connect(model, SIGNAL(itemChanged(QStandardItem*)), SLOT(sortJsonTree(QStandardItem*)));
 
     ui->btnNew->setIcon(QIcon(":/icons/text-x-generic.png"));
     ui->btnOpen->setIcon(qApp->style()->standardIcon(QStyle::SP_DialogOpenButton));
@@ -896,6 +897,28 @@ void MainWindow::downTreeItem()
     ui->treeJson->expand(model->indexFromItem(item));
     selectionModel->select(model->indexFromItem(item), QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
     selectionModel->setCurrentIndex(model->indexFromItem(item), QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
+}
+
+void MainWindow::sortJsonTree(QStandardItem *item)
+{
+    if (item->column() != 0 || !item->parent() || item->parent()->data().toInt() != Bencode::Dictionary)
+        return;
+
+    QString key = item->text();
+    QStandardItem *parent = item->parent();
+    QList<QStandardItem*> row = parent->takeRow(item->row());
+
+    for (int i = 0; i <= parent->rowCount(); ++i) {
+        if (i == parent->rowCount() || parent->child(i)->text() > key) {
+            parent->insertRow(i, row);
+            break;
+        }
+    }
+
+    QItemSelectionModel *selectionModel = ui->treeJson->selectionModel();
+    selectionModel->setCurrentIndex(item->model()->indexFromItem(item), QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
+    selectionModel->select(item->model()->indexFromItem(item), QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
+    ui->treeJson->setFocus();
 }
 
 void MainWindow::updateSimple()
