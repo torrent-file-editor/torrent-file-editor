@@ -46,7 +46,7 @@
 # include <qjson/parser.h>
 #endif
 
-#define APP_NAME "Torrent File Editor beta4"
+#define APP_NAME "Torrent File Editor beta5"
 
 Worker::Worker()
     : QObject()
