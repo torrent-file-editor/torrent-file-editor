@@ -638,40 +638,6 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="tab_3">
-       <attribute name="title">
-        <string>Log</string>
-       </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <item>
-         <widget class="QPlainTextEdit" name="pteLog"/>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout">
-          <item>
-           <spacer name="horizontalSpacer_2">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButton_4">
-            <property name="text">
-             <string>Clear</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </widget>
      </widget>
     </item>
    </layout>
@@ -720,8 +686,6 @@
   <tabstop>cmbPieceSizes</tabstop>
   <tabstop>leBaseFolder</tabstop>
   <tabstop>pteEditor</tabstop>
-  <tabstop>pteLog</tabstop>
-  <tabstop>pushButton_4</tabstop>
   <tabstop>treeJson</tabstop>
   <tabstop>btnAddTreeItem</tabstop>
   <tabstop>btnRemoveTreeItem</tabstop>
@@ -777,22 +741,6 @@
     <hint type="destinationlabel">
      <x>439</x>
      <y>20</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_4</sender>
-   <signal>clicked()</signal>
-   <receiver>pteLog</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>1111</x>
-     <y>511</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>101</x>
-     <y>75</y>
     </hint>
    </hints>
   </connection>
