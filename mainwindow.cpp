@@ -1010,7 +1010,8 @@ void MainWindow::updateBencodeFromRaw()
     QJsonParseError error;
     QVariant variant = QJsonDocument::fromJson(ba, &error).toVariant();
     if (error.error) {
-        ui->lblRawError->setText(QString(tr("Error on %1 line: %2")).arg(error.offset).arg(error.errorString()));
+        int line = ba.left(error.offset).count("\n") + 1;
+        ui->lblRawError->setText(QString(tr("Error on %1 line: %2")).arg(line).arg(error.errorString()));
         return;
     }
 #else
