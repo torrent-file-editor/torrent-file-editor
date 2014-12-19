@@ -37,6 +37,8 @@ UrlEdit::UrlEdit(QWidget *parent)
     _pbOpenUrl->resize(0, 0);
     _pbOpenUrl->setFlat(true);
     _pbOpenUrl->setToolTip(tr("Open in internet browser"));
+    _pbOpenUrl->setMinimumWidth(24);
+    _pbOpenUrl->setMaximumWidth(24);
     addWidget(_pbOpenUrl);
 
     connect(_pbOpenUrl, SIGNAL(clicked()), SLOT(openUrl()));

@@ -62,6 +62,8 @@ DateWidget::DateWidget(QWidget *parent)
     _tbClean->resize(0, 0);
     _tbClean->setFlat(true);
     _tbClean->setToolTip(tr("Clean"));
+    _tbClean->setMinimumWidth(24);
+    _tbClean->setMaximumWidth(24);
     addWidget(_tbClean);
 
     _tbCalendar->setObjectName("tbCalendar");
@@ -76,6 +78,8 @@ DateWidget::DateWidget(QWidget *parent)
     _tbCalendar->setFlat(true);
     _tbCalendar->setCursor(Qt::PointingHandCursor);
     _tbCalendar->setToolTip(tr("Show calendar"));
+    _tbCalendar->setMinimumWidth(24);
+    _tbCalendar->setMaximumWidth(24);
     addWidget(_tbCalendar);
 
     setPopup(_calendar);
