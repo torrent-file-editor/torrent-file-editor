@@ -1,8 +1,25 @@
 project(torrent-file-editor)
 cmake_minimum_required(VERSION 2.8.11)
+
+set(APP_VERSION "beta6")
+set(BUNDLE_DIR_BASE_NAME "Torrent File Editor")
+
+set(MACOSX_BUNDLE_INFO_STRING "Torrent File Editor ${APP_VERSION}. This program is licensed under the GNU GPL.")
+set(MACOSX_BUNDLE_ICON_FILE "application.icns")
+set(MACOSX_BUNDLE_GUI_IDENTIFIER "net.sourceforge.torrent-file-editor")
+set(MACOSX_BUNDLE_LONG_VERSION_STRING ${APP_VERSION})
+set(MACOSX_BUNDLE_BUNDLE_NAME "Torrent File Editor")
+set(MACOSX_BUNDLE_SHORT_VERSION_STRING ${APP_VERSION})
+set(MACOSX_BUNDLE_BUNDLE_VERSION ${APP_VERSION})
+
 include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
 
-option(QT5_BUILD OFF "Force Qt5 build")
+if(APPLE)
+  # Force Qt5 build on Mac OS X. Qt4 is not supported
+  set(QT5_BUILD ON)
+else()
+  option(QT5_BUILD OFF "Force Qt5 build")
+endif()
 
 if(QT5_BUILD)
   find_package(Qt5Core REQUIRED)
@@ -38,7 +55,7 @@ set(HEADERS
   ${CMAKE_SOURCE_DIR}/folderedit.h
   ${CMAKE_SOURCE_DIR}/aboutdlg.h)
 
-set(FORMS 
+set(FORMS
   ${CMAKE_SOURCE_DIR}/mainwindow.ui
   ${CMAKE_SOURCE_DIR}/aboutdlg.ui)
 
@@ -83,7 +100,7 @@ if(WIN32)
   set(SOURCES ${SOURCES} ${CMAKE_CURRENT_BINARY_DIR}/app.o)
 endif()
 
-add_executable(${PROJECT_NAME} WIN32 ${QM} ${HEADERS} ${SOURCES} ${MOC_SOURCES} ${QRC_SOURCES} ${UI_SOURCES})
+add_executable(${PROJECT_NAME} WIN32 MACOSX_BUNDLE ${QM} ${HEADERS} ${SOURCES} ${MOC_SOURCES} ${QRC_SOURCES} ${UI_SOURCES})
 
 if(QT5_BUILD)
   target_link_libraries(${PROJECT_NAME} ${START_STATIC} ${Qt5Core_LIBRARIES} ${Qt5Gui_LIBRARIES} ${Qt5Widgets_LIBRARIES}  ${END_STATIC})
@@ -102,4 +119,65 @@ if(UNIX AND NOT APPLE)
   install(FILES icons/app_64.png DESTINATION share/icons/hicolor/64x64/apps RENAME torrent-file-editor.png)
   install(FILES icons/app_128.png DESTINATION share/icons/hicolor/128x128/apps RENAME torrent-file-editor.png)
   install(FILES icons/app_256.png DESTINATION share/icons/hicolor/256x256/apps RENAME torrent-file-editor.png)
+endif()
+
+if(APPLE)
+  install(TARGETS ${PROJECT_NAME} BUNDLE DESTINATION . COMPONENT Runtime)
+  set_target_properties(torrent-file-editor PROPERTIES
+    OUTPUT_NAME "${BUNDLE_DIR_BASE_NAME}"
+    MACOSX_BUNDLE_INFO_PLIST "${CMAKE_SOURCE_DIR}/MacOSXBundleInfo.plist.in")
+
+  # Install app icon
+  install(FILES icons/application.icns DESTINATION "${BUNDLE_DIR_BASE_NAME}.app/Contents/Resources")
+
+  # Install needed Qt plugins by copying each pluging separately
+  find_package(Qt5PrintSupport REQUIRED)
+  set(PLATFORM_PLUGINS Qt5::QCocoaIntegrationPlugin)
+  set(IMAGE_PLUGINS Qt5::QICNSPlugin)
+  set(PRINTSUPPORT_PLUGINS Qt5::QCocoaPrinterSupportPlugin)
+  set(PLUGINS_DEST_PATH "${BUNDLE_DIR_BASE_NAME}.app/Contents/Plugins")
+
+  foreach(plugin ${PLATFORM_PLUGINS})
+    get_target_property(_loc ${plugin} LOCATION)
+    install(FILES "${_loc}" DESTINATION ${PLUGINS_DEST_PATH}/platforms/ COMPONENT Runtime)
+  endforeach()
+
+  foreach(plugin ${IMAGE_PLUGINS})
+    get_target_property(_loc ${plugin} LOCATION)
+    install(FILES "${_loc}" DESTINATION ${PLUGINS_DEST_PATH}/imageformats/ COMPONENT Runtime)
+  endforeach()
+
+  foreach(plugin ${PRINTSUPPORT_PLUGINS})
+    get_target_property(_loc ${plugin} LOCATION)
+    install(FILES "${_loc}" DESTINATION ${PLUGINS_DEST_PATH}/printsupport/ COMPONENT Runtime)
+  endforeach()
+
+  # Now the work of copying dependencies into the bundle/package
+  # The quotes are escaped and variables to use at install time have their $ escaped
+  # An alternative is the do a configure_file() on a script and use install(SCRIPT  ...).
+  # Note that the image plugins depend on QtSvg and QtXml, and it got those copied
+  # over.
+  SET(APPS "\${CMAKE_INSTALL_PREFIX}/${BUNDLE_DIR_BASE_NAME}.app")
+  install(CODE "
+    file(GLOB_RECURSE QTPLUGINS
+      \"\${CMAKE_INSTALL_PREFIX}/${PLUGINS_DEST_PATH}/*${CMAKE_SHARED_LIBRARY_SUFFIX}\")
+    include(BundleUtilities)
+    fixup_bundle(\"${APPS}\" \"\${QTPLUGINS}\" \"${QT_LIBRARY_DIRS}\")
+    " COMPONENT Runtime)
+
+  # install a qt.conf file
+  # this inserts some cmake code into the install script to write the file
+  INSTALL(CODE "
+    file(WRITE \"\${CMAKE_INSTALL_PREFIX}/${BUNDLE_DIR_BASE_NAME}.app/Contents/Resources/qt.conf\" \"\")
+    " COMPONENT Runtime)
+
+  # To Create a package, one can run "cpack -G DragNDrop CPackConfig.cmake" on Mac OS X
+  # where CPackConfig.cmake is created by including CPack
+  # And then there's ways to customize this as well
+  set(CPACK_PACKAGE_VERSION ${APP_VERSION})
+  set(CPACK_PACKAGE_FILE_NAME ${PROJECT_NAME}-${CPACK_PACKAGE_VERSION})
+  set(CPACK_BINARY_DRAGNDROP ON)
+  include(CPack)
+
+  add_custom_target(dmg COMMAND cpack -G DragNDrop CPackConfig.cmake DEPENDS ${PROJECT_NAME})
 endif()
