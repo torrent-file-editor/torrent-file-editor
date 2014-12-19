@@ -924,7 +924,7 @@ void MainWindow::sortJsonTree(QStandardItem *item)
 void MainWindow::updateSimple()
 {
     // Avoid freezes
-    qApp->processEvents();
+    processEvents();
 
     if (_bencode.dictionary.contains("publisher-url"))
         ui->leUrl->setText(toUnicode(_bencode.dictionary["publisher-url"].string));
@@ -1032,7 +1032,7 @@ void MainWindow::updateBencodeFromRaw()
 void MainWindow::updateRaw()
 {
     // Avoid freezes
-    qApp->processEvents();
+    processEvents();
     if (!_bencode.isValid()) {
         ui->pteEditor->setPlainText("");
         return;
@@ -1067,7 +1067,7 @@ void MainWindow::updateJsonTree()
     if (!_bencode.isDictionary())
         return;
 
-    qApp->processEvents();
+    processEvents();
 
     bencodeToStandardItem(row[0], _bencode);
     ui->treeJson->expandAll();
@@ -1348,4 +1348,11 @@ QString MainWindow::smartSize(qulonglong size)
     }
 
     return res;
+}
+
+void MainWindow::processEvents()
+{
+    // Hack to prevent processEvents when application is not starting yet
+    if (isVisible())
+        qApp->processEvents();
 }

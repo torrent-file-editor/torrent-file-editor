@@ -125,6 +125,7 @@ private:
     void updateFilesSize();
 
     QString smartSize(qulonglong size);
+    void processEvents();
 
     Ui::MainWindow *ui;
     QString _fileName;
