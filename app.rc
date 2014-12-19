@@ -23,7 +23,7 @@ VS_VERSION_INFO VERSIONINFO
 		BEGIN
 			BLOCK "040904B0"
 			BEGIN
-				VALUE "FileVersion", "beta4\0"
+				VALUE "FileVersion", "0.1.0\0"
 			END
 		END
 	END

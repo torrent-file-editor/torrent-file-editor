@@ -2,7 +2,7 @@
 
 set -e
 
-version=beta2
+version=0.1.0
 
 git clean -dfx .
 mkdir win32
