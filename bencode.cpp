@@ -372,7 +372,8 @@ QString Bencode::fromRawString(const QByteArray &raw)
     QString res;
     for (int i = 0; i < raw.size(); ++i) {
         QChar c = raw[i];
-        if (c.isPrint() && c != '%') {
+        // All normal ASCII symbols except '%'
+        if (c >= ' ' && c <= '~' && c != '%') {
             res += raw[i];
         }
         else {
