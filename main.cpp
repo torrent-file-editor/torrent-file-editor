@@ -17,8 +17,8 @@
  */
 
 #include "mainwindow.h"
+#include "application.h"
 
-#include <QApplication>
 #include <QTranslator>
 #include <QLocale>
 #include <QFile>
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 #else
     qInstallMsgHandler(debugHandler);
 #endif
-    QApplication a(argc, argv);
+    Application a(argc, argv);
 
     QString lang = QLocale().name().section('_', 0, 0);
 
@@ -54,6 +54,7 @@ int main(int argc, char *argv[])
     a.installTranslator(&translator);
 
     MainWindow w;
+    a.setMainWindow(&w);
     w.show();
 
     if (argc == 2 && QFile::exists(argv[1]))

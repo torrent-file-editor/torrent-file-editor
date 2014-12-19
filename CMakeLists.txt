@@ -47,6 +47,7 @@ set(TRANSLATIONS
   ${CMAKE_SOURCE_DIR}/translations/torrentfileeditor_ru.ts)
 
 set(HEADERS
+  ${CMAKE_SOURCE_DIR}/application.h
   ${CMAKE_SOURCE_DIR}/mainwindow.h
   ${CMAKE_SOURCE_DIR}/bencode.h
   ${CMAKE_SOURCE_DIR}/datewidget.h
@@ -60,6 +61,7 @@ set(FORMS
   ${CMAKE_SOURCE_DIR}/aboutdlg.ui)
 
 set(SOURCES
+  ${CMAKE_SOURCE_DIR}/application.cpp
   ${CMAKE_SOURCE_DIR}/main.cpp
   ${CMAKE_SOURCE_DIR}/mainwindow.cpp
   ${CMAKE_SOURCE_DIR}/bencode.cpp
