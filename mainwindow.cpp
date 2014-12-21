@@ -1106,10 +1106,17 @@ void MainWindow::bencodeToStandardItem(QStandardItem *parent, const Bencode &ben
 
             case Bencode::String:
                 row[1]->setText(Bencode::typeToStr(Bencode::String));
-                if (key != QByteArray("pieces"))
+                if (key != QByteArray("pieces") &&
+                    key != QByteArray("originator") &&
+                    key != QByteArray("certificate") &&
+                    key != QByteArray("signature")) {
+
                     row[2]->setText(toUnicode(map[key].string));
-                else
+                }
+                else {
                     row[2]->setText(QString::fromLatin1(map[key].string.toHex()));
+                }
+
                 break;
 
             case Bencode::Integer:
