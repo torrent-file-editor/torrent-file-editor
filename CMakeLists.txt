@@ -36,7 +36,7 @@ if(QT5_BUILD)
   add_definitions(-DHAVE_QT5)
 else()
   find_package(Qt4 REQUIRED)
-  find_package(QJSON REQUIRED)
+  find_package(QJSON 0.8.0 REQUIRED)
   include(${QT_USE_FILE})
 endif()
 
