@@ -1,3 +1,18 @@
+\#*\#
+*.tar.gz
+*.tar.bz2
+*.zip
+*.7z
+/win32
+/win64
+/linux
+/linux-qt4
+/linux-qt5
+*~
+/*.patch
+/*.exe
+/build
+
 # C++ objects and libs
 
 *.slo
