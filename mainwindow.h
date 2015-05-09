@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014  Ivan Romanov <drizt@land.ru>
+ * Copyright (C) 2014-2015  Ivan Romanov <drizt@land.ru>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,13 +18,12 @@
 
 #pragma once
 
-#include "bencode.h"
-
 #include <QMainWindow>
 #include <QStandardItem>
 
 class QProgressDialog;
 class QTextCodec;
+class Bencode;
 
 class Worker : public QObject
 {
@@ -115,10 +114,8 @@ private:
     void updateSimple();
     void updateRaw();
     void updateJsonTree();
-    void bencodeToStandardItem(QStandardItem *parent, const Bencode &bencode);
-    void standardItemToBencode(Bencode &parent, QStandardItem *item);
-
-    void checkAndFixBencode();
+    void bencodeToStandardItem(QStandardItem *parent, Bencode *bencode);
+    void standardItemToBencode(Bencode *parent, QStandardItem *item);
 
     bool saveTo(const QString &fileName);
 
@@ -131,8 +128,8 @@ private:
     QString _fileName;
 
     //  Here saved .torrent file
-    Bencode _bencode;
-    Bencode _originBencode;
+    Bencode *_bencode;
+    Bencode *_originBencode;
     QProgressDialog *_progressDialog;
 
     static MainWindow *_instance;

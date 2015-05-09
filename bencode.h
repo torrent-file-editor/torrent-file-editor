@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014  Ivan Romanov <drizt@land.ru>
+ * Copyright (C) 2014-2015  Ivan Romanov <drizt@land.ru>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,26 +18,15 @@
 
 #pragma once
 
+#include "abstracttreeitem.h"
+
 #include <QVariant>
 #include <QMap>
 #include <QList>
 
-class Bencode;
-
-typedef QList<Bencode> BencodeList;
-typedef QMap<QByteArray, Bencode> BencodeMap;
-
-class Bencode
+class Bencode : public AbstractTreeItem
 {
 public:
-    Bencode();
-    Bencode(const Bencode &other);
-
-    Bencode(int integer);
-    Bencode(const QByteArray &string);
-    Bencode(const BencodeList &list);
-    Bencode(const BencodeMap &dictionary);
-
     enum Type {
         Invalid,
         // Not limited, can be signed. I use qlonglong
@@ -49,48 +38,64 @@ public:
         List,
         Dictionary };
 
-    Type type;
+    Bencode(Type type = Type::Invalid, const QByteArray &key = QByteArray());
+    Bencode(qlonglong integer, const QByteArray &key = QByteArray());
+    Bencode(const QByteArray &string, const QByteArray &key = QByteArray());
 
-    qlonglong integer;
-    QByteArray string;
-    QList<Bencode> list;
-    QMap<QByteArray, Bencode> dictionary;
+    inline Type type() const { return _type; }
 
-    bool isValid() const;
-    bool isInteger() const;
-    bool isString() const;
-    bool isList() const;
-    bool isDictionary() const;
+    inline void setInteger(qlonglong integer) { _integer = integer; }
+    inline qlonglong integer() const { return _integer; }
+
+    inline void setString(const QByteArray &string) { _string = string; }
+    inline QByteArray string() const { return _string; }
+
+    inline void setKey(const QByteArray &key) { _key = key; }
+    inline QByteArray key() const { return _key; }
+
+    Bencode *checkAndCreate(Type type, int index);
+    Bencode *checkAndCreate(Type type, const QByteArray &key);
+
+    void appendMapItem(Bencode *item);
+    Bencode *child(int index) const;
+    Bencode *child(const QByteArray &key) const;
+
+    inline bool isValid() const { return _type != Invalid; }
+    inline bool isInteger() const { return _type == Integer; }
+    inline bool isString() const { return _type == String; }
+    inline bool isList() const { return _type == List; }
+    inline bool isDictionary() const { return _type == Dictionary; }
 
     QByteArray toRaw() const;
     QVariant toJson() const;
 
-    static Bencode fromRaw(const QByteArray &raw);
-    static Bencode fromJson(const QVariant &json);
+    static Bencode *fromRaw(const QByteArray &raw);
+    static Bencode *fromJson(const QVariant &json);
     static QString typeToStr(Type type);
 
-    Bencode &operator=(qlonglong integer);
-    Bencode &operator=(const QByteArray &string);
-    Bencode &operator=(const QList<Bencode> &list);
-    Bencode &operator=(const QMap<QByteArray, Bencode> &dictionary);
+    bool compare(Bencode *other) const;
 
-    Bencode &operator[](const QByteArray &key);
-    Bencode &operator[](int index);
+    // reimplemented
+    Bencode *clone() const override;
+    QString toString() const override;
 
 private:
-    static Bencode parseItem(const QByteArray &raw, int &pos);
+    static Bencode *parseItem(const QByteArray &raw, int &pos);
 
-    static Bencode parseInteger(const QByteArray &raw, int &pos);
-    static Bencode parseString(const QByteArray &raw, int &pos);
-    static Bencode parseList(const QByteArray &raw, int &pos);
-    static Bencode parseDictionary(const QByteArray &raw, int &pos);
+    static Bencode *parseInteger(const QByteArray &raw, int &pos);
+    static Bencode *parseString(const QByteArray &raw, int &pos);
+    static Bencode *parseList(const QByteArray &raw, int &pos);
+    static Bencode *parseDictionary(const QByteArray &raw, int &pos);
 
     static QString fromRawString(const QByteArray &raw);
     static QByteArray toRawString(const QString &string);
 
-    static QByteArray toRaw(const Bencode &bencode);
-    static QVariant toJson(const Bencode &bencode);
-};
+    static QByteArray toRaw(const Bencode *bencode);
+    static QVariant toJson(const Bencode *bencode);
 
-bool operator==(const Bencode &left, const Bencode &right);
-bool operator!=(const Bencode &left, const Bencode &right);
+    Type _type;
+
+    qlonglong _integer;
+    QByteArray _string;
+    QByteArray _key;
+};

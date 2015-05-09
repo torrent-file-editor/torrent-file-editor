@@ -57,7 +57,10 @@ set(HEADERS
   ${CMAKE_SOURCE_DIR}/lineeditwidget.h
   ${CMAKE_SOURCE_DIR}/urledit.h
   ${CMAKE_SOURCE_DIR}/folderedit.h
-  ${CMAKE_SOURCE_DIR}/aboutdlg.h)
+  ${CMAKE_SOURCE_DIR}/aboutdlg.h
+  ${CMAKE_SOURCE_DIR}/bencodemodel.h
+  ${CMAKE_SOURCE_DIR}/abstracttreemodel.h
+  ${CMAKE_SOURCE_DIR}/abstracttreeitem.h)
 
 set(FORMS
   ${CMAKE_SOURCE_DIR}/mainwindow.ui
@@ -72,7 +75,10 @@ set(SOURCES
   ${CMAKE_SOURCE_DIR}/lineeditwidget.cpp
   ${CMAKE_SOURCE_DIR}/urledit.cpp
   ${CMAKE_SOURCE_DIR}/folderedit.cpp
-  ${CMAKE_SOURCE_DIR}/aboutdlg.cpp)
+  ${CMAKE_SOURCE_DIR}/aboutdlg.cpp
+  ${CMAKE_SOURCE_DIR}/bencodemodel.cpp
+  ${CMAKE_SOURCE_DIR}/abstracttreemodel.cpp
+  ${CMAKE_SOURCE_DIR}/abstracttreeitem.cpp)
 
 set(RESOURCES
   ${CMAKE_BINARY_DIR}/translations.qrc

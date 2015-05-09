@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014  Ivan Romanov <drizt@land.ru>
+ * Copyright (C) 2014-2015  Ivan Romanov <drizt@land.ru>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,143 +21,157 @@
 #include <QDebug>
 #include <QStringList>
 
-Bencode::Bencode()
-    : type(Invalid)
-    , integer(0)
-    , string(QByteArray())
-    , list(QList<Bencode>())
-    , dictionary(QMap<QByteArray, Bencode>())
+Bencode::Bencode(Type type, const QByteArray &key)
+    : AbstractTreeItem(nullptr)
+    , _type(type)
+    , _integer(0)
+    , _string(QByteArray())
+    , _key(key)
 {
 }
 
-Bencode::Bencode(const Bencode &other)
-    : type(Invalid)
-    , integer(0)
-    , string(QByteArray())
-    , list(QList<Bencode>())
-    , dictionary(QMap<QByteArray, Bencode>())
+Bencode::Bencode(qlonglong integer, const QByteArray &key)
+    : AbstractTreeItem(nullptr)
+    , _type(Integer)
+    , _integer(integer)
+    , _string(QByteArray())
+    , _key(key)
 {
-    type = other.type;
-    switch (type) {
-    case Integer:     integer = other.integer;        break;
-    case String:      string = other.string;          break;
-    case List:        list = other.list;              break;
-    case Dictionary:  dictionary = other.dictionary;  break;
-    default: break;
+}
+
+Bencode::Bencode(const QByteArray &string, const QByteArray &key)
+    : AbstractTreeItem(nullptr)
+    , _type(String)
+    , _integer(0)
+    , _string(string)
+    , _key(key)
+{
+}
+
+Bencode *Bencode::checkAndCreate(Type type, int index)
+{
+    Q_ASSERT(index > childCount());
+
+    Bencode *item;
+    while (index > childCount()) {
+        appendChild(new Bencode(Type::String));
+    }
+
+    if (index == childCount()) {
+        item = new Bencode;
+        appendChild(item);
+    }
+
+    if (child(index)->_type != type) {
+        delete child(index);
+        item = new Bencode;
+        insertChild(index, item);
+    }
+    return item;
+}
+
+Bencode *Bencode::checkAndCreate(Type type, const QByteArray &key)
+{
+    Bencode *item = child(key);
+    if (!item || item->_type != type) {
+        delete item;
+        item = new Bencode(type, key);
+        appendMapItem(item);
+    }
+
+    return item;
+}
+
+void Bencode::appendMapItem(Bencode *item)
+{
+    Q_ASSERT(!item->_key.isEmpty());
+    Q_ASSERT(isDictionary());
+    Q_ASSERT(!item->parent());
+
+    if (item->parent())
+        item->parent()->removeChild(item);
+
+    for (int i = 0; i < childCount(); i++) {
+        if (item->_key < child(i)->_key) {
+            insertChild(i, item);
+            break;
+        }
+    }
+
+    if (!item->parent()) {
+        appendChild(item);
     }
 }
 
-Bencode::Bencode(int integer_)
-    : type(Integer)
-    , integer(integer_)
-    , string(QByteArray())
-    , list(QList<Bencode>())
-    , dictionary(QMap<QByteArray, Bencode>())
+Bencode *Bencode::child(int index) const
 {
+
+    return static_cast<Bencode*>(AbstractTreeItem::child(index));
 }
 
-Bencode::Bencode(const QByteArray &string_)
-    : type(String)
-    , integer(0)
-    , string(string_)
-    , list(QList<Bencode>())
-    , dictionary(QMap<QByteArray, Bencode>())
+Bencode *Bencode::child(const QByteArray &key) const
 {
+    Bencode *res = nullptr;
+    for (auto *item: children()) {
+        if (static_cast<Bencode*>(item)->_key == key) {
+            res = static_cast<Bencode*>(item);
+            break;
+        }
+    }
+    return res;
 }
 
-Bencode::Bencode(const BencodeList &list_)
-    : type(List)
-    , integer(0)
-    , string(QByteArray())
-    , list(list_)
-    , dictionary(QMap<QByteArray, Bencode>())
-{
-}
-
-Bencode::Bencode(const BencodeMap &dictionary_)
-    : type(Dictionary)
-    , integer(0)
-    , string(QByteArray())
-    , list(QList<Bencode>())
-    , dictionary(dictionary_)
-{
-}
-
-bool Bencode::isValid() const
-{
-    return type != Invalid;
-}
-
-bool Bencode::isInteger() const
-{
-    return type == Integer;
-}
-
-bool Bencode::isString() const
-{
-    return type == String;
-}
-
-bool Bencode::isList() const
-{
-    return type == List;
-}
-
-bool Bencode::isDictionary() const
-{
-    return type == Dictionary;
-}
 
 QByteArray Bencode::toRaw() const
 {
-    return toRaw(*this);
+    return toRaw(this);
 }
 
 QVariant Bencode::toJson() const
 {
-    return toJson(*this);
+    return toJson(this);
 }
 
-Bencode Bencode::fromRaw(const QByteArray &raw)
+Bencode *Bencode::fromRaw(const QByteArray &raw)
 {
     int pos = 0;
-    Bencode res = parseItem(raw, pos);
+    Bencode *res = parseItem(raw, pos);
     return res;
 }
 
-Bencode Bencode::fromJson(const QVariant &json)
+Bencode *Bencode::fromJson(const QVariant &json)
 {
-    Bencode res;
+    Bencode *res;
 
     switch (json.type()) {
     case QVariant::String:
-        res = toRawString(json.toString());
+        res = new Bencode(toRawString(json.toString()));
         break;
 
     case QVariant::Map: {
         QVariantMap variantMap = json.toMap();
-        BencodeMap map;
+        res = new Bencode(Type::Dictionary);
         QStringList keys = variantMap.keys();
         foreach (const QString &key, keys) {
-            map.insert(toRawString(key), fromJson(variantMap[key]));
+            Bencode *newItem = fromJson(variantMap.value(key));
+            newItem->_key = key.toUtf8();
+            res->appendChild(newItem);
         }
-        res = map;
         break; }
 
     case QVariant::List: {
         QVariantList variantList = json.toList();
-        BencodeList list;
+        res = new Bencode(Type::List);
         for (int i = 0; i < variantList.size(); ++i) {
-            list.append(fromJson(variantList[i]));
+            res->appendChild(fromJson(variantList.at(i)));
         }
-        res = list;
         break; }
 
     case QVariant::UInt:
     case QVariant::Int:
     case QVariant::ULongLong:
     case QVariant::LongLong:
-        res = json.toLongLong();
+        res = new Bencode(json.toLongLong());
         break;
 
     default:
@@ -181,71 +195,79 @@ QString Bencode::typeToStr(Type type)
     return "";
 }
 
-Bencode &Bencode::operator=(qlonglong integer)
+bool Bencode::compare(Bencode *other) const
 {
-    string = QByteArray();
-    list.clear();
-    dictionary.clear();
-    type = Integer;
-    this->integer = integer;
-    return *this;
-}
+    if (!other)
+        return false;
 
-Bencode &Bencode::operator=(const QByteArray &string)
-{
-    integer = 0;
-    list.clear();
-    dictionary.clear();
-    type = String;
-    this->string = string;
-    return *this;
-}
+    if (_type != other->_type)
+        return false;
 
-Bencode &Bencode::operator=(const QList<Bencode> &list)
-{
-    integer = 0;
-    string = QByteArray();
-    dictionary.clear();
-    type = List;
-    this->list = list;
-    return *this;
-}
+    if (parent() && static_cast<Bencode*>(parent())->_type == Type::Dictionary && other->parent() && _key != other->_key)
+        return false;
 
-Bencode &Bencode::operator=(const QMap<QByteArray, Bencode> &dictionary)
-{
-    integer = 0;
-    string = QByteArray();
-    list.clear();
-    type = Dictionary;
-    this->dictionary = dictionary;
-    return *this;
-}
+    switch (_type) {
+    case Type::String:
+        if (_string != other->_string)
+            return false;
+        break;
 
-Bencode &Bencode::operator[](const QByteArray &key)
-{
-    switch (type) {
-    case Invalid:
-        type = Dictionary;
+    case Type::Integer:
+        if (_integer != other->_integer)
+            return false;
+        break;
+
+    case Type::Dictionary:
+    case Type::List:
+        if (childCount() != other->childCount())
+            return false;
+
+        for (int i = 0; i < childCount(); i++) {
+            bool res = child(i)->compare(other->child(i));
+            if (!res) {
+                return false;
+            }
+        }
+        break;
 
     default:
-        return dictionary[key];
         break;
     }
+
+    return true;
 }
 
-Bencode &Bencode::operator[](int index)
+Bencode *Bencode::clone() const
 {
-    switch (type) {
-    case Invalid:
-        type = List;
+    Bencode *newItem = new Bencode;
+    newItem->_type = _type;
+    newItem->_integer = _integer;
+    newItem->_string = _string;
+    newItem->_key = _key;
 
-    default:
-        return list[index];
-        break;
+    foreach (AbstractTreeItem *child, children()) {
+        newItem->appendChild(child->clone());
     }
+    return newItem;
 }
 
-Bencode Bencode::parseItem(const QByteArray &raw, int &pos)
+QString Bencode::toString() const
+{
+    QString res;
+    if (!_key.isEmpty())
+        res = "key " + QString(_key) + " | ";
+    switch (_type) {
+    case Type::Invalid: res += "invalid"; break;
+    case Type::Integer: res += "integer " + QString::number(_integer); break;
+    case Type::String: res += "string " + fromRawString(_string); break;
+    case Type::Dictionary: res += "dictionary"; break;
+    case Type::List: res += "list"; break;
+    }
+    res = res.left(300);
+    return res;
+}
+
+Bencode *Bencode::parseItem(const QByteArray &raw, int &pos)
 {
     // Integer
     if (raw[pos] == 'i') {
@@ -265,18 +287,18 @@ Bencode Bencode::parseItem(const QByteArray &raw, int &pos)
     }
     else {
         qDebug() << "item parsing error. " << pos;
-        return Bencode();
+        return new Bencode();
     }
 }
 
-Bencode Bencode::parseInteger(const QByteArray &raw, int &pos)
+Bencode *Bencode::parseInteger(const QByteArray &raw, int &pos)
 {
     int basePos = pos;
     pos++;
     int end = raw.indexOf('e', pos);
     if (end == -1) {
         qDebug() << "number parsing error. pos" << basePos;
-        return Bencode();
+        return new Bencode;
     }
 
     // check number
@@ -288,18 +310,16 @@ Bencode Bencode::parseInteger(const QByteArray &raw, int &pos)
         }
 
         qDebug() << "number parsing error. pos" << basePos;
-        return Bencode();
+        return new Bencode;
     }
 
-    Bencode res;
-    res.type = Integer;
-    res.integer = QString(raw.mid(pos, end - pos)).toLongLong();
+    Bencode *res = new Bencode(QString(raw.mid(pos, end - pos)).toLongLong());
     pos = end + 1;
-    qDebug() << "number parsed" << res.integer << "pos" << basePos << "=>" << pos;
+    qDebug() << "number parsed" << res->_integer << "pos" << basePos << "=>" << pos;
     return res;
 }
 
-Bencode Bencode::parseString(const QByteArray &raw, int &pos)
+Bencode *Bencode::parseString(const QByteArray &raw, int &pos)
 {
     int stPos = pos;
 
@@ -307,63 +327,63 @@ Bencode Bencode::parseString(const QByteArray &raw, int &pos)
     int size = QString(raw.mid(pos, delimiter - pos)).toInt();
 
     delimiter++;
-    Bencode res;
-    res.type = String;
-    res.string = raw.mid(delimiter, size);
+    Bencode *res = new Bencode(raw.mid(delimiter, size));
     pos = delimiter + size;
 
-    qDebug() << "byte array parsed" << fromRawString(res.string).mid(0, 100) << "pos" << stPos << "=>" << pos;
+    qDebug() << "byte array parsed" << fromRawString(res->_string).mid(0, 100) << "pos" << stPos << "=>" << pos;
 
     return res;
 }
 
-Bencode Bencode::parseList(const QByteArray &raw, int &pos)
+Bencode *Bencode::parseList(const QByteArray &raw, int &pos)
 {
     int basePos = pos;
     pos++;
-    Bencode res;
-    res.type = List;
+    Bencode *res = new Bencode(Type::List);
 
     int i = 0;
     while(raw[pos] != 'e') {
         qDebug() << "list parsing" << i << "item";
 
-        Bencode item = parseItem(raw, pos);
+        Bencode *item = parseItem(raw, pos);
         // some error happens
-        if (!item.isValid())
-            return Bencode();
+        if (!item->isValid())
+            return new Bencode;
 
-        res.list << item;
+        res->appendChild(item);
     }
     pos++;
-    qDebug() << "list parsed" << res.list.size() << "pos" << basePos << "=>" << pos;
+    qDebug() << "list parsed" << res->children().size() << "pos" << basePos << "=>" << pos;
     return res;
 }
 
-Bencode Bencode::parseDictionary(const QByteArray &raw, int &pos)
+Bencode *Bencode::parseDictionary(const QByteArray &raw, int &pos)
 {
     int basePos = pos;
     pos++;
 
-    Bencode res;
-    res.type = Dictionary;
+    Bencode *res = new Bencode(Type::Dictionary);
 
     QStringList keys;
 
     while(raw[pos] != 'e') {
-        QByteArray key = parseString(raw, pos).string;
+        Bencode *keyItem = parseString(raw, pos);
+        QByteArray key = keyItem->_string;
+        delete keyItem;
+
         keys << fromRawString(key);
         qDebug() << "map parsing" << keys.last() << "item";
-        Bencode value = parseItem(raw, pos);
+        Bencode *value = parseItem(raw, pos);
 
         // some error happens
-        if (!value.isValid())
-            return Bencode();
+        if (!value->isValid())
+            return new Bencode();
 
-        res.dictionary.insert(key, value);
+        value->_key = key;
+        res->appendMapItem(value);
     }
     pos++;
-    qDebug() << "map parsed" << res.dictionary.size() << keys << "pos" << basePos << "=>" << pos;
+    qDebug() << "map parsed" << res->children().size() << keys << "pos" << basePos << "=>" << pos;
     return res;
 }
 
@@ -403,19 +423,19 @@ QByteArray Bencode::toRawString(const QString &string)
     return res;
 }
 
-QByteArray Bencode::toRaw(const Bencode &bencode)
+QByteArray Bencode::toRaw(const Bencode *bencode)
 {
     QByteArray res;
-    switch (bencode.type) {
+    switch (bencode->_type) {
     case Integer:
         res += 'i';
-        res += QString::number(bencode.integer).toLatin1();
+        res += QString::number(bencode->_integer).toLatin1();
         res += 'e';
-        qDebug() << "encode number" << bencode.integer;
+        qDebug() << "encode number" << bencode->_integer;
         break;
 
     case String: {
-        QByteArray ba = bencode.string;
+        QByteArray ba = bencode->_string;
         res += QString::number(ba.size());
         res += ':';
         res += ba;
@@ -424,10 +444,10 @@ QByteArray Bencode::toRaw(const Bencode &bencode)
 
     case List: {
         res += 'l';
-        BencodeList list = bencode.list;
+        QList<AbstractTreeItem*> list = bencode->children();
         for (int i = 0; i < list.size(); ++i) {
             qDebug() << "encoding" << i << "item";
-            res += toRaw(list[i]);
+            res += toRaw(static_cast<Bencode*>(list.at(i)));
         }
         qDebug() << "encode list size" << list.size();
         res += 'e';
@@ -435,100 +455,63 @@ QByteArray Bencode::toRaw(const Bencode &bencode)
 
     case Dictionary: {
         res += 'd';
-        BencodeMap map = bencode.dictionary;
-        QList<QByteArray> keys = map.keys();
+        QList<AbstractTreeItem*> map = bencode->children();
         QStringList fromRawKeys;
-        foreach (const QByteArray &key, keys) {
+        for (int i = 0; i < map.size(); ++i) {
+            QByteArray key = static_cast<Bencode*>(map.at(i))->_key;
             fromRawKeys << fromRawString(key);
             qDebug() << "encode" << fromRawString(key) << "item";
             res += QString::number(key.size());
             res += ':';
             res += key;
 
-            res += toRaw(map[key]);
+            res += toRaw(static_cast<Bencode*>(map.at(i)));
         }
         res += 'e';
         qDebug() << "encode map" << fromRawKeys;
         break; }
 
     default:
-        qDebug() << "wrong type" << bencode.type;
+        qDebug() << "wrong type" << bencode->_type;
         break;
 
     }
     return res;
 }
 
-QVariant Bencode::toJson(const Bencode &bencode)
+QVariant Bencode::toJson(const Bencode *bencode)
 {
     QVariant res = QVariant();
 
-    switch (bencode.type) {
+    switch (bencode->_type) {
     case String:
-        res = fromRawString(bencode.string);
+        res = fromRawString(bencode->_string);
         break;
 
     case Dictionary: {
         QVariantMap map;
-        QList<QByteArray> keys = bencode.dictionary.keys();
-        foreach (const QByteArray &key, keys) {
-            map.insert(fromRawString(key), toJson(bencode.dictionary[key]));
+        for (const auto *item: bencode->children()) {
+            map.insert(fromRawString(static_cast<const Bencode*>(item)->_key), toJson(static_cast<const Bencode*>(item)));
         }
         res = map;
         break; }
 
     case List: {
         QVariantList list;
-        for (int i = 0; i < bencode.list.size(); ++i) {
-            list << toJson(bencode.list[i]);
+        for (const auto *item: bencode->children()) {
+            list << toJson(static_cast<const Bencode*>(item));
         }
         res = list;
         break; }
 
     case Integer:
-        res = bencode.integer;
+        res = bencode->_integer;
         break;
 
     default:
-        qDebug() << "wrong bencode type" << bencode.type;
+        qDebug() << "wrong bencode type" << bencode->_type;
         break;
     }
 
     return res;
-}
-
-bool operator==(const Bencode &left, const Bencode &right)
-{
-    if (left.type != right.type)
-        return false;
-
-    bool res = false;
-    switch (left.type) {
-    case Bencode::Integer:
-        res = left.integer == right.integer;
-        break;
-
-    case Bencode::String:
-        res = left.string == right.string;
-        break;
-
-    case Bencode::List:
-        res = left.list == right.list;
-        break;
-
-    case Bencode::Dictionary:
-        res = left.dictionary == right.dictionary;
-        break;
-
-    default:
-        res = true;
-        break;
-    }
-
-    return res;
-}
-
-bool operator!=(const Bencode &left, const Bencode &right)
-{
-    return !(left == right);
 }
