@@ -675,10 +675,29 @@ void MainWindow::removeTreeItem()
     if (!ui->treeJson->currentIndex().isValid() || !ui->treeJson->currentIndex().parent().isValid())
         return;
 
-    int row = ui->treeJson->currentIndex().row();
-    QModelIndex parent = ui->treeJson->currentIndex().parent();
-    _bencodeModel->removeRow(row, parent);
-    if (row < _bencodeModel->rowCount(parent)) {
+    int row = -1;
+    QModelIndex parent;
+    if (ui->treeJson->selectionModel()->selectedRows().size() == 1) {
+        row = ui->treeJson->currentIndex().row();
+        parent = ui->treeJson->currentIndex().parent();
+    }
+
+    QList<QPersistentModelIndex> indexes;
+
+    for (const QModelIndex &i: ui->treeJson->selectionModel()->selectedRows()) {
+        // Skip root item
+        if (!i.parent().isValid())
+            continue;
+
+        indexes << i;
+    }
+
+    for (const QPersistentModelIndex &i: indexes) {
+        if (i.isValid())
+            ui->treeJson->model()->removeRow(i.row(), i.parent());
+    }
+
+    if (row >= 0 && row < _bencodeModel->rowCount(parent)) {
         ui->treeJson->setCurrentIndex(parent.child(row, 0));
     }
     else {
