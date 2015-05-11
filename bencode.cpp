@@ -193,7 +193,9 @@ Bencode *Bencode::fromJson(const QVariant &json)
         break;
 
     default:
+#ifdef DEBUG
         qDebug() << "wrong variant" << json.type();
+#endif
         break;
     }
 
@@ -309,7 +311,9 @@ Bencode *Bencode::parseItem(const QByteArray &raw, int &pos)
         return parseDictionary(raw, pos);
     }
     else {
+#ifdef DEBUG
         qDebug() << "item parsing error. " << pos;
+#endif
         return new Bencode();
     }
 }
@@ -320,7 +324,9 @@ Bencode *Bencode::parseInteger(const QByteArray &raw, int &pos)
     pos++;
     int end = raw.indexOf('e', pos);
     if (end == -1) {
+#ifdef DEBUG
         qDebug() << "number parsing error. pos" << basePos;
+#endif
         return new Bencode;
     }
 
@@ -332,13 +338,17 @@ Bencode *Bencode::parseInteger(const QByteArray &raw, int &pos)
             continue;
         }
 
+#ifdef DEBUG
         qDebug() << "number parsing error. pos" << basePos;
+#endif
         return new Bencode;
     }
 
     Bencode *res = new Bencode(QString(raw.mid(pos, end - pos)).toLongLong());
     pos = end + 1;
+#ifdef DEBUG
     qDebug() << "number parsed" << res->_integer << "pos" << basePos << "=>" << pos;
+#endif
     return res;
 }
 
@@ -353,7 +363,9 @@ Bencode *Bencode::parseString(const QByteArray &raw, int &pos)
     Bencode *res = new Bencode(raw.mid(delimiter, size));
     pos = delimiter + size;
 
+#ifdef DEBUG
     qDebug() << "byte array parsed" << fromRawString(res->_string).mid(0, 100) << "pos" << stPos << "=>" << pos;
+#endif
 
     return res;
 }
@@ -366,7 +378,9 @@ Bencode *Bencode::parseList(const QByteArray &raw, int &pos)
 
     int i = 0;
     while(raw[pos] != 'e') {
+#ifdef DEBUG
         qDebug() << "list parsing" << i << "item";
+#endif
 
         Bencode *item = parseItem(raw, pos);
         // some error happens
@@ -376,7 +390,9 @@ Bencode *Bencode::parseList(const QByteArray &raw, int &pos)
         res->appendChild(item);
     }
     pos++;
+#ifdef DEBUG
     qDebug() << "list parsed" << res->children().size() << "pos" << basePos << "=>" << pos;
+#endif
     return res;
 }
 
@@ -395,7 +411,9 @@ Bencode *Bencode::parseDictionary(const QByteArray &raw, int &pos)
         delete keyItem;
 
         keys << fromRawString(key);
+#ifdef DEBUG
         qDebug() << "map parsing" << keys.last() << "item";
+#endif
         Bencode *value = parseItem(raw, pos);
 
         // some error happens
@@ -409,7 +427,9 @@ Bencode *Bencode::parseDictionary(const QByteArray &raw, int &pos)
         res->appendMapItem(value);
     }
     pos++;
+#ifdef DEBUG
     qDebug() << "map parsed" << res->children().size() << keys << "pos" << basePos << "=>" << pos;
+#endif
     return res;
 }
 
@@ -457,7 +477,9 @@ QByteArray Bencode::toRaw(const Bencode *bencode)
         res += 'i';
         res += QString::number(bencode->_integer).toLatin1();
         res += 'e';
+#ifdef DEBUG
         qDebug() << "encode number" << bencode->_integer;
+#endif
         break;
 
     case String: {
@@ -465,17 +487,23 @@ QByteArray Bencode::toRaw(const Bencode *bencode)
         res += QString::number(ba.size());
         res += ':';
         res += ba;
+#ifdef DEBUG
         qDebug() << "encode byte array size" << ba.size() << fromRawString(ba).mid(0, 100);
+#endif
         break; }
 
     case List: {
         res += 'l';
         QList<AbstractTreeItem*> list = bencode->children();
         for (int i = 0; i < list.size(); ++i) {
+#ifdef DEBUG
             qDebug() << "encoding" << i << "item";
+#endif
             res += toRaw(static_cast<Bencode*>(list.at(i)));
         }
+#ifdef DEBUG
         qDebug() << "encode list size" << list.size();
+#endif
         res += 'e';
         break; }
 
@@ -486,7 +514,9 @@ QByteArray Bencode::toRaw(const Bencode *bencode)
         for (int i = 0; i < map.size(); ++i) {
             QByteArray key = static_cast<Bencode*>(map.at(i))->_key;
             fromRawKeys << fromRawString(key);
+#ifdef DEBUG
             qDebug() << "encode" << fromRawString(key) << "item";
+#endif
             res += QString::number(key.size());
             res += ':';
             res += key;
@@ -494,11 +524,15 @@ QByteArray Bencode::toRaw(const Bencode *bencode)
             res += toRaw(static_cast<Bencode*>(map.at(i)));
         }
         res += 'e';
+#ifdef DEBUG
         qDebug() << "encode map" << fromRawKeys;
+#endif
         break; }
 
     default:
+#ifdef DEBUG
         qDebug() << "wrong type" << bencode->_type;
+#endif
         break;
 
     }
@@ -535,7 +569,9 @@ QVariant Bencode::toJson(const Bencode *bencode)
         break;
 
     default:
+#ifdef DEBUG
         qDebug() << "wrong bencode type" << bencode->_type;
+#endif
         break;
     }
 

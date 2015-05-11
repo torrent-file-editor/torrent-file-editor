@@ -149,10 +149,12 @@ int main(int argc, char *argv[])
         }
     }
 
-#ifdef HAVE_QT5
+#ifdef DEBUG
+# ifdef HAVE_QT5
     qInstallMessageHandler(debugHandler);
-#else
+# else
     qInstallMsgHandler(debugHandler);
+# endif
 #endif
 
     Application a(argc, argv);
