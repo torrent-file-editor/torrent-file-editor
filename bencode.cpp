@@ -21,12 +21,15 @@
 #include <QDebug>
 #include <QStringList>
 
+QStringList hexKeys = QStringList() << "pieces" << "originator" << "certificate" << "signature";
+
 Bencode::Bencode(Type type, const QByteArray &key)
     : AbstractTreeItem(nullptr)
     , _type(type)
     , _integer(0)
     , _string(QByteArray())
     , _key(key)
+    , _hex(false)
 {
 }
 
@@ -36,6 +39,7 @@ Bencode::Bencode(qlonglong integer, const QByteArray &key)
     , _integer(integer)
     , _string(QByteArray())
     , _key(key)
+    , _hex(false)
 {
 }
 
@@ -45,7 +49,19 @@ Bencode::Bencode(const QByteArray &string, const QByteArray &key)
     , _integer(0)
     , _string(string)
     , _key(key)
+    , _hex(false)
 {
+}
+
+void Bencode::setType(Type type)
+{
+    if (type == _type)
+        return;
+
+    qDeleteAll(children());
+    _integer = 0;
+    _string = QByteArray();
+    _type = type;
 }
 
 Bencode *Bencode::checkAndCreate(Type type, int index)
@@ -155,6 +171,8 @@ Bencode *Bencode::fromJson(const QVariant &json)
         foreach (const QString &key, keys) {
             Bencode *newItem = fromJson(variantMap.value(key));
             newItem->_key = key.toUtf8();
+            if (hexKeys.contains(QString(key)))
+                newItem->_hex = true;
             res->appendChild(newItem);
         }
         break; }
@@ -244,6 +262,7 @@ Bencode *Bencode::clone() const
     newItem->_integer = _integer;
     newItem->_string = _string;
     newItem->_key = _key;
+    newItem->_hex = _hex;
 
     foreach (AbstractTreeItem *child, children()) {
         newItem->appendChild(child->clone());
@@ -269,6 +288,10 @@ QString Bencode::toString() const
 
 Bencode *Bencode::parseItem(const QByteArray &raw, int &pos)
 {
+    // it is ok to parse empty bencode
+    if (pos == 0 && raw.isEmpty())
+        return nullptr;
+
     // Integer
     if (raw[pos] == 'i') {
         return parseInteger(raw, pos);
@@ -380,6 +403,9 @@ Bencode *Bencode::parseDictionary(const QByteArray &raw, int &pos)
             return new Bencode();
 
         value->_key = key;
+        if (hexKeys.contains(QString(key)))
+            value->_hex = true;
+
         res->appendMapItem(value);
     }
     pos++;

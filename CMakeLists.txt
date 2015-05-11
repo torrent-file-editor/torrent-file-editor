@@ -59,8 +59,10 @@ set(HEADERS
   ${CMAKE_SOURCE_DIR}/folderedit.h
   ${CMAKE_SOURCE_DIR}/aboutdlg.h
   ${CMAKE_SOURCE_DIR}/bencodemodel.h
+  ${CMAKE_SOURCE_DIR}/bencodedelegate.h
   ${CMAKE_SOURCE_DIR}/abstracttreemodel.h
-  ${CMAKE_SOURCE_DIR}/abstracttreeitem.h)
+  ${CMAKE_SOURCE_DIR}/abstracttreeitem.h
+  ${CMAKE_SOURCE_DIR}/proxystyle.h)
 
 set(FORMS
   ${CMAKE_SOURCE_DIR}/mainwindow.ui
@@ -77,8 +79,17 @@ set(SOURCES
   ${CMAKE_SOURCE_DIR}/folderedit.cpp
   ${CMAKE_SOURCE_DIR}/aboutdlg.cpp
   ${CMAKE_SOURCE_DIR}/bencodemodel.cpp
+  ${CMAKE_SOURCE_DIR}/bencodedelegate.cpp
   ${CMAKE_SOURCE_DIR}/abstracttreemodel.cpp
-  ${CMAKE_SOURCE_DIR}/abstracttreeitem.cpp)
+  ${CMAKE_SOURCE_DIR}/abstracttreeitem.cpp
+  ${CMAKE_SOURCE_DIR}/proxystyle.cpp)
+
+if(ENABLE_MODEL_TEST)
+  list(APPEND SOURCES
+    ${CMAKE_SOURCE_DIR}/modeltest/dynamictreemodel.cpp
+    ${CMAKE_SOURCE_DIR}/modeltest/tst_modeltest.cpp
+    ${CMAKE_SOURCE_DIR}/modeltest/modeltest.cpp)
+endif()
 
 set(RESOURCES
   ${CMAKE_BINARY_DIR}/translations.qrc

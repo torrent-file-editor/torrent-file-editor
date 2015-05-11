@@ -22,8 +22,8 @@
 #include <QStandardItem>
 
 class QProgressDialog;
-class QTextCodec;
 class Bencode;
+class BencodeModel;
 
 class Worker : public QObject
 {
@@ -79,9 +79,9 @@ public slots:
     void updateBencodeFromComment();
     void updateBencodeFromTrackers();
 
-    void updateBencodeFromJsonTree();
-
     void updateEncoding(const QString &encoding);
+
+    void updateTitle();
 
     // Files tab
     void makeTorrent();
@@ -99,23 +99,16 @@ public slots:
     void removeTreeItem();
     void upTreeItem();
     void downTreeItem();
-    void sortJsonTree(QStandardItem *item);
 
 private:
     enum Tabs { SimpleTab, FilesTab, JsonTreeTab, RawTab, LogTab };
 
     void fillCoding();
-    QString toUnicode(const QByteArray &encoded) const;
-    QByteArray fromUnicode(const QString &unicode) const;
 
     bool isModified() const;
-    void updateTitle();
 
     void updateSimple();
     void updateRaw();
-    void updateJsonTree();
-    void bencodeToStandardItem(QStandardItem *parent, Bencode *bencode);
-    void standardItemToBencode(Bencode *parent, QStandardItem *item);
 
     bool saveTo(const QString &fileName);
 
@@ -127,11 +120,9 @@ private:
     Ui::MainWindow *ui;
     QString _fileName;
 
-    //  Here saved .torrent file
-    Bencode *_bencode;
-    Bencode *_originBencode;
+    BencodeModel *_bencodeModel;
+
     QProgressDialog *_progressDialog;
 
     static MainWindow *_instance;
-    QTextCodec *_textCodec;
 };

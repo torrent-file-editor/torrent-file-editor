@@ -42,6 +42,7 @@ public:
     Bencode(qlonglong integer, const QByteArray &key = QByteArray());
     Bencode(const QByteArray &string, const QByteArray &key = QByteArray());
 
+    void setType(Type type);
     inline Type type() const { return _type; }
 
     inline void setInteger(qlonglong integer) { _integer = integer; }
@@ -52,6 +53,9 @@ public:
 
     inline void setKey(const QByteArray &key) { _key = key; }
     inline QByteArray key() const { return _key; }
+
+    inline void setHex(bool hex) { _hex = hex; }
+    inline bool hex() const { return _hex; }
 
     Bencode *checkAndCreate(Type type, int index);
     Bencode *checkAndCreate(Type type, const QByteArray &key);
@@ -98,4 +102,5 @@ private:
     qlonglong _integer;
     QByteArray _string;
     QByteArray _key;
+    bool _hex;
 };
