@@ -810,14 +810,8 @@ QString MainWindow::smartSize(qulonglong size)
     double kb = size;
     int i = 0;
 
-    // clang doesn't support 'd' suffix
-#ifdef __clang__
     while (kb >= 1024.0) {
         kb /= 1024.0;
-#else
-    while (kb >= 1024.0d) {
-        kb /= 1024.0d;
-#endif
         i++;
     }
 
