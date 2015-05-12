@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014  Ivan Romanov <drizt@land.ru>
+ * Copyright (C) 2014-2015  Ivan Romanov <drizt@land.ru>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -32,6 +32,11 @@
 # include <qjson/parser.h>
 #endif
 
+#ifdef Q_OS_WIN
+# include <windows.h>
+HANDLE hConsole = NULL;
+#endif
+
 #ifdef HAVE_QT5
 void debugHandler(QtMsgType type, const QMessageLogContext &context, const QString &msg)
 #else
@@ -45,6 +50,33 @@ void debugHandler(QtMsgType type, const char *msg)
 
     if (MainWindow::instance())
         MainWindow::instance()->addLog(QString(msg));
+}
+
+void openWinConsole()
+{
+#ifdef Q_OS_WIN
+    BOOL b = AllocConsole();
+    if (!b)
+        return;
+
+    hConsole = GetStdHandle(STD_INPUT_HANDLE);
+
+    freopen("CONIN$", "r", stdin);
+    freopen("CONOUT$", "w", stdout);
+    freopen("CONOUT$", "w", stderr);
+#endif
+}
+
+void closeWinConsole()
+{
+#ifdef Q_OS_WIN
+    if (!hConsole)
+        return;
+
+    printf("\nPress any key to close window...\n");
+    getchar();
+    FreeConsole();
+#endif
 }
 
 bool toJson(const QString &source, const QString &dest)
@@ -90,6 +122,7 @@ bool fromJson(const QString &source, const QString &dest)
 {
     QFile sourceFile(source);
     if (!sourceFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        openWinConsole();
         qDebug("Error: can't open source file");
         return false;
     }
@@ -127,7 +160,9 @@ bool fromJson(const QString &source, const QString &dest)
 int main(int argc, char *argv[])
 {
     if (argc == 2 && !strcmp(argv[1], "--help")) {
-        qDebug(qPrintable("Usage: torrent-file-editor --to-json | --from-json  source dest"));
+        openWinConsole();
+        printf("Usage: torrent-file-editor --to-json | --from-json  source dest\n");
+        closeWinConsole();
         return 0;
     }
 
@@ -137,15 +172,20 @@ int main(int argc, char *argv[])
         QString dest(argv[3]);
 
         if (command == "--to-json" || command == "--from-json") {
+            int retCode = 0;
+            openWinConsole();
+
             if (!QFile::exists(source)) {
                 qDebug("Error: source file is not exist!");
-                return -1;
+                retCode = -1;
             }
-
-            if (command == "--to-json")
-                return toJson(source, dest) ? -1 : 0;
+            else if (command == "--to-json")
+                retCode = toJson(source, dest) ? -1 : 0;
             else
-                return fromJson(source, dest) ? -1 : 0;
+                retCode = fromJson(source, dest) ? -1 : 0;
+
+            closeWinConsole();
+            return retCode;
         }
     }
 
