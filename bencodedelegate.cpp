@@ -41,6 +41,10 @@ QWidget *BencodeDelegate::createEditor(QWidget *parent, const QStyleOptionViewIt
     ProxyStyle *proxyStyle = new ProxyStyle;
     proxyStyle->setParent(comboBox);
     comboBox->setStyle(proxyStyle);
+    comboBox->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+    comboBox->setMinimumHeight(option.rect.height());
+    comboBox->setMaximumHeight(option.rect.height());
+    comboBox->setSizeAdjustPolicy(QComboBox::AdjustToContents);
     return comboBox;
 }
 
