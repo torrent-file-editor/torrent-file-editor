@@ -1,7 +1,7 @@
 project(torrent-file-editor)
 cmake_minimum_required(VERSION 2.8.11)
 
-set(APP_VERSION "0.1.0")
+set(APP_VERSION "0.2.0")
 set(BUNDLE_DIR_BASE_NAME "Torrent File Editor")
 
 set(MACOSX_BUNDLE_INFO_STRING "Torrent File Editor ${APP_VERSION}. This program is licensed under the GNU GPL.")

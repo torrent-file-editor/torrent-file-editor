@@ -3,7 +3,7 @@
 set -e
 
 name=torrent-file-editor
-version=0.1.0
+version=0.2.0
 
 git clean -dfx .
 mkdir win32
