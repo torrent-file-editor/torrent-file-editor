@@ -15,7 +15,7 @@ set(MACOSX_BUNDLE_BUNDLE_VERSION ${APP_VERSION})
 include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
 
 # Enable C++11
-list(APPEND CMAKE_CXX_FLAGS "-std=c++11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 if(APPLE)
   # Force Qt5 build on Mac OS X. Qt4 is not supported
