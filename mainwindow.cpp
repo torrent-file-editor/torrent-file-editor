@@ -507,6 +507,7 @@ void MainWindow::addFile()
         QList<QStandardItem*> list;
         list << new QStandardItem(QDir::toNativeSeparators(file));
         list << new QStandardItem(smartSize(QFileInfo(file).size()));
+        list.last()->setData(QFileInfo(file).size());
 
         model->appendRow(list);
     }
@@ -544,13 +545,13 @@ void MainWindow::addFolder()
         QList<QStandardItem*> list;
         list << new QStandardItem(QDir::toNativeSeparators(file));
         list << new QStandardItem(smartSize(QFileInfo(file).size()));
+        list.last()->setData(QFileInfo(file).size());
 
         model->appendRow(list);
     }
 
     if (ui->leBaseFolder->text().isEmpty())
         ui->leBaseFolder->setText(path);
-    ui->leTotalSize->setText(smartSize(totalSize));
 
     updateFilesSize();
 }
@@ -622,9 +623,9 @@ void MainWindow::updateFiles()
             totalSize += file.second;
             list << new QStandardItem(file.first);
             list << new QStandardItem(smartSize(file.second));
+            list.last()->setData(file.second);
             model->appendRow(list);
         }
-        ui->leTotalSize->setText(smartSize(totalSize));
         qlonglong pieceSize = _bencodeModel->pieceSize();
         for (int i = 0; i < ui->cmbPieceSizes->count(); i++) {
             if (pieceSize == ui->cmbPieceSizes->itemData(i).toULongLong())
@@ -647,6 +648,8 @@ void MainWindow::updateFiles()
         if (QFile::exists(file))
             model->item(i)->setText(QDir::toNativeSeparators(file));
     }
+
+    updateFilesSize();
 }
 
 void MainWindow::setPieces(const QByteArray &pieces)
@@ -819,8 +822,7 @@ void MainWindow::updateFilesSize()
     qulonglong totalSize = 0;
 
     for (int i = 0; i < model->rowCount(); ++i) {
-        QString file = model->item(i)->text();
-        totalSize += QFileInfo(file).size();
+        totalSize += model->item(i, 1)->data().toLongLong();
     }
 
     ui->leTotalSize->setText(smartSize(totalSize));
