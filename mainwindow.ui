@@ -26,12 +26,18 @@
         <property name="text">
          <string>New</string>
         </property>
+        <property name="shortcut">
+         <string>Ctrl+N</string>
+        </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="btnOpen">
         <property name="text">
          <string>Open</string>
+        </property>
+        <property name="shortcut">
+         <string>Ctrl+O</string>
         </property>
        </widget>
       </item>
@@ -40,12 +46,18 @@
         <property name="text">
          <string>Save</string>
         </property>
+        <property name="shortcut">
+         <string>Ctrl+S</string>
+        </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="btnSaveAs">
         <property name="text">
          <string>Save As</string>
+        </property>
+        <property name="shortcut">
+         <string>Ctrl+Shift+S</string>
         </property>
        </widget>
       </item>
