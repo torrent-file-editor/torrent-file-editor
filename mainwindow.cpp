@@ -295,11 +295,11 @@ void MainWindow::saveAs()
         return;
 
     QString fileName = QFileDialog::getSaveFileName(this, tr("Save As"), "", tr("Torrents (*.torrent)"));
-    if (!fileName.endsWith(".torrent"))
-        fileName += ".torrent";
-
     if (fileName.isEmpty())
         return;
+
+    if (!fileName.endsWith(".torrent"))
+        fileName += ".torrent";
 
     if (saveTo(fileName))
         _fileName = fileName;
