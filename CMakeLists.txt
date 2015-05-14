@@ -21,7 +21,7 @@ if(APPLE)
   # Force Qt5 build on Mac OS X. Qt4 is not supported
   set(QT5_BUILD ON)
 else()
-  option(QT5_BUILD OFF "Force Qt5 build")
+  option(QT5_BUILD "Force Qt5 build" OFF)
 endif()
 
 if(QT5_BUILD)
