@@ -554,7 +554,6 @@ bool BencodeModel::setData(const QModelIndex &index, const QVariant &value, int 
     default:
         break;
     }
-    if (res)
 
     return res;
 }
