@@ -128,6 +128,15 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+#ifndef Q_OS_MAC
+    // Show menu bar only on Mac OS X.
+    // Menu bar on Mac OS is persistent. No sense to not use it.
+    ui->menuBar->hide();
+#else
+    // Hide About button on Mac OS X to comply good GUI style on Mac OS X.
+    ui->btnAbout->hide();
+#endif
+
     _progressDialog->setWindowModality(Qt::ApplicationModal);
     _progressDialog->setLabelText(tr("Need to calculate piece hashes"));
     _progressDialog->setWindowTitle(tr("Please wait"));

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>692</width>
+    <width>694</width>
     <height>533</height>
    </rect>
   </property>
@@ -26,18 +26,12 @@
         <property name="text">
          <string>New</string>
         </property>
-        <property name="shortcut">
-         <string>Ctrl+N</string>
-        </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="btnOpen">
         <property name="text">
          <string>Open</string>
-        </property>
-        <property name="shortcut">
-         <string>Ctrl+O</string>
         </property>
        </widget>
       </item>
@@ -46,18 +40,12 @@
         <property name="text">
          <string>Save</string>
         </property>
-        <property name="shortcut">
-         <string>Ctrl+S</string>
-        </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="btnSaveAs">
         <property name="text">
          <string>Save As</string>
-        </property>
-        <property name="shortcut">
-         <string>Ctrl+Shift+S</string>
         </property>
        </widget>
       </item>
@@ -654,6 +642,67 @@
     </item>
    </layout>
   </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>694</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actNew"/>
+    <addaction name="actOpen"/>
+    <addaction name="actSave"/>
+    <addaction name="actSaveAs"/>
+    <addaction name="actAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <action name="actNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actOpen">
+   <property name="text">
+    <string>Open...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actSaveAs">
+   <property name="text">
+    <string>Save As...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actAbout">
+   <property name="text">
+    <string>About...</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::AboutRole</enum>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -711,8 +760,8 @@
   <connection>
    <sender>btnOpen</sender>
    <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>open()</slot>
+   <receiver>actOpen</receiver>
+   <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>156</x>
@@ -727,8 +776,8 @@
   <connection>
    <sender>btnSave</sender>
    <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>save()</slot>
+   <receiver>actSave</receiver>
+   <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>260</x>
@@ -743,8 +792,8 @@
   <connection>
    <sender>btnSaveAs</sender>
    <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>saveAs()</slot>
+   <receiver>actSaveAs</receiver>
+   <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>346</x>
@@ -903,8 +952,8 @@
   <connection>
    <sender>btnNew</sender>
    <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>create()</slot>
+   <receiver>actNew</receiver>
+   <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>65</x>
@@ -1047,8 +1096,8 @@
   <connection>
    <sender>btnAbout</sender>
    <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>showAbout()</slot>
+   <receiver>actAbout</receiver>
+   <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>1119</x>
@@ -1137,6 +1186,86 @@
     <hint type="destinationlabel">
      <x>163</x>
      <y>-5</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actNew</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>create()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>266</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actOpen</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>266</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actSave</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>save()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>266</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actSaveAs</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>saveAs()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>266</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actAbout</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showAbout()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>266</y>
     </hint>
    </hints>
   </connection>
