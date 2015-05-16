@@ -32,25 +32,26 @@
 # include <qjson/parser.h>
 #endif
 
+#undef Q_OS_WIN
 #ifdef Q_OS_WIN
 # include <windows.h>
 HANDLE hConsole = NULL;
 #endif
 
-#ifdef HAVE_QT5
-void debugHandler(QtMsgType type, const QMessageLogContext &context, const QString &msg)
-#else
-void debugHandler(QtMsgType type, const char *msg)
-#endif
-{
-#ifdef HAVE_QT5
-    Q_UNUSED(context);
-#endif
-    Q_UNUSED(type);
+//#ifdef HAVE_QT5
+//void debugHandler(QtMsgType type, const QMessageLogContext &context, const QString &msg)
+//#else
+//void debugHandler(QtMsgType type, const char *msg)
+//#endif
+//{
+//#ifdef HAVE_QT5
+//    Q_UNUSED(context);
+//#endif
+//    Q_UNUSED(type);
 
-    if (MainWindow::instance())
-        MainWindow::instance()->addLog(QString(msg));
-}
+//    if (MainWindow::instance())
+//        MainWindow::instance()->addLog(QString(msg));
+//}
 
 void openWinConsole()
 {
@@ -191,7 +192,7 @@ int main(int argc, char *argv[])
 
 #ifdef DEBUG
 # ifdef HAVE_QT5
-    qInstallMessageHandler(debugHandler);
+//    qInstallMessageHandler(debugHandler);
 # else
     qInstallMsgHandler(debugHandler);
 # endif
@@ -214,3 +215,4 @@ int main(int argc, char *argv[])
 
     return a.exec();
 }
+#define Q_OS_WIN

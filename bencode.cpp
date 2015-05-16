@@ -170,7 +170,7 @@ Bencode *Bencode::fromJson(const QVariant &json)
         QStringList keys = variantMap.keys();
         foreach (const QString &key, keys) {
             Bencode *newItem = fromJson(variantMap.value(key));
-            newItem->_key = key.toUtf8();
+            newItem->_key = std::move(key.toUtf8()); //DIEPDTN
             if (hexKeys.contains(QString(key)))
                 newItem->_hex = true;
             res->appendChild(newItem);
@@ -189,6 +189,8 @@ Bencode *Bencode::fromJson(const QVariant &json)
     case QVariant::Int:
     case QVariant::ULongLong:
     case QVariant::LongLong:
+    case QVariant::Double:
+        qDebug()<<"DIEPDTN"<<json<<json.toLongLong()<<json.typeName();
         res = new Bencode(json.toLongLong());
         break;
 
