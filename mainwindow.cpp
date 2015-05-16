@@ -132,6 +132,12 @@ MainWindow::MainWindow(QWidget *parent)
     // Show menu bar only on Mac OS X.
     // Menu bar on Mac OS is persistent. No sense to not use it.
     ui->menuBar->hide();
+
+    // Workaround: shortcuts are not working for "hidden" actions. Fix it.
+    ui->btnNew->addAction(ui->actNew);
+    ui->btnOpen->addAction(ui->actOpen);
+    ui->btnSave->addAction(ui->actSave);
+    ui->btnSaveAs->addAction(ui->actSaveAs);
 #else
     // Hide About button on Mac OS X to comply good GUI style on Mac OS X.
     ui->btnAbout->hide();
