@@ -189,6 +189,7 @@ Bencode *Bencode::fromJson(const QVariant &json)
     case QVariant::Int:
     case QVariant::ULongLong:
     case QVariant::LongLong:
+    case QVariant::Double:
         res = new Bencode(json.toLongLong());
         break;
 
