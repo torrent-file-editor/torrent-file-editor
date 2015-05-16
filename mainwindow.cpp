@@ -217,7 +217,7 @@ MainWindow *MainWindow::instance()
 void MainWindow::addLog(const QString &log)
 {
 #ifdef DEBUG
-    ui->pteLog->appendPlainText(log);
+//    ui->pteLog->appendPlainText(log);
 #endif
 }
 
