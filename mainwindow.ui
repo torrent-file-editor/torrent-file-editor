@@ -332,6 +332,9 @@
          <layout class="QHBoxLayout" name="horizontalLayout_4">
           <item>
            <widget class="QToolButton" name="btnMakeTorrent">
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
             <property name="toolTip">
              <string>Make Torrent</string>
             </property>
@@ -345,6 +348,9 @@
           </item>
           <item>
            <widget class="QToolButton" name="btnAddFile">
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
             <property name="toolTip">
              <string>Add Files</string>
             </property>
@@ -358,6 +364,9 @@
           </item>
           <item>
            <widget class="QToolButton" name="btnAddFolder">
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
             <property name="toolTip">
              <string>Add Folder</string>
             </property>
@@ -378,6 +387,9 @@
           </item>
           <item>
            <widget class="QToolButton" name="btnRemoveFiles">
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
             <property name="toolTip">
              <string>Remove Files</string>
             </property>
@@ -391,6 +403,9 @@
           </item>
           <item>
            <widget class="QToolButton" name="btnUpFile">
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
             <property name="toolTip">
              <string>Up File</string>
             </property>
@@ -404,6 +419,9 @@
           </item>
           <item>
            <widget class="QToolButton" name="btnDownFile">
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
             <property name="toolTip">
              <string>Down File</string>
             </property>
@@ -520,6 +538,9 @@
          <layout class="QHBoxLayout" name="horizontalLayout_7">
           <item>
            <widget class="QToolButton" name="btnAddTreeItem">
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
             <property name="toolTip">
              <string>Add Tree Item</string>
             </property>
@@ -533,6 +554,9 @@
           </item>
           <item>
            <widget class="QToolButton" name="btnRemoveTreeItem">
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
             <property name="toolTip">
              <string>Remove Tree Items</string>
             </property>
@@ -546,6 +570,9 @@
           </item>
           <item>
            <widget class="QToolButton" name="btnUpTreeItem">
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
             <property name="toolTip">
              <string>Up List Item</string>
             </property>
@@ -559,6 +586,9 @@
           </item>
           <item>
            <widget class="QToolButton" name="btnDownTreeItem">
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
             <property name="toolTip">
              <string>Down List Item</string>
             </property>
@@ -768,8 +798,8 @@
      <y>33</y>
     </hint>
     <hint type="destinationlabel">
-     <x>3</x>
-     <y>25</y>
+     <x>-1</x>
+     <y>-1</y>
     </hint>
    </hints>
   </connection>
@@ -784,8 +814,8 @@
      <y>27</y>
     </hint>
     <hint type="destinationlabel">
-     <x>328</x>
-     <y>22</y>
+     <x>-1</x>
+     <y>-1</y>
     </hint>
    </hints>
   </connection>
@@ -800,8 +830,8 @@
      <y>21</y>
     </hint>
     <hint type="destinationlabel">
-     <x>439</x>
-     <y>20</y>
+     <x>-1</x>
+     <y>-1</y>
     </hint>
    </hints>
   </connection>
@@ -960,8 +990,8 @@
      <y>17</y>
     </hint>
     <hint type="destinationlabel">
-     <x>3</x>
-     <y>72</y>
+     <x>-1</x>
+     <y>-1</y>
     </hint>
    </hints>
   </connection>
@@ -1104,8 +1134,8 @@
      <y>26</y>
     </hint>
     <hint type="destinationlabel">
-     <x>876</x>
-     <y>5</y>
+     <x>-1</x>
+     <y>-1</y>
     </hint>
    </hints>
   </connection>
