@@ -84,6 +84,16 @@ set(SOURCES
   ${CMAKE_SOURCE_DIR}/abstracttreeitem.cpp
   ${CMAKE_SOURCE_DIR}/proxystyle.cpp)
 
+if(APPLE)
+  list(APPEND SOURCES
+    ${CMAKE_SOURCE_DIR}/cocoainitializer.mm
+    ${CMAKE_SOURCE_DIR}/sparkleautoupdater.mm)
+
+  set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR})  # to find FindSparkle.cmake file
+  find_package(Sparkle REQUIRED)
+  include_directories(${SPARKLE_INCLUDE_DIR})
+endif()
+
 if(ENABLE_MODEL_TEST)
   list(APPEND SOURCES
     ${CMAKE_SOURCE_DIR}/modeltest/dynamictreemodel.cpp
@@ -130,6 +140,10 @@ else()
   target_link_libraries(${PROJECT_NAME} ${START_STATIC} ${QJSON_LIBRARIES} ${START_STATIC} ${QT_LIBRARIES} ${END_STATIC})
 endif()
 
+if(APPLE)
+  target_link_libraries(${PROJECT_NAME} ${SPARKLE_LIBRARY} "-framework AppKit")
+endif()
+
 add_subdirectory(translations)
 
 if(UNIX AND NOT APPLE)
@@ -151,7 +165,7 @@ if(APPLE)
     MACOSX_BUNDLE_INFO_PLIST "${CMAKE_SOURCE_DIR}/MacOSXBundleInfo.plist.in")
 
   # Install app icon
-  install(FILES icons/application.icns DESTINATION "${BUNDLE_DIR_BASE_NAME}.app/Contents/Resources")
+  install(FILES icons/application.icns DESTINATION "${BUNDLE_DIR_BASE_NAME}.app/Contents/Resources" COMPONENT Runtime)
 
   # Install needed Qt plugins by copying each pluging separately
   find_package(Qt5PrintSupport REQUIRED)
@@ -175,6 +189,15 @@ if(APPLE)
     install(FILES "${_loc}" DESTINATION ${PLUGINS_DEST_PATH}/printsupport/ COMPONENT Runtime)
   endforeach()
 
+  # Install public key for Sparkle Updater
+  install(FILES "dsa_pub.pem" DESTINATION "${BUNDLE_DIR_BASE_NAME}.app/Contents/Resources" COMPONENT Runtime)
+
+  # install a qt.conf file
+  # this inserts some cmake code into the install script to write the file
+  install(CODE "
+    file(WRITE \"\${CMAKE_INSTALL_PREFIX}/${BUNDLE_DIR_BASE_NAME}.app/Contents/Resources/qt.conf\" \"\")
+    " COMPONENT Runtime)
+
   # Now the work of copying dependencies into the bundle/package
   # The quotes are escaped and variables to use at install time have their $ escaped
   # An alternative is the do a configure_file() on a script and use install(SCRIPT  ...).
@@ -186,12 +209,8 @@ if(APPLE)
       \"\${CMAKE_INSTALL_PREFIX}/${PLUGINS_DEST_PATH}/*${CMAKE_SHARED_LIBRARY_SUFFIX}\")
     include(BundleUtilities)
     fixup_bundle(\"${APPS}\" \"\${QTPLUGINS}\" \"${QT_LIBRARY_DIRS}\")
-    " COMPONENT Runtime)
-
-  # install a qt.conf file
-  # this inserts some cmake code into the install script to write the file
-  INSTALL(CODE "
-    file(WRITE \"\${CMAKE_INSTALL_PREFIX}/${BUNDLE_DIR_BASE_NAME}.app/Contents/Resources/qt.conf\" \"\")
+    file(GLOB BINARIES \"${APPS}/Contents/Frameworks/*.framework\" \"${APPS}/Contents/Frameworks/Sparkle.framework/Resources/Autoupdate.app\" \"${APPS}/Contents/MacOS/*.dylib\" \"${APPS}/Contents/Plugins/*.dylib\" \"${APPS}/Contents/Plugins/*/*.dylib\" \"${APPS}/Contents/MacOS/${BUNDLE_DIR_BASE_NAME}\")
+    execute_process(COMMAND codesign -f -s \"Ivan Romanov\" \${BINARIES} \"${APPS}\" WORKING_DIRECTORY \"${APPS}\")
     " COMPONENT Runtime)
 
   # To Create a package, one can run "cpack -G DragNDrop CPackConfig.cmake" on Mac OS X
@@ -202,5 +221,5 @@ if(APPLE)
   set(CPACK_BINARY_DRAGNDROP ON)
   include(CPack)
 
-  add_custom_target(dmg COMMAND cpack -G DragNDrop CPackConfig.cmake DEPENDS ${PROJECT_NAME})
+  add_custom_target("dmg" COMMAND ${CMAKE_COMMAND} -DAPP_NAME=${PROJECT_NAME} -DAPP_VERSION=${APP_VERSION} -P "${CMAKE_CURRENT_SOURCE_DIR}/Dmg.cmake" DEPENDS "${PROJECT_NAME}" WORKING_DIRECTORY "${CMAKE_BINARY_DIR}")
 endif()

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Torrent File Editor Changelog</title>
+    <link>http://downloads.sourceforge.net/torrent-file-editor/appcast.xml</link>
+    <description>Most recent changes with links to updates.</description>
+    <language>en</language>
+      <item>
+        <pubDate>${PUB_DATE}</pubDate>
+        <enclosure url="${DMG_URL}" sparkle:version="${APP_VERSION}" length="${DMG_LENGTH}" type="application/octet-stream" sparkle:dsaSignature="${DSA_SIGNATURE}" />
+      </item>
+  </channel>
+</rss>

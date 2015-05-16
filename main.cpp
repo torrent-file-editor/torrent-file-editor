@@ -37,6 +37,11 @@
 HANDLE hConsole = NULL;
 #endif
 
+#ifdef Q_OS_MAC
+# include "cocoainitializer.h"
+# include "sparkleautoupdater.h"
+#endif
+
 #ifdef HAVE_QT5
 void debugHandler(QtMsgType type, const QMessageLogContext &context, const QString &msg)
 #else
@@ -208,6 +213,12 @@ int main(int argc, char *argv[])
     MainWindow w;
     a.setMainWindow(&w);
     w.show();
+
+#ifdef Q_OS_MAC
+    CocoaInitializer initializer;
+    SparkleAutoUpdater *updater = new SparkleAutoUpdater;
+    updater->checkForUpdates();
+#endif
 
     if (argc == 2 && QFile::exists(argv[1]))
         w.open(argv[1]);

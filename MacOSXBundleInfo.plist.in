@@ -55,5 +55,13 @@
     <string>NSApplication</string>
     <key>NSHighResolutionCapable</key>
     <string>True</string>
+    <key>SUFeedURL</key>
+    <string>http://downloads.sourceforge.net/torrent-file-editor/appcast.xml</string>
+    <key>SUPublicDSAKeyFile</key>
+    <string>dsa_pub.pem</string>
+    <key>SUScheduledCheckInterval</key>
+    <integer>86400</integer>
+    <key>SUEnableAutomaticChecks</key>
+    <true/>
 </dict>
 </plist>
