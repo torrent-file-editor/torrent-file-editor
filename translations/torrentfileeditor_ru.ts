@@ -34,22 +34,22 @@
 <context>
     <name>BencodeModel</name>
     <message>
-        <location filename="../bencodemodel.cpp" line="625"/>
+        <location filename="../bencodemodel.cpp" line="648"/>
         <source>Name</source>
         <translation>Имя</translation>
     </message>
     <message>
-        <location filename="../bencodemodel.cpp" line="626"/>
+        <location filename="../bencodemodel.cpp" line="649"/>
         <source>Type</source>
         <translation>Тип</translation>
     </message>
     <message>
-        <location filename="../bencodemodel.cpp" line="627"/>
+        <location filename="../bencodemodel.cpp" line="650"/>
         <source>Hex</source>
         <translation>Hex</translation>
     </message>
     <message>
-        <location filename="../bencodemodel.cpp" line="628"/>
+        <location filename="../bencodemodel.cpp" line="651"/>
         <source>Value</source>
         <translation>Значение</translation>
     </message>
@@ -89,7 +89,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="27"/>
-        <location filename="../mainwindow.ui" line="698"/>
+        <location filename="../mainwindow.ui" line="712"/>
         <source>New</source>
         <translation>Новый</translation>
     </message>
@@ -101,7 +101,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="41"/>
-        <location filename="../mainwindow.ui" line="714"/>
+        <location filename="../mainwindow.ui" line="728"/>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>
@@ -122,153 +122,158 @@
         <translation>Главная</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="179"/>
+        <location filename="../mainwindow.ui" line="186"/>
         <source>Pieces</source>
         <translation>Кол-во частей</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="226"/>
+        <location filename="../mainwindow.ui" line="220"/>
         <source>Creation time</source>
         <translation>Дата создания</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="138"/>
+        <location filename="../mainwindow.ui" line="145"/>
         <source>Created by</source>
         <translation>Создано в</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="212"/>
+        <location filename="../mainwindow.ui" line="206"/>
         <source>Piece size</source>
         <translation>Размер части</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="189"/>
+        <location filename="../mainwindow.ui" line="196"/>
         <source>Publisher</source>
         <translation>Издатель</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="233"/>
+        <location filename="../mainwindow.ui" line="227"/>
         <source>Name</source>
         <translation>Имя</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="219"/>
+        <location filename="../mainwindow.ui" line="213"/>
         <source>Url</source>
         <translation>Сайт</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="240"/>
+        <location filename="../mainwindow.ui" line="111"/>
+        <source>Private torrent</source>
+        <translation>Частный торрент</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="234"/>
         <source>Hash</source>
         <translation>Хеш</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="290"/>
+        <location filename="../mainwindow.ui" line="304"/>
         <source>Comment</source>
         <translation>Комментарий</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="308"/>
+        <location filename="../mainwindow.ui" line="322"/>
         <source>Trackers</source>
         <translation>Трекеры</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="328"/>
+        <location filename="../mainwindow.ui" line="342"/>
         <source>Files</source>
         <translation>Файлы</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="339"/>
+        <location filename="../mainwindow.ui" line="353"/>
         <source>Make Torrent</source>
         <translation>Создать торрент</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="355"/>
+        <location filename="../mainwindow.ui" line="369"/>
         <source>Add Files</source>
         <translation>Добавить файл</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="371"/>
-        <location filename="../mainwindow.cpp" line="539"/>
+        <location filename="../mainwindow.ui" line="385"/>
+        <location filename="../mainwindow.cpp" line="540"/>
         <source>Add Folder</source>
         <translation>Добавить папку</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="394"/>
+        <location filename="../mainwindow.ui" line="408"/>
         <source>Remove Files</source>
         <translation>Удалить файлы</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="410"/>
+        <location filename="../mainwindow.ui" line="424"/>
         <source>Up File</source>
         <translation>Поднять файл</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="426"/>
+        <location filename="../mainwindow.ui" line="440"/>
         <source>Down File</source>
         <translation>Опустить файл</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="534"/>
+        <location filename="../mainwindow.ui" line="548"/>
         <source>Tree</source>
         <translation>Дерево</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="545"/>
+        <location filename="../mainwindow.ui" line="559"/>
         <source>Add Tree Item</source>
         <translation>Добавить элемент дерева</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="561"/>
+        <location filename="../mainwindow.ui" line="575"/>
         <source>Remove Tree Items</source>
         <translation>Удалить элементы дерева</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="577"/>
+        <location filename="../mainwindow.ui" line="591"/>
         <source>Up List Item</source>
         <translation>Поднять элемент дерева</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="593"/>
+        <location filename="../mainwindow.ui" line="607"/>
         <source>Down List Item</source>
         <translation>Опустить элемент дерева</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="686"/>
+        <location filename="../mainwindow.ui" line="700"/>
         <source>File</source>
         <translation>Файл</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="701"/>
+        <location filename="../mainwindow.ui" line="715"/>
         <source>Ctrl+N</source>
         <translation>Ctrl+N</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="706"/>
+        <location filename="../mainwindow.ui" line="720"/>
         <source>Open...</source>
         <translation>Открыть...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="709"/>
+        <location filename="../mainwindow.ui" line="723"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="717"/>
+        <location filename="../mainwindow.ui" line="731"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="722"/>
+        <location filename="../mainwindow.ui" line="736"/>
         <source>Save As...</source>
         <translation>Сохранить как...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="725"/>
+        <location filename="../mainwindow.ui" line="739"/>
         <source>Ctrl+Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="730"/>
+        <location filename="../mainwindow.ui" line="744"/>
         <source>About...</source>
         <translation>О программе...</translation>
     </message>
@@ -278,22 +283,22 @@
         <translation>Кодировка</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="475"/>
+        <location filename="../mainwindow.ui" line="489"/>
         <source>Piece size </source>
         <translation>Размер части </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="492"/>
+        <location filename="../mainwindow.ui" line="506"/>
         <source>Total size </source>
         <translation>Общий размер </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="521"/>
+        <location filename="../mainwindow.ui" line="535"/>
         <source>Base folder </source>
         <translation>Базовая папка </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="629"/>
+        <location filename="../mainwindow.ui" line="643"/>
         <source>Raw</source>
         <translation>Исходник</translation>
     </message>
@@ -370,28 +375,28 @@
         <translation>О программе %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="451"/>
-        <location filename="../mainwindow.cpp" line="456"/>
+        <location filename="../mainwindow.cpp" line="452"/>
+        <location filename="../mainwindow.cpp" line="457"/>
         <source>Warning</source>
         <translation>Предупреждение</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="451"/>
+        <location filename="../mainwindow.cpp" line="452"/>
         <source>Can&apos;t make torrent for file without full path. Need to set base folder.</source>
         <translation>Невозможно создать торрент для файла без полного пути. Необходимо выбрать базовую папку.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="456"/>
+        <location filename="../mainwindow.cpp" line="457"/>
         <source>Base folder is not common.</source>
         <translation>Базовая папка не общая для всех файлов.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="516"/>
+        <location filename="../mainwindow.cpp" line="517"/>
         <source>Add File</source>
         <translation>Добавить файл</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="680"/>
+        <location filename="../mainwindow.cpp" line="681"/>
         <source>Line: %1 of %2 Col: %3</source>
         <translation>Строка: %1 из %2 Кол: %3</translation>
     </message>
@@ -404,33 +409,33 @@
         <translation type="obsolete">Выберете тип нового элемента</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="778"/>
-        <location filename="../mainwindow.cpp" line="786"/>
+        <location filename="../mainwindow.cpp" line="780"/>
+        <location filename="../mainwindow.cpp" line="788"/>
         <source>Error on %1 line: %2</source>
         <translation>Ошибка в строке %1: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="867"/>
+        <location filename="../mainwindow.cpp" line="869"/>
         <source>B</source>
         <translation>Б</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="871"/>
+        <location filename="../mainwindow.cpp" line="873"/>
         <source>KiB</source>
         <translation>КБ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="875"/>
+        <location filename="../mainwindow.cpp" line="877"/>
         <source>MiB</source>
         <translation>МБ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="879"/>
+        <location filename="../mainwindow.cpp" line="881"/>
         <source>GiB</source>
         <translation>ГБ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="883"/>
+        <location filename="../mainwindow.cpp" line="885"/>
         <source>TiB</source>
         <translation>ТБ</translation>
     </message>
