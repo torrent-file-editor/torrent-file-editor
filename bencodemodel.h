@@ -60,6 +60,9 @@ public:
     void setName(const QString &name);
     QString name() const;
 
+    void setPrivateTorrent(bool privateTorrent);
+    bool privateTorrent() const;
+
     void setUrl(const QString &url);
     QString url() const;
 

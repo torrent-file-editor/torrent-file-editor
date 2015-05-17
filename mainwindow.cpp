@@ -415,6 +415,7 @@ void MainWindow::updateBencodeFromSimple()
     _bencodeModel->setPublisher(ui->lePublisher->text());
     _bencodeModel->setCreatedBy(ui->leCreatedBy->text());
     _bencodeModel->setCreationTime(ui->dateCreated->dateTime());
+    _bencodeModel->setPrivateTorrent(ui->chkPrivateTorrent->isChecked());
     ui->leHash->setText(_bencodeModel->hash());
 }
 
@@ -753,6 +754,7 @@ void MainWindow::updateSimple()
     ui->lePieces->setText(pieces ? QLocale::system().toString(pieces) : "");
 
     ui->dateCreated->setDateTime(_bencodeModel->creationTime());
+    ui->chkPrivateTorrent->setChecked(_bencodeModel->privateTorrent());
     ui->pteTrackers->setPlainText(_bencodeModel->trackers().join("\n"));
     ui->leHash->setText(_bencodeModel->hash());
 }

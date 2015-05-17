@@ -144,6 +144,29 @@ QString BencodeModel::name() const
         return "";
 }
 
+void BencodeModel::setPrivateTorrent(bool privateTorrent)
+{
+    if (!privateTorrent && _bencode && _bencode->child("info") && _bencode->child("info")->child("private")) {
+        removeRow(_bencode->child("info")->child("private")->row(), toModelIndex(_bencode->child("info")));
+        if (!_bencode->child("info")->childCount()) {
+            removeRow(_bencode->child("info")->row(), toModelIndex(_bencode));
+        }
+    }
+    else if (privateTorrent) {
+        emit layoutAboutToBeChanged();
+        _bencode->checkAndCreate(Bencode::Type::Dictionary, "info")->checkAndCreate(Bencode::Type::Integer, "private")->setInteger(1);
+        emit layoutChanged();
+    }
+}
+
+bool BencodeModel::privateTorrent() const
+{
+    if (_bencode && _bencode->child("info") && _bencode->child("info")->child("private"))
+        return static_cast<bool>(_bencode->child("info")->child("private")->integer());
+    else
+        return false;
+}
+
 void BencodeModel::setUrl(const QString &url)
 {
     if (url.isEmpty() && _bencode && _bencode->child("publisher-url")) {
