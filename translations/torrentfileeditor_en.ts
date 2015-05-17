@@ -34,22 +34,22 @@
 <context>
     <name>BencodeModel</name>
     <message>
-        <location filename="../bencodemodel.cpp" line="648"/>
+        <location filename="../bencodemodel.cpp" line="653"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="../bencodemodel.cpp" line="649"/>
+        <location filename="../bencodemodel.cpp" line="654"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
     <message>
-        <location filename="../bencodemodel.cpp" line="650"/>
+        <location filename="../bencodemodel.cpp" line="655"/>
         <source>Hex</source>
         <translation>Hex</translation>
     </message>
     <message>
-        <location filename="../bencodemodel.cpp" line="651"/>
+        <location filename="../bencodemodel.cpp" line="656"/>
         <source>Value</source>
         <translation>Value</translation>
     </message>
@@ -95,7 +95,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="34"/>
-        <location filename="../mainwindow.cpp" line="291"/>
+        <location filename="../mainwindow.cpp" line="295"/>
         <source>Open</source>
         <translation>Open</translation>
     </message>
@@ -107,7 +107,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="48"/>
-        <location filename="../mainwindow.cpp" line="312"/>
+        <location filename="../mainwindow.cpp" line="317"/>
         <source>Save As</source>
         <translation>Save As</translation>
     </message>
@@ -193,7 +193,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="385"/>
-        <location filename="../mainwindow.cpp" line="540"/>
+        <location filename="../mainwindow.cpp" line="549"/>
         <source>Add Folder</source>
         <translation>Add Folder</translation>
     </message>
@@ -311,48 +311,52 @@
         <translation type="obsolete">Clear</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="147"/>
+        <location filename="../mainwindow.cpp" line="151"/>
         <source>Need to calculate piece hashes</source>
         <translation>Need to calculate piece hashes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="148"/>
+        <location filename="../mainwindow.cpp" line="152"/>
         <source>Please wait</source>
         <translation>Please wait</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="154"/>
+        <location filename="../mainwindow.cpp" line="158"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="162"/>
+        <location filename="../mainwindow.cpp" line="166"/>
         <source>Path</source>
         <translation>Path</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="162"/>
+        <location filename="../mainwindow.cpp" line="166"/>
         <source>Size</source>
         <translation>Size</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="243"/>
+        <location filename="../mainwindow.cpp" line="247"/>
         <source>Create a new file</source>
         <translation>Create a new file</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="244"/>
+        <location filename="../mainwindow.cpp" line="248"/>
         <source>Current file is not saved. Save the file?</source>
         <translation>Current file is not saved. Save the file?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="291"/>
-        <location filename="../mainwindow.cpp" line="312"/>
+        <location filename="../mainwindow.cpp" line="132"/>
         <source>Torrents (*.torrent)</source>
         <translation>Torrents (*.torrent)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="271"/>
+        <location filename="../mainwindow.cpp" line="133"/>
+        <source>uTorrent resume files(*.dat)</source>
+        <translation type="unfinished">uTorrent resume files(*.dat)</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="275"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
@@ -365,39 +369,39 @@
         <translation type="obsolete">Value</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="271"/>
+        <location filename="../mainwindow.cpp" line="275"/>
         <source>Can&apos;t open file</source>
         <translatorcomment>Не могу открыть файл</translatorcomment>
         <translation>Can&apos;t open file</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="326"/>
+        <location filename="../mainwindow.cpp" line="335"/>
         <source>About %1</source>
         <translation>About %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="452"/>
-        <location filename="../mainwindow.cpp" line="457"/>
+        <location filename="../mainwindow.cpp" line="461"/>
+        <location filename="../mainwindow.cpp" line="466"/>
         <source>Warning</source>
         <translation>Warning</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="452"/>
+        <location filename="../mainwindow.cpp" line="461"/>
         <source>Can&apos;t make torrent for file without full path. Need to set base folder.</source>
         <translation>Can&apos;t make torrent for file without full path. Need to set base folder.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="457"/>
+        <location filename="../mainwindow.cpp" line="466"/>
         <source>Base folder is not common.</source>
         <translation>Base folder is not common.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="517"/>
+        <location filename="../mainwindow.cpp" line="526"/>
         <source>Add File</source>
         <translation>Add File</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="681"/>
+        <location filename="../mainwindow.cpp" line="690"/>
         <source>Line: %1 of %2 Col: %3</source>
         <translation>Line: %1 of %2 Col: %3</translation>
     </message>
@@ -410,33 +414,33 @@
         <translation type="obsolete">Select a type of the new item</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="780"/>
-        <location filename="../mainwindow.cpp" line="788"/>
+        <location filename="../mainwindow.cpp" line="789"/>
+        <location filename="../mainwindow.cpp" line="797"/>
         <source>Error on %1 line: %2</source>
         <translation>Error on %1 line: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="869"/>
+        <location filename="../mainwindow.cpp" line="878"/>
         <source>B</source>
         <translation>B</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="873"/>
+        <location filename="../mainwindow.cpp" line="882"/>
         <source>KiB</source>
         <translation>KiB</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="877"/>
+        <location filename="../mainwindow.cpp" line="886"/>
         <source>MiB</source>
         <translation>MiB</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="881"/>
+        <location filename="../mainwindow.cpp" line="890"/>
         <source>GiB</source>
         <translation>GiB</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="885"/>
+        <location filename="../mainwindow.cpp" line="894"/>
         <source>TiB</source>
         <translation>TiB</translation>
     </message>
