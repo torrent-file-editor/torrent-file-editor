@@ -20,6 +20,7 @@
 
 #include <QMainWindow>
 #include <QStandardItem>
+#include <QStringList>
 
 class QProgressDialog;
 class Bencode;
@@ -123,6 +124,7 @@ private:
     BencodeModel *_bencodeModel;
 
     QProgressDialog *_progressDialog;
+    QStringList _formatFilters;
 
     static MainWindow *_instance;
 };

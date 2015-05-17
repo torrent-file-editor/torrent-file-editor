@@ -125,8 +125,12 @@ MainWindow::MainWindow(QWidget *parent)
     , _fileName(QString())
     , _bencodeModel(new BencodeModel(this))
     , _progressDialog(new QProgressDialog(this))
+    , _formatFilters(QStringList())
 {
     ui->setupUi(this);
+
+    _formatFilters << tr("Torrents (*.torrent)");
+    _formatFilters << tr("uTorrent resume files(*.dat)");
 
 #ifndef Q_OS_MAC
     // Show menu bar only on Mac OS X.
@@ -288,7 +292,7 @@ void MainWindow::open(const QString &fileName)
 
 void MainWindow::open()
 {
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Open"), "", tr("Torrents (*.torrent)"));
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open"), "", _formatFilters.join(";;"));
 
     if (fileName.isEmpty())
         return;
@@ -309,15 +313,20 @@ void MainWindow::saveAs()
     if (!_bencodeModel->isValid())
         return;
 
-    QString fileName = QFileDialog::getSaveFileName(this, tr("Save As"), "", tr("Torrents (*.torrent)"));
+    QString filter;
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Save As"), "", _formatFilters.join(";;"), &filter);
     if (fileName.isEmpty())
         return;
 
-    if (!fileName.endsWith(".torrent"))
+    if (_formatFilters.at(0) == filter && !fileName.endsWith(".torrent"))
         fileName += ".torrent";
+    else if (_formatFilters.at(1) == filter && !fileName.endsWith(".dat"))
+        fileName += ".dat";
 
-    if (saveTo(fileName))
+    if (saveTo(fileName)) {
         _fileName = fileName;
+        updateTitle();
+    }
 }
 
 void MainWindow::showAbout()
