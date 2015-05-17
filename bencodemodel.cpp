@@ -484,12 +484,17 @@ void BencodeModel::appendRow(const QModelIndex &parent)
     Bencode *parentItem = toBencode(parent);
     if (!parentItem)
         return;
+    QModelIndex parentIndex = parent;
+    if (!parentItem->isList() && !parentItem->isDictionary()) {
+        parentItem = static_cast<Bencode*>(parentItem->parent());
+        parentIndex = parent.parent();
+    }
 
     if (parentItem->isList()) {
-        insertRow(rowCount(parent), parent);
+        insertRow(rowCount(parentIndex), parentIndex);
     }
     else if (parentItem->isDictionary()) {
-        insertRow(0, parent);
+        insertRow(0, parentIndex);
     }
 }
 
