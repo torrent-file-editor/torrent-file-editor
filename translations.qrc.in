@@ -2,5 +2,6 @@
 <qresource prefix="/translations">
 <file>torrentfileeditor_en.qm</file>
 <file>torrentfileeditor_ru.qm</file>
+<file>torrentfileeditor_cs.qm</file>
 </qresource>
 </RCC>
