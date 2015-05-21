@@ -18,18 +18,6 @@
         <source>Torrent File Editor</source>
         <translation>Torrent File Editor</translation>
     </message>
-    <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-&lt;p&gt;Author: Ivan Romanov &lt;a href=&quot;mailto:drizt@land.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;License: &lt;/span&gt;&lt;/a&gt;GNU General Public License v3.0 or later&lt;/p&gt;
-&lt;p&gt;Home Page: &lt;a href=&quot;http://sourceforge.net/projects/torrent-file-editor/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-&lt;p&gt;Sources: &lt;a href=&quot;http://github.com/drizt/torrent-file-editor&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-&lt;p&gt;Автор: Иван Романов &lt;a href=&quot;mailto:drizt@land.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Лицензия: &lt;/span&gt;&lt;/a&gt;GNU General Public License v3.0 or later&lt;/p&gt;
-&lt;p&gt;Домашняя страница: &lt;a href=&quot;http://sourceforge.net/projects/torrent-file-editor/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-&lt;p&gt;Исходный код: &lt;a href=&quot;http://github.com/drizt/torrent-file-editor&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
 </context>
 <context>
     <name>BencodeModel</name>
@@ -303,14 +291,6 @@
         <translation>Исходник</translation>
     </message>
     <message>
-        <source>Log</source>
-        <translation type="obsolete">Лог</translation>
-    </message>
-    <message>
-        <source>Clear</source>
-        <translation type="obsolete">Очистить</translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="151"/>
         <source>Need to calculate piece hashes</source>
         <translation>Необходимо вычислить хеш частей</translation>
@@ -361,14 +341,6 @@
         <translation>Ошибка</translation>
     </message>
     <message>
-        <source>Type</source>
-        <translation type="obsolete">Тип</translation>
-    </message>
-    <message>
-        <source>Value</source>
-        <translation type="obsolete">Значение</translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="275"/>
         <source>Can&apos;t open file</source>
         <translation></translation>
@@ -403,14 +375,6 @@
         <location filename="../mainwindow.cpp" line="690"/>
         <source>Line: %1 of %2 Col: %3</source>
         <translation>Строка: %1 из %2 Кол: %3</translation>
-    </message>
-    <message>
-        <source>New item type</source>
-        <translation type="obsolete">Тип нового элемента</translation>
-    </message>
-    <message>
-        <source>Select a type of the new item</source>
-        <translation type="obsolete">Выберете тип нового элемента</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="789"/>
