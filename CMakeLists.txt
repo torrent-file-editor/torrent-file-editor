@@ -30,12 +30,6 @@ if(QT5_BUILD)
   find_package(Qt5Widgets REQUIRED)
   find_package(Qt5LinguistTools REQUIRED)
 
-  include_directories(${Qt5Core_INCLUDE_DIRS})
-  include_directories(${Qt5Gui_INCLUDE_DIRS})
-  include_directories(${Qt5Widgets_INCLUDE_DIRS})
-  add_definitions(${Qt5Core_DEFINITIONS})
-  add_definitions(${Qt5Gui_DEFINITIONS})
-  add_definitions(${Qt5Widgets_DEFINITIONS})
   add_definitions(-DHAVE_QT5)
 else()
   find_package(Qt4 REQUIRED)
@@ -95,13 +89,6 @@ if(APPLE)
   include_directories(${SPARKLE_INCLUDE_DIR})
 endif()
 
-if(ENABLE_MODEL_TEST)
-  list(APPEND SOURCES
-    ${CMAKE_SOURCE_DIR}/modeltest/dynamictreemodel.cpp
-    ${CMAKE_SOURCE_DIR}/modeltest/tst_modeltest.cpp
-    ${CMAKE_SOURCE_DIR}/modeltest/modeltest.cpp)
-endif()
-
 set(RESOURCES
   ${CMAKE_BINARY_DIR}/translations.qrc
   resources.qrc)
@@ -136,7 +123,7 @@ endif()
 add_executable(${PROJECT_NAME} WIN32 MACOSX_BUNDLE ${QM} ${HEADERS} ${SOURCES} ${MOC_SOURCES} ${QRC_SOURCES} ${UI_SOURCES})
 
 if(QT5_BUILD)
-  target_link_libraries(${PROJECT_NAME} ${START_STATIC} ${Qt5Core_LIBRARIES} ${Qt5Gui_LIBRARIES} ${Qt5Widgets_LIBRARIES}  ${END_STATIC})
+  target_link_libraries(${PROJECT_NAME} ${START_STATIC} Qt5::Core Qt5::Gui Qt5::Widgets ${END_STATIC})
 else()
   target_link_libraries(${PROJECT_NAME} ${START_STATIC} ${QJSON_LIBRARIES} ${START_STATIC} ${QT_LIBRARIES} ${END_STATIC})
 endif()
