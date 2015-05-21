@@ -353,7 +353,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="133"/>
         <source>uTorrent resume files(*.dat)</source>
-        <translation type="unfinished">uTorrent resume files(*.dat)</translation>
+        <translation>uTorrent resume files(*.dat)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="275"/>

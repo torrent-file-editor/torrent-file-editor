@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.0" language="cs_CZ">
+<context>
+    <name>AboutDlg</name>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href=&quot;mailto:drizt@land.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href=&quot;http://sourceforge.net/projects/torrent-file-editor/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href=&quot;http://github.com/drizt/torrent-file-editor&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href=&quot;http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Autor: Ivan Romanov &lt;a href=&quot;mailto:drizt@land.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Licence: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Stránky: &lt;a href=&quot;http://sourceforge.net/projects/torrent-file-editor/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href=&quot;http://github.com/drizt/torrent-file-editor&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Poděkování: &lt;a href=&quot;http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; za ikonu programu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Torrent File Editor</source>
+        <translation>Torrent File Editor</translation>
+    </message>
+    <message>
+        <source>About Torrent File Editor</source>
+        <translation>O Torrent File Editor</translation>
+    </message>
+</context>
+<context>
+    <name>BencodeModel</name>
+    <message>
+        <source>Hex</source>
+        <translation>Hex</translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation>Název</translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation>Typ</translation>
+    </message>
+    <message>
+        <source>Value</source>
+        <translation>Hodnota</translation>
+    </message>
+</context>
+<context>
+    <name>DateWidget</name>
+    <message>
+        <source>Clean</source>
+        <translation>Uklidit</translation>
+    </message>
+    <message>
+        <source>Show calendar</source>
+        <translation>Ukázat kalendář</translation>
+    </message>
+</context>
+<context>
+    <name>FolderEdit</name>
+    <message>
+        <source>Add Folder</source>
+        <translation>Přidat složku</translation>
+    </message>
+    <message>
+        <source>Choose folder</source>
+        <translation>Vybrat složku</translation>
+    </message>
+</context>
 <context>
     <name>MainWindow</name>
     <message>
@@ -269,25 +325,6 @@
     </message>
 </context>
 <context>
-    <name>BencodeModel</name>
-    <message>
-        <source>Hex</source>
-        <translation>Hex</translation>
-    </message>
-    <message>
-        <source>Name</source>
-        <translation>Název</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation>Typ</translation>
-    </message>
-    <message>
-        <source>Value</source>
-        <translation>Hodnota</translation>
-    </message>
-</context>
-<context>
     <name>QObject</name>
     <message>
         <source>list</source>
@@ -308,43 +345,6 @@
     <message>
         <source>dictionary</source>
         <translation>Slovník</translation>
-    </message>
-</context>
-<context>
-    <name>DateWidget</name>
-    <message>
-        <source>Clean</source>
-        <translation>Uklidit</translation>
-    </message>
-    <message>
-        <source>Show calendar</source>
-        <translation>Ukázat kalendář</translation>
-    </message>
-</context>
-<context>
-    <name>AboutDlg</name>
-    <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href=&quot;mailto:drizt@land.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href=&quot;http://sourceforge.net/projects/torrent-file-editor/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href=&quot;http://github.com/drizt/torrent-file-editor&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href=&quot;http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Autor: Ivan Romanov &lt;a href=&quot;mailto:drizt@land.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Licence: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Stránky: &lt;a href=&quot;http://sourceforge.net/projects/torrent-file-editor/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href=&quot;http://github.com/drizt/torrent-file-editor&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Poděkování: &lt;a href=&quot;http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; za ikonu programu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>Torrent File Editor</source>
-        <translation>Torrent File Editor</translation>
-    </message>
-    <message>
-        <source>About Torrent File Editor</source>
-        <translation>O Torrent File Editor</translation>
-    </message>
-</context>
-<context>
-    <name>FolderEdit</name>
-    <message>
-        <source>Add Folder</source>
-        <translation>Přidat složku</translation>
-    </message>
-    <message>
-        <source>Choose folder</source>
-        <translation>Vybrat složku</translation>
     </message>
 </context>
 <context>
