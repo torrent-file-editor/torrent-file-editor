@@ -110,7 +110,7 @@ if(WIN32)
   add_definitions(-DQJSON_STATIC)
 
   set(START_STATIC -Wl,-Bstatic)
-  set(END_STATIC z jpeg png tiff stdc++ -Wl,-Bdynamic  ws2_32 winmm imm32)
+  set(END_STATIC z jpeg png tiff stdc++ -lwinpthread -Wl,-Bdynamic  ws2_32 winmm imm32)
   set(QJSON_LIBRARIES qjson.a)
 
   # resource compilation for MinGW
