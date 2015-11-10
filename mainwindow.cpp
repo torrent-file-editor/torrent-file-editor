@@ -150,6 +150,7 @@ MainWindow::MainWindow(QWidget *parent)
     _progressDialog->setWindowModality(Qt::ApplicationModal);
     _progressDialog->setLabelText(tr("Need to calculate piece hashes"));
     _progressDialog->setWindowTitle(tr("Please wait"));
+    _progressDialog->setValue(_progressDialog->maximum());
 
     updateTitle();
 
