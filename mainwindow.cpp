@@ -124,7 +124,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
     , _fileName(QString())
     , _bencodeModel(new BencodeModel(this))
-    , _progressDialog(new QProgressDialog(this))
+    , _progressDialog(new QProgressDialog(this, Qt::WindowSystemMenuHint | Qt::WindowTitleHint))
     , _formatFilters(QStringList())
 {
     ui->setupUi(this);
