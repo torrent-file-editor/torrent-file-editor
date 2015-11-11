@@ -211,12 +211,16 @@ if(APPLE)
   # An alternative is the do a configure_file() on a script and use install(SCRIPT  ...).
   # Note that the image plugins depend on QtSvg and QtXml, and it got those copied
   # over.
+  get_target_property(QT_LIBRARY_DIR Qt5::Core LOCATION)
+  while(NOT ${QT_LIBRARY_DIR} MATCHES "lib$")
+    get_filename_component(QT_LIBRARY_DIR ${QT_LIBRARY_DIR} DIRECTORY)
+  endwhile()
   SET(APPS "\${CMAKE_INSTALL_PREFIX}/${BUNDLE_DIR_BASE_NAME}.app")
   install(CODE "
     file(GLOB_RECURSE QTPLUGINS
       \"\${CMAKE_INSTALL_PREFIX}/${PLUGINS_DEST_PATH}/*${CMAKE_SHARED_LIBRARY_SUFFIX}\")
     include(BundleUtilities)
-    fixup_bundle(\"${APPS}\" \"\${QTPLUGINS}\" \"${QT_LIBRARY_DIRS}\")
+    fixup_bundle(\"${APPS}\" \"\${QTPLUGINS}\" \"${QT_LIBRARY_DIR}\")
     file(GLOB BINARIES \"${APPS}/Contents/Frameworks/*.framework\" \"${APPS}/Contents/Frameworks/Sparkle.framework/Resources/Autoupdate.app\" \"${APPS}/Contents/MacOS/*.dylib\" \"${APPS}/Contents/Plugins/*.dylib\" \"${APPS}/Contents/Plugins/*/*.dylib\" \"${APPS}/Contents/MacOS/${BUNDLE_DIR_BASE_NAME}\")
     execute_process(COMMAND codesign -f -s \"Ivan Romanov\" \${BINARIES} \"${APPS}\" WORKING_DIRECTORY \"${APPS}\")
     " COMPONENT Runtime)
