@@ -72,7 +72,8 @@ void Worker::doWork(const QStringList &files, int pieceSize)
     for (int i = 0; i < files.size(); ++i) {
         QFile f(files[i]);
         if (!f.open(QIODevice::ReadOnly)) {
-            emit resultReady(QByteArray());
+            QString errorString = QString(tr("Can't open %1")).arg(QDir::toNativeSeparators(files[i]));
+            emit resultReady(QByteArray(), errorString);
             return;
         }
 
@@ -93,7 +94,7 @@ void Worker::doWork(const QStringList &files, int pieceSize)
 
             qApp->processEvents();
             if (_isCanceled) {
-                emit resultReady(QByteArray());
+                emit resultReady(QByteArray(), "");
                 f.close();
                 return;
             }
@@ -101,7 +102,8 @@ void Worker::doWork(const QStringList &files, int pieceSize)
 
         // Some error
         if (readed < 0) {
-            emit resultReady(QByteArray());
+            QString errorString = QString(tr("Can't read from %1")).arg(QDir::toNativeSeparators(files[i]));
+            emit resultReady(QByteArray(), errorString);
             f.close();
             return;
         }
@@ -109,7 +111,7 @@ void Worker::doWork(const QStringList &files, int pieceSize)
         f.close();
     }
 
-    emit resultReady(pieceHashes);
+    emit resultReady(pieceHashes, "");
 }
 
 void Worker::cancel()
@@ -500,9 +502,9 @@ void MainWindow::makeTorrent()
     connect(thread, SIGNAL(finished()), worker, SLOT(deleteLater()));
     connect(this, SIGNAL(needHash(const QStringList&, int)), worker, SLOT(doWork(const QStringList&, int)));
     connect(_progressDialog, SIGNAL(canceled()), worker, SLOT(cancel()));
-    connect(worker, SIGNAL(resultReady(const QByteArray&)), this, SLOT(setPieces(const QByteArray&)));
+    connect(worker, SIGNAL(resultReady(const QByteArray&, const QString&)), this, SLOT(setPieces(const QByteArray&, const QString&)));
     connect(worker, SIGNAL(progress(int)), _progressDialog, SLOT(setValue(int)));
-    connect(worker, SIGNAL(resultReady(const QByteArray&)), thread, SLOT(quit()));
+    connect(worker, SIGNAL(resultReady(const QByteArray&, const QString&)), thread, SLOT(quit()));
     connect(thread, SIGNAL(finished()), thread, SLOT(deleteLater()));
     thread->start();
 
@@ -685,11 +687,14 @@ void MainWindow::updateFiles()
     updateFilesSize();
 }
 
-void MainWindow::setPieces(const QByteArray &pieces)
+void MainWindow::setPieces(const QByteArray &pieces, const QString &errorString)
 {
     _progressDialog->hide();
     _bencodeModel->setPieces(pieces);
     updateTab(ui->tabWidget->currentIndex());
+    if (!errorString.isEmpty()) {
+        QMessageBox::warning(this, tr("Error"), errorString);
+    }
 }
 
 void MainWindow::updateRawPosition()

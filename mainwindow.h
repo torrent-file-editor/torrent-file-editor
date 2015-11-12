@@ -39,7 +39,7 @@ public slots:
 
 signals:
     void progress(int value);
-    void resultReady(const QByteArray &result);
+    void resultReady(const QByteArray &result, const QString &errorString);
 
 private:
     int _isCanceled;
@@ -92,7 +92,7 @@ public slots:
     void upFile();
     void downFile();
     void updateFiles();
-    void setPieces(const QByteArray &pieces);
+    void setPieces(const QByteArray &pieces, const QString &errorString);
     void updateRawPosition();
 
     // Tree tab
