@@ -71,11 +71,6 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.ui" line="14"/>
-        <source>MainWindow</source>
-        <translation></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="27"/>
         <location filename="../mainwindow.ui" line="712"/>
         <source>New</source>

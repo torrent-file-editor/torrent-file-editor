@@ -195,11 +195,6 @@
         <translation>Odstranit soubory</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14"/>
-        <source>MainWindow</source>
-        <translation>Hlavní okno</translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="62"/>
         <source>Coding</source>
         <translation>Kódování</translation>
