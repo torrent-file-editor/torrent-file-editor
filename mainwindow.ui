@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string notr="true">MainWindow</string>
   </property>
   <property name="windowIcon">
    <iconset resource="resources.qrc">
@@ -692,7 +692,7 @@
      <x>0</x>
      <y>0</y>
      <width>694</width>
-     <height>23</height>
+     <height>27</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
