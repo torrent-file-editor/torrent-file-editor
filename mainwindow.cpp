@@ -124,7 +124,11 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
     , _fileName(QString())
     , _bencodeModel(new BencodeModel(this))
-    , _progressDialog(new QProgressDialog(this, Qt::WindowSystemMenuHint | Qt::WindowTitleHint))
+#ifdef Q_OS_WIN
+    , _progressDialog(new QProgressDialog(this, Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint | Qt::MSWindowsFixedSizeDialogHint))
+#else
+    , _progressDialog(new QProgressDialog(this, Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint))
+#endif
     , _formatFilters(QStringList())
 {
     ui->setupUi(this);
@@ -151,6 +155,9 @@ MainWindow::MainWindow(QWidget *parent)
     _progressDialog->setLabelText(tr("Need to calculate piece hashes"));
     _progressDialog->setWindowTitle(tr("Please wait"));
     _progressDialog->setValue(_progressDialog->maximum());
+    _progressDialog->ensurePolished();
+    _progressDialog->adjustSize();
+    _progressDialog->setFixedSize(_progressDialog->size().width() * 2, _progressDialog->size().height());
 
     updateTitle();
 
