@@ -20,7 +20,11 @@
 #include "ui_aboutdlg.h"
 
 AboutDlg::AboutDlg(QWidget *parent)
-    : QDialog(parent)
+#ifdef Q_OS_WIN
+    : QDialog(parent, Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint | Qt::MSWindowsFixedSizeDialogHint)
+#else
+    : QDialog(parent, Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint)
+#endif
     , ui(new Ui::AboutDlg)
 {
     ui->setupUi(this);
