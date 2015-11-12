@@ -1,3 +1,5 @@
+[![build status](https://secure.travis-ci.org/drizt/torrent-file-editor.png)](http://travis-ci.org/drizt/torrent-file-editor)
+
 Torrent File Editor
 ===================
 
