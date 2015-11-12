@@ -1,21 +1,24 @@
 os:
   - linux
 
-language: cpp
+dist: trusty
 
-script: cmake -DCMAKE_BUILD_TYPE=Debug . && make
+language: cpp
 
 compiler:
   - clang
   - gcc
 
+env:
+  - QT5_BUILD=ON
+  - QT5_BUILD=OFF
+
+script: cmake -DCMAKE_BUILD_TYPE=Debug -DQT5_BUILD=$QT5_BUILD . && make
+
 before_install:
-  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
-  - sudo add-apt-repository ppa:kalakris/cmake -y
   - sudo apt-get update -qq
   - sudo apt-get install -qq cmake
-  - sudo apt-get install -qq libqt4-dev
-  - sudo apt-get install -qq libqjson-dev
+  - if [ "$QT5_BUILD" = "ON" ]; then sudo apt-get install -qq qtbase5-dev qttools5-dev qttools5-dev-tools; fi
+  - if [ "$QT5_BUILD" = "OFF" ]; then sudo apt-get install -qq libqt4-dev libqjson-dev; fi
   - if [ "$CXX" = "clang++" ]; then sudo apt-get install -qq libstdc++-4.8-dev; fi
-  - if [ "$CXX" = "g++" ]; then sudo apt-get install -qq g++-4.8; fi
-  - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
+  - if [ "$CXX" = "g++" ]; then sudo apt-get install -qq g++; fi
