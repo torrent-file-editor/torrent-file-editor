@@ -72,3 +72,15 @@ easy:
     mkdir build && cd build
     mingw64-cmake -DCMAKE_BUILD_TYPE=Release ..
     make
+
+How I Can Help?
+---------------
+
+Now project translated only to three languages. It is English, Russian
+and Czech. I would glad to add new translations. You can translate
+project to your native language with [Crowdin](https://crowdin.com/project/torrent-file-editor).
+It is not difficult and not required special knowledges. Or you can
+correct my English. I know it is not good. Anyway you can
+always email <[drizt@land.ru](mailto:drizt@land.ru)> me.
+
+Also feel free to open an issue on github or send me pull requests.
