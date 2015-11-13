@@ -1,4 +1,5 @@
 [![build status](https://secure.travis-ci.org/drizt/torrent-file-editor.png)](http://travis-ci.org/drizt/torrent-file-editor)
+[![Crowdin](https://d322cqt584bo4o.cloudfront.net/torrent-file-editor/localized.svg)](https://crowdin.com/project/torrent-file-editor)
 
 Torrent File Editor
 ===================
