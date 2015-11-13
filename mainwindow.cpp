@@ -136,7 +136,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     _formatFilters << tr("Torrents (*.torrent)");
-    _formatFilters << tr("uTorrent resume files(*.dat)");
+    _formatFilters << tr("uTorrent resume files (*.dat)");
 
 #ifndef Q_OS_MAC
     // Show menu bar only on Mac OS X.

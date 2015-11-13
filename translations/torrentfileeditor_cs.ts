@@ -322,7 +322,7 @@
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="139"/>
-      <source>uTorrent resume files(*.dat)</source>
+      <source>uTorrent resume files (*.dat)</source>
       <translation>Pokračovací soubory uTorrent (*.dat)</translation>
     </message>
     <message>

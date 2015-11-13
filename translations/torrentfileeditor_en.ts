@@ -322,8 +322,8 @@
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="139"/>
-        <source>uTorrent resume files(*.dat)</source>
-        <translation>uTorrent resume files(*.dat)</translation>
+        <source>uTorrent resume files (*.dat)</source>
+        <translation>uTorrent resume files (*.dat)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="285"/>
