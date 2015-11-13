@@ -9,11 +9,6 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Autor: Ivan Romanov &lt;a href=&quot;mailto:drizt@land.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Licence: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Stránky: &lt;a href=&quot;http://sourceforge.net/projects/torrent-file-editor/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href=&quot;http://github.com/drizt/torrent-file-editor&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Poděkování: &lt;a href=&quot;http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; za ikonu programu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../aboutdlg.ui" line="72"/>
-        <source>Torrent File Editor</source>
-        <translation>Torrent File Editor</translation>
-    </message>
-    <message>
         <location filename="../aboutdlg.ui" line="14"/>
         <source>About Torrent File Editor</source>
         <translation>O Torrent File Editor</translation>
