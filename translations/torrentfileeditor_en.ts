@@ -59,8 +59,8 @@
     </message>
     <message>
       <location filename="../folderedit.cpp" line="51"/>
-      <source>Add Folder</source>
-      <translation>Add Folder</translation>
+      <source>Add folder</source>
+      <translation>Add folder</translation>
     </message>
   </context>
   <context>
@@ -161,34 +161,34 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="353"/>
-      <source>Make Torrent</source>
-      <translation>Make Torrent</translation>
+      <source>Make torrent</source>
+      <translation>Make torrent</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="369"/>
-      <source>Add Files</source>
-      <translation>Add Files</translation>
+      <source>Add files</source>
+      <translation>Add files</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="385"/>
       <location filename="../mainwindow.cpp" line="559"/>
-      <source>Add Folder</source>
-      <translation>Add Folder</translation>
+      <source>Add folder</source>
+      <translation>Add folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="408"/>
-      <source>Remove Files</source>
-      <translation>Remove Files</translation>
+      <source>Remove files</source>
+      <translation>Remove files</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="424"/>
-      <source>Up File</source>
-      <translation>Up File</translation>
+      <source>Move file up</source>
+      <translation>Move file up</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="440"/>
-      <source>Down File</source>
-      <translation>Down File</translation>
+      <source>Move file down</source>
+      <translation>Move file down</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="548"/>
@@ -197,23 +197,23 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="559"/>
-      <source>Add Tree Item</source>
-      <translation>Add Tree Item</translation>
+      <source>Add tree item</source>
+      <translation>Add tree item</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="575"/>
-      <source>Remove Tree Items</source>
-      <translation>Remove Tree Items</translation>
+      <source>Remove tree items</source>
+      <translation>Remove tree items</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="591"/>
-      <source>Up List Item</source>
-      <translation>Up List Item</translation>
+      <source>Move list item up</source>
+      <translation>Move list item up</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="607"/>
-      <source>Down List Item</source>
-      <translation>Down List Item</translation>
+      <source>Move list item down</source>
+      <translation>Move list item down</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="700"/>

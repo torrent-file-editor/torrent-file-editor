@@ -59,7 +59,7 @@
     </message>
     <message>
       <location filename="../folderedit.cpp" line="51"/>
-      <source>Add Folder</source>
+      <source>Add folder</source>
       <translation>Добавить папку</translation>
     </message>
   </context>
@@ -161,33 +161,33 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="353"/>
-      <source>Make Torrent</source>
+      <source>Make torrent</source>
       <translation>Создать торрент</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="369"/>
-      <source>Add Files</source>
+      <source>Add files</source>
       <translation>Добавить файл</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="385"/>
       <location filename="../mainwindow.cpp" line="559"/>
-      <source>Add Folder</source>
+      <source>Add folder</source>
       <translation>Добавить папку</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="408"/>
-      <source>Remove Files</source>
+      <source>Remove files</source>
       <translation>Удалить файлы</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="424"/>
-      <source>Up File</source>
+      <source>Move file up</source>
       <translation>Поднять файл</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="440"/>
-      <source>Down File</source>
+      <source>Move file down</source>
       <translation>Опустить файл</translation>
     </message>
     <message>
@@ -197,22 +197,22 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="559"/>
-      <source>Add Tree Item</source>
+      <source>Add tree item</source>
       <translation>Добавить элемент дерева</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="575"/>
-      <source>Remove Tree Items</source>
+      <source>Remove tree items</source>
       <translation>Удалить элементы дерева</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="591"/>
-      <source>Up List Item</source>
+      <source>Move list item up</source>
       <translation>Поднять элемент дерева</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="607"/>
-      <source>Down List Item</source>
+      <source>Move list item down</source>
       <translation>Опустить элемент дерева</translation>
     </message>
     <message>
