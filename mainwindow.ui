@@ -350,7 +350,7 @@
              <enum>Qt::NoFocus</enum>
             </property>
             <property name="toolTip">
-             <string>Make Torrent</string>
+             <string>Make torrent</string>
             </property>
             <property name="text">
              <string/>
@@ -366,7 +366,7 @@
              <enum>Qt::NoFocus</enum>
             </property>
             <property name="toolTip">
-             <string>Add Files</string>
+             <string>Add files</string>
             </property>
             <property name="text">
              <string/>
@@ -382,7 +382,7 @@
              <enum>Qt::NoFocus</enum>
             </property>
             <property name="toolTip">
-             <string>Add Folder</string>
+             <string>Add folder</string>
             </property>
             <property name="text">
              <string/>
@@ -405,7 +405,7 @@
              <enum>Qt::NoFocus</enum>
             </property>
             <property name="toolTip">
-             <string>Remove Files</string>
+             <string>Remove files</string>
             </property>
             <property name="text">
              <string/>
@@ -421,7 +421,7 @@
              <enum>Qt::NoFocus</enum>
             </property>
             <property name="toolTip">
-             <string>Up File</string>
+             <string>Move file up</string>
             </property>
             <property name="text">
              <string/>
@@ -437,7 +437,7 @@
              <enum>Qt::NoFocus</enum>
             </property>
             <property name="toolTip">
-             <string>Down File</string>
+             <string>Move file down</string>
             </property>
             <property name="text">
              <string/>
@@ -556,7 +556,7 @@
              <enum>Qt::NoFocus</enum>
             </property>
             <property name="toolTip">
-             <string>Add Tree Item</string>
+             <string>Add tree item</string>
             </property>
             <property name="text">
              <string/>
@@ -572,7 +572,7 @@
              <enum>Qt::NoFocus</enum>
             </property>
             <property name="toolTip">
-             <string>Remove Tree Items</string>
+             <string>Remove tree items</string>
             </property>
             <property name="text">
              <string/>
@@ -588,7 +588,7 @@
              <enum>Qt::NoFocus</enum>
             </property>
             <property name="toolTip">
-             <string>Up List Item</string>
+             <string>Move list item up</string>
             </property>
             <property name="text">
              <string/>
@@ -604,7 +604,7 @@
              <enum>Qt::NoFocus</enum>
             </property>
             <property name="toolTip">
-             <string>Down List Item</string>
+             <string>Move list item down</string>
             </property>
             <property name="text">
              <string/>
