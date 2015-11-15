@@ -42,7 +42,8 @@ configure_file(translations.qrc.in translations.qrc COPYONLY)
 set(TRANSLATIONS
   ${CMAKE_SOURCE_DIR}/translations/torrentfileeditor_en.ts
   ${CMAKE_SOURCE_DIR}/translations/torrentfileeditor_ru.ts
-  ${CMAKE_SOURCE_DIR}/translations/torrentfileeditor_cs.ts)
+  ${CMAKE_SOURCE_DIR}/translations/torrentfileeditor_cs.ts
+  ${CMAKE_SOURCE_DIR}/translations/torrentfileeditor_de.ts)
 
 set(HEADERS
   ${CMAKE_SOURCE_DIR}/application.h
