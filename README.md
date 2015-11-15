@@ -53,11 +53,11 @@ easy:
     mkdir qjson-master/win32
     mkdir qjson-master/win64
     cd qjson-master/win32
-    mingw32-cmake -DCMAKE_BUILD_TYPE=Release -DQT4_BUILD=ON ..
+    mingw32-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DQT4_BUILD=ON ..
     make
     sudo make install # will be carefull, it installs qjson to system folders
     cd ../win64
-    mingw64-cmake -DCMAKE_BUILD_TYPE=Release -DQT4_BUILD=ON ..
+    mingw64-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DQT4_BUILD=ON ..
     make
     sudo make install # will be carefull, it installs qjson to system folders
 
