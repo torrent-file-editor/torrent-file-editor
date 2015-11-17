@@ -220,8 +220,11 @@ int main(int argc, char *argv[])
     updater->checkForUpdates();
 #endif
 
-    if (argc == 2 && QFile::exists(argv[1]))
-        w.open(argv[1]);
+    if (argc == 2) {
+        QString filename = QString::fromLocal8Bit(argv[1]);
+        if (QFile::exists(filename))
+            w.open(filename);
+    }
 
     return a.exec();
 }
