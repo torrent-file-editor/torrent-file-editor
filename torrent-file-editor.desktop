@@ -1,6 +1,6 @@
 [Desktop Entry]
 Categories=Network;P2P;Qt;
-Exec=torrent-file-editor %U
+Exec=torrent-file-editor %f
 GenericName=Torrent File Editor
 Comment=Edit and create .torrent files
 Icon=torrent-file-editor
