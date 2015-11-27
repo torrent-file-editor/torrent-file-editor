@@ -56,4 +56,8 @@
     </screenshot>
   </screenshots>
   <updatecontact>drizt@land.ru</updatecontact>
+  <kudos>
+    <kudo>HiDpiIcon</kudo>
+    <kudo>ModernToolkit</kudo>
+  </kudos>
 </component>
