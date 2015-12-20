@@ -31,11 +31,35 @@ if(QT5_BUILD)
   find_package(Qt5LinguistTools REQUIRED)
 
   add_definitions(-DHAVE_QT5)
+
+  macro(QT4_ADD_TRANSLATION)
+    qt5_add_translation(${ARGN})
+  endmacro()
+
+  macro(qt4_add_resources)
+    qt5_add_resources(${ARGN})
+  endmacro()
+
+  macro(qt4_wrap_cpp)
+    qt5_wrap_cpp(${ARGN})
+  endmacro()
+
+  macro(qt4_wrap_ui)
+    qt5_wrap_ui(${ARGN})
+  endmacro()
 else()
   find_package(Qt4 REQUIRED)
   find_package(QJSON 0.8.0 REQUIRED)
   include(${QT_USE_FILE})
 endif()
+
+macro(qt_add_translation ARG1 ARG2)
+  if(QT5_BUILD)
+    qt5_add_translation(${ARG1} ${ARG2})
+  else()
+    qt4_add_translation(${ARG1} ${ARG2})
+  endif()
+endmacro()
 
 configure_file(translations.qrc.in translations.qrc COPYONLY)
 
@@ -96,17 +120,10 @@ set(RESOURCES
   ${CMAKE_BINARY_DIR}/translations.qrc
   resources.qrc)
 
-if(QT5_BUILD)
-  qt5_add_translation(QM ${TRANSLATIONS})
-  qt5_add_resources(QRC_SOURCES ${RESOURCES})
-  qt5_wrap_cpp(MOC_SOURCES ${HEADERS})
-  qt5_wrap_ui(UI_SOURCES ${FORMS})
-else()
-  QT4_ADD_TRANSLATION(QM ${TRANSLATIONS})
-  qt4_add_resources(QRC_SOURCES ${RESOURCES})
-  qt4_wrap_cpp(MOC_SOURCES ${HEADERS})
-  qt4_wrap_ui(UI_SOURCES ${FORMS})
-endif()
+QT4_ADD_TRANSLATION(QM ${TRANSLATIONS})
+qt4_add_resources(QRC_SOURCES ${RESOURCES})
+qt4_wrap_cpp(MOC_SOURCES ${HEADERS})
+qt4_wrap_ui(UI_SOURCES ${FORMS})
 
 if(WIN32)
   add_definitions(-DQT_NODLL)
