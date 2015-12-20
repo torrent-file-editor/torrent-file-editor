@@ -48,7 +48,6 @@ set(TRANSLATIONS
 set(HEADERS
   ${CMAKE_SOURCE_DIR}/application.h
   ${CMAKE_SOURCE_DIR}/mainwindow.h
-  ${CMAKE_SOURCE_DIR}/bencode.h
   ${CMAKE_SOURCE_DIR}/datewidget.h
   ${CMAKE_SOURCE_DIR}/lineeditwidget.h
   ${CMAKE_SOURCE_DIR}/urledit.h
@@ -56,7 +55,10 @@ set(HEADERS
   ${CMAKE_SOURCE_DIR}/aboutdlg.h
   ${CMAKE_SOURCE_DIR}/bencodemodel.h
   ${CMAKE_SOURCE_DIR}/bencodedelegate.h
-  ${CMAKE_SOURCE_DIR}/abstracttreemodel.h
+  ${CMAKE_SOURCE_DIR}/abstracttreemodel.h)
+
+set(PLAIN_HEADERS
+  ${CMAKE_SOURCE_DIR}/bencode.h
   ${CMAKE_SOURCE_DIR}/abstracttreeitem.h
   ${CMAKE_SOURCE_DIR}/proxystyle.h)
 
@@ -121,7 +123,7 @@ if(WIN32)
   set(SOURCES ${SOURCES} ${CMAKE_CURRENT_BINARY_DIR}/app.o)
 endif()
 
-add_executable(${PROJECT_NAME} WIN32 MACOSX_BUNDLE ${QM} ${HEADERS} ${SOURCES} ${MOC_SOURCES} ${QRC_SOURCES} ${UI_SOURCES})
+add_executable(${PROJECT_NAME} WIN32 MACOSX_BUNDLE ${QM} ${HEADERS} ${PLAIN_HEADERS} ${SOURCES} ${MOC_SOURCES} ${QRC_SOURCES} ${UI_SOURCES})
 
 if(QT5_BUILD)
   target_link_libraries(${PROJECT_NAME} ${START_STATIC} Qt5::Core Qt5::Gui Qt5::Widgets ${END_STATIC})
