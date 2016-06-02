@@ -183,7 +183,7 @@ if(APPLE)
   set(PLATFORM_PLUGINS Qt5::QCocoaIntegrationPlugin)
   set(IMAGE_PLUGINS Qt5::QICNSPlugin)
   set(PRINTSUPPORT_PLUGINS Qt5::QCocoaPrinterSupportPlugin)
-  set(PLUGINS_DEST_PATH "${BUNDLE_DIR_BASE_NAME}.app/Contents/Plugins")
+  set(PLUGINS_DEST_PATH "${BUNDLE_DIR_BASE_NAME}.app/Contents/PlugIns")
 
   foreach(plugin ${PLATFORM_PLUGINS})
     get_target_property(_loc ${plugin} LOCATION)
@@ -221,11 +221,18 @@ if(APPLE)
   SET(APPS "\${CMAKE_INSTALL_PREFIX}/${BUNDLE_DIR_BASE_NAME}.app")
   install(CODE "
     file(GLOB_RECURSE QTPLUGINS
-      \"\${CMAKE_INSTALL_PREFIX}/${PLUGINS_DEST_PATH}/*${CMAKE_SHARED_LIBRARY_SUFFIX}\")
+      \"\${CMAKE_INSTALL_PREFIX}/${PLUGINS_DEST_PATH}/*${CMAKE_SHARED_LIBRARY_SUFFIX}\"
+    )
     include(BundleUtilities)
     fixup_bundle(\"${APPS}\" \"\${QTPLUGINS}\" \"${QT_LIBRARY_DIR}\")
-    file(GLOB BINARIES \"${APPS}/Contents/Frameworks/*.framework\" \"${APPS}/Contents/Frameworks/Sparkle.framework/Resources/Autoupdate.app\" \"${APPS}/Contents/MacOS/*.dylib\" \"${APPS}/Contents/Plugins/*.dylib\" \"${APPS}/Contents/Plugins/*/*.dylib\" \"${APPS}/Contents/MacOS/${BUNDLE_DIR_BASE_NAME}\")
-    execute_process(COMMAND codesign -f -s \"Ivan Romanov\" \${BINARIES} \"${APPS}\" WORKING_DIRECTORY \"${APPS}\")
+    file(GLOB BINARIES
+      \"${APPS}/Contents/Frameworks/*.framework\"
+      \"${APPS}/Contents/Frameworks/Sparkle.framework/Resources/Autoupdate.app\"
+      \"${APPS}/Contents/MacOS/*.dylib\"
+      \"${APPS}/Contents/PlugIns/*.dylib\"
+      \"${APPS}/Contents/PlugIns/*/*.dylib\"
+    )
+    execute_process(COMMAND codesign --deep -f -s \"Ivan Romanov\" \${BINARIES} \"${APPS}\" WORKING_DIRECTORY \"${APPS}\")
     " COMPONENT Runtime)
 
   # To Create a package, one can run "cpack -G DragNDrop CPackConfig.cmake" on Mac OS X
@@ -233,6 +240,9 @@ if(APPLE)
   # And then there's ways to customize this as well
   set(CPACK_PACKAGE_VERSION ${APP_VERSION})
   set(CPACK_PACKAGE_FILE_NAME ${PROJECT_NAME}-${CPACK_PACKAGE_VERSION})
+  set(CPACK_DMG_VOLUME_NAME ${BUNDLE_DIR_BASE_NAME})
+  set(CPACK_DMG_DS_STORE_SETUP_SCRIPT "${CMAKE_SOURCE_DIR}/CMakeDMGSetup.scpt")
+  set(CPACK_DMG_BACKGROUND_IMAGE "${CMAKE_SOURCE_DIR}/DS_Background.png")
   set(CPACK_BINARY_DRAGNDROP ON)
   include(CPack)
 
