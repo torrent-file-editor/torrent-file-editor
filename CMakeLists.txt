@@ -1,6 +1,10 @@
 project(torrent-file-editor)
 cmake_minimum_required(VERSION 2.8.11)
 
+if(POLICY CMP0046)
+  cmake_policy(SET CMP0046 OLD)
+endif()
+
 set(APP_VERSION "0.2.1")
 set(BUNDLE_DIR_BASE_NAME "Torrent File Editor")
 
@@ -63,14 +67,11 @@ endmacro()
 
 configure_file(translations.qrc.in translations.qrc COPYONLY)
 
-set(TRANSLATIONS
-  ${CMAKE_SOURCE_DIR}/translations/torrentfileeditor_ar.ts
-  ${CMAKE_SOURCE_DIR}/translations/torrentfileeditor_cs.ts
-  ${CMAKE_SOURCE_DIR}/translations/torrentfileeditor_de.ts
-  ${CMAKE_SOURCE_DIR}/translations/torrentfileeditor_en.ts
-  ${CMAKE_SOURCE_DIR}/translations/torrentfileeditor_ko.ts
-  ${CMAKE_SOURCE_DIR}/translations/torrentfileeditor_ru.ts
-)
+set(LANGS ar cs de en ko ru)
+
+foreach(l ${LANGS})
+  list(APPEND TRANSLATIONS ${CMAKE_SOURCE_DIR}/translations/torrentfileeditor_${l}.ts)
+endforeach()
 
 set(HEADERS
   ${CMAKE_SOURCE_DIR}/application.h
