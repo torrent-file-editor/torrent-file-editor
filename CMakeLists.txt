@@ -5,7 +5,7 @@ if(POLICY CMP0046)
   cmake_policy(SET CMP0046 OLD)
 endif()
 
-set(APP_VERSION "0.2.1")
+set(APP_VERSION "0.2.2")
 set(BUNDLE_DIR_BASE_NAME "Torrent File Editor")
 
 set(MACOSX_BUNDLE_INFO_STRING "Torrent File Editor ${APP_VERSION}. This program is licensed under the GNU GPL.")

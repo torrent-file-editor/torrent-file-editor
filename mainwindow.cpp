@@ -50,7 +50,7 @@
 # include <qjson/parser.h>
 #endif
 
-#define APP_NAME "Torrent File Editor 0.2.1"
+#define APP_NAME "Torrent File Editor 0.2.2"
 
 Worker::Worker()
     : QObject()
