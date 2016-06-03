@@ -59,8 +59,8 @@
     </message>
     <message>
       <location filename="../folderedit.cpp" line="51"/>
-      <source>Add folder</source>
-      <translation>폴더 추가</translation>
+      <source>Add Folder</source>
+      <translation type="unfinished">폴더 추가</translation>
     </message>
   </context>
   <context>
@@ -171,7 +171,6 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="385"/>
-      <location filename="../mainwindow.cpp" line="559"/>
       <source>Add folder</source>
       <translation>폴더 추가</translation>
     </message>
@@ -362,6 +361,11 @@
       <location filename="../mainwindow.cpp" line="536"/>
       <source>Add File</source>
       <translation>파일 추가</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="559"/>
+      <source>Add Folder</source>
+      <translation type="unfinished">폴더 추가</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="703"/>

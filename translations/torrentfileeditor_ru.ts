@@ -59,7 +59,7 @@
     </message>
     <message>
       <location filename="../folderedit.cpp" line="51"/>
-      <source>Add folder</source>
+      <source>Add Folder</source>
       <translation>Добавить папку</translation>
     </message>
   </context>
@@ -171,7 +171,6 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="385"/>
-      <location filename="../mainwindow.cpp" line="559"/>
       <source>Add folder</source>
       <translation>Добавить папку</translation>
     </message>
@@ -362,6 +361,11 @@
       <location filename="../mainwindow.cpp" line="536"/>
       <source>Add File</source>
       <translation>Добавить файл</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="559"/>
+      <source>Add Folder</source>
+      <translation>Добавить папку</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="703"/>
