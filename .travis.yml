@@ -1,8 +1,9 @@
 os:
   - linux
+  - osx
 
 dist: trusty
-
+sudo: required
 language: cpp
 
 compiler:
@@ -13,12 +14,27 @@ env:
   - QT5_BUILD=ON
   - QT5_BUILD=OFF
 
-script: cmake -DCMAKE_BUILD_TYPE=Debug -DQT5_BUILD=$QT5_BUILD . && make
+matrix:
+  exclude:
+    - os: osx
+      compiler: gcc
+    - os: osx
+      compiler: clang
+      env: QT5_BUILD=OFF
+    
+script:
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cmake -DCMAKE_BUILD_TYPE=Debug -DQT5_BUILD=$QT5_BUILD . && make; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cmake -DCMAKE_BUILD_TYPE=Debug . -DCMAKE_PREFIX_PATH=$(brew cask info sparkle | grep /opt | cut -d' ' -f 1)\;$(brew --prefix qt5) && make; fi
 
 before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq cmake
-  - if [ "$QT5_BUILD" = "ON" ]; then sudo apt-get install -qq qtbase5-dev qttools5-dev qttools5-dev-tools; fi
-  - if [ "$QT5_BUILD" = "OFF" ]; then sudo apt-get install -qq libqt4-dev libqjson-dev; fi
-  - if [ "$CXX" = "clang++" ]; then sudo apt-get install -qq libstdc++-4.8-dev; fi
-  - if [ "$CXX" = "g++" ]; then sudo apt-get install -qq g++; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update -qq; fi
+  - if [[ "$QT5_BUILD" == "ON" && "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -qq qtbase5-dev qttools5-dev qttools5-dev-tools; fi
+  - if [[ "$QT5_BUILD" == "OFF" && "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -qq libqt4-dev libqjson-dev; fi
+  - if [[ "$CXX" == "clang++" && "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -qq libstdc++-4.8-dev; fi
+  - if [[ "$CXX" == "g++" && "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -qq g++; fi
+
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew outdated cmake || brew upgrade cmake; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install qt5; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew linkapps qt5; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew cask install sparkle; fi
