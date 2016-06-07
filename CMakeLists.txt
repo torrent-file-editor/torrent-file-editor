@@ -89,16 +89,19 @@ set(HEADERS
   ${CMAKE_SOURCE_DIR}/aboutdlg.h
   ${CMAKE_SOURCE_DIR}/bencodemodel.h
   ${CMAKE_SOURCE_DIR}/bencodedelegate.h
-  ${CMAKE_SOURCE_DIR}/abstracttreemodel.h)
+  ${CMAKE_SOURCE_DIR}/abstracttreemodel.h
+)
 
 set(PLAIN_HEADERS
   ${CMAKE_SOURCE_DIR}/bencode.h
   ${CMAKE_SOURCE_DIR}/abstracttreeitem.h
-  ${CMAKE_SOURCE_DIR}/proxystyle.h)
+  ${CMAKE_SOURCE_DIR}/proxystyle.h
+)
 
 set(FORMS
   ${CMAKE_SOURCE_DIR}/mainwindow.ui
-  ${CMAKE_SOURCE_DIR}/aboutdlg.ui)
+  ${CMAKE_SOURCE_DIR}/aboutdlg.ui
+)
 
 set(SOURCES
   ${CMAKE_SOURCE_DIR}/application.cpp
@@ -114,12 +117,14 @@ set(SOURCES
   ${CMAKE_SOURCE_DIR}/bencodedelegate.cpp
   ${CMAKE_SOURCE_DIR}/abstracttreemodel.cpp
   ${CMAKE_SOURCE_DIR}/abstracttreeitem.cpp
-  ${CMAKE_SOURCE_DIR}/proxystyle.cpp)
+  ${CMAKE_SOURCE_DIR}/proxystyle.cpp
+)
 
 if(APPLE)
   list(APPEND SOURCES
     ${CMAKE_SOURCE_DIR}/cocoainitializer.mm
-    ${CMAKE_SOURCE_DIR}/sparkleautoupdater.mm)
+    ${CMAKE_SOURCE_DIR}/sparkleautoupdater.mm
+  )
 
   set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR})  # to find FindSparkle.cmake file
   find_package(Sparkle REQUIRED)
@@ -128,7 +133,8 @@ endif()
 
 set(RESOURCES
   ${CMAKE_BINARY_DIR}/translations.qrc
-  resources.qrc)
+  resources.qrc
+)
 
 QT4_ADD_TRANSLATION(QM ${TRANSLATIONS})
 qt4_add_resources(QRC_SOURCES ${RESOURCES})
@@ -145,8 +151,8 @@ if(WIN32)
 
   # resource compilation for MinGW
   add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/app.o
-                     COMMAND ${CMAKE_RC_COMPILER} -I${CMAKE_CURRENT_SOURCE_DIR} -i${CMAKE_CURRENT_SOURCE_DIR}/app.rc
-                             -o ${CMAKE_CURRENT_BINARY_DIR}/app.o)
+    COMMAND ${CMAKE_RC_COMPILER} -I${CMAKE_CURRENT_SOURCE_DIR} -i${CMAKE_CURRENT_SOURCE_DIR}/app.rc -o ${CMAKE_CURRENT_BINARY_DIR}/app.o
+  )
   set(SOURCES ${SOURCES} ${CMAKE_CURRENT_BINARY_DIR}/app.o)
 endif()
 
@@ -180,7 +186,8 @@ if(APPLE)
   install(TARGETS ${PROJECT_NAME} BUNDLE DESTINATION . COMPONENT Runtime)
   set_target_properties(torrent-file-editor PROPERTIES
     OUTPUT_NAME "${BUNDLE_DIR_BASE_NAME}"
-    MACOSX_BUNDLE_INFO_PLIST "${CMAKE_SOURCE_DIR}/MacOSXBundleInfo.plist.in")
+    MACOSX_BUNDLE_INFO_PLIST "${CMAKE_SOURCE_DIR}/MacOSXBundleInfo.plist.in"
+  )
 
   # Install app icon
   install(FILES icons/application.icns DESTINATION "${BUNDLE_DIR_BASE_NAME}.app/Contents/Resources" COMPONENT Runtime)
@@ -214,7 +221,8 @@ if(APPLE)
   # this inserts some cmake code into the install script to write the file
   install(CODE "
     file(WRITE \"\${CMAKE_INSTALL_PREFIX}/${BUNDLE_DIR_BASE_NAME}.app/Contents/Resources/qt.conf\" \"\")
-    " COMPONENT Runtime)
+    " COMPONENT Runtime
+  )
 
   # Now the work of copying dependencies into the bundle/package
   # The quotes are escaped and variables to use at install time have their $ escaped
@@ -240,18 +248,23 @@ if(APPLE)
       \"${APPS}/Contents/PlugIns/*/*.dylib\"
     )
     execute_process(COMMAND codesign --deep -f -s \"Ivan Romanov\" \${BINARIES} \"${APPS}\" WORKING_DIRECTORY \"${APPS}\")
-    " COMPONENT Runtime)
+    " COMPONENT Runtime
+  )
 
   # To Create a package, one can run "cpack -G DragNDrop CPackConfig.cmake" on Mac OS X
   # where CPackConfig.cmake is created by including CPack
   # And then there's ways to customize this as well
+  set(CPACK_GENERATOR "DragNDrop")
   set(CPACK_PACKAGE_VERSION ${APP_VERSION})
   set(CPACK_PACKAGE_FILE_NAME ${PROJECT_NAME}-${CPACK_PACKAGE_VERSION})
   set(CPACK_DMG_VOLUME_NAME ${BUNDLE_DIR_BASE_NAME})
   set(CPACK_DMG_DS_STORE_SETUP_SCRIPT "${CMAKE_SOURCE_DIR}/CMakeDMGSetup.scpt")
   set(CPACK_DMG_BACKGROUND_IMAGE "${CMAKE_SOURCE_DIR}/DS_Background.png")
-  set(CPACK_BINARY_DRAGNDROP ON)
   include(CPack)
 
-  add_custom_target("dmg" COMMAND ${CMAKE_COMMAND} -DAPP_NAME=${PROJECT_NAME} -DAPP_VERSION=${APP_VERSION} -P "${CMAKE_CURRENT_SOURCE_DIR}/Dmg.cmake" DEPENDS "${PROJECT_NAME}" WORKING_DIRECTORY "${CMAKE_BINARY_DIR}")
+  add_custom_target("dmg"
+    COMMAND ${CMAKE_COMMAND} -DAPP_NAME=${PROJECT_NAME} -DAPP_VERSION=${APP_VERSION} -P "${CMAKE_CURRENT_SOURCE_DIR}/Dmg.cmake"
+    DEPENDS "${PROJECT_NAME}"
+    WORKING_DIRECTORY "${CMAKE_BINARY_DIR}"
+  )
 endif()

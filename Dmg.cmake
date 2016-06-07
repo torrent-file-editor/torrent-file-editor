@@ -1,6 +1,6 @@
 set(ENV{LC_ALL} C)
 execute_process(COMMAND date "+%a, %d %b %Y %H:%M:%S %z" OUTPUT_VARIABLE PUB_DATE OUTPUT_STRIP_TRAILING_WHITESPACE)
-execute_process(COMMAND cpack -V -G DragNDrop CPackConfig.cmake WORKING_DIRECTORY "${CMAKE_BINARY_DIR}")
+execute_process(COMMAND cpack -V WORKING_DIRECTORY "${CMAKE_BINARY_DIR}")
 execute_process(
   COMMAND /usr/bin/openssl dgst -sha1 -binary
   COMMAND /usr/bin/openssl dgst -dss1 -sign "${CMAKE_CURRENT_LIST_DIR}/dsa_priv.pem"
