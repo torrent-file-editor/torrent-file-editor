@@ -217,12 +217,10 @@ if(APPLE)
   # Install public key for Sparkle Updater
   install(FILES "dsa_pub.pem" DESTINATION "${BUNDLE_DIR_BASE_NAME}.app/Contents/Resources" COMPONENT Runtime)
 
-  # install a qt.conf file
-  # this inserts some cmake code into the install script to write the file
-  install(CODE "
-    file(WRITE \"\${CMAKE_INSTALL_PREFIX}/${BUNDLE_DIR_BASE_NAME}.app/Contents/Resources/qt.conf\" \"\")
-    " COMPONENT Runtime
-  )
+  # Install qt.conf file
+  # Qt can't find plugins in standard path on case-sensetive file system
+  # Write correct case-sensetive folder name in qt.conf file
+  install(FILES "qt.conf" DESTINATION "${BUNDLE_DIR_BASE_NAME}.app/Contents/Resources" COMPONENT Runtime)
 
   # Now the work of copying dependencies into the bundle/package
   # The quotes are escaped and variables to use at install time have their $ escaped
