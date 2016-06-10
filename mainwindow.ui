@@ -539,22 +539,6 @@
             </property>
            </spacer>
           </item>
-          <item>
-           <widget class="QToolButton" name="btnDownFile_2">
-            <property name="focusPolicy">
-             <enum>Qt::NoFocus</enum>
-            </property>
-            <property name="toolTip">
-             <string>Move file down</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="autoRaise">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
          </layout>
         </item>
         <item>
