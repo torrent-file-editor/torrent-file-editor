@@ -67,25 +67,25 @@
     <name>MainWindow</name>
     <message>
       <location filename="../mainwindow.ui" line="27"/>
-      <location filename="../mainwindow.ui" line="712"/>
+      <location filename="../mainwindow.ui" line="807"/>
       <source>New</source>
       <translation>Nový</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="34"/>
-      <location filename="../mainwindow.cpp" line="305"/>
+      <location filename="../mainwindow.cpp" line="306"/>
       <source>Open</source>
       <translation>Otevřít</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="41"/>
-      <location filename="../mainwindow.ui" line="728"/>
+      <location filename="../mainwindow.ui" line="823"/>
       <source>Save</source>
       <translation>Uložit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="48"/>
-      <location filename="../mainwindow.cpp" line="327"/>
+      <location filename="../mainwindow.cpp" line="328"/>
       <source>Save As</source>
       <translation>Uložit jako</translation>
     </message>
@@ -186,71 +186,122 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="440"/>
+      <location filename="../mainwindow.ui" line="548"/>
       <source>Move file down</source>
       <translation>Posunout soubor dolů</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="548"/>
+      <location filename="../mainwindow.ui" line="460"/>
+      <source>Filter by </source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="467"/>
+      <source>&lt;html&gt;
+  &lt;head/&gt;
+  &lt;body&gt;
+    &lt;p&gt;&lt;b&gt;name&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;file name with extenstion exactly equals with pattern&lt;/p&gt;
+    &lt;br/&gt;
+    &lt;p&gt;&lt;b&gt;extension&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;the symbols after the latest point exactly equals with pattern, for 'archive.tar.gz' it will be 'gz' for example&lt;/p&gt;
+    &lt;br/&gt;
+    &lt;p&gt;&lt;b&gt;wildcards&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;file name with extenstion matches with file globbing where '?' is one any symbol and '*' is any numbers of any symbols&lt;/p&gt;
+    &lt;br/&gt;
+    &lt;p&gt;&lt;b&gt;regular expression&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;full file path matches Perl-like regular expression&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="486"/>
+      <source>name</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="491"/>
+      <source>extension</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="496"/>
+      <source>wildcards</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="501"/>
+      <source>regular expression</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="519"/>
+      <source>Filter files</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="643"/>
       <source>Tree</source>
       <translation>Strom</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="559"/>
+      <location filename="../mainwindow.ui" line="654"/>
       <source>Add tree item</source>
       <translation>Přidat položku stromu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="575"/>
+      <location filename="../mainwindow.ui" line="670"/>
       <source>Remove tree items</source>
       <translation>Odstranit položky stromu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="591"/>
+      <location filename="../mainwindow.ui" line="686"/>
       <source>Move list item up</source>
       <translation>Posunout položku seznamu nahoru</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="607"/>
+      <location filename="../mainwindow.ui" line="702"/>
       <source>Move list item down</source>
       <translation>Posunout položku seznamu dolů</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="700"/>
+      <location filename="../mainwindow.ui" line="795"/>
       <source>File</source>
       <translation>Soubor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="715"/>
+      <location filename="../mainwindow.ui" line="810"/>
       <source>Ctrl+N</source>
       <translation>Ctrl+N</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="720"/>
+      <location filename="../mainwindow.ui" line="815"/>
       <source>Open...</source>
       <translation>Otevřít...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="723"/>
+      <location filename="../mainwindow.ui" line="818"/>
       <source>Ctrl+O</source>
       <translation>Ctrl+O</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="731"/>
+      <location filename="../mainwindow.ui" line="826"/>
       <source>Ctrl+S</source>
       <translation>Ctrl+S</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="736"/>
+      <location filename="../mainwindow.ui" line="831"/>
       <source>Save As...</source>
       <translation>Uložit jako...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="739"/>
+      <location filename="../mainwindow.ui" line="834"/>
       <source>Ctrl+Shift+S</source>
       <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="744"/>
+      <location filename="../mainwindow.ui" line="839"/>
       <source>About...</source>
       <translation>O programu...</translation>
     </message>
@@ -260,22 +311,22 @@
       <translation>Kódování</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="489"/>
+      <location filename="../mainwindow.ui" line="584"/>
       <source>Piece size </source>
       <translation>Velikost části </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="506"/>
+      <location filename="../mainwindow.ui" line="601"/>
       <source>Total size </source>
       <translation>Celková velikost </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="535"/>
+      <location filename="../mainwindow.ui" line="630"/>
       <source>Base folder </source>
       <translation>Základní složka </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="643"/>
+      <location filename="../mainwindow.ui" line="738"/>
       <source>Raw</source>
       <translation>Nezpracováno</translation>
     </message>
@@ -305,12 +356,12 @@
       <translation>Velikost</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="257"/>
+      <location filename="../mainwindow.cpp" line="258"/>
       <source>Create a new file</source>
       <translation>Vytvořit nový soubor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="258"/>
+      <location filename="../mainwindow.cpp" line="259"/>
       <source>Current file is not saved. Save the file?</source>
       <translation>Nynější soubor není uložen. Uložit soubor?</translation>
     </message>
@@ -325,81 +376,81 @@
       <translation>Pokračovací soubory uTorrent (*.dat)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="285"/>
-      <location filename="../mainwindow.cpp" line="696"/>
+      <location filename="../mainwindow.cpp" line="286"/>
+      <location filename="../mainwindow.cpp" line="697"/>
       <source>Error</source>
       <translation>Chyba</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="285"/>
+      <location filename="../mainwindow.cpp" line="286"/>
       <source>Can't open file</source>
       <translatorcomment>Не могу открыть файл</translatorcomment>
       <translation>Nelze otevřít soubor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="345"/>
+      <location filename="../mainwindow.cpp" line="346"/>
       <source>About %1</source>
       <translation>O %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="471"/>
-      <location filename="../mainwindow.cpp" line="476"/>
+      <location filename="../mainwindow.cpp" line="472"/>
+      <location filename="../mainwindow.cpp" line="477"/>
       <source>Warning</source>
       <translation>Varování</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="471"/>
+      <location filename="../mainwindow.cpp" line="472"/>
       <source>Can't make torrent for file without full path. Need to set base folder.</source>
       <translation>Nelze udělat torrent pro soubor bez úplné cesty. Je potřeba nastavit základní složku.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="476"/>
+      <location filename="../mainwindow.cpp" line="477"/>
       <source>Base folder is not common.</source>
       <translation>Základní složka není běžná.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="536"/>
+      <location filename="../mainwindow.cpp" line="537"/>
       <source>Add File</source>
       <translation>Přidat soubor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="559"/>
+      <location filename="../mainwindow.cpp" line="560"/>
       <source>Add Folder</source>
       <translation type="unfinished">Přidat složku</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="703"/>
+      <location filename="../mainwindow.cpp" line="704"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translation>Řádek: %1 z %2, sloupec: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="802"/>
-      <location filename="../mainwindow.cpp" line="810"/>
+      <location filename="../mainwindow.cpp" line="856"/>
+      <location filename="../mainwindow.cpp" line="864"/>
       <source>Error on %1 line: %2</source>
       <translation>Chyba na %1 řádku: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="891"/>
+      <location filename="../mainwindow.cpp" line="945"/>
       <source>B</source>
       <translation>B</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="895"/>
+      <location filename="../mainwindow.cpp" line="949"/>
       <source>KiB</source>
       <translation>KiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="899"/>
+      <location filename="../mainwindow.cpp" line="953"/>
       <source>MiB</source>
       <translation>MiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="903"/>
+      <location filename="../mainwindow.cpp" line="957"/>
       <source>GiB</source>
       <translation>GiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="907"/>
+      <location filename="../mainwindow.cpp" line="961"/>
       <source>TiB</source>
       <translation>TiB</translation>
     </message>
