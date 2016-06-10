@@ -94,6 +94,7 @@ public slots:
     void updateFiles();
     void setPieces(const QByteArray &pieces, const QString &errorString);
     void updateRawPosition();
+    void filterFiles();
 
     // Tree tab
     void addTreeItem();
@@ -103,6 +104,7 @@ public slots:
 
 private:
     enum Tabs { SimpleTab, FilesTab, JsonTreeTab, RawTab, LogTab };
+    enum class FilesFilters { NameFilter, ExtenstionFilter, TemplateFilter, RegExpFilter  };
 
     void fillCoding();
 

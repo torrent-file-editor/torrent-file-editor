@@ -213,6 +213,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->btnAddFolder->setIcon(QIcon::fromTheme("folder-new", QIcon(":/icons/folder-new.png")));
     ui->btnUpFile->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowUp));
     ui->btnDownFile->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowDown));
+    ui->btnFilesFilter->setIcon(QIcon(":/icons/files-filter.png"));
 
     ui->btnAbout->setIcon(qApp->style()->standardIcon(QStyle::SP_MessageBoxQuestion));
 
@@ -701,6 +702,59 @@ void MainWindow::updateRawPosition()
 {
     QTextCursor textCursor = ui->pteEditor->textCursor();
     ui->lblCursorPos->setText(QString(tr("Line: %1 of %2 Col: %3")).arg(textCursor.blockNumber() + 1).arg(ui->pteEditor->blockCount()).arg(textCursor.positionInBlock() + 1));
+}
+
+void MainWindow::filterFiles()
+{
+
+    FilesFilters filter = static_cast<FilesFilters>(ui->cmbFilesFilter->currentIndex());
+    QString pattern = QDir::fromNativeSeparators(ui->lneFilesFilter->text());
+    if (pattern.isEmpty())
+        return;
+
+    QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->viewFiles->model());
+    for (int i =  model->rowCount() - 1; i >= 0; --i) {
+        QString file = model->item(i)->text();
+        QFileInfo fi(file);
+
+#ifdef Q_OS_LINUX
+        // Linux Ext2/3/4 file systems are case sensetive
+        Qt::CaseSensitivity cs = Qt::CaseSensitive;
+#else
+        // On Windows FAT32 and NTFS file systems are case insensetive
+        // On Mac OS HFS file system is case insensetive by default
+        Qt::CaseSensitivity cs = Qt::CaseInsensitive;
+#endif
+
+        bool removeFile = false;
+        switch (filter) {
+        case FilesFilters::NameFilter:
+            if (!fi.fileName().compare(pattern, cs))
+                removeFile = true;
+            break;
+
+        case FilesFilters::ExtenstionFilter:
+            if (!fi.suffix().compare(pattern, cs))
+                removeFile = true;
+            break;
+
+        case FilesFilters::TemplateFilter: {
+            QRegExp rx(pattern, cs, QRegExp::Wildcard);
+            if (rx.indexIn(fi.fileName()) >= 0)
+                removeFile = true;
+            } break;
+
+        case FilesFilters::RegExpFilter: {
+            QRegExp rx(pattern, cs);
+            if (rx.indexIn(fi.absoluteFilePath()) >= 0)
+                removeFile = true;
+            } break;
+        }
+
+        if (removeFile) {
+            model->removeRow(i);
+        }
+    }
 }
 
 void MainWindow::addTreeItem()

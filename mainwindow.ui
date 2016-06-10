@@ -448,6 +448,85 @@
            </widget>
           </item>
           <item>
+           <widget class="Line" name="line_3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_16">
+            <property name="text">
+             <string>Filter by </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cmbFilesFilter">
+            <property name="toolTip">
+             <string>&lt;html&gt;
+  &lt;head/&gt;
+  &lt;body&gt;
+    &lt;p&gt;&lt;b&gt;name&lt;/b&gt;&lt;/p&gt;
+    &lt;p style=&quot;margin-left: 20px&quot;&gt;file name with extenstion exactly equals with pattern&lt;/p&gt;
+    &lt;br/&gt;
+    &lt;p&gt;&lt;b&gt;extension&lt;/b&gt;&lt;/p&gt;
+    &lt;p style=&quot;margin-left: 20px&quot;&gt;the symbols after the latest point exactly equals with pattern, for 'archive.tar.gz' it will be 'gz' for example&lt;/p&gt;
+    &lt;br/&gt;
+    &lt;p&gt;&lt;b&gt;wildcards&lt;/b&gt;&lt;/p&gt;
+    &lt;p style=&quot;margin-left: 20px&quot;&gt;file name with extenstion matches with file globbing where '?' is one any symbol and '*' is any numbers of any symbols&lt;/p&gt;
+    &lt;br/&gt;
+    &lt;p&gt;&lt;b&gt;regular expression&lt;/b&gt;&lt;/p&gt;
+    &lt;p style=&quot;margin-left: 20px&quot;&gt;full file path matches Perl-like regular expression&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>name</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>extension</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>wildcards</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>regular expression</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lneFilesFilter">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="btnFilesFilter">
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filter files&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
            <spacer name="horizontalSpacer_4">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -459,6 +538,22 @@
              </size>
             </property>
            </spacer>
+          </item>
+          <item>
+           <widget class="QToolButton" name="btnDownFile_2">
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="toolTip">
+             <string>Move file down</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>
@@ -799,8 +894,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>156</x>
-     <y>33</y>
+     <x>180</x>
+     <y>64</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -911,8 +1006,8 @@
    <slot>updateBencodeFromSimple()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>471</x>
-     <y>123</y>
+     <x>467</x>
+     <y>138</y>
     </hint>
     <hint type="destinationlabel">
      <x>400</x>
@@ -927,8 +1022,8 @@
    <slot>updateBencodeFromSimple()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>471</x>
-     <y>185</y>
+     <x>467</x>
+     <y>208</y>
     </hint>
     <hint type="destinationlabel">
      <x>620</x>
@@ -943,8 +1038,8 @@
    <slot>updateBencodeFromSimple()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>471</x>
-     <y>216</y>
+     <x>467</x>
+     <y>243</y>
     </hint>
     <hint type="destinationlabel">
      <x>2</x>
@@ -959,8 +1054,8 @@
    <slot>updateBencodeFromSimple()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>266</x>
-     <y>248</y>
+     <x>270</x>
+     <y>279</y>
     </hint>
     <hint type="destinationlabel">
      <x>629</x>
@@ -975,8 +1070,8 @@
    <slot>updateBencodeFromSimple()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>471</x>
-     <y>154</y>
+     <x>467</x>
+     <y>173</y>
     </hint>
     <hint type="destinationlabel">
      <x>905</x>
@@ -1039,8 +1134,8 @@
    <slot>makeTorrent()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>50</x>
-     <y>128</y>
+     <x>44</x>
+     <y>137</y>
     </hint>
     <hint type="destinationlabel">
      <x>399</x>
@@ -1055,8 +1150,8 @@
    <slot>addFile()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>88</x>
-     <y>128</y>
+     <x>78</x>
+     <y>137</y>
     </hint>
     <hint type="destinationlabel">
      <x>613</x>
@@ -1071,8 +1166,8 @@
    <slot>addFolder()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>125</x>
-     <y>128</y>
+     <x>112</x>
+     <y>137</y>
     </hint>
     <hint type="destinationlabel">
      <x>544</x>
@@ -1087,8 +1182,8 @@
    <slot>removeFile()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>171</x>
-     <y>103</y>
+     <x>155</x>
+     <y>137</y>
     </hint>
     <hint type="destinationlabel">
      <x>841</x>
@@ -1103,8 +1198,8 @@
    <slot>upFile()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>208</x>
-     <y>103</y>
+     <x>189</x>
+     <y>137</y>
     </hint>
     <hint type="destinationlabel">
      <x>686</x>
@@ -1119,8 +1214,8 @@
    <slot>downFile()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>245</x>
-     <y>103</y>
+     <x>223</x>
+     <y>137</y>
     </hint>
     <hint type="destinationlabel">
      <x>792</x>
@@ -1151,8 +1246,8 @@
    <slot>updateEncoding(QString)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>502</x>
-     <y>33</y>
+     <x>515</x>
+     <y>63</y>
     </hint>
     <hint type="destinationlabel">
      <x>4</x>
@@ -1167,8 +1262,8 @@
    <slot>addTreeItem()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>51</x>
-     <y>128</y>
+     <x>44</x>
+     <y>137</y>
     </hint>
     <hint type="destinationlabel">
      <x>565</x>
@@ -1183,8 +1278,8 @@
    <slot>removeTreeItem()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>88</x>
-     <y>128</y>
+     <x>78</x>
+     <y>137</y>
     </hint>
     <hint type="destinationlabel">
      <x>549</x>
@@ -1199,8 +1294,8 @@
    <slot>upTreeItem()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>125</x>
-     <y>128</y>
+     <x>112</x>
+     <y>137</y>
     </hint>
     <hint type="destinationlabel">
      <x>10</x>
@@ -1215,8 +1310,8 @@
    <slot>downTreeItem()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>162</x>
-     <y>128</y>
+     <x>146</x>
+     <y>137</y>
     </hint>
     <hint type="destinationlabel">
      <x>163</x>
@@ -1311,12 +1406,28 @@
    <slot>updateBencodeFromSimple()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>132</x>
-     <y>262</y>
+     <x>244</x>
+     <y>306</y>
     </hint>
     <hint type="destinationlabel">
      <x>4</x>
      <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnFilesFilter</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>filterFiles()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>564</x>
+     <y>117</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>693</x>
+     <y>126</y>
     </hint>
    </hints>
   </connection>
@@ -1346,5 +1457,6 @@
   <slot>removeTreeItem()</slot>
   <slot>upTreeItem()</slot>
   <slot>downTreeItem()</slot>
+  <slot>filterFiles()</slot>
  </slots>
 </ui>
