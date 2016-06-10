@@ -42,6 +42,7 @@
 #include <QInputDialog>
 #include <QCryptographicHash>
 #include <QTextDocument>
+#include <QMimeData>
 
 #ifdef HAVE_QT5
 # include <QJsonDocument>
