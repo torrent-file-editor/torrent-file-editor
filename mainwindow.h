@@ -102,6 +102,10 @@ public slots:
     void upTreeItem();
     void downTreeItem();
 
+protected:
+    void dragEnterEvent(QDragEnterEvent *event);
+    void dropEvent(QDropEvent *event);
+
 private:
     enum Tabs { SimpleTab, FilesTab, JsonTreeTab, RawTab, LogTab };
     enum class FilesFilters { NameFilter, ExtenstionFilter, TemplateFilter, RegExpFilter  };

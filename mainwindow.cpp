@@ -357,6 +357,20 @@ void MainWindow::openUrl()
         QDesktopServices::openUrl(url);
 }
 
+void MainWindow::dragEnterEvent(QDragEnterEvent *event)
+{
+    if (!event->mimeData()->urls().isEmpty() && event->mimeData()->urls().first().isLocalFile()) {
+        event->acceptProposedAction();
+    }
+}
+
+void MainWindow::dropEvent(QDropEvent *event)
+{
+    if (!event->mimeData()->urls().isEmpty() && event->mimeData()->urls().first().isLocalFile()) {
+        open(event->mimeData()->urls().first().toLocalFile());
+    }
+}
+
 // Token from qmmp
 void MainWindow::fillCoding()
 {
