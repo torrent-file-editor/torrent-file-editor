@@ -516,7 +516,7 @@
              <enum>Qt::NoFocus</enum>
             </property>
             <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filter files&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>Filter files</string>
             </property>
             <property name="text">
              <string/>
