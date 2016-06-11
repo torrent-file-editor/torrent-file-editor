@@ -24,5 +24,6 @@
         <file>./icons/text-x-generic.png</file>
         <file>./icons/document-new.png</file>
         <file>./icons/folder-new.png</file>
+        <file>./icons/system-search.png</file>
     </qresource>
 </RCC>

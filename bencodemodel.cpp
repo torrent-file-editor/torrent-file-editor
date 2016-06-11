@@ -639,6 +639,20 @@ QVariant BencodeModel::data(const QModelIndex &index, int role) const
             res = item->hex() ? Qt::Checked : Qt::Unchecked;
         }
     }
+    else if (role >= Qt::UserRole) {
+        if (item->isInteger()) {
+            res = QString::number(item->integer());
+        }
+        else if (item->isString()) {
+            if (role == Qt::ItemDataRole::UserRole) {
+                res = toUnicode(item->string());
+            }
+            else {
+                res = QString(item->string().toHex());
+            }
+        }
+
+    }
 
     return res;
 }

@@ -22,6 +22,7 @@
 #include "bencode.h"
 #include "bencodemodel.h"
 #include "bencodedelegate.h"
+#include "searchdlg.h"
 
 #include <QFileDialog>
 #include <QFile>
@@ -143,6 +144,7 @@ MainWindow::MainWindow(QWidget *parent)
 #endif
     , _formatFilters(QStringList())
     , _lastFolder()
+    , _searchDlg(0)
 {
     ui->setupUi(this);
 
@@ -236,6 +238,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->btnRemoveTreeItem->setIcon(QIcon::fromTheme("edit-delete", QIcon(":/icons/edit-delete.png")));
     ui->btnUpTreeItem->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowUp));
     ui->btnDownTreeItem->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowDown));
+    ui->btnFindTreeItem->setIcon(QIcon::fromTheme("system-search", QIcon(":/icons/system-search")));
 
     fillCoding();
     updateFilesSize();
@@ -856,6 +859,22 @@ void MainWindow::upTreeItem()
 void MainWindow::downTreeItem()
 {
     _bencodeModel->down(ui->treeJson->currentIndex());
+}
+
+void MainWindow::showTreeSearchWindow()
+{
+    if (!_searchDlg) {
+        _searchDlg = new SearchDlg(_bencodeModel, this);
+        connect(_searchDlg, SIGNAL(foundItem(const QModelIndex&)), SLOT(selectTreeItem(QModelIndex)));
+    }
+
+    _searchDlg->show();
+}
+
+void MainWindow::selectTreeItem(const QModelIndex &index)
+{
+    ui->treeJson->setCurrentIndex(index);
+    ui->treeJson->scrollTo(index);
 }
 
 void MainWindow::updateSimple()

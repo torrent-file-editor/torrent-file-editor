@@ -697,6 +697,22 @@
            </widget>
           </item>
           <item>
+           <widget class="QToolButton" name="btnFindTreeItem">
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="toolTip">
+             <string>Find</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
            <spacer name="horizontalSpacer_5">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -1302,8 +1318,8 @@
    <slot>downTreeItem()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>115</x>
-     <y>138</y>
+     <x>146</x>
+     <y>137</y>
     </hint>
     <hint type="destinationlabel">
      <x>163</x>
@@ -1439,6 +1455,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btnFindTreeItem</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showTreeSearchWindow()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>166</x>
+     <y>129</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>692</x>
+     <y>214</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>open()</slot>
@@ -1467,5 +1499,6 @@
   <slot>downTreeItem()</slot>
   <slot>filterFiles()</slot>
   <slot>updateFilesPieces()</slot>
+  <slot>showTreeSearchWindow()</slot>
  </slots>
 </ui>

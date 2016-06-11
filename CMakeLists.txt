@@ -98,6 +98,7 @@ set(HEADERS
   ${CMAKE_SOURCE_DIR}/bencodedelegate.h
   ${CMAKE_SOURCE_DIR}/abstracttreemodel.h
   ${CMAKE_SOURCE_DIR}/tableview.h
+  ${CMAKE_SOURCE_DIR}/searchdlg.h
 )
 
 set(PLAIN_HEADERS
@@ -116,6 +117,7 @@ set_source_files_properties(${CMAKE_BINARY_DIR}/config.h
 set(FORMS
   ${CMAKE_SOURCE_DIR}/mainwindow.ui
   ${CMAKE_SOURCE_DIR}/aboutdlg.ui
+  ${CMAKE_SOURCE_DIR}/searchdlg.ui
 )
 
 set(SOURCES
@@ -134,6 +136,7 @@ set(SOURCES
   ${CMAKE_SOURCE_DIR}/abstracttreeitem.cpp
   ${CMAKE_SOURCE_DIR}/proxystyle.cpp
   ${CMAKE_SOURCE_DIR}/tableview.cpp
+  ${CMAKE_SOURCE_DIR}/searchdlg.cpp
 )
 
 if(APPLE)

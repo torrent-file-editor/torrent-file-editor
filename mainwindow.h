@@ -21,10 +21,12 @@
 #include <QMainWindow>
 #include <QStandardItem>
 #include <QStringList>
+#include <QModelIndex>
 
 class QProgressDialog;
 class Bencode;
 class BencodeModel;
+class SearchDlg;
 
 class Worker : public QObject
 {
@@ -102,6 +104,8 @@ public slots:
     void removeTreeItem();
     void upTreeItem();
     void downTreeItem();
+    void showTreeSearchWindow();
+    void selectTreeItem(const QModelIndex &index);
 
 protected:
     void dragEnterEvent(QDragEnterEvent *event);
@@ -137,6 +141,7 @@ private:
     QProgressDialog *_progressDialog;
     QStringList _formatFilters;
     QString _lastFolder;
+    SearchDlg *_searchDlg;
 
     static MainWindow *_instance;
 };
