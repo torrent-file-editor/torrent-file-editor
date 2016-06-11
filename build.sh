@@ -5,7 +5,7 @@ set -e
 name=torrent-file-editor
 version=0.2.2
 
-git clean -dfx .
+git clean -dfx . -e linux
 mkdir win32
 pushd win32
 mingw32-cmake .. -DCMAKE_EXE_LINKER_FLAGS=-static -DCMAKE_BUILD_TYPE=Release
