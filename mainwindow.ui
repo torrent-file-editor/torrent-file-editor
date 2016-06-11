@@ -614,7 +614,7 @@
           <item>
            <widget class="QLabel" name="label_12">
             <property name="text">
-             <string>Base folder </string>
+             <string>Origin folder </string>
             </property>
            </widget>
           </item>
@@ -929,8 +929,8 @@
    <slot>updateBencodeFromRaw()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>112</x>
-     <y>136</y>
+     <x>103</x>
+     <y>114</y>
     </hint>
     <hint type="destinationlabel">
      <x>702</x>
@@ -1105,8 +1105,8 @@
    <slot>updateRawPosition()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>112</x>
-     <y>136</y>
+     <x>103</x>
+     <y>114</y>
     </hint>
     <hint type="destinationlabel">
      <x>1134</x>
@@ -1297,8 +1297,8 @@
    <slot>downTreeItem()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>146</x>
-     <y>137</y>
+     <x>115</x>
+     <y>138</y>
     </hint>
     <hint type="destinationlabel">
      <x>163</x>
@@ -1409,8 +1409,8 @@
    <slot>filterFiles()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>564</x>
-     <y>117</y>
+     <x>637</x>
+     <y>137</y>
     </hint>
     <hint type="destinationlabel">
      <x>693</x>

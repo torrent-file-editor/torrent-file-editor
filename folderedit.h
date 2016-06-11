@@ -29,7 +29,7 @@ class FolderEdit : public LineEditWidget
 public:
     explicit FolderEdit(QWidget *parent = 0);
 
-protected slots:
+public slots:
     void openFolder();
 
 private:
