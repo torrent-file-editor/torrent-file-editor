@@ -762,7 +762,7 @@ void MainWindow::filterFiles()
 
         case FilesFilters::RegExpFilter: {
             QRegExp rx(pattern, cs);
-            if (rx.indexIn(fi.absoluteFilePath()) >= 0)
+            if (rx.indexIn(fi.filePath()) >= 0)
                 removeFile = true;
             } break;
         }
