@@ -672,7 +672,7 @@ void MainWindow::updateFiles()
         for (const auto file: files) {
             QList<QStandardItem*> list;
             totalSize += file.second;
-            list << new QStandardItem(file.first);
+            list << new QStandardItem(QDir::toNativeSeparators(file.first));
             list << new QStandardItem(smartSize(file.second));
             list.last()->setData(file.second);
             model->appendRow(list);
