@@ -179,6 +179,7 @@ MainWindow::MainWindow(QWidget *parent)
     model->horizontalHeaderItem(0)->setTextAlignment(Qt::AlignLeft);
     model->horizontalHeaderItem(1)->setTextAlignment(Qt::AlignLeft);
     ui->viewFiles->setModel(model);
+    ui->viewFiles->horizontalHeader()->setHighlightSections(false);
 #ifdef HAVE_QT5
     ui->viewFiles->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
     ui->viewFiles->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
