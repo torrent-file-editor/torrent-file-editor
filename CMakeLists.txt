@@ -90,6 +90,7 @@ set(HEADERS
   ${CMAKE_SOURCE_DIR}/bencodemodel.h
   ${CMAKE_SOURCE_DIR}/bencodedelegate.h
   ${CMAKE_SOURCE_DIR}/abstracttreemodel.h
+  ${CMAKE_SOURCE_DIR}/tableview.h
 )
 
 set(PLAIN_HEADERS
@@ -118,6 +119,7 @@ set(SOURCES
   ${CMAKE_SOURCE_DIR}/abstracttreemodel.cpp
   ${CMAKE_SOURCE_DIR}/abstracttreeitem.cpp
   ${CMAKE_SOURCE_DIR}/proxystyle.cpp
+  ${CMAKE_SOURCE_DIR}/tableview.cpp
 )
 
 if(APPLE)

@@ -545,7 +545,7 @@
          </layout>
         </item>
         <item>
-         <widget class="QTableView" name="viewFiles">
+         <widget class="TableView" name="viewFiles">
           <property name="editTriggers">
            <set>QAbstractItemView::NoEditTriggers</set>
           </property>
@@ -846,6 +846,11 @@
    <class>FolderEdit</class>
    <extends>QLineEdit</extends>
    <header>folderedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>TableView</class>
+   <extends>QTableView</extends>
+   <header>tableview.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>
