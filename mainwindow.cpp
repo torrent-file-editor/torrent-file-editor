@@ -650,12 +650,14 @@ void MainWindow::removeFile()
         return;
 
     QModelIndexList indexes = selectionModel->selectedRows();
+    int row = indexes.size() == 1 ? indexes.first().row() : -1;
 
     for (int i = indexes.size() - 1; i >= 0; --i) {
         model->removeRow(indexes[i].row());
     }
 
     updateFilesSize();
+    ui->viewFiles->selectRow(row);
 }
 
 void MainWindow::upFile()
