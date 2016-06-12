@@ -131,6 +131,7 @@ private:
 
     QProgressDialog *_progressDialog;
     QStringList _formatFilters;
+    QString _lastFolder;
 
     static MainWindow *_instance;
 };

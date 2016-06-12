@@ -133,6 +133,7 @@ MainWindow::MainWindow(QWidget *parent)
     , _progressDialog(new QProgressDialog(this, Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint))
 #endif
     , _formatFilters(QStringList())
+    , _lastFolder()
 {
     ui->setupUi(this);
 
@@ -583,10 +584,11 @@ void MainWindow::makeTorrent()
 
 void MainWindow::addFile()
 {
-    QStringList files = QFileDialog::getOpenFileNames(this, tr("Add File"));
+    QStringList files = QFileDialog::getOpenFileNames(this, tr("Add File"), _lastFolder);
     if (files.isEmpty())
         return;
 
+    _lastFolder = QFileInfo(files.first()).absolutePath();
     QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->viewFiles->model());
     foreach (const QString &file, files) {
         QList<QStandardItem*> list;
@@ -606,10 +608,11 @@ void MainWindow::addFile()
 
 void MainWindow::addFolder()
 {
-    QString path = QFileDialog::getExistingDirectory(this, tr("Add Folder"));
+    QString path = QFileDialog::getExistingDirectory(this, tr("Add Folder"), _lastFolder);
     if (path.isEmpty())
         return;
 
+    _lastFolder = QFileInfo(path).absolutePath();
     QDirIterator it(path, QDirIterator::Subdirectories);
 
     QStringList files;
