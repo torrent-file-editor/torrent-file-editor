@@ -806,6 +806,8 @@ void MainWindow::filterFiles()
             model->removeRow(i);
         }
     }
+
+    updateFiles();
 }
 
 void MainWindow::addTreeItem()
