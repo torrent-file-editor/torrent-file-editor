@@ -18,6 +18,8 @@
 
 #include "tableview.h"
 
+#include <QKeyEvent>
+
 TableView::TableView(QWidget *parent)
     : QTableView(parent)
 {
@@ -38,5 +40,15 @@ QModelIndex TableView::moveCursor(CursorAction cursorAction, Qt::KeyboardModifie
     default:
         return QTableView::moveCursor(cursorAction, modifiers);
         break;
+    }
+}
+
+void TableView::keyPressEvent(QKeyEvent *event)
+{
+    if (event->key() == Qt::Key_Delete) {
+        emit deleteRow();
+    }
+    else {
+        QTableView::keyPressEvent(event);
     }
 }

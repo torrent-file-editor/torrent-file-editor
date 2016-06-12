@@ -189,6 +189,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->viewFiles->verticalHeader()->setResizeMode(QHeaderView::Fixed);
     ui->viewFiles->horizontalHeader()->setMovable(false);
 #endif
+    connect(ui->viewFiles, SIGNAL(deleteRow()), SLOT(removeFile()));
+
     ui->treeJson->setModel(_bencodeModel);
     ui->treeJson->setItemDelegate(new BencodeDelegate(this));
 #ifdef HAVE_QT5

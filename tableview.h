@@ -27,8 +27,10 @@ class TableView : public QTableView
 public:
     TableView(QWidget *parent = 0);
 
+signals:
+    void deleteRow();
 
 protected:
     QModelIndex moveCursor(CursorAction cursorAction, Qt::KeyboardModifiers modifiers);
-
+    void keyPressEvent(QKeyEvent *event);
 };
