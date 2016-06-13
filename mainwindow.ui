@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>694</width>
+    <width>704</width>
     <height>533</height>
    </rect>
   </property>
@@ -213,14 +213,14 @@
             <item row="1" column="0">
              <widget class="QLabel" name="label_5">
               <property name="text">
-               <string>Url</string>
+               <string>URL</string>
               </property>
              </widget>
             </item>
             <item row="4" column="0">
              <widget class="QLabel" name="label_8">
               <property name="text">
-               <string>Creation time</string>
+               <string>Date created</string>
               </property>
              </widget>
             </item>
@@ -353,7 +353,7 @@
              <enum>Qt::NoFocus</enum>
             </property>
             <property name="toolTip">
-             <string>Make torrent</string>
+             <string>Calculate pieces hashes</string>
             </property>
             <property name="text">
              <string/>
@@ -614,7 +614,7 @@
           <item>
            <widget class="QLabel" name="label_12">
             <property name="text">
-             <string>Origin folder </string>
+             <string>Torrent root folder </string>
             </property>
            </widget>
           </item>
@@ -773,8 +773,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>694</width>
-     <height>27</height>
+     <width>704</width>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

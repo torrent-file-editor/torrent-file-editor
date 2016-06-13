@@ -500,11 +500,11 @@ void MainWindow::makeTorrent()
         if (hasRelative) {
             QMessageBox::StandardButton button;
             button = QMessageBox::question(this,
-                                           tr("Origin folder is not set"),
+                                           tr("Torrent root folder is not set"),
                                            tr(
 "Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.\n\n"
-"If you want to edit file list in the current torrent you need to set origin folder. The origin folder is a folder where all files can be located on the disk. Actual file path on the disk is origin folder with relative path from torrent file. If something files are missing then torrent can't be generated.\n\n"
-"Do you want to set origin folder and try again?"
+"If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.\n\n"
+"Do you want to set torrent root folder and try again?"
                                               ), QMessageBox::Yes | QMessageBox::No);
             if (button == QMessageBox::Yes) {
                 ui->leBaseFolder->openFolder();
@@ -524,7 +524,7 @@ void MainWindow::makeTorrent()
         QString file = model->item(i)->text();
 
         if (model->rowCount() > 1 && baseDir.relativeFilePath(file).startsWith("..")) {
-            QMessageBox::warning(this, tr("Warning"), tr("The origin folder is not common."));
+            QMessageBox::warning(this, tr("Warning"), tr("The torrent root folder is not common."));
             return;
         }
 
