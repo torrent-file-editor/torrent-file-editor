@@ -24,7 +24,7 @@ matrix:
     
 script:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cmake -DCMAKE_BUILD_TYPE=Debug -DQT5_BUILD=$QT5_BUILD . && make; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cmake -DCMAKE_BUILD_TYPE=Debug . -DCMAKE_PREFIX_PATH=$(brew cask info sparkle | grep /opt | cut -d' ' -f 1)\;$(brew --prefix qt5) && make; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cmake -DCMAKE_BUILD_TYPE=Debug . -DCMAKE_PREFIX_PATH=$(brew cask info sparkle | grep /usr/local/Caskroom | cut -d' ' -f 1)\;$(brew --prefix qt5) && make; fi
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update -qq; fi
