@@ -105,6 +105,7 @@ public slots:
 protected:
     void dragEnterEvent(QDragEnterEvent *event);
     void dropEvent(QDropEvent *event);
+    void closeEvent(QCloseEvent *event);
 
 private:
     enum Tabs { SimpleTab, FilesTab, JsonTreeTab, RawTab, LogTab };
@@ -123,6 +124,7 @@ private:
 
     QString smartSize(qulonglong size);
     void processEvents();
+    bool showNeedSaveFile();
 
     Ui::MainWindow *ui;
     QString _fileName;

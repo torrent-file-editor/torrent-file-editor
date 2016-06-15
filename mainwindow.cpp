@@ -256,16 +256,8 @@ void MainWindow::addLog(const QString &log)
 
 void MainWindow::create()
 {
-    if (isModified()) {
-        if (QMessageBox::question(this,
-                                  tr("Create a new file"),
-                                  tr("Current file is not saved. Save the file?"),
-                                  QMessageBox::Yes | QMessageBox::No,
-                                  QMessageBox::Yes) == QMessageBox::Yes) {
-
-            save();
-        }
-    }
+    if (!showNeedSaveFile())
+        return;
 
     _bencodeModel->setRaw("");
     _bencodeModel->resetModified();
@@ -306,6 +298,9 @@ void MainWindow::open(const QString &fileName)
 
 void MainWindow::open()
 {
+    if (!showNeedSaveFile())
+        return;
+
     QString fileName = QFileDialog::getOpenFileName(this, tr("Open"), "", _formatFilters.join(";;"));
 
     if (fileName.isEmpty())
@@ -371,6 +366,14 @@ void MainWindow::dropEvent(QDropEvent *event)
     if (!event->mimeData()->urls().isEmpty() && event->mimeData()->urls().first().isLocalFile()) {
         open(event->mimeData()->urls().first().toLocalFile());
     }
+}
+
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+    if (showNeedSaveFile())
+        event->accept();
+    else
+        event->ignore();
 }
 
 // Token from qmmp
@@ -1023,4 +1026,29 @@ void MainWindow::processEvents()
     // Hack to prevent processEvents when application is not starting yet
     if (isVisible())
         qApp->processEvents();
+}
+
+bool MainWindow::showNeedSaveFile()
+{
+    bool res = true;
+    if (isModified()) {
+        QString title = tr("Save file");
+        QString filename = _fileName.isEmpty() ? tr("Untitled") : _fileName;
+        QString question = tr("Save file \"%1\"?").arg(QDir::toNativeSeparators(filename));
+        QMessageBox::StandardButton bt = QMessageBox::question(this, title, question, QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
+        switch (bt) {
+        case QMessageBox::StandardButton::Yes:
+            save();
+            break;
+
+        case QMessageBox::StandardButton::Cancel:
+            res = false;
+            break;
+
+        default:
+            break;
+        }
+    }
+
+    return res;
 }
