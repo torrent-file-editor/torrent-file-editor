@@ -30,7 +30,7 @@ AboutDlg::AboutDlg(QWidget *parent)
     , ui(new Ui::AboutDlg)
 {
     ui->setupUi(this);
-    ui->label->setText(QString("<html><head/><body><p>%1 v%2</p></body></html>").arg(qApp->applicationName()).arg(qApp->applicationVersion()));
+    ui->label->setText(QString("<html><head/><body><p>%1 %2</p></body></html>").arg(qApp->applicationName()).arg(qApp->applicationVersion()));
     setWindowTitle(QString(tr("About %1")).arg(qApp->applicationName()));
 }
 

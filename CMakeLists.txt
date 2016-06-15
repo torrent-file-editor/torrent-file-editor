@@ -11,7 +11,9 @@ if(POLICY CMP0046)
   cmake_policy(SET CMP0046 OLD)
 endif()
 
+# Fallback version. Will be used when compiling out of git repository.
 set(APP_VERSION "0.2.2")
+
 set(BUNDLE_DIR_BASE_NAME "Torrent File Editor")
 
 set(MACOSX_BUNDLE_INFO_STRING "Torrent File Editor ${APP_VERSION}. This program is licensed under the GNU GPL.")
@@ -24,7 +26,9 @@ set(MACOSX_BUNDLE_BUNDLE_VERSION ${APP_VERSION})
 
 include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
 
-add_definitions(-DAPP_VERSION="${APP_VERSION}")
+include(Version.cmake)
+
+configure_file(config.h.in config.h)
 
 # Enable C++11
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")

@@ -16,6 +16,8 @@
  *
  */
 
+#include <config.h>
+
 #include "application.h"
 #include "mainwindow.h"
 
