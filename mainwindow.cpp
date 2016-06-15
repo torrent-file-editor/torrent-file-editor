@@ -51,8 +51,6 @@
 # include <qjson/parser.h>
 #endif
 
-#define APP_NAME "Torrent File Editor 0.2.2"
-
 Worker::Worker()
     : QObject()
     , _isCanceled(false)
@@ -348,7 +346,6 @@ void MainWindow::saveAs()
 void MainWindow::showAbout()
 {
     AboutDlg dlg(this);
-    dlg.setWindowTitle(QString(tr("About %1")).arg(APP_NAME));
     dlg.ensurePolished();
     dlg.adjustSize();
     dlg.setFixedSize(dlg.size());
@@ -421,11 +418,11 @@ bool MainWindow::isModified() const
 void MainWindow::updateTitle()
 {
     if (_fileName.isEmpty())
-        setWindowTitle(APP_NAME);
+        setWindowTitle(qApp->applicationName());
     else if (isModified())
-        setWindowTitle(QString("%1 - %2 *").arg(APP_NAME, _fileName));
+        setWindowTitle(QString("* %2 - %1").arg(qApp->applicationName(), _fileName));
     else
-        setWindowTitle(QString("%1 - %2").arg(APP_NAME, _fileName));
+        setWindowTitle(QString("%2 - %1").arg(qApp->applicationName(), _fileName));
 }
 
 void MainWindow::updateTab(int n)

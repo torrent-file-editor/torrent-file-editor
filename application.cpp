@@ -24,6 +24,8 @@
 Application::Application(int &argc, char **argv)
     : QApplication(argc, argv)
 {
+    setApplicationName("Torrent File Editor");
+    setApplicationVersion(APP_VERSION);
 }
 
 bool Application::event(QEvent *event)

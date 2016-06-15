@@ -19,6 +19,8 @@
 #include "aboutdlg.h"
 #include "ui_aboutdlg.h"
 
+#include <QApplication>
+
 AboutDlg::AboutDlg(QWidget *parent)
 #ifdef Q_OS_WIN
     : QDialog(parent, Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint | Qt::MSWindowsFixedSizeDialogHint)
@@ -28,6 +30,8 @@ AboutDlg::AboutDlg(QWidget *parent)
     , ui(new Ui::AboutDlg)
 {
     ui->setupUi(this);
+    ui->label->setText(QString("<html><head/><body><p>%1 v%2</p></body></html>").arg(qApp->applicationName()).arg(qApp->applicationVersion()));
+    setWindowTitle(QString(tr("About %1")).arg(qApp->applicationName()));
 }
 
 AboutDlg::~AboutDlg()

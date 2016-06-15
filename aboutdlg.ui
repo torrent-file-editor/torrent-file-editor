@@ -69,7 +69,7 @@
       </font>
      </property>
      <property name="text">
-      <string notr="true">Torrent File Editor</string>
+      <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Torrent File Editor v0.2.2&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>

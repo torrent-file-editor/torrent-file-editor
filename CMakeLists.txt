@@ -24,6 +24,8 @@ set(MACOSX_BUNDLE_BUNDLE_VERSION ${APP_VERSION})
 
 include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
 
+add_definitions(-DAPP_VERSION="${APP_VERSION}")
+
 # Enable C++11
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
