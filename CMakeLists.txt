@@ -77,8 +77,6 @@ macro(qt_add_translation ARG1 ARG2)
   endif()
 endmacro()
 
-configure_file(translations.qrc.in translations.qrc COPYONLY)
-
 set(LANGS ar cs de en ko ru)
 
 foreach(l ${LANGS})
