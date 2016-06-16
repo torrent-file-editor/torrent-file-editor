@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>508</width>
-    <height>210</height>
+    <height>234</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -83,7 +83,7 @@
    <item row="1" column="1">
     <widget class="QLabel" name="lblVersion">
      <property name="text">
-      <string>v0.2.2 (June 15, 2016 4:43:13)</string>
+      <string notr="true">v0.2.2 (June 15, 2016 4:43:13)</string>
      </property>
     </widget>
    </item>
