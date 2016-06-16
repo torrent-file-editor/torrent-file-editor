@@ -85,6 +85,9 @@
      <property name="text">
       <string notr="true">v0.2.2 (June 15, 2016 4:43:13)</string>
      </property>
+     <property name="textInteractionFlags">
+      <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+     </property>
     </widget>
    </item>
   </layout>
