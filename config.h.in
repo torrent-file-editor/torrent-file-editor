@@ -1,3 +1,5 @@
+#pragma once
+
 #cmakedefine APP_VERSION "@APP_VERSION@"
 #cmakedefine APP_COMPILATION_TIME "@APP_COMPILATION_TIME@"
 #cmakedefine APP_COMPILATION_DATE "@APP_COMPILATION_DATE@"
