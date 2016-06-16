@@ -43,6 +43,7 @@
 #include <QCryptographicHash>
 #include <QTextDocument>
 #include <QMimeData>
+#include <QElapsedTimer>
 
 #ifdef HAVE_QT5
 # include <QJsonDocument>
@@ -50,6 +51,8 @@
 # include <qjson/serializer.h>
 # include <qjson/parser.h>
 #endif
+
+#define PROGRESS_TIMEOUT 500 /* ms */
 
 Worker::Worker()
     : QObject()
@@ -67,6 +70,9 @@ void Worker::doWork(const QStringList &files, int pieceSize)
 
     QCryptographicHash hash(QCryptographicHash::Sha1);
     qulonglong value = 0;
+
+    QElapsedTimer timer;
+    timer.start();
 
     for (int i = 0; i < files.size(); ++i) {
         QFile f(files[i]);
@@ -89,7 +95,12 @@ void Worker::doWork(const QStringList &files, int pieceSize)
                 hash.reset();
             }
             value += readed;
-            emit progress(value / 1024);
+
+            // Do not send progress signal very often. It can leads to crash.
+            if (timer.hasExpired(PROGRESS_TIMEOUT)) {
+                emit progress(value / 1024);
+                timer.restart();
+            }
 
             qApp->processEvents();
             if (_isCanceled) {
