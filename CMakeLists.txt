@@ -105,6 +105,12 @@ set(PLAIN_HEADERS
   ${CMAKE_SOURCE_DIR}/proxystyle.h
 )
 
+# config.h is a generated file
+set_source_files_properties(${CMAKE_BINARY_DIR}/config.h
+  PROPERTIES GENERATED TRUE
+  HEADER_FILE_ONLY TRUE
+)
+
 set(FORMS
   ${CMAKE_SOURCE_DIR}/mainwindow.ui
   ${CMAKE_SOURCE_DIR}/aboutdlg.ui
@@ -165,6 +171,8 @@ if(WIN32)
 endif()
 
 add_executable(${PROJECT_NAME} WIN32 MACOSX_BUNDLE ${QM} ${HEADERS} ${PLAIN_HEADERS} ${SOURCES} ${MOC_SOURCES} ${QRC_SOURCES} ${UI_SOURCES})
+
+add_dependencies(${PROJECT_NAME} update_version)
 
 if(QT5_BUILD)
   target_link_libraries(${PROJECT_NAME} ${START_STATIC} Qt5::Core Qt5::Gui Qt5::Widgets ${END_STATIC})
