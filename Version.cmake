@@ -121,3 +121,12 @@ endif()
 unset(_VERSION)
 
 configure_file(${CMAKE_CURRENT_LIST_DIR}/config.h.in config.h)
+string(REGEX REPLACE "^v" "" APP_VERSION ${APP_VERSION})
+file(WRITE version ${APP_VERSION})
+if (APPLE)
+  configure_file("${CMAKE_BINARY_DIR}/MacOSXBundleInfo.plist.in" "${CMAKE_BINARY_DIR}/Torrent File Editor.app/Contents/Info.plist")
+  file(WRITE "${CMAKE_BINARY_DIR}/CPackProperties.cmake"
+    "set(CPACK_PACKAGE_VERSION \"${APP_VERSION}\")\n"
+    "set(CPACK_PACKAGE_FILE_NAME \"torrent-file-editor-\${CPACK_PACKAGE_VERSION}\")\n"
+  )
+endif()

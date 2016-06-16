@@ -16,18 +16,19 @@ set(APP_VERSION "0.2.2")
 
 set(BUNDLE_DIR_BASE_NAME "Torrent File Editor")
 
-set(MACOSX_BUNDLE_INFO_STRING "Torrent File Editor ${APP_VERSION}. This program is licensed under the GNU GPL.")
+set(MACOSX_BUNDLE_EXECUTABLE_NAME "${BUNDLE_DIR_BASE_NAME}")
+set(MACOSX_BUNDLE_INFO_STRING "Torrent File Editor \${APP_VERSION}. This program is licensed under the GNU GPL.")
 set(MACOSX_BUNDLE_ICON_FILE "application.icns")
 set(MACOSX_BUNDLE_GUI_IDENTIFIER "net.sourceforge.torrent-file-editor")
-set(MACOSX_BUNDLE_LONG_VERSION_STRING ${APP_VERSION})
+set(MACOSX_BUNDLE_LONG_VERSION_STRING "\${APP_VERSION}")
 set(MACOSX_BUNDLE_BUNDLE_NAME "Torrent File Editor")
-set(MACOSX_BUNDLE_SHORT_VERSION_STRING ${APP_VERSION})
-set(MACOSX_BUNDLE_BUNDLE_VERSION ${APP_VERSION})
+set(MACOSX_BUNDLE_SHORT_VERSION_STRING "\${APP_VERSION}")
+set(MACOSX_BUNDLE_BUNDLE_VERSION "\${APP_VERSION}")
 
 include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
 
 add_custom_target(update_version ALL
-  COMMAND ${CMAKE_COMMAND} -P "${CMAKE_SOURCE_DIR}/Version.cmake"
+  COMMAND ${CMAKE_COMMAND} -DAPP_VERSION="v${APP_VERSION}" -P "${CMAKE_SOURCE_DIR}/Version.cmake"
 )
 
 # Enable C++11
@@ -202,8 +203,8 @@ if(APPLE)
   install(TARGETS ${PROJECT_NAME} BUNDLE DESTINATION . COMPONENT Runtime)
   set_target_properties(torrent-file-editor PROPERTIES
     OUTPUT_NAME "${BUNDLE_DIR_BASE_NAME}"
-    MACOSX_BUNDLE_INFO_PLIST "${CMAKE_SOURCE_DIR}/MacOSXBundleInfo.plist.in"
   )
+  configure_file(MacOSXBundleInfo.plist.in "${CMAKE_BINARY_DIR}/MacOSXBundleInfo.plist.in")
 
   # Install app icon
   install(FILES icons/application.icns DESTINATION "${BUNDLE_DIR_BASE_NAME}.app/Contents/Resources" COMPONENT Runtime)
@@ -269,8 +270,6 @@ if(APPLE)
   # where CPackConfig.cmake is created by including CPack
   # And then there's ways to customize this as well
   set(CPACK_GENERATOR "DragNDrop")
-  set(CPACK_PACKAGE_VERSION ${APP_VERSION})
-  set(CPACK_PACKAGE_FILE_NAME ${PROJECT_NAME}-${CPACK_PACKAGE_VERSION})
   set(CPACK_DMG_VOLUME_NAME ${BUNDLE_DIR_BASE_NAME})
   set(CPACK_DMG_DS_STORE_SETUP_SCRIPT "${CMAKE_SOURCE_DIR}/CMakeDMGSetup.scpt")
   set(CPACK_DMG_BACKGROUND_IMAGE "${CMAKE_SOURCE_DIR}/DS_Background.png")
