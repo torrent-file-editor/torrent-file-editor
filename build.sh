@@ -3,7 +3,7 @@
 set -e
 
 name=torrent-file-editor
-version=$(git describe --tags --dirty)
+version=$(git describe --tags --dirty | sed  's/^v//')
 
 git clean -dfx . -e linux -e linux-qt5
 mkdir win32
