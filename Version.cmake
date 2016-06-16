@@ -119,3 +119,5 @@ if(_VERSION)
 endif()
 
 unset(_VERSION)
+
+configure_file(${CMAKE_CURRENT_LIST_DIR}/config.h.in config.h)

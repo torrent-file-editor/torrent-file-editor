@@ -26,9 +26,9 @@ set(MACOSX_BUNDLE_BUNDLE_VERSION ${APP_VERSION})
 
 include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
 
-include(Version.cmake)
-
-configure_file(config.h.in config.h)
+add_custom_target(update_version ALL
+  COMMAND ${CMAKE_COMMAND} -P "${CMAKE_SOURCE_DIR}/Version.cmake"
+)
 
 # Enable C++11
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
