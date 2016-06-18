@@ -104,6 +104,7 @@ set(PLAIN_HEADERS
   ${CMAKE_SOURCE_DIR}/bencode.h
   ${CMAKE_SOURCE_DIR}/abstracttreeitem.h
   ${CMAKE_SOURCE_DIR}/proxystyle.h
+  ${CMAKE_BINARY_DIR}/config.h
 )
 
 # config.h is a generated file
