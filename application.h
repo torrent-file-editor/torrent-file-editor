@@ -19,6 +19,7 @@
 #pragma once
 
 #include <QApplication>
+#include <QDateTime>
 
 class MainWindow;
 
@@ -30,6 +31,7 @@ public:
     Application(int &argc, char **argv);
     bool event(QEvent *event);
     void setMainWindow(MainWindow *mainWindow);
+    static QDateTime buildDateTime();
 
 private:
     MainWindow *_mainWindow;

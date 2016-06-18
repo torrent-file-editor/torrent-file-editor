@@ -45,3 +45,9 @@ void Application::setMainWindow(MainWindow *mainWindow)
 {
     _mainWindow = mainWindow;
 }
+
+QDateTime Application::buildDateTime()
+{
+    return QDateTime(QDate::fromString(APP_COMPILATION_DATE, Qt::DateFormat::ISODate),
+                     QTime::fromString(APP_COMPILATION_TIME, Qt::DateFormat::ISODate));
+}

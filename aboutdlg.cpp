@@ -18,11 +18,18 @@
 
 #include "aboutdlg.h"
 #include "ui_aboutdlg.h"
+#include "application.h"
 
-#include <config.h>
-
-#include <QApplication>
-#include <QDate>
+#define VERSION_LABEL                               \
+    "<style>"                                       \
+    "h2 {"                                          \
+    "margin-bottom: 0;"                             \
+    "}"                                             \
+    "p {"                                           \
+    "margin-top: 0;"                                \
+    "}"                                             \
+    "</style>"                                      \
+    "<h2>%1</h2><p>%2 (%3)</p>"
 
 AboutDlg::AboutDlg(QWidget *parent)
 #ifdef Q_OS_WIN
@@ -33,10 +40,10 @@ AboutDlg::AboutDlg(QWidget *parent)
     , ui(new Ui::AboutDlg)
 {
     ui->setupUi(this);
-    QString version = APP_VERSION + QString(" (");
-    QDate date = QDate::fromString(APP_COMPILATION_DATE, Qt::ISODate);
-    version += date.toString(Qt::DefaultLocaleLongDate) + ")";
-    ui->lblVersion->setText(version);
+    ui->label->setText(QString(VERSION_LABEL)
+                       .arg(qApp->applicationName())
+                       .arg(qApp->applicationVersion())
+                       .arg(Application::buildDateTime().date().toString(Qt::DefaultLocaleLongDate)));
     setWindowTitle(QString(tr("About %1")).arg(qApp->applicationName()));
 }
 
