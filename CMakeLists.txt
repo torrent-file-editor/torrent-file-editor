@@ -282,3 +282,40 @@ if(APPLE)
     WORKING_DIRECTORY "${CMAKE_BINARY_DIR}"
   )
 endif()
+
+# collect_info_files function
+# Takes collect_info_files - list of non-source files to look for
+# Returns INFO_FILES with all files found from the input list.
+# Based on macro posted here
+# http://lists.qt-project.org/pipermail/qt-creator/2012-August/001191.html [^]
+function(collect_info_files)
+	list(APPEND _all_found)
+	foreach(_it ${ARGN})
+		if(NOT IS_DIRECTORY ${_it})
+			get_filename_component(_path ${_it} ABSOLUTE)
+			if(EXISTS ${_path})
+				list(APPEND _all_found ${_it})
+				if(NOT ${_it} MATCHES "^/\\\\..*$;~$")
+					set_source_files_properties(${_it} PROPERTIES HEADER_FILE_ONLY TRUE)
+				endif()
+			endif()
+		endif()
+	endforeach()
+	set(INFO_FILES ${_all_found} PARENT_SCOPE)
+endfunction()
+
+# List all non-source code files (documents, configuration files, etc.)
+set(OTHER_FILES
+  .gitignore
+  .travis.yml
+  README.md
+  Dmg.cmake
+  appcast.xml.in
+  CMakeDMGSetup.scpt
+)
+
+# Collect all existing files and configure as non-sources.
+collect_info_files(${OTHER_FILES})
+
+# Create dummy target/project for an IDE with documents attached
+add_custom_target(docs SOURCES ${INFO_FILES})
