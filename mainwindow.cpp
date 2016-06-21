@@ -232,7 +232,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->btnAbout->setIcon(qApp->style()->standardIcon(QStyle::SP_MessageBoxQuestion));
 
     ui->btnAddTreeItem->setIcon(QIcon::fromTheme("list-add", QIcon(":/icons/list-add.png")));
-    ui->btnRemoveTreeItem->setIcon(QIcon::fromTheme("list-remove", QIcon(":/icons/list-remove.png")));
+    ui->btnRemoveTreeItem->setIcon(QIcon::fromTheme("edit-delete", QIcon(":/icons/edit-delete.png")));
     ui->btnUpTreeItem->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowUp));
     ui->btnDownTreeItem->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowDown));
 
