@@ -654,7 +654,7 @@
              <enum>Qt::NoFocus</enum>
             </property>
             <property name="toolTip">
-             <string>Remove tree items</string>
+             <string>Delete tree items</string>
             </property>
             <property name="text">
              <string/>
@@ -774,7 +774,7 @@
      <x>0</x>
      <y>0</y>
      <width>704</width>
-     <height>22</height>
+     <height>27</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
