@@ -95,6 +95,7 @@ public slots:
     void setPieces(const QByteArray &pieces, const QString &errorString);
     void updateRawPosition();
     void filterFiles();
+    void updateFilesPieces();
 
     // Tree tab
     void addTreeItem();
@@ -120,7 +121,9 @@ private:
 
     bool saveTo(const QString &fileName);
 
+    qulonglong autoPieceSize() const;
     void updateFilesSize();
+    void addFilesRow(const QString &path, qulonglong size);
 
     QString smartSize(qulonglong size);
     void processEvents();

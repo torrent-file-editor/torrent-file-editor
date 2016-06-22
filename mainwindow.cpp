@@ -182,23 +182,24 @@ MainWindow::MainWindow(QWidget *parent)
         ui->cmbPieceSizes->addItem(smartSize(pieceSize), pieceSize);
     }
 
-    QStandardItemModel *model = new QStandardItemModel(0, 2, this);
+    QStandardItemModel *model = new QStandardItemModel(0, 4, this);
     QStringList headers;
-    headers << tr("Path") << tr("Size");
+    headers << tr("Path") << tr("Size") << tr("# Pieces") << "" /* dummy */;
     model->setHorizontalHeaderLabels(headers);
     model->horizontalHeaderItem(0)->setTextAlignment(Qt::AlignLeft);
-    model->horizontalHeaderItem(1)->setTextAlignment(Qt::AlignLeft);
+    model->horizontalHeaderItem(1)->setTextAlignment(Qt::AlignRight);
+    model->horizontalHeaderItem(2)->setTextAlignment(Qt::AlignRight);
     ui->viewFiles->setModel(model);
     ui->viewFiles->horizontalHeader()->setHighlightSections(false);
 #ifdef HAVE_QT5
-    ui->viewFiles->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
     ui->viewFiles->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
     ui->viewFiles->horizontalHeader()->setSectionsMovable(false);
 #else
-    ui->viewFiles->horizontalHeader()->setResizeMode(QHeaderView::ResizeToContents);
     ui->viewFiles->verticalHeader()->setResizeMode(QHeaderView::Fixed);
     ui->viewFiles->horizontalHeader()->setMovable(false);
 #endif
+    ui->viewFiles->horizontalHeader()->setMinimumSectionSize(0);
+    ui->viewFiles->horizontalHeader()->resizeSection(3, 0);
     connect(ui->viewFiles, SIGNAL(deleteRow()), SLOT(removeFile()));
 
     ui->treeJson->setModel(_bencodeModel);
@@ -544,16 +545,7 @@ void MainWindow::makeTorrent()
         totalSize += QFileInfo(file).size();
     }
 
-    qulonglong pieceSize = ui->cmbPieceSizes->itemData(ui->cmbPieceSizes->currentIndex()).toULongLong();
-    // http://torrentfreak.com/how-to-make-the-best-torrents-081121/
-    // Find out optimal piece size
-    if (!pieceSize) {
-        for (int i = 1; i < ui->cmbPieceSizes->count(); ++i) {
-            pieceSize = ui->cmbPieceSizes->itemData(i).toULongLong();
-            if (totalSize / pieceSize < 2000)
-                break;
-        }
-    }
+    qulonglong pieceSize = autoPieceSize();
 
     _progressDialog->setMaximum(totalSize / 1024);
     _progressDialog->show();
@@ -602,12 +594,7 @@ void MainWindow::addFile()
     _lastFolder = QFileInfo(files.first()).absolutePath();
     QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->viewFiles->model());
     foreach (const QString &file, files) {
-        QList<QStandardItem*> list;
-        list << new QStandardItem(QDir::toNativeSeparators(file));
-        list << new QStandardItem(smartSize(QFileInfo(file).size()));
-        list.last()->setData(QFileInfo(file).size());
-
-        model->appendRow(list);
+        addFilesRow(file, QFileInfo(file).size());
     }
 
     if (ui->leBaseFolder->text().isEmpty()) {
@@ -641,12 +628,7 @@ void MainWindow::addFolder()
     QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->viewFiles->model());
     qulonglong totalSize = 0;
     foreach (const QString &file, files) {
-        QList<QStandardItem*> list;
-        list << new QStandardItem(QDir::toNativeSeparators(file));
-        list << new QStandardItem(smartSize(QFileInfo(file).size()));
-        list.last()->setData(QFileInfo(file).size());
-
-        model->appendRow(list);
+        addFilesRow(file, QFileInfo(file).size());
     }
 
     if (ui->leBaseFolder->text().isEmpty())
@@ -722,10 +704,7 @@ void MainWindow::updateFiles()
         for (const auto file: files) {
             QList<QStandardItem*> list;
             totalSize += file.second;
-            list << new QStandardItem(QDir::toNativeSeparators(file.first));
-            list << new QStandardItem(smartSize(file.second));
-            list.last()->setData(file.second);
-            model->appendRow(list);
+            addFilesRow(file.first, file.second);
         }
         qlonglong pieceSize = _bencodeModel->pieceSize();
         for (int i = 0; i < ui->cmbPieceSizes->count(); i++) {
@@ -976,6 +955,28 @@ bool MainWindow::saveTo(const QString &fileName)
     return true;
 }
 
+qulonglong MainWindow::autoPieceSize() const
+{
+    QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->viewFiles->model());
+    qulonglong totalSize = 0;
+
+    for (int i = 0; i < model->rowCount(); ++i) {
+        totalSize += model->item(i, 1)->data().toLongLong();
+    }
+
+    qulonglong pieceSize = ui->cmbPieceSizes->itemData(ui->cmbPieceSizes->currentIndex()).toULongLong();
+    // http://torrentfreak.com/how-to-make-the-best-torrents-081121/
+    // Find out optimal piece size
+    if (!pieceSize) {
+        for (int i = 1; i < ui->cmbPieceSizes->count(); ++i) {
+            pieceSize = ui->cmbPieceSizes->itemData(i).toULongLong();
+            if (totalSize / pieceSize < 2000)
+                break;
+        }
+    }
+    return pieceSize;
+}
+
 void MainWindow::updateFilesSize()
 {
     QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->viewFiles->model());
@@ -986,6 +987,43 @@ void MainWindow::updateFilesSize()
     }
 
     ui->leTotalSize->setText(smartSize(totalSize));
+
+    updateFilesPieces();
+}
+
+void MainWindow::addFilesRow(const QString &path, qulonglong size)
+{
+    QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->viewFiles->model());
+    Q_ASSERT(model);
+
+    QList<QStandardItem*> list;
+    list << new QStandardItem(QDir::toNativeSeparators(path));
+    list << new QStandardItem(smartSize(size));
+    list.last()->setTextAlignment(Qt::AlignRight | Qt::AlignVCenter);
+    list.last()->setData(size);
+    list << new QStandardItem();
+    list.last()->setTextAlignment(Qt::AlignRight | Qt::AlignVCenter);
+
+    model->appendRow(list);
+}
+
+void MainWindow::updateFilesPieces()
+{
+    QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->viewFiles->model());
+    if (!model)
+        return;
+
+    qulonglong pieceSize = autoPieceSize();
+    qulonglong totalSize = 0;
+
+    for (int i = 0; i < model->rowCount(); ++i) {
+        qulonglong size = model->item(i, 1)->data().toLongLong();
+        int firstPiece = (totalSize + 1) / pieceSize;
+        int lastPiece = (totalSize + size) / pieceSize;
+        totalSize += size;
+        model->item(i, 2)->setText(QString::number(lastPiece - firstPiece + 1));
+    }
+
 }
 
 QString MainWindow::smartSize(qulonglong size)

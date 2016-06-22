@@ -1423,6 +1423,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>cmbPieceSizes</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateFilesPieces()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>127</x>
+     <y>503</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>162</x>
+     <y>531</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>open()</slot>
@@ -1450,5 +1466,6 @@
   <slot>upTreeItem()</slot>
   <slot>downTreeItem()</slot>
   <slot>filterFiles()</slot>
+  <slot>updateFilesPieces()</slot>
  </slots>
 </ui>
