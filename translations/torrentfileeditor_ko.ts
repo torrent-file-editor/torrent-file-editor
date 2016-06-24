@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ko" sourcelanguage="en">
+<TS version="2.1" language="ko" sourcelanguage="en">
   <context>
     <name>AboutDlg</name>
     <message>
-      <location filename="../aboutdlg.ui" line="14"/>
-      <source>About Torrent File Editor</source>
-      <translation>Torrent File Editor에 대하여</translation>
-    </message>
-    <message>
-      <location filename="../aboutdlg.ui" line="20"/>
+      <location filename="../aboutdlg.ui" line="69"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt@land.ru"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt@land.ru"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <location filename="../aboutdlg.cpp" line="47"/>
+      <source>About %1</source>
+      <translation type="unfinished">%1 정보</translation>
     </message>
   </context>
   <context>
     <name>BencodeModel</name>
     <message>
-      <location filename="../bencodemodel.cpp" line="653"/>
+      <location filename="../bencodemodel.cpp" line="667"/>
       <source>Name</source>
       <translation>이름</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="654"/>
+      <location filename="../bencodemodel.cpp" line="668"/>
       <source>Type</source>
       <translation>종류</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="655"/>
+      <location filename="../bencodemodel.cpp" line="669"/>
       <source>Hex</source>
       <translation type="unfinished">Hex</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="656"/>
+      <location filename="../bencodemodel.cpp" line="670"/>
       <source>Value</source>
       <translation>값</translation>
     </message>
@@ -66,137 +66,131 @@
   <context>
     <name>MainWindow</name>
     <message>
-      <location filename="../mainwindow.ui" line="27"/>
-      <location filename="../mainwindow.ui" line="807"/>
+      <location filename="../mainwindow.ui" line="30"/>
+      <location filename="../mainwindow.ui" line="810"/>
       <source>New</source>
       <translation>새로 만들기</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="34"/>
-      <location filename="../mainwindow.cpp" line="306"/>
+      <location filename="../mainwindow.ui" line="37"/>
+      <location filename="../mainwindow.cpp" line="319"/>
       <source>Open</source>
       <translation>열기</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="41"/>
-      <location filename="../mainwindow.ui" line="823"/>
+      <location filename="../mainwindow.ui" line="44"/>
+      <location filename="../mainwindow.ui" line="826"/>
       <source>Save</source>
       <translation>저장</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="48"/>
-      <location filename="../mainwindow.cpp" line="328"/>
+      <location filename="../mainwindow.ui" line="51"/>
+      <location filename="../mainwindow.cpp" line="341"/>
       <source>Save As</source>
       <translation>다른 이름으로 저장</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="85"/>
+      <location filename="../mainwindow.ui" line="88"/>
       <source>About</source>
       <translation>Torrent File Editor 정보</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="98"/>
+      <location filename="../mainwindow.ui" line="101"/>
       <source>Main</source>
       <translation>메인</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="186"/>
+      <location filename="../mainwindow.ui" line="189"/>
       <source>Pieces</source>
       <translation>조각</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="220"/>
-      <source>Creation time</source>
-      <translation>만든 날짜</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.ui" line="145"/>
+      <location filename="../mainwindow.ui" line="148"/>
       <source>Created by</source>
       <translation>작성자</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="206"/>
+      <location filename="../mainwindow.ui" line="209"/>
       <source>Piece size</source>
       <translation>조각 크기</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="196"/>
+      <location filename="../mainwindow.ui" line="199"/>
       <source>Publisher</source>
       <translation>배포자</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="227"/>
+      <location filename="../mainwindow.ui" line="230"/>
       <source>Name</source>
       <translation>이름</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="213"/>
-      <source>Url</source>
-      <translation>Url</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.ui" line="111"/>
+      <location filename="../mainwindow.ui" line="114"/>
       <source>Private torrent</source>
       <translation>비공개 토렌트</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="234"/>
+      <location filename="../mainwindow.ui" line="216"/>
+      <source>URL</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="223"/>
+      <source>Date created</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="237"/>
       <source>Hash</source>
       <translation>해시</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="304"/>
+      <location filename="../mainwindow.ui" line="307"/>
       <source>Comment</source>
       <translation>의견</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="322"/>
+      <location filename="../mainwindow.ui" line="325"/>
       <source>Trackers</source>
       <translation>트래커</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="342"/>
+      <location filename="../mainwindow.ui" line="345"/>
       <source>Files</source>
       <translation>파일</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="353"/>
-      <source>Make torrent</source>
-      <translation>토렌트 생성</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.ui" line="369"/>
+      <location filename="../mainwindow.ui" line="372"/>
       <source>Add files</source>
       <translation>파일 추가</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="385"/>
+      <location filename="../mainwindow.ui" line="388"/>
       <source>Add folder</source>
       <translation>폴더 추가</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="408"/>
+      <location filename="../mainwindow.ui" line="411"/>
       <source>Remove files</source>
       <translation>파일 제거</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="424"/>
+      <location filename="../mainwindow.ui" line="427"/>
       <source>Move file up</source>
       <translation>파일을 위로 이동</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="440"/>
-      <location filename="../mainwindow.ui" line="548"/>
+      <location filename="../mainwindow.ui" line="443"/>
       <source>Move file down</source>
       <translation>파일을 아래로 이동</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="460"/>
+      <location filename="../mainwindow.ui" line="463"/>
       <source>Filter by </source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="467"/>
+      <location filename="../mainwindow.ui" line="470"/>
       <source>&lt;html&gt;
   &lt;head/&gt;
   &lt;body&gt;
@@ -216,243 +210,266 @@
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="486"/>
+      <location filename="../mainwindow.ui" line="489"/>
       <source>name</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="491"/>
+      <location filename="../mainwindow.ui" line="494"/>
       <source>extension</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="496"/>
+      <location filename="../mainwindow.ui" line="499"/>
       <source>wildcards</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="501"/>
+      <location filename="../mainwindow.ui" line="504"/>
       <source>regular expression</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="519"/>
+      <location filename="../mainwindow.ui" line="522"/>
       <source>Filter files</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="643"/>
+      <location filename="../mainwindow.ui" line="617"/>
+      <source>Torrent root folder </source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="630"/>
       <source>Tree</source>
       <translation>트리</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="654"/>
+      <location filename="../mainwindow.ui" line="641"/>
       <source>Add tree item</source>
       <translation>트리 항목 추가</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="670"/>
-      <source>Remove tree items</source>
-      <translation>트리 항목 제거</translation>
+      <location filename="../mainwindow.ui" line="657"/>
+      <source>Delete tree items</source>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="686"/>
+      <location filename="../mainwindow.ui" line="673"/>
       <source>Move list item up</source>
       <translation type="unfinished">Move list item up</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="702"/>
+      <location filename="../mainwindow.ui" line="689"/>
       <source>Move list item down</source>
       <translation type="unfinished">Move list item down</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="795"/>
+      <location filename="../mainwindow.ui" line="705"/>
+      <source>Find</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="798"/>
       <source>File</source>
       <translation>파일</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="810"/>
+      <location filename="../mainwindow.ui" line="813"/>
       <source>Ctrl+N</source>
       <translation type="unfinished">Ctrl+N</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="815"/>
+      <location filename="../mainwindow.ui" line="818"/>
       <source>Open...</source>
       <translation>열기...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="818"/>
+      <location filename="../mainwindow.ui" line="821"/>
       <source>Ctrl+O</source>
       <translation type="unfinished">Ctrl+O</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="826"/>
+      <location filename="../mainwindow.ui" line="829"/>
       <source>Ctrl+S</source>
       <translation type="unfinished">Ctrl+S</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="831"/>
+      <location filename="../mainwindow.ui" line="834"/>
       <source>Save As...</source>
       <translation>다른 이름으로 저장...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="834"/>
+      <location filename="../mainwindow.ui" line="837"/>
       <source>Ctrl+Shift+S</source>
       <translation type="unfinished">Ctrl+Shift+S</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="839"/>
+      <location filename="../mainwindow.ui" line="842"/>
       <source>About...</source>
       <translation>정보...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="62"/>
+      <location filename="../mainwindow.ui" line="65"/>
       <source>Coding</source>
       <translation>문자 인코딩</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="584"/>
+      <location filename="../mainwindow.ui" line="356"/>
+      <source>Calculate pieces hashes</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="571"/>
       <source>Piece size </source>
       <translation>조각 크기 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="601"/>
+      <location filename="../mainwindow.ui" line="588"/>
       <source>Total size </source>
       <translation>전체 크기 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="630"/>
-      <source>Base folder </source>
-      <translation type="unfinished">Base folder </translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.ui" line="738"/>
+      <location filename="../mainwindow.ui" line="741"/>
       <source>Raw</source>
       <translation type="unfinished">Raw</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="157"/>
+      <location filename="../mainwindow.cpp" line="170"/>
       <source>Need to calculate piece hashes</source>
       <translation type="unfinished">Need to calculate piece hashes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="158"/>
+      <location filename="../mainwindow.cpp" line="171"/>
       <source>Please wait</source>
       <translation type="unfinished">Please wait</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="168"/>
+      <location filename="../mainwindow.cpp" line="181"/>
       <source>Auto</source>
       <translation type="unfinished">Auto</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="176"/>
+      <location filename="../mainwindow.cpp" line="189"/>
       <source>Path</source>
       <translation type="unfinished">Path</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="176"/>
+      <location filename="../mainwindow.cpp" line="189"/>
       <source>Size</source>
       <translation type="unfinished">Size</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="258"/>
-      <source>Create a new file</source>
-      <translation type="unfinished">Create a new file</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.cpp" line="259"/>
-      <source>Current file is not saved. Save the file?</source>
-      <translation type="unfinished">Current file is not saved. Save the file?</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.cpp" line="138"/>
+      <location filename="../mainwindow.cpp" line="151"/>
       <source>Torrents (*.torrent)</source>
       <translation>토렌트 파일 (*.torrent)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="139"/>
+      <location filename="../mainwindow.cpp" line="152"/>
       <source>uTorrent resume files (*.dat)</source>
       <translation>uTorrent 재개 파일 (*.dat)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="286"/>
-      <location filename="../mainwindow.cpp" line="697"/>
+      <location filename="../mainwindow.cpp" line="189"/>
+      <source># Pieces</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="296"/>
+      <location filename="../mainwindow.cpp" line="744"/>
       <source>Error</source>
       <translation>오류</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="286"/>
+      <location filename="../mainwindow.cpp" line="296"/>
       <source>Can't open file</source>
       <translatorcomment>Не могу открыть файл</translatorcomment>
       <translation>파일을 열 수 없습니다.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="346"/>
-      <source>About %1</source>
-      <translation>%1 정보</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.cpp" line="472"/>
-      <location filename="../mainwindow.cpp" line="477"/>
+      <location filename="../mainwindow.cpp" line="542"/>
       <source>Warning</source>
       <translation>경고</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="472"/>
-      <source>Can't make torrent for file without full path. Need to set base folder.</source>
-      <translation>파일의 전체 경로 없이는 토렌트를 만들 수 없습니다. 기본 폴더를 설정해 주세요.</translation>
+      <location filename="../mainwindow.cpp" line="518"/>
+      <source>Torrent root folder is not set</source>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="477"/>
-      <source>Base folder is not common.</source>
-      <translation type="unfinished">Base folder is not common.</translation>
+      <location filename="../mainwindow.cpp" line="519"/>
+      <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
+
+If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
+
+Do you want to set torrent root folder and try again?</source>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="537"/>
+      <location filename="../mainwindow.cpp" line="542"/>
+      <source>The torrent root folder is not common.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="593"/>
       <source>Add File</source>
       <translation>파일 추가</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="560"/>
+      <location filename="../mainwindow.cpp" line="612"/>
       <source>Add Folder</source>
       <translation type="unfinished">폴더 추가</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="704"/>
+      <location filename="../mainwindow.cpp" line="751"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translation>행: %2 중 %1 열: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="856"/>
-      <location filename="../mainwindow.cpp" line="864"/>
+      <location filename="../mainwindow.cpp" line="921"/>
+      <location filename="../mainwindow.cpp" line="929"/>
       <source>Error on %1 line: %2</source>
       <translation>행 %2에서 경고 %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="945"/>
+      <location filename="../mainwindow.cpp" line="1069"/>
       <source>B</source>
       <translation type="unfinished">B</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="949"/>
+      <location filename="../mainwindow.cpp" line="1073"/>
       <source>KiB</source>
       <translation type="unfinished">KiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="953"/>
+      <location filename="../mainwindow.cpp" line="1077"/>
       <source>MiB</source>
       <translation type="unfinished">MiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="957"/>
+      <location filename="../mainwindow.cpp" line="1081"/>
       <source>GiB</source>
       <translation type="unfinished">GiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="961"/>
+      <location filename="../mainwindow.cpp" line="1085"/>
       <source>TiB</source>
       <translation type="unfinished">TiB</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="1103"/>
+      <source>Save file</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="1104"/>
+      <source>Untitled</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="1105"/>
+      <source>Save file "%1"?</source>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -484,6 +501,90 @@
     </message>
   </context>
   <context>
+    <name>SearchDlg</name>
+    <message>
+      <location filename="../searchdlg.ui" line="14"/>
+      <source>Search</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../searchdlg.ui" line="27"/>
+      <source>Key</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../searchdlg.ui" line="39"/>
+      <location filename="../searchdlg.ui" line="96"/>
+      <source>Match case</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../searchdlg.ui" line="46"/>
+      <location filename="../searchdlg.ui" line="103"/>
+      <source>Exact match</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../searchdlg.ui" line="56"/>
+      <location filename="../searchdlg.ui" line="113"/>
+      <source>Wildcards</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../searchdlg.ui" line="63"/>
+      <location filename="../searchdlg.ui" line="120"/>
+      <source>Regular expression</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../searchdlg.ui" line="84"/>
+      <source>Value</source>
+      <translation type="unfinished">값</translation>
+    </message>
+    <message>
+      <location filename="../searchdlg.ui" line="127"/>
+      <source>Hex</source>
+      <translation type="unfinished">Hex</translation>
+    </message>
+    <message>
+      <location filename="../searchdlg.ui" line="153"/>
+      <source>Direction</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../searchdlg.ui" line="159"/>
+      <source>Up</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../searchdlg.ui" line="166"/>
+      <source>Down</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../searchdlg.ui" line="194"/>
+      <source>Search next</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../searchdlg.ui" line="201"/>
+      <source>Close</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../searchdlg.cpp" line="100"/>
+      <source>No matches found</source>
+      <translation type="unfinished"/>
+    </message>
+    <message numerus="yes">
+      <location filename="../searchdlg.cpp" line="102"/>
+      <source>Found %n match(es)</source>
+      <translation type="unfinished">
+        <numerusform/>
+      </translation>
+    </message>
+  </context>
+  <context>
     <name>UrlEdit</name>
     <message>
       <location filename="../urledit.cpp" line="39"/>
@@ -494,12 +595,12 @@
   <context>
     <name>Worker</name>
     <message>
-      <location filename="../mainwindow.cpp" line="75"/>
+      <location filename="../mainwindow.cpp" line="81"/>
       <source>Can't open %1</source>
       <translation>%1 을(를) 열 수 없습니다.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="105"/>
+      <location filename="../mainwindow.cpp" line="116"/>
       <source>Can't read from %1</source>
       <translation>%1을(를) 읽을 수 없습니다.</translation>
     </message>
