@@ -18,8 +18,6 @@
 
 #pragma once
 
-#include "proxystyle.h"
-
 #include <QStyledItemDelegate>
 
 class BencodeDelegate : public QStyledItemDelegate

@@ -38,9 +38,6 @@ QWidget *BencodeDelegate::createEditor(QWidget *parent, const QStyleOptionViewIt
     comboBox->addItem(Bencode::typeToStr(Bencode::Type::List), static_cast<int>(Bencode::Type::List));
     comboBox->addItem(Bencode::typeToStr(Bencode::Type::Dictionary), static_cast<int>(Bencode::Type::Dictionary));
 
-    ProxyStyle *proxyStyle = new ProxyStyle;
-    proxyStyle->setParent(comboBox);
-    comboBox->setStyle(proxyStyle);
     comboBox->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
     comboBox->setMinimumHeight(option.rect.height());
     comboBox->setMaximumHeight(option.rect.height());

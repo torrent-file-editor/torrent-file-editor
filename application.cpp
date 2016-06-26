@@ -20,6 +20,7 @@
 
 #include "application.h"
 #include "mainwindow.h"
+#include "proxystyle.h"
 
 #include <QFileOpenEvent>
 
@@ -28,6 +29,8 @@ Application::Application(int &argc, char **argv)
 {
     setApplicationName("Torrent File Editor");
     setApplicationVersion(APP_VERSION);
+
+    setStyle(new ProxyStyle());
 }
 
 bool Application::event(QEvent *event)
