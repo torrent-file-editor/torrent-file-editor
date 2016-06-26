@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ar" sourcelanguage="en">
+<TS version="2.0" language="ar" sourcelanguage="en">
   <context>
     <name>AboutDlg</name>
     <message>
@@ -17,22 +17,22 @@
   <context>
     <name>BencodeModel</name>
     <message>
-      <location filename="../bencodemodel.cpp" line="667"/>
+      <location filename="../bencodemodel.cpp" line="684"/>
       <source>Name</source>
       <translation>الاسم</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="668"/>
+      <location filename="../bencodemodel.cpp" line="685"/>
       <source>Type</source>
       <translation>النوع</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="669"/>
+      <location filename="../bencodemodel.cpp" line="686"/>
       <source>Hex</source>
       <translation>Hex</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="670"/>
+      <location filename="../bencodemodel.cpp" line="687"/>
       <source>Value</source>
       <translation>القيمة</translation>
     </message>
@@ -67,25 +67,25 @@
     <name>MainWindow</name>
     <message>
       <location filename="../mainwindow.ui" line="30"/>
-      <location filename="../mainwindow.ui" line="810"/>
+      <location filename="../mainwindow.ui" line="826"/>
       <source>New</source>
       <translation>الجديد</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
-      <location filename="../mainwindow.cpp" line="319"/>
+      <location filename="../mainwindow.cpp" line="320"/>
       <source>Open</source>
       <translation>افتح</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="44"/>
-      <location filename="../mainwindow.ui" line="826"/>
+      <location filename="../mainwindow.ui" line="842"/>
       <source>Save</source>
       <translation>حفظ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="341"/>
+      <location filename="../mainwindow.cpp" line="342"/>
       <source>Save As</source>
       <translation>حفظ باسم</translation>
     </message>
@@ -270,42 +270,47 @@
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="798"/>
+      <location filename="../mainwindow.ui" line="721"/>
+      <source>Replace</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="814"/>
       <source>File</source>
       <translation type="unfinished">File</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="813"/>
+      <location filename="../mainwindow.ui" line="829"/>
       <source>Ctrl+N</source>
       <translation type="unfinished">Ctrl+N</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="818"/>
+      <location filename="../mainwindow.ui" line="834"/>
       <source>Open...</source>
       <translation type="unfinished">Open...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="821"/>
+      <location filename="../mainwindow.ui" line="837"/>
       <source>Ctrl+O</source>
       <translation type="unfinished">Ctrl+O</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="829"/>
+      <location filename="../mainwindow.ui" line="845"/>
       <source>Ctrl+S</source>
       <translation type="unfinished">Ctrl+S</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="834"/>
+      <location filename="../mainwindow.ui" line="850"/>
       <source>Save As...</source>
       <translation type="unfinished">Save As...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="837"/>
+      <location filename="../mainwindow.ui" line="853"/>
       <source>Ctrl+Shift+S</source>
       <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="842"/>
+      <location filename="../mainwindow.ui" line="858"/>
       <source>About...</source>
       <translation>حول...</translation>
     </message>
@@ -330,7 +335,7 @@
       <translation>الحجم الكلي </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="741"/>
+      <location filename="../mainwindow.ui" line="757"/>
       <source>Raw</source>
       <translation type="unfinished">Raw</translation>
     </message>
@@ -375,29 +380,29 @@
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="296"/>
-      <location filename="../mainwindow.cpp" line="744"/>
+      <location filename="../mainwindow.cpp" line="297"/>
+      <location filename="../mainwindow.cpp" line="745"/>
       <source>Error</source>
       <translation>خطأ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="296"/>
+      <location filename="../mainwindow.cpp" line="297"/>
       <source>Can't open file</source>
       <translatorcomment>Не могу открыть файл</translatorcomment>
       <translation>لا يمكن فتح الملف</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="542"/>
+      <location filename="../mainwindow.cpp" line="543"/>
       <source>Warning</source>
       <translation>تحذير</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="518"/>
+      <location filename="../mainwindow.cpp" line="519"/>
       <source>Torrent root folder is not set</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="519"/>
+      <location filename="../mainwindow.cpp" line="520"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
@@ -406,68 +411,68 @@ Do you want to set torrent root folder and try again?</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="542"/>
+      <location filename="../mainwindow.cpp" line="543"/>
       <source>The torrent root folder is not common.</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="593"/>
+      <location filename="../mainwindow.cpp" line="594"/>
       <source>Add File</source>
       <translation>إضافة ملف</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="612"/>
+      <location filename="../mainwindow.cpp" line="613"/>
       <source>Add Folder</source>
       <translation type="unfinished">إضافة مجلد</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="751"/>
+      <location filename="../mainwindow.cpp" line="752"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translation>الخط: %1 من العقيد %2: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="921"/>
-      <location filename="../mainwindow.cpp" line="929"/>
+      <location filename="../mainwindow.cpp" line="934"/>
+      <location filename="../mainwindow.cpp" line="942"/>
       <source>Error on %1 line: %2</source>
       <translation>خطأ في سطر %1: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1069"/>
+      <location filename="../mainwindow.cpp" line="1082"/>
       <source>B</source>
       <translation>B</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1073"/>
+      <location filename="../mainwindow.cpp" line="1086"/>
       <source>KiB</source>
       <translation>KiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1077"/>
+      <location filename="../mainwindow.cpp" line="1090"/>
       <source>MiB</source>
       <translation>MiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1081"/>
+      <location filename="../mainwindow.cpp" line="1094"/>
       <source>GiB</source>
       <translation>GiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1085"/>
+      <location filename="../mainwindow.cpp" line="1098"/>
       <source>TiB</source>
       <translation>TiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1103"/>
+      <location filename="../mainwindow.cpp" line="1116"/>
       <source>Save file</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1104"/>
+      <location filename="../mainwindow.cpp" line="1117"/>
       <source>Untitled</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1105"/>
+      <location filename="../mainwindow.cpp" line="1118"/>
       <source>Save file "%1"?</source>
       <translation type="unfinished"/>
     </message>
@@ -502,11 +507,6 @@ Do you want to set torrent root folder and try again?</source>
   </context>
   <context>
     <name>SearchDlg</name>
-    <message>
-      <location filename="../searchdlg.ui" line="14"/>
-      <source>Search</source>
-      <translation type="unfinished"/>
-    </message>
     <message>
       <location filename="../searchdlg.ui" line="27"/>
       <source>Key</source>
@@ -547,38 +547,76 @@ Do you want to set torrent root folder and try again?</source>
       <translation type="unfinished">Hex</translation>
     </message>
     <message>
-      <location filename="../searchdlg.ui" line="153"/>
+      <location filename="../searchdlg.ui" line="154"/>
+      <source>Replace value with</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../searchdlg.ui" line="164"/>
+      <source>hex</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../searchdlg.ui" line="176"/>
       <source>Direction</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../searchdlg.ui" line="159"/>
+      <location filename="../searchdlg.ui" line="182"/>
       <source>Up</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../searchdlg.ui" line="166"/>
+      <location filename="../searchdlg.ui" line="189"/>
       <source>Down</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../searchdlg.ui" line="194"/>
-      <source>Search next</source>
+      <location filename="../searchdlg.ui" line="204"/>
+      <source>Replace All</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../searchdlg.ui" line="201"/>
+      <location filename="../searchdlg.ui" line="224"/>
+      <source>Find Next</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../searchdlg.ui" line="248"/>
+      <location filename="../searchdlg.cpp" line="42"/>
+      <source>Replace</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../searchdlg.ui" line="231"/>
       <source>Close</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../searchdlg.cpp" line="100"/>
+      <location filename="../searchdlg.cpp" line="42"/>
+      <source>Find</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../searchdlg.cpp" line="135"/>
       <source>No matches found</source>
       <translation type="unfinished"/>
     </message>
     <message numerus="yes">
-      <location filename="../searchdlg.cpp" line="102"/>
-      <source>Found %n match(es)</source>
+      <location filename="../searchdlg.cpp" line="140"/>
+      <source>%1 of %n match(es)</source>
+      <translation type="unfinished">
+        <numerusform/>
+        <numerusform/>
+        <numerusform/>
+        <numerusform/>
+        <numerusform/>
+        <numerusform/>
+      </translation>
+    </message>
+    <message numerus="yes">
+      <location filename="../searchdlg.cpp" line="192"/>
+      <source>%n value(s) was(were) replaced</source>
       <translation type="unfinished">
         <numerusform/>
         <numerusform/>

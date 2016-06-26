@@ -17,22 +17,22 @@
   <context>
     <name>BencodeModel</name>
     <message>
-      <location filename="../bencodemodel.cpp" line="667"/>
+      <location filename="../bencodemodel.cpp" line="684"/>
       <source>Name</source>
       <translation>Name</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="668"/>
+      <location filename="../bencodemodel.cpp" line="685"/>
       <source>Type</source>
       <translation>Type</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="669"/>
+      <location filename="../bencodemodel.cpp" line="686"/>
       <source>Hex</source>
       <translation>Hex</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="670"/>
+      <location filename="../bencodemodel.cpp" line="687"/>
       <source>Value</source>
       <translation>Value</translation>
     </message>
@@ -67,25 +67,25 @@
     <name>MainWindow</name>
     <message>
       <location filename="../mainwindow.ui" line="30"/>
-      <location filename="../mainwindow.ui" line="810"/>
+      <location filename="../mainwindow.ui" line="826"/>
       <source>New</source>
       <translation>New</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
-      <location filename="../mainwindow.cpp" line="319"/>
+      <location filename="../mainwindow.cpp" line="320"/>
       <source>Open</source>
       <translation>Open</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="44"/>
-      <location filename="../mainwindow.ui" line="826"/>
+      <location filename="../mainwindow.ui" line="842"/>
       <source>Save</source>
       <translation>Save</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="341"/>
+      <location filename="../mainwindow.cpp" line="342"/>
       <source>Save As</source>
       <translation>Save As</translation>
     </message>
@@ -285,42 +285,47 @@
       <translation>Find</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="798"/>
+      <location filename="../mainwindow.ui" line="721"/>
+      <source>Replace</source>
+      <translation>Replace</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="814"/>
       <source>File</source>
       <translation>File</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="813"/>
+      <location filename="../mainwindow.ui" line="829"/>
       <source>Ctrl+N</source>
       <translation>Ctrl+N</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="818"/>
+      <location filename="../mainwindow.ui" line="834"/>
       <source>Open...</source>
       <translation>Open...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="821"/>
+      <location filename="../mainwindow.ui" line="837"/>
       <source>Ctrl+O</source>
       <translation>Ctrl+O</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="829"/>
+      <location filename="../mainwindow.ui" line="845"/>
       <source>Ctrl+S</source>
       <translation>Ctrl+S</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="834"/>
+      <location filename="../mainwindow.ui" line="850"/>
       <source>Save As...</source>
       <translation>Save As...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="837"/>
+      <location filename="../mainwindow.ui" line="853"/>
       <source>Ctrl+Shift+S</source>
       <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="842"/>
+      <location filename="../mainwindow.ui" line="858"/>
       <source>About...</source>
       <translation>About...</translation>
     </message>
@@ -345,7 +350,7 @@
       <translation>Total size </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="741"/>
+      <location filename="../mainwindow.ui" line="757"/>
       <source>Raw</source>
       <translation>Raw</translation>
     </message>
@@ -390,29 +395,29 @@
       <translation># Pieces</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="296"/>
-      <location filename="../mainwindow.cpp" line="744"/>
+      <location filename="../mainwindow.cpp" line="297"/>
+      <location filename="../mainwindow.cpp" line="745"/>
       <source>Error</source>
       <translation>Error</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="296"/>
+      <location filename="../mainwindow.cpp" line="297"/>
       <source>Can't open file</source>
       <translatorcomment>Не могу открыть файл</translatorcomment>
       <translation>Can't open file</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="542"/>
+      <location filename="../mainwindow.cpp" line="543"/>
       <source>Warning</source>
       <translation>Warning</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="518"/>
+      <location filename="../mainwindow.cpp" line="519"/>
       <source>Torrent root folder is not set</source>
       <translation>Torrent root folder is not set</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="519"/>
+      <location filename="../mainwindow.cpp" line="520"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
@@ -425,70 +430,70 @@ If you want to edit file list in the current torrent you need to set torrent roo
 Do you want to set torrent root folder and try again?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="542"/>
+      <location filename="../mainwindow.cpp" line="543"/>
       <source>The torrent root folder is not common.</source>
       <translation>The torrent root folder is not common.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="593"/>
+      <location filename="../mainwindow.cpp" line="594"/>
       <source>Add File</source>
       <translation>Add File</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="612"/>
+      <location filename="../mainwindow.cpp" line="613"/>
       <source>Add Folder</source>
       <translation>Add Folder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="751"/>
+      <location filename="../mainwindow.cpp" line="752"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translation>Line: %1 of %2 Col: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="921"/>
-      <location filename="../mainwindow.cpp" line="929"/>
+      <location filename="../mainwindow.cpp" line="934"/>
+      <location filename="../mainwindow.cpp" line="942"/>
       <source>Error on %1 line: %2</source>
       <translation>Error on %1 line: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1069"/>
+      <location filename="../mainwindow.cpp" line="1082"/>
       <source>B</source>
       <translation>B</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1073"/>
+      <location filename="../mainwindow.cpp" line="1086"/>
       <source>KiB</source>
       <translation>KiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1077"/>
+      <location filename="../mainwindow.cpp" line="1090"/>
       <source>MiB</source>
       <translation>MiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1081"/>
+      <location filename="../mainwindow.cpp" line="1094"/>
       <source>GiB</source>
       <translation>GiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1085"/>
+      <location filename="../mainwindow.cpp" line="1098"/>
       <source>TiB</source>
       <translation>TiB
 
 Tebibyte</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1103"/>
+      <location filename="../mainwindow.cpp" line="1116"/>
       <source>Save file</source>
       <translation>Save file</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1104"/>
+      <location filename="../mainwindow.cpp" line="1117"/>
       <source>Untitled</source>
       <translation>Untitled</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1105"/>
+      <location filename="../mainwindow.cpp" line="1118"/>
       <source>Save file "%1"?</source>
       <translation>Save file "%1"?</translation>
     </message>
@@ -523,11 +528,6 @@ Tebibyte</translation>
   </context>
   <context>
     <name>SearchDlg</name>
-    <message>
-      <location filename="../searchdlg.ui" line="14"/>
-      <source>Search</source>
-      <translation>Search</translation>
-    </message>
     <message>
       <location filename="../searchdlg.ui" line="27"/>
       <source>Key</source>
@@ -568,41 +568,75 @@ Tebibyte</translation>
       <translation>Hex</translation>
     </message>
     <message>
-      <location filename="../searchdlg.ui" line="153"/>
+      <location filename="../searchdlg.ui" line="154"/>
+      <source>Replace value with</source>
+      <translation>Replace value with</translation>
+    </message>
+    <message>
+      <location filename="../searchdlg.ui" line="164"/>
+      <source>hex</source>
+      <translation>hex</translation>
+    </message>
+    <message>
+      <location filename="../searchdlg.ui" line="176"/>
       <source>Direction</source>
       <translation>Direction</translation>
     </message>
     <message>
-      <location filename="../searchdlg.ui" line="159"/>
+      <location filename="../searchdlg.ui" line="182"/>
       <source>Up</source>
       <translation>Up</translation>
     </message>
     <message>
-      <location filename="../searchdlg.ui" line="166"/>
+      <location filename="../searchdlg.ui" line="189"/>
       <source>Down</source>
       <translation>Down</translation>
     </message>
     <message>
-      <location filename="../searchdlg.ui" line="194"/>
-      <source>Search next</source>
-      <translation>Search next</translation>
+      <location filename="../searchdlg.ui" line="204"/>
+      <source>Replace All</source>
+      <translation>Replace All</translation>
     </message>
     <message>
-      <location filename="../searchdlg.ui" line="201"/>
+      <location filename="../searchdlg.ui" line="224"/>
+      <source>Find Next</source>
+      <translation>Find Next</translation>
+    </message>
+    <message>
+      <location filename="../searchdlg.ui" line="248"/>
+      <location filename="../searchdlg.cpp" line="42"/>
+      <source>Replace</source>
+      <translation>Replace</translation>
+    </message>
+    <message>
+      <location filename="../searchdlg.ui" line="231"/>
       <source>Close</source>
       <translation>Close</translation>
     </message>
     <message>
-      <location filename="../searchdlg.cpp" line="100"/>
+      <location filename="../searchdlg.cpp" line="42"/>
+      <source>Find</source>
+      <translation>Find</translation>
+    </message>
+    <message>
+      <location filename="../searchdlg.cpp" line="135"/>
       <source>No matches found</source>
       <translation>No matches found</translation>
     </message>
     <message numerus="yes">
-      <location filename="../searchdlg.cpp" line="102"/>
-      <source>Found %n match(es)</source>
+      <location filename="../searchdlg.cpp" line="140"/>
+      <source>%1 of %n match(es)</source>
       <translation>
-        <numerusform>Found %n match</numerusform>
-        <numerusform>Found %n matches</numerusform>
+        <numerusform>%1 of %n match</numerusform>
+        <numerusform>%1 of %n matches</numerusform>
+      </translation>
+    </message>
+    <message numerus="yes">
+      <location filename="../searchdlg.cpp" line="192"/>
+      <source>%n value(s) was(were) replaced</source>
+      <translation>
+        <numerusform>%n value was replaced</numerusform>
+        <numerusform>%n values were replaced</numerusform>
       </translation>
     </message>
   </context>
