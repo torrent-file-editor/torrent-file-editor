@@ -105,6 +105,7 @@ public slots:
     void upTreeItem();
     void downTreeItem();
     void showTreeSearchWindow();
+    void showTreeReplaceWindow();
     void selectTreeItem(const QModelIndex &index);
 
 protected:

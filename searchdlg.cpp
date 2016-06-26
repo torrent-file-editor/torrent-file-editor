@@ -14,19 +14,15 @@ SearchDlg::SearchDlg(BencodeModel *model, QWidget *parent)
 #endif
     , ui(new Ui::SearchDlg)
     , _searchList()
-    , _searchIndex(0)
+    , _searchIndex(-1)
     , _model(model)
-    #ifdef Q_OS_MAC
+#ifdef Q_OS_MAC
     , _sizeGrip(new QSizeGrip(this))
-    #endif
+#endif
 {
     ui->setupUi(this);
-
-    adjustSize();
-    setMinimumHeight(height());
-    setMaximumHeight(height());
-
-    updateSearchNext();
+    connect(_model, SIGNAL(rowsRemoved(QModelIndex,int,int)), SLOT(resetSearchList()));
+    connect(_model, SIGNAL(rowsMoved(QModelIndex,int,int,QModelIndex,int)), SLOT(resetSearchList()));
 
 #ifdef Q_OS_MAC
     // Workaround. Qt has no size grip on Mac OS X. Bug?
@@ -41,8 +37,31 @@ SearchDlg::~SearchDlg()
     delete ui;
 }
 
+void SearchDlg::setReplaceModeEnabled(bool b)
+{
+    setWindowTitle(b ? tr("Replace") : tr("Find"));
+    ui->wdgReplace->setVisible(b);
+    ui->btnReplace->setVisible(b);
+    ui->btnReplaceAll->setVisible(b);
+
+    setMinimumHeight(0);
+    setMaximumHeight(16777215);
+    adjustSize();
+    setFixedHeight(height());
+
+    updateSearchNext();
+}
+
 void SearchDlg::searchNext()
 {
+    _searchIndex += ui->rdDown->isChecked() ? +1 : -1;
+
+    if (ui->rdDown->isChecked() && _searchIndex == _searchList.size()
+        || ui->rdUp->isChecked() && _searchIndex == -1) {
+
+        resetSearchList();
+    }
+
     if (_searchList.isEmpty()) {
         QModelIndexList keys;
         QModelIndexList values;
@@ -109,27 +128,16 @@ void SearchDlg::searchNext()
         else if (ui->grpValue->isChecked()) {
             _searchList = values;
         }
-
-        if (_searchList.isEmpty())
-            ui->lblItemsFound->setText(tr("No matches found"));
-        else
-            ui->lblItemsFound->setText(tr("Found %n match(es)", 0, _searchList.size()));
-
-        _searchIndex = 0;
-    }
-    else {
-        if (ui->rdDown->isChecked()) {
-            _searchIndex = (_searchIndex + 1) == _searchList.size() ? 0 : _searchIndex + 1;
-        }
-        else {
-            _searchIndex = (_searchIndex - 1) == 0 ? _searchList.size() - 1 : _searchIndex - 1;
-        }
+        _searchIndex = ui->rdDown->isChecked() ? 0 : _searchList.size() - 1;
     }
 
-
-    if (_searchList.isEmpty())
+    if (_searchList.isEmpty()) {
+        ui->lblItemsFound->setText(tr("No matches found"));
+        _searchIndex = -1;
         return;
+    }
 
+    ui->lblItemsFound->setText(tr("%1 of %n match(es)", 0, _searchList.size()).arg(_searchIndex + 1));
     emit foundItem(_searchList.at(_searchIndex));
 }
 
@@ -148,11 +156,42 @@ void SearchDlg::updateSearchNext()
         enabled = false;
 
     ui->btnSearchNext->setEnabled(enabled);
+    ui->btnReplace->setEnabled(enabled);
+    ui->btnReplaceAll->setEnabled(enabled);
 }
 
 void SearchDlg::resetSearchList()
 {
     _searchList.clear();
+    _searchIndex = -1;
+    ui->lblItemsFound->setText("");
+}
+
+void SearchDlg::replace()
+{
+    QString replaceStr = ui->lneReplace->text();
+    if (_searchIndex >= 0)
+        _model->setData(_searchList.at(_searchIndex), replaceStr, Qt::UserRole + (ui->chkHex->isChecked() ? 1 : 0));
+
+    searchNext();
+}
+
+void SearchDlg::replaceAll()
+{
+    if (_searchList.isEmpty())
+        searchNext();
+
+    if (_searchList.isEmpty())
+        return;
+
+    QString replaceStr = ui->lneReplace->text();
+    for (const auto &item: _searchList) {
+        _model->setData(item, replaceStr, Qt::UserRole + (ui->chkHex->isChecked() ? 1 : 0));
+    }
+
+    QString resStr = tr("%n value(s) was(were) replaced", 0, _searchList.size());
+    resetSearchList();
+    ui->lblItemsFound->setText(resStr);
 }
 
 #ifdef Q_OS_MAC

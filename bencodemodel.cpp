@@ -520,7 +520,7 @@ bool BencodeModel::setData(const QModelIndex &index, const QVariant &value, int 
     if (!index.isValid())
         return false;
 
-    if (role != Qt::EditRole && role != Qt::CheckStateRole)
+    if (role != Qt::EditRole && role != Qt::CheckStateRole && role < Qt::UserRole)
         return false;
 
     Bencode *item = toBencode(index);
@@ -577,6 +577,23 @@ bool BencodeModel::setData(const QModelIndex &index, const QVariant &value, int 
             emit dataChanged(index, index.sibling(index.row(), static_cast<int>(Column::Value)));
         }
 
+        break;
+
+    case Qt::UserRole:
+    case Qt::UserRole + 1:
+        if (item->isInteger()) {
+            item->setInteger(value.toLongLong());
+        }
+        else if (item->isString()) {
+            if (role == Qt::UserRole) {
+                item->setString(fromUnicode(value.toString()));
+            }
+            else {
+                item->setString(QByteArray::fromHex(value.toByteArray()));
+            }
+        }
+        res = true;
+        emit dataChanged(index.sibling(index.row(), static_cast<int>(Column::Value)), index.sibling(index.row(), static_cast<int>(Column::Value)));
         break;
 
     default:

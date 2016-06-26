@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>644</width>
-    <height>288</height>
+    <width>689</width>
+    <height>335</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Search</string>
+   <string notr="true"/>
   </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>
@@ -146,6 +146,29 @@
     </widget>
    </item>
    <item>
+    <widget class="QWidget" name="wdgReplace" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Replace value with</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lneReplace"/>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="chkHex">
+        <property name="text">
+         <string>hex</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QGroupBox" name="groupBox_3">
@@ -175,6 +198,13 @@
      </item>
      <item>
       <layout class="QGridLayout" name="gridLayout">
+       <item row="1" column="1">
+        <widget class="QPushButton" name="btnReplaceAll">
+         <property name="text">
+          <string>Replace All</string>
+         </property>
+        </widget>
+       </item>
        <item row="1" column="0">
         <spacer name="horizontalSpacer">
          <property name="orientation">
@@ -188,27 +218,34 @@
          </property>
         </spacer>
        </item>
-       <item row="1" column="1">
+       <item row="1" column="3">
         <widget class="QPushButton" name="btnSearchNext">
          <property name="text">
-          <string>Search next</string>
+          <string>Find Next</string>
          </property>
         </widget>
        </item>
-       <item row="1" column="2">
+       <item row="1" column="4">
         <widget class="QPushButton" name="pushButton_2">
          <property name="text">
           <string>Close</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="0" colspan="3">
+       <item row="0" column="0" colspan="5">
         <widget class="QLabel" name="lblItemsFound">
          <property name="text">
           <string/>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="btnReplace">
+         <property name="text">
+          <string>Replace</string>
          </property>
         </widget>
        </item>
@@ -227,8 +264,8 @@
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>596</x>
-     <y>272</y>
+     <x>680</x>
+     <y>326</y>
     </hint>
     <hint type="destinationlabel">
      <x>378</x>
@@ -243,8 +280,8 @@
    <slot>searchNext()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>465</x>
-     <y>266</y>
+     <x>590</x>
+     <y>326</y>
     </hint>
     <hint type="destinationlabel">
      <x>365</x>
@@ -451,8 +488,8 @@
    <slot>resetSearchList()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>337</x>
-     <y>87</y>
+     <x>674</x>
+     <y>96</y>
     </hint>
     <hint type="destinationlabel">
      <x>213</x>
@@ -483,8 +520,8 @@
    <slot>resetSearchList()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>342</x>
-     <y>142</y>
+     <x>674</x>
+     <y>148</y>
     </hint>
     <hint type="destinationlabel">
      <x>359</x>
@@ -524,10 +561,44 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btnReplaceAll</sender>
+   <signal>clicked()</signal>
+   <receiver>SearchDlg</receiver>
+   <slot>replaceAll()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>380</x>
+     <y>315</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>295</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnReplace</sender>
+   <signal>clicked()</signal>
+   <receiver>SearchDlg</receiver>
+   <slot>replace()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>446</x>
+     <y>315</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>249</x>
+     <y>303</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>searchNext()</slot>
   <slot>updateSearchNext()</slot>
   <slot>resetSearchList()</slot>
+  <slot>replace()</slot>
+  <slot>replaceAll()</slot>
  </slots>
 </ui>

@@ -713,6 +713,22 @@
            </widget>
           </item>
           <item>
+           <widget class="QToolButton" name="btnReplaceTreeItem">
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="toolTip">
+             <string>Replace</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
            <spacer name="horizontalSpacer_5">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -1110,8 +1126,8 @@
    <slot>updateFiles()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>540</x>
-     <y>511</y>
+     <x>102</x>
+     <y>125</y>
     </hint>
     <hint type="destinationlabel">
      <x>1133</x>
@@ -1142,8 +1158,8 @@
    <slot>makeTorrent()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>44</x>
-     <y>137</y>
+     <x>18</x>
+     <y>109</y>
     </hint>
     <hint type="destinationlabel">
      <x>399</x>
@@ -1158,8 +1174,8 @@
    <slot>addFile()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>78</x>
-     <y>137</y>
+     <x>25</x>
+     <y>109</y>
     </hint>
     <hint type="destinationlabel">
      <x>613</x>
@@ -1174,8 +1190,8 @@
    <slot>addFolder()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>112</x>
-     <y>137</y>
+     <x>32</x>
+     <y>109</y>
     </hint>
     <hint type="destinationlabel">
      <x>544</x>
@@ -1190,8 +1206,8 @@
    <slot>removeFile()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>155</x>
-     <y>137</y>
+     <x>46</x>
+     <y>109</y>
     </hint>
     <hint type="destinationlabel">
      <x>841</x>
@@ -1206,8 +1222,8 @@
    <slot>upFile()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>189</x>
-     <y>137</y>
+     <x>53</x>
+     <y>109</y>
     </hint>
     <hint type="destinationlabel">
      <x>686</x>
@@ -1222,8 +1238,8 @@
    <slot>downFile()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>223</x>
-     <y>137</y>
+     <x>61</x>
+     <y>109</y>
     </hint>
     <hint type="destinationlabel">
      <x>792</x>
@@ -1430,8 +1446,8 @@
    <slot>filterFiles()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>637</x>
-     <y>137</y>
+     <x>96</x>
+     <y>109</y>
     </hint>
     <hint type="destinationlabel">
      <x>693</x>
@@ -1446,8 +1462,8 @@
    <slot>updateFilesPieces()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>127</x>
-     <y>503</y>
+     <x>41</x>
+     <y>125</y>
     </hint>
     <hint type="destinationlabel">
      <x>162</x>
@@ -1468,6 +1484,22 @@
     <hint type="destinationlabel">
      <x>692</x>
      <y>214</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnReplaceTreeItem</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showTreeReplaceWindow()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>203</x>
+     <y>131</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>706</x>
+     <y>74</y>
     </hint>
    </hints>
   </connection>
@@ -1500,5 +1532,6 @@
   <slot>filterFiles()</slot>
   <slot>updateFilesPieces()</slot>
   <slot>showTreeSearchWindow()</slot>
+  <slot>showTreeReplaceWindow()</slot>
  </slots>
 </ui>

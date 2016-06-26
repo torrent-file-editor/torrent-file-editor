@@ -238,7 +238,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->btnRemoveTreeItem->setIcon(QIcon::fromTheme("edit-delete", QIcon(":/icons/edit-delete.png")));
     ui->btnUpTreeItem->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowUp));
     ui->btnDownTreeItem->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowDown));
-    ui->btnFindTreeItem->setIcon(QIcon::fromTheme("system-search", QIcon(":/icons/system-search")));
+    ui->btnFindTreeItem->setIcon(QIcon::fromTheme("edit-find", QIcon(":/icons/edit-find")));
+    ui->btnReplaceTreeItem->setIcon(QIcon::fromTheme("edit-find-replace", QIcon(":/icons/edit-find-replace")));
 
     fillCoding();
     updateFilesSize();
@@ -868,6 +869,18 @@ void MainWindow::showTreeSearchWindow()
         connect(_searchDlg, SIGNAL(foundItem(const QModelIndex&)), SLOT(selectTreeItem(QModelIndex)));
     }
 
+    _searchDlg->setReplaceModeEnabled(false);
+    _searchDlg->show();
+}
+
+void MainWindow::showTreeReplaceWindow()
+{
+    if (!_searchDlg) {
+        _searchDlg = new SearchDlg(_bencodeModel, this);
+        connect(_searchDlg, SIGNAL(foundItem(const QModelIndex&)), SLOT(selectTreeItem(QModelIndex)));
+    }
+
+    _searchDlg->setReplaceModeEnabled(true);
     _searchDlg->show();
 }
 

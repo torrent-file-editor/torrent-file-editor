@@ -18,11 +18,14 @@ class SearchDlg : public QDialog
 public:
     explicit SearchDlg(BencodeModel *model, QWidget *parent = 0);
     ~SearchDlg();
+    void setReplaceModeEnabled(bool b);
 
 public slots:
     void searchNext();
     void updateSearchNext();
     void resetSearchList();
+    void replace();
+    void replaceAll();
 
 signals:
     void foundItem(const QModelIndex &index);
