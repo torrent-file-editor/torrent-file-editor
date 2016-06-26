@@ -2,6 +2,10 @@
 #include "ui_searchdlg.h"
 #include "bencodemodel.h"
 
+#ifdef Q_OS_MAC
+# include <QSizeGrip>
+#endif
+
 SearchDlg::SearchDlg(BencodeModel *model, QWidget *parent)
 #ifdef Q_OS_WIN
     : QDialog(parent, Qt::Tool | Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint | Qt::MSWindowsFixedSizeDialogHint)
@@ -12,6 +16,9 @@ SearchDlg::SearchDlg(BencodeModel *model, QWidget *parent)
     , _searchList()
     , _searchIndex(0)
     , _model(model)
+    #ifdef Q_OS_MAC
+    , _sizeGrip(new QSizeGrip(this))
+    #endif
 {
     ui->setupUi(this);
 
@@ -20,6 +27,13 @@ SearchDlg::SearchDlg(BencodeModel *model, QWidget *parent)
     setMaximumHeight(height());
 
     updateSearchNext();
+
+#ifdef Q_OS_MAC
+    // Workaround. Qt has no size grip on Mac OS X. Bug?
+    setSizeGripEnabled(false);
+    _sizeGrip->setFixedSize(20, 20);
+    updateSizeGripPos();
+#endif
 }
 
 SearchDlg::~SearchDlg()
@@ -140,3 +154,18 @@ void SearchDlg::resetSearchList()
 {
     _searchList.clear();
 }
+
+#ifdef Q_OS_MAC
+void SearchDlg::resizeEvent(QResizeEvent *event)
+{
+    QDialog::resizeEvent(event);
+    updateSizeGripPos();
+}
+
+void SearchDlg::updateSizeGripPos()
+{
+    int x = width() - _sizeGrip->width();
+    int y = height() - _sizeGrip->height();
+    _sizeGrip->move(x, y);
+}
+#endif
