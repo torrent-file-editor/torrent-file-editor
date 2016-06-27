@@ -1,4 +1,5 @@
-project(torrent-file-editor)
+project("Torrent File Editor")
+set(EXE_NAME "torrent-file-editor")
 
 if(APPLE)
   # CPACK_DMG_DS_STORE_SETUP_SCRIPT was introduced only in CMake 3.5
@@ -14,9 +15,7 @@ endif()
 # Fallback version. Will be used when compiling out of git repository.
 set(APP_VERSION "0.2.2")
 
-set(BUNDLE_DIR_BASE_NAME "Torrent File Editor")
-
-set(MACOSX_BUNDLE_EXECUTABLE_NAME "${BUNDLE_DIR_BASE_NAME}")
+set(MACOSX_BUNDLE_EXECUTABLE_NAME "${PROJECT_NAME}")
 set(MACOSX_BUNDLE_INFO_STRING "Torrent File Editor \${APP_VERSION}. This program is licensed under the GNU GPL.")
 set(MACOSX_BUNDLE_ICON_FILE "application.icns")
 set(MACOSX_BUNDLE_GUI_IDENTIFIER "net.sourceforge.torrent-file-editor")
@@ -179,24 +178,24 @@ if(WIN32)
   set(SOURCES ${SOURCES} ${CMAKE_CURRENT_BINARY_DIR}/app.o)
 endif()
 
-add_executable(${PROJECT_NAME} WIN32 MACOSX_BUNDLE ${QM} ${HEADERS} ${PLAIN_HEADERS} ${SOURCES} ${MOC_SOURCES} ${QRC_SOURCES} ${UI_SOURCES})
+add_executable(${EXE_NAME} WIN32 MACOSX_BUNDLE ${QM} ${HEADERS} ${PLAIN_HEADERS} ${SOURCES} ${MOC_SOURCES} ${QRC_SOURCES} ${UI_SOURCES})
 
-add_dependencies(${PROJECT_NAME} update_version)
+add_dependencies(${EXE_NAME} update_version)
 
 if(QT5_BUILD)
-  target_link_libraries(${PROJECT_NAME} ${START_STATIC} Qt5::Core Qt5::Gui Qt5::Widgets ${END_STATIC})
+  target_link_libraries(${EXE_NAME} ${START_STATIC} Qt5::Core Qt5::Gui Qt5::Widgets ${END_STATIC})
 else()
-  target_link_libraries(${PROJECT_NAME} ${START_STATIC} ${QJSON_LIBRARIES} ${START_STATIC} ${QT_LIBRARIES} ${END_STATIC})
+  target_link_libraries(${EXE_NAME} ${START_STATIC} ${QJSON_LIBRARIES} ${START_STATIC} ${QT_LIBRARIES} ${END_STATIC})
 endif()
 
 if(APPLE)
-  target_link_libraries(${PROJECT_NAME} ${SPARKLE_LIBRARY} "-framework AppKit")
+  target_link_libraries(${EXE_NAME} ${SPARKLE_LIBRARY} "-framework AppKit")
 endif()
 
 add_subdirectory(translations)
 
 if(UNIX AND NOT APPLE)
-  install(TARGETS ${PROJECT_NAME} DESTINATION bin)
+  install(TARGETS ${EXE_NAME} DESTINATION bin)
   install(FILES torrent-file-editor.desktop DESTINATION share/applications)
   install(FILES torrent-file-editor.appdata.xml DESTINATION share/appdata)
   install(FILES icons/app_16.png DESTINATION share/icons/hicolor/16x16/apps RENAME torrent-file-editor.png)
@@ -208,21 +207,21 @@ if(UNIX AND NOT APPLE)
 endif()
 
 if(APPLE)
-  install(TARGETS ${PROJECT_NAME} BUNDLE DESTINATION . COMPONENT Runtime)
+  install(TARGETS ${EXE_NAME} BUNDLE DESTINATION . COMPONENT Runtime)
   set_target_properties(torrent-file-editor PROPERTIES
-    OUTPUT_NAME "${BUNDLE_DIR_BASE_NAME}"
+    OUTPUT_NAME "${PROJECT_NAME}"
   )
   configure_file(MacOSXBundleInfo.plist.in "${CMAKE_BINARY_DIR}/MacOSXBundleInfo.plist.in")
 
   # Install app icon
-  install(FILES icons/application.icns DESTINATION "${BUNDLE_DIR_BASE_NAME}.app/Contents/Resources" COMPONENT Runtime)
+  install(FILES icons/application.icns DESTINATION "${PROJECT_NAME}.app/Contents/Resources" COMPONENT Runtime)
 
   # Install needed Qt plugins by copying each pluging separately
   find_package(Qt5PrintSupport REQUIRED)
   set(PLATFORM_PLUGINS Qt5::QCocoaIntegrationPlugin)
   set(IMAGE_PLUGINS Qt5::QICNSPlugin)
   set(PRINTSUPPORT_PLUGINS Qt5::QCocoaPrinterSupportPlugin)
-  set(PLUGINS_DEST_PATH "${BUNDLE_DIR_BASE_NAME}.app/Contents/PlugIns")
+  set(PLUGINS_DEST_PATH "${PROJECT_NAME}.app/Contents/PlugIns")
 
   foreach(plugin ${PLATFORM_PLUGINS})
     get_target_property(_loc ${plugin} LOCATION)
@@ -240,12 +239,12 @@ if(APPLE)
   endforeach()
 
   # Install public key for Sparkle Updater
-  install(FILES "dsa_pub.pem" DESTINATION "${BUNDLE_DIR_BASE_NAME}.app/Contents/Resources" COMPONENT Runtime)
+  install(FILES "dsa_pub.pem" DESTINATION "${PROJECT_NAME}.app/Contents/Resources" COMPONENT Runtime)
 
   # Install qt.conf file
   # Qt can't find plugins in standard path on case-sensetive file system
   # Write correct case-sensetive folder name in qt.conf file
-  install(FILES "qt.conf" DESTINATION "${BUNDLE_DIR_BASE_NAME}.app/Contents/Resources" COMPONENT Runtime)
+  install(FILES "qt.conf" DESTINATION "${PROJECT_NAME}.app/Contents/Resources" COMPONENT Runtime)
 
   # Now the work of copying dependencies into the bundle/package
   # The quotes are escaped and variables to use at install time have their $ escaped
@@ -256,7 +255,7 @@ if(APPLE)
   while(NOT ${QT_LIBRARY_DIR} MATCHES "lib$")
     get_filename_component(QT_LIBRARY_DIR ${QT_LIBRARY_DIR} DIRECTORY)
   endwhile()
-  SET(APPS "\${CMAKE_INSTALL_PREFIX}/${BUNDLE_DIR_BASE_NAME}.app")
+  SET(APPS "\${CMAKE_INSTALL_PREFIX}/${PROJECT_NAME}.app")
   install(CODE "
     file(GLOB_RECURSE QTPLUGINS
       \"\${CMAKE_INSTALL_PREFIX}/${PLUGINS_DEST_PATH}/*${CMAKE_SHARED_LIBRARY_SUFFIX}\"
@@ -278,7 +277,7 @@ if(APPLE)
   # where CPackConfig.cmake is created by including CPack
   # And then there's ways to customize this as well
   set(CPACK_GENERATOR "DragNDrop")
-  set(CPACK_DMG_VOLUME_NAME ${BUNDLE_DIR_BASE_NAME})
+  set(CPACK_DMG_VOLUME_NAME ${PROJECT_NAME})
   set(CPACK_DMG_DS_STORE_SETUP_SCRIPT "${CMAKE_SOURCE_DIR}/CMakeDMGSetup.scpt")
   set(CPACK_DMG_BACKGROUND_IMAGE "${CMAKE_SOURCE_DIR}/DS_Background.png")
   include(CPack)
