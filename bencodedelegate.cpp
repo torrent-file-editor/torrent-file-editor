@@ -67,6 +67,30 @@ void BencodeDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, c
 
 QSize BencodeDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    //    if (static_cast<BencodeModel::Column>(index.column()) != BencodeModel::Column::Type)
-        return QStyledItemDelegate::sizeHint(option, index);
+    QSize size = QStyledItemDelegate::sizeHint(option, index);
+    if (static_cast<BencodeModel::Column>(index.column()) != BencodeModel::Column::Hex)
+        size += QSize(0, 8);
+
+    if (static_cast<BencodeModel::Column>(index.column()) == BencodeModel::Column::Type)
+        size.setWidth(typeSizeHint().width());
+    return size;
+}
+
+QSize BencodeDelegate::typeSizeHint()
+{
+    static QSize size;
+    if (!size.isValid()) {
+        QComboBox *comboBox = new QComboBox;
+        comboBox->addItem(Bencode::typeToStr(Bencode::Type::Integer), static_cast<int>(Bencode::Type::Integer));
+        comboBox->addItem(Bencode::typeToStr(Bencode::Type::String), static_cast<int>(Bencode::Type::String));
+        comboBox->addItem(Bencode::typeToStr(Bencode::Type::List), static_cast<int>(Bencode::Type::List));
+        comboBox->addItem(Bencode::typeToStr(Bencode::Type::Dictionary), static_cast<int>(Bencode::Type::Dictionary));
+        comboBox->ensurePolished();
+        comboBox->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        comboBox->setSizeAdjustPolicy(QComboBox::AdjustToContents);
+        comboBox->adjustSize();
+        size = comboBox->size();
+        delete comboBox;
+    }
+    return size;
 }
