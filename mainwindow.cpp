@@ -736,6 +736,7 @@ void MainWindow::updateFiles()
     }
 
     updateFilesSize();
+    ui->viewFiles->scrollToTop();
 }
 
 void MainWindow::setPieces(const QByteArray &pieces, const QString &errorString)
