@@ -19,8 +19,9 @@
 #include "bencodedelegate.h"
 #include "bencodemodel.h"
 #include "bencode.h"
+#include "combobox.h"
 
-#include <QComboBox>
+#include <QEvent>
 
 BencodeDelegate::BencodeDelegate(QObject *parent)
     : QStyledItemDelegate(parent)
@@ -32,7 +33,7 @@ QWidget *BencodeDelegate::createEditor(QWidget *parent, const QStyleOptionViewIt
     if (static_cast<BencodeModel::Column>(index.column()) != BencodeModel::Column::Type)
         return QStyledItemDelegate::createEditor(parent, option, index);
 
-    QComboBox *comboBox = new QComboBox(parent);
+    ComboBox *comboBox = new ComboBox(parent);
     comboBox->addItem(Bencode::typeToStr(Bencode::Type::Integer), static_cast<int>(Bencode::Type::Integer));
     comboBox->addItem(Bencode::typeToStr(Bencode::Type::String), static_cast<int>(Bencode::Type::String));
     comboBox->addItem(Bencode::typeToStr(Bencode::Type::List), static_cast<int>(Bencode::Type::List));
@@ -80,7 +81,7 @@ QSize BencodeDelegate::typeSizeHint()
 {
     static QSize size;
     if (!size.isValid()) {
-        QComboBox *comboBox = new QComboBox;
+        ComboBox *comboBox = new ComboBox;
         comboBox->addItem(Bencode::typeToStr(Bencode::Type::Integer), static_cast<int>(Bencode::Type::Integer));
         comboBox->addItem(Bencode::typeToStr(Bencode::Type::String), static_cast<int>(Bencode::Type::String));
         comboBox->addItem(Bencode::typeToStr(Bencode::Type::List), static_cast<int>(Bencode::Type::List));

@@ -98,6 +98,8 @@ set(HEADERS
   ${CMAKE_SOURCE_DIR}/bencodedelegate.h
   ${CMAKE_SOURCE_DIR}/abstracttreemodel.h
   ${CMAKE_SOURCE_DIR}/tableview.h
+  ${CMAKE_SOURCE_DIR}/treeview.h
+  ${CMAKE_SOURCE_DIR}/combobox.h
   ${CMAKE_SOURCE_DIR}/searchdlg.h
 )
 
@@ -136,6 +138,8 @@ set(SOURCES
   ${CMAKE_SOURCE_DIR}/abstracttreeitem.cpp
   ${CMAKE_SOURCE_DIR}/proxystyle.cpp
   ${CMAKE_SOURCE_DIR}/tableview.cpp
+  ${CMAKE_SOURCE_DIR}/treeview.cpp
+  ${CMAKE_SOURCE_DIR}/combobox.cpp
   ${CMAKE_SOURCE_DIR}/searchdlg.cpp
 )
 
