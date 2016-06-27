@@ -170,11 +170,6 @@
       <translation>Add folder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="411"/>
-      <source>Remove files</source>
-      <translation>Remove files</translation>
-    </message>
-    <message>
       <location filename="../mainwindow.ui" line="427"/>
       <source>Move file up</source>
       <translation>Move file up</translation>
@@ -265,11 +260,6 @@
       <translation>Add tree item</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="657"/>
-      <source>Delete tree items</source>
-      <translation>Delete tree items</translation>
-    </message>
-    <message>
       <location filename="../mainwindow.ui" line="673"/>
       <source>Move list item up</source>
       <translation>Move list item up</translation>
@@ -340,6 +330,11 @@
       <translation>Calculate pieces hashes</translation>
     </message>
     <message>
+      <location filename="../mainwindow.ui" line="411"/>
+      <source>Remove selected files</source>
+      <translation>Remove selected files</translation>
+    </message>
+    <message>
       <location filename="../mainwindow.ui" line="571"/>
       <source>Piece size </source>
       <translation>Piece size </translation>
@@ -348,6 +343,11 @@
       <location filename="../mainwindow.ui" line="588"/>
       <source>Total size </source>
       <translation>Total size </translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="657"/>
+      <source>Delete selected tree items</source>
+      <translation>Delete selected tree items</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="757"/>
@@ -396,7 +396,7 @@
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="297"/>
-      <location filename="../mainwindow.cpp" line="745"/>
+      <location filename="../mainwindow.cpp" line="748"/>
       <source>Error</source>
       <translation>Error</translation>
     </message>
@@ -440,60 +440,60 @@ Do you want to set torrent root folder and try again?</translation>
       <translation>Add File</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="613"/>
+      <location filename="../mainwindow.cpp" line="614"/>
       <source>Add Folder</source>
       <translation>Add Folder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="752"/>
+      <location filename="../mainwindow.cpp" line="755"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translation>Line: %1 of %2 Col: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="934"/>
-      <location filename="../mainwindow.cpp" line="942"/>
+      <location filename="../mainwindow.cpp" line="937"/>
+      <location filename="../mainwindow.cpp" line="945"/>
       <source>Error on %1 line: %2</source>
       <translation>Error on %1 line: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1082"/>
+      <location filename="../mainwindow.cpp" line="1085"/>
       <source>B</source>
       <translation>B</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1086"/>
+      <location filename="../mainwindow.cpp" line="1089"/>
       <source>KiB</source>
       <translation>KiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1090"/>
+      <location filename="../mainwindow.cpp" line="1093"/>
       <source>MiB</source>
       <translation>MiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1094"/>
+      <location filename="../mainwindow.cpp" line="1097"/>
       <source>GiB</source>
       <translation>GiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1098"/>
+      <location filename="../mainwindow.cpp" line="1101"/>
       <source>TiB</source>
       <translation>TiB
 
 Tebibyte</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1116"/>
+      <location filename="../mainwindow.cpp" line="1119"/>
       <source>Save file</source>
       <translation>Save file</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1117"/>
+      <location filename="../mainwindow.cpp" line="1120"/>
       <source>Untitled</source>
       <translation>Untitled</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1118"/>
+      <location filename="../mainwindow.cpp" line="1121"/>
       <source>Save file "%1"?</source>
       <translation>Save file "%1"?</translation>
     </message>

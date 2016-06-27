@@ -170,11 +170,6 @@
       <translation>폴더 추가</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="411"/>
-      <source>Remove files</source>
-      <translation>파일 제거</translation>
-    </message>
-    <message>
       <location filename="../mainwindow.ui" line="427"/>
       <source>Move file up</source>
       <translation>파일을 위로 이동</translation>
@@ -250,11 +245,6 @@
       <translation>트리 항목 추가</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="657"/>
-      <source>Delete tree items</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
       <location filename="../mainwindow.ui" line="673"/>
       <source>Move list item up</source>
       <translation type="unfinished">Move list item up</translation>
@@ -325,6 +315,11 @@
       <translation type="unfinished"/>
     </message>
     <message>
+      <location filename="../mainwindow.ui" line="411"/>
+      <source>Remove selected files</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
       <location filename="../mainwindow.ui" line="571"/>
       <source>Piece size </source>
       <translation>조각 크기 </translation>
@@ -333,6 +328,11 @@
       <location filename="../mainwindow.ui" line="588"/>
       <source>Total size </source>
       <translation>전체 크기 </translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="657"/>
+      <source>Delete selected tree items</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="757"/>
@@ -381,7 +381,7 @@
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="297"/>
-      <location filename="../mainwindow.cpp" line="745"/>
+      <location filename="../mainwindow.cpp" line="748"/>
       <source>Error</source>
       <translation>오류</translation>
     </message>
@@ -421,58 +421,58 @@ Do you want to set torrent root folder and try again?</source>
       <translation>파일 추가</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="613"/>
+      <location filename="../mainwindow.cpp" line="614"/>
       <source>Add Folder</source>
       <translation type="unfinished">폴더 추가</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="752"/>
+      <location filename="../mainwindow.cpp" line="755"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translation>행: %2 중 %1 열: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="934"/>
-      <location filename="../mainwindow.cpp" line="942"/>
+      <location filename="../mainwindow.cpp" line="937"/>
+      <location filename="../mainwindow.cpp" line="945"/>
       <source>Error on %1 line: %2</source>
       <translation>행 %2에서 경고 %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1082"/>
+      <location filename="../mainwindow.cpp" line="1085"/>
       <source>B</source>
       <translation type="unfinished">B</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1086"/>
+      <location filename="../mainwindow.cpp" line="1089"/>
       <source>KiB</source>
       <translation type="unfinished">KiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1090"/>
+      <location filename="../mainwindow.cpp" line="1093"/>
       <source>MiB</source>
       <translation type="unfinished">MiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1094"/>
+      <location filename="../mainwindow.cpp" line="1097"/>
       <source>GiB</source>
       <translation type="unfinished">GiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1098"/>
+      <location filename="../mainwindow.cpp" line="1101"/>
       <source>TiB</source>
       <translation type="unfinished">TiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1116"/>
+      <location filename="../mainwindow.cpp" line="1119"/>
       <source>Save file</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1117"/>
+      <location filename="../mainwindow.cpp" line="1120"/>
       <source>Untitled</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1118"/>
+      <location filename="../mainwindow.cpp" line="1121"/>
       <source>Save file "%1"?</source>
       <translation type="unfinished"/>
     </message>

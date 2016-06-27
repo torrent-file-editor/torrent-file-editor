@@ -170,11 +170,6 @@
       <translation>Добавить папку</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="411"/>
-      <source>Remove files</source>
-      <translation>Удалить файлы</translation>
-    </message>
-    <message>
       <location filename="../mainwindow.ui" line="427"/>
       <source>Move file up</source>
       <translation>Поднять файл</translation>
@@ -265,11 +260,6 @@
       <translation>Добавить элемент дерева</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="657"/>
-      <source>Delete tree items</source>
-      <translation>Удалить элементы дерева</translation>
-    </message>
-    <message>
       <location filename="../mainwindow.ui" line="673"/>
       <source>Move list item up</source>
       <translation>Поднять элемент списка</translation>
@@ -340,6 +330,11 @@
       <translation>Посчитать хеши частей</translation>
     </message>
     <message>
+      <location filename="../mainwindow.ui" line="411"/>
+      <source>Remove selected files</source>
+      <translation>Удалить выбранные файлы</translation>
+    </message>
+    <message>
       <location filename="../mainwindow.ui" line="571"/>
       <source>Piece size </source>
       <translation>Размер части </translation>
@@ -348,6 +343,11 @@
       <location filename="../mainwindow.ui" line="588"/>
       <source>Total size </source>
       <translation>Общий размер </translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="657"/>
+      <source>Delete selected tree items</source>
+      <translation>Удалить выбранные элементы дерева</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="757"/>
@@ -396,7 +396,7 @@
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="297"/>
-      <location filename="../mainwindow.cpp" line="745"/>
+      <location filename="../mainwindow.cpp" line="748"/>
       <source>Error</source>
       <translation>Ошибка</translation>
     </message>
@@ -440,58 +440,58 @@ Do you want to set torrent root folder and try again?</source>
       <translation>Добавить файл</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="613"/>
+      <location filename="../mainwindow.cpp" line="614"/>
       <source>Add Folder</source>
       <translation>Добавить папку</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="752"/>
+      <location filename="../mainwindow.cpp" line="755"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translation>Строка: %1 из %2 Кол: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="934"/>
-      <location filename="../mainwindow.cpp" line="942"/>
+      <location filename="../mainwindow.cpp" line="937"/>
+      <location filename="../mainwindow.cpp" line="945"/>
       <source>Error on %1 line: %2</source>
       <translation>Ошибка в строке %1: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1082"/>
+      <location filename="../mainwindow.cpp" line="1085"/>
       <source>B</source>
       <translation>Б</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1086"/>
+      <location filename="../mainwindow.cpp" line="1089"/>
       <source>KiB</source>
       <translation>КБ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1090"/>
+      <location filename="../mainwindow.cpp" line="1093"/>
       <source>MiB</source>
       <translation>МБ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1094"/>
+      <location filename="../mainwindow.cpp" line="1097"/>
       <source>GiB</source>
       <translation>ГБ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1098"/>
+      <location filename="../mainwindow.cpp" line="1101"/>
       <source>TiB</source>
       <translation>ТБ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1116"/>
+      <location filename="../mainwindow.cpp" line="1119"/>
       <source>Save file</source>
       <translation>Сохранить файл</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1117"/>
+      <location filename="../mainwindow.cpp" line="1120"/>
       <source>Untitled</source>
       <translation>Без названия</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1118"/>
+      <location filename="../mainwindow.cpp" line="1121"/>
       <source>Save file "%1"?</source>
       <translation>Сохранить файл "%1"?</translation>
     </message>
