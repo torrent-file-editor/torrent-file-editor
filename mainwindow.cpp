@@ -606,6 +606,7 @@ void MainWindow::addFile()
     }
 
     updateFilesSize();
+    ui->viewFiles->scrollToBottom();
 }
 
 void MainWindow::addFolder()
@@ -639,6 +640,7 @@ void MainWindow::addFolder()
         ui->leBaseFolder->setText(path);
 
     updateFilesSize();
+    ui->viewFiles->scrollToBottom();
 }
 
 void MainWindow::removeFile()
