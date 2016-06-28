@@ -145,6 +145,7 @@ MainWindow::MainWindow(QWidget *parent)
     , _formatFilters(QStringList())
     , _lastFolder()
     , _searchDlg(0)
+    , _torrentLastFolder()
 {
     ui->setupUi(this);
 
@@ -318,11 +319,12 @@ void MainWindow::open()
     if (!showNeedSaveFile())
         return;
 
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Open"), "", _formatFilters.join(";;"));
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open"), _torrentLastFolder, _formatFilters.join(";;"));
 
     if (fileName.isEmpty())
         return;
 
+    _torrentLastFolder = fileName.section('/', 0, -2);
     open(fileName);
 }
 
@@ -342,9 +344,11 @@ void MainWindow::saveAs()
     }
 
     QString filter;
-    QString fileName = QFileDialog::getSaveFileName(this, tr("Save As"), "", _formatFilters.join(";;"), &filter);
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Save As"), _torrentLastFolder, _formatFilters.join(";;"), &filter);
     if (fileName.isEmpty())
         return;
+
+    _torrentLastFolder = fileName.section('/', 0, -2);
 
     if (_formatFilters.at(0) == filter && !fileName.endsWith(".torrent"))
         fileName += ".torrent";
@@ -605,6 +609,7 @@ void MainWindow::addFile()
         return;
 
     _lastFolder = QFileInfo(files.first()).absolutePath();
+    ui->leBaseFolder->setFolder(_lastFolder);
     QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->viewFiles->model());
     foreach (const QString &file, files) {
         addFilesRow(file, QFileInfo(file).size());
@@ -625,6 +630,7 @@ void MainWindow::addFolder()
         return;
 
     _lastFolder = QFileInfo(path).absolutePath();
+    ui->leBaseFolder->setFolder(_lastFolder);
     QDirIterator it(path, QDirIterator::Subdirectories);
 
     QStringList files;
@@ -738,6 +744,8 @@ void MainWindow::updateFiles()
     QString dir = ui->leBaseFolder->text();
     if (!QDir(dir).exists())
         return;
+
+    _lastFolder = dir;
 
     // Try to find files on disk and set full path if exists
     for (int i = 0; i < model->rowCount(); ++i) {

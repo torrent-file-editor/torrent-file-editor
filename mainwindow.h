@@ -144,6 +144,7 @@ private:
     QStringList _formatFilters;
     QString _lastFolder;
     SearchDlg *_searchDlg;
+    QString _torrentLastFolder;
 
     static MainWindow *_instance;
 };

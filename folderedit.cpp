@@ -27,6 +27,7 @@
 FolderEdit::FolderEdit(QWidget *parent)
     : LineEditWidget(parent)
     , _pbOpenFolder(new QPushButton(this))
+    , _path()
 {
     _pbOpenFolder->setObjectName("pbOpenUrl");
     _pbOpenFolder->setIcon(qApp->style()->standardIcon(QStyle::SP_DirOpenIcon));
@@ -46,12 +47,18 @@ FolderEdit::FolderEdit(QWidget *parent)
     connect(_pbOpenFolder, SIGNAL(clicked()), SLOT(openFolder()));
 }
 
+void FolderEdit::setFolder(const QString &path)
+{
+    _path = path;
+}
+
 void FolderEdit::openFolder()
 {
-    QString path = QFileDialog::getExistingDirectory(this, tr("Add Folder"));
+    QString path = QFileDialog::getExistingDirectory(this, tr("Add Folder"), _path);
     if (path.isEmpty())
         return;
 
+    _path = path;
     setText(path);
     emit textEdited(path);
 }

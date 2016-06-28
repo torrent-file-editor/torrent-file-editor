@@ -28,6 +28,7 @@ class FolderEdit : public LineEditWidget
 
 public:
     explicit FolderEdit(QWidget *parent = 0);
+    void setFolder(const QString &path);
 
 public slots:
     void openFolder();
@@ -35,4 +36,5 @@ public slots:
 private:
     // Inner widgets
     QPushButton *_pbOpenFolder;
+    QString _path;
 };
