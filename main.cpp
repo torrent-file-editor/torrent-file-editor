@@ -208,6 +208,10 @@ int main(int argc, char *argv[])
     if (translator.load(QLocale(), "torrentfileeditor", "_", ":/translations"))
         a.installTranslator(&translator);
 
+    QTranslator qtTranslator;
+    if (qtTranslator.load(QLocale(), "qt", "_", ":/translations"))
+        a.installTranslator(&qtTranslator);
+
     MainWindow w;
     a.setMainWindow(&w);
     w.show();

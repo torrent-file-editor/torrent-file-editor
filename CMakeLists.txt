@@ -78,12 +78,23 @@ macro(qt_add_translation ARG1 ARG2)
 endmacro()
 
 configure_file(translations.qrc.in translations.qrc COPYONLY)
+if(WIN32)
+  configure_file(qt_translations.qrc.in qt_translations.qrc COPYONLY)
+endif()
 
 set(LANGS ar cs de en ko ru)
 
 foreach(l ${LANGS})
   list(APPEND TRANSLATIONS ${CMAKE_SOURCE_DIR}/translations/torrentfileeditor_${l}.ts)
 endforeach()
+
+if(WIN32 AND NOT QT5_BUILD)
+  foreach(l ${LANGS})
+    if(NOT l STREQUAL "en")
+      configure_file("/usr/i686-w64-mingw32/sys-root/mingw/share/qt4/translations/qt_${l}.qm" "qt_${l}.qm" COPYONLY)
+    endif()
+  endforeach()
+endif()
 
 set(HEADERS
   ${CMAKE_SOURCE_DIR}/application.h
@@ -157,6 +168,10 @@ set(RESOURCES
   ${CMAKE_BINARY_DIR}/translations.qrc
   resources.qrc
 )
+
+if(WIN32)
+  list(APPEND RESOURCES "${CMAKE_BINARY_DIR}/qt_translations.qrc")
+endif()
 
 QT4_ADD_TRANSLATION(QM ${TRANSLATIONS})
 qt4_add_resources(QRC_SOURCES ${RESOURCES})
