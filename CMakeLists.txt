@@ -40,6 +40,11 @@ else()
   option(QT5_BUILD "Force Qt5 build" OFF)
 endif()
 
+option(DISABLE_DONATION "Do not show donation text in About dialog" OFF)
+if(DISABLE_DONATION)
+  add_definitions(-DNO_DONATION)
+endif()
+
 if(QT5_BUILD)
   find_package(Qt5Core REQUIRED)
   find_package(Qt5Gui REQUIRED)

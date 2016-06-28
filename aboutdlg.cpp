@@ -45,6 +45,10 @@ AboutDlg::AboutDlg(QWidget *parent)
                        .arg(qApp->applicationVersion())
                        .arg(Application::buildDateTime().date().toString(Qt::DefaultLocaleLongDate)));
     setWindowTitle(QString(tr("About %1")).arg(qApp->applicationName()));
+
+#ifdef NO_DONATION
+    ui->wdgDonation->hide();
+#endif
 }
 
 AboutDlg::~AboutDlg()
