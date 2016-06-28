@@ -298,8 +298,8 @@ if(APPLE)
   include(CPack)
 
   add_custom_target("dmg"
-    COMMAND ${CMAKE_COMMAND} -DAPP_NAME=${PROJECT_NAME} -P "${CMAKE_CURRENT_SOURCE_DIR}/Dmg.cmake"
-    DEPENDS "${PROJECT_NAME}"
+    COMMAND ${CMAKE_COMMAND} -DAPP_NAME=${EXE_NAME} -P "${CMAKE_CURRENT_SOURCE_DIR}/Dmg.cmake"
+    DEPENDS "${EXE_NAME}"
     WORKING_DIRECTORY "${CMAKE_BINARY_DIR}"
   )
 endif()
