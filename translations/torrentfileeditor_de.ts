@@ -4,9 +4,19 @@
   <context>
     <name>AboutDlg</name>
     <message>
-      <location filename="../aboutdlg.ui" line="69"/>
+      <location filename="../aboutdlg.ui" line="58"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt@land.ru"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Autor: Ivan Romanov &lt;a href="mailto:drizt@land.ru"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Lizenz: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Homepage: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Quellen: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Dank an &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; für das Anwendungssymbol&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <location filename="../aboutdlg.ui" line="117"/>
+      <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../aboutdlg.ui" line="127"/>
+      <source>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="47"/>
@@ -53,12 +63,12 @@
   <context>
     <name>FolderEdit</name>
     <message>
-      <location filename="../folderedit.cpp" line="41"/>
+      <location filename="../folderedit.cpp" line="42"/>
       <source>Choose folder</source>
       <translation>Ordner auswählen</translation>
     </message>
     <message>
-      <location filename="../folderedit.cpp" line="51"/>
+      <location filename="../folderedit.cpp" line="57"/>
       <source>Add Folder</source>
       <translation type="unfinished">Ordner hinzufügen</translation>
     </message>
@@ -73,7 +83,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
-      <location filename="../mainwindow.cpp" line="321"/>
+      <location filename="../mainwindow.cpp" line="322"/>
       <source>Open</source>
       <translation>Öffnen</translation>
     </message>
@@ -85,7 +95,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="345"/>
+      <location filename="../mainwindow.cpp" line="347"/>
       <source>Save As</source>
       <translation>Speichern als</translation>
     </message>
@@ -345,83 +355,83 @@
       <translation>Unbearbeitet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="170"/>
+      <location filename="../mainwindow.cpp" line="171"/>
       <source>Need to calculate piece hashes</source>
       <translation>Stück-Hashwerte müssen berechnet werden</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="171"/>
+      <location filename="../mainwindow.cpp" line="172"/>
       <source>Please wait</source>
       <translation>Bitte warten</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="181"/>
+      <location filename="../mainwindow.cpp" line="182"/>
       <source>Auto</source>
       <translation>Automatisch</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="189"/>
+      <location filename="../mainwindow.cpp" line="190"/>
       <source>Path</source>
       <translation>Pfad</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="189"/>
+      <location filename="../mainwindow.cpp" line="190"/>
       <source>Size</source>
       <translation>Größe</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="151"/>
+      <location filename="../mainwindow.cpp" line="152"/>
       <source>Torrents (*.torrent)</source>
       <translation>Torrents (*.torrent)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="152"/>
+      <location filename="../mainwindow.cpp" line="153"/>
       <source>uTorrent resume files (*.dat)</source>
       <translation>uTorrent-Fortsetzungsdateien (*.dat)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="189"/>
+      <location filename="../mainwindow.cpp" line="190"/>
       <source># Pieces</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="298"/>
-      <location filename="../mainwindow.cpp" line="764"/>
+      <location filename="../mainwindow.cpp" line="299"/>
+      <location filename="../mainwindow.cpp" line="772"/>
       <source>Error</source>
       <translation>Fehler</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="298"/>
+      <location filename="../mainwindow.cpp" line="299"/>
       <source>Can't open file</source>
       <translatorcomment>Не могу открыть файл</translatorcomment>
       <translation>Datei kann nicht geöffnet werden</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="552"/>
+      <location filename="../mainwindow.cpp" line="556"/>
       <source>Warning</source>
       <translation>Warnung</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="528"/>
+      <location filename="../mainwindow.cpp" line="532"/>
       <source>Torrent root folder is not set</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="340"/>
-      <location filename="../mainwindow.cpp" line="995"/>
+      <location filename="../mainwindow.cpp" line="342"/>
       <location filename="../mainwindow.cpp" line="1003"/>
-      <location filename="../mainwindow.cpp" line="1014"/>
+      <location filename="../mainwindow.cpp" line="1011"/>
+      <location filename="../mainwindow.cpp" line="1022"/>
       <source>Can't save file</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="340"/>
-      <location filename="../mainwindow.cpp" line="995"/>
+      <location filename="../mainwindow.cpp" line="342"/>
+      <location filename="../mainwindow.cpp" line="1003"/>
       <source>BEncoded data is not valid</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="529"/>
+      <location filename="../mainwindow.cpp" line="533"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
@@ -430,68 +440,68 @@ Do you want to set torrent root folder and try again?</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="552"/>
+      <location filename="../mainwindow.cpp" line="556"/>
       <source>The torrent root folder is not common.</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="603"/>
+      <location filename="../mainwindow.cpp" line="607"/>
       <source>Add File</source>
       <translation>Datei hinzufügen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="623"/>
+      <location filename="../mainwindow.cpp" line="628"/>
       <source>Add Folder</source>
       <translation type="unfinished">Ordner hinzufügen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="771"/>
+      <location filename="../mainwindow.cpp" line="779"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translation>Zeile: %1 von %2 Spalte: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="953"/>
       <location filename="../mainwindow.cpp" line="961"/>
+      <location filename="../mainwindow.cpp" line="969"/>
       <source>Error on %1 line: %2</source>
       <translation>Fehler bei %1 Zeile: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1111"/>
+      <location filename="../mainwindow.cpp" line="1119"/>
       <source>B</source>
       <translation>B</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1115"/>
+      <location filename="../mainwindow.cpp" line="1123"/>
       <source>KiB</source>
       <translation>KiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1119"/>
+      <location filename="../mainwindow.cpp" line="1127"/>
       <source>MiB</source>
       <translation>MiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1123"/>
+      <location filename="../mainwindow.cpp" line="1131"/>
       <source>GiB</source>
       <translation>GiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1127"/>
+      <location filename="../mainwindow.cpp" line="1135"/>
       <source>TiB</source>
       <translation>TiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1145"/>
+      <location filename="../mainwindow.cpp" line="1153"/>
       <source>Save file</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1146"/>
+      <location filename="../mainwindow.cpp" line="1154"/>
       <source>Untitled</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1147"/>
+      <location filename="../mainwindow.cpp" line="1155"/>
       <source>Save file "%1"?</source>
       <translation type="unfinished"/>
     </message>
