@@ -237,6 +237,7 @@ if(APPLE)
   set(IMAGE_PLUGINS Qt5::QICNSPlugin)
   set(PRINTSUPPORT_PLUGINS Qt5::QCocoaPrinterSupportPlugin)
   set(PLUGINS_DEST_PATH "${PROJECT_NAME}.app/Contents/PlugIns")
+  set(TRANSLATIONS_DEST_PATH "${PROJECT_NAME}.app/Contents/Resources/translations")
 
   foreach(plugin ${PLATFORM_PLUGINS})
     get_target_property(_loc ${plugin} LOCATION)
@@ -270,6 +271,14 @@ if(APPLE)
   while(NOT ${QT_LIBRARY_DIR} MATCHES "lib$")
     get_filename_component(QT_LIBRARY_DIR ${QT_LIBRARY_DIR} DIRECTORY)
   endwhile()
+
+  foreach(l ${LANGS})
+    # In Qt lacks some languages
+    if(EXISTS "${QT_LIBRARY_DIR}/../translations/qtbase_${l}.qm")
+      install(FILES "${QT_LIBRARY_DIR}/../translations/qtbase_${l}.qm" DESTINATION ${TRANSLATIONS_DEST_PATH} COMPONENT Runtime)
+    endif()
+  endforeach()
+
   SET(APPS "\${CMAKE_INSTALL_PREFIX}/${PROJECT_NAME}.app")
   install(CODE "
     file(GLOB_RECURSE QTPLUGINS

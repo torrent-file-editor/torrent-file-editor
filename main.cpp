@@ -24,6 +24,7 @@
 #include <QTranslator>
 #include <QLocale>
 #include <QFile>
+#include <QLibraryInfo>
 
 #ifdef HAVE_QT5
 # include <QJsonDocument>
@@ -208,8 +209,20 @@ int main(int argc, char *argv[])
     if (translator.load(QLocale(), "torrentfileeditor", "_", ":/translations"))
         a.installTranslator(&translator);
 
+#ifdef Q_OS_WIN
+    QString qtTranslationsPath = ":/translations";
+#else
+    QString qtTranslationsPath = QLibraryInfo::location(QLibraryInfo::TranslationsPath);
+#endif
+
+#ifdef HAVE_QT5
+    QString qtTranslationsName = "qtbase";
+#else
+    QString qtTranslationsName = "qt";
+#endif
+
     QTranslator qtTranslator;
-    if (qtTranslator.load(QLocale(), "qt", "_", ":/translations"))
+    if (qtTranslator.load(QLocale(), qtTranslationsName, "_", qtTranslationsPath))
         a.installTranslator(&qtTranslator);
 
     MainWindow w;
