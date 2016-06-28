@@ -329,14 +329,16 @@ void MainWindow::save()
 {
     if (_fileName.isEmpty())
         saveAs();
-
-    saveTo(_fileName);
+    else
+        saveTo(_fileName);
 }
 
 void MainWindow::saveAs()
 {
-    if (!_bencodeModel->isValid())
+    if (!_bencodeModel->isValid()) {
+        QMessageBox::warning(this, tr("Can't save file"), tr("BEncoded data is not valid"));
         return;
+    }
 
     QString filter;
     QString fileName = QFileDialog::getSaveFileName(this, tr("Save As"), "", _formatFilters.join(";;"), &filter);
@@ -975,19 +977,29 @@ void MainWindow::updateRaw()
 
 bool MainWindow::saveTo(const QString &fileName)
 {
-    if (!_bencodeModel->isValid())
+    if (!_bencodeModel->isValid()) {
+        QMessageBox::warning(this, tr("Can't save file"), tr("BEncoded data is not valid"));
         return false;
+    }
 
     QByteArray raw = _bencodeModel->toRaw();
     QFile file(fileName);
-    file.open(QIODevice::WriteOnly);
-    file.write(raw);
-    file.close();
-
-    _bencodeModel->resetModified();
-    updateTitle();
-
-    return true;
+    if (file.open(QIODevice::WriteOnly)) {
+        if (file.write(raw) == -1) {
+            QMessageBox::warning(this, tr("Can't save file"), file.errorString());
+            return false;
+        }
+        else {
+            file.close();
+            _bencodeModel->resetModified();
+            updateTitle();
+            return true;
+        }
+    }
+    else {
+        QMessageBox::warning(this, tr("Can't save file"), file.errorString());
+        return false;
+    }
 }
 
 qulonglong MainWindow::autoPieceSize() const
