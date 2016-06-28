@@ -453,11 +453,17 @@ void MainWindow::updateTab(int n)
         updateSimple();
         break;
 
+    case FilesTab:
+        ui->viewFiles->setFocus();
+        break;
+
     case JsonTreeTab:
+        ui->treeJson->setFocus();
         break;
 
     case RawTab:
         updateRaw();
+        ui->pteEditor->setFocus();
         break;
 
     default:
