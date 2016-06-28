@@ -56,8 +56,8 @@ void SearchDlg::searchNext()
 {
     _searchIndex += ui->rdDown->isChecked() ? +1 : -1;
 
-    if (ui->rdDown->isChecked() && _searchIndex == _searchList.size()
-        || ui->rdUp->isChecked() && _searchIndex == -1) {
+    if ((ui->rdDown->isChecked() && _searchIndex == _searchList.size())
+        || (ui->rdUp->isChecked() && _searchIndex == -1)) {
 
         resetSearchList();
     }
