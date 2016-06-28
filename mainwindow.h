@@ -93,6 +93,7 @@ public slots:
     void removeFile();
     void upFile();
     void downFile();
+    void reloadFiles();
     void updateFiles();
     void setPieces(const QByteArray &pieces, const QString &errorString);
     void updateRawPosition();

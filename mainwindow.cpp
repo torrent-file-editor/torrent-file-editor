@@ -228,6 +228,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->btnMakeTorrent->setIcon(QIcon(":/icons/hammer.png"));
     ui->btnAddFile->setIcon(QIcon::fromTheme("document-new", QIcon(":/icons/document-new.png")));
     ui->btnAddFolder->setIcon(QIcon::fromTheme("folder-new", QIcon(":/icons/folder-new.png")));
+    ui->btnReloadFiles->setIcon(QIcon::fromTheme("view-refresh", QIcon(":/icons/view-refresh")));
     ui->btnUpFile->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowUp));
     ui->btnDownFile->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowDown));
     ui->btnFilesFilter->setIcon(QIcon(":/icons/files-filter.png"));
@@ -702,6 +703,13 @@ void MainWindow::downFile()
     QList<QStandardItem*> list = model->takeRow(row);
     model->insertRow(row + 1, list);
     ui->viewFiles->selectRow(row + 1);
+}
+
+void MainWindow::reloadFiles()
+{
+    QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->viewFiles->model());
+    model->removeRows(0, model->rowCount());
+    updateFiles();
 }
 
 void MainWindow::updateFiles()
