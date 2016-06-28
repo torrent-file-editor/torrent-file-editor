@@ -85,7 +85,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="342"/>
+      <location filename="../mainwindow.cpp" line="344"/>
       <source>Save As</source>
       <translation>다른 이름으로 저장</translation>
     </message>
@@ -381,7 +381,7 @@
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="297"/>
-      <location filename="../mainwindow.cpp" line="748"/>
+      <location filename="../mainwindow.cpp" line="750"/>
       <source>Error</source>
       <translation>오류</translation>
     </message>
@@ -392,17 +392,31 @@
       <translation>파일을 열 수 없습니다.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="543"/>
+      <location filename="../mainwindow.cpp" line="545"/>
       <source>Warning</source>
       <translation>경고</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="519"/>
+      <location filename="../mainwindow.cpp" line="521"/>
       <source>Torrent root folder is not set</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="520"/>
+      <location filename="../mainwindow.cpp" line="339"/>
+      <location filename="../mainwindow.cpp" line="981"/>
+      <location filename="../mainwindow.cpp" line="989"/>
+      <location filename="../mainwindow.cpp" line="1000"/>
+      <source>Can't save file</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="339"/>
+      <location filename="../mainwindow.cpp" line="981"/>
+      <source>BEncoded data is not valid</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="522"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
@@ -411,68 +425,68 @@ Do you want to set torrent root folder and try again?</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="543"/>
+      <location filename="../mainwindow.cpp" line="545"/>
       <source>The torrent root folder is not common.</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="594"/>
+      <location filename="../mainwindow.cpp" line="596"/>
       <source>Add File</source>
       <translation>파일 추가</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="614"/>
+      <location filename="../mainwindow.cpp" line="616"/>
       <source>Add Folder</source>
       <translation type="unfinished">폴더 추가</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="755"/>
+      <location filename="../mainwindow.cpp" line="757"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translation>행: %2 중 %1 열: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="937"/>
-      <location filename="../mainwindow.cpp" line="945"/>
+      <location filename="../mainwindow.cpp" line="939"/>
+      <location filename="../mainwindow.cpp" line="947"/>
       <source>Error on %1 line: %2</source>
       <translation>행 %2에서 경고 %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1085"/>
+      <location filename="../mainwindow.cpp" line="1097"/>
       <source>B</source>
       <translation type="unfinished">B</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1089"/>
+      <location filename="../mainwindow.cpp" line="1101"/>
       <source>KiB</source>
       <translation type="unfinished">KiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1093"/>
+      <location filename="../mainwindow.cpp" line="1105"/>
       <source>MiB</source>
       <translation type="unfinished">MiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1097"/>
+      <location filename="../mainwindow.cpp" line="1109"/>
       <source>GiB</source>
       <translation type="unfinished">GiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1101"/>
+      <location filename="../mainwindow.cpp" line="1113"/>
       <source>TiB</source>
       <translation type="unfinished">TiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1119"/>
+      <location filename="../mainwindow.cpp" line="1131"/>
       <source>Save file</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1120"/>
+      <location filename="../mainwindow.cpp" line="1132"/>
       <source>Untitled</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1121"/>
+      <location filename="../mainwindow.cpp" line="1133"/>
       <source>Save file "%1"?</source>
       <translation type="unfinished"/>
     </message>
