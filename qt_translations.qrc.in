@@ -1,5 +1,14 @@
-<!DOCTYPE RCC><RCC version="1.0">
-<qresource prefix="/translations">
-  <file>qt_ru.qm</file>
-</qresource>
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/translations">
+        <file>qt_ar.qm</file>
+        <file>qt_cs.qm</file>
+        <file>qt_de.qm</file>
+        <!-- qt_en.qm missed -->
+        <file>qt_hu.qm</file>
+        <file>qt_ko.qm</file>
+        <!-- qt_nl.qm missed -->
+        <file>qt_ru.qm</file>
+        <!-- qt_tr.qm missed -->
+    </qresource>
 </RCC>

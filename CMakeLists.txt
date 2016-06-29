@@ -87,7 +87,7 @@ if(WIN32)
   configure_file(qt_translations.qrc.in qt_translations.qrc COPYONLY)
 endif()
 
-set(LANGS ar cs de en ko ru)
+set(LANGS ar cs de en ko ru hu nl tr)
 
 foreach(l ${LANGS})
   list(APPEND TRANSLATIONS ${CMAKE_SOURCE_DIR}/translations/torrentfileeditor_${l}.ts)
@@ -95,7 +95,7 @@ endforeach()
 
 if(WIN32 AND NOT QT5_BUILD)
   foreach(l ${LANGS})
-    if(NOT l STREQUAL "en")
+    if(EXISTS "/usr/i686-w64-mingw32/sys-root/mingw/share/qt4/translations/qt_${l}.qm")
       configure_file("/usr/i686-w64-mingw32/sys-root/mingw/share/qt4/translations/qt_${l}.qm" "qt_${l}.qm" COPYONLY)
     endif()
   endforeach()

@@ -11,17 +11,17 @@
     <message>
       <location filename="../aboutdlg.ui" line="117"/>
       <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">&lt;h3&gt;Beer for Developer&lt;/h3&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="127"/>
       <source>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="47"/>
       <source>About %1</source>
-      <translation type="unfinished">%1 정보</translation>
+      <translation>%1 정보</translation>
     </message>
   </context>
   <context>
@@ -70,7 +70,7 @@
     <message>
       <location filename="../folderedit.cpp" line="57"/>
       <source>Add Folder</source>
-      <translation type="unfinished">폴더 추가</translation>
+      <translation>폴더 추가</translation>
     </message>
   </context>
   <context>
@@ -142,12 +142,12 @@
     <message>
       <location filename="../mainwindow.ui" line="216"/>
       <source>URL</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">URL</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="223"/>
       <source>Date created</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Date created</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="237"/>
@@ -182,7 +182,7 @@
     <message>
       <location filename="../mainwindow.ui" line="404"/>
       <source>Reload files list from current torrent data</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Reload files list from current torrent data</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="443"/>
@@ -197,7 +197,7 @@
     <message>
       <location filename="../mainwindow.ui" line="479"/>
       <source>Filter by </source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Filter by </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="486"/>
@@ -217,37 +217,52 @@
     &lt;p style="margin-left: 20px"&gt;full file path matches Perl-like regular expression&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">&lt;html&gt;
+  &lt;head/&gt;
+  &lt;body&gt;
+    &lt;p&gt;&lt;b&gt;name&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;file name with extenstion exactly equals with pattern&lt;/p&gt;
+    &lt;br/&gt;
+    &lt;p&gt;&lt;b&gt;extension&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;the symbols after the latest point exactly equals with pattern, for 'archive.tar.gz' it will be 'gz' for example&lt;/p&gt;
+    &lt;br/&gt;
+    &lt;p&gt;&lt;b&gt;wildcards&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;file name with extenstion matches with file globbing where '?' is one any symbol and '*' is any numbers of any symbols&lt;/p&gt;
+    &lt;br/&gt;
+    &lt;p&gt;&lt;b&gt;regular expression&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;full file path matches Perl-like regular expression&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="505"/>
       <source>name</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">name</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="510"/>
       <source>extension</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">extension</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="515"/>
       <source>wildcards</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">wildcards</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="520"/>
       <source>regular expression</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">regular expression</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="538"/>
       <source>Filter files</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Filter files</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="633"/>
       <source>Torrent root folder </source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Torrent root folder </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="646"/>
@@ -272,12 +287,12 @@
     <message>
       <location filename="../mainwindow.ui" line="721"/>
       <source>Find</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Find</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="737"/>
       <source>Replace</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Replace</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="830"/>
@@ -327,12 +342,12 @@
     <message>
       <location filename="../mainwindow.ui" line="356"/>
       <source>Calculate pieces hashes</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Calculate pieces hashes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="427"/>
       <source>Remove selected files</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Remove selected files</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="587"/>
@@ -347,7 +362,7 @@
     <message>
       <location filename="../mainwindow.ui" line="673"/>
       <source>Delete selected tree items</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Delete selected tree items</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="773"/>
@@ -392,7 +407,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="190"/>
       <source># Pieces</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished"># Pieces</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="299"/>
@@ -414,7 +429,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="532"/>
       <source>Torrent root folder is not set</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Torrent root folder is not set</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="342"/>
@@ -422,13 +437,13 @@
       <location filename="../mainwindow.cpp" line="1011"/>
       <location filename="../mainwindow.cpp" line="1022"/>
       <source>Can't save file</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Can't save file</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="342"/>
       <location filename="../mainwindow.cpp" line="1003"/>
       <source>BEncoded data is not valid</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">BEncoded data is not valid</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="533"/>
@@ -437,12 +452,16 @@
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
 
 Do you want to set torrent root folder and try again?</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
+
+If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
+
+Do you want to set torrent root folder and try again?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="556"/>
       <source>The torrent root folder is not common.</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">The torrent root folder is not common.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="607"/>
@@ -452,7 +471,7 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../mainwindow.cpp" line="628"/>
       <source>Add Folder</source>
-      <translation type="unfinished">폴더 추가</translation>
+      <translation>폴더 추가</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="779"/>
@@ -493,17 +512,17 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../mainwindow.cpp" line="1153"/>
       <source>Save file</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Save file</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1154"/>
       <source>Untitled</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Untitled</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1155"/>
       <source>Save file "%1"?</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Save file "%1"?</translation>
     </message>
   </context>
   <context>
@@ -539,36 +558,36 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../searchdlg.ui" line="27"/>
       <source>Key</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Key</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="39"/>
       <location filename="../searchdlg.ui" line="96"/>
       <source>Match case</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Match case</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="46"/>
       <location filename="../searchdlg.ui" line="103"/>
       <source>Exact match</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Exact match</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="56"/>
       <location filename="../searchdlg.ui" line="113"/>
       <source>Wildcards</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Wildcards</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="63"/>
       <location filename="../searchdlg.ui" line="120"/>
       <source>Regular expression</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Regular expression</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="84"/>
       <source>Value</source>
-      <translation type="unfinished">값</translation>
+      <translation>값</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="127"/>
@@ -578,71 +597,71 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../searchdlg.ui" line="154"/>
       <source>Replace value with</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Replace value with</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="164"/>
       <source>hex</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">hex</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="176"/>
       <source>Direction</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Direction</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="182"/>
       <source>Up</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Up</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="189"/>
       <source>Down</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Down</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="204"/>
       <source>Replace All</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Replace All</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="224"/>
       <source>Find Next</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Find Next</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="248"/>
       <location filename="../searchdlg.cpp" line="42"/>
       <source>Replace</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Replace</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="231"/>
       <source>Close</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Close</translation>
     </message>
     <message>
       <location filename="../searchdlg.cpp" line="42"/>
       <source>Find</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Find</translation>
     </message>
     <message>
       <location filename="../searchdlg.cpp" line="135"/>
       <source>No matches found</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">No matches found</translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="140"/>
       <source>%1 of %n match(es)</source>
       <translation type="unfinished">
-        <numerusform/>
+        <numerusform>%1 of %n match(es)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="192"/>
       <source>%n value(s) was(were) replaced</source>
       <translation type="unfinished">
-        <numerusform/>
+        <numerusform>%n value(s) was(were) replaced</numerusform>
       </translation>
     </message>
   </context>

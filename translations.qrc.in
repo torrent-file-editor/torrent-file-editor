@@ -1,10 +1,14 @@
-<!DOCTYPE RCC><RCC version="1.0">
-<qresource prefix="/translations">
-  <file>torrentfileeditor_ar.qm</file>
-  <file>torrentfileeditor_cs.qm</file>
-  <file>torrentfileeditor_de.qm</file>
-  <file>torrentfileeditor_en.qm</file>
-  <file>torrentfileeditor_ko.qm</file>
-  <file>torrentfileeditor_ru.qm</file>
-</qresource>
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/translations">
+        <file>torrentfileeditor_ar.qm</file>
+        <file>torrentfileeditor_cs.qm</file>
+        <file>torrentfileeditor_de.qm</file>
+        <file>torrentfileeditor_en.qm</file>
+        <file>torrentfileeditor_hu.qm</file>
+        <file>torrentfileeditor_ko.qm</file>
+        <file>torrentfileeditor_nl.qm</file>
+        <file>torrentfileeditor_ru.qm</file>
+        <file>torrentfileeditor_tr.qm</file>
+    </qresource>
 </RCC>
