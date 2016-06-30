@@ -8,8 +8,8 @@ Qt based GUI tool designed to create and edit .torrent files
 
 Author: Ivan Romanov <[drizt@land.ru](mailto:drizt@land.ru)>  
 License: GNU General Public License v3.0 or later  
-Home Page: http://sourceforge.net/projects/torrent-file-editor/  
-Sources: http://github.com/drizt/torrent-file-editor  
+Home Page: https://sourceforge.net/projects/torrent-file-editor  
+Sources: https://github.com/drizt/torrent-file-editor  
 Crowdin translations: https://crowdin.com/project/torrent-file-editor
 
 Build Instructions
