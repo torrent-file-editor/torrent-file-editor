@@ -53,7 +53,7 @@ QSize LineEditWidget::sizeHint() const
     int width = 0;
 
     if(_optimalLength) {
-        width += fontMetrics().width("0") * _optimalLength;
+        width += fontMetrics().width(QLatin1String("0")) * _optimalLength;
     }
     else {
         width += size.width();

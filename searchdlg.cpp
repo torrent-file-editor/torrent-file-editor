@@ -164,7 +164,7 @@ void SearchDlg::resetSearchList()
 {
     _searchList.clear();
     _searchIndex = -1;
-    ui->lblItemsFound->setText("");
+    ui->lblItemsFound->setText(QString());
 }
 
 void SearchDlg::replace()

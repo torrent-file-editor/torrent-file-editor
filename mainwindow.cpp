@@ -105,7 +105,7 @@ void Worker::doWork(const QStringList &files, int pieceSize)
 
             qApp->processEvents();
             if (_isCanceled) {
-                emit resultReady(QByteArray(), "");
+                emit resultReady(QByteArray(), QString());
                 f.close();
                 return;
             }
@@ -122,7 +122,7 @@ void Worker::doWork(const QStringList &files, int pieceSize)
         f.close();
     }
 
-    emit resultReady(pieceHashes, "");
+    emit resultReady(pieceHashes, QString());
 }
 
 void Worker::cancel()
@@ -187,7 +187,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     QStandardItemModel *model = new QStandardItemModel(0, 4, this);
     QStringList headers;
-    headers << tr("Path") << tr("Size") << tr("# Pieces") << "" /* dummy */;
+    headers << tr("Path") << tr("Size") << tr("# Pieces") << QString() /* dummy */;
     model->setHorizontalHeaderLabels(headers);
     model->horizontalHeaderItem(0)->setTextAlignment(Qt::AlignLeft);
     model->horizontalHeaderItem(1)->setTextAlignment(Qt::AlignRight);
@@ -219,29 +219,29 @@ MainWindow::MainWindow(QWidget *parent)
     ui->treeJson->header()->setMovable(false);
 #endif
 
-    ui->btnNew->setIcon(QIcon(":/icons/text-x-generic.png"));
+    ui->btnNew->setIcon(QIcon(QLatin1String(":/icons/text-x-generic.png")));
     ui->btnOpen->setIcon(qApp->style()->standardIcon(QStyle::SP_DialogOpenButton));
     ui->btnSave->setIcon(qApp->style()->standardIcon(QStyle::SP_DialogSaveButton));
     ui->btnSaveAs->setIcon(qApp->style()->standardIcon(QStyle::SP_DialogSaveButton));
 
-    ui->btnRemoveFiles->setIcon(QIcon::fromTheme("list-remove", QIcon(":/icons/list-remove.png")));
+    ui->btnRemoveFiles->setIcon(QIcon::fromTheme(QLatin1String("list-remove"), QIcon(QLatin1String(":/icons/list-remove.png"))));
 
-    ui->btnMakeTorrent->setIcon(QIcon(":/icons/hammer.png"));
-    ui->btnAddFile->setIcon(QIcon::fromTheme("document-new", QIcon(":/icons/document-new.png")));
-    ui->btnAddFolder->setIcon(QIcon::fromTheme("folder-new", QIcon(":/icons/folder-new.png")));
-    ui->btnReloadFiles->setIcon(QIcon::fromTheme("view-refresh", QIcon(":/icons/view-refresh")));
+    ui->btnMakeTorrent->setIcon(QIcon(QLatin1String(":/icons/hammer.png")));
+    ui->btnAddFile->setIcon(QIcon::fromTheme(QLatin1String("document-new"), QIcon(QLatin1String(":/icons/document-new.png"))));
+    ui->btnAddFolder->setIcon(QIcon::fromTheme(QLatin1String("folder-new"), QIcon(QLatin1String(":/icons/folder-new.png"))));
+    ui->btnReloadFiles->setIcon(QIcon::fromTheme(QLatin1String("view-refresh"), QIcon(QLatin1String(":/icons/view-refresh"))));
     ui->btnUpFile->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowUp));
     ui->btnDownFile->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowDown));
-    ui->btnFilesFilter->setIcon(QIcon(":/icons/files-filter.png"));
+    ui->btnFilesFilter->setIcon(QIcon(QLatin1String(":/icons/files-filter.png")));
 
     ui->btnAbout->setIcon(qApp->style()->standardIcon(QStyle::SP_MessageBoxQuestion));
 
-    ui->btnAddTreeItem->setIcon(QIcon::fromTheme("list-add", QIcon(":/icons/list-add.png")));
-    ui->btnRemoveTreeItem->setIcon(QIcon::fromTheme("edit-delete", QIcon(":/icons/edit-delete.png")));
+    ui->btnAddTreeItem->setIcon(QIcon::fromTheme(QLatin1String("list-add"), QIcon(QLatin1String(":/icons/list-add.png"))));
+    ui->btnRemoveTreeItem->setIcon(QIcon::fromTheme(QLatin1String("edit-delete"), QIcon(QLatin1String(":/icons/edit-delete.png"))));
     ui->btnUpTreeItem->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowUp));
     ui->btnDownTreeItem->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowDown));
-    ui->btnFindTreeItem->setIcon(QIcon::fromTheme("edit-find", QIcon(":/icons/edit-find")));
-    ui->btnReplaceTreeItem->setIcon(QIcon::fromTheme("edit-find-replace", QIcon(":/icons/edit-find-replace")));
+    ui->btnFindTreeItem->setIcon(QIcon::fromTheme(QLatin1String("edit-find"), QIcon(QLatin1String(":/icons/edit-find"))));
+    ui->btnReplaceTreeItem->setIcon(QIcon::fromTheme(QLatin1String("edit-find-replace"), QIcon(QLatin1String(":/icons/edit-find-replace"))));
 
     fillCoding();
     updateFilesSize();
@@ -279,7 +279,7 @@ void MainWindow::create()
 
     _bencodeModel->setRaw("");
     _bencodeModel->resetModified();
-    _fileName = "";
+    _fileName = QString();
     updateTitle();
     updateTab(ui->tabWidget->currentIndex());
 
@@ -287,7 +287,7 @@ void MainWindow::create()
     QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->viewFiles->model());
     model->removeRows(0, model->rowCount());
 
-    ui->leBaseFolder->setText("");
+    ui->leBaseFolder->setText(QString());
     updateFilesSize();
     ui->cmbPieceSizes->setCurrentIndex(0);
 }
@@ -319,12 +319,12 @@ void MainWindow::open()
     if (!showNeedSaveFile())
         return;
 
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Open"), _torrentLastFolder, _formatFilters.join(";;"));
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open"), _torrentLastFolder, _formatFilters.join(QLatin1String(";;")));
 
     if (fileName.isEmpty())
         return;
 
-    _torrentLastFolder = fileName.section('/', 0, -2);
+    _torrentLastFolder = fileName.section(QLatin1Char('/'), 0, -2);
     open(fileName);
 }
 
@@ -344,16 +344,16 @@ void MainWindow::saveAs()
     }
 
     QString filter;
-    QString fileName = QFileDialog::getSaveFileName(this, tr("Save As"), _torrentLastFolder, _formatFilters.join(";;"), &filter);
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Save As"), _torrentLastFolder, _formatFilters.join(QLatin1String(";;")), &filter);
     if (fileName.isEmpty())
         return;
 
-    _torrentLastFolder = fileName.section('/', 0, -2);
+    _torrentLastFolder = fileName.section(QLatin1Char('/'), 0, -2);
 
-    if (_formatFilters.at(0) == filter && !fileName.endsWith(".torrent"))
-        fileName += ".torrent";
-    else if (_formatFilters.at(1) == filter && !fileName.endsWith(".dat"))
-        fileName += ".dat";
+    if (_formatFilters.at(0) == filter && !fileName.endsWith(QLatin1String(".torrent")))
+        fileName += QLatin1String(".torrent");
+    else if (_formatFilters.at(1) == filter && !fileName.endsWith(QLatin1String(".dat")))
+        fileName += QLatin1String(".dat");
 
     if (saveTo(fileName)) {
         _fileName = fileName;
@@ -403,19 +403,19 @@ void MainWindow::closeEvent(QCloseEvent *event)
 void MainWindow::fillCoding()
 {
     QMap<QString, QTextCodec*> codecMap;
-    QRegExp iso8859RegExp("ISO[- ]8859-([0-9]+).*");
+    QRegExp iso8859RegExp(QLatin1String("ISO[- ]8859-([0-9]+).*"));
 
     for (int mib: QTextCodec::availableMibs())
     {
         QTextCodec *codec = QTextCodec::codecForMib(mib);
 
-        QString sortKey = codec->name().toUpper();
+        QString sortKey = QLatin1String(codec->name().toUpper());
         int rank;
 
-        if (sortKey.startsWith("UTF-8")) {
+        if (sortKey.startsWith(QLatin1String("UTF-8"))) {
             rank = 1;
         }
-        else if (sortKey.startsWith("UTF-16")) {
+        else if (sortKey.startsWith(QLatin1String("UTF-16"))) {
             rank = 2;
         }
         else if (iso8859RegExp.exactMatch(sortKey)) {
@@ -432,7 +432,7 @@ void MainWindow::fillCoding()
     }
 
     foreach (QTextCodec *textCodec, codecMap.values()) {
-        ui->cmbCoding->addItem(textCodec->name());
+        ui->cmbCoding->addItem(QLatin1String(textCodec->name()));
     }
 }
 
@@ -446,9 +446,9 @@ void MainWindow::updateTitle()
     if (_fileName.isEmpty())
         setWindowTitle(qApp->applicationName());
     else if (isModified())
-        setWindowTitle(QString("* %2 - %1").arg(qApp->applicationName(), _fileName));
+        setWindowTitle(QString(QLatin1String("* %2 - %1")).arg(qApp->applicationName(), _fileName));
     else
-        setWindowTitle(QString("%2 - %1").arg(qApp->applicationName(), _fileName));
+        setWindowTitle(QString(QLatin1String("%2 - %1")).arg(qApp->applicationName(), _fileName));
 }
 
 void MainWindow::updateTab(int n)
@@ -494,7 +494,7 @@ void MainWindow::updateBencodeFromComment()
 
 void MainWindow::updateBencodeFromTrackers()
 {
-    _bencodeModel->setTrackers(ui->pteTrackers->toPlainText().trimmed().split("\n"));
+    _bencodeModel->setTrackers(ui->pteTrackers->toPlainText().trimmed().split(QLatin1String("\n")));
 }
 
 void MainWindow::updateEncoding(const QString &encoding)
@@ -552,7 +552,7 @@ void MainWindow::makeTorrent()
     for (int i = 0; i < model->rowCount(); ++i) {
         QString file = model->item(i)->text();
 
-        if (model->rowCount() > 1 && baseDir.relativeFilePath(file).startsWith("..")) {
+        if (model->rowCount() > 1 && baseDir.relativeFilePath(file).startsWith(QLatin1String(".."))) {
             QMessageBox::warning(this, tr("Warning"), tr("The torrent root folder is not common."));
             return;
         }
@@ -592,7 +592,7 @@ void MainWindow::makeTorrent()
 
     QList<QPair<QString, qlonglong>> filePairs;
     if (files.size() == 1) {
-        filePairs << QPair<QString, qlonglong>("", totalSize);
+        filePairs << QPair<QString, qlonglong>(QString(), totalSize);
     }
     else {
         for (const QString &file: files) {
@@ -616,7 +616,7 @@ void MainWindow::addFile()
     }
 
     if (ui->leBaseFolder->text().isEmpty()) {
-        ui->leBaseFolder->setText(QDir::toNativeSeparators(files.first().section('/', 0, -2)));
+        ui->leBaseFolder->setText(QDir::toNativeSeparators(files.first().section(QLatin1Char('/'), 0, -2)));
     }
 
     updateFilesSize();
@@ -753,7 +753,7 @@ void MainWindow::updateFiles()
         if (QFileInfo(file).isAbsolute())
             continue;
 
-        file.prepend("/");
+        file.prepend(QLatin1String(("/")));
         file.prepend(dir);
         if (QFile::exists(file))
             model->item(i)->setText(QDir::toNativeSeparators(file));
@@ -929,14 +929,14 @@ void MainWindow::updateSimple()
     ui->leName->setText(_bencodeModel->name());
 
     int pieceSize = _bencodeModel->pieceSize();
-    ui->lePieceSize->setText(pieceSize ? smartSize(pieceSize) : 0);
+    ui->lePieceSize->setText(pieceSize ? smartSize(pieceSize) : QLatin1String("0"));
 
     int pieces = _bencodeModel->pieces();
-    ui->lePieces->setText(pieces ? QLocale::system().toString(pieces) : "");
+    ui->lePieces->setText(pieces ? QLocale::system().toString(pieces) : QString());
 
     ui->dateCreated->setDateTime(_bencodeModel->creationTime());
     ui->chkPrivateTorrent->setChecked(_bencodeModel->privateTorrent());
-    ui->pteTrackers->setPlainText(_bencodeModel->trackers().join("\n"));
+    ui->pteTrackers->setPlainText(_bencodeModel->trackers().join(QLatin1String("\n")));
     ui->leHash->setText(_bencodeModel->hash());
 }
 
@@ -947,7 +947,7 @@ void MainWindow::updateBencodeFromRaw()
 
     // Special case when no any text
     if (ui->pteEditor->toPlainText().trimmed().isEmpty()) {
-        ui->lblRawError->setText("");
+        ui->lblRawError->setText(QString());
         _bencodeModel->setJson(QVariant());
         return;
     }
@@ -971,7 +971,7 @@ void MainWindow::updateBencodeFromRaw()
     }
 #endif
 
-    ui->lblRawError->setText("");
+    ui->lblRawError->setText(QString());
     _bencodeModel->setJson(variant);
 }
 
@@ -981,7 +981,7 @@ void MainWindow::updateRaw()
     processEvents();
     QVariant res = _bencodeModel->toJson();
     if (!res.isValid()) {
-        ui->pteEditor->setPlainText("");
+        ui->pteEditor->setPlainText(QString());
         ui->pteEditor->document()->setModified(false);
         return;
     }
@@ -1108,7 +1108,7 @@ QString MainWindow::smartSize(qulonglong size)
     QString res = QLocale::system().toString(kb, 'g', 4);
 
     // Drop zeroes
-    while (res.contains(QLocale::system().decimalPoint()) && res.right(1) == "0")
+    while (res.contains(QLocale::system().decimalPoint()) && res.right(1) == QLatin1String("0"))
         res.chop(1);
 
     if (res.right(1)[0] == QLocale::system().decimalPoint())
@@ -1116,23 +1116,23 @@ QString MainWindow::smartSize(qulonglong size)
 
     switch (i) {
         case 0:
-            res += " " + tr("B");
+            res += QLatin1String(" ") + tr("B");
             break;
 
         case 1:
-            res += " " + tr("KiB");
+            res += QLatin1String(" ") + tr("KiB");
             break;
 
         case 2:
-            res += " " + tr("MiB");
+            res += QLatin1String(" ") + tr("MiB");
             break;
 
         case 3:
-            res += " " + tr("GiB");
+            res += QLatin1String(" ") + tr("GiB");
             break;
 
         case 4:
-            res += " " + tr("TiB");
+            res += QLatin1String(" ") + tr("TiB");
             break;
     }
 

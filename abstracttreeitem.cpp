@@ -117,15 +117,15 @@ QList<AbstractTreeItem*> AbstractTreeItem::children() const
 
 void AbstractTreeItem::dump(int indent) const
 {
-    QString fill(indent, QChar(' '));
-    qDebug() << qPrintable(fill + "{");
-    qDebug() << qPrintable(fill + " " + toString());
-    qDebug() << qPrintable(fill + " " + "this") << this;
-    qDebug() << qPrintable(fill + " " + "parent") << _parent;
-    qDebug() << qPrintable(fill + " " + "children") << _children;
+    QString fill(indent, QLatin1Char(' '));
+    qDebug() << qPrintable(fill + QLatin1String("{"));
+    qDebug() << qPrintable(fill + QLatin1String(" ") + toString());
+    qDebug() << qPrintable(fill + QLatin1String(" ") + QLatin1String("this")) << this;
+    qDebug() << qPrintable(fill + QLatin1String(" ") + QLatin1String("parent")) << _parent;
+    qDebug() << qPrintable(fill + QLatin1String(" ") + QLatin1String("children")) << _children;
 
     foreach (AbstractTreeItem *item, _children) {
         item->dump(indent + 1);
     }
-    qDebug() << qPrintable(fill + "}");
+    qDebug() << qPrintable(fill + QLatin1String("}"));
 }

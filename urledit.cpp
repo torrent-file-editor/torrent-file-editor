@@ -26,8 +26,8 @@ UrlEdit::UrlEdit(QWidget *parent)
     : LineEditWidget(parent)
     , _pbOpenUrl(new QPushButton(this))
 {
-    _pbOpenUrl->setObjectName("pbOpenUrl");
-    _pbOpenUrl->setIcon(QIcon::fromTheme("applications-internet", QIcon(":/icons/applications-internet.png")));
+    _pbOpenUrl->setObjectName(QLatin1String("pbOpenUrl"));
+    _pbOpenUrl->setIcon(QIcon::fromTheme(QLatin1String("applications-internet"), QIcon(QLatin1String(":/icons/applications-internet.png"))));
     _pbOpenUrl->setContentsMargins(0, 0, 0, 0);
     _pbOpenUrl->setFocusPolicy(Qt::NoFocus);
     _pbOpenUrl->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);

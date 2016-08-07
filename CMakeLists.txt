@@ -33,6 +33,8 @@ add_custom_target(update_version ALL
 # Enable C++11
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
+add_definitions(-DQT_NO_CAST_FROM_ASCII)
+
 if(APPLE)
   # Force Qt5 build on Mac OS X. Qt4 is not supported
   set(QT5_BUILD ON)

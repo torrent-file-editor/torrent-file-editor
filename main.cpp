@@ -55,7 +55,11 @@ void debugHandler(QtMsgType type, const char *msg)
     Q_UNUSED(type);
 
     if (MainWindow::instance())
-        MainWindow::instance()->addLog(QString(msg));
+#ifdef HAVE_QT5
+        MainWindow::instance()->addLog(msg);
+#else
+        MainWindow::instance()->addLog(QLatin1String(msg));
+#endif
 }
 
 void openWinConsole()
@@ -173,11 +177,11 @@ int main(int argc, char *argv[])
     }
 
     if (argc == 4) {
-        QString command(argv[1]);
-        QString source(argv[2]);
-        QString dest(argv[3]);
+        QString command = QLatin1String(argv[1]);
+        QString source = QLatin1String(argv[2]);
+        QString dest = QLatin1String(argv[3]);
 
-        if (command == "--to-json" || command == "--from-json") {
+        if (command == QLatin1String("--to-json") || command == QLatin1String("--from-json")) {
             int retCode = 0;
             openWinConsole();
 
@@ -185,7 +189,7 @@ int main(int argc, char *argv[])
                 qDebug("Error: source file is not exist!");
                 retCode = -1;
             }
-            else if (command == "--to-json")
+            else if (command == QLatin1String("--to-json"))
                 retCode = toJson(source, dest) ? -1 : 0;
             else
                 retCode = fromJson(source, dest) ? -1 : 0;
@@ -206,23 +210,23 @@ int main(int argc, char *argv[])
     Application a(argc, argv);
 
     QTranslator translator;
-    if (translator.load(QLocale(), "torrentfileeditor", "_", ":/translations"))
+    if (translator.load(QLocale(), QLatin1String("torrentfileeditor"), QLatin1String("_"), QLatin1String(":/translations")))
         a.installTranslator(&translator);
 
 #ifdef Q_OS_WIN
-    QString qtTranslationsPath = ":/translations";
+    QString qtTranslationsPath = QLatin1String(":/translations");
 #else
     QString qtTranslationsPath = QLibraryInfo::location(QLibraryInfo::TranslationsPath);
 #endif
 
 #ifdef HAVE_QT5
-    QString qtTranslationsName = "qtbase";
+    QString qtTranslationsName = QLatin1String("qtbase");
 #else
-    QString qtTranslationsName = "qt";
+    QString qtTranslationsName = QLatin1String("qt");
 #endif
 
     QTranslator qtTranslator;
-    if (qtTranslator.load(QLocale(), qtTranslationsName, "_", qtTranslationsPath))
+    if (qtTranslator.load(QLocale(), qtTranslationsName, QLatin1String("_"), qtTranslationsPath))
         a.installTranslator(&qtTranslator);
 
     MainWindow w;

@@ -27,8 +27,8 @@
 Application::Application(int &argc, char **argv)
     : QApplication(argc, argv)
 {
-    setApplicationName("Torrent File Editor");
-    setApplicationVersion(APP_VERSION);
+    setApplicationName(QLatin1String("Torrent File Editor"));
+    setApplicationVersion(QLatin1String(APP_VERSION));
 
     setStyle(new ProxyStyle());
 }
@@ -51,6 +51,6 @@ void Application::setMainWindow(MainWindow *mainWindow)
 
 QDateTime Application::buildDateTime()
 {
-    return QDateTime(QDate::fromString(APP_COMPILATION_DATE, Qt::DateFormat::ISODate),
-                     QTime::fromString(APP_COMPILATION_TIME, Qt::DateFormat::ISODate));
+    return QDateTime(QDate::fromString(QLatin1String(APP_COMPILATION_DATE), Qt::DateFormat::ISODate),
+                     QTime::fromString(QLatin1String(APP_COMPILATION_TIME), Qt::DateFormat::ISODate));
 }
