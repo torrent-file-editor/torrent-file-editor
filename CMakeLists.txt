@@ -13,7 +13,7 @@ if(POLICY CMP0046)
 endif()
 
 # Fallback version. Will be used when compiling out of git repository.
-set(APP_VERSION "0.3.0")
+set(APP_VERSION "0.3.1")
 
 set(MACOSX_BUNDLE_EXECUTABLE_NAME "${PROJECT_NAME}")
 set(MACOSX_BUNDLE_INFO_STRING "Torrent File Editor \${APP_VERSION}. This program is licensed under the GNU GPL.")
