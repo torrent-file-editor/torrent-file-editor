@@ -89,7 +89,7 @@ if(WIN32)
   configure_file(qt_translations.qrc.in qt_translations.qrc COPYONLY)
 endif()
 
-set(LANGS ar cs de en ko ru hu nl tr)
+set(LANGS ar cs de en ko ru hu it nl tr zh_CN)
 
 foreach(l ${LANGS})
   list(APPEND TRANSLATIONS ${CMAKE_SOURCE_DIR}/translations/torrentfileeditor_${l}.ts)

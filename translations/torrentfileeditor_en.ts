@@ -16,7 +16,7 @@
     <message>
       <location filename="../aboutdlg.ui" line="127"/>
       <source>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</source>
-      <translation>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</translation>
+      <translation>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop would be nice. If you like this app and you want to thank the developer and bring the next version to release, you can make a small donation via:</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="47"/>

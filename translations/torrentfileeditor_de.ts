@@ -16,7 +16,7 @@
     <message>
       <location filename="../aboutdlg.ui" line="127"/>
       <source>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</source>
-      <translation type="unfinished">The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</translation>
+      <translation>Die Entwicklung der neuesten Version verlangt viel Zeit und Mühe. Schwerwiegende Fehler wurden behoben und nützliche Verbesserungen gemacht. Ich bin erschöpft. Aber ein Bier würde mir zu neuer Stärke verhelfen und die Entwicklung voran treiben. Wenn Ihnen diese Anwendung gefällt, Sie dem Entwickler danken wollen und ihn ermutigen wollen die nächste Version zu releasen, können Sie hier einen kleinen Betrag spenden:</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="47"/>
@@ -142,12 +142,12 @@
     <message>
       <location filename="../mainwindow.ui" line="216"/>
       <source>URL</source>
-      <translation type="unfinished">URL</translation>
+      <translation>URL</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="223"/>
       <source>Date created</source>
-      <translation type="unfinished">Date created</translation>
+      <translation>Erstelldatum</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="237"/>
@@ -182,7 +182,7 @@
     <message>
       <location filename="../mainwindow.ui" line="404"/>
       <source>Reload files list from current torrent data</source>
-      <translation type="unfinished">Reload files list from current torrent data</translation>
+      <translation>Lade Dateiliste aus aktuellem Torrent neu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="443"/>
@@ -197,7 +197,7 @@
     <message>
       <location filename="../mainwindow.ui" line="479"/>
       <source>Filter by </source>
-      <translation type="unfinished">Filter by </translation>
+      <translation>Sortieren nach </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="486"/>
@@ -237,17 +237,17 @@
     <message>
       <location filename="../mainwindow.ui" line="505"/>
       <source>name</source>
-      <translation type="unfinished">name</translation>
+      <translation>Name</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="510"/>
       <source>extension</source>
-      <translation type="unfinished">extension</translation>
+      <translation>Dateityp</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="515"/>
       <source>wildcards</source>
-      <translation type="unfinished">wildcards</translation>
+      <translation>Wildcards</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="520"/>
@@ -257,12 +257,12 @@
     <message>
       <location filename="../mainwindow.ui" line="538"/>
       <source>Filter files</source>
-      <translation type="unfinished">Filter files</translation>
+      <translation>Dateien filtern</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="633"/>
       <source>Torrent root folder </source>
-      <translation type="unfinished">Torrent root folder </translation>
+      <translation>Torrent Stammverzeichnis </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="646"/>
@@ -287,12 +287,12 @@
     <message>
       <location filename="../mainwindow.ui" line="721"/>
       <source>Find</source>
-      <translation type="unfinished">Find</translation>
+      <translation>Suchen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="737"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>Ersetzen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="830"/>
@@ -342,12 +342,12 @@
     <message>
       <location filename="../mainwindow.ui" line="356"/>
       <source>Calculate pieces hashes</source>
-      <translation type="unfinished">Calculate pieces hashes</translation>
+      <translation>Berechne Teil Hashes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="427"/>
       <source>Remove selected files</source>
-      <translation type="unfinished">Remove selected files</translation>
+      <translation>Entferne ausgewählte Dateien</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="587"/>
@@ -362,7 +362,7 @@
     <message>
       <location filename="../mainwindow.ui" line="673"/>
       <source>Delete selected tree items</source>
-      <translation type="unfinished">Delete selected tree items</translation>
+      <translation>Lösche gewähle Baumelemente</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="773"/>
@@ -407,7 +407,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="190"/>
       <source># Pieces</source>
-      <translation type="unfinished"># Pieces</translation>
+      <translation># Teile</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="299"/>
@@ -429,7 +429,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="532"/>
       <source>Torrent root folder is not set</source>
-      <translation type="unfinished">Torrent root folder is not set</translation>
+      <translation>Torrent Stammverzeichnis nicht definiert</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="342"/>
@@ -437,13 +437,13 @@
       <location filename="../mainwindow.cpp" line="1011"/>
       <location filename="../mainwindow.cpp" line="1022"/>
       <source>Can't save file</source>
-      <translation type="unfinished">Can't save file</translation>
+      <translation>Konnte Datei nicht speichern</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="342"/>
       <location filename="../mainwindow.cpp" line="1003"/>
       <source>BEncoded data is not valid</source>
-      <translation type="unfinished">BEncoded data is not valid</translation>
+      <translation>BEncoded Daten sind ungültig</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="533"/>
@@ -452,11 +452,11 @@
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
 
 Do you want to set torrent root folder and try again?</source>
-      <translation type="unfinished">Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
+      <translation>Der Pfad zu den Datei auf der Festplatte ist unbekannt. Torrents können nur aus vollständigen Dateien erstellt werden. 
 
-If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
+Wenn Sie die Dateiliste des aktuellen Torrents bearbeiten möchten, müssen sie das Stammverzeichnis festlegen. Das Stammverzeichnis ist der Ordner, in welchem sich alle im Torrent enthaltenen Dateien befinden. Der Dateipfad, einer Datei im Torrent, ist relativ zum Stammverzeichnis. Wenn Dateien fehlen kann der Torrent nicht erstellt werden!
 
-Do you want to set torrent root folder and try again?</translation>
+Möchten Sie jetzt das Stammverzeichnis setzen und erneut versuchen?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="556"/>
@@ -512,17 +512,17 @@ Do you want to set torrent root folder and try again?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="1153"/>
       <source>Save file</source>
-      <translation type="unfinished">Save file</translation>
+      <translation>Datei speichern</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1154"/>
       <source>Untitled</source>
-      <translation type="unfinished">Untitled</translation>
+      <translation>Unbenannt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1155"/>
       <source>Save file "%1"?</source>
-      <translation type="unfinished">Save file "%1"?</translation>
+      <translation>Datei "%1" speichern?</translation>
     </message>
   </context>
   <context>
@@ -602,67 +602,67 @@ Do you want to set torrent root folder and try again?</translation>
     <message>
       <location filename="../searchdlg.ui" line="164"/>
       <source>hex</source>
-      <translation type="unfinished">hex</translation>
+      <translation>hex</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="176"/>
       <source>Direction</source>
-      <translation type="unfinished">Direction</translation>
+      <translation>Suchrichtung</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="182"/>
       <source>Up</source>
-      <translation type="unfinished">Up</translation>
+      <translation>Oben</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="189"/>
       <source>Down</source>
-      <translation type="unfinished">Down</translation>
+      <translation>Unten</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="204"/>
       <source>Replace All</source>
-      <translation type="unfinished">Replace All</translation>
+      <translation>Alle ersetzen</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="224"/>
       <source>Find Next</source>
-      <translation type="unfinished">Find Next</translation>
+      <translation>Weitersuchen</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="248"/>
       <location filename="../searchdlg.cpp" line="42"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>Ersetzen</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="231"/>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Schließen</translation>
     </message>
     <message>
       <location filename="../searchdlg.cpp" line="42"/>
       <source>Find</source>
-      <translation type="unfinished">Find</translation>
+      <translation>Suchen</translation>
     </message>
     <message>
       <location filename="../searchdlg.cpp" line="135"/>
       <source>No matches found</source>
-      <translation type="unfinished">No matches found</translation>
+      <translation>Keine Treffer gefunden</translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="140"/>
       <source>%1 of %n match(es)</source>
-      <translation type="unfinished">
-        <numerusform>%1 of %n match(es)</numerusform>
-        <numerusform>%1 of %n match(es)</numerusform>
+      <translation>
+        <numerusform>"%1" von "%n" Treffer</numerusform>
+        <numerusform>"%1" von "%n" Treffern</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="192"/>
       <source>%n value(s) was(were) replaced</source>
       <translation type="unfinished">
-        <numerusform>%n value(s) was(were) replaced</numerusform>
+        <numerusform>"%n" Treffer wurde ersetzt</numerusform>
         <numerusform>%n value(s) was(were) replaced</numerusform>
       </translation>
     </message>
