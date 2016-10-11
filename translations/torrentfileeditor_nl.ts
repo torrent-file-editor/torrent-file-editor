@@ -205,13 +205,13 @@
   &lt;head/&gt;
   &lt;body&gt;
     &lt;p&gt;&lt;b&gt;name&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;file name with extenstion exactly equals with pattern&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;file name with extension exactly equals with pattern&lt;/p&gt;
     &lt;br/&gt;
     &lt;p&gt;&lt;b&gt;extension&lt;/b&gt;&lt;/p&gt;
     &lt;p style="margin-left: 20px"&gt;the symbols after the latest point exactly equals with pattern, for 'archive.tar.gz' it will be 'gz' for example&lt;/p&gt;
     &lt;br/&gt;
     &lt;p&gt;&lt;b&gt;wildcards&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;file name with extenstion matches with file globbing where '?' is one any symbol and '*' is any numbers of any symbols&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;file name with extension matches with file globbing where '?' is one any symbol and '*' is any numbers of any symbols&lt;/p&gt;
     &lt;br/&gt;
     &lt;p&gt;&lt;b&gt;regular expression&lt;/b&gt;&lt;/p&gt;
     &lt;p style="margin-left: 20px"&gt;full file path matches Perl-like regular expression&lt;/p&gt;
