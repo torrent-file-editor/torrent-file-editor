@@ -28,11 +28,11 @@ class AbstractTreeModel : public QAbstractItemModel
 
 public:
     explicit AbstractTreeModel(AbstractTreeItem *root, QObject *parent = 0);
-    ~AbstractTreeModel();
+    ~AbstractTreeModel() override;
 
-    QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const;
-    QModelIndex	parent(const QModelIndex & index) const;
-    int	rowCount(const QModelIndex & parent = QModelIndex()) const;
+    QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
+    QModelIndex parent(const QModelIndex & index) const override;
+    int rowCount(const QModelIndex & parent = QModelIndex()) const override;
 
 protected:
     AbstractTreeItem *root() const;
