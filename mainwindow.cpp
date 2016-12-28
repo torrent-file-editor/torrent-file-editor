@@ -586,7 +586,7 @@ void MainWindow::makeTorrent()
 
         // Check for base folder
         files << QDir::fromNativeSeparators(file);
-        totalSize += QFileInfo(file).size();
+        totalSize += fileSize(file);
     }
 
     qulonglong pieceSize = autoPieceSize();
@@ -623,7 +623,7 @@ void MainWindow::makeTorrent()
     }
     else {
         for (const QString &file: files) {
-            filePairs << QPair<QString, qlonglong>(baseDir.relativeFilePath(file), QFileInfo(file).size());
+            filePairs << QPair<QString, qlonglong>(baseDir.relativeFilePath(file), fileSize(file));
         }
     }
     _bencodeModel->setFiles(filePairs);
@@ -631,13 +631,16 @@ void MainWindow::makeTorrent()
 
 void MainWindow::addFile()
 {
-#ifdef Q_OS_WIN
-    // On Windows symbolic link is real file. So use it.
-    // Also native dialog always returns resolved path. So use Qt dialog.
-    QStringList files = QFileDialog::getOpenFileNames(this, tr("Add File"), _lastFolder, QString(), nullptr, QFileDialog::DontResolveSymlinks | QFileDialog::DontUseNativeDialog);
-#else
+    // Will believe that it's very rare case when need to add symlink.
+    // Native dialog looks very nice. So use it.
+
+//#ifdef Q_OS_WIN
+//    // On Windows symbolic link is real file. So use it.
+//    // Also native dialog always returns resolved path. So use Qt dialog.
+//    QStringList files = QFileDialog::getOpenFileNames(this, tr("Add File"), _lastFolder, QString(), nullptr, QFileDialog::DontResolveSymlinks | QFileDialog::DontUseNativeDialog);
+//#else
     QStringList files = QFileDialog::getOpenFileNames(this, tr("Add File"), _lastFolder, QString());
-#endif
+//#endif
     if (files.isEmpty())
         return;
 
