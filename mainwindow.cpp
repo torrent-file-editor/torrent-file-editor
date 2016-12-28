@@ -645,9 +645,7 @@ void MainWindow::addFolder()
 
     files.sort();
 
-    QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->viewFiles->model());
-    qulonglong totalSize = 0;
-    foreach (const QString &file, files) {
+    for (const QString &file: files) {
         addFilesRow(file, QFileInfo(file).size());
     }
 
