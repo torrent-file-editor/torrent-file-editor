@@ -655,6 +655,7 @@ Szeretnéd beállítani a torrent gyökérkönyvtárat és újrapróbálni?</tra
       <source>%1 of %n match(es)</source>
       <translation type="unfinished">
         <numerusform>%1 egyezés %n-ból/ből</numerusform>
+        <numerusform>%1 of %n match(es)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -662,6 +663,7 @@ Szeretnéd beállítani a torrent gyökérkönyvtárat és újrapróbálni?</tra
       <source>%n value(s) was(were) replaced</source>
       <translation type="unfinished">
         <numerusform>%n érték lecserélve</numerusform>
+        <numerusform>%n value(s) was(were) replaced</numerusform>
       </translation>
     </message>
   </context>

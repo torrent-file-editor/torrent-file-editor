@@ -11,7 +11,7 @@
     <message>
       <location filename="../aboutdlg.ui" line="117"/>
       <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
-      <translation type="unfinished">&lt;h3&gt;Beer for Developer&lt;/h3&gt;</translation>
+      <translation>&lt;h3&gt;Bier für Entwickler&lt;/h3&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="127"/>
@@ -252,7 +252,7 @@
     <message>
       <location filename="../mainwindow.ui" line="520"/>
       <source>regular expression</source>
-      <translation type="unfinished">regular expression</translation>
+      <translation>regulärer Ausdruck</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="538"/>
@@ -461,7 +461,7 @@ Möchten Sie jetzt das Stammverzeichnis setzen und erneut versuchen?</translatio
     <message>
       <location filename="../mainwindow.cpp" line="556"/>
       <source>The torrent root folder is not common.</source>
-      <translation type="unfinished">The torrent root folder is not common.</translation>
+      <translation>Der Torrent-Stammordner ist ungewöhnlich.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="607"/>
@@ -558,31 +558,31 @@ Möchten Sie jetzt das Stammverzeichnis setzen und erneut versuchen?</translatio
     <message>
       <location filename="../searchdlg.ui" line="27"/>
       <source>Key</source>
-      <translation type="unfinished">Key</translation>
+      <translation>Schlüssel</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="39"/>
       <location filename="../searchdlg.ui" line="96"/>
       <source>Match case</source>
-      <translation type="unfinished">Match case</translation>
+      <translation>Groß-/Kleinschreibung beachten</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="46"/>
       <location filename="../searchdlg.ui" line="103"/>
       <source>Exact match</source>
-      <translation type="unfinished">Exact match</translation>
+      <translation>Exakte Übereinstimmung</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="56"/>
       <location filename="../searchdlg.ui" line="113"/>
       <source>Wildcards</source>
-      <translation type="unfinished">Wildcards</translation>
+      <translation>Platzhalter</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="63"/>
       <location filename="../searchdlg.ui" line="120"/>
       <source>Regular expression</source>
-      <translation type="unfinished">Regular expression</translation>
+      <translation>Regulärer Ausdruck</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="84"/>
@@ -597,7 +597,7 @@ Möchten Sie jetzt das Stammverzeichnis setzen und erneut versuchen?</translatio
     <message>
       <location filename="../searchdlg.ui" line="154"/>
       <source>Replace value with</source>
-      <translation type="unfinished">Replace value with</translation>
+      <translation>Wert ersetzen mit</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="164"/>
@@ -661,9 +661,9 @@ Möchten Sie jetzt das Stammverzeichnis setzen und erneut versuchen?</translatio
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="192"/>
       <source>%n value(s) was(were) replaced</source>
-      <translation type="unfinished">
-        <numerusform>"%n" Treffer wurde ersetzt</numerusform>
-        <numerusform>%n value(s) was(were) replaced</numerusform>
+      <translation>
+        <numerusform>%n Wert(e) wurde(n) ersetzt</numerusform>
+        <numerusform>%n Wert(e) wurde(n) ersetzt</numerusform>
       </translation>
     </message>
   </context>

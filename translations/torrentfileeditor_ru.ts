@@ -287,7 +287,7 @@
     <message>
       <location filename="../mainwindow.ui" line="721"/>
       <source>Find</source>
-      <translation>Найти</translation>
+      <translation>Поиск</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="737"/>
