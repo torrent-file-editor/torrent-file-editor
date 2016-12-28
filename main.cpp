@@ -62,6 +62,56 @@ void debugHandler(QtMsgType type, const char *msg)
 #endif
 }
 
+#ifdef Q_OS_WIN
+# ifdef HAVE_QT5
+void winDebugHandler(QtMsgType type, const QMessageLogContext &context, const QString &msg)
+# else
+void winDebugHandler(QtMsgType type, const char *msg)
+# endif
+{
+    {
+        QString time = QTime::currentTime().toString();
+        QString debugMsg = QString(QLatin1String("[%1] ")).arg(time);
+        switch (type) {
+        case QtDebugMsg:
+            break;
+        case QtWarningMsg:
+            debugMsg += QLatin1String("W:");
+            break;
+        case QtCriticalMsg:
+            debugMsg += QLatin1String("C:");
+            break;
+# if QT_VERSION >= 0x050500
+        case QtInfoMsg:
+            debugMsg += QLatin1String("I:");
+            break;
+# endif
+
+        case QtFatalMsg:
+            debugMsg += QLatin1String("F:");
+            break;
+            abort();
+        }
+# ifdef HAVE_QT5
+        debugMsg += msg;
+        debugMsg += QString(QLatin1String(" (%1:%2, %3)")).arg(context.file).arg(context.line).arg(context.function);
+# else
+        debugMsg += QLatin1String(msg);
+# endif
+
+
+# ifdef UNICODE
+        OutputDebugString(debugMsg.toStdWString().c_str());
+# else
+        OutputDebugString(debugMsg.toStdString().c_str());
+# endif
+
+        if (type == QtFatalMsg)
+            abort();
+    }
+}
+#endif
+
 void openWinConsole()
 {
 #ifdef Q_OS_WIN
@@ -204,6 +254,10 @@ int main(int argc, char *argv[])
     qInstallMessageHandler(debugHandler);
 # else
     qInstallMsgHandler(debugHandler);
+# endif
+#else
+# ifdef Q_OS_WIN
+    qInstallMsgHandler(winDebugHandler);
 # endif
 #endif
 
