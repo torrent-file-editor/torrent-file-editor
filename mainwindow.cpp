@@ -53,7 +53,34 @@
 # include <qjson/parser.h>
 #endif
 
+#ifdef Q_OS_WIN
+# include <io.h>
+# include <windows.h>
+#endif
+
 #define PROGRESS_TIMEOUT 500 /* ms */
+
+// FIXME: workaround for symlink wrong size https://bugreports.qt.io/browse/QTBUG-24831
+
+int fileSize(const QString &path)
+{
+#ifdef Q_OS_UNIX
+    return QFileInfo(path).size();
+#else
+    QFileInfo fi(path);
+    if (!fi.isSymLink()) {
+        return fi.size();
+    }
+    else {
+        QFile file(path);
+        file.open(QFile::ReadOnly); // it must be open to get a windows file handle
+        HANDLE hFile = reinterpret_cast<HANDLE>(_get_osfhandle(file.handle()));
+        int size = GetFileSize(hFile, nullptr);
+        file.close();
+        return size;
+    }
+#endif
+}
 
 Worker::Worker()
     : QObject()
@@ -604,7 +631,13 @@ void MainWindow::makeTorrent()
 
 void MainWindow::addFile()
 {
-    QStringList files = QFileDialog::getOpenFileNames(this, tr("Add File"), _lastFolder);
+#ifdef Q_OS_WIN
+    // On Windows symbolic link is real file. So use it.
+    // Also native dialog always returns resolved path. So use Qt dialog.
+    QStringList files = QFileDialog::getOpenFileNames(this, tr("Add File"), _lastFolder, QString(), nullptr, QFileDialog::DontResolveSymlinks | QFileDialog::DontUseNativeDialog);
+#else
+    QStringList files = QFileDialog::getOpenFileNames(this, tr("Add File"), _lastFolder, QString());
+#endif
     if (files.isEmpty())
         return;
 
@@ -612,7 +645,7 @@ void MainWindow::addFile()
     ui->leBaseFolder->setFolder(_lastFolder);
     QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->viewFiles->model());
     foreach (const QString &file, files) {
-        addFilesRow(file, QFileInfo(file).size());
+        addFilesRow(file, fileSize(file));
     }
 
     if (ui->leBaseFolder->text().isEmpty()) {
@@ -646,7 +679,7 @@ void MainWindow::addFolder()
     files.sort();
 
     for (const QString &file: files) {
-        addFilesRow(file, QFileInfo(file).size());
+        addFilesRow(file, fileSize(file));
     }
 
     if (ui->leBaseFolder->text().isEmpty())
