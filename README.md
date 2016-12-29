@@ -8,7 +8,7 @@ Qt based GUI tool designed to create and edit .torrent files
 
 Author: Ivan Romanov <[drizt@land.ru](mailto:drizt@land.ru)>  
 License: GNU General Public License v3.0 or later  
-Home Page: https://sourceforge.net/projects/torrent-file-editor  
+Homepage: https://sourceforge.net/projects/torrent-file-editor  
 Sources: https://github.com/drizt/torrent-file-editor  
 Crowdin translations: https://crowdin.com/project/torrent-file-editor
 
@@ -23,7 +23,7 @@ Need to have
 
 **Linux:**
 
-By default will be built Qt4 version
+Will build Qt4 version by default
 
     mkdir build && cd build
     cmake -DCMAKE_BUILD_TYPE=Release -DQT5_BUILD=OFF ..
@@ -41,12 +41,12 @@ Only Qt5 version
 **Windows important note**
 
 Only Qt4 version for a while.
-I use Fedora 22 MinGW to build Windows version. Furthemore I build
-portable static version. Any another build way not tested and may will
-not work. It is in my TODO list.
+I use Fedora 22 MinGW to build Windows versions. Furthermore I build
+portable static versions. Any other build way is not tested and may
+not work. It is on my TODO list.
 
-Fedora hasn't MinGW QJSON package. Need to build own version. It is
-easy:
+Fedora hasn't a MinGW QJSON package. You need to build your own version.
+It is easy:
 
     wget https://github.com/flavio/qjson/archive/master.tar.gz -O qjson-master.tar.gz
     tar zxf qjson-master.tar.gz
@@ -59,7 +59,7 @@ easy:
     cd ../win64
     mingw64-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DQT4_BUILD=ON ..
     make
-    sudo make install # will be carefull, it installs qjson to system folders
+    sudo make install # be careful, it installs qjson to system folders
 
 **Windows x32:**
 
@@ -73,14 +73,16 @@ easy:
     mingw64-cmake -DCMAKE_BUILD_TYPE=Release ..
     make
 
-How I Can Help?
+How Can I Help?
 ---------------
 
-Now project translated only to three languages. It is English, Russian
-and Czech. I would glad to add new translations. You can translate
+The Project is translated from English to several languages.
+There are Arabian, Czech, Dutch, German, Hungarian, Italian, Korean,
+Russian, Simplified Chinese, and Turkish translations available.
+I would be glad if you add new translations. You can translate the
 project to your native language with [Crowdin](https://crowdin.com/project/torrent-file-editor).
-It is not difficult and not required special knowledges. Or you can
-correct my English. I know it is not good. Anyway you can
+It is not difficult and no special knowledges are required.
+Or you can correct my English. I know it is not good. Anyway you can
 always email <[drizt@land.ru](mailto:drizt@land.ru)> me.
 
-Also feel free to open an issue on github or send me pull requests.
+Also feel free to open an issue on GitHub or send me pull requests.
