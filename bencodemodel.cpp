@@ -396,8 +396,15 @@ QList<QPair<QString, qlonglong>> BencodeModel::files() const
 
     // Torrent contains only one file
     if (!info->child("files")) {
-        QString baseName = toUnicode(info->child("name")->string());
-        res << QPair<QString, qlonglong>(baseName, info->child("length")->integer());
+        QString baseName;
+        if (info->child("name") && info->child("name")->isString()) {
+            baseName = toUnicode(info->child("name")->string());
+            int length = 0;
+            if (info->child("length") && info->child("length")->isInteger()) {
+                length = info->child("length")->integer();
+            }
+            res << QPair<QString, qlonglong>(baseName, length);
+        }
     }
     else {
         Bencode *list = info->child("files");
