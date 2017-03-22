@@ -27,22 +27,22 @@
   <context>
     <name>BencodeModel</name>
     <message>
-      <location filename="../bencodemodel.cpp" line="684"/>
+      <location filename="../bencodemodel.cpp" line="691"/>
       <source>Name</source>
       <translation>Name</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="685"/>
+      <location filename="../bencodemodel.cpp" line="692"/>
       <source>Type</source>
       <translation>Typ</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="686"/>
+      <location filename="../bencodemodel.cpp" line="693"/>
       <source>Hex</source>
       <translation>Hexadezimal</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="687"/>
+      <location filename="../bencodemodel.cpp" line="694"/>
       <source>Value</source>
       <translation>Wert</translation>
     </message>
@@ -83,7 +83,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
-      <location filename="../mainwindow.cpp" line="322"/>
+      <location filename="../mainwindow.cpp" line="349"/>
       <source>Open</source>
       <translation>Öffnen</translation>
     </message>
@@ -95,7 +95,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="347"/>
+      <location filename="../mainwindow.cpp" line="374"/>
       <source>Save As</source>
       <translation>Speichern als</translation>
     </message>
@@ -217,20 +217,20 @@
     &lt;p style="margin-left: 20px"&gt;full file path matches Perl-like regular expression&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;
+      <translation>&lt;html&gt;
   &lt;head/&gt;
   &lt;body&gt;
-    &lt;p&gt;&lt;b&gt;name&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;file name with extension exactly equals with pattern&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;Dateiname mit Erweiterung entspricht exakt dem Muster&lt;/p&gt;
     &lt;br/&gt;
-    &lt;p&gt;&lt;b&gt;extension&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;the symbols after the latest point exactly equals with pattern, for 'archive.tar.gz' it will be 'gz' for example&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;Erweiterung&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;die Symbole nach dem letzten Punkt entsprechen genau dem Muster, für 'archive.tar.gz' wird es beispielsweise 'gz' sein&lt;/p&gt;
     &lt;br/&gt;
-    &lt;p&gt;&lt;b&gt;wildcards&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;file name with extension matches with file globbing where '?' is one any symbol and '*' is any numbers of any symbols&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;Platzhalter&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;Dateiname mit Erweiterung stimmt mit Dateiglobbing überein, wobei '?' ein beliebiges Symbol und '*' eine beliebige Anzahl von Symbolen ist&lt;/p&gt;
     &lt;br/&gt;
-    &lt;p&gt;&lt;b&gt;regular expression&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;full file path matches Perl-like regular expression&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;regulärer Ausdruck&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;vollständiger Dateipfad entspricht Perl-ähnlichem regulären Ausdruck&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;</translation>
     </message>
@@ -370,83 +370,83 @@
       <translation>Unbearbeitet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="171"/>
+      <location filename="../mainwindow.cpp" line="198"/>
       <source>Need to calculate piece hashes</source>
       <translation>Stück-Hashwerte müssen berechnet werden</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="172"/>
+      <location filename="../mainwindow.cpp" line="199"/>
       <source>Please wait</source>
       <translation>Bitte warten</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="182"/>
+      <location filename="../mainwindow.cpp" line="209"/>
       <source>Auto</source>
       <translation>Automatisch</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="190"/>
+      <location filename="../mainwindow.cpp" line="217"/>
       <source>Path</source>
       <translation>Pfad</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="190"/>
+      <location filename="../mainwindow.cpp" line="217"/>
       <source>Size</source>
       <translation>Größe</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="152"/>
+      <location filename="../mainwindow.cpp" line="179"/>
       <source>Torrents (*.torrent)</source>
       <translation>Torrents (*.torrent)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="153"/>
+      <location filename="../mainwindow.cpp" line="180"/>
       <source>uTorrent resume files (*.dat)</source>
       <translation>uTorrent-Fortsetzungsdateien (*.dat)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="190"/>
+      <location filename="../mainwindow.cpp" line="217"/>
       <source># Pieces</source>
       <translation># Teile</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="299"/>
-      <location filename="../mainwindow.cpp" line="772"/>
+      <location filename="../mainwindow.cpp" line="326"/>
+      <location filename="../mainwindow.cpp" line="806"/>
       <source>Error</source>
       <translation>Fehler</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="299"/>
+      <location filename="../mainwindow.cpp" line="326"/>
       <source>Can't open file</source>
       <translatorcomment>Не могу открыть файл</translatorcomment>
       <translation>Datei kann nicht geöffnet werden</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="556"/>
+      <location filename="../mainwindow.cpp" line="583"/>
       <source>Warning</source>
       <translation>Warnung</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="532"/>
+      <location filename="../mainwindow.cpp" line="559"/>
       <source>Torrent root folder is not set</source>
       <translation>Torrent Stammverzeichnis nicht definiert</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="342"/>
-      <location filename="../mainwindow.cpp" line="1003"/>
-      <location filename="../mainwindow.cpp" line="1011"/>
-      <location filename="../mainwindow.cpp" line="1022"/>
+      <location filename="../mainwindow.cpp" line="369"/>
+      <location filename="../mainwindow.cpp" line="1037"/>
+      <location filename="../mainwindow.cpp" line="1045"/>
+      <location filename="../mainwindow.cpp" line="1056"/>
       <source>Can't save file</source>
       <translation>Konnte Datei nicht speichern</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="342"/>
-      <location filename="../mainwindow.cpp" line="1003"/>
+      <location filename="../mainwindow.cpp" line="369"/>
+      <location filename="../mainwindow.cpp" line="1037"/>
       <source>BEncoded data is not valid</source>
       <translation>BEncoded Daten sind ungültig</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="533"/>
+      <location filename="../mainwindow.cpp" line="560"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
@@ -459,68 +459,68 @@ Wenn Sie die Dateiliste des aktuellen Torrents bearbeiten möchten, müssen sie 
 Möchten Sie jetzt das Stammverzeichnis setzen und erneut versuchen?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="556"/>
+      <location filename="../mainwindow.cpp" line="583"/>
       <source>The torrent root folder is not common.</source>
       <translation>Der Torrent-Stammordner ist ungewöhnlich.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="607"/>
+      <location filename="../mainwindow.cpp" line="642"/>
       <source>Add File</source>
       <translation>Datei hinzufügen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="628"/>
+      <location filename="../mainwindow.cpp" line="664"/>
       <source>Add Folder</source>
       <translation>Ordner hinzufügen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="779"/>
+      <location filename="../mainwindow.cpp" line="813"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translation>Zeile: %1 von %2 Spalte: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="961"/>
-      <location filename="../mainwindow.cpp" line="969"/>
+      <location filename="../mainwindow.cpp" line="995"/>
+      <location filename="../mainwindow.cpp" line="1003"/>
       <source>Error on %1 line: %2</source>
       <translation>Fehler bei %1 Zeile: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1119"/>
+      <location filename="../mainwindow.cpp" line="1153"/>
       <source>B</source>
       <translation>B</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1123"/>
+      <location filename="../mainwindow.cpp" line="1157"/>
       <source>KiB</source>
       <translation>KiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1127"/>
+      <location filename="../mainwindow.cpp" line="1161"/>
       <source>MiB</source>
       <translation>MiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1131"/>
+      <location filename="../mainwindow.cpp" line="1165"/>
       <source>GiB</source>
       <translation>GiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1135"/>
+      <location filename="../mainwindow.cpp" line="1169"/>
       <source>TiB</source>
       <translation>TiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1153"/>
+      <location filename="../mainwindow.cpp" line="1187"/>
       <source>Save file</source>
       <translation>Datei speichern</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1154"/>
+      <location filename="../mainwindow.cpp" line="1188"/>
       <source>Untitled</source>
       <translation>Unbenannt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1155"/>
+      <location filename="../mainwindow.cpp" line="1189"/>
       <source>Save file "%1"?</source>
       <translation>Datei "%1" speichern?</translation>
     </message>
@@ -678,12 +678,12 @@ Möchten Sie jetzt das Stammverzeichnis setzen und erneut versuchen?</translatio
   <context>
     <name>Worker</name>
     <message>
-      <location filename="../mainwindow.cpp" line="81"/>
+      <location filename="../mainwindow.cpp" line="108"/>
       <source>Can't open %1</source>
       <translation>%1 kann nicht geöffnet werden</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="116"/>
+      <location filename="../mainwindow.cpp" line="143"/>
       <source>Can't read from %1</source>
       <translation>%1 kann nicht gelesen werden</translation>
     </message>

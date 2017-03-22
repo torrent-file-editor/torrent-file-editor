@@ -27,22 +27,22 @@
   <context>
     <name>BencodeModel</name>
     <message>
-      <location filename="../bencodemodel.cpp" line="684"/>
+      <location filename="../bencodemodel.cpp" line="691"/>
       <source>Name</source>
       <translation>Adı</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="685"/>
+      <location filename="../bencodemodel.cpp" line="692"/>
       <source>Type</source>
       <translation>Türü</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="686"/>
+      <location filename="../bencodemodel.cpp" line="693"/>
       <source>Hex</source>
       <translation>Hex</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="687"/>
+      <location filename="../bencodemodel.cpp" line="694"/>
       <source>Value</source>
       <translation>Değer</translation>
     </message>
@@ -83,7 +83,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
-      <location filename="../mainwindow.cpp" line="322"/>
+      <location filename="../mainwindow.cpp" line="349"/>
       <source>Open</source>
       <translation>Aç</translation>
     </message>
@@ -95,7 +95,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="347"/>
+      <location filename="../mainwindow.cpp" line="374"/>
       <source>Save As</source>
       <translation>Farklı Kaydet</translation>
     </message>
@@ -370,83 +370,83 @@
       <translation type="unfinished">Raw</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="171"/>
+      <location filename="../mainwindow.cpp" line="198"/>
       <source>Need to calculate piece hashes</source>
-      <translation type="unfinished">Need to calculate piece hashes</translation>
+      <translation>Parçaların hash'lerini hesaplamanız gerekiyor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="172"/>
+      <location filename="../mainwindow.cpp" line="199"/>
       <source>Please wait</source>
       <translation>Lütfen bekleyin</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="182"/>
+      <location filename="../mainwindow.cpp" line="209"/>
       <source>Auto</source>
       <translation>Otomatik</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="190"/>
+      <location filename="../mainwindow.cpp" line="217"/>
       <source>Path</source>
       <translation>Yol</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="190"/>
+      <location filename="../mainwindow.cpp" line="217"/>
       <source>Size</source>
       <translation>Boyut</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="152"/>
+      <location filename="../mainwindow.cpp" line="179"/>
       <source>Torrents (*.torrent)</source>
       <translation>Torrent (*.torrent)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="153"/>
+      <location filename="../mainwindow.cpp" line="180"/>
       <source>uTorrent resume files (*.dat)</source>
       <translation type="unfinished">uTorrent resume files (*.dat)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="190"/>
+      <location filename="../mainwindow.cpp" line="217"/>
       <source># Pieces</source>
       <translation># Parçalar</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="299"/>
-      <location filename="../mainwindow.cpp" line="772"/>
+      <location filename="../mainwindow.cpp" line="326"/>
+      <location filename="../mainwindow.cpp" line="806"/>
       <source>Error</source>
       <translation>Hata</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="299"/>
+      <location filename="../mainwindow.cpp" line="326"/>
       <source>Can't open file</source>
       <translatorcomment>Не могу открыть файл</translatorcomment>
       <translation>Dosya açılamıyor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="556"/>
+      <location filename="../mainwindow.cpp" line="583"/>
       <source>Warning</source>
       <translation>Uyarı</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="532"/>
+      <location filename="../mainwindow.cpp" line="559"/>
       <source>Torrent root folder is not set</source>
       <translation>Torrent kök klasörü ayarlı değil</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="342"/>
-      <location filename="../mainwindow.cpp" line="1003"/>
-      <location filename="../mainwindow.cpp" line="1011"/>
-      <location filename="../mainwindow.cpp" line="1022"/>
+      <location filename="../mainwindow.cpp" line="369"/>
+      <location filename="../mainwindow.cpp" line="1037"/>
+      <location filename="../mainwindow.cpp" line="1045"/>
+      <location filename="../mainwindow.cpp" line="1056"/>
       <source>Can't save file</source>
       <translation>Dosya kaydedilemiyor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="342"/>
-      <location filename="../mainwindow.cpp" line="1003"/>
+      <location filename="../mainwindow.cpp" line="369"/>
+      <location filename="../mainwindow.cpp" line="1037"/>
       <source>BEncoded data is not valid</source>
-      <translation type="unfinished">BEncoded data is not valid</translation>
+      <translation>BEncoded verisi geçerli değil</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="533"/>
+      <location filename="../mainwindow.cpp" line="560"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
@@ -459,68 +459,68 @@ If you want to edit file list in the current torrent you need to set torrent roo
 Do you want to set torrent root folder and try again?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="556"/>
+      <location filename="../mainwindow.cpp" line="583"/>
       <source>The torrent root folder is not common.</source>
       <translation type="unfinished">The torrent root folder is not common.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="607"/>
+      <location filename="../mainwindow.cpp" line="642"/>
       <source>Add File</source>
       <translation>Dosya Ekle</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="628"/>
+      <location filename="../mainwindow.cpp" line="664"/>
       <source>Add Folder</source>
       <translation>Klasör Ekle</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="779"/>
+      <location filename="../mainwindow.cpp" line="813"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translation>Satır: %1/%2 Sütun: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="961"/>
-      <location filename="../mainwindow.cpp" line="969"/>
+      <location filename="../mainwindow.cpp" line="995"/>
+      <location filename="../mainwindow.cpp" line="1003"/>
       <source>Error on %1 line: %2</source>
       <translation type="unfinished">Error on %1 line: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1119"/>
+      <location filename="../mainwindow.cpp" line="1153"/>
       <source>B</source>
       <translation>B</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1123"/>
+      <location filename="../mainwindow.cpp" line="1157"/>
       <source>KiB</source>
       <translation>KiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1127"/>
+      <location filename="../mainwindow.cpp" line="1161"/>
       <source>MiB</source>
       <translation>MiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1131"/>
+      <location filename="../mainwindow.cpp" line="1165"/>
       <source>GiB</source>
       <translation>GiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1135"/>
+      <location filename="../mainwindow.cpp" line="1169"/>
       <source>TiB</source>
       <translation>TiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1153"/>
+      <location filename="../mainwindow.cpp" line="1187"/>
       <source>Save file</source>
       <translation>Dosyayı kaydet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1154"/>
+      <location filename="../mainwindow.cpp" line="1188"/>
       <source>Untitled</source>
       <translation>Başlıksız</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1155"/>
+      <location filename="../mainwindow.cpp" line="1189"/>
       <source>Save file "%1"?</source>
       <translation>"%1" kaydedilsin mi?</translation>
     </message>
@@ -545,7 +545,7 @@ Do you want to set torrent root folder and try again?</translation>
     <message>
       <location filename="../bencode.cpp" line="212"/>
       <source>string</source>
-      <translation type="unfinished">string</translation>
+      <translation>string</translation>
     </message>
     <message>
       <location filename="../bencode.cpp" line="213"/>
@@ -655,14 +655,12 @@ Do you want to set torrent root folder and try again?</translation>
       <source>%1 of %n match(es)</source>
       <translation>
         <numerusform>%1/%n eşleşme</numerusform>
-        <numerusform>%1/%n eşleşme</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="192"/>
       <source>%n value(s) was(were) replaced</source>
       <translation>
-        <numerusform>%n değer değiştirildi</numerusform>
         <numerusform>%n değer değiştirildi</numerusform>
       </translation>
     </message>
@@ -678,12 +676,12 @@ Do you want to set torrent root folder and try again?</translation>
   <context>
     <name>Worker</name>
     <message>
-      <location filename="../mainwindow.cpp" line="81"/>
+      <location filename="../mainwindow.cpp" line="108"/>
       <source>Can't open %1</source>
       <translation>%1 açılamıyor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="116"/>
+      <location filename="../mainwindow.cpp" line="143"/>
       <source>Can't read from %1</source>
       <translation>%1 okunamıyor</translation>
     </message>

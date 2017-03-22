@@ -5,10 +5,13 @@
         <file>torrentfileeditor_cs.qm</file>
         <file>torrentfileeditor_de.qm</file>
         <file>torrentfileeditor_en.qm</file>
+        <file>torrentfileeditor_es.qm</file>
         <file>torrentfileeditor_hu.qm</file>
+        <file>torrentfileeditor_it.qm</file>
         <file>torrentfileeditor_ko.qm</file>
         <file>torrentfileeditor_nl.qm</file>
         <file>torrentfileeditor_ru.qm</file>
         <file>torrentfileeditor_tr.qm</file>
+        <file>torrentfileeditor_zh_CN.qm</file>
     </qresource>
 </RCC>
