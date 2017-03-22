@@ -25,8 +25,9 @@ set(MACOSX_BUNDLE_BUNDLE_VERSION "\${APP_VERSION}")
 
 include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
 
+# Workaround: On Fedora will be executed cmake not mingw32-cmake for building Windows version
 add_custom_target(update_version ALL
-  COMMAND ${CMAKE_COMMAND} -DAPP_VERSION="v${APP_VERSION}" -P "${CMAKE_SOURCE_DIR}/Version.cmake"
+  COMMAND ${CMAKE_COMMAND} -DWIN32=${WIN32} -DAPP_VERSION="v${APP_VERSION}" -P "${CMAKE_SOURCE_DIR}/Version.cmake"
 )
 
 # Enable C++11
@@ -193,8 +194,11 @@ if(WIN32)
   set(QJSON_LIBRARIES qjson.a)
 
   # resource compilation for MinGW
-  add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/app.o
-    COMMAND ${CMAKE_RC_COMPILER} -I${CMAKE_CURRENT_SOURCE_DIR} -i${CMAKE_CURRENT_SOURCE_DIR}/app.rc -o ${CMAKE_CURRENT_BINARY_DIR}/app.o
+  add_custom_command(
+    OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/app.o
+    DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/app.rc
+    COMMENT "Building RC object app.o"
+    COMMAND ${CMAKE_RC_COMPILER} -I${CMAKE_CURRENT_SOURCE_DIR} -i${CMAKE_CURRENT_BINARY_DIR}/app.rc -o ${CMAKE_CURRENT_BINARY_DIR}/app.o
   )
   set(SOURCES ${SOURCES} ${CMAKE_CURRENT_BINARY_DIR}/app.o)
 endif()
@@ -348,6 +352,7 @@ set(OTHER_FILES
   Dmg.cmake
   appcast.xml.in
   CMakeDMGSetup.scpt
+  Version.cmake
 )
 
 # Collect all existing files and configure as non-sources.

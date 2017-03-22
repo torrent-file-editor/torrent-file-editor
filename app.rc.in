@@ -23,8 +23,17 @@ VS_VERSION_INFO VERSIONINFO
 		BEGIN
 			BLOCK "040904B0"
 			BEGIN
-				VALUE "FileVersion", "0.1.0\0"
+				VALUE "FileDescription", "Torrent File Editor"
+				VALUE "CompanyName", "Ivan Romanov"
+				VALUE "LegalCopyright", "Copyleft 2014-2017 by Ivan Romanov"
+				VALUE "ProductName", "Torrent File Editor"
+				VALUE "ProductVersion", "@APP_VERSION@"
 			END
+		END
+
+		BLOCK "VarFileInfo"
+		BEGIN
+			VALUE "Translation", 0x0409, 0x04B0
 		END
 	END
 /* End of Version info */
