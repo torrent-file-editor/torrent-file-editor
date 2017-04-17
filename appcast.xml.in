@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Torrent File Editor Changelog</title>
-    <link>http://downloads.sourceforge.net/torrent-file-editor/appcast.xml</link>
+    <link>https://downloads.sourceforge.net/torrent-file-editor/appcast.xml</link>
     <description>Most recent changes with links to updates.</description>
     <language>en</language>
       <item>
