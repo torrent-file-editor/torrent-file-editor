@@ -11,12 +11,12 @@
     <message>
       <location filename="../aboutdlg.ui" line="117"/>
       <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
-      <translation type="unfinished">&lt;h3&gt;Beer for Developer&lt;/h3&gt;</translation>
+      <translation>&lt;h3&gt;Pivo pro vývojáře&lt;/h3&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="127"/>
       <source>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</source>
-      <translation type="unfinished">The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</translation>
+      <translation>Vývoj poslední verze si vyžádal spoustu času a úsilí. byly opraveny vážné chyby a udělána užitečná vylepšení. Jsem unaven. Ale trocha piva, aby mi pomohla nabrat sílu a pokračovat pokračovat ve vyvíjení, by byla milá. Pokud se vám tento program líbí a chtěli byste poděkovat vývojáři a napomoci další verzi k vydání, můžete dát malý dat přes:</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="47"/>
@@ -142,12 +142,12 @@
     <message>
       <location filename="../mainwindow.ui" line="216"/>
       <source>URL</source>
-      <translation type="unfinished">URL</translation>
+      <translation>URL</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="223"/>
       <source>Date created</source>
-      <translation type="unfinished">Date created</translation>
+      <translation>Vytvořeno</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="237"/>
@@ -182,7 +182,7 @@
     <message>
       <location filename="../mainwindow.ui" line="404"/>
       <source>Reload files list from current torrent data</source>
-      <translation type="unfinished">Reload files list from current torrent data</translation>
+      <translation>Nahrát seznam souborů znovu z nynějších dat torrentu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="443"/>
@@ -197,7 +197,7 @@
     <message>
       <location filename="../mainwindow.ui" line="479"/>
       <source>Filter by </source>
-      <translation type="unfinished">Filter by </translation>
+      <translation>Filtrováno</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="486"/>
@@ -217,52 +217,52 @@
     &lt;p style="margin-left: 20px"&gt;full file path matches Perl-like regular expression&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;
+      <translation>&lt;html&gt;
   &lt;head/&gt;
   &lt;body&gt;
-    &lt;p&gt;&lt;b&gt;name&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;file name with extension exactly equals with pattern&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;název&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;název souboru a přípona se přesně rovnají vzoru&lt;/p&gt;
     &lt;br/&gt;
-    &lt;p&gt;&lt;b&gt;extension&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;the symbols after the latest point exactly equals with pattern, for 'archive.tar.gz' it will be 'gz' for example&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;přípona&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;symboly za posledním bodem se přesně rovnají vzoru, například pro 'archive.tar.gz' to bude 'gz'&lt;/p&gt;
     &lt;br/&gt;
-    &lt;p&gt;&lt;b&gt;wildcards&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;file name with extension matches with file globbing where '?' is one any symbol and '*' is any numbers of any symbols&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;zástupné symboly&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;název souboru s příponou se shoduje se souborem, kde '?' je jakýkoli symbol a '*' je kterékoli číslo jakýchkoli symbolů&lt;/p&gt;
     &lt;br/&gt;
-    &lt;p&gt;&lt;b&gt;regular expression&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;full file path matches Perl-like regular expression&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;regulární výraz&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;úplná cesta k souboru odpovídá regulárnímu výrazu na způsob Perl&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="505"/>
       <source>name</source>
-      <translation type="unfinished">name</translation>
+      <translation>Název</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="510"/>
       <source>extension</source>
-      <translation type="unfinished">extension</translation>
+      <translation>Přípona</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="515"/>
       <source>wildcards</source>
-      <translation type="unfinished">wildcards</translation>
+      <translation>Zástupné symboly</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="520"/>
       <source>regular expression</source>
-      <translation type="unfinished">regular expression</translation>
+      <translation>Regulární výraz</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="538"/>
       <source>Filter files</source>
-      <translation type="unfinished">Filter files</translation>
+      <translation>Filtrovat soubory</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="633"/>
       <source>Torrent root folder </source>
-      <translation type="unfinished">Torrent root folder </translation>
+      <translation>Kořenová složka torrentu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="646"/>
@@ -287,12 +287,12 @@
     <message>
       <location filename="../mainwindow.ui" line="721"/>
       <source>Find</source>
-      <translation type="unfinished">Find</translation>
+      <translation>Najít</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="737"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>Nahradit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="830"/>
@@ -342,12 +342,12 @@
     <message>
       <location filename="../mainwindow.ui" line="356"/>
       <source>Calculate pieces hashes</source>
-      <translation type="unfinished">Calculate pieces hashes</translation>
+      <translation>Spočítat hodnoty hash částí</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="427"/>
       <source>Remove selected files</source>
-      <translation type="unfinished">Remove selected files</translation>
+      <translation>Odstranit vybrané soubory</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="587"/>
@@ -362,7 +362,7 @@
     <message>
       <location filename="../mainwindow.ui" line="673"/>
       <source>Delete selected tree items</source>
-      <translation type="unfinished">Delete selected tree items</translation>
+      <translation>Smazat vybrané položky stromu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="773"/>
@@ -407,7 +407,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="217"/>
       <source># Pieces</source>
-      <translation type="unfinished"># Pieces</translation>
+      <translation># Části</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="326"/>
@@ -429,7 +429,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="559"/>
       <source>Torrent root folder is not set</source>
-      <translation type="unfinished">Torrent root folder is not set</translation>
+      <translation>Kořenová složka torrentu není nastavena</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="369"/>
@@ -437,13 +437,13 @@
       <location filename="../mainwindow.cpp" line="1045"/>
       <location filename="../mainwindow.cpp" line="1056"/>
       <source>Can't save file</source>
-      <translation type="unfinished">Can't save file</translation>
+      <translation>Nelze uložit soubor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="369"/>
       <location filename="../mainwindow.cpp" line="1037"/>
       <source>BEncoded data is not valid</source>
-      <translation type="unfinished">BEncoded data is not valid</translation>
+      <translation>Zakódovaná data nejsou platná</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="560"/>
@@ -452,16 +452,12 @@
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
 
 Do you want to set torrent root folder and try again?</source>
-      <translation type="unfinished">Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
-
-If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
-
-Do you want to set torrent root folder and try again?</translation>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="583"/>
       <source>The torrent root folder is not common.</source>
-      <translation type="unfinished">The torrent root folder is not common.</translation>
+      <translation>Kořenová složka torrentu není běžná.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="642"/>
@@ -512,17 +508,17 @@ Do you want to set torrent root folder and try again?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="1187"/>
       <source>Save file</source>
-      <translation type="unfinished">Save file</translation>
+      <translation>Uložit soubor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1188"/>
       <source>Untitled</source>
-      <translation type="unfinished">Untitled</translation>
+      <translation>Bez názvu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1189"/>
       <source>Save file "%1"?</source>
-      <translation type="unfinished">Save file "%1"?</translation>
+      <translation>Uložit soubor "%1"?</translation>
     </message>
   </context>
   <context>
@@ -558,31 +554,31 @@ Do you want to set torrent root folder and try again?</translation>
     <message>
       <location filename="../searchdlg.ui" line="27"/>
       <source>Key</source>
-      <translation type="unfinished">Key</translation>
+      <translation>Klíč</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="39"/>
       <location filename="../searchdlg.ui" line="96"/>
       <source>Match case</source>
-      <translation type="unfinished">Match case</translation>
+      <translation>Porovnat velikost</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="46"/>
       <location filename="../searchdlg.ui" line="103"/>
       <source>Exact match</source>
-      <translation type="unfinished">Exact match</translation>
+      <translation>Přesná shoda</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="56"/>
       <location filename="../searchdlg.ui" line="113"/>
       <source>Wildcards</source>
-      <translation type="unfinished">Wildcards</translation>
+      <translation>Zástupné symboly</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="63"/>
       <location filename="../searchdlg.ui" line="120"/>
       <source>Regular expression</source>
-      <translation type="unfinished">Regular expression</translation>
+      <translation>Regulární výraz</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="84"/>
@@ -592,80 +588,80 @@ Do you want to set torrent root folder and try again?</translation>
     <message>
       <location filename="../searchdlg.ui" line="127"/>
       <source>Hex</source>
-      <translation type="unfinished">Hex</translation>
+      <translation>Hex</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="154"/>
       <source>Replace value with</source>
-      <translation type="unfinished">Replace value with</translation>
+      <translation>Nahradit hodnotu</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="164"/>
       <source>hex</source>
-      <translation type="unfinished">hex</translation>
+      <translation>hex</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="176"/>
       <source>Direction</source>
-      <translation type="unfinished">Direction</translation>
+      <translation>Směr</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="182"/>
       <source>Up</source>
-      <translation type="unfinished">Up</translation>
+      <translation>Nahoru</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="189"/>
       <source>Down</source>
-      <translation type="unfinished">Down</translation>
+      <translation>Dolů</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="204"/>
       <source>Replace All</source>
-      <translation type="unfinished">Replace All</translation>
+      <translation>Nahradit vše</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="224"/>
       <source>Find Next</source>
-      <translation type="unfinished">Find Next</translation>
+      <translation>Najít další</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="248"/>
       <location filename="../searchdlg.cpp" line="42"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>Nahradit</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="231"/>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Zavřít</translation>
     </message>
     <message>
       <location filename="../searchdlg.cpp" line="42"/>
       <source>Find</source>
-      <translation type="unfinished">Find</translation>
+      <translation>Najít</translation>
     </message>
     <message>
       <location filename="../searchdlg.cpp" line="135"/>
       <source>No matches found</source>
-      <translation type="unfinished">No matches found</translation>
+      <translation>Nenalezeny žádné shody</translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="140"/>
       <source>%1 of %n match(es)</source>
-      <translation type="unfinished">
-        <numerusform>%1 of %n match(es)</numerusform>
-        <numerusform>%1 of %n match(es)</numerusform>
-        <numerusform>%1 of %n match(es)</numerusform>
+      <translation>
+        <numerusform>%1 z %n shody</numerusform>
+        <numerusform>%1 z %n shod</numerusform>
+        <numerusform>%1 z %n shod</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="192"/>
       <source>%n value(s) was(were) replaced</source>
-      <translation type="unfinished">
-        <numerusform>%n value(s) was(were) replaced</numerusform>
-        <numerusform>%n value(s) was(were) replaced</numerusform>
-        <numerusform>%n value(s) was(were) replaced</numerusform>
+      <translation>
+        <numerusform>%n hodnota byla nahrazena</numerusform>
+        <numerusform>%n hodnoty byly nahrazeny</numerusform>
+        <numerusform>%n hodnot bylo nahrazeno</numerusform>
       </translation>
     </message>
   </context>
