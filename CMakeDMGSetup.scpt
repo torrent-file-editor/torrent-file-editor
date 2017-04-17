@@ -41,6 +41,10 @@ on run argv
         set the bounds to { 500, 300, 991, 600 }
         set position of item "Torrent File Editor.app" to { 400, 210 }
         set position of item "Applications" to { 97, 205 }
+        set position of item ".DS_Store" to { 540, 10 }
+        set position of item ".fseventsd" to { 540, 130 }
+        set position of item ".background" to { 540, 230 }
+        set position of item ".Trashes" to { 640, 10 }
       end tell
       update without registering applications
       delay 5
