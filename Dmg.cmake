@@ -1,5 +1,6 @@
 set(ENV{LC_ALL} C)
 execute_process(COMMAND date "+%a, %d %b %Y %H:%M:%S %z" OUTPUT_VARIABLE PUB_DATE OUTPUT_STRIP_TRAILING_WHITESPACE)
+execute_process(COMMAND osascript -e "tell application \"Finder\" to eject (every disk whose displayed name is \"${PROJECT_NAME}\")")
 execute_process(COMMAND cpack -V WORKING_DIRECTORY "${CMAKE_BINARY_DIR}")
 file(READ ${CMAKE_BINARY_DIR}/version APP_VERSION)
 execute_process(
