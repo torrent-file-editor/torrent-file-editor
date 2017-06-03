@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>502</width>
-    <height>558</height>
+    <height>421</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -122,7 +122,7 @@
        </widget>
       </item>
       <item row="2" column="0" colspan="2">
-       <widget class="QLabel" name="label_5">
+       <widget class="QLabel" name="lbDonation">
         <property name="text">
          <string>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</string>
         </property>

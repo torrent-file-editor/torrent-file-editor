@@ -49,6 +49,7 @@ AboutDlg::AboutDlg(QWidget *parent)
 #ifdef NO_DONATION
     ui->wdgDonation->hide();
 #endif
+    ui->lbDonation->hide();
 }
 
 AboutDlg::~AboutDlg()
