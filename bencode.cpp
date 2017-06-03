@@ -168,12 +168,19 @@ Bencode *Bencode::fromJson(const QVariant &json)
         QVariantMap variantMap = json.toMap();
         res = new Bencode(Type::Dictionary);
         QStringList keys = variantMap.keys();
+
         foreach (const QString &key, keys) {
             Bencode *newItem = fromJson(variantMap.value(key));
-            newItem->_key = key.toUtf8();
+            newItem->_key = toRawString(key);
             if (hexKeys.contains(QString(key)))
                 newItem->_hex = true;
-            res->appendChild(newItem);
+
+            int pos = 0;
+            while (pos < res->childCount() && newItem->_key > res->child(pos)->key()) {
+                pos++;
+            }
+
+            res->insertChild(pos, newItem);
         }
         break; }
 

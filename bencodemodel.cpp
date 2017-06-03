@@ -538,10 +538,11 @@ bool BencodeModel::setData(const QModelIndex &index, const QVariant &value, int 
     switch (role) {
     case Qt::EditRole:
         if (column == Column::Name) {
-            QByteArray newKey = value.toByteArray();
+            QByteArray newKey = fromUnicode(value.toString());
             Bencode *parentItem = static_cast<Bencode*>(item->parent());
             int newRow;
             for (newRow = 0; newRow < parentItem->childCount(); newRow++) {
+
                 if (newKey < parentItem->child(newRow)->key()) {
                     break;
                 }
@@ -550,7 +551,7 @@ bool BencodeModel::setData(const QModelIndex &index, const QVariant &value, int 
             // Fixed new item pos when going to right
             int realRow = newRow > item->row() ? newRow - 1 : newRow;
 
-            item->setKey(value.toByteArray());
+            item->setKey(newKey);
             res = true;
 
             if (realRow == item->row()) {
@@ -622,7 +623,7 @@ QVariant BencodeModel::data(const QModelIndex &index, int role) const
         switch (column) {
         case Column::Name:
             if (static_cast<Bencode*>(item->parent())->isDictionary())
-                res = item->key();
+                res = toUnicode(item->key());
             else
                 res = item->row();
             break;
