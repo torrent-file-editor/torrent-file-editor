@@ -4,45 +4,65 @@
   <context>
     <name>AboutDlg</name>
     <message>
-      <location filename="../aboutdlg.ui" line="58"/>
+      <location filename="../aboutdlg.ui" line="175"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt@land.ru"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Autor: Ivan Romanov &lt;a href="mailto:drizt@land.ru"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Licence: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Stránky: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Poděkování: &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; za ikonu programu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.ui" line="117"/>
+      <location filename="../aboutdlg.ui" line="39"/>
       <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
       <translation>&lt;h3&gt;Pivo pro vývojáře&lt;/h3&gt;</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.ui" line="127"/>
+      <location filename="../aboutdlg.ui" line="85"/>
       <source>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</source>
       <translation>Vývoj poslední verze si vyžádal spoustu času a úsilí. byly opraveny vážné chyby a udělána užitečná vylepšení. Jsem unaven. Ale trocha piva, aby mi pomohla nabrat sílu a pokračovat pokračovat ve vyvíjení, by byla milá. Pokud se vám tento program líbí a chtěli byste poděkovat vývojáři a napomoci další verzi k vydání, můžete dát malý dat přes:</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="47"/>
+      <location filename="../aboutdlg.ui" line="117"/>
+      <source>Check for Update</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../aboutdlg.cpp" line="136"/>
       <source>About %1</source>
       <translation>O %1</translation>
+    </message>
+    <message>
+      <location filename="../aboutdlg.cpp" line="190"/>
+      <source>Something went wrong</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../aboutdlg.cpp" line="194"/>
+      <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../aboutdlg.cpp" line="197"/>
+      <source>The latest version is installed</source>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
     <name>BencodeModel</name>
     <message>
-      <location filename="../bencodemodel.cpp" line="691"/>
+      <location filename="../bencodemodel.cpp" line="692"/>
       <source>Name</source>
       <translation>Název</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="692"/>
+      <location filename="../bencodemodel.cpp" line="693"/>
       <source>Type</source>
       <translation>Typ</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="693"/>
+      <location filename="../bencodemodel.cpp" line="694"/>
       <source>Hex</source>
       <translation>Hex</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="694"/>
+      <location filename="../bencodemodel.cpp" line="695"/>
       <source>Value</source>
       <translation>Hodnota</translation>
     </message>
@@ -524,27 +544,27 @@ Do you want to set torrent root folder and try again?</source>
   <context>
     <name>QObject</name>
     <message>
-      <location filename="../bencode.cpp" line="209"/>
+      <location filename="../bencode.cpp" line="216"/>
       <source>list</source>
       <translation>Seznam</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="210"/>
+      <location filename="../bencode.cpp" line="217"/>
       <source>dictionary</source>
       <translation>Slovník</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="211"/>
+      <location filename="../bencode.cpp" line="218"/>
       <source>integer</source>
       <translation>Celé číslo</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="212"/>
+      <location filename="../bencode.cpp" line="219"/>
       <source>string</source>
       <translation>Řetězec</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="213"/>
+      <location filename="../bencode.cpp" line="220"/>
       <source>invalid</source>
       <translation>Neplatný</translation>
     </message>

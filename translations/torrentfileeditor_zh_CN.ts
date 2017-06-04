@@ -4,45 +4,65 @@
   <context>
     <name>AboutDlg</name>
     <message>
-      <location filename="../aboutdlg.ui" line="58"/>
+      <location filename="../aboutdlg.ui" line="175"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt@land.ru"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;作者：Ivan Romanov&lt;a href="mailto:drizt@land.ru"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;授权许可：GNU通用公共许可协议 版本3或更新&lt;/p&gt;&lt;p&gt;主页：&lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;源代码：&lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;鸣谢：&lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt;提供应用图标&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.ui" line="117"/>
+      <location filename="../aboutdlg.ui" line="39"/>
       <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
       <translation>&lt;h3&gt;给开发者买杯啤酒吧！&lt;/h3&gt;</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.ui" line="127"/>
+      <location filename="../aboutdlg.ui" line="85"/>
       <source>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</source>
       <translation>开发最新版本花费了我大量的时间和精力。最新版里修复了严重的Bug以及进行了大的改进。我有点累了，不过一小杯啤酒能让我满血复活并且继续开发。如果你喜欢这个应用，系想要感谢开发者并且帮助下一个版本来到这个世界，你可以通过下面的方法进行一点小小的捐助：</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="47"/>
+      <location filename="../aboutdlg.ui" line="117"/>
+      <source>Check for Update</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../aboutdlg.cpp" line="136"/>
       <source>About %1</source>
       <translation>关于%1</translation>
+    </message>
+    <message>
+      <location filename="../aboutdlg.cpp" line="190"/>
+      <source>Something went wrong</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../aboutdlg.cpp" line="194"/>
+      <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../aboutdlg.cpp" line="197"/>
+      <source>The latest version is installed</source>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
     <name>BencodeModel</name>
     <message>
-      <location filename="../bencodemodel.cpp" line="691"/>
+      <location filename="../bencodemodel.cpp" line="692"/>
       <source>Name</source>
       <translation>名称</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="692"/>
+      <location filename="../bencodemodel.cpp" line="693"/>
       <source>Type</source>
       <translation>类型</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="693"/>
+      <location filename="../bencodemodel.cpp" line="694"/>
       <source>Hex</source>
       <translation>十六进制</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="694"/>
+      <location filename="../bencodemodel.cpp" line="695"/>
       <source>Value</source>
       <translation>值</translation>
     </message>
@@ -528,27 +548,27 @@ Do you want to set torrent root folder and try again?</source>
   <context>
     <name>QObject</name>
     <message>
-      <location filename="../bencode.cpp" line="209"/>
+      <location filename="../bencode.cpp" line="216"/>
       <source>list</source>
       <translation>列表</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="210"/>
+      <location filename="../bencode.cpp" line="217"/>
       <source>dictionary</source>
       <translation>字典</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="211"/>
+      <location filename="../bencode.cpp" line="218"/>
       <source>integer</source>
       <translation>整型</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="212"/>
+      <location filename="../bencode.cpp" line="219"/>
       <source>string</source>
       <translation>字符串</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="213"/>
+      <location filename="../bencode.cpp" line="220"/>
       <source>invalid</source>
       <translation>无效</translation>
     </message>
