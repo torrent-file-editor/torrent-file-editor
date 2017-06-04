@@ -120,6 +120,12 @@ set(HEADERS
   ${CMAKE_SOURCE_DIR}/searchdlg.h
 )
 
+if(WIN32)
+  list(APPEND HEADERS
+    ${CMAKE_SOURCE_DIR}/checkupdate.h
+  )
+endif()
+
 set(PLAIN_HEADERS
   ${CMAKE_SOURCE_DIR}/bencode.h
   ${CMAKE_SOURCE_DIR}/abstracttreeitem.h
@@ -160,6 +166,12 @@ set(SOURCES
   ${CMAKE_SOURCE_DIR}/searchdlg.cpp
 )
 
+if(WIN32)
+  list(APPEND SOURCES
+    ${CMAKE_SOURCE_DIR}/checkupdate.cpp
+  )
+endif()
+
 if(APPLE)
   list(APPEND SOURCES
     ${CMAKE_SOURCE_DIR}/cocoainitializer.mm
@@ -190,7 +202,7 @@ if(WIN32)
   add_definitions(-DQJSON_STATIC)
 
   set(START_STATIC -Wl,-Bstatic)
-  set(END_STATIC z jpeg png tiff stdc++ -lwinpthread -Wl,-Bdynamic  ws2_32 winmm imm32)
+  set(END_STATIC z jpeg png tiff stdc++ -lwinpthread -Wl,-Bdynamic  ws2_32 winmm imm32 wininet)
   set(QJSON_LIBRARIES qjson.a)
 
   # resource compilation for MinGW

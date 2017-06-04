@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014  Ivan Romanov <drizt@land.ru>
+ * Copyright (C) 2017  Ivan Romanov <drizt@land.ru>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,25 +18,18 @@
 
 #pragma once
 
-#include <QDialog>
+#include <QObject>
 
-class QThread;
-
-namespace Ui { class AboutDlg; }
-
-class AboutDlg : public QDialog
+class CheckUpdate : public QObject
 {
     Q_OBJECT
 
 public:
-    explicit AboutDlg(QWidget *parent = 0);
-    ~AboutDlg();
+    CheckUpdate(QObject *parent = nullptr);
 
 private slots:
-    void checkUpdate();
-    void showUpdate(const QString &version, const QString &url);
+    void start();
 
-private:
-    Ui::AboutDlg *ui;
-    QThread *thread;
+signals:
+    void finished(const QString &version, const QString &url);
 };

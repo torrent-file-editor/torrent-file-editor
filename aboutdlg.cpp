@@ -20,6 +20,13 @@
 #include "ui_aboutdlg.h"
 #include "application.h"
 
+#ifdef Q_OS_WIN
+# include "checkupdate.h"
+# include <QThread>
+#endif
+
+#include <QRegExp>
+
 #define VERSION_LABEL                               \
     "<style>"                                       \
     "h2 {"                                          \
@@ -31,6 +38,87 @@
     "</style>"                                      \
     "<h2>%1</h2><p>%2 (%3)</p>"
 
+
+struct Version {
+    int major;
+    int minor;
+    int patch;
+    int rev;
+    QString gitHash;
+    bool dirty;
+};
+
+Version parseVersion(const QString &version)
+{
+    Version ver{0, 0, 0, 0, QString(), false};
+    QString part1 = version.section(QLatin1Char('-'), 0, 0);
+    QString part2 = version.section(QLatin1Char('-'), 1);
+
+    QRegExp rx(QLatin1String("^v?(\\d+)\\.(\\d+)\\.(\\d+)$"));
+    if (rx.indexIn(part1) != -1) {
+        ver.major = rx.cap(1).toInt();
+        ver.minor = rx.cap(2).toInt();
+        ver.patch = rx.cap(3).toInt();
+    }
+
+    rx.setPattern(QLatin1String("^(\\d+)-g([0-9a-f]{7})(-dirty)?$"));
+    if (rx.indexIn(part2) != -1) {
+        ver.rev = rx.cap(1).toInt();
+        ver.gitHash = rx.cap(2);
+        ver.dirty = !rx.cap(3).isEmpty();
+    }
+
+    return ver;
+}
+
+bool versionLessThan(const Version &left, const Version &right)
+{
+    if (left.major < right.major) {
+        return true;
+    }
+    else if (left.major > right.major) {
+        return false;
+    }
+
+    if (left.minor < right.minor) {
+        return true;
+    }
+    else if (left.minor > right.minor) {
+        return false;
+    }
+
+    if (left.patch < right.patch) {
+        return true;
+    }
+    else if (left.patch > right.patch) {
+        return false;
+    }
+
+    if (left.rev < right.rev) {
+        return true;
+    }
+    else if (left.rev > right.rev) {
+        return false;
+    }
+
+    if (left.gitHash == right.gitHash && left.dirty == right.dirty) {
+        return false;
+    }
+
+    if (left.gitHash.isEmpty() && !right.gitHash.isEmpty()) {
+        return true;
+    }
+    else if (!left.gitHash.isEmpty() && right.gitHash.isEmpty()) {
+        return false;
+    }
+
+    if (left.gitHash == right.gitHash && !left.dirty && right.dirty) {
+        return true;
+    }
+
+    return false;
+}
+
 AboutDlg::AboutDlg(QWidget *parent)
 #ifdef Q_OS_WIN
     : QDialog(parent, Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint | Qt::MSWindowsFixedSizeDialogHint)
@@ -38,6 +126,7 @@ AboutDlg::AboutDlg(QWidget *parent)
     : QDialog(parent, Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint)
 #endif
     , ui(new Ui::AboutDlg)
+    , thread(nullptr)
 {
     ui->setupUi(this);
     ui->label->setText(QString(QLatin1String(VERSION_LABEL))
@@ -50,9 +139,67 @@ AboutDlg::AboutDlg(QWidget *parent)
     ui->wdgDonation->hide();
 #endif
     ui->lbDonation->hide();
+    ui->lbShowUpdate->hide();
+
+#ifndef Q_OS_WIN
+    ui->btCheckUpdate->hide();
+#endif
 }
 
 AboutDlg::~AboutDlg()
 {
+#ifdef Q_OS_WIN
+    if (thread) {
+        thread->quit();
+        thread->wait();
+        delete thread;
+    }
+#endif
     delete ui;
+}
+
+void AboutDlg::checkUpdate()
+{
+#ifdef Q_OS_WIN
+    ui->btCheckUpdate->setEnabled(false);
+
+    thread = new QThread;
+    CheckUpdate *cUpdate = new CheckUpdate;
+    cUpdate->moveToThread(thread);
+    connect(thread, SIGNAL(started()), cUpdate, SLOT(start()));
+    connect(cUpdate, SIGNAL(finished(const QString&, const QString&)), SLOT(showUpdate(const QString&, const QString&)));
+    thread->start();
+#endif
+}
+
+void AboutDlg::showUpdate(const QString &version, const QString &url)
+{
+#ifdef Q_OS_WIN
+    if (thread) {
+        thread->quit();
+        thread->wait();
+        delete thread;
+        thread = nullptr;
+    }
+
+    ui->btCheckUpdate->setEnabled(true);
+
+    ui->lbShowUpdate->show();
+
+    if (version.isEmpty()) {
+        ui->lbShowUpdate->setText(tr("Something went wrong"));
+    }
+    else {
+        if (versionLessThan(parseVersion(qApp->applicationVersion()), parseVersion(version))) {
+            ui->lbShowUpdate->setText(QString(tr("New version <a href=\"%2\">%1</a> has been detected")).arg(version).arg(url));
+        }
+        else {
+            ui->lbShowUpdate->setText(tr("The latest version is installed"));
+        }
+    }
+
+#else
+    Q_UNUSED(version);
+    Q_UNUSED(url);
+#endif
 }
