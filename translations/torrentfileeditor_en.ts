@@ -21,7 +21,7 @@
     <message>
       <location filename="../aboutdlg.ui" line="117"/>
       <source>Check for Update</source>
-      <translation>Check for Update</translation>
+      <translation type="unfinished">Check for Update</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="136"/>
@@ -31,17 +31,17 @@
     <message>
       <location filename="../aboutdlg.cpp" line="190"/>
       <source>Something went wrong</source>
-      <translation>Something went wrong</translation>
+      <translation type="unfinished">Something went wrong</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="194"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
-      <translation>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</translation>
+      <translation type="unfinished">New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="197"/>
       <source>The latest version is installed</source>
-      <translation>The latest version is installed</translation>
+      <translation type="unfinished">The latest version is installed</translation>
     </message>
   </context>
   <context>

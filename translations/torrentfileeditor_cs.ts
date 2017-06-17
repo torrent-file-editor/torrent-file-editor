@@ -21,7 +21,7 @@
     <message>
       <location filename="../aboutdlg.ui" line="117"/>
       <source>Check for Update</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Check for Update</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="136"/>
@@ -31,17 +31,17 @@
     <message>
       <location filename="../aboutdlg.cpp" line="190"/>
       <source>Something went wrong</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Something went wrong</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="194"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="197"/>
       <source>The latest version is installed</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">The latest version is installed</translation>
     </message>
   </context>
   <context>
@@ -162,7 +162,7 @@
     <message>
       <location filename="../mainwindow.ui" line="216"/>
       <source>URL</source>
-      <translation>URL</translation>
+      <translation type="unfinished">URL</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="223"/>
@@ -472,7 +472,11 @@
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
 
 Do you want to set torrent root folder and try again?</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
+
+If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
+
+Do you want to set torrent root folder and try again?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="583"/>
@@ -608,7 +612,7 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../searchdlg.ui" line="127"/>
       <source>Hex</source>
-      <translation>Hex</translation>
+      <translation type="unfinished">Hex</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="154"/>
@@ -618,7 +622,7 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../searchdlg.ui" line="164"/>
       <source>hex</source>
-      <translation>hex</translation>
+      <translation type="unfinished">hex</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="176"/>
