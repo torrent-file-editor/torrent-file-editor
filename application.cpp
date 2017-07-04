@@ -29,6 +29,7 @@
 
 Application::Application(int &argc, char **argv)
     : QApplication(argc, argv)
+    , _mainWindow(nullptr)
 {
     setApplicationName(QLatin1String("Torrent File Editor"));
     setApplicationVersion(QLatin1String(APP_VERSION));

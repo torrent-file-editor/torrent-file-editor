@@ -365,7 +365,9 @@ Bencode *Bencode::parseInteger(const QByteArray &raw, int &pos)
 
 Bencode *Bencode::parseString(const QByteArray &raw, int &pos)
 {
-    int stPos = pos;
+#ifdef DEBUG
+    int basePos = pos;
+#endif
 
     int delimiter = raw.indexOf(':', pos);
     int size = QString(QLatin1String(raw.mid(pos, delimiter - pos))).toInt();
@@ -375,7 +377,7 @@ Bencode *Bencode::parseString(const QByteArray &raw, int &pos)
     pos = delimiter + size;
 
 #ifdef DEBUG
-    qDebug() << "byte array parsed" << fromRawString(res->_string).mid(0, 100) << "pos" << stPos << "=>" << pos;
+    qDebug() << "byte array parsed" << fromRawString(res->_string).mid(0, 100) << "pos" << basePos << "=>" << pos;
 #endif
 
     return res;
@@ -383,7 +385,9 @@ Bencode *Bencode::parseString(const QByteArray &raw, int &pos)
 
 Bencode *Bencode::parseList(const QByteArray &raw, int &pos)
 {
+#ifdef DEBUG
     int basePos = pos;
+#endif
     pos++;
     Bencode *res = new Bencode(Type::List);
 
@@ -395,8 +399,10 @@ Bencode *Bencode::parseList(const QByteArray &raw, int &pos)
 
         Bencode *item = parseItem(raw, pos);
         // some error happens
-        if (!item->isValid())
+        if (!item->isValid()) {
+            delete res;
             return new Bencode;
+        }
 
         res->appendChild(item);
     }
@@ -409,7 +415,9 @@ Bencode *Bencode::parseList(const QByteArray &raw, int &pos)
 
 Bencode *Bencode::parseDictionary(const QByteArray &raw, int &pos)
 {
+#ifdef DEBUG
     int basePos = pos;
+#endif
     pos++;
 
     Bencode *res = new Bencode(Type::Dictionary);
@@ -428,8 +436,10 @@ Bencode *Bencode::parseDictionary(const QByteArray &raw, int &pos)
         Bencode *value = parseItem(raw, pos);
 
         // some error happens
-        if (!value->isValid())
+        if (!value->isValid()) {
+            delete res;
             return new Bencode();
+        }
 
         value->_key = key;
         if (hexKeys.contains(QLatin1String(key)))
