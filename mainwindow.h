@@ -47,7 +47,7 @@ signals:
     void resultReady(const QByteArray &result, const QString &errorString);
 
 private:
-    int _isCanceled;
+    bool _isCanceled;
 };
 
 
