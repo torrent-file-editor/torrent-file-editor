@@ -449,10 +449,12 @@ void MainWindow::fillCoding()
             rank = 2;
         }
         else if (iso8859RegExp.exactMatch(sortKey)) {
-            if (iso8859RegExp.cap(1).size() == 1)
+            if (iso8859RegExp.cap(1).size() == 1) {
                 rank = 3;
-            else
+            }
+            else {
                 rank = 4;
+            }
         }
         else {
             rank = 5;
