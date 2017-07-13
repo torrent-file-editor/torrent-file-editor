@@ -380,6 +380,7 @@ set(OTHER_FILES
   appcast.xml.in
   CMakeDMGSetup.scpt
   Version.cmake
+  build.sh
 )
 
 # Collect all existing files and configure as non-sources.

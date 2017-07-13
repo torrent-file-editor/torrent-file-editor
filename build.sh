@@ -1,10 +1,14 @@
 #!/usr/bin/bash
 
+set -x
 set -e
 
 name=torrent-file-editor
 
-git clean -dfx . -e linux -e linux-qt5 -e CMakeLists.txt.user
+exclude="debug debug-qt4 debug-qt5 release release-qt4 release-qt5 linux linux-qt4 linux-qt5 CMakeLists.txt.user"
+exclude=$(echo $exclude | sed  -r 's/[^ ]+/-e &/g')
+
+git clean -dfx . $exclude
 mkdir win32
 pushd win32
 mingw32-cmake .. -DCMAKE_EXE_LINKER_FLAGS=-static -DCMAKE_BUILD_TYPE=Release
