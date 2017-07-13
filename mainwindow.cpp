@@ -299,6 +299,8 @@ void MainWindow::addLog(const QString &log)
 {
 #ifdef DEBUG
     ui->pteLog->appendPlainText(log);
+#else
+    Q_UNUSED(log);
 #endif
 }
 
@@ -651,7 +653,6 @@ void MainWindow::addFile()
 
     _lastFolder = QFileInfo(files.first()).absolutePath();
     ui->leBaseFolder->setFolder(_lastFolder);
-    QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->viewFiles->model());
     foreach (const QString &file, files) {
         addFilesRow(file, fileSize(file));
     }
@@ -773,7 +774,7 @@ void MainWindow::updateFiles()
             totalSize += file.second;
             addFilesRow(file.first, file.second);
         }
-        qlonglong pieceSize = _bencodeModel->pieceSize();
+        qulonglong pieceSize = _bencodeModel->pieceSize();
         for (int i = 0; i < ui->cmbPieceSizes->count(); i++) {
             if (pieceSize == ui->cmbPieceSizes->itemData(i).toULongLong())
                 ui->cmbPieceSizes->setCurrentIndex(i);

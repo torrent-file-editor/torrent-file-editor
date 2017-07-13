@@ -54,7 +54,6 @@ QStyleOptionViewItem TreeView::viewOptions() const
     // not just current line as in original QTreeView
     QStyleOptionViewItem options = QTreeView::viewOptions();
     QList<QComboBox*> list = findChildren<QComboBox*>();
-    bool b = false;
     if (isActiveWindow()) {
         for (auto widget: list) {
             if (widget->hasFocus()) {

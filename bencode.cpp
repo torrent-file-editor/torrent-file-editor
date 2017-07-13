@@ -71,7 +71,7 @@ Bencode *Bencode::checkAndCreate(Type type, int index)
 {
     Q_ASSERT(index > childCount());
 
-    Bencode *item;
+    Bencode *item = nullptr;
     while (index > childCount()) {
         appendChild(new Bencode(Type::String));
     }
@@ -160,7 +160,7 @@ Bencode *Bencode::fromRaw(const QByteArray &raw)
 
 Bencode *Bencode::fromJson(const QVariant &json)
 {
-    Bencode *res;
+    Bencode *res = nullptr;
 
     switch (json.type()) {
     case QVariant::String:
@@ -331,7 +331,6 @@ Bencode *Bencode::parseItem(const QByteArray &raw, int &pos)
 
 Bencode *Bencode::parseInteger(const QByteArray &raw, int &pos)
 {
-    int basePos = pos;
     pos++;
     int end = raw.indexOf('e', pos);
     if (end == -1) {
@@ -391,7 +390,6 @@ Bencode *Bencode::parseList(const QByteArray &raw, int &pos)
     pos++;
     Bencode *res = new Bencode(Type::List);
 
-    int i = 0;
     while(raw[pos] != 'e') {
 #ifdef DEBUG
         qDebug() << "list parsing" << i << "item";
