@@ -53,11 +53,11 @@ It is easy:
     mkdir qjson-master/win32
     mkdir qjson-master/win64
     cd qjson-master/win32
-    mingw32-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DQT4_BUILD=ON ..
+    mingw32-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DQT4_BUILD=ON  -DQT_INCLUDE_DIRS_NO_SYSTEM=ON ..
     make
     sudo make install # will be carefull, it installs qjson to system folders
     cd ../win64
-    mingw64-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DQT4_BUILD=ON ..
+    mingw64-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DQT4_BUILD=ON  -DQT_INCLUDE_DIRS_NO_SYSTEM=ON ..
     make
     sudo make install # be careful, it installs qjson to system folders
 
@@ -77,8 +77,8 @@ How Can I Help?
 ---------------
 
 The Project is translated from English to several languages.
-There are Arabian, Czech, Dutch, German, Spanish, Hungarian, Italian, Korean,
-Russian, Simplified Chinese, and Turkish translations available.
+There are Arabian, Czech, Dutch, French, German, Spanish, Hungarian, Italian, Korean,
+Russian, Simplified Chinese, Portuguese and Turkish translations available.
 I would be glad if you add new translations. You can translate the
 project to your native language with [Crowdin](https://crowdin.com/project/torrent-file-editor).
 It is not difficult and no special knowledges are required.
