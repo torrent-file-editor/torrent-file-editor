@@ -88,6 +88,13 @@ if(QT5_BUILD)
 else()
   find_package(Qt4 REQUIRED)
   find_package(QJSON 0.8.0 REQUIRED)
+
+  if(WIN32)
+    string(REPLACE "-DQT_DLL" "" QT_DEFINITIONS "${QT_DEFINITIONS}")
+    set(QT_DEFINITIONS ${QT_DEFINITIONS} "-DQT_NODLL")
+    add_definitions(-DQJSON_STATIC)
+  endif()
+
   include(${QT_USE_FILE})
 endif()
 
@@ -213,9 +220,6 @@ qt4_wrap_cpp(MOC_SOURCES ${HEADERS})
 qt4_wrap_ui(UI_SOURCES ${FORMS})
 
 if(WIN32)
-  add_definitions(-DQT_NODLL)
-  add_definitions(-DQJSON_STATIC)
-
   set(START_STATIC -Wl,-Bstatic)
   set(END_STATIC z jpeg png tiff stdc++ -lwinpthread -Wl,-Bdynamic  ws2_32 winmm imm32 wininet)
   set(QJSON_LIBRARIES qjson.a)

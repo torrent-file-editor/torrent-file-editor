@@ -11,7 +11,7 @@ exclude=$(echo $exclude | sed  -r 's/[^ ]+/-e &/g')
 git clean -dfx . $exclude
 mkdir win32
 pushd win32
-mingw32-cmake .. -DCMAKE_EXE_LINKER_FLAGS=-static -DCMAKE_BUILD_TYPE=Release
+mingw32-cmake .. -DCMAKE_EXE_LINKER_FLAGS=-static -DCMAKE_BUILD_TYPE=Release -DQT_INCLUDE_DIRS_NO_SYSTEM=ON
 make -j5
 version=$(cat version)
 mv ${name}.exe ../${name}-${version}-x32.exe
@@ -19,7 +19,7 @@ popd
 
 mkdir win64
 pushd win64
-mingw64-cmake .. -DCMAKE_EXE_LINKER_FLAGS=-static -DCMAKE_BUILD_TYPE=Release
+mingw64-cmake .. -DCMAKE_EXE_LINKER_FLAGS=-static -DCMAKE_BUILD_TYPE=Release -DQT_INCLUDE_DIRS_NO_SYSTEM=ON
 make -j5
 version=$(cat version)
 mv ${name}.exe ../${name}-${version}-x64.exe

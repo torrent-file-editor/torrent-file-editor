@@ -47,7 +47,6 @@ void CheckUpdate::start()
     HINTERNET hInternetSession;
     HINTERNET hURL;
     char cBuffer[CHUNK_SIZE];
-    BOOL bResult;
     DWORD dwBytesRead;
 
     // Make internet connection.
@@ -61,10 +60,10 @@ void CheckUpdate::start()
                            NULL, -1L, 0, 0);                       // defaults
 
     // Read page into memory buffer.
-    bResult = InternetReadFile(hURL,                    // handle to URL
-                               (LPSTR)cBuffer,          // pointer to buffer
-                               (DWORD)sizeof(cBuffer),  // size of buffer
-                               &dwBytesRead);           // pointer to var to hold return value
+    InternetReadFile(hURL,                    // handle to URL
+                     (LPSTR)cBuffer,          // pointer to buffer
+                     (DWORD)sizeof(cBuffer),  // size of buffer
+                     &dwBytesRead);           // pointer to var to hold return value
 
 
     InternetCloseHandle(hURL);
