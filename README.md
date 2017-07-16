@@ -41,7 +41,7 @@ Only Qt5 version
 **Windows important note**
 
 Only Qt4 version for a while.
-I use Fedora 22 MinGW to build Windows versions. Furthermore I build
+I use Fedora 26 MinGW to build Windows versions. Furthermore I build
 portable static versions. Any other build way is not tested and may
 not work. It is on my TODO list.
 
@@ -53,11 +53,11 @@ It is easy:
     mkdir qjson-master/win32
     mkdir qjson-master/win64
     cd qjson-master/win32
-    mingw32-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DQT4_BUILD=ON  -DQT_INCLUDE_DIRS_NO_SYSTEM=ON ..
+    mingw32-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DQT4_BUILD=ON  -DQT_INCLUDE_DIRS_NO_SYSTEM=ON -DQT_USE_IMPORTED_TARGETS=OFF ..
     make
     sudo make install # will be carefull, it installs qjson to system folders
     cd ../win64
-    mingw64-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DQT4_BUILD=ON  -DQT_INCLUDE_DIRS_NO_SYSTEM=ON ..
+    mingw64-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DQT4_BUILD=ON  -DQT_INCLUDE_DIRS_NO_SYSTEM=ON -DQT_USE_IMPORTED_TARGETS=OFF ..
     make
     sudo make install # be careful, it installs qjson to system folders
 
