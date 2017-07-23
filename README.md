@@ -77,7 +77,7 @@ How Can I Help?
 ---------------
 
 The Project is translated from English to several languages.
-There are Arabian, Czech, Dutch, French, German, Spanish, Hungarian, Italian, Korean,
+There are Arabic, Czech, Dutch, French, German, Spanish, Hungarian, Italian, Korean,
 Russian, Simplified Chinese, Portuguese and Turkish translations available.
 I would be glad if you add new translations. You can translate the
 project to your native language with [Crowdin](https://crowdin.com/project/torrent-file-editor).
