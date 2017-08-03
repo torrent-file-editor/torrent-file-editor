@@ -402,7 +402,7 @@ QList<QPair<QString, qlonglong>> BencodeModel::files() const
         QString baseName;
         if (info->child("name") && info->child("name")->isString()) {
             baseName = toUnicode(info->child("name")->string());
-            int length = 0;
+            qlonglong length = 0;
             if (info->child("length") && info->child("length")->isInteger()) {
                 length = info->child("length")->integer();
             }
