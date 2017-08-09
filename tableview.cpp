@@ -21,7 +21,10 @@
 
 #include "tableview.h"
 
+#include <QApplication>
+#include <QClipboard>
 #include <QKeyEvent>
+#include <QItemSelectionModel>
 
 TableView::TableView(QWidget *parent)
     : QTableView(parent)
@@ -50,6 +53,19 @@ void TableView::keyPressEvent(QKeyEvent *event)
 {
     if (event->key() == Qt::Key_Delete) {
         emit deleteRow();
+    }
+    else if (event == QKeySequence::Copy) {
+        QItemSelectionModel *selection = selectionModel();
+        QModelIndexList rows = selection->selectedRows();
+        QStringList files;
+        for (const auto &row: rows) {
+            files << row.data().toString();
+        }
+
+        if (!files.isEmpty()) {
+            QApplication::clipboard()->setText(files.join(QLatin1Char('\n')));
+        }
+        event->accept();
     }
     else {
         QTableView::keyPressEvent(event);
