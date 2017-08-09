@@ -63,7 +63,7 @@ void TableView::keyPressEvent(QKeyEvent *event)
         }
 
         if (!files.isEmpty()) {
-            QApplication::clipboard()->setText(files.join(QLatin1Char('\n')));
+            QApplication::clipboard()->setText(files.join(QLatin1String("\n")));
         }
         event->accept();
     }
