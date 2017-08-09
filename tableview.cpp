@@ -51,7 +51,7 @@ QModelIndex TableView::moveCursor(CursorAction cursorAction, Qt::KeyboardModifie
 
 void TableView::keyPressEvent(QKeyEvent *event)
 {
-    if (event->key() == Qt::Key_Delete) {
+    if (event == QKeySequence::Delete) {
         emit deleteRow();
     }
     else if (event == QKeySequence::Copy) {
