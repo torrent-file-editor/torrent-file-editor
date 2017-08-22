@@ -27,7 +27,7 @@
 QStringList hexKeys = QStringList() << QLatin1String("pieces") << QLatin1String("originator") << QLatin1String("certificate") << QLatin1String("signature");
 
 Bencode::Bencode(Type type, const QByteArray &key)
-    : AbstractTreeItem(nullptr)
+    : AbstractTreeNode(nullptr)
     , _type(type)
     , _integer(0)
     , _string(QByteArray())
@@ -37,7 +37,7 @@ Bencode::Bencode(Type type, const QByteArray &key)
 }
 
 Bencode::Bencode(qlonglong integer, const QByteArray &key)
-    : AbstractTreeItem(nullptr)
+    : AbstractTreeNode(nullptr)
     , _type(Integer)
     , _integer(integer)
     , _string(QByteArray())
@@ -47,7 +47,7 @@ Bencode::Bencode(qlonglong integer, const QByteArray &key)
 }
 
 Bencode::Bencode(const QByteArray &string, const QByteArray &key)
-    : AbstractTreeItem(nullptr)
+    : AbstractTreeNode(nullptr)
     , _type(String)
     , _integer(0)
     , _string(string)
@@ -120,12 +120,6 @@ void Bencode::appendMapItem(Bencode *item)
     if (!item->parent()) {
         appendChild(item);
     }
-}
-
-Bencode *Bencode::child(int index) const
-{
-
-    return static_cast<Bencode*>(AbstractTreeItem::child(index));
 }
 
 Bencode *Bencode::child(const QByteArray &key) const
@@ -277,7 +271,7 @@ Bencode *Bencode::clone() const
     newItem->_key = _key;
     newItem->_hex = _hex;
 
-    foreach (AbstractTreeItem *child, children()) {
+    for (Bencode *child: children()) {
         newItem->appendChild(child->clone());
     }
     return newItem;
@@ -517,12 +511,12 @@ QByteArray Bencode::toRaw(const Bencode *bencode)
 
     case List: {
         res += 'l';
-        QList<AbstractTreeItem*> list = bencode->children();
+        QList<Bencode*> list = bencode->children();
         for (int i = 0; i < list.size(); ++i) {
 #ifdef DEBUG
             qDebug() << "encoding" << i << "item";
 #endif
-            res += toRaw(static_cast<Bencode*>(list.at(i)));
+            res += toRaw(list.at(i));
         }
 #ifdef DEBUG
         qDebug() << "encode list size" << list.size();
@@ -532,10 +526,10 @@ QByteArray Bencode::toRaw(const Bencode *bencode)
 
     case Dictionary: {
         res += 'd';
-        QList<AbstractTreeItem*> map = bencode->children();
+        QList<Bencode*> map = bencode->children();
         QStringList fromRawKeys;
         for (int i = 0; i < map.size(); ++i) {
-            QByteArray key = static_cast<Bencode*>(map.at(i))->_key;
+            QByteArray key = map.at(i)->_key;
             fromRawKeys << fromRawString(key);
 #ifdef DEBUG
             qDebug() << "encode" << fromRawString(key) << "item";
@@ -544,7 +538,7 @@ QByteArray Bencode::toRaw(const Bencode *bencode)
             res += ':';
             res += key;
 
-            res += toRaw(static_cast<Bencode*>(map.at(i)));
+            res += toRaw(map.at(i));
         }
         res += 'e';
 #ifdef DEBUG

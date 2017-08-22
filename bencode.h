@@ -21,13 +21,13 @@
 
 #pragma once
 
-#include "abstracttreeitem.h"
+#include "abstracttreenode.h"
 
 #include <QVariant>
 #include <QMap>
 #include <QList>
 
-class Bencode : public AbstractTreeItem
+class Bencode : public AbstractTreeNode<Bencode>
 {
 public:
     enum Type {
@@ -39,7 +39,8 @@ public:
         // printable symbols and '%' will be replaced with %HH (hex code)
         String,
         List,
-        Dictionary };
+        Dictionary
+    };
 
     Bencode(Type type = Type::Invalid, const QByteArray &key = QByteArray());
     Bencode(qlonglong integer, const QByteArray &key = QByteArray());
@@ -64,7 +65,13 @@ public:
     Bencode *checkAndCreate(Type type, const QByteArray &key);
 
     void appendMapItem(Bencode *item);
-    Bencode *child(int index) const;
+
+    // Avoid compilation error due the next not overriden child function
+    inline Bencode *child(int index) const
+    {
+        return AbstractTreeNode<Bencode>::child(index);
+    }
+
     Bencode *child(const QByteArray &key) const;
 
     inline bool isValid() const { return _type != Invalid; }

@@ -141,7 +141,6 @@ set(HEADERS
   ${CMAKE_SOURCE_DIR}/aboutdlg.h
   ${CMAKE_SOURCE_DIR}/bencodemodel.h
   ${CMAKE_SOURCE_DIR}/bencodedelegate.h
-  ${CMAKE_SOURCE_DIR}/abstracttreemodel.h
   ${CMAKE_SOURCE_DIR}/tableview.h
   ${CMAKE_SOURCE_DIR}/treeview.h
   ${CMAKE_SOURCE_DIR}/combobox.h
@@ -156,7 +155,8 @@ endif()
 
 set(PLAIN_HEADERS
   ${CMAKE_SOURCE_DIR}/bencode.h
-  ${CMAKE_SOURCE_DIR}/abstracttreeitem.h
+  ${CMAKE_SOURCE_DIR}/abstracttreemodel.h
+  ${CMAKE_SOURCE_DIR}/abstracttreenode.h
   ${CMAKE_SOURCE_DIR}/proxystyle.h
   ${CMAKE_BINARY_DIR}/config.h
 )
@@ -185,8 +185,6 @@ set(SOURCES
   ${CMAKE_SOURCE_DIR}/aboutdlg.cpp
   ${CMAKE_SOURCE_DIR}/bencodemodel.cpp
   ${CMAKE_SOURCE_DIR}/bencodedelegate.cpp
-  ${CMAKE_SOURCE_DIR}/abstracttreemodel.cpp
-  ${CMAKE_SOURCE_DIR}/abstracttreeitem.cpp
   ${CMAKE_SOURCE_DIR}/proxystyle.cpp
   ${CMAKE_SOURCE_DIR}/tableview.cpp
   ${CMAKE_SOURCE_DIR}/treeview.cpp

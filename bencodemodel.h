@@ -30,7 +30,7 @@
 
 class QTextCodec;
 
-class BencodeModel : public AbstractTreeModel
+class BencodeModel : public AbstractTreeModel<Bencode>
 {
     Q_OBJECT
 
