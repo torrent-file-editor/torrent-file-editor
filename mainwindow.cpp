@@ -295,15 +295,6 @@ MainWindow *MainWindow::instance()
     return _instance;
 }
 
-void MainWindow::addLog(const QString &log)
-{
-#ifdef DEBUG
-    ui->pteLog->appendPlainText(log);
-#else
-    Q_UNUSED(log);
-#endif
-}
-
 void MainWindow::create()
 {
     if (!showNeedSaveFile())

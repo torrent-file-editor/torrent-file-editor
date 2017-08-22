@@ -50,6 +50,12 @@ endif()
 
 add_definitions(-DQT_NO_CAST_FROM_ASCII)
 
+
+option(ENABLE_DEBUG_LOG "Show debugging messages" OFF)
+if(ENABLE_DEBUG_LOG)
+  add_definitions(-DDEBUG)
+endif()
+
 if(APPLE)
   # Force Qt5 build on Mac OS X. Qt4 is not supported
   set(QT5_BUILD ON)

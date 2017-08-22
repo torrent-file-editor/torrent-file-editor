@@ -331,6 +331,9 @@ Bencode *Bencode::parseItem(const QByteArray &raw, int &pos)
 
 Bencode *Bencode::parseInteger(const QByteArray &raw, int &pos)
 {
+#ifdef DEBUG
+    int basePos = pos;
+#endif
     pos++;
     int end = raw.indexOf('e', pos);
     if (end == -1) {
@@ -386,13 +389,14 @@ Bencode *Bencode::parseList(const QByteArray &raw, int &pos)
 {
 #ifdef DEBUG
     int basePos = pos;
+    int i = 0;
 #endif
     pos++;
     Bencode *res = new Bencode(Type::List);
 
     while(raw[pos] != 'e') {
 #ifdef DEBUG
-        qDebug() << "list parsing" << i << "item";
+        qDebug() << "list parsing" << i++ << "item";
 #endif
 
         Bencode *item = parseItem(raw, pos);

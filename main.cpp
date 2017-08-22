@@ -46,25 +46,6 @@ HANDLE hConsole = NULL;
 # include "sparkleautoupdater.h"
 #endif
 
-#ifdef HAVE_QT5
-void debugHandler(QtMsgType type, const QMessageLogContext &context, const QString &msg)
-#else
-void debugHandler(QtMsgType type, const char *msg)
-#endif
-{
-#ifdef HAVE_QT5
-    Q_UNUSED(context);
-#endif
-    Q_UNUSED(type);
-
-    if (MainWindow::instance())
-#ifdef HAVE_QT5
-        MainWindow::instance()->addLog(msg);
-#else
-        MainWindow::instance()->addLog(QLatin1String(msg));
-#endif
-}
-
 #ifdef Q_OS_WIN
 # ifdef HAVE_QT5
 void winDebugHandler(QtMsgType type, const QMessageLogContext &context, const QString &msg)
@@ -252,16 +233,8 @@ int main(int argc, char *argv[])
         }
     }
 
-#ifdef DEBUG
-# ifdef HAVE_QT5
-    qInstallMessageHandler(debugHandler);
-# else
-    qInstallMsgHandler(debugHandler);
-# endif
-#else
-# ifdef Q_OS_WIN
+#ifdef Q_OS_WIN
     qInstallMsgHandler(winDebugHandler);
-# endif
 #endif
 
     Application a(argc, argv);
