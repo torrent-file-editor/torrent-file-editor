@@ -22,7 +22,7 @@
 #pragma once
 
 #include <QList>
-#include <QString>
+#include <QStringList>
 #include <QTextStream>
 
 template<typename T>
