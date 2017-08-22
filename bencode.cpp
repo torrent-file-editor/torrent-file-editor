@@ -24,7 +24,7 @@
 #include <QDebug>
 #include <QStringList>
 
-QStringList hexKeys = QStringList() << QLatin1String("pieces") << QLatin1String("originator") << QLatin1String("certificate") << QLatin1String("signature");
+QStringList hexKeys = QStringList() << QStringLiteral("pieces") << QStringLiteral("originator") << QStringLiteral("certificate") << QStringLiteral("signature");
 
 Bencode::Bencode(Type type, const QByteArray &key)
     : AbstractTreeNode(nullptr)
@@ -280,14 +280,16 @@ Bencode *Bencode::clone() const
 QString Bencode::toString() const
 {
     QString res;
-    if (!_key.isEmpty())
-        res = QLatin1String("key ") + QLatin1String(_key) + QLatin1String(" | ");
+    if (!_key.isEmpty()) {
+        res = QStringLiteral("key ") + QString::fromUtf8(_key) + QStringLiteral(" | ");
+    }
+
     switch (_type) {
-    case Type::Invalid: res += QLatin1String("invalid"); break;
-    case Type::Integer: res += QLatin1String("integer ") + QString::number(_integer); break;
-    case Type::String: res += QLatin1String("string ") + fromRawString(_string); break;
-    case Type::Dictionary: res += QLatin1String("dictionary"); break;
-    case Type::List: res += QLatin1String("list"); break;
+    case Type::Invalid: res += QStringLiteral("invalid"); break;
+    case Type::Integer: res += QStringLiteral("integer ") + QString::number(_integer); break;
+    case Type::String: res += QStringLiteral("string ") + fromRawString(_string); break;
+    case Type::Dictionary: res += QStringLiteral("dictionary"); break;
+    case Type::List: res += QStringLiteral("list"); break;
     }
     res = res.left(300);
     return res;
@@ -351,7 +353,7 @@ Bencode *Bencode::parseInteger(const QByteArray &raw, int &pos)
         return new Bencode;
     }
 
-    Bencode *res = new Bencode(QString(QLatin1String(raw.mid(pos, end - pos))).toLongLong());
+    Bencode *res = new Bencode(QString::fromUtf8(raw.mid(pos, end - pos)).toLongLong());
     pos = end + 1;
 #ifdef DEBUG
     qDebug() << "number parsed" << res->_integer << "pos" << basePos << "=>" << pos;
@@ -366,7 +368,7 @@ Bencode *Bencode::parseString(const QByteArray &raw, int &pos)
 #endif
 
     int delimiter = raw.indexOf(':', pos);
-    int size = QString(QLatin1String(raw.mid(pos, delimiter - pos))).toInt();
+    int size = QString::fromUtf8(raw.mid(pos, delimiter - pos)).toInt();
 
     delimiter++;
     Bencode *res = new Bencode(raw.mid(delimiter, size));
@@ -438,7 +440,7 @@ Bencode *Bencode::parseDictionary(const QByteArray &raw, int &pos)
         }
 
         value->_key = key;
-        if (hexKeys.contains(QLatin1String(key)))
+        if (hexKeys.contains(QString::fromUtf8(key)))
             value->_hex = true;
 
         res->appendMapItem(value);
@@ -461,7 +463,7 @@ QString Bencode::fromRawString(const QByteArray &raw)
         }
         else {
             res += QLatin1Char('%');
-            res += QLatin1String(raw.mid(i, 1).toHex());
+            res += QString::fromUtf8(raw.mid(i, 1).toHex());
         }
     }
 

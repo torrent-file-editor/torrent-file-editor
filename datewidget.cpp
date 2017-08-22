@@ -37,13 +37,13 @@
 // Always use format of current locale
 inline QString dateFormat()
 {
-    QString format = QLocale().dateFormat(QLocale::ShortFormat) + QLatin1String(" ") + QLocale().timeFormat(QLocale::LongFormat);
-    if (format.endsWith(QLatin1String(" t")))
+    QString format = QLocale().dateFormat(QLocale::ShortFormat) + QStringLiteral(" ") + QLocale().timeFormat(QLocale::LongFormat);
+    if (format.endsWith(QStringLiteral(" t")))
         format.chop(2);
 
     // Use the year as four digit number
     if (format.count(QLatin1Char('y')) == 2) {
-        format.replace(QLatin1Char('y'), QLatin1String("yy"));
+        format.replace(QLatin1Char('y'), QStringLiteral("yy"));
     }
     return format;
 }
@@ -54,8 +54,8 @@ DateWidget::DateWidget(QWidget *parent)
     , _tbClean(new QPushButton(this))
     , _calendar(new QCalendarWidget(this))
 {
-    _tbClean->setObjectName(QLatin1String("brClear"));
-    _tbClean->setIcon(QIcon::fromTheme(QLatin1String("edit-clear"), QIcon(QLatin1String(":/icons/edit-clear.png"))));
+    _tbClean->setObjectName(QStringLiteral("brClear"));
+    _tbClean->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear"), QIcon(QStringLiteral(":/icons/edit-clear.png"))));
     _tbClean->setContentsMargins(0, 0, 0, 0);
     _tbClean->setFocusPolicy(Qt::NoFocus);
     _tbClean->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -69,8 +69,8 @@ DateWidget::DateWidget(QWidget *parent)
     _tbClean->setMaximumWidth(24);
     addWidget(_tbClean);
 
-    _tbCalendar->setObjectName(QLatin1String("tbCalendar"));
-    _tbCalendar->setIcon(QIcon::fromTheme(QLatin1String("x-office-calendar"), QIcon(QLatin1String(":/icons/x-office-calendar.png"))));
+    _tbCalendar->setObjectName(QStringLiteral("tbCalendar"));
+    _tbCalendar->setIcon(QIcon::fromTheme(QStringLiteral("x-office-calendar"), QIcon(QStringLiteral(":/icons/x-office-calendar.png"))));
     _tbCalendar->setContentsMargins(0, 0, 0, 0);
     _tbCalendar->setFocusPolicy(Qt::NoFocus);
     _tbCalendar->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);

@@ -32,7 +32,7 @@ FolderEdit::FolderEdit(QWidget *parent)
     , _pbOpenFolder(new QPushButton(this))
     , _path()
 {
-    _pbOpenFolder->setObjectName(QLatin1String("pbOpenUrl"));
+    _pbOpenFolder->setObjectName(QStringLiteral("pbOpenUrl"));
     _pbOpenFolder->setIcon(qApp->style()->standardIcon(QStyle::SP_DirOpenIcon));
     _pbOpenFolder->setContentsMargins(0, 0, 0, 0);
     _pbOpenFolder->setFocusPolicy(Qt::NoFocus);

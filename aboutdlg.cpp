@@ -57,14 +57,14 @@ Version parseVersion(const QString &version)
     QString part1 = version.section(QLatin1Char('-'), 0, 0);
     QString part2 = version.section(QLatin1Char('-'), 1);
 
-    QRegExp rx(QLatin1String("^v?(\\d+)\\.(\\d+)\\.(\\d+)$"));
+    QRegExp rx(QStringLiteral("^v?(\\d+)\\.(\\d+)\\.(\\d+)$"));
     if (rx.indexIn(part1) != -1) {
         ver.major = rx.cap(1).toInt();
         ver.minor = rx.cap(2).toInt();
         ver.patch = rx.cap(3).toInt();
     }
 
-    rx.setPattern(QLatin1String("^(\\d+)-g([0-9a-f]{7})(-dirty)?$"));
+    rx.setPattern(QStringLiteral("^(\\d+)-g([0-9a-f]{7})(-dirty)?$"));
     if (rx.indexIn(part2) != -1) {
         ver.rev = rx.cap(1).toInt();
         ver.gitHash = rx.cap(2);
@@ -132,7 +132,7 @@ AboutDlg::AboutDlg(QWidget *parent)
     , thread(nullptr)
 {
     ui->setupUi(this);
-    ui->label->setText(QString(QLatin1String(VERSION_LABEL))
+    ui->label->setText(QString(QStringLiteral(VERSION_LABEL))
                        .arg(qApp->applicationName())
                        .arg(qApp->applicationVersion())
                        .arg(Application::buildDateTime().date().toString(Qt::DefaultLocaleLongDate)));

@@ -48,8 +48,8 @@ if(CMAKE_BUILD_TYPE STREQUAL Release OR CMAKE_BUILD_TYPE STREQUAL RelWithDbInfo)
   endif()
 endif()
 
+# Disable automatic conversions from 8-bit strings (char *) to unicode QStrings
 add_definitions(-DQT_NO_CAST_FROM_ASCII)
-
 
 option(ENABLE_DEBUG_LOG "Show debugging messages" OFF)
 if(ENABLE_DEBUG_LOG)
@@ -94,6 +94,7 @@ if(QT5_BUILD)
 else()
   find_package(Qt4 REQUIRED)
   find_package(QJSON 0.8.0 REQUIRED)
+  add_definitions("'-DQStringLiteral(x)=QLatin1String(x)'")
 
   if(WIN32)
     string(REPLACE "-DQT_DLL" "" QT_DEFINITIONS "${QT_DEFINITIONS}")

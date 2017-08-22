@@ -286,7 +286,7 @@ QString BencodeModel::hash() const
     QByteArray hash;
     if (_bencode && _bencode->child("info"))
         hash = QCryptographicHash::hash(_bencode->child("info")->toRaw(), QCryptographicHash::Sha1).toHex();
-    return QLatin1String(hash);
+    return QString::fromUtf8(hash);
 }
 
 void BencodeModel::setComment(const QString &comment)
@@ -377,7 +377,7 @@ void BencodeModel::setFiles(const QList<QPair<QString, qlonglong>> &files)
             Bencode *fileItem = new Bencode(Bencode::Type::Dictionary);
             fileItem->appendMapItem(new Bencode(size, "length"));
 
-            QStringList pathList = file.split(QLatin1String("/"));
+            QStringList pathList = file.split(QStringLiteral("/"));
             fileItem->appendMapItem(new Bencode(Bencode::Type::List, "path"));
             for (const QString &path: pathList) {
                 fileItem->child("path")->appendChild(new Bencode(fromUnicode(path)));
@@ -425,7 +425,7 @@ QList<QPair<QString, qlonglong>> BencodeModel::files() const
                 path << toUnicode(pathList->child(i)->string());
             }
 
-            res << QPair<QString, qlonglong>(path.join(QLatin1String("/")), item->child("length")->integer());
+            res << QPair<QString, qlonglong>(path.join(QStringLiteral("/")), item->child("length")->integer());
         }
     }
 
@@ -645,13 +645,13 @@ QVariant BencodeModel::data(const QModelIndex &index, int role) const
             else if (item->isString()) {
                 if (role == Qt::DisplayRole) {
                     if (item->hex())
-                        res = QString(QLatin1String(item->string().toHex())).left(150);
+                        res = QString::fromUtf8(item->string().toHex()).left(150);
                     else
                         res = toUnicode(item->string()).left(150);
                 }
                 else {
                     if (item->hex())
-                        res = QLatin1String(item->string().toHex());
+                        res = QString::fromUtf8(item->string().toHex());
                     else
                         res = toUnicode(item->string());
                 }
@@ -676,7 +676,7 @@ QVariant BencodeModel::data(const QModelIndex &index, int role) const
                 res = toUnicode(item->string());
             }
             else {
-                res = QLatin1String(item->string().toHex());
+                res = QString::fromUtf8(item->string().toHex());
             }
         }
 
