@@ -115,9 +115,6 @@ private:
     QString toUnicode(const QByteArray &encoded) const;
     QByteArray fromUnicode(const QString &unicode) const;
 
-    Bencode *toBencode(const QModelIndex &index) const;
-    QModelIndex toModelIndex(Bencode *bencode) const;
-
     // Here saved .torrent file
     Bencode *_bencode;
     Bencode *_originBencode;

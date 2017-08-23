@@ -113,9 +113,10 @@ protected:
         return index.isValid() ? static_cast<T*>(index.internalPointer()) : _root;
     }
 
-    inline QModelIndex nodeToIndex(T *item) const
+    inline QModelIndex nodeToIndex(T *node) const
     {
-        return item == _root ? QModelIndex() : createIndex(item->row(), 0, static_cast<void*>(item));
+        Q_ASSERT(node);
+        return (node == _root || !node) ? QModelIndex() : createIndex(node->row(), 0, node);
     }
 
 private:
