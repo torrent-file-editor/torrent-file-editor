@@ -373,10 +373,10 @@ void MainWindow::saveAs()
 
     _torrentLastFolder = fileName.section(QLatin1Char('/'), 0, -2);
 
-    if (_formatFilters.at(0) == filter && !fileName.endsWith(QStringLiteral(".torrent")))
-        fileName += QStringLiteral(".torrent");
-    else if (_formatFilters.at(1) == filter && !fileName.endsWith(QStringLiteral(".dat")))
-        fileName += QStringLiteral(".dat");
+    if (_formatFilters.at(0) == filter && !fileName.endsWith(QLatin1String(".torrent")))
+        fileName += QLatin1String(".torrent");
+    else if (_formatFilters.at(1) == filter && !fileName.endsWith(QLatin1String(".dat")))
+        fileName += QLatin1String(".dat");
 
     if (saveTo(fileName)) {
         _fileName = fileName;
@@ -435,10 +435,10 @@ void MainWindow::fillCoding()
         QString sortKey = QString::fromUtf8(codec->name().toUpper());
         int rank;
 
-        if (sortKey.startsWith(QStringLiteral("UTF-8"))) {
+        if (sortKey.startsWith(QLatin1String("UTF-8"))) {
             rank = 1;
         }
-        else if (sortKey.startsWith(QStringLiteral("UTF-16"))) {
+        else if (sortKey.startsWith(QLatin1String("UTF-16"))) {
             rank = 2;
         }
         else if (iso8859RegExp.exactMatch(sortKey)) {
@@ -471,9 +471,9 @@ void MainWindow::updateTitle()
     if (_fileName.isEmpty())
         setWindowTitle(qApp->applicationName());
     else if (isModified())
-        setWindowTitle(QString(QStringLiteral("* %2 - %1")).arg(qApp->applicationName(), _fileName));
+        setWindowTitle(QStringLiteral("* %2 - %1").arg(qApp->applicationName(), _fileName));
     else
-        setWindowTitle(QString(QStringLiteral("%2 - %1")).arg(qApp->applicationName(), _fileName));
+        setWindowTitle(QStringLiteral("%2 - %1").arg(qApp->applicationName(), _fileName));
 }
 
 void MainWindow::updateTab(int n)
@@ -577,7 +577,7 @@ void MainWindow::makeTorrent()
     for (int i = 0; i < model->rowCount(); ++i) {
         QString file = model->item(i)->text();
 
-        if (model->rowCount() > 1 && baseDir.relativeFilePath(file).startsWith(QStringLiteral(".."))) {
+        if (model->rowCount() > 1 && baseDir.relativeFilePath(file).startsWith(QLatin1String(".."))) {
             QMessageBox::warning(this, tr("Warning"), tr("The torrent root folder is not common."));
             return;
         }
@@ -784,7 +784,7 @@ void MainWindow::updateFiles()
         if (QFileInfo(file).isAbsolute())
             continue;
 
-        file.prepend(QStringLiteral("/"));
+        file.prepend(QLatin1String("/"));
         file.prepend(dir);
         if (QFile::exists(file))
             model->item(i)->setText(QDir::toNativeSeparators(file));
@@ -1139,7 +1139,7 @@ QString MainWindow::smartSize(qulonglong size)
     QString res = QLocale::system().toString(kb, 'g', 4);
 
     // Drop zeroes
-    while (res.contains(QLocale::system().decimalPoint()) && res.right(1) == QStringLiteral("0"))
+    while (res.contains(QLocale::system().decimalPoint()) && res.right(1) == QLatin1String("0"))
         res.chop(1);
 
     if (res.right(1)[0] == QLocale::system().decimalPoint())

@@ -285,11 +285,11 @@ QString Bencode::toString() const
     }
 
     switch (_type) {
-    case Type::Invalid: res += QStringLiteral("invalid"); break;
-    case Type::Integer: res += QStringLiteral("integer ") + QString::number(_integer); break;
-    case Type::String: res += QStringLiteral("string ") + fromRawString(_string); break;
-    case Type::Dictionary: res += QStringLiteral("dictionary"); break;
-    case Type::List: res += QStringLiteral("list"); break;
+    case Type::Invalid: res += QLatin1String("invalid"); break;
+    case Type::Integer: res += QLatin1String("integer ") + QString::number(_integer); break;
+    case Type::String: res += QLatin1String("string ") + fromRawString(_string); break;
+    case Type::Dictionary: res += QLatin1String("dictionary"); break;
+    case Type::List: res += QLatin1String("list"); break;
     }
     res = res.left(300);
     return res;
@@ -420,15 +420,17 @@ Bencode *Bencode::parseDictionary(const QByteArray &raw, int &pos)
 
     Bencode *res = new Bencode(Type::Dictionary);
 
+#ifdef DEBUG
     QStringList keys;
+#endif
 
     while(raw[pos] != 'e') {
         Bencode *keyItem = parseString(raw, pos);
         QByteArray key = keyItem->_string;
         delete keyItem;
 
-        keys << fromRawString(key);
 #ifdef DEBUG
+        keys << fromRawString(key);
         qDebug() << "map parsing" << keys.last() << "item";
 #endif
         Bencode *value = parseItem(raw, pos);

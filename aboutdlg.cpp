@@ -132,7 +132,7 @@ AboutDlg::AboutDlg(QWidget *parent)
     , thread(nullptr)
 {
     ui->setupUi(this);
-    ui->label->setText(QString(QStringLiteral(VERSION_LABEL))
+    ui->label->setText(QStringLiteral(VERSION_LABEL)
                        .arg(qApp->applicationName())
                        .arg(qApp->applicationVersion())
                        .arg(Application::buildDateTime().date().toString(Qt::DefaultLocaleLongDate)));

@@ -38,12 +38,12 @@
 inline QString dateFormat()
 {
     QString format = QLocale().dateFormat(QLocale::ShortFormat) + QStringLiteral(" ") + QLocale().timeFormat(QLocale::LongFormat);
-    if (format.endsWith(QStringLiteral(" t")))
+    if (format.endsWith(QLatin1String(" t")))
         format.chop(2);
 
     // Use the year as four digit number
     if (format.count(QLatin1Char('y')) == 2) {
-        format.replace(QLatin1Char('y'), QStringLiteral("yy"));
+        format.replace(QLatin1Char('y'), QLatin1String("yy"));
     }
     return format;
 }

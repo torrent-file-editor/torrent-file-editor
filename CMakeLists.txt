@@ -94,7 +94,7 @@ if(QT5_BUILD)
 else()
   find_package(Qt4 REQUIRED)
   find_package(QJSON 0.8.0 REQUIRED)
-  add_definitions("'-DQStringLiteral(x)=QLatin1String(x)'")
+  add_definitions("'-DQStringLiteral(str)=QString::fromUtf8(\"\" str \"\", sizeof(str) - 1)'")
 
   if(WIN32)
     string(REPLACE "-DQT_DLL" "" QT_DEFINITIONS "${QT_DEFINITIONS}")

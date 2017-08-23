@@ -55,32 +55,32 @@ void winDebugHandler(QtMsgType type, const char *msg)
 {
     {
         QString time = QTime::currentTime().toString();
-        QString debugMsg = QString(QStringLiteral("[%1] ")).arg(time);
+        QString debugMsg = QStringLiteral("[%1] ").arg(time);
         switch (type) {
         case QtDebugMsg:
             break;
         case QtWarningMsg:
-            debugMsg += QStringLiteral("W:");
+            debugMsg += QLatin1String("W:");
             break;
         case QtCriticalMsg:
-            debugMsg += QStringLiteral("C:");
+            debugMsg += QLatin1String("C:");
             break;
 # if QT_VERSION >= 0x050500
         case QtInfoMsg:
-            debugMsg += QStringLiteral("I:");
+            debugMsg += QLatin1String("I:");
             break;
 # endif
 
         case QtFatalMsg:
-            debugMsg += QStringLiteral("F:");
+            debugMsg += QLatin1String("F:");
             break;
             abort();
         }
 # ifdef HAVE_QT5
         debugMsg += msg;
-        debugMsg += QString(QStringLiteral(" (%1:%2, %3)")).arg(context.file).arg(context.line).arg(context.function);
+        debugMsg += QStringLiteral(" (%1:%2, %3)").arg(context.file).arg(context.line).arg(context.function);
 # else
-        debugMsg += QStringLiteral(msg);
+        debugMsg += QLatin1String(msg);
 # endif
 
 
@@ -215,7 +215,7 @@ int main(int argc, char *argv[])
         QString source = QString::fromUtf8(argv[2]);
         QString dest = QString::fromUtf8(argv[3]);
 
-        if (command == QStringLiteral("--to-json") || command == QStringLiteral("--from-json")) {
+        if (command == QLatin1String("--to-json") || command == QLatin1String("--from-json")) {
             int retCode = 0;
             openWinConsole();
 
@@ -223,7 +223,7 @@ int main(int argc, char *argv[])
                 qDebug("Error: source file is not exist!");
                 retCode = -1;
             }
-            else if (command == QStringLiteral("--to-json"))
+            else if (command == QLatin1String("--to-json"))
                 retCode = toJson(source, dest) ? -1 : 0;
             else
                 retCode = fromJson(source, dest) ? -1 : 0;
@@ -244,15 +244,15 @@ int main(int argc, char *argv[])
         a.installTranslator(&translator);
 
 #ifdef Q_OS_WIN
-    QString qtTranslationsPath = QStringLiteral(":/translations");
+    QString qtTranslationsPath(QStringLiteral(":/translations"));
 #else
     QString qtTranslationsPath = QLibraryInfo::location(QLibraryInfo::TranslationsPath);
 #endif
 
 #ifdef HAVE_QT5
-    QString qtTranslationsName = QStringLiteral("qtbase");
+    QString qtTranslationsName(QStringLiteral("qtbase"));
 #else
-    QString qtTranslationsName = QStringLiteral("qt");
+    QString qtTranslationsName(QStringLiteral("qt"));
 #endif
 
     QTranslator qtTranslator;
