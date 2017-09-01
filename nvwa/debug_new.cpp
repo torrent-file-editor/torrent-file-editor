@@ -441,7 +441,21 @@ static bool print_position_from_addr(const void* addr)
             {
                 last_addr = addr;
                 if (buffer[len - 1] == '0' && buffer[len - 2] == ':')
-                    last_info[0] = '\0';
+                {
+                    char **func_name = backtrace_symbols(const_cast<void**>(&addr), 1);
+                    if (func_name)
+                    {
+                        fprintf(new_output_fp, "%s", *func_name);
+                        strncpy(last_info, *func_name, sizeof(last_info) - 1);
+                        last_info[sizeof(last_info) - 1] = '\0';
+                        free(func_name);
+                        return true;
+                    }
+                    else
+                    {
+                        last_info[0] = '\0';
+                    }
+                }
                 else
                 {
                     fprintf(new_output_fp, "%s", buffer);
