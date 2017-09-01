@@ -46,6 +46,10 @@ HANDLE hConsole = NULL;
 # include "sparkleautoupdater.h"
 #endif
 
+#ifdef ENABLE_NVWA
+# include "nvwa/debug_new.h"
+#endif
+
 #ifdef Q_OS_WIN
 # ifdef HAVE_QT5
 void winDebugHandler(QtMsgType type, const QMessageLogContext &context, const QString &msg)
@@ -209,6 +213,10 @@ int main(int argc, char *argv[])
         closeWinConsole();
         return 0;
     }
+
+#ifdef ENABLE_NVWA
+    NVWA::new_progname = argv[0];
+#endif
 
     if (argc == 4) {
         QString command = QString::fromUtf8(argv[1]);

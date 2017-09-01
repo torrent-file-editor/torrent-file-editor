@@ -73,6 +73,11 @@ if(DISABLE_DONATION)
   add_definitions(-DNO_DONATION)
 endif()
 
+option(ENABLE_NVWA "Check for memory leaks" OFF)
+if(ENABLE_NVWA)
+  add_definitions(-DENABLE_NVWA)
+endif()
+
 if(QT5_BUILD)
   find_package(Qt5Core REQUIRED)
   find_package(Qt5Gui REQUIRED)
@@ -244,7 +249,11 @@ if(WIN32)
   set(SOURCES ${SOURCES} ${CMAKE_CURRENT_BINARY_DIR}/app.o)
 endif()
 
-add_executable(${EXE_NAME} WIN32 MACOSX_BUNDLE ${QM} ${HEADERS} ${PLAIN_HEADERS} ${SOURCES} ${MOC_SOURCES} ${QRC_SOURCES} ${UI_SOURCES})
+if(ENABLE_NVWA)
+  add_subdirectory(nvwa)
+  set(NWVA_TARGET $<TARGET_OBJECTS:nvwa>)
+endif()
+add_executable(${EXE_NAME} WIN32 MACOSX_BUNDLE ${QM} ${HEADERS} ${PLAIN_HEADERS} ${SOURCES} ${MOC_SOURCES} ${QRC_SOURCES} ${UI_SOURCES} ${NWVA_TARGET})
 
 add_dependencies(${EXE_NAME} update_version)
 
