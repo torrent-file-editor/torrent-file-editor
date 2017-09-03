@@ -268,7 +268,11 @@ struct new_ptr_list_t
 #if _DEBUG_NEW_REMEMBER_STACK_TRACE
     void**          stacktrace; ///< Pointer to stack trace information
 #endif
+    union
+    {
+    unsigned        count;      ///< Number of calls
     unsigned        magic;      ///< Magic number for error detection
+    };
 };
 
 /**
@@ -300,7 +304,9 @@ static new_ptr_list_t new_ptr_list = {
 #if _DEBUG_NEW_REMEMBER_STACK_TRACE
     _NULLPTR,
 #endif
-    DEBUG_NEW_MAGIC
+    {
+        DEBUG_NEW_MAGIC
+    }
 };
 
 /**
@@ -841,6 +847,103 @@ int check_leaks()
     return leak_cnt;
 }
 
+int check_leaks_summary()
+{
+    new_ptr_list_t summary_ptr_list = {
+        &summary_ptr_list,
+        &summary_ptr_list,
+        0,
+        {
+    #if _DEBUG_NEW_FILENAME_LEN == 0
+            _NULLPTR
+    #else
+            ""
+    #endif
+        },
+        0,
+        0,
+    #if _DEBUG_NEW_REMEMBER_STACK_TRACE
+        _NULLPTR,
+    #endif
+        {
+            0
+        }
+    };
+
+    int leak_cnt = 0;
+    fast_mutex_autolock lock_ptr(new_ptr_lock);
+    fast_mutex_autolock lock_output(new_output_lock);
+    new_ptr_list_t* ptr = new_ptr_list.next;
+
+    while (ptr != &new_ptr_list)
+    {
+        if (!is_leak_whitelisted(ptr))
+        {
+            leak_cnt++;
+            new_ptr_list_t *summary_ptr = summary_ptr_list.next;
+            while (summary_ptr != &summary_ptr_list && summary_ptr->addr != ptr->addr)
+            {
+                summary_ptr = summary_ptr->next;
+            }
+
+            if (summary_ptr != &summary_ptr_list) {
+                summary_ptr->count++;
+                summary_ptr->size += ptr->size;
+            }
+            else
+            {
+                summary_ptr = (new_ptr_list_t*)malloc(sizeof(new_ptr_list_t));
+                summary_ptr->size = ptr->size;
+                summary_ptr->addr = ptr->addr;
+                summary_ptr->is_array = ptr->is_array;
+                summary_ptr->line = ptr->line;
+                if (ptr->line)
+#if _DEBUG_NEW_FILENAME_LEN == 0
+                    summary_ptr->file = ptr->file;
+#else
+                    strncpy(summary_ptr->file, ptr->file, _DEBUG_NEW_FILENAME_LEN);
+#endif
+                else
+                    summary_ptr->addr = ptr->addr;
+
+                summary_ptr->count = 1;
+                summary_ptr->prev = summary_ptr_list.prev;
+                summary_ptr->next = &summary_ptr_list;
+                summary_ptr_list.prev->next = summary_ptr;
+                summary_ptr_list.prev = summary_ptr;
+            }
+        }
+
+        ptr = ptr->next;
+    }
+
+    fprintf(new_output_fp, "=== SUMMARY ===\n");
+    new_ptr_list_t *summary_ptr = summary_ptr_list.next;
+    while (summary_ptr != &summary_ptr_list)
+    {
+        fprintf(new_output_fp,
+                "Leaked %lu bytes in %u ",
+                (unsigned long)summary_ptr->size,
+                summary_ptr->count);
+
+        if (summary_ptr->is_array)
+            fprintf(new_output_fp, "calls (");
+        else
+            fprintf(new_output_fp, "objects (");
+
+        if (summary_ptr->line != 0)
+            print_position(summary_ptr->file, summary_ptr->line);
+        else
+            print_position(summary_ptr->addr, summary_ptr->line);
+
+        fprintf(new_output_fp, ")\n");
+        summary_ptr = summary_ptr->next;
+
+    }
+    fprintf(new_output_fp, "=== END SUMMARY ===\n");
+    return leak_cnt;
+}
+
 /**
  * Checks for heap corruption.
  *
@@ -979,6 +1082,9 @@ debug_new_counter::~debug_new_counter()
     if (--_S_count == 0 && new_autocheck_flag)
         if (check_leaks())
         {
+            fprintf(new_output_fp, "\n");
+            check_leaks_summary();
+            fprintf(new_output_fp, "\n");
             new_verbose_flag = true;
 #if defined(__GNUC__) && __GNUC__ == 3
             if (!getenv("GLIBCPP_FORCE_NEW") && !getenv("GLIBCXX_FORCE_NEW"))

@@ -119,6 +119,7 @@ typedef bool (*leak_whitelist_callback_t)(char const* file, int line,
 
 /* Prototypes */
 int check_leaks();
+int check_leaks_summary();
 int check_mem_corruption();
 
 /* Control variables */
