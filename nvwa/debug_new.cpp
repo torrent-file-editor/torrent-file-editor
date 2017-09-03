@@ -1156,7 +1156,7 @@ void* operator new[](size_t size, const char* file, int line)
  *              insufficient (#_DEBUG_NEW_STD_OPER_NEW is 0)
  * @throw bad_alloc memory is insufficient (#_DEBUG_NEW_STD_OPER_NEW is 1)
  */
-void* operator new(size_t size) throw(std::bad_alloc)
+void* operator new(size_t size) _THROW(std::bad_alloc)
 {
     return operator new(size, (char*)_DEBUG_NEW_CALLER_ADDRESS, 0);
 }
@@ -1169,7 +1169,7 @@ void* operator new(size_t size) throw(std::bad_alloc)
  *              insufficient (#_DEBUG_NEW_STD_OPER_NEW is 0)
  * @throw bad_alloc memory is insufficient (#_DEBUG_NEW_STD_OPER_NEW is 1)
  */
-void* operator new[](size_t size) throw(std::bad_alloc)
+void* operator new[](size_t size) _THROW(std::bad_alloc)
 {
     return operator new[](size, (char*)_DEBUG_NEW_CALLER_ADDRESS, 0);
 }

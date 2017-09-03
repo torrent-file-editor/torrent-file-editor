@@ -312,6 +312,7 @@
 #if HAVE_CXX11_NOEXCEPT
 #define _NOEXCEPT noexcept
 #define _NOEXCEPT_(x) noexcept(x)
+#define _THROW(x)
 #else
 #ifdef _MSC_VER
 #define _NOEXCEPT throw ()
@@ -319,6 +320,7 @@
 #define _NOEXCEPT throw()
 #endif
 #define _NOEXCEPT_(x)
+#define _THROW(x) throw(x)
 #endif
 
 #if HAVE_CXX11_NULLPTR
