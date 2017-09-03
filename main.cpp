@@ -216,6 +216,7 @@ int main(int argc, char *argv[])
 
 #ifdef ENABLE_NVWA
     NVWA::new_progname = argv[0];
+    NVWA::new_autocheck_flag = false;
 #endif
 
     if (argc == 4) {
@@ -245,6 +246,9 @@ int main(int argc, char *argv[])
     qInstallMsgHandler(winDebugHandler);
 #endif
 
+    int returnCode = 0;
+    // For nvwa purposes. Need to delete local objects before leaks checking.
+    {
     Application a(argc, argv);
 
     QTranslator translator;
@@ -283,5 +287,12 @@ int main(int argc, char *argv[])
             w.open(filename);
     }
 
-    return a.exec();
+    returnCode = a.exec();
+    }
+
+#ifdef ENABLE_NVWA
+    NVWA::check_leaks_summary();
+#endif
+
+    return returnCode;
 }

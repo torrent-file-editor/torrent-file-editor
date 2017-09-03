@@ -50,6 +50,10 @@
 
 #if NVWA_LINUX || NVWA_APPLE
 #include <execinfo.h>           // backtrace
+#include <dlfcn.h>              // dladdr
+#if NVWA_LINUX
+#include <link.h>
+#endif
 #endif
 
 #if NVWA_WINDOWS
@@ -57,6 +61,7 @@
 #define WIN32_LEAN_AND_MEAN
 #endif
 #include <windows.h>            // CaptureStackBackTrace
+#include <dbghelp.h>
 #endif
 
 #include "c++11.h"              // _NOEXCEPT/_NULLPTR
@@ -389,15 +394,37 @@ static bool print_position_from_addr(const void* addr)
     if (new_progname)
     {
 #if NVWA_APPLE
-        const char addr2line_cmd[] = "atos -o ";
+        const char addr2line_cmd[] = "atos -o \"";
 #else
-        const char addr2line_cmd[] = "addr2line -e ";
+        const char addr2line_cmd[] = "addr2line -e \"";
 #endif
 
 #if NVWA_WINDOWS
         const int  exeext_len = 4;
 #else
         const int  exeext_len = 0;
+#endif
+
+        const void *real_addr = addr;
+        const char *module_name = new_progname;
+
+#if NVWA_APPLE
+        Dl_info dl_info;
+        void *load_addr = _NULLPTR;
+        if (dladdr(addr, &dl_info))
+        {
+            real_addr = addr;
+            load_addr = dl_info.dli_fbase;
+            module_name = dl_info.dli_fname;
+        }
+#elif NVWA_LINUX
+        Dl_info dl_info;
+        link_map *lm;
+        if (dladdr1(addr, &dl_info, (void**)&lm, RTLD_DL_LINKMAP))
+        {
+            real_addr = (void*)((long)addr - (long)lm->l_addr);
+            module_name = dl_info.dli_fname;
+        }
 #endif
 
 #if NVWA_UNIX && !NVWA_CYGWIN
@@ -408,14 +435,20 @@ static bool print_position_from_addr(const void* addr)
 #else
         const char ignore_err[] = "";
 #endif
-        char* cmd = (char*)alloca(strlen(new_progname)
-                                  + exeext_len
-                                  + sizeof addr2line_cmd - 1
-                                  + sizeof ignore_err - 1
-                                  + sizeof(void*) * 2
-                                  + 4 /* SP + "0x" + null */);
+        size_t cmd_len = strlen(module_name)
+                + exeext_len
+                + sizeof addr2line_cmd - 1
+                + sizeof ignore_err - 1
+                + sizeof(void*) * 2
+                + 5 /* SP + "0x" + null + quote*/;
+
+#if NVWA_APPLE
+        cmd_len += + sizeof(void*) * 2 + 6 /* -l 0x */;
+#endif
+
+        char* cmd = (char*)alloca(cmd_len);
         strcpy(cmd, addr2line_cmd);
-        strcpy(cmd + sizeof addr2line_cmd - 1, new_progname);
+        strcpy(cmd + sizeof addr2line_cmd - 1, module_name);
         size_t len = strlen(cmd);
 #if NVWA_WINDOWS
         if (len <= 4
@@ -426,7 +459,13 @@ static bool print_position_from_addr(const void* addr)
             len += 4;
         }
 #endif
-        sprintf(cmd + len, " %p%s", addr, ignore_err);
+        strcpy(cmd + len, "\"");
+        len++;
+#if NVWA_APPLE
+        sprintf(cmd + len, " -l %p", load_addr);
+        len = strlen(cmd);
+#endif
+        sprintf(cmd + len, " %p%s", real_addr, ignore_err);
         FILE* fp = popen(cmd, "r");
         if (fp)
         {
@@ -446,15 +485,41 @@ static bool print_position_from_addr(const void* addr)
             if (res == 0 && len > 0)
             {
                 last_addr = addr;
-                if (buffer[len - 1] == '0' && buffer[len - 2] == ':')
+                void* buf_addr;
+                sscanf(buffer, "%p", &buf_addr);
+                if (((buffer[len - 1] == '0' || buffer[len - 1] == '?') && buffer[len - 2] == ':') || addr == buf_addr)
                 {
-                    char **func_name = backtrace_symbols(const_cast<void**>(&addr), 1);
+#if NVWA_UNIX
+                    char **func_names = backtrace_symbols(const_cast<void**>(&addr), 1);
+                    char *func_name = 0;
+                    if (func_names)
+                    {
+                        func_name = func_names[0];
+                    }
+#else
+                    DWORD64  dwDisplacement = 0;
+                    DWORD64  dwAddress = (DWORD64)addr;
+
+                    char buffer[sizeof(SYMBOL_INFO) + MAX_SYM_NAME * sizeof(TCHAR)];
+                    PSYMBOL_INFO pSymbol = (PSYMBOL_INFO)buffer;
+
+                    pSymbol->SizeOfStruct = sizeof(SYMBOL_INFO);
+                    pSymbol->MaxNameLen = MAX_SYM_NAME;
+
+                    char *func_name = 0;
+                    if (SymFromAddr(GetCurrentProcess(), dwAddress, &dwDisplacement, pSymbol))
+                    {
+                        func_name = pSymbol->Name;
+                    }
+#endif
                     if (func_name)
                     {
-                        fprintf(new_output_fp, "%s", *func_name);
-                        strncpy(last_info, *func_name, sizeof(last_info) - 1);
+                        fprintf(new_output_fp, "%s", func_name);
+#if NVWA_UNIX
+                        free(func_names);
+#endif
+                        strncpy(last_info, func_name, sizeof(last_info) - 1);
                         last_info[sizeof(last_info) - 1] = '\0';
-                        free(func_name);
                         return true;
                     }
                     else
@@ -917,7 +982,6 @@ int check_leaks_summary()
         ptr = ptr->next;
     }
 
-    fprintf(new_output_fp, "=== SUMMARY ===\n");
     new_ptr_list_t *summary_ptr = summary_ptr_list.next;
     while (summary_ptr != &summary_ptr_list)
     {
@@ -940,7 +1004,6 @@ int check_leaks_summary()
         summary_ptr = summary_ptr->next;
 
     }
-    fprintf(new_output_fp, "=== END SUMMARY ===\n");
     return leak_cnt;
 }
 
@@ -1082,9 +1145,9 @@ debug_new_counter::~debug_new_counter()
     if (--_S_count == 0 && new_autocheck_flag)
         if (check_leaks())
         {
-            fprintf(new_output_fp, "\n");
+            fprintf(new_output_fp, "\n=== SUMMARY ===\n");
             check_leaks_summary();
-            fprintf(new_output_fp, "\n");
+            fprintf(new_output_fp, "=== END SUMMARY ===\n\n");
             new_verbose_flag = true;
 #if defined(__GNUC__) && __GNUC__ == 3
             if (!getenv("GLIBCPP_FORCE_NEW") && !getenv("GLIBCXX_FORCE_NEW"))

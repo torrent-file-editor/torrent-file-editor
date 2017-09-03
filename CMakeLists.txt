@@ -75,7 +75,11 @@ endif()
 
 option(ENABLE_NVWA "Check for memory leaks" OFF)
 if(ENABLE_NVWA)
-  add_definitions(-DENABLE_NVWA)
+  add_definitions(
+    -DENABLE_NVWA
+    -D_DEBUG_NEW_REDEFINE_NEW=0
+    -D_DEBUG_NEW_ERROR_ACTION=
+  )
 endif()
 
 if(QT5_BUILD)
@@ -252,15 +256,20 @@ endif()
 if(ENABLE_NVWA)
   add_subdirectory(nvwa)
   set(NWVA_TARGET $<TARGET_OBJECTS:nvwa>)
+  if(UNIX AND NOT APPLE)
+    set(NWVA_LIBS -ldl)
+  elseif(WIN32)
+    set(NWVA_LIBS -ldbghelp)
+  endif()
 endif()
 add_executable(${EXE_NAME} WIN32 MACOSX_BUNDLE ${QM} ${HEADERS} ${PLAIN_HEADERS} ${SOURCES} ${MOC_SOURCES} ${QRC_SOURCES} ${UI_SOURCES} ${NWVA_TARGET})
 
 add_dependencies(${EXE_NAME} update_version)
 
 if(QT5_BUILD)
-  target_link_libraries(${EXE_NAME} ${START_STATIC} Qt5::Core Qt5::Gui Qt5::Widgets ${END_STATIC})
+  target_link_libraries(${EXE_NAME} ${START_STATIC} Qt5::Core Qt5::Gui Qt5::Widgets ${END_STATIC} ${NWVA_LIBS})
 else()
-  target_link_libraries(${EXE_NAME} ${START_STATIC} ${QJSON_LIBRARIES} ${START_STATIC} ${QT_LIBRARIES} ${END_STATIC})
+  target_link_libraries(${EXE_NAME} ${START_STATIC} ${QJSON_LIBRARIES} ${START_STATIC} ${QT_LIBRARIES} ${END_STATIC} ${NWVA_LIBS})
 endif()
 
 if(APPLE)
