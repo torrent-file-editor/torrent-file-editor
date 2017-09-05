@@ -31,7 +31,7 @@ TableView::TableView(QWidget *parent)
 {
 }
 
-QModelIndex TableView::moveCursor(CursorAction cursorAction, Qt::KeyboardModifiers modifiers)
+QModelIndex TableView::moveCursor(CursorAction cursorAction, Qt::KeyboardModifiers modifiers) // -V813 PVS-Studio
 {
 
     switch (cursorAction) {

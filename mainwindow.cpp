@@ -115,7 +115,7 @@ void Worker::doWork(const QStringList &files, int pieceSize)
 
         int readed;
         int j = 0;
-        while ((readed = f.read(piece.data() + piecePos, pieceSize - piecePos)) > 0) {
+        while ((readed = f.read(piece.data() + piecePos, pieceSize - piecePos)) > 0) {  // -V104 PVS-Studio
             piecePos += readed;
             j++;
             if (piecePos == pieceSize || ((i == files.size() - 1) && f.atEnd())) {
@@ -219,11 +219,11 @@ MainWindow::MainWindow(QWidget *parent)
     QStringList headers;
     headers << tr("Path") << tr("Size") << tr("# Pieces") << QString() /* dummy */;
     model->setHorizontalHeaderLabels(headers);
-    model->horizontalHeaderItem(0)->setTextAlignment(Qt::AlignLeft);
+    model->horizontalHeaderItem(0)->setTextAlignment(Qt::AlignLeft); // -V525 PVS-Studio
     model->horizontalHeaderItem(1)->setTextAlignment(Qt::AlignRight);
     model->horizontalHeaderItem(2)->setTextAlignment(Qt::AlignRight);
     ui->viewFiles->setModel(model);
-    ui->viewFiles->horizontalHeader()->setHighlightSections(false);
+    ui->viewFiles->horizontalHeader()->setHighlightSections(false); // -V807 PVS-Studio
 #ifdef HAVE_QT5
     ui->viewFiles->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
     ui->viewFiles->horizontalHeader()->setSectionsMovable(false);
@@ -250,7 +250,7 @@ MainWindow::MainWindow(QWidget *parent)
 #endif
 
     ui->btnNew->setIcon(QIcon(QStringLiteral(":/icons/text-x-generic.png")));
-    ui->btnOpen->setIcon(qApp->style()->standardIcon(QStyle::SP_DialogOpenButton));
+    ui->btnOpen->setIcon(qApp->style()->standardIcon(QStyle::SP_DialogOpenButton)); // -V807 PVS-Studio
     ui->btnSave->setIcon(qApp->style()->standardIcon(QStyle::SP_DialogSaveButton));
     ui->btnSaveAs->setIcon(qApp->style()->standardIcon(QStyle::SP_DialogSaveButton));
 
@@ -302,7 +302,7 @@ void MainWindow::create()
 
     _bencodeModel->setRaw("");
     _bencodeModel->resetModified();
-    _fileName = QString();
+    _fileName = QString(); // -V815 PVS-Studio
     updateTitle();
     updateTab(ui->tabWidget->currentIndex());
 
@@ -407,9 +407,10 @@ void MainWindow::dragEnterEvent(QDragEnterEvent *event)
     }
 }
 
-void MainWindow::dropEvent(QDropEvent *event)
+void MainWindow::dropEvent(QDropEvent *event) // -V2009 PVS-Studio
 {
-    if (!event->mimeData()->urls().isEmpty() && event->mimeData()->urls().first().isLocalFile()) {
+    QList<QUrl> urls = event->mimeData()->urls();
+    if (!urls.isEmpty() && urls.first().isLocalFile()) {
         open(event->mimeData()->urls().first().toLocalFile());
     }
 }
@@ -436,21 +437,21 @@ void MainWindow::fillCoding()
         int rank;
 
         if (sortKey.startsWith(QLatin1String("UTF-8"))) {
-            rank = 1;
+            rank = 1; // -V112 PVS-Studio
         }
         else if (sortKey.startsWith(QLatin1String("UTF-16"))) {
-            rank = 2;
+            rank = 2; // -V112 PVS-Studio
         }
         else if (iso8859RegExp.exactMatch(sortKey)) {
             if (iso8859RegExp.cap(1).size() == 1) {
-                rank = 3;
+                rank = 3; // -V112 PVS-Studio
             }
             else {
-                rank = 4;
+                rank = 4; // -V112 PVS-Studio
             }
         }
         else {
-            rank = 5;
+            rank = 5; // -V112 PVS-Studio
         }
         sortKey.prepend(QChar('0' + rank));
         codecMap.insert(sortKey, codec);
@@ -761,7 +762,6 @@ void MainWindow::updateFiles()
     if (!model->rowCount()) {
         qlonglong totalSize = 0;
         for (const auto file: files) {
-            QList<QStandardItem*> list;
             totalSize += file.second;
             addFilesRow(file.first, file.second);
         }
@@ -877,14 +877,16 @@ void MainWindow::addTreeItem()
 
 void MainWindow::removeTreeItem()
 {
-    if (!ui->treeJson->currentIndex().isValid() || !ui->treeJson->currentIndex().parent().isValid())
+    QModelIndex currentIndex = ui->treeJson->currentIndex();
+    if (!currentIndex.isValid() || !currentIndex.parent().isValid()) {
         return;
+    }
 
     int row = -1;
     QModelIndex parent;
     if (ui->treeJson->selectionModel()->selectedRows().size() == 1) {
-        row = ui->treeJson->currentIndex().row();
-        parent = ui->treeJson->currentIndex().parent();
+        row = currentIndex.row();
+        parent = currentIndex.parent();
     }
 
     QList<QPersistentModelIndex> indexes;
@@ -1099,7 +1101,7 @@ void MainWindow::addFilesRow(const QString &path, qulonglong size)
     QList<QStandardItem*> list;
     list << new QStandardItem(QDir::toNativeSeparators(path));
     list << new QStandardItem(smartSize(size));
-    list.last()->setTextAlignment(Qt::AlignRight | Qt::AlignVCenter);
+    list.last()->setTextAlignment(Qt::AlignRight | Qt::AlignVCenter); // -V807 PVS-Studio
     list.last()->setData(size);
     list << new QStandardItem();
     list.last()->setTextAlignment(Qt::AlignRight | Qt::AlignVCenter);
@@ -1136,7 +1138,7 @@ QString MainWindow::smartSize(qulonglong size)
         i++;
     }
 
-    QString res = QLocale::system().toString(kb, 'g', 4);
+    QString res = QLocale::system().toString(kb, 'g', 4); // -V112 PVS-Studio
 
     // Drop zeroes
     while (res.contains(QLocale::system().decimalPoint()) && res.right(1) == QLatin1String("0"))

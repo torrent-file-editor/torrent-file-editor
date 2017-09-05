@@ -116,7 +116,7 @@ protected:
     inline QModelIndex nodeToIndex(T *node) const
     {
         Q_ASSERT(node);
-        return (node == _root || !node) ? QModelIndex() : createIndex(node->row(), 0, node);
+        return (node == _root || !node) ? QModelIndex() : createIndex(node->row(), 0, node); // -V560 PVS-Studio
     }
 
 private:

@@ -151,7 +151,6 @@ public:
         ts << fill << " this " << this << '\n';
         ts << fill << " parent " << _parent << '\n';
         ts << fill << " children ";
-        QStringList list;
         for (int i = 0; i < _children.size(); ++i) {
             ts << _children.at(i);
             if (i < _children.size() - 1) {

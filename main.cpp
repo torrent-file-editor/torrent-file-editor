@@ -219,7 +219,7 @@ int main(int argc, char *argv[])
     NVWA::new_autocheck_flag = false;
 #endif
 
-    if (argc == 4) {
+    if (argc == 4) { // -V112 PVS-Studio
         QString command = QString::fromUtf8(argv[1]);
         QString source = QString::fromUtf8(argv[2]);
         QString dest = QString::fromUtf8(argv[3]);

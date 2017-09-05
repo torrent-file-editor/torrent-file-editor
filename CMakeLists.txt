@@ -453,6 +453,7 @@ if(CMAKE_EXPORT_COMPILE_COMMANDS)
                               -j ${N}
                       COMMAND ${PVS_CONVERTER} -t errorfile PVS-Studio.log.raw -o PVS-Studio.log -s ${CMAKE_SOURCE_DIR}/Plog-Converter.cfg
                       COMMAND rm -f PVS-Studio.log.raw
+                      COMMAND sed -i "'/^www\\.viva64\\.com/d'" PVS-Studio.log
                       COMMAND cat PVS-Studio.log 1>&2
                       COMMENT "Analyze ${EXE_NAME}"
                       DEPENDS ${EXE_NAME}

@@ -24,7 +24,13 @@
 #include <QDebug>
 #include <QStringList>
 
-QStringList hexKeys = QStringList() << QStringLiteral("pieces") << QStringLiteral("originator") << QStringLiteral("certificate") << QStringLiteral("signature");
+QStringList hexKeys
+{
+    QStringLiteral("pieces"),
+    QStringLiteral("originator"),
+    QStringLiteral("certificate"),
+    QStringLiteral("signature")
+};
 
 Bencode::Bencode(Type type, const QByteArray &key)
     : AbstractTreeNode(nullptr)
@@ -220,7 +226,7 @@ QString Bencode::typeToStr(Type type)
     return QString();
 }
 
-bool Bencode::compare(Bencode *other) const
+bool Bencode::compare(const Bencode *other) const
 {
     if (!other)
         return false;
@@ -281,7 +287,7 @@ QString Bencode::toString() const
 {
     QString res;
     if (!_key.isEmpty()) {
-        res = QStringLiteral("key ") + QString::fromUtf8(_key) + QStringLiteral(" | ");
+        res = QStringLiteral("key ") + QString::fromUtf8(_key) + QStringLiteral(" | "); // -V119 PVS-Studio
     }
 
     switch (_type) {
@@ -396,12 +402,14 @@ Bencode *Bencode::parseList(const QByteArray &raw, int &pos)
 #endif
 
         Bencode *item = parseItem(raw, pos);
+        Q_ASSERT(item);
+
         // some error happens
-        if (!item->isValid()) {
+        if (!item || !item->isValid()) { // -V560 PVS-Studio
             delete res;
+            delete item;
             return new Bencode;
         }
-
         res->appendChild(item);
     }
     pos++;
@@ -434,10 +442,12 @@ Bencode *Bencode::parseDictionary(const QByteArray &raw, int &pos)
         qDebug() << "map parsing" << keys.last() << "item";
 #endif
         Bencode *value = parseItem(raw, pos);
+        Q_ASSERT(value);
 
         // some error happens
-        if (!value->isValid()) {
+        if (!value || !value->isValid()) { // -V560 PVS-Studio
             delete res;
+            delete value;
             return new Bencode();
         }
 

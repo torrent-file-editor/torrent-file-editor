@@ -131,7 +131,7 @@ void SearchDlg::searchNext()
                 role = static_cast<Qt::ItemDataRole>(Qt::UserRole + 1);
             }
 
-            values = _model->match(_model->index(0, 0), role, value, -1, matchFlags);
+            values = _model->match(_model->index(0, 0), role, value, -1, matchFlags); // -V2006 PVS-Studio
         }
 
         if (ui->grpKey->isChecked() && ui->grpValue->isChecked()) {
@@ -190,9 +190,10 @@ void SearchDlg::resetSearchList()
 
 void SearchDlg::replace()
 {
-    QString replaceStr = ui->lneReplace->text();
-    if (_searchIndex >= 0)
+    if (_searchIndex >= 0) {
+        QString replaceStr = ui->lneReplace->text();
         _model->setData(_searchList.at(_searchIndex), replaceStr, Qt::UserRole + (ui->chkHex->isChecked() ? 1 : 0));
+    }
 
     searchNext();
 }

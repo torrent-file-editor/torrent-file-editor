@@ -1,7 +1,10 @@
-// -*- Mode: C++; tab-width: 4; c-basic-offset: 4; indent-tabs-mode: nil -*-
-// vim:tabstop=4:shiftwidth=4:expandtab:
-
 /*
+ * This is an open source non-commercial project. Dear PVS-Studio, please check it.
+ * PVS-Studio Static Code Analyzer for C, C++ and C#: http://www.viva64.com
+ *
+ * -*- Mode: C++; tab-width: 4; c-basic-offset: 4; indent-tabs-mode: nil -*-
+ * vim:tabstop=4:shiftwidth=4:expandtab:
+ *
  * Copyright (C) 2004-2016 Wu Yongwei <adah at users dot sourceforge dot net>
  *
  * This software is provided 'as-is', without any express or implied
@@ -266,7 +269,7 @@ struct new_ptr_list_t
 #else
     char            file[_DEBUG_NEW_FILENAME_LEN]; ///< File name of the caller
 #endif
-    void*           addr;       ///< Address of the caller to \e new
+    void*           addr;       ///< Address of the caller to \e new // -V117 PVS-Studio
     };
     unsigned        line   :31; ///< Line number of the caller; or \c 0
     unsigned        is_array:1; ///< Non-zero iff <em>new[]</em> is used
@@ -288,7 +291,7 @@ static const unsigned DEBUG_NEW_MAGIC = 0x4442474E;
 /**
  * The extra memory allocated by <code>operator new</code>.
  */
-static const int ALIGNED_LIST_ITEM_SIZE = ALIGN(sizeof(new_ptr_list_t));
+static const int ALIGNED_LIST_ITEM_SIZE = ALIGN(sizeof(new_ptr_list_t));  // -V104 PVS-Studio
 
 /**
  * List of all new'd pointers.
@@ -405,8 +408,8 @@ static bool print_position_from_addr(const void* addr)
         const int  exeext_len = 0;
 #endif
 
-        const void *real_addr = addr;
-        const char *module_name = new_progname;
+        const void* real_addr = addr;
+        const char* module_name = new_progname;
 
 #if NVWA_APPLE
         Dl_info dl_info;
@@ -420,9 +423,9 @@ static bool print_position_from_addr(const void* addr)
 #elif NVWA_LINUX
         Dl_info dl_info;
         link_map *lm;
-        if (dladdr1(addr, &dl_info, (void**)&lm, RTLD_DL_LINKMAP))
+        if (dladdr1(addr, &dl_info, reinterpret_cast<void**>(&lm), RTLD_DL_LINKMAP))
         {
-            real_addr = (void*)((long)addr - (long)lm->l_addr);
+            real_addr = reinterpret_cast<void*>(static_cast<const char*>(addr) - reinterpret_cast<char*>(lm->l_addr));
             module_name = dl_info.dli_fname;
         }
 #endif
@@ -435,11 +438,11 @@ static bool print_position_from_addr(const void* addr)
 #else
         const char ignore_err[] = "";
 #endif
-        size_t cmd_len = strlen(module_name)
+        size_t cmd_len = strlen(module_name) // -V2007 PVS-Studio
                 + exeext_len
-                + sizeof addr2line_cmd - 1
-                + sizeof ignore_err - 1
-                + sizeof(void*) * 2
+                + sizeof(addr2line_cmd) - 1
+                + sizeof(ignore_err) - 1
+                + sizeof(real_addr) * 2
                 + 5 /* SP + "0x" + null + quote*/;
 
 #if NVWA_APPLE
@@ -465,7 +468,7 @@ static bool print_position_from_addr(const void* addr)
         sprintf(cmd + len, " -l %p", load_addr);
         len = strlen(cmd);
 #endif
-        sprintf(cmd + len, " %p%s", real_addr, ignore_err);
+        sprintf(cmd + len, " %p%s", real_addr, ignore_err); // -V111 PVS-Studio
         FILE* fp = popen(cmd, "r");
         if (fp)
         {
@@ -566,12 +569,12 @@ static void print_position(const void* ptr, int line)
 {
     if (line != 0)             // Is file/line information present?
     {
-        fprintf(new_output_fp, "%s:%d", (const char*)ptr, line);
+        fprintf(new_output_fp, "%s:%d", static_cast<const char*>(ptr), line);
     }
     else if (ptr != _NULLPTR)  // Is caller address present?
     {
         if (!print_position_from_addr(ptr)) // Fail to get source position?
-            fprintf(new_output_fp, "%p", ptr);
+            fprintf(new_output_fp, "%p", ptr); // -V111 PVS-Studio
     }
     else                       // No information is present
     {
@@ -672,7 +675,7 @@ static void* alloc_mem(size_t size, const char* file, int line, bool is_array)
                   Alignment_must_be_power_of_two);
     STATIC_ASSERT(_DEBUG_NEW_TAILCHECK >= 0, Invalid_tail_check_length);
     size_t s = size + ALIGNED_LIST_ITEM_SIZE + _DEBUG_NEW_TAILCHECK;
-    new_ptr_list_t* ptr = (new_ptr_list_t*)malloc(s);
+    new_ptr_list_t* ptr = static_cast<new_ptr_list_t*>(malloc(s));
     if (ptr == _NULLPTR)
     {
 #if _DEBUG_NEW_STD_OPER_NEW
@@ -686,7 +689,7 @@ static void* alloc_mem(size_t size, const char* file, int line, bool is_array)
         _DEBUG_NEW_ERROR_ACTION;
 #endif
     }
-    void* usr_ptr = (char*)ptr + ALIGNED_LIST_ITEM_SIZE;
+    void* usr_ptr = reinterpret_cast<char*>(ptr) + ALIGNED_LIST_ITEM_SIZE;
 #if _DEBUG_NEW_FILENAME_LEN == 0
     ptr->file = file;
 #else
@@ -694,7 +697,7 @@ static void* alloc_mem(size_t size, const char* file, int line, bool is_array)
         strncpy(ptr->file, file, _DEBUG_NEW_FILENAME_LEN - 1)
                 [_DEBUG_NEW_FILENAME_LEN - 1] = '\0';
     else
-        ptr->addr = (void*)file;
+        ptr->addr = const_cast<char*>(file);
 #endif
     ptr->line = line;
 #if _DEBUG_NEW_REMEMBER_STACK_TRACE
@@ -743,10 +746,10 @@ static void* alloc_mem(size_t size, const char* file, int line, bool is_array)
     if (new_verbose_flag)
     {
         fast_mutex_autolock lock(new_output_lock);
-        fprintf(new_output_fp,
-                "new%s: allocated %p (size %lu, ",
+        fprintf(new_output_fp, // -V111 PVS-Studio
+                "new%s: allocated %p (size %zu, ",
                 is_array ? "[]" : "",
-                usr_ptr, (unsigned long)size);
+                usr_ptr, size);
         if (line != 0)
             print_position(ptr->file, ptr->line);
         else
@@ -770,12 +773,12 @@ static void free_pointer(void* usr_ptr, void* addr, bool is_array)
     if (usr_ptr == _NULLPTR)
         return;
     new_ptr_list_t* ptr =
-            (new_ptr_list_t*)((char*)usr_ptr - ALIGNED_LIST_ITEM_SIZE);
+            reinterpret_cast<new_ptr_list_t*>(static_cast<char*>(usr_ptr) - ALIGNED_LIST_ITEM_SIZE);
     if (ptr->magic != DEBUG_NEW_MAGIC)
     {
         {
             fast_mutex_autolock lock(new_output_lock);
-            fprintf(new_output_fp, "delete%s: invalid pointer %p (",
+            fprintf(new_output_fp, "delete%s: invalid pointer %p (", // -V111 PVS-Studio
                     is_array ? "[]" : "", usr_ptr);
             print_position(addr, 0);
             fprintf(new_output_fp, ")\n");
@@ -792,11 +795,11 @@ static void free_pointer(void* usr_ptr, void* addr, bool is_array)
         else
             msg = "delete after new[]";
         fast_mutex_autolock lock(new_output_lock);
-        fprintf(new_output_fp,
-                "%s: pointer %p (size %lu)\n\tat ",
+        fprintf(new_output_fp, // -V111 PVS-Studio
+                "%s: pointer %p (size %zu)\n\tat ",
                 msg,
-                (char*)ptr + ALIGNED_LIST_ITEM_SIZE,
-                (unsigned long)ptr->size);
+                reinterpret_cast<char*>(ptr) + ALIGNED_LIST_ITEM_SIZE,
+                ptr->size);
         print_position(addr, 0);
         fprintf(new_output_fp, "\n\toriginally allocated at ");
         if (ptr->line != 0)
@@ -825,11 +828,11 @@ static void free_pointer(void* usr_ptr, void* addr, bool is_array)
     if (new_verbose_flag)
     {
         fast_mutex_autolock lock(new_output_lock);
-        fprintf(new_output_fp,
-                "delete%s: freed %p (size %lu, %lu bytes still allocated)\n",
+        fprintf(new_output_fp, // -V111 PVS-Studio
+                "delete%s: freed %p (size %zu, %zu bytes still allocated)\n",
                 is_array ? "[]" : "",
-                (char*)ptr + ALIGNED_LIST_ITEM_SIZE,
-                (unsigned long)ptr->size, (unsigned long)total_mem_alloc);
+                reinterpret_cast<char*>(ptr) + ALIGNED_LIST_ITEM_SIZE,
+                ptr->size, total_mem_alloc);
     }
 #if _DEBUG_NEW_REMEMBER_STACK_TRACE
     free(ptr->stacktrace);
@@ -843,20 +846,20 @@ static void free_pointer(void* usr_ptr, void* addr, bool is_array)
  *
  * @return  zero if no leakage is found; the number of leaks otherwise
  */
-int check_leaks()
+size_t check_leaks()
 {
-    int leak_cnt = 0;
-    int whitelisted_leak_cnt = 0;
+    size_t leak_cnt = 0;
+    size_t whitelisted_leak_cnt = 0;
     fast_mutex_autolock lock_ptr(new_ptr_lock);
     fast_mutex_autolock lock_output(new_output_lock);
     new_ptr_list_t* ptr = new_ptr_list.next;
 
     while (ptr != &new_ptr_list)
     {
-        const char* const usr_ptr = (char*)ptr + ALIGNED_LIST_ITEM_SIZE;
+        const char* const usr_ptr = reinterpret_cast<char*>(ptr) + ALIGNED_LIST_ITEM_SIZE;
         if (ptr->magic != DEBUG_NEW_MAGIC)
         {
-            fprintf(new_output_fp,
+            fprintf(new_output_fp, // -V111 PVS-Studio
                     "warning: heap data corrupt near %p\n",
                     usr_ptr);
         }
@@ -875,10 +878,10 @@ int check_leaks()
         }
         else
         {
-            fprintf(new_output_fp,
-                    "Leaked object at %p (size %lu, ",
+            fprintf(new_output_fp, // -V111 PVS-Studio
+                    "Leaked object at %p (size %zu, ",
                     usr_ptr,
-                    (unsigned long)ptr->size);
+                    ptr->size);
 
             if (ptr->line != 0)
                 print_position(ptr->file, ptr->line);
@@ -900,19 +903,19 @@ int check_leaks()
     {
         if (whitelisted_leak_cnt > 0)
         {
-            fprintf(new_output_fp, "*** %d leaks found (%d whitelisted)\n",
+            fprintf(new_output_fp, "*** %zu leaks found (%zu whitelisted)\n",
                 leak_cnt, whitelisted_leak_cnt);
         }
         else
         {
-            fprintf(new_output_fp, "*** %d leaks found\n", leak_cnt);
+            fprintf(new_output_fp, "*** %zu leaks found\n", leak_cnt);
         }
     }
 
     return leak_cnt;
 }
 
-int check_leaks_summary()
+size_t check_leaks_summary()
 {
     new_ptr_list_t summary_ptr_list = {
         &summary_ptr_list,
@@ -935,7 +938,7 @@ int check_leaks_summary()
         }
     };
 
-    int leak_cnt = 0;
+    size_t leak_cnt = 0;
     fast_mutex_autolock lock_ptr(new_ptr_lock);
     fast_mutex_autolock lock_output(new_output_lock);
     new_ptr_list_t* ptr = new_ptr_list.next;
@@ -952,13 +955,13 @@ int check_leaks_summary()
             }
 
             if (summary_ptr != &summary_ptr_list) {
-                summary_ptr->count++;
+                summary_ptr->count++; // -V127 PVS-Studio
                 summary_ptr->size += ptr->size;
             }
             else
             {
-                summary_ptr = (new_ptr_list_t*)malloc(sizeof(new_ptr_list_t));
-                summary_ptr->size = ptr->size;
+                summary_ptr = static_cast<new_ptr_list_t*>(malloc(sizeof(new_ptr_list_t)));
+                summary_ptr->size = ptr->size; // -V522 PVS-Studio
                 summary_ptr->addr = ptr->addr;
                 summary_ptr->is_array = ptr->is_array;
                 summary_ptr->line = ptr->line;
@@ -973,7 +976,7 @@ int check_leaks_summary()
 
                 summary_ptr->count = 1;
                 summary_ptr->prev = summary_ptr_list.prev;
-                summary_ptr->next = &summary_ptr_list;
+                summary_ptr->next = &summary_ptr_list; // -V506 PVS-Studio
                 summary_ptr_list.prev->next = summary_ptr;
                 summary_ptr_list.prev = summary_ptr;
             }
@@ -986,8 +989,8 @@ int check_leaks_summary()
     while (summary_ptr != &summary_ptr_list)
     {
         fprintf(new_output_fp,
-                "Leaked %lu bytes in %u ",
-                (unsigned long)summary_ptr->size,
+                "Leaked %zu bytes in %u ",
+                summary_ptr->size,
                 summary_ptr->count);
 
         if (summary_ptr->is_array)
@@ -1002,7 +1005,7 @@ int check_leaks_summary()
 
         fprintf(new_output_fp, ")\n");
         summary_ptr = summary_ptr->next;
-
+        free(summary_ptr->prev);
     }
     return leak_cnt;
 }
@@ -1013,9 +1016,9 @@ int check_leaks_summary()
  * @return  zero if no problem is found; the number of found memory
  *          corruptions otherwise
  */
-int check_mem_corruption()
+size_t check_mem_corruption()
 {
-    int corrupt_cnt = 0;
+    size_t corrupt_cnt = 0;
     fast_mutex_autolock lock_ptr(new_ptr_lock);
     fast_mutex_autolock lock_output(new_output_lock);
     fprintf(new_output_fp, "*** Checking for memory corruption: START\n");
@@ -1023,7 +1026,7 @@ int check_mem_corruption()
             ptr != &new_ptr_list;
             ptr = ptr->next)
     {
-        const char* const usr_ptr = (char*)ptr + ALIGNED_LIST_ITEM_SIZE;
+        const char* const usr_ptr = reinterpret_cast<char*>(ptr) + ALIGNED_LIST_ITEM_SIZE;
         if (ptr->magic == DEBUG_NEW_MAGIC
 #if _DEBUG_NEW_TAILCHECK
                 && check_tail(ptr)
@@ -1034,10 +1037,10 @@ int check_mem_corruption()
         if (ptr->magic != DEBUG_NEW_MAGIC)
         {
 #endif
-            fprintf(new_output_fp,
-                    "Heap data corrupt near %p (size %lu, ",
+            fprintf(new_output_fp, // -V111 PVS-Studio
+                    "Heap data corrupt near %p (size %zu, ",
                     usr_ptr,
-                    (unsigned long)ptr->size);
+                    ptr->size);
 #if _DEBUG_NEW_TAILCHECK
         }
         else
@@ -1061,7 +1064,7 @@ int check_mem_corruption()
 
         ++corrupt_cnt;
     }
-    fprintf(new_output_fp, "*** Checking for memory corruption: %d FOUND\n",
+    fprintf(new_output_fp, "*** Checking for memory corruption: %zu FOUND\n",
             corrupt_cnt);
     return corrupt_cnt;
 }
@@ -1081,7 +1084,7 @@ void debug_new_recorder::_M_process(void* usr_ptr)
     // In an expression `new NonPODType[size]', the pointer returned is
     // not the pointer returned by operator new[], but offset by size_t
     // to leave room for the size.  It needs to be compensated here.
-    size_t offset = (char*)usr_ptr - (char*)_NULLPTR;
+    size_t offset = (char*)usr_ptr - (char*)_NULLPTR; // -V2005 PVS-Studio
     if (offset % PLATFORM_MEM_ALIGNMENT != 0) {
         offset -= sizeof(size_t);
         if (offset % PLATFORM_MEM_ALIGNMENT != 0) {
@@ -1091,11 +1094,11 @@ void debug_new_recorder::_M_process(void* usr_ptr)
                     _M_file, _M_line);
             return;
         }
-        usr_ptr = (char*)usr_ptr - sizeof(size_t);
+        usr_ptr = static_cast<char*>(usr_ptr) - sizeof(size_t);
     }
 
     new_ptr_list_t* ptr =
-            (new_ptr_list_t*)((char*)usr_ptr - ALIGNED_LIST_ITEM_SIZE);
+            reinterpret_cast<new_ptr_list_t*>(static_cast<char*>(usr_ptr) - ALIGNED_LIST_ITEM_SIZE);
     if (ptr->magic != DEBUG_NEW_MAGIC || ptr->line != 0)
     {
         fast_mutex_autolock lock(new_output_lock);
@@ -1106,7 +1109,7 @@ void debug_new_recorder::_M_process(void* usr_ptr)
     }
     if (new_verbose_flag) {
         fast_mutex_autolock lock(new_output_lock);
-        fprintf(new_output_fp,
+        fprintf(new_output_fp, // -V111 PVS-Studio
                 "info: pointer %p allocated from %s:%d\n",
                 usr_ptr, _M_file, _M_line);
     }
@@ -1311,7 +1314,7 @@ void operator delete(void* ptr, const char* file, int line) _NOEXCEPT
     if (new_verbose_flag)
     {
         fast_mutex_autolock lock(new_output_lock);
-        fprintf(new_output_fp,
+        fprintf(new_output_fp, // -V111 PVS-Studio
                 "info: exception thrown on initializing object at %p (",
                 ptr);
         print_position(file, line);
@@ -1333,7 +1336,7 @@ void operator delete[](void* ptr, const char* file, int line) _NOEXCEPT
     if (new_verbose_flag)
     {
         fast_mutex_autolock lock(new_output_lock);
-        fprintf(new_output_fp,
+        fprintf(new_output_fp, // -V111 PVS-Studio
                 "info: exception thrown on initializing objects at %p (",
                 ptr);
         print_position(file, line);

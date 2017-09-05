@@ -87,7 +87,7 @@ public:
     static Bencode *fromJson(const QVariant &json);
     static QString typeToStr(Type type);
 
-    bool compare(Bencode *other) const;
+    bool compare(const Bencode *other) const;
 
     // reimplemented
     Bencode *clone() const override;

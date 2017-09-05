@@ -118,9 +118,9 @@ typedef bool (*leak_whitelist_callback_t)(char const* file, int line,
                                           void* addr, void** stacktrace);
 
 /* Prototypes */
-int check_leaks();
-int check_leaks_summary();
-int check_mem_corruption();
+size_t check_leaks();
+size_t check_leaks_summary();
+size_t check_mem_corruption();
 
 /* Control variables */
 extern bool new_autocheck_flag; // default to true: call check_leaks() on exit
