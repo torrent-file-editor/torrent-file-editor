@@ -414,6 +414,7 @@ set(OTHER_FILES
   Version.cmake
   build.sh
   PVS-Studio.cfg
+  Plog-Converter.cfg
 )
 
 # Collect all existing files and configure as non-sources.
@@ -450,7 +451,7 @@ if(CMAKE_EXPORT_COMPILE_COMMANDS)
                               -e ${CMAKE_BINARY_DIR}
                               -c ${CMAKE_SOURCE_DIR}/PVS-Studio.cfg
                               -j ${N}
-                      COMMAND ${PVS_CONVERTER} -t errorfile PVS-Studio.log.raw -o PVS-Studio.log
+                      COMMAND ${PVS_CONVERTER} -t errorfile PVS-Studio.log.raw -o PVS-Studio.log -s ${CMAKE_SOURCE_DIR}/Plog-Converter.cfg
                       COMMAND rm -f PVS-Studio.log.raw
                       COMMAND cat PVS-Studio.log 1>&2
                       COMMENT "Analyze ${EXE_NAME}"
