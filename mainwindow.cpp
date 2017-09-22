@@ -760,9 +760,7 @@ void MainWindow::updateFiles()
 
     // Fill files from _bencode if empty
     if (!model->rowCount()) {
-        qlonglong totalSize = 0;
         for (const auto file: files) {
-            totalSize += file.second;
             addFilesRow(file.first, file.second);
         }
         qulonglong pieceSize = _bencodeModel->pieceSize();
