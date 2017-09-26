@@ -411,7 +411,14 @@ void MainWindow::dropEvent(QDropEvent *event) // -V2009 PVS-Studio
 {
     QList<QUrl> urls = event->mimeData()->urls();
     if (!urls.isEmpty() && urls.first().isLocalFile()) {
-        open(event->mimeData()->urls().first().toLocalFile());
+        QString path = urls.first().toLocalFile();
+#ifdef Q_OS_WIN
+        QFileInfo fi(path);
+        if (fi.isSymLink()) {
+            path = fi.symLinkTarget();
+        }
+#endif
+        open(path);
     }
 }
 
