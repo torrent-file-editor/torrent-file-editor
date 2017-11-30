@@ -416,6 +416,7 @@ set(OTHER_FILES
   build.sh
   PVS-Studio.cfg
   Plog-Converter.cfg
+  qt_translations.qrc.in
 )
 
 # Collect all existing files and configure as non-sources.
