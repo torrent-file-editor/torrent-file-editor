@@ -11,7 +11,7 @@
     <message>
       <location filename="../aboutdlg.ui" line="39"/>
       <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
-      <translation>&lt;h3&gt;Bier für Entwickler&lt;/h3&gt;</translation>
+      <translation>&lt;h3&gt;Bier für den Entwickler&lt;/h3&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="85"/>
@@ -21,7 +21,7 @@
     <message>
       <location filename="../aboutdlg.ui" line="117"/>
       <source>Check for Update</source>
-      <translation type="unfinished"/>
+      <translation>Nach Updates suchen</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="136"/>
@@ -31,17 +31,17 @@
     <message>
       <location filename="../aboutdlg.cpp" line="190"/>
       <source>Something went wrong</source>
-      <translation type="unfinished"/>
+      <translation>Etwas lief schief</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="194"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
-      <translation type="unfinished"/>
+      <translation>Neue Version &lt;a href="%2"&gt;%1&lt;/a&gt; wurde gefunden</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="197"/>
       <source>The latest version is installed</source>
-      <translation type="unfinished"/>
+      <translation>Die neueste Version ist bereits installiert</translation>
     </message>
   </context>
   <context>

@@ -11,17 +11,17 @@
     <message>
       <location filename="../aboutdlg.ui" line="39"/>
       <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
-      <translation type="unfinished">&lt;h3&gt;Beer for Developer&lt;/h3&gt;</translation>
+      <translation>&lt;h3&gt;اشتري شرابا للمبرمج&lt;/h3&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="85"/>
       <source>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</source>
-      <translation type="unfinished">The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</translation>
+      <translation>تطلَّب تطوير هذا البرنامج إلى ما هو عليه الآن كثيرا من الوقت والجهد. أصلحت الأخطاء الجوهرية وأضيفت أشياء مفيدة. إني مُتعَب ولكن قليلا من الشراب يجعلني أستعيد قواي و أستمر في تطوير البرنامج. لو أعجبك هذا البرنامج وتريد أن تشكر المطوّر و أن تساعد في إصدار النسخة القادمة من البرنامج يمكنك التبرع بالقليل عن طريق:</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="117"/>
       <source>Check for Update</source>
-      <translation type="unfinished">Check for Update</translation>
+      <translation>ابحث عن تحديثات</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="136"/>
@@ -31,17 +31,17 @@
     <message>
       <location filename="../aboutdlg.cpp" line="190"/>
       <source>Something went wrong</source>
-      <translation type="unfinished">Something went wrong</translation>
+      <translation>حدث خطأ ما</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="194"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
-      <translation type="unfinished">New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</translation>
+      <translation>هناك إصدار جديد &lt;a href="%2"&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="197"/>
       <source>The latest version is installed</source>
-      <translation type="unfinished">The latest version is installed</translation>
+      <translation>لديك أحدث إصدار من البرنامج</translation>
     </message>
   </context>
   <context>
@@ -59,7 +59,7 @@
     <message>
       <location filename="../bencodemodel.cpp" line="694"/>
       <source>Hex</source>
-      <translation>كود Hex</translation>
+      <translation>Hex</translation>
     </message>
     <message>
       <location filename="../bencodemodel.cpp" line="695"/>
@@ -162,12 +162,12 @@
     <message>
       <location filename="../mainwindow.ui" line="216"/>
       <source>URL</source>
-      <translation type="unfinished">URL</translation>
+      <translation>عنوان URL</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="223"/>
       <source>Date created</source>
-      <translation type="unfinished">Date created</translation>
+      <translation>تاريخ الإنشاء</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="237"/>
@@ -202,7 +202,7 @@
     <message>
       <location filename="../mainwindow.ui" line="404"/>
       <source>Reload files list from current torrent data</source>
-      <translation type="unfinished">Reload files list from current torrent data</translation>
+      <translation>تحديث قائمة الملفات من التورنت المفتوح حاليا</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="443"/>
@@ -237,42 +237,43 @@
     &lt;p style="margin-left: 20px"&gt;full file path matches Perl-like regular expression&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;
-  &lt;head/&gt;
-  &lt;body&gt;
-    &lt;p&gt;&lt;b&gt;name&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;file name with extension exactly equals with pattern&lt;/p&gt;
-    &lt;br/&gt;
-    &lt;p&gt;&lt;b&gt;extension&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;the symbols after the latest point exactly equals with pattern, for 'archive.tar.gz' it will be 'gz' for example&lt;/p&gt;
-    &lt;br/&gt;
-    &lt;p&gt;&lt;b&gt;wildcards&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;file name with extension matches with file globbing where '?' is one any symbol and '*' is any numbers of any symbols&lt;/p&gt;
-    &lt;br/&gt;
-    &lt;p&gt;&lt;b&gt;regular expression&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;full file path matches Perl-like regular expression&lt;/p&gt;
-  &lt;/body&gt;
+      <translation>&lt;html&gt;
+&lt;head/&gt;
+&lt;body&gt;
+&lt;p&gt;&lt;b&gt;الاسم&lt;/b&gt;&lt;/p&gt;
+&lt;p style="margin-left: 20px"&gt;اسم الملف متضمنا الامتداد&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;الامتداد&lt;/b&gt;&lt;/p&gt;
+&lt;p style="margin-left: 20px"&gt;اكتب الأحرف بعد آخر نقطة في اسم الملف ، فمثلا بالنسبة لـ "archive.tar.gz" امتداده هو "gz" 
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;نجوم&lt;/b&gt;&lt;/p&gt;
+&lt;p style="margin-left: 20px"&gt;اسم الملف متضمنا الامتداد حيث "?" يحل محل حرف واحد و "*" يحل محل أي عدد من الأحرف والأرقام&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;التعبير النمطي&lt;/b&gt;&lt;/p&gt;
+&lt;p style="margin-left: 20px"&gt;تعابير نمطية مثل تعابير لغة بيرل&lt;/p&gt;
+&lt;/body&gt;
 &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="505"/>
       <source>name</source>
-      <translation type="unfinished">name</translation>
+      <translation>الاسم</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="510"/>
       <source>extension</source>
-      <translation type="unfinished">extension</translation>
+      <translation>الامتداد</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="515"/>
       <source>wildcards</source>
-      <translation type="unfinished">wildcards</translation>
+      <translation>نجوم (*)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="520"/>
       <source>regular expression</source>
-      <translation type="unfinished">regular expression</translation>
+      <translation>التعبير النمطي</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="538"/>
@@ -282,7 +283,7 @@
     <message>
       <location filename="../mainwindow.ui" line="633"/>
       <source>Torrent root folder </source>
-      <translation type="unfinished">Torrent root folder </translation>
+      <translation>مسار الملفات </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="646"/>
@@ -307,12 +308,12 @@
     <message>
       <location filename="../mainwindow.ui" line="721"/>
       <source>Find</source>
-      <translation type="unfinished">Find</translation>
+      <translation>البحث</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="737"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>بحث واستبدال</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="830"/>
@@ -362,12 +363,12 @@
     <message>
       <location filename="../mainwindow.ui" line="356"/>
       <source>Calculate pieces hashes</source>
-      <translation type="unfinished">Calculate pieces hashes</translation>
+      <translation>احسب هاشات القطع</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="427"/>
       <source>Remove selected files</source>
-      <translation type="unfinished">Remove selected files</translation>
+      <translation>إزالة الملفات المحددة</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="587"/>
@@ -382,7 +383,7 @@
     <message>
       <location filename="../mainwindow.ui" line="673"/>
       <source>Delete selected tree items</source>
-      <translation type="unfinished">Delete selected tree items</translation>
+      <translation>مسح المحدد من الشجرة</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="773"/>
@@ -427,7 +428,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="217"/>
       <source># Pieces</source>
-      <translation type="unfinished"># Pieces</translation>
+      <translation>عدد القطع#</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="326"/>
@@ -449,7 +450,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="559"/>
       <source>Torrent root folder is not set</source>
-      <translation type="unfinished">Torrent root folder is not set</translation>
+      <translation>لم يتم تحديد مسار الملفات</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="369"/>
@@ -457,13 +458,13 @@
       <location filename="../mainwindow.cpp" line="1045"/>
       <location filename="../mainwindow.cpp" line="1056"/>
       <source>Can't save file</source>
-      <translation type="unfinished">Can't save file</translation>
+      <translation>لا يمكن حفظ الملف</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="369"/>
       <location filename="../mainwindow.cpp" line="1037"/>
       <source>BEncoded data is not valid</source>
-      <translation type="unfinished">BEncoded data is not valid</translation>
+      <translation>بيانات البي إنكود غير صالحة</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="560"/>
@@ -472,16 +473,14 @@
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
 
 Do you want to set torrent root folder and try again?</source>
-      <translation type="unfinished">Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
-
-If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
-
-Do you want to set torrent root folder and try again?</translation>
+      <translation>مسار الملفات غير معروف. يمكنك إنشاء التورنت فقط إذا امتلكت الملفات كاملة.
+إن كنت تريد تعديل قائمة الملفات في هذا التورنت لا بد من تحديد مسار الملفات ، أي مكان الملفات الموجودة بهذا التورنت على الكمبيوتر الخاص بك. إن كنت لا تملك الملفات فلا يمكنك إنشاء هذا التورنت.
+أتريد تحديد مسار الملفات والمحاولة مرة أخرى؟</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="583"/>
       <source>The torrent root folder is not common.</source>
-      <translation type="unfinished">The torrent root folder is not common.</translation>
+      <translation>للملفات مسارات مختلفة.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="642"/>
@@ -532,17 +531,17 @@ Do you want to set torrent root folder and try again?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="1187"/>
       <source>Save file</source>
-      <translation type="unfinished">Save file</translation>
+      <translation>حفظ الملف</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1188"/>
       <source>Untitled</source>
-      <translation type="unfinished">Untitled</translation>
+      <translation>بلا اسم</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1189"/>
       <source>Save file "%1"?</source>
-      <translation type="unfinished">Save file "%1"?</translation>
+      <translation>حفظ الملف "%1"؟</translation>
     </message>
   </context>
   <context>
@@ -578,31 +577,31 @@ Do you want to set torrent root folder and try again?</translation>
     <message>
       <location filename="../searchdlg.ui" line="27"/>
       <source>Key</source>
-      <translation type="unfinished">Key</translation>
+      <translation>النوع</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="39"/>
       <location filename="../searchdlg.ui" line="96"/>
       <source>Match case</source>
-      <translation type="unfinished">Match case</translation>
+      <translation>مراعاة حجم الحرف</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="46"/>
       <location filename="../searchdlg.ui" line="103"/>
       <source>Exact match</source>
-      <translation type="unfinished">Exact match</translation>
+      <translation>تطابق تام</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="56"/>
       <location filename="../searchdlg.ui" line="113"/>
       <source>Wildcards</source>
-      <translation type="unfinished">Wildcards</translation>
+      <translation>نجوم (*)</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="63"/>
       <location filename="../searchdlg.ui" line="120"/>
       <source>Regular expression</source>
-      <translation type="unfinished">Regular expression</translation>
+      <translation>التعبير النمطي</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="84"/>
@@ -612,86 +611,86 @@ Do you want to set torrent root folder and try again?</translation>
     <message>
       <location filename="../searchdlg.ui" line="127"/>
       <source>Hex</source>
-      <translation type="unfinished">Hex</translation>
+      <translation>Hex</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="154"/>
       <source>Replace value with</source>
-      <translation type="unfinished">Replace value with</translation>
+      <translation>إستبدال بـ</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="164"/>
       <source>hex</source>
-      <translation type="unfinished">hex</translation>
+      <translation>Hex</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="176"/>
       <source>Direction</source>
-      <translation type="unfinished">Direction</translation>
+      <translation>الاتجاه</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="182"/>
       <source>Up</source>
-      <translation type="unfinished">Up</translation>
+      <translation>لأعلى</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="189"/>
       <source>Down</source>
-      <translation type="unfinished">Down</translation>
+      <translation>لأسفل</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="204"/>
       <source>Replace All</source>
-      <translation type="unfinished">Replace All</translation>
+      <translation>استبدل الكلّ</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="224"/>
       <source>Find Next</source>
-      <translation type="unfinished">Find Next</translation>
+      <translation>إبحث عن التالي</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="248"/>
       <location filename="../searchdlg.cpp" line="42"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>بحث واستبدال</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="231"/>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>إغلاق</translation>
     </message>
     <message>
       <location filename="../searchdlg.cpp" line="42"/>
       <source>Find</source>
-      <translation type="unfinished">Find</translation>
+      <translation>البحث</translation>
     </message>
     <message>
       <location filename="../searchdlg.cpp" line="135"/>
       <source>No matches found</source>
-      <translation type="unfinished">No matches found</translation>
+      <translation>لم يتم العثور على تطابقات</translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="140"/>
       <source>%1 of %n match(es)</source>
-      <translation type="unfinished">
-        <numerusform>%1 of %n match(es)</numerusform>
-        <numerusform>%1 of %n match(es)</numerusform>
-        <numerusform>%1 of %n match(es)</numerusform>
-        <numerusform>%1 of %n match(es)</numerusform>
-        <numerusform>%1 of %n match(es)</numerusform>
-        <numerusform>%1 of %n match(es)</numerusform>
+      <translation>
+        <numerusform>النتيجة الأولى %1 من أصل %n</numerusform>
+        <numerusform>النتيجة الأولى %1 من أصل %n</numerusform>
+        <numerusform>النتيجة الأولى %1 من أصل %n</numerusform>
+        <numerusform>النتيجة الأولى %1 من أصل %n</numerusform>
+        <numerusform>النتيجة الأولى %1 من أصل %n</numerusform>
+        <numerusform>النتيجة الأولى %1 من أصل %n</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="192"/>
       <source>%n value(s) was(were) replaced</source>
-      <translation type="unfinished">
-        <numerusform>%n value(s) was(were) replaced</numerusform>
-        <numerusform>%n value(s) was(were) replaced</numerusform>
-        <numerusform>%n value(s) was(were) replaced</numerusform>
-        <numerusform>%n value(s) was(were) replaced</numerusform>
-        <numerusform>%n value(s) was(were) replaced</numerusform>
-        <numerusform>%n value(s) was(were) replaced</numerusform>
+      <translation>
+        <numerusform>تم استبدال %n</numerusform>
+        <numerusform>تم استبدال %n</numerusform>
+        <numerusform>تم استبدال %n</numerusform>
+        <numerusform>تم استبدال %n</numerusform>
+        <numerusform>تم استبدال %n</numerusform>
+        <numerusform>تم استبدال %n</numerusform>
       </translation>
     </message>
   </context>

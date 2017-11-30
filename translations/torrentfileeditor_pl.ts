@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="hu" sourcelanguage="en">
+<TS version="2.0" language="pl" sourcelanguage="en">
   <context>
     <name>AboutDlg</name>
     <message>
       <location filename="../aboutdlg.ui" line="175"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt@land.ru"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Szerző: Ivan Romanov &lt;a href="mailto:drizt@land.ru"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Licenc: GNU Általános Nyilvános Licenc v3.0 vagy újabb&lt;/p&gt;&lt;p&gt;Honlap: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Források: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Köszönet &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt;nek az alkalmazás ikonért&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt@land.ru"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="39"/>
       <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
-      <translation>&lt;h3&gt;Sör a fejlesztőnek&lt;/h3&gt;</translation>
+      <translation>&lt;h3&gt;Piwo Dla Dewelopera&lt;/h3&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="85"/>
       <source>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</source>
-      <translation>Az utolsó verzió elkészítése rengeteg időt és erőfeszítést igényelt. Súlyos hibákat javított és hasznos fejlesztéseket hozott. Fáradt vagyok. De egy kis sör segít nekem visszanyerni az erőt és folytatni a fejlesztést. Ha kedveled ezt az alkalmazás, meg akarod köszönni a fejlesztőnek és az új verzió kiadását, tehetsz egy kis adományt ezzel:</translation>
+      <translation>Rozwój najnowszej wersji zajął nam dużo czasu, i wymagał sporo wysiłku. Naprawione zostały błędy i zrobione przydatne poprawki. Jestem Zmęczony. Lecz Małe Piwko pomoże mi odzyskać siły i pracować dalej. Gdy lubisz tą aplikację, chcesz podziękować developerowi i przyspieszyć następną wersje, zrób mały datek, przez:</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="117"/>
       <source>Check for Update</source>
-      <translation type="unfinished">Check for Update</translation>
+      <translation>Zobacz Aktualizacje</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="136"/>
       <source>About %1</source>
-      <translation>%1-ről</translation>
+      <translation>O %1</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="190"/>
       <source>Something went wrong</source>
-      <translation type="unfinished">Something went wrong</translation>
+      <translation>Coś Poszło Nie Tak</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="194"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
-      <translation type="unfinished">New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</translation>
+      <translation>Jest Nowa Wersja: &lt;a href="%2"&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="197"/>
       <source>The latest version is installed</source>
-      <translation type="unfinished">The latest version is installed</translation>
+      <translation>Najnowsza Wersja jest zainstalowana</translation>
     </message>
   </context>
   <context>
@@ -49,12 +49,12 @@
     <message>
       <location filename="../bencodemodel.cpp" line="692"/>
       <source>Name</source>
-      <translation>Név</translation>
+      <translation>Nazwa</translation>
     </message>
     <message>
       <location filename="../bencodemodel.cpp" line="693"/>
       <source>Type</source>
-      <translation>Típus</translation>
+      <translation>Typ</translation>
     </message>
     <message>
       <location filename="../bencodemodel.cpp" line="694"/>
@@ -64,7 +64,7 @@
     <message>
       <location filename="../bencodemodel.cpp" line="695"/>
       <source>Value</source>
-      <translation>Érték</translation>
+      <translation>Wartość</translation>
     </message>
   </context>
   <context>
@@ -72,12 +72,12 @@
     <message>
       <location filename="../datewidget.cpp" line="64"/>
       <source>Clean</source>
-      <translation>Tisztítás</translation>
+      <translation>Wyczyść</translation>
     </message>
     <message>
       <location filename="../datewidget.cpp" line="80"/>
       <source>Show calendar</source>
-      <translation>Naptár megjelenítése</translation>
+      <translation>Pokaż kalendarz</translation>
     </message>
   </context>
   <context>
@@ -85,12 +85,12 @@
     <message>
       <location filename="../folderedit.cpp" line="42"/>
       <source>Choose folder</source>
-      <translation>Mappa választása</translation>
+      <translation>Wybierz Folder</translation>
     </message>
     <message>
       <location filename="../folderedit.cpp" line="57"/>
       <source>Add Folder</source>
-      <translation>Mappa hozzáadása</translation>
+      <translation>Dodaj Folder</translation>
     </message>
   </context>
   <context>
@@ -99,65 +99,65 @@
       <location filename="../mainwindow.ui" line="30"/>
       <location filename="../mainwindow.ui" line="842"/>
       <source>New</source>
-      <translation>Új</translation>
+      <translation>Nowy</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
       <location filename="../mainwindow.cpp" line="349"/>
       <source>Open</source>
-      <translation>Megnyitás</translation>
+      <translation>Otwórz</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="44"/>
       <location filename="../mainwindow.ui" line="858"/>
       <source>Save</source>
-      <translation>Mentés</translation>
+      <translation>Zapisz</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
       <location filename="../mainwindow.cpp" line="374"/>
       <source>Save As</source>
-      <translation>Mentés másként</translation>
+      <translation>Zapisz Jako</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="88"/>
       <source>About</source>
-      <translation>Rólunk</translation>
+      <translation>O tym</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="101"/>
       <source>Main</source>
-      <translation>Fő</translation>
+      <translation>Strona Główna</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="189"/>
       <source>Pieces</source>
-      <translation>Darabszám</translation>
+      <translation>Sztuki</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="148"/>
       <source>Created by</source>
-      <translation>Készítette</translation>
+      <translation>Stworzone przez</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="209"/>
       <source>Piece size</source>
-      <translation>Darab méret</translation>
+      <translation>Rozmiar Sztuki</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="199"/>
       <source>Publisher</source>
-      <translation>Kiadó</translation>
+      <translation>Wydawca</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="230"/>
       <source>Name</source>
-      <translation>Név</translation>
+      <translation>Nazwa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="114"/>
       <source>Private torrent</source>
-      <translation>Privát torrent</translation>
+      <translation>Prywatny</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="216"/>
@@ -167,7 +167,7 @@
     <message>
       <location filename="../mainwindow.ui" line="223"/>
       <source>Date created</source>
-      <translation>Létrehozás dátuma</translation>
+      <translation>Data Stworzenia</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="237"/>
@@ -177,47 +177,47 @@
     <message>
       <location filename="../mainwindow.ui" line="307"/>
       <source>Comment</source>
-      <translation>Hozzászólás</translation>
+      <translation>Komentarz</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="325"/>
       <source>Trackers</source>
-      <translation>Trackerek</translation>
+      <translation>Trackery</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="345"/>
       <source>Files</source>
-      <translation>Fájlok</translation>
+      <translation>Pliki</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="372"/>
       <source>Add files</source>
-      <translation>Fájlok hozzáadása</translation>
+      <translation>Dodaj Pliki</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="388"/>
       <source>Add folder</source>
-      <translation>Mappa hozzáadása</translation>
+      <translation>Dodaj Folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="404"/>
       <source>Reload files list from current torrent data</source>
-      <translation>Fájlok újratöltése a jelenlegi torrent adatokból</translation>
+      <translation>Odśwież listę plików z aktualnych danych torrent'u</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="443"/>
       <source>Move file up</source>
-      <translation>Fájl feljebb helyezése</translation>
+      <translation>Przenieś plik wyżej</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="459"/>
       <source>Move file down</source>
-      <translation>Fájl lejjebb helyezése</translation>
+      <translation>Przenieś plik niżej</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="479"/>
       <source>Filter by </source>
-      <translation>Szűrés </translation>
+      <translation type="unfinished">Filter by </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="486"/>
@@ -237,219 +237,219 @@
     &lt;p style="margin-left: 20px"&gt;full file path matches Perl-like regular expression&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;</source>
-      <translation>&lt;html&gt;
+      <translation type="unfinished">&lt;html&gt;
   &lt;head/&gt;
   &lt;body&gt;
-    &lt;p&gt;&lt;b&gt;név&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;kiterjesztéses fájlnév pontosan megegyezik a mintával&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;name&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;file name with extension exactly equals with pattern&lt;/p&gt;
     &lt;br/&gt;
-    &lt;p&gt;&lt;b&gt;kiterjesztés&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;a szimbólumok a legutolsó pont után pontosan megegyeznek a mintával, "archive.tar.gz" lesz "gz" például&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;extension&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;the symbols after the latest point exactly equals with pattern, for 'archive.tar.gz' it will be 'gz' for example&lt;/p&gt;
     &lt;br/&gt;
-    &lt;p&gt;&lt;b&gt;helyettesítők&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt; kiterjesztés fájlnév  megegyezik a fájl-kifejtéssel, ahol '?' egy bármilyen szimbólum és "*" bármilyen szimbólum bármilyen száma&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;wildcards&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;file name with extension matches with file globbing where '?' is one any symbol and '*' is any numbers of any symbols&lt;/p&gt;
     &lt;br/&gt;
-    &lt;p&gt;&lt;b&gt;szabályos kifejezések&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;a fájl teljes elérési útja megegyezik a Perl-szerű reguláris kifejezéssel&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;regular expression&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;full file path matches Perl-like regular expression&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="505"/>
       <source>name</source>
-      <translation>név</translation>
+      <translation type="unfinished">name</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="510"/>
       <source>extension</source>
-      <translation>kiterjesztés</translation>
+      <translation type="unfinished">extension</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="515"/>
       <source>wildcards</source>
-      <translation>helyettesítők</translation>
+      <translation type="unfinished">wildcards</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="520"/>
       <source>regular expression</source>
-      <translation>szabályos kifejezés</translation>
+      <translation type="unfinished">regular expression</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="538"/>
       <source>Filter files</source>
-      <translation>Fájlok szűrése</translation>
+      <translation type="unfinished">Filter files</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="633"/>
       <source>Torrent root folder </source>
-      <translation>Torrent gyökérkönyvtár </translation>
+      <translation type="unfinished">Torrent root folder </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="646"/>
       <source>Tree</source>
-      <translation>Fa</translation>
+      <translation type="unfinished">Tree</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="657"/>
       <source>Add tree item</source>
-      <translation>Új fa-elem hozzáadása</translation>
+      <translation type="unfinished">Add tree item</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="689"/>
       <source>Move list item up</source>
-      <translation>Listaelem feljebb helyezése</translation>
+      <translation type="unfinished">Move list item up</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="705"/>
       <source>Move list item down</source>
-      <translation>Listaelem lejjebb helyezése</translation>
+      <translation type="unfinished">Move list item down</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="721"/>
       <source>Find</source>
-      <translation>Keresés</translation>
+      <translation type="unfinished">Find</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="737"/>
       <source>Replace</source>
-      <translation>Helyettesítés</translation>
+      <translation type="unfinished">Replace</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="830"/>
       <source>File</source>
-      <translation>Fájl</translation>
+      <translation type="unfinished">File</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="845"/>
       <source>Ctrl+N</source>
-      <translation>Ctrl+N</translation>
+      <translation type="unfinished">Ctrl+N</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="850"/>
       <source>Open...</source>
-      <translation>Megnyit...</translation>
+      <translation type="unfinished">Open...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="853"/>
       <source>Ctrl+O</source>
-      <translation>Ctrl+O</translation>
+      <translation type="unfinished">Ctrl+O</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="861"/>
       <source>Ctrl+S</source>
-      <translation>Ctrl+S</translation>
+      <translation type="unfinished">Ctrl+S</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="866"/>
       <source>Save As...</source>
-      <translation>Mentése mint...</translation>
+      <translation type="unfinished">Save As...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="869"/>
       <source>Ctrl+Shift+S</source>
-      <translation>Ctrl+Shift+S</translation>
+      <translation type="unfinished">Ctrl+Shift+S</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="874"/>
       <source>About...</source>
-      <translation>Rólunk...</translation>
+      <translation type="unfinished">About...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="65"/>
       <source>Coding</source>
-      <translation>Kódolás</translation>
+      <translation type="unfinished">Coding</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="356"/>
       <source>Calculate pieces hashes</source>
-      <translation>Darabok hashének kiszámítása</translation>
+      <translation type="unfinished">Calculate pieces hashes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="427"/>
       <source>Remove selected files</source>
-      <translation>Kijelölt fájlok eltávolítása</translation>
+      <translation type="unfinished">Remove selected files</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="587"/>
       <source>Piece size </source>
-      <translation>Darab méret </translation>
+      <translation type="unfinished">Piece size </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="604"/>
       <source>Total size </source>
-      <translation>Teljes méret </translation>
+      <translation type="unfinished">Total size </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="673"/>
       <source>Delete selected tree items</source>
-      <translation>Kijelölt fafájlok eltávolítása</translation>
+      <translation type="unfinished">Delete selected tree items</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="773"/>
       <source>Raw</source>
-      <translation>Nyers</translation>
+      <translation type="unfinished">Raw</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="198"/>
       <source>Need to calculate piece hashes</source>
-      <translation>Darab hashek számolása szükséges</translation>
+      <translation type="unfinished">Need to calculate piece hashes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="199"/>
       <source>Please wait</source>
-      <translation>Kérlek, várj</translation>
+      <translation type="unfinished">Please wait</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="209"/>
       <source>Auto</source>
-      <translation>Auto</translation>
+      <translation type="unfinished">Auto</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="217"/>
       <source>Path</source>
-      <translation>Elérési út</translation>
+      <translation type="unfinished">Path</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="217"/>
       <source>Size</source>
-      <translation>Méret</translation>
+      <translation type="unfinished">Size</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="179"/>
       <source>Torrents (*.torrent)</source>
-      <translation>Torrentek (*.torrent)</translation>
+      <translation type="unfinished">Torrents (*.torrent)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="180"/>
       <source>uTorrent resume files (*.dat)</source>
-      <translation>uTorrent folytató fájlok (*.dat)</translation>
+      <translation type="unfinished">uTorrent resume files (*.dat)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="217"/>
       <source># Pieces</source>
-      <translation># Darab</translation>
+      <translation type="unfinished"># Pieces</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="326"/>
       <location filename="../mainwindow.cpp" line="806"/>
       <source>Error</source>
-      <translation>Hiba</translation>
+      <translation type="unfinished">Error</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="326"/>
       <source>Can't open file</source>
       <translatorcomment>Не могу открыть файл</translatorcomment>
-      <translation>Fájl nem nyitható meg</translation>
+      <translation type="unfinished">Can't open file</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="583"/>
       <source>Warning</source>
-      <translation>Figyelmeztetés</translation>
+      <translation type="unfinished">Warning</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="559"/>
       <source>Torrent root folder is not set</source>
-      <translation>Torrent gyökérkönyvtár nincs beállítva</translation>
+      <translation type="unfinished">Torrent root folder is not set</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="369"/>
@@ -457,13 +457,13 @@
       <location filename="../mainwindow.cpp" line="1045"/>
       <location filename="../mainwindow.cpp" line="1056"/>
       <source>Can't save file</source>
-      <translation>Fájl nem menthető</translation>
+      <translation type="unfinished">Can't save file</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="369"/>
       <location filename="../mainwindow.cpp" line="1037"/>
       <source>BEncoded data is not valid</source>
-      <translation>Bencoded adat érvénytelen</translation>
+      <translation type="unfinished">BEncoded data is not valid</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="560"/>
@@ -472,77 +472,77 @@
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
 
 Do you want to set torrent root folder and try again?</source>
-      <translation>Elérési út a lemezen lévő fájlokhoz ismeretlen. Egy torrent csak teljesen letöltött fájlokból készíthető.
+      <translation type="unfinished">Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
-Ha szeretnéd módosítani a fájl listát a jelenlegi torrentben, akkor be kell állítanod a torrent gyökérkönyvtárat. A torrent gyökérkönyvtár egy mappa, ahol minden lemezen lévő fájl megtalálható. Aktuális fájl elérési út a lemezen torrent gyökérkönyvtár, relatív elérési úttal a torrent fájltól. Ha néhány fájl hiányzik, akkor a torrent nem hozható létre.
+If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
 
-Szeretnéd beállítani a torrent gyökérkönyvtárat és újrapróbálni?</translation>
+Do you want to set torrent root folder and try again?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="583"/>
       <source>The torrent root folder is not common.</source>
-      <translation>A torrent gyökérkönyvtár nem általános.</translation>
+      <translation type="unfinished">The torrent root folder is not common.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="642"/>
       <source>Add File</source>
-      <translation>Fájlok hozzáadása</translation>
+      <translation type="unfinished">Add File</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="664"/>
       <source>Add Folder</source>
-      <translation>Mappa hozzáadása</translation>
+      <translation type="unfinished">Add Folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="813"/>
       <source>Line: %1 of %2 Col: %3</source>
-      <translation>Sor: %1, a %2-ból/ből Oszlop: %3</translation>
+      <translation type="unfinished">Line: %1 of %2 Col: %3</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="995"/>
       <location filename="../mainwindow.cpp" line="1003"/>
       <source>Error on %1 line: %2</source>
-      <translation>Hiba a %1. sorban: %2</translation>
+      <translation type="unfinished">Error on %1 line: %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1153"/>
       <source>B</source>
-      <translation>B</translation>
+      <translation type="unfinished">B</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1157"/>
       <source>KiB</source>
-      <translation>KiB</translation>
+      <translation type="unfinished">KiB</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1161"/>
       <source>MiB</source>
-      <translation>MiB</translation>
+      <translation type="unfinished">MiB</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1165"/>
       <source>GiB</source>
-      <translation>GiB</translation>
+      <translation type="unfinished">GiB</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1169"/>
       <source>TiB</source>
-      <translation>TiB</translation>
+      <translation type="unfinished">TiB</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1187"/>
       <source>Save file</source>
-      <translation>Fájl mentése</translation>
+      <translation type="unfinished">Save file</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1188"/>
       <source>Untitled</source>
-      <translation>Névtelen</translation>
+      <translation type="unfinished">Untitled</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1189"/>
       <source>Save file "%1"?</source>
-      <translation>"%1" mentése?</translation>
+      <translation type="unfinished">Save file "%1"?</translation>
     </message>
   </context>
   <context>
@@ -550,27 +550,27 @@ Szeretnéd beállítani a torrent gyökérkönyvtárat és újrapróbálni?</tra
     <message>
       <location filename="../bencode.cpp" line="216"/>
       <source>list</source>
-      <translation>lista</translation>
+      <translation type="unfinished">list</translation>
     </message>
     <message>
       <location filename="../bencode.cpp" line="217"/>
       <source>dictionary</source>
-      <translation>szótár</translation>
+      <translation type="unfinished">dictionary</translation>
     </message>
     <message>
       <location filename="../bencode.cpp" line="218"/>
       <source>integer</source>
-      <translation>egész szám</translation>
+      <translation type="unfinished">integer</translation>
     </message>
     <message>
       <location filename="../bencode.cpp" line="219"/>
       <source>string</source>
-      <translation>karakterlánc</translation>
+      <translation type="unfinished">string</translation>
     </message>
     <message>
       <location filename="../bencode.cpp" line="220"/>
       <source>invalid</source>
-      <translation>érvénytelen</translation>
+      <translation type="unfinished">invalid</translation>
     </message>
   </context>
   <context>
@@ -578,112 +578,114 @@ Szeretnéd beállítani a torrent gyökérkönyvtárat és újrapróbálni?</tra
     <message>
       <location filename="../searchdlg.ui" line="27"/>
       <source>Key</source>
-      <translation>Kulcs</translation>
+      <translation type="unfinished">Key</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="39"/>
       <location filename="../searchdlg.ui" line="96"/>
       <source>Match case</source>
-      <translation>Kisbetű-nagybetű</translation>
+      <translation type="unfinished">Match case</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="46"/>
       <location filename="../searchdlg.ui" line="103"/>
       <source>Exact match</source>
-      <translation>Pontos egyezés</translation>
+      <translation type="unfinished">Exact match</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="56"/>
       <location filename="../searchdlg.ui" line="113"/>
       <source>Wildcards</source>
-      <translation>Helyettesítők</translation>
+      <translation type="unfinished">Wildcards</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="63"/>
       <location filename="../searchdlg.ui" line="120"/>
       <source>Regular expression</source>
-      <translation>Hagyományos kifejezések</translation>
+      <translation type="unfinished">Regular expression</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="84"/>
       <source>Value</source>
-      <translation>Érték</translation>
+      <translation type="unfinished">Value</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="127"/>
       <source>Hex</source>
-      <translation>Hex</translation>
+      <translation type="unfinished">Hex</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="154"/>
       <source>Replace value with</source>
-      <translation>Érték cseréje ezzel:</translation>
+      <translation type="unfinished">Replace value with</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="164"/>
       <source>hex</source>
-      <translation>hex</translation>
+      <translation type="unfinished">hex</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="176"/>
       <source>Direction</source>
-      <translation>Irány</translation>
+      <translation type="unfinished">Direction</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="182"/>
       <source>Up</source>
-      <translation>Fel</translation>
+      <translation type="unfinished">Up</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="189"/>
       <source>Down</source>
-      <translation>Le</translation>
+      <translation type="unfinished">Down</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="204"/>
       <source>Replace All</source>
-      <translation>Összes cseréje</translation>
+      <translation type="unfinished">Replace All</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="224"/>
       <source>Find Next</source>
-      <translation>Következő keresése</translation>
+      <translation type="unfinished">Find Next</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="248"/>
       <location filename="../searchdlg.cpp" line="42"/>
       <source>Replace</source>
-      <translation>Cserél</translation>
+      <translation type="unfinished">Replace</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="231"/>
       <source>Close</source>
-      <translation>Bezár</translation>
+      <translation type="unfinished">Close</translation>
     </message>
     <message>
       <location filename="../searchdlg.cpp" line="42"/>
       <source>Find</source>
-      <translation>Keresés</translation>
+      <translation type="unfinished">Find</translation>
     </message>
     <message>
       <location filename="../searchdlg.cpp" line="135"/>
       <source>No matches found</source>
-      <translation>Nem található egyezés</translation>
+      <translation type="unfinished">No matches found</translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="140"/>
       <source>%1 of %n match(es)</source>
-      <translation>
-        <numerusform>%1 egyezés %n-ból/ből</numerusform>
-        <numerusform>%1 egyezés %n-ból/ből</numerusform>
+      <translation type="unfinished">
+        <numerusform>%1 of %n match(es)</numerusform>
+        <numerusform>%1 of %n match(es)</numerusform>
+        <numerusform>%1 of %n match(es)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="192"/>
       <source>%n value(s) was(were) replaced</source>
-      <translation>
-        <numerusform>%n érték lecserélve</numerusform>
-        <numerusform>%n érték(ek) tárgyát cserélni</numerusform>
+      <translation type="unfinished">
+        <numerusform>%n value(s) was(were) replaced</numerusform>
+        <numerusform>%n value(s) was(were) replaced</numerusform>
+        <numerusform>%n value(s) was(were) replaced</numerusform>
       </translation>
     </message>
   </context>
@@ -692,7 +694,7 @@ Szeretnéd beállítani a torrent gyökérkönyvtárat és újrapróbálni?</tra
     <message>
       <location filename="../urledit.cpp" line="39"/>
       <source>Open in internet browser</source>
-      <translation>Megnyitás böngészőben</translation>
+      <translation type="unfinished">Open in internet browser</translation>
     </message>
   </context>
   <context>
@@ -700,12 +702,12 @@ Szeretnéd beállítani a torrent gyökérkönyvtárat és újrapróbálni?</tra
     <message>
       <location filename="../mainwindow.cpp" line="108"/>
       <source>Can't open %1</source>
-      <translation>%1 nem nyitható meg</translation>
+      <translation type="unfinished">Can't open %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="143"/>
       <source>Can't read from %1</source>
-      <translation>%1-ból/ből nem lehet olvasni</translation>
+      <translation type="unfinished">Can't read from %1</translation>
     </message>
   </context>
 </TS>

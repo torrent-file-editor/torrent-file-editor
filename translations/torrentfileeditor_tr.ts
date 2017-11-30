@@ -675,12 +675,14 @@ Do you want to set torrent root folder and try again?</translation>
       <source>%1 of %n match(es)</source>
       <translation>
         <numerusform>%1/%n eşleşme</numerusform>
+        <numerusform>%1/%n eşleşme</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="192"/>
       <source>%n value(s) was(were) replaced</source>
       <translation>
+        <numerusform>%n değer değiştirildi</numerusform>
         <numerusform>%n değer değiştirildi</numerusform>
       </translation>
     </message>

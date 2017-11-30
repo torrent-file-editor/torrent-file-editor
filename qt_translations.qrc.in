@@ -2,13 +2,20 @@
 <RCC version="1.0">
     <qresource prefix="/translations">
         <file>qt_ar.qm</file>
+        <!-- qt_bn.qm missed -->
         <file>qt_cs.qm</file>
         <file>qt_de.qm</file>
         <!-- qt_en.qm missed -->
+        <file>qt_es.qm</file>
+        <file>qt_fr.qm</file>
         <file>qt_hu.qm</file>
+        <!-- qt_it.qm missed -->
         <file>qt_ko.qm</file>
         <!-- qt_nl.qm missed -->
+        <file>qt_pl.qm</file>
+        <!-- qt_pt.qm fixme -->
         <file>qt_ru.qm</file>
         <!-- qt_tr.qm missed -->
+        <file>qt_zh_CN.qm</file>
     </qresource>
 </RCC>
