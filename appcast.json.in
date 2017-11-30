@@ -1,0 +1,5 @@
+{
+  "version": "${APP_VERSION}",
+  "url-win-x32": "https://downloads.sourceforge.net/project/torrent-file-editor/v${APP_VERSION}/torrent-file-editor-${APP_VERSION}-x32.exe",
+  "url-win-x64": "https://downloads.sourceforge.net/project/torrent-file-editor/v${APP_VERSION}/torrent-file-editor-${APP_VERSION}-x64.exe"
+}

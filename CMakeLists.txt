@@ -417,6 +417,7 @@ set(OTHER_FILES
   PVS-Studio.cfg
   Plog-Converter.cfg
   qt_translations.qrc.in
+  appcast.json.in
 )
 
 # Collect all existing files and configure as non-sources.
