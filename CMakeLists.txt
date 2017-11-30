@@ -132,6 +132,7 @@ if(WIN32)
   configure_file(qt_translations.qrc.in qt_translations.qrc COPYONLY)
 endif()
 
+# NOTE: make changes in qt_translations.qrc.in and translations.qrc.in also
 set(LANGS ar bn cs de en es fr ko ru hu it nl pl pt_BR tr zh_CN)
 
 foreach(l ${LANGS})
