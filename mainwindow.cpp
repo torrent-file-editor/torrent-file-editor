@@ -65,7 +65,7 @@
 
 // FIXME: workaround for symlink wrong size https://bugreports.qt.io/browse/QTBUG-24831
 
-int fileSize(const QString &path)
+static qint64 fileSize(const QString &path)
 {
 #ifdef Q_OS_UNIX
     return QFileInfo(path).size();
@@ -78,9 +78,9 @@ int fileSize(const QString &path)
         QFile file(path);
         file.open(QFile::ReadOnly); // it must be open to get a windows file handle
         HANDLE hFile = reinterpret_cast<HANDLE>(_get_osfhandle(file.handle()));
-        int size = GetFileSize(hFile, nullptr);
+        DWORD size = GetFileSize(hFile, nullptr);
         file.close();
-        return size;
+        return static_cast<qint64>(size);
     }
 #endif
 }
