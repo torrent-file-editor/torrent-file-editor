@@ -11,37 +11,37 @@
     <message>
       <location filename="../aboutdlg.ui" line="39"/>
       <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
-      <translation type="unfinished">&lt;h3&gt;Beer for Developer&lt;/h3&gt;</translation>
+      <translation>&lt;h3&gt;Bier voor ontwikkelaar&lt;/h3&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="85"/>
       <source>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</source>
-      <translation type="unfinished">The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</translation>
+      <translation>De ontwikkeling van de nieuwste versie heeft veel tijd en moeite gekost. Grote bugs opgelost en nuttige verbeteringen aangebracht. Ik ben moe. Maar een biertje zou me nieuwe kracht geven en ontwikkeling stimuleren. Als je deze app leuk vindt, wil je de ontwikkelaar bedanken en hem aanmoedigen om de volgende versie uit te brengen. U kunt hier een klein bedrag doneren:</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="117"/>
       <source>Check for Update</source>
-      <translation type="unfinished">Check for Update</translation>
+      <translation>Controleer voor beschikbare Updates</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="136"/>
       <source>About %1</source>
-      <translation type="unfinished">About %1</translation>
+      <translation>Over %1</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="190"/>
       <source>Something went wrong</source>
-      <translation type="unfinished">Something went wrong</translation>
+      <translation>Oeps, er ging iets mis</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="194"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
-      <translation type="unfinished">New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</translation>
+      <translation>Nieuwe versie &lt;a href="%2"&gt;%1&lt;/a&gt; is gedetecteerd</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="197"/>
       <source>The latest version is installed</source>
-      <translation type="unfinished">The latest version is installed</translation>
+      <translation>De nieuwste versie is geïnstalleerd</translation>
     </message>
   </context>
   <context>
@@ -162,12 +162,12 @@
     <message>
       <location filename="../mainwindow.ui" line="216"/>
       <source>URL</source>
-      <translation type="unfinished">URL</translation>
+      <translation>URL</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="223"/>
       <source>Date created</source>
-      <translation type="unfinished">Date created</translation>
+      <translation>Aanmaakdatum</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="237"/>
@@ -202,7 +202,7 @@
     <message>
       <location filename="../mainwindow.ui" line="404"/>
       <source>Reload files list from current torrent data</source>
-      <translation type="unfinished">Reload files list from current torrent data</translation>
+      <translation>Laad de bestanden opnieuw van de huidige torrent-gegevens</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="443"/>
@@ -282,7 +282,7 @@
     <message>
       <location filename="../mainwindow.ui" line="633"/>
       <source>Torrent root folder </source>
-      <translation type="unfinished">Torrent root folder </translation>
+      <translation>Torrent-hoofdmap </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="646"/>
@@ -307,12 +307,12 @@
     <message>
       <location filename="../mainwindow.ui" line="721"/>
       <source>Find</source>
-      <translation type="unfinished">Find</translation>
+      <translation>Zoeken</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="737"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>Vervangen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="830"/>
@@ -362,12 +362,12 @@
     <message>
       <location filename="../mainwindow.ui" line="356"/>
       <source>Calculate pieces hashes</source>
-      <translation type="unfinished">Calculate pieces hashes</translation>
+      <translation>Bereken stukken hashes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="427"/>
       <source>Remove selected files</source>
-      <translation type="unfinished">Remove selected files</translation>
+      <translation>Verwijder geselecteerde bestanden</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="587"/>
@@ -382,7 +382,7 @@
     <message>
       <location filename="../mainwindow.ui" line="673"/>
       <source>Delete selected tree items</source>
-      <translation type="unfinished">Delete selected tree items</translation>
+      <translation>Verwijder geselecteerde boomelementen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="773"/>
@@ -427,7 +427,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="217"/>
       <source># Pieces</source>
-      <translation type="unfinished"># Pieces</translation>
+      <translation># Stukken</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="326"/>
@@ -449,7 +449,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="559"/>
       <source>Torrent root folder is not set</source>
-      <translation type="unfinished">Torrent root folder is not set</translation>
+      <translation>Torrent hoofdmap is niet ingesteld</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="369"/>
@@ -457,13 +457,13 @@
       <location filename="../mainwindow.cpp" line="1045"/>
       <location filename="../mainwindow.cpp" line="1056"/>
       <source>Can't save file</source>
-      <translation type="unfinished">Can't save file</translation>
+      <translation>Kan bestand niet opslaan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="369"/>
       <location filename="../mainwindow.cpp" line="1037"/>
       <source>BEncoded data is not valid</source>
-      <translation type="unfinished">BEncoded data is not valid</translation>
+      <translation>BEncoded gegevens is niet geldig</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="560"/>
@@ -472,16 +472,17 @@
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
 
 Do you want to set torrent root folder and try again?</source>
-      <translation type="unfinished">Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
+      <translation>Pad naar bestanden op de schijf is onbekend. Torrent kan alleen worden gegenereerd vanuit volledig gedownloade bestanden.
 
-If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
+Als u de bestandslijst in de huidige torrent wilt bewerken, moet u de torrent-hoofdmap instellen. De torrent-hoofdmap is een map waarin alle bestanden zich op de schijf kunnen bevinden. Het werkelijke bestandspad op de schijf is de torrent-hoofdmap met het relatieve pad van het torrent-bestand. Als er iets ontbreekt, kan torrent niet worden gegenereerd.
 
-Do you want to set torrent root folder and try again?</translation>
+
+Wilt u de torrent-hoofdmap instellen en het opnieuw proberen?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="583"/>
       <source>The torrent root folder is not common.</source>
-      <translation type="unfinished">The torrent root folder is not common.</translation>
+      <translation>De hoofdmap van de torrent is niet gebruikelijk.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="642"/>
@@ -532,17 +533,17 @@ Do you want to set torrent root folder and try again?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="1187"/>
       <source>Save file</source>
-      <translation type="unfinished">Save file</translation>
+      <translation>Bestand opslaan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1188"/>
       <source>Untitled</source>
-      <translation type="unfinished">Untitled</translation>
+      <translation>Untitled</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1189"/>
       <source>Save file "%1"?</source>
-      <translation type="unfinished">Save file "%1"?</translation>
+      <translation>Opslaan bestand "%1"?</translation>
     </message>
   </context>
   <context>
@@ -578,112 +579,112 @@ Do you want to set torrent root folder and try again?</translation>
     <message>
       <location filename="../searchdlg.ui" line="27"/>
       <source>Key</source>
-      <translation type="unfinished">Key</translation>
+      <translation>Sleutel</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="39"/>
       <location filename="../searchdlg.ui" line="96"/>
       <source>Match case</source>
-      <translation type="unfinished">Match case</translation>
+      <translation>Hoofdlettergevoelig</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="46"/>
       <location filename="../searchdlg.ui" line="103"/>
       <source>Exact match</source>
-      <translation type="unfinished">Exact match</translation>
+      <translation>Exacte overeenkomst</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="56"/>
       <location filename="../searchdlg.ui" line="113"/>
       <source>Wildcards</source>
-      <translation type="unfinished">Wildcards</translation>
+      <translation>Jokertekens</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="63"/>
       <location filename="../searchdlg.ui" line="120"/>
       <source>Regular expression</source>
-      <translation type="unfinished">Regular expression</translation>
+      <translation>Standaarduitdrukking</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="84"/>
       <source>Value</source>
-      <translation type="unfinished">Value</translation>
+      <translation>Waarde</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="127"/>
       <source>Hex</source>
-      <translation type="unfinished">Hex</translation>
+      <translation>Hex</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="154"/>
       <source>Replace value with</source>
-      <translation type="unfinished">Replace value with</translation>
+      <translation>Vervang waarde met</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="164"/>
       <source>hex</source>
-      <translation type="unfinished">hex</translation>
+      <translation>hex</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="176"/>
       <source>Direction</source>
-      <translation type="unfinished">Direction</translation>
+      <translation>Richting</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="182"/>
       <source>Up</source>
-      <translation type="unfinished">Up</translation>
+      <translation>Boven</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="189"/>
       <source>Down</source>
-      <translation type="unfinished">Down</translation>
+      <translation>Naar beneden</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="204"/>
       <source>Replace All</source>
-      <translation type="unfinished">Replace All</translation>
+      <translation>Vervang alles</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="224"/>
       <source>Find Next</source>
-      <translation type="unfinished">Find Next</translation>
+      <translation>Volgende zoeken</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="248"/>
       <location filename="../searchdlg.cpp" line="42"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>Vervangen</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="231"/>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Sluiten</translation>
     </message>
     <message>
       <location filename="../searchdlg.cpp" line="42"/>
       <source>Find</source>
-      <translation type="unfinished">Find</translation>
+      <translation>Zoeken</translation>
     </message>
     <message>
       <location filename="../searchdlg.cpp" line="135"/>
       <source>No matches found</source>
-      <translation type="unfinished">No matches found</translation>
+      <translation>Geen overeenkomsten gevonden</translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="140"/>
       <source>%1 of %n match(es)</source>
-      <translation type="unfinished">
-        <numerusform>%1 of %n match(es)</numerusform>
-        <numerusform>%1 of %n match(es)</numerusform>
+      <translation>
+        <numerusform>%1 van de %n overeenkomst(en)</numerusform>
+        <numerusform>%1 van de %n overeenkomst(en)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="192"/>
       <source>%n value(s) was(were) replaced</source>
-      <translation type="unfinished">
-        <numerusform>%n value(s) was(were) replaced</numerusform>
-        <numerusform>%n value(s) was(were) replaced</numerusform>
+      <translation>
+        <numerusform>%n waarde(n) werd(waren) vervangen</numerusform>
+        <numerusform>%n waarde(n) werd(waren) vervangen</numerusform>
       </translation>
     </message>
   </context>

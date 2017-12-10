@@ -8,7 +8,9 @@
         <!-- qt_en.qm missed -->
         <file>qt_es.qm</file>
         <file>qt_fr.qm</file>
+        <file>qt_he.qm</file>
         <file>qt_hu.qm</file>
+        <!-- qt_id.qm missed -->
         <!-- qt_it.qm missed -->
         <file>qt_ko.qm</file>
         <!-- qt_nl.qm missed -->

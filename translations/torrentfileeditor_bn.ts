@@ -24,22 +24,22 @@
       <translation>আপডেটের জন্য চেক করুন</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="139"/>
+      <location filename="../aboutdlg.cpp" line="136"/>
       <source>About %1</source>
       <translation>কথা %1</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="193"/>
+      <location filename="../aboutdlg.cpp" line="190"/>
       <source>Something went wrong</source>
       <translation>কিছু একটা ভুল হয়েছে</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="197"/>
+      <location filename="../aboutdlg.cpp" line="194"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
       <translation>নতুন সংস্করণ &lt;a href="%2"&gt;%1&lt;/a&gt; সনাক্ত করা হয়েছে</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="200"/>
+      <location filename="../aboutdlg.cpp" line="197"/>
       <source>The latest version is installed</source>
       <translation>সর্বশেষ সংস্করণ ইনস্টল করা হচ্ছে</translation>
     </message>
@@ -47,22 +47,22 @@
   <context>
     <name>BencodeModel</name>
     <message>
-      <location filename="../bencodemodel.cpp" line="693"/>
+      <location filename="../bencodemodel.cpp" line="692"/>
       <source>Name</source>
       <translation>নাম</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="694"/>
+      <location filename="../bencodemodel.cpp" line="693"/>
       <source>Type</source>
       <translation>প্রকার</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="695"/>
+      <location filename="../bencodemodel.cpp" line="694"/>
       <source>Hex</source>
       <translation>হেক্স</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="696"/>
+      <location filename="../bencodemodel.cpp" line="695"/>
       <source>Value</source>
       <translation>মান</translation>
     </message>
@@ -70,12 +70,12 @@
   <context>
     <name>DateWidget</name>
     <message>
-      <location filename="../datewidget.cpp" line="67"/>
+      <location filename="../datewidget.cpp" line="64"/>
       <source>Clean</source>
       <translation>পরিষ্কার</translation>
     </message>
     <message>
-      <location filename="../datewidget.cpp" line="83"/>
+      <location filename="../datewidget.cpp" line="80"/>
       <source>Show calendar</source>
       <translation>ক্যালেন্ডার দেখান</translation>
     </message>
@@ -83,12 +83,12 @@
   <context>
     <name>FolderEdit</name>
     <message>
-      <location filename="../folderedit.cpp" line="45"/>
+      <location filename="../folderedit.cpp" line="42"/>
       <source>Choose folder</source>
       <translation>ফোল্ডার নির্বাচন করুন</translation>
     </message>
     <message>
-      <location filename="../folderedit.cpp" line="60"/>
+      <location filename="../folderedit.cpp" line="57"/>
       <source>Add Folder</source>
       <translation>ফোল্ডার সংযোজন করুন</translation>
     </message>
@@ -103,7 +103,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
-      <location filename="../mainwindow.cpp" line="345"/>
+      <location filename="../mainwindow.cpp" line="349"/>
       <source>Open</source>
       <translation>ওপেন</translation>
     </message>
@@ -115,7 +115,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="370"/>
+      <location filename="../mainwindow.cpp" line="374"/>
       <source>Save As</source>
       <translation>এইরূপে সংরক্ষণ করুন</translation>
     </message>
@@ -375,83 +375,83 @@
       <translation>কাঁচা</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="201"/>
+      <location filename="../mainwindow.cpp" line="198"/>
       <source>Need to calculate piece hashes</source>
       <translation>টুকরা হ্যাশ গণনা করা প্রয়োজন</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="202"/>
+      <location filename="../mainwindow.cpp" line="199"/>
       <source>Please wait</source>
       <translation>অনুগ্রহ করে অপেক্ষা করুন</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="212"/>
+      <location filename="../mainwindow.cpp" line="209"/>
       <source>Auto</source>
       <translation>স্বতস্ফূর্তভাবে</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="220"/>
+      <location filename="../mainwindow.cpp" line="217"/>
       <source>Path</source>
       <translation>প্যাথ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="220"/>
+      <location filename="../mainwindow.cpp" line="217"/>
       <source>Size</source>
       <translation>আকার</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="182"/>
+      <location filename="../mainwindow.cpp" line="179"/>
       <source>Torrents (*.torrent)</source>
       <translation>টরেন্ট (*.torrent)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="183"/>
+      <location filename="../mainwindow.cpp" line="180"/>
       <source>uTorrent resume files (*.dat)</source>
       <translation>uTorrent ফাইল (*.dat) পুনরায় শুরু করুন</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="220"/>
+      <location filename="../mainwindow.cpp" line="217"/>
       <source># Pieces</source>
       <translation># টুকরা</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="322"/>
-      <location filename="../mainwindow.cpp" line="808"/>
+      <location filename="../mainwindow.cpp" line="326"/>
+      <location filename="../mainwindow.cpp" line="806"/>
       <source>Error</source>
       <translation>ত্রুটি</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="322"/>
+      <location filename="../mainwindow.cpp" line="326"/>
       <source>Can't open file</source>
       <translatorcomment>Не могу открыть файл</translatorcomment>
       <translation>ফাইলটি খোলা যাচ্ছে না</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="589"/>
+      <location filename="../mainwindow.cpp" line="583"/>
       <source>Warning</source>
       <translation>সতর্কতা</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="565"/>
+      <location filename="../mainwindow.cpp" line="559"/>
       <source>Torrent root folder is not set</source>
       <translation>টরেন্ট রুট ফোল্ডারটি সেট করা নেই</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="365"/>
-      <location filename="../mainwindow.cpp" line="1041"/>
-      <location filename="../mainwindow.cpp" line="1049"/>
-      <location filename="../mainwindow.cpp" line="1060"/>
+      <location filename="../mainwindow.cpp" line="369"/>
+      <location filename="../mainwindow.cpp" line="1037"/>
+      <location filename="../mainwindow.cpp" line="1045"/>
+      <location filename="../mainwindow.cpp" line="1056"/>
       <source>Can't save file</source>
       <translation>ফাইল সংরক্ষণ করা যাবে না</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="365"/>
-      <location filename="../mainwindow.cpp" line="1041"/>
+      <location filename="../mainwindow.cpp" line="369"/>
+      <location filename="../mainwindow.cpp" line="1037"/>
       <source>BEncoded data is not valid</source>
       <translation>BEncoded তথ্য বৈধ নয়</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="566"/>
+      <location filename="../mainwindow.cpp" line="560"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
@@ -464,68 +464,68 @@ Do you want to set torrent root folder and try again?</source>
 আপনি টরেন্ট রুট ফোল্ডার সেট করতে এবং আবার চেষ্টা করতে চান?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="589"/>
+      <location filename="../mainwindow.cpp" line="583"/>
       <source>The torrent root folder is not common.</source>
       <translation>টরেন্টের মুল ফোল্ডার সাধারণ নয়।</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="648"/>
+      <location filename="../mainwindow.cpp" line="642"/>
       <source>Add File</source>
       <translation>ফাইল যোগ করুন</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="669"/>
+      <location filename="../mainwindow.cpp" line="664"/>
       <source>Add Folder</source>
       <translation>ফোল্ডার সংযোজন করুন</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="815"/>
+      <location filename="../mainwindow.cpp" line="813"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translation>Line: %1 of %2 Col: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="999"/>
-      <location filename="../mainwindow.cpp" line="1007"/>
+      <location filename="../mainwindow.cpp" line="995"/>
+      <location filename="../mainwindow.cpp" line="1003"/>
       <source>Error on %1 line: %2</source>
       <translation>ত্রুটি ধরা পড়েছে %1 line: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1157"/>
+      <location filename="../mainwindow.cpp" line="1153"/>
       <source>B</source>
       <translation>B</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1161"/>
+      <location filename="../mainwindow.cpp" line="1157"/>
       <source>KiB</source>
       <translation>কে-বি</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1165"/>
+      <location filename="../mainwindow.cpp" line="1161"/>
       <source>MiB</source>
       <translation>এম-বি</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1169"/>
+      <location filename="../mainwindow.cpp" line="1165"/>
       <source>GiB</source>
       <translation>জি-বি</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1173"/>
+      <location filename="../mainwindow.cpp" line="1169"/>
       <source>TiB</source>
       <translation>টি-বি</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1191"/>
+      <location filename="../mainwindow.cpp" line="1187"/>
       <source>Save file</source>
       <translation>ফাইল সংরক্ষণ করুন</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1192"/>
+      <location filename="../mainwindow.cpp" line="1188"/>
       <source>Untitled</source>
       <translation>শিরোনামহীন</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1193"/>
+      <location filename="../mainwindow.cpp" line="1189"/>
       <source>Save file "%1"?</source>
       <translation>ফাইল "%1" সংরক্ষণ করুন?</translation>
     </message>
@@ -533,27 +533,27 @@ Do you want to set torrent root folder and try again?</source>
   <context>
     <name>QObject</name>
     <message>
-      <location filename="../bencode.cpp" line="219"/>
+      <location filename="../bencode.cpp" line="216"/>
       <source>list</source>
       <translation>তালিকা</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="220"/>
+      <location filename="../bencode.cpp" line="217"/>
       <source>dictionary</source>
       <translation>অভিধান</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="221"/>
+      <location filename="../bencode.cpp" line="218"/>
       <source>integer</source>
       <translation>পূর্ণ সংখ্যা</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="222"/>
+      <location filename="../bencode.cpp" line="219"/>
       <source>string</source>
       <translation>দড়ি</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="223"/>
+      <location filename="../bencode.cpp" line="220"/>
       <source>invalid</source>
       <translation>অবৈধ</translation>
     </message>
@@ -636,7 +636,7 @@ Do you want to set torrent root folder and try again?</source>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="248"/>
-      <location filename="../searchdlg.cpp" line="63"/>
+      <location filename="../searchdlg.cpp" line="42"/>
       <source>Replace</source>
       <translation>প্রতিস্থাপন করুন</translation>
     </message>
@@ -646,17 +646,17 @@ Do you want to set torrent root folder and try again?</source>
       <translation>বন্ধ করুন</translation>
     </message>
     <message>
-      <location filename="../searchdlg.cpp" line="63"/>
+      <location filename="../searchdlg.cpp" line="42"/>
       <source>Find</source>
       <translation>খুঁজুন</translation>
     </message>
     <message>
-      <location filename="../searchdlg.cpp" line="156"/>
+      <location filename="../searchdlg.cpp" line="135"/>
       <source>No matches found</source>
       <translation>কোন মিল খুঁজে পাওয়া যায় নি</translation>
     </message>
     <message numerus="yes">
-      <location filename="../searchdlg.cpp" line="161"/>
+      <location filename="../searchdlg.cpp" line="140"/>
       <source>%1 of %n match(es)</source>
       <translation>
         <numerusform>%1 এর %n মিল(es)</numerusform>
@@ -664,7 +664,7 @@ Do you want to set torrent root folder and try again?</source>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../searchdlg.cpp" line="214"/>
+      <location filename="../searchdlg.cpp" line="192"/>
       <source>%n value(s) was(were) replaced</source>
       <translation>
         <numerusform>%n value(s) was(were) প্রতিস্থাপন</numerusform>
@@ -675,7 +675,7 @@ Do you want to set torrent root folder and try again?</source>
   <context>
     <name>UrlEdit</name>
     <message>
-      <location filename="../urledit.cpp" line="42"/>
+      <location filename="../urledit.cpp" line="39"/>
       <source>Open in internet browser</source>
       <translation>ইন্টারনেট ব্রাউজারে খুলুন</translation>
     </message>
@@ -683,12 +683,12 @@ Do you want to set torrent root folder and try again?</source>
   <context>
     <name>Worker</name>
     <message>
-      <location filename="../mainwindow.cpp" line="111"/>
+      <location filename="../mainwindow.cpp" line="108"/>
       <source>Can't open %1</source>
       <translation>%1 খোলা যাবে না</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="146"/>
+      <location filename="../mainwindow.cpp" line="143"/>
       <source>Can't read from %1</source>
       <translation>%1 থেকে পড়া যায় না</translation>
     </message>

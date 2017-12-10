@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="tr" sourcelanguage="en">
+<TS version="2.0" language="he" sourcelanguage="en">
   <context>
     <name>AboutDlg</name>
     <message>
       <location filename="../aboutdlg.ui" line="175"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt@land.ru"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Yazar: Ivan Romanov &lt;a href="mailto:drizt@land.ru"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Lisans: GNU Genel Kamu Lisansı v3.0 veya üstü&lt;/p&gt;&lt;p&gt;Ana Sayfa: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Kaynaklar: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Uygulama simgesi için &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt;'e teşekkürler&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;מחבר: רומנוב איוון &lt;a href="mailto:drizt@land.ru"&gt; &lt;span style="text-decoration: underline; color:#0057ae;"&gt; drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;רשיון: הרישיון הציבורי הכללי של גנו v 3.0 או גירסה מתקדמת יותר&lt;/p&gt; &lt;p&gt;דף הבית: &lt; href = "http://sourceforge.net/projects/torrent-file-editor/" &gt; &lt;span style="text-decoration: underline; color:#0057ae;"&gt; http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;מקורות: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt; &lt;span style="text-decoration: underline; color:#0057ae;"&gt; http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;תודות &lt; href = "http://rutracker.org/forum/profile.php?mode=viewprofile &amp;amp; u=8465051"&gt; &lt;span style="text-decoration: underline; color:#0057ae;"&gt; Krays אלכס&lt;/span&gt;&lt;/a&gt; עבור סמל יישום&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="39"/>
       <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
-      <translation>&lt;h3&gt;Geliştirici için Bira&lt;/h3&gt;</translation>
+      <translation>&lt;h3&gt; באר למפתחים &lt;/ h3&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="85"/>
       <source>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</source>
-      <translation>En son sürümün geliştirilmesi çok zaman ve emek istiyor. Önemli hatalar düzeltildi ve faydalı iyileştirmeler yapıldı. Yorgunum. Ancak biraz bira bana gücü geri kazanmama ve geliştirmeye devam etmem için bana yardımcı olacaktir. Bu uygulamayı seviyorsanız, geliştiriciye teşekkür etmek ve sürümünü getirmek için bir sonraki sürümle küçük bir bağış yapabilirsiniz:</translation>
+      <translation>הפיתוח של הגרסה האחרונה יש דרש הרבה זמן ומאמץ. תוקנו באגים רציניים ושיפורים שימושיים. אני עייף. אבל קצת בירה כדי לעזור לי להחזיר את כוח ולהמשיך להתפתח. אם אתה אוהב את היישום הזה, אתה רוצה להודות היזם ולהביא לשחרר את הגירסה הבאה יכולה לעשות תרומה קטנה באמצעות:</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="117"/>
       <source>Check for Update</source>
-      <translation>Güncellemeleri Denetle</translation>
+      <translation>בדוק עדכונים</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="136"/>
       <source>About %1</source>
-      <translation>%1 Hakkında</translation>
+      <translation>על %1</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="190"/>
       <source>Something went wrong</source>
-      <translation>Bir şeyler ters gitti</translation>
+      <translation>משהו השתבש</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="194"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
-      <translation>Yeni sürüm &lt;a href="%2"&gt;%1&lt;/a&gt; algılandı</translation>
+      <translation>גרסה חדשה &lt;a href="%2"&gt;%1&lt;/a&gt; זוהתה</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="197"/>
       <source>The latest version is installed</source>
-      <translation>En son sürüm yüklendi</translation>
+      <translation>הגרסה האחרונה מותקנת</translation>
     </message>
   </context>
   <context>
@@ -49,22 +49,22 @@
     <message>
       <location filename="../bencodemodel.cpp" line="692"/>
       <source>Name</source>
-      <translation>Adı</translation>
+      <translation>שם</translation>
     </message>
     <message>
       <location filename="../bencodemodel.cpp" line="693"/>
       <source>Type</source>
-      <translation>Türü</translation>
+      <translation>סוּג</translation>
     </message>
     <message>
       <location filename="../bencodemodel.cpp" line="694"/>
       <source>Hex</source>
-      <translation>Hex</translation>
+      <translation>הקס</translation>
     </message>
     <message>
       <location filename="../bencodemodel.cpp" line="695"/>
       <source>Value</source>
-      <translation>Değer</translation>
+      <translation>ערך</translation>
     </message>
   </context>
   <context>
@@ -72,12 +72,12 @@
     <message>
       <location filename="../datewidget.cpp" line="64"/>
       <source>Clean</source>
-      <translation>Temizle</translation>
+      <translation>לְנַקוֹת</translation>
     </message>
     <message>
       <location filename="../datewidget.cpp" line="80"/>
       <source>Show calendar</source>
-      <translation>Takvimi göster</translation>
+      <translation>הצג יומן</translation>
     </message>
   </context>
   <context>
@@ -85,12 +85,12 @@
     <message>
       <location filename="../folderedit.cpp" line="42"/>
       <source>Choose folder</source>
-      <translation>Klasör seç</translation>
+      <translation>בחר תיקיה</translation>
     </message>
     <message>
       <location filename="../folderedit.cpp" line="57"/>
       <source>Add Folder</source>
-      <translation>Klasör Ekle</translation>
+      <translation>הוסף תיקיה</translation>
     </message>
   </context>
   <context>
@@ -99,125 +99,125 @@
       <location filename="../mainwindow.ui" line="30"/>
       <location filename="../mainwindow.ui" line="842"/>
       <source>New</source>
-      <translation>Yeni</translation>
+      <translation>חָדָשׁ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
       <location filename="../mainwindow.cpp" line="349"/>
       <source>Open</source>
-      <translation>Aç</translation>
+      <translation>לִפְתוֹחַ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="44"/>
       <location filename="../mainwindow.ui" line="858"/>
       <source>Save</source>
-      <translation>Kaydet</translation>
+      <translation>להציל</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
       <location filename="../mainwindow.cpp" line="374"/>
       <source>Save As</source>
-      <translation>Farklı Kaydet</translation>
+      <translation>שמור כ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="88"/>
       <source>About</source>
-      <translation>Hakkında</translation>
+      <translation>על אודות</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="101"/>
       <source>Main</source>
-      <translation>Ana Menü</translation>
+      <translation>רָאשִׁי</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="189"/>
       <source>Pieces</source>
-      <translation>Parçalar</translation>
+      <translation>חתיכות</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="148"/>
       <source>Created by</source>
-      <translation>Oluşturan</translation>
+      <translation>נוצר על ידי</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="209"/>
       <source>Piece size</source>
-      <translation>Parça boyutu</translation>
+      <translation>גודל המגרש</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="199"/>
       <source>Publisher</source>
-      <translation>Yayımcı</translation>
+      <translation>מוֹצִיא לָאוֹר</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="230"/>
       <source>Name</source>
-      <translation>Adı</translation>
+      <translation>שם</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="114"/>
       <source>Private torrent</source>
-      <translation>Özel torrent</translation>
+      <translation>סיקור פרטי</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="216"/>
       <source>URL</source>
-      <translation>URL</translation>
+      <translation>כתובת אינטרנט</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="223"/>
       <source>Date created</source>
-      <translation>Oluşturma tarihi</translation>
+      <translation>תאריך יצירה</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="237"/>
       <source>Hash</source>
-      <translation>Hash</translation>
+      <translation>בְּלִיל</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="307"/>
       <source>Comment</source>
-      <translation>Yorum</translation>
+      <translation>תגובה</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="325"/>
       <source>Trackers</source>
-      <translation>İzleyiciler</translation>
+      <translation>עוקבים</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="345"/>
       <source>Files</source>
-      <translation>Dosyalar</translation>
+      <translation>קבצים</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="372"/>
       <source>Add files</source>
-      <translation>Dosya ekle</translation>
+      <translation>הוסף קבצים</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="388"/>
       <source>Add folder</source>
-      <translation>Klasör ekle</translation>
+      <translation>הוסף תיקיה</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="404"/>
       <source>Reload files list from current torrent data</source>
-      <translation>Geçerli torrent verisinden dosyaları yeniden yükle</translation>
+      <translation>רענן רשימת קבצים מ הנוכחי נתונים סיקור</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="443"/>
       <source>Move file up</source>
-      <translation>Dosyayı yukarı taşı</translation>
+      <translation>העבר את הקובץ למעלה</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="459"/>
       <source>Move file down</source>
-      <translation>Dosyayı aşağı taşı</translation>
+      <translation>העבר קובץ למטה</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="479"/>
       <source>Filter by </source>
-      <translation>Filtre ölçütü </translation>
+      <translation>סנן לפי </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="486"/>
@@ -237,97 +237,82 @@
     &lt;p style="margin-left: 20px"&gt;full file path matches Perl-like regular expression&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;</source>
-      <translation>&lt;html&gt;
-   &lt;1 /&gt;
-   &lt;body&gt;
-     &lt;p&gt;&lt;b&gt; adı &lt;/ 3&gt;
-     &lt;p style="margin-left: 20px"&gt; uzantılı dosya adı desene tam olarak eşittir &lt;/ 4&gt;
-     &lt;5 /&gt;
-     &lt;p&gt;&lt;b&gt; uzantı &lt;/ 3&gt;
-     &lt;p style="margin-left: 20px"&gt; en son noktanın ardındaki semboller tam olarak desene eşittir, 'archive.tar.gz' içinse 'gz' olacaktır &lt;/ 4&gt;
-     &lt;5 /&gt;
-     &lt;p&gt;&lt;b&gt; joker &lt;/ 3&gt;
-     &lt;p style="margin-left: 20px"&gt; uzantılı dosya adı dosya globbing ile eşleşir '?' herhangi bir semboldur ve '*' herhangi bir sayı sembolüdür &lt;/ 4&gt;
-     &lt;5 /&gt;
-     &lt;p&gt;&lt;b&gt; normal ifade &lt;/ 3&gt;
-     &lt;p style="margin-left: 20px"&gt; tam dosya yolu Perl benzeri düzenli ifade ile eşleşir &lt;/ 4&gt;
-   &lt;/ 2&gt;
-&lt;/ 0&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;&lt;b&gt;שם&lt;/b&gt;&lt;/p&gt; &lt;p style="margin-left: 20px"&gt; שם קובץ עם סיומת שווה בדיוק עם דפוס&lt;/p&gt; &lt;br/&gt; &lt;p&gt;&lt;b&gt;סיומת&lt;/b&gt;&lt;/p&gt; &lt;p style="margin-left: 20px"&gt; הסמלים לאחר האחרונה הצבע בדיוק שווה עם דפוס, עבור 'archive.tar.gz' יהיה 'gz' לדוגמה&lt;/p&gt; &lt;br/&gt; &lt;p&gt;&lt;b&gt;תווים כלליים&lt;/b&gt;&lt;/p&gt; &lt;p style="margin-left: 20px"&gt; שם קובץ בעל סיומת מתאימה עם קובץ globbing איפה '?' הוא אחד כל סמל, ' *' הוא כל המספרים של סמלים&lt;/p&gt; &lt;br/&gt; &lt;p&gt;&lt;b&gt;רגיל  הביטוי&lt;/b&gt;&lt;/p&gt; &lt;p style="margin-left: 20px"&gt; בנתיב הקובץ המלא המתאים לביטוי הרגיל, כמו Perl&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="505"/>
       <source>name</source>
-      <translation>adı</translation>
+      <translation>שם</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="510"/>
       <source>extension</source>
-      <translation>uzantı</translation>
+      <translation>סיומת</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="515"/>
       <source>wildcards</source>
-      <translation>jokerler</translation>
+      <translation>כתוביות בעברית</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="520"/>
       <source>regular expression</source>
-      <translation>düzenli ifade</translation>
+      <translation>הבעה רגילה</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="538"/>
       <source>Filter files</source>
-      <translation>Dosyaları filtrele</translation>
+      <translation>סינון קבצים</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="633"/>
       <source>Torrent root folder </source>
-      <translation>Torrent kök klasörü </translation>
+      <translation>תיקיית השורש </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="646"/>
       <source>Tree</source>
-      <translation>Ağaç</translation>
+      <translation>עֵץ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="657"/>
       <source>Add tree item</source>
-      <translation>Ağaç öğesi ekle</translation>
+      <translation>הוסף פריט עץ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="689"/>
       <source>Move list item up</source>
-      <translation>Liste öğesini yukarı taşı</translation>
+      <translation>העבר פריט רשימה למעלה</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="705"/>
       <source>Move list item down</source>
-      <translation>Liste öğesini aşağı taşı</translation>
+      <translation>העבר פריט רשימה למטה</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="721"/>
       <source>Find</source>
-      <translation>Bul</translation>
+      <translation>למצוא</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="737"/>
       <source>Replace</source>
-      <translation>Değiştir</translation>
+      <translation>החלף</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="830"/>
       <source>File</source>
-      <translation>Dosya</translation>
+      <translation>קוֹבֶץ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="845"/>
       <source>Ctrl+N</source>
-      <translation>Ctrl+N</translation>
+      <translation>Ctrl+n</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="850"/>
       <source>Open...</source>
-      <translation>Aç...</translation>
+      <translation>לִפְתוֹחַ...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="853"/>
@@ -337,119 +322,119 @@
     <message>
       <location filename="../mainwindow.ui" line="861"/>
       <source>Ctrl+S</source>
-      <translation>Ctrl+S</translation>
+      <translation>Ctrl+s</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="866"/>
       <source>Save As...</source>
-      <translation>Farklı Kaydet...</translation>
+      <translation>שמור כ...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="869"/>
       <source>Ctrl+Shift+S</source>
-      <translation>Ctrl+Shift+S</translation>
+      <translation>Ctrl + Shift + S</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="874"/>
       <source>About...</source>
-      <translation>Hakkında...</translation>
+      <translation>על אודות...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="65"/>
       <source>Coding</source>
-      <translation>Kodlama</translation>
+      <translation>סִמוּל</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="356"/>
       <source>Calculate pieces hashes</source>
-      <translation>Parçaların hash'lerini hesapla</translation>
+      <translation>חישוב hashes חתיכות</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="427"/>
       <source>Remove selected files</source>
-      <translation>Seçili dosyaları kaldır</translation>
+      <translation>הסר קבצים נבחרים</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="587"/>
       <source>Piece size </source>
-      <translation>Parça boyutu </translation>
+      <translation>גודל המגרש </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="604"/>
       <source>Total size </source>
-      <translation>Toplam boyut </translation>
+      <translation>גודל כולל </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="673"/>
       <source>Delete selected tree items</source>
-      <translation>Seçili öğeleri sil</translation>
+      <translation>מחק את פריטי העץ שנבחרו</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="773"/>
       <source>Raw</source>
-      <translation>Ham</translation>
+      <translation>גלם</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="198"/>
       <source>Need to calculate piece hashes</source>
-      <translation>Parçaların hash'lerini hesaplamanız gerekiyor</translation>
+      <translation>עליך לחשב את hash של היצירה</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="199"/>
       <source>Please wait</source>
-      <translation>Lütfen bekleyin</translation>
+      <translation>המתן בבקשה</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="209"/>
       <source>Auto</source>
-      <translation>Otomatik</translation>
+      <translation>אוטומטי</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="217"/>
       <source>Path</source>
-      <translation>Yol</translation>
+      <translation>נָתִיב</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="217"/>
       <source>Size</source>
-      <translation>Boyut</translation>
+      <translation>גודל</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="179"/>
       <source>Torrents (*.torrent)</source>
-      <translation>Torrent (*.torrent)</translation>
+      <translation>טורנטים (*. טורנט)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="180"/>
       <source>uTorrent resume files (*.dat)</source>
-      <translation>uTorrent dosyalarından devam et (*.dat)</translation>
+      <translation>uTorrent לחדש קבצים (*.dat)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="217"/>
       <source># Pieces</source>
-      <translation># Parçalar</translation>
+      <translation># חתיכות</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="326"/>
       <location filename="../mainwindow.cpp" line="806"/>
       <source>Error</source>
-      <translation>Hata</translation>
+      <translation>שְׁגִיאָה</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="326"/>
       <source>Can't open file</source>
       <translatorcomment>Не могу открыть файл</translatorcomment>
-      <translation>Dosya açılamıyor</translation>
+      <translation>לא ניתן לפתוח את הקובץ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="583"/>
       <source>Warning</source>
-      <translation>Uyarı</translation>
+      <translation>אַזהָרָה</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="559"/>
       <source>Torrent root folder is not set</source>
-      <translation>Torrent kök klasörü ayarlı değil</translation>
+      <translation>סיקור בתיקיית השורש אינו מוגדר</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="369"/>
@@ -457,13 +442,13 @@
       <location filename="../mainwindow.cpp" line="1045"/>
       <location filename="../mainwindow.cpp" line="1056"/>
       <source>Can't save file</source>
-      <translation>Dosya kaydedilemiyor</translation>
+      <translation>לא ניתן לשמור את הקובץ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="369"/>
       <location filename="../mainwindow.cpp" line="1037"/>
       <source>BEncoded data is not valid</source>
-      <translation>BEncoded verisi geçerli değil</translation>
+      <translation>נתונים לא מקודדים אינם חוקיים</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="560"/>
@@ -472,47 +457,45 @@
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
 
 Do you want to set torrent root folder and try again?</source>
-      <translation>Diskteki dosyaların yolu bilinmiyor. Torrent yalnızca tam indirilen dosyalardan oluşturulabilir.
-
-Geçerli torrentde dosya listesini düzenlemek isterseniz, torrent kök klasörünü ayarlamanız gerekir. Torrent kök klasörü, tüm dosyaların diskte bulunabileceği bir klasördür. Diskteki gerçek dosya yolu, torrent dosyasından göreli yol olan torrent kök klasördür. Bir şey eksikse, torrent oluşturulamaz.
-
-Torrent kök dizinini ayarlamak ve tekrar denemek istiyor musunuz?</translation>
+      <translation>נתיב לקבצים בדיסק לא ידוע. Torrent יכול להיות שנוצר רק מתוך קבצים שהורדו במלואה.
+אם אתה רוצה לערוך את רשימת הקבצים הנוכחי סיקור אתה צריך להגדיר את התיקייה השורש סיקור. התיקייה השורש סיקור היא תיקייה שבה כל הקבצים ניתן למצוא על הדיסק. נתיב הקובץ בפועל על הדיסק הוא תיקיית השורש סיקור עם נתיב יחסי מתוך קובץ סיקור. אם משהו קבצים חסרים אז סיקור לא יכול להיות שנוצר.
+האם ברצונך להגדיר תיקיית השורש סיקור ולנסות שוב?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="583"/>
       <source>The torrent root folder is not common.</source>
-      <translation>Torrent kök klasörü yaygın değildir.</translation>
+      <translation>תיקיית השורש סיקור אינו נפוץ.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="642"/>
       <source>Add File</source>
-      <translation>Dosya Ekle</translation>
+      <translation>הוסף קובץ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="664"/>
       <source>Add Folder</source>
-      <translation>Klasör Ekle</translation>
+      <translation>הוסף תיקיה</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="813"/>
       <source>Line: %1 of %2 Col: %3</source>
-      <translation>Satır: %1/%2 Sütun: %3</translation>
+      <translation>קו: %1 של %2 Col: %3</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="995"/>
       <location filename="../mainwindow.cpp" line="1003"/>
       <source>Error on %1 line: %2</source>
-      <translation>Hatanın bulunduğu satır %s</translation>
+      <translation>שגיאה בשורה% 1:% 2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1153"/>
       <source>B</source>
-      <translation>B</translation>
+      <translation>בייט</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1157"/>
       <source>KiB</source>
-      <translation>KiB</translation>
+      <translation>קיב</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1161"/>
@@ -527,22 +510,22 @@ Torrent kök dizinini ayarlamak ve tekrar denemek istiyor musunuz?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="1169"/>
       <source>TiB</source>
-      <translation>TiB</translation>
+      <translation>טיב</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1187"/>
       <source>Save file</source>
-      <translation>Dosyayı kaydet</translation>
+      <translation>שמור את הקובץ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1188"/>
       <source>Untitled</source>
-      <translation>Başlıksız</translation>
+      <translation>ללא כותרת</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1189"/>
       <source>Save file "%1"?</source>
-      <translation>"%1" kaydedilsin mi?</translation>
+      <translation>האם לשמור את הקובץ "%1"?</translation>
     </message>
   </context>
   <context>
@@ -550,27 +533,27 @@ Torrent kök dizinini ayarlamak ve tekrar denemek istiyor musunuz?</translation>
     <message>
       <location filename="../bencode.cpp" line="216"/>
       <source>list</source>
-      <translation>liste</translation>
+      <translation>רשימה</translation>
     </message>
     <message>
       <location filename="../bencode.cpp" line="217"/>
       <source>dictionary</source>
-      <translation>sözlük</translation>
+      <translation>מילון</translation>
     </message>
     <message>
       <location filename="../bencode.cpp" line="218"/>
       <source>integer</source>
-      <translation>tam sayı</translation>
+      <translation>מספר שלם</translation>
     </message>
     <message>
       <location filename="../bencode.cpp" line="219"/>
       <source>string</source>
-      <translation>string</translation>
+      <translation>חוּט</translation>
     </message>
     <message>
       <location filename="../bencode.cpp" line="220"/>
       <source>invalid</source>
-      <translation>geçersiz</translation>
+      <translation>לא חוקי</translation>
     </message>
   </context>
   <context>
@@ -578,112 +561,116 @@ Torrent kök dizinini ayarlamak ve tekrar denemek istiyor musunuz?</translation>
     <message>
       <location filename="../searchdlg.ui" line="27"/>
       <source>Key</source>
-      <translation>Anahtar</translation>
+      <translation>מַפְתֵחַ</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="39"/>
       <location filename="../searchdlg.ui" line="96"/>
       <source>Match case</source>
-      <translation>Büyük-küçük harfe duyarlı</translation>
+      <translation>במקרה ההתאמה</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="46"/>
       <location filename="../searchdlg.ui" line="103"/>
       <source>Exact match</source>
-      <translation>Tam eşleşme</translation>
+      <translation>התאמה מדוייקת</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="56"/>
       <location filename="../searchdlg.ui" line="113"/>
       <source>Wildcards</source>
-      <translation>Jokerler</translation>
+      <translation>תווים כלליים</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="63"/>
       <location filename="../searchdlg.ui" line="120"/>
       <source>Regular expression</source>
-      <translation>Düzenli ifadeler</translation>
+      <translation>הבעה רגילה</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="84"/>
       <source>Value</source>
-      <translation>Değer</translation>
+      <translation>ערך</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="127"/>
       <source>Hex</source>
-      <translation>Hex</translation>
+      <translation>הקס</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="154"/>
       <source>Replace value with</source>
-      <translation>Şununla değiştir</translation>
+      <translation>החלף את הערך עם</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="164"/>
       <source>hex</source>
-      <translation>hex</translation>
+      <translation>הקס</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="176"/>
       <source>Direction</source>
-      <translation>Yön</translation>
+      <translation>כיוון</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="182"/>
       <source>Up</source>
-      <translation>Yukarı</translation>
+      <translation>לְמַעלָה</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="189"/>
       <source>Down</source>
-      <translation>Aşağı</translation>
+      <translation>מטה</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="204"/>
       <source>Replace All</source>
-      <translation>Tümünü Değiştir</translation>
+      <translation>החלף הכל</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="224"/>
       <source>Find Next</source>
-      <translation>Sonrakini Bul</translation>
+      <translation>חפש הבא</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="248"/>
       <location filename="../searchdlg.cpp" line="42"/>
       <source>Replace</source>
-      <translation>Değiştir</translation>
+      <translation>החלף</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="231"/>
       <source>Close</source>
-      <translation>Kapat</translation>
+      <translation>לִסְגוֹר</translation>
     </message>
     <message>
       <location filename="../searchdlg.cpp" line="42"/>
       <source>Find</source>
-      <translation>Bul</translation>
+      <translation>למצוא</translation>
     </message>
     <message>
       <location filename="../searchdlg.cpp" line="135"/>
       <source>No matches found</source>
-      <translation>Eşleşme bulunamadı</translation>
+      <translation>אין תוצאות מתאימות</translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="140"/>
       <source>%1 of %n match(es)</source>
       <translation>
-        <numerusform>%1/%n eşleşme</numerusform>
-        <numerusform>%1/%n eşleşme</numerusform>
+        <numerusform>% 1 מתוך% n ההתאמות</numerusform>
+        <numerusform>% 1 מתוך% n ההתאמות</numerusform>
+        <numerusform>%d %d התאמות</numerusform>
+        <numerusform>%d %d התאמות</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="192"/>
       <source>%n value(s) was(were) replaced</source>
       <translation>
-        <numerusform>%n değer değiştirildi</numerusform>
-        <numerusform>%n değer değiştirildi</numerusform>
+        <numerusform>% n ערכים (הוחלפו)</numerusform>
+        <numerusform>% n ערכים (הוחלפו)</numerusform>
+        <numerusform>%n was(were) (ים) הוחלף</numerusform>
+        <numerusform>%n was(were) (ים) הוחלף</numerusform>
       </translation>
     </message>
   </context>
@@ -692,7 +679,7 @@ Torrent kök dizinini ayarlamak ve tekrar denemek istiyor musunuz?</translation>
     <message>
       <location filename="../urledit.cpp" line="39"/>
       <source>Open in internet browser</source>
-      <translation>İnternet tarayıcısında aç</translation>
+      <translation>פתח בדפדפן האינטרנט</translation>
     </message>
   </context>
   <context>
@@ -700,12 +687,12 @@ Torrent kök dizinini ayarlamak ve tekrar denemek istiyor musunuz?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="108"/>
       <source>Can't open %1</source>
-      <translation>%1 açılamıyor</translation>
+      <translation>לא ניתן לפתוח את% 1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="143"/>
       <source>Can't read from %1</source>
-      <translation>%1 okunamıyor</translation>
+      <translation>לא ניתן לקרוא מ-% 1</translation>
     </message>
   </context>
 </TS>

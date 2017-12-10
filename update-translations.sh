@@ -10,7 +10,7 @@ if [ ! -d "$src" ]; then
     exit 1
 fi
 
-# af_ZA: ar_SA: bn_BD: ca_ES: cs_CZ: da_DK: de_DE: el_GR: en_US: es_ES: fi_FI: fr_FR: he_IL: hu_HU: it_IT: ja_JP: ko_KR: nl_NL: no_NO: pl_PL: pt_BR: pt_PT: ro_RO: ru_RU: sr_SP: sv_SE: tr_TR: uk_UA: vi_VN: zh_CN: zh_TW:
+# af_ZA: ar_SA: bn_BD: ca_ES: cs_CZ: da_DK: de_DE: el_GR: en_US: es_ES: fi_FI: fr_FR: he_IL: hu_HU: id_ID: it_IT: ja_JP: ko_KR: nl_NL: no_NO: pl_PL: pt_BR: pt_PT: ro_RO: ru_RU: sr_SP: sv_SE: tr_TR: uk_UA: vi_VN: zh_CN: zh_TW:
 
 langsmap="ar_SA:ar
           bn_BD:bn
@@ -19,9 +19,11 @@ langsmap="ar_SA:ar
           en_US:en
           es_ES:es
           fr_FR:fr
+          he_IL:he
           ko_KR:ko
           ru_RU:ru
           hu_HU:hu
+          id_ID:id
           it_IT:it
           nl_NL:nl
           pl_PL:pl
