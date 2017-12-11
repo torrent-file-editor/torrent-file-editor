@@ -87,7 +87,7 @@ Also feel free to open an issue on GitHub or send me pull requests.
 
 **Translations**
 
- <img src="https://lipis.github.io/flag-icon-css/flags/4x3/sa.svg" width="24" height="24" /> Arabic - اللغة العربية  
+* <img src="https://lipis.github.io/flag-icon-css/flags/4x3/sa.svg" width="24" height="24" /> Arabic - اللغة العربية  
 * <img src="https://lipis.github.io/flag-icon-css/flags/4x3/bd.svg" width="24" height="24" /> Bengali - বাংলা  
 * <img src="https://lipis.github.io/flag-icon-css/flags/4x3/cz.svg" width="24" height="24" /> Czech – Český Jazyk, Čeština  
 * <img src="https://lipis.github.io/flag-icon-css/flags/4x3/de.svg" width="24" height="24" /> German – Deutsch  
