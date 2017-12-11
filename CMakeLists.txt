@@ -418,6 +418,8 @@ set(OTHER_FILES
   Plog-Converter.cfg
   qt_translations.qrc.in
   appcast.json.in
+  build.sh
+  update-translations.sh
 )
 
 # Collect all existing files and configure as non-sources.
