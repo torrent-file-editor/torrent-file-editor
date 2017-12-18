@@ -18,6 +18,7 @@
         <!-- qt_pt.qm fixme -->
         <file>qt_ru.qm</file>
         <!-- qt_tr.qm missed -->
+        <!-- qt_vi.qm missed -->
         <file>qt_zh_CN.qm</file>
     </qresource>
 </RCC>

@@ -104,4 +104,5 @@ Also feel free to open an issue on GitHub or send me pull requests.
 <img src="https://lipis.github.io/flag-icon-css/flags/4x3/pl.svg" width="24" height="24" /> Polish – Język polski, polski, or polszczyzna  
 <img src="https://lipis.github.io/flag-icon-css/flags/4x3/br.svg" width="24" height="24" /> Brazilian Portuguese – Português brasileiro  
 <img src="https://lipis.github.io/flag-icon-css/flags/4x3/tr.svg" width="24" height="24" /> Turkish – Türkçe  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/vn.svg" width="24" height="24" /> Vietnamese - Tiếng Việt  
 <img src="https://lipis.github.io/flag-icon-css/flags/4x3/cn.svg" width="24" height="24" /> Simplified Chinese - 简化字  

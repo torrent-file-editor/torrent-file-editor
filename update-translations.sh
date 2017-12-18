@@ -36,6 +36,7 @@ langsmap="ar_SA:ar:Arabic - اللغة العربية
           pl_PL:pl:Polish – Język polski, polski, or polszczyzna
           pt_BR:pt_BR:Brazilian Portuguese – Português brasileiro
           tr_TR:tr:Turkish – Türkçe
+          vi_VN:vi:Vietnamese - Tiếng Việt
           zh_CN:zh_CN:Simplified Chinese - 简化字"
 
 # Check source files
