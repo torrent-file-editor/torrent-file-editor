@@ -6,7 +6,7 @@ Torrent File Editor
 
 Qt based GUI tool designed to create and edit .torrent files
 
-Author: Ivan Romanov <[drizt@land.ru](mailto:drizt@land.ru)>  
+Author: Ivan Romanov <[drizt72@zoho.eu](mailto:drizt72@zoho.eu)>  
 License: GNU General Public License v3.0 or later  
 Homepage: https://sourceforge.net/projects/torrent-file-editor  
 Sources: https://github.com/drizt/torrent-file-editor  
@@ -81,7 +81,7 @@ I would be glad if you add new translations. You can translate the
 project to your native language with [Crowdin](https://crowdin.com/project/torrent-file-editor).
 It is not difficult and no special knowledges are required.
 Or you can correct my English. I know it is not good. Anyway you can
-always email <[drizt@land.ru](mailto:drizt@land.ru)> me.
+always email <[drizt72@zoho.eu](mailto:drizt72@zoho.eu)> me.
 
 Also feel free to open an issue on GitHub or send me pull requests.
 
