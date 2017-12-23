@@ -12,6 +12,7 @@
         <file>qt_hu.qm</file>
         <!-- qt_id.qm missed -->
         <!-- qt_it.qm missed -->
+        <!-- qt_ja.qm missed -->
         <file>qt_ko.qm</file>
         <!-- qt_nl.qm missed -->
         <file>qt_pl.qm</file>
@@ -20,5 +21,6 @@
         <!-- qt_tr.qm missed -->
         <!-- qt_vi.qm missed -->
         <file>qt_zh_CN.qm</file>
+        <file>qt_zh_TW.qm</file>
     </qresource>
 </RCC>

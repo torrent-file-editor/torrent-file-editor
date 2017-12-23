@@ -133,7 +133,7 @@ if(WIN32)
 endif()
 
 # NOTE: make changes in qt_translations.qrc.in and translations.qrc.in also
-set(LANGS ar bn cs de en es fr he ko ru hu id it nl pl pt_BR tr vi zh_CN)
+set(LANGS ar bn cs de en es fr he ko ru hu id it ja nl pl pt_BR tr vi zh_CN zh_TW)
 
 foreach(l ${LANGS})
   list(APPEND TRANSLATIONS ${CMAKE_SOURCE_DIR}/translations/torrentfileeditor_${l}.ts)

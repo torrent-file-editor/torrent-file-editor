@@ -27,17 +27,18 @@ langsmap="ar_SA:ar:Arabic - اللغة العربية
           es_ES:es:Spanish – Español
           fr_FR:fr:French – Français
           he_IL:he:Hebrew - עברית‎
-          ko_KR:ko:Korean - 조선말, 한국어
-          ru_RU:ru:Russian - Русский
-          hu_HU:hu:Hungarian – Magyar
           id_ID:id:Indonesian – Bahasa Indonesia
           it_IT:it:Italian – Italiano
+          ja_JP:ja:Japanese - 日本語
+          ko_KR:ko:Korean - 조선말, 한국어
           nl_NL:nl:Dutch - Nederlands
           pl_PL:pl:Polish – Język polski, polski, or polszczyzna
           pt_BR:pt_BR:Brazilian Portuguese – Português brasileiro
+          ru_RU:ru:Russian - Русский
           tr_TR:tr:Turkish – Türkçe
           vi_VN:vi:Vietnamese - Tiếng Việt
-          zh_CN:zh_CN:Simplified Chinese - 简化字"
+          zh_CN:zh_CN:Simplified Chinese - 简化字
+          zh_TW:zh_TW:Traditional Chinese - 正體字/繁體字"
 
 # Check source files
 [ -f all_languages.txt ] && rm all_languages.txt
