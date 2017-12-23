@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="en" sourcelanguage="en">
+<TS version="2.0" language="en" sourcelanguage="en">
   <context>
     <name>AboutDlg</name>
     <message>
       <location filename="../aboutdlg.ui" line="175"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="39"/>
       <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
+      <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</translation>
     </message>
     <message>
@@ -26,6 +28,7 @@
     <message>
       <location filename="../aboutdlg.cpp" line="139"/>
       <source>About %1</source>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>About %1</translation>
     </message>
     <message>
@@ -36,6 +39,7 @@
     <message>
       <location filename="../aboutdlg.cpp" line="197"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
+      <translatorcomment>Do not touch %1 it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation type="unfinished">New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</translation>
     </message>
     <message>
@@ -237,6 +241,7 @@
     &lt;p style="margin-left: 20px"&gt;full file path matches Perl-like regular expression&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;</source>
+      <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>&lt;html&gt;
   &lt;head/&gt;
   &lt;body&gt;
@@ -438,7 +443,6 @@
     <message>
       <location filename="../mainwindow.cpp" line="322"/>
       <source>Can't open file</source>
-      <translatorcomment>Не могу открыть файл</translatorcomment>
       <translation>Can't open file</translation>
     </message>
     <message>
@@ -496,12 +500,14 @@ Do you want to set torrent root folder and try again?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="815"/>
       <source>Line: %1 of %2 Col: %3</source>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Line: %1 of %2 Col: %3</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="999"/>
       <location filename="../mainwindow.cpp" line="1007"/>
       <source>Error on %1 line: %2</source>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Error on %1 line: %2</translation>
     </message>
     <message>
@@ -544,6 +550,7 @@ Tebibyte</translation>
     <message>
       <location filename="../mainwindow.cpp" line="1193"/>
       <source>Save file "%1"?</source>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Save file "%1"?</translation>
     </message>
   </context>
@@ -675,6 +682,7 @@ Tebibyte</translation>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="161"/>
       <source>%1 of %n match(es)</source>
+      <translatorcomment>Do not touch %1 it must be as is. Make translations for both singular and plural forms. </translatorcomment>
       <translation>
         <numerusform>%1 of %n match</numerusform>
         <numerusform>%1 of %n matches</numerusform>
@@ -683,6 +691,7 @@ Tebibyte</translation>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="214"/>
       <source>%n value(s) was(were) replaced</source>
+      <translatorcomment>Do not touch %n it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>
         <numerusform>%n value was replaced</numerusform>
         <numerusform>%n values were replaced</numerusform>
@@ -702,11 +711,13 @@ Tebibyte</translation>
     <message>
       <location filename="../mainwindow.cpp" line="111"/>
       <source>Can't open %1</source>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Can't open %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="146"/>
       <source>Can't read from %1</source>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Can't read from %1</translation>
     </message>
   </context>
