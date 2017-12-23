@@ -6,12 +6,12 @@
     <message>
       <location filename="../aboutdlg.ui" line="175"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt@land.ru"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;著者：Ivan Romanov &lt;a href="mailto:drizt@land.ru"&gt; &lt;span style = "text-decoration：underline; color：#THERae;"&gt; drizt @ land.ru &lt;/ span&gt; &lt;/a&gt; &lt;/ p&gt; &lt;p&gt;ライセンス：GNU General Public License v3.0以降&lt;/ p&gt; &lt;p&gt;ホームページ：&lt;a href = "http：// sourceforge.net / projects / torrent-file-editor / "&gt; &lt;span style =" text-decoration：underline; color：＃0046ae; "&gt; http://sourceforge.net/projects/torrent-file-editor/ &lt;/ span&gt; &gt; &lt;/a&gt; &lt;/ p&gt; &lt;p&gt;ソース：&lt;a href="http://github.com/drizt/torrent-file-editor"&gt; &lt;span style = "text-decoration：underline; color：＃ "&lt;a href =" http://rutracker.org/forum "に感謝します&lt;/ p&gt; &lt;p&gt; /profile.php?mode=viewprofile&amp;amp;u=8465051"&gt; &lt;span style = "text-decoration：underline; color：＃0057ae;"&gt; ALEX Krays &lt;/ span&gt; &lt;/a&gt;アプリケーションアイコン&lt;/ p&gt; / body&gt; &lt;/ html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;著者：Ivan Romanov &lt;a href="mailto:drizt@land.ru"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt@land.ru&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;ライセンス：GNU General Public License v3.0以降&lt;/p&gt;&lt;p&gt;ホームページ：&lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color: #0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;ソース：&lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;に感謝します &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; アプリケーションアイコン&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="39"/>
       <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
-      <translation>&lt;h3&gt;開発者用ビール&lt;/ h3&gt;</translation>
+      <translation type="unfinished">&lt;h3&gt;開発者用ビール&lt;/h3&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="85"/>
@@ -26,7 +26,7 @@
     <message>
       <location filename="../aboutdlg.cpp" line="136"/>
       <source>About %1</source>
-      <translation>％1について</translation>
+      <translation type="unfinished">%1 について</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="190"/>
@@ -36,7 +36,7 @@
     <message>
       <location filename="../aboutdlg.cpp" line="194"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
-      <translation>新しいバージョンの&lt;a href="%2"&gt;％1 &lt;/a&gt;が検出されました</translation>
+      <translation type="unfinished">新しいバージョンの&lt;a href="%2"&gt;%1 &lt;/a&gt;が検出されました</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="197"/>
@@ -237,22 +237,22 @@
     &lt;p style="margin-left: 20px"&gt;full file path matches Perl-like regular expression&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;</source>
-      <translation>&lt;html&gt;
-   &lt;head /&gt;
-   &lt;body&gt;
-     &lt;p&gt; &lt;b&gt;名前&lt;/ b&gt; &lt;/ p&gt;
-     &lt;p style = "margin-left：20px"&gt;拡張子がpatternと完全に等しいファイル名&lt;/ p&gt;
-     &lt;br/&gt;
-     &lt;p&gt; &lt;b&gt;拡張&lt;/ b&gt; &lt;/ p&gt;
-     &lt;p style = "margin-left：20px"&gt;最新のポイントの後のシンボルはpatternと正確に等しく、 'archive.tar.gz'の場合は 'gz'になります。&lt;/ p&gt;
-     &lt;br/&gt;
-     &lt;p&gt; &lt;b&gt;ワイルドカード&lt;/ b&gt; &lt;/ p&gt;
-     &lt;p style = "margin-left：20px"&gt;拡張子の付いたファイル名は、ファイルグロビングと一致します。 任意のシンボルであり、 '*'は任意のシンボルの任意の数です。&lt;/ p&gt;
-     &lt;br/&gt;
-     &lt;p&gt; &lt;b&gt;正規表現&lt;/ b&gt; &lt;/ p&gt;
-     &lt;p style = "margin-left：20px"&gt;完全なファイルパスはPerlのような正規表現と一致します&lt;/ p&gt;
-   &lt;/ body&gt;
-&lt;/ html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;
+   &lt;head /&gt;
+   &lt;body&gt;
+     &lt;p&gt; &lt;b&gt;名前&lt;/b&gt;&lt;/p&gt;
+     &lt;p style="margin-left: 20px"&gt;拡張子がpatternと完全に等しいファイル名&lt;/p&gt;
+     &lt;br/&gt;
+     &lt;p&gt;&lt;b&gt;拡張&lt;/b&gt;&lt;/p&gt;
+     &lt;p style="margin-left: 20px"&gt;最新のポイントの後のシンボルはpatternと正確に等しく、 'archive.tar.gz'の場合は 'gz'になります。&lt;/p&gt;
+     &lt;br/&gt;
+     &lt;p&gt;&lt;b&gt;ワイルドカード&lt;/b&gt;&lt;/p&gt;
+     &lt;p style="margin-left: 20px"&gt;拡張子の付いたファイル名は、ファイルグロビングと一致します。 任意のシンボルであり、 '*'は任意のシンボルの任意の数です。&lt;/p&gt;
+     &lt;br/&gt;
+     &lt;p&gt;&lt;b&gt;正規表現&lt;/b&gt;&lt;/p&gt;
+     &lt;p style="margin-left: 20px"&gt;完全なファイルパスはPerlのような正規表現と一致します&lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="505"/>
@@ -496,13 +496,13 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../mainwindow.cpp" line="813"/>
       <source>Line: %1 of %2 Col: %3</source>
-      <translation>行：％2 of％2 Col：％3</translation>
+      <translation type="unfinished">行：%1 of %2 Col：%3</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="995"/>
       <location filename="../mainwindow.cpp" line="1003"/>
       <source>Error on %1 line: %2</source>
-      <translation>％1行のエラー：％2</translation>
+      <translation type="unfinished">%1行のエラー：%2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1153"/>
@@ -542,7 +542,7 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../mainwindow.cpp" line="1189"/>
       <source>Save file "%1"?</source>
-      <translation>ファイル "％1"を保存しますか？</translation>
+      <translation type="unfinished">ファイル "%1"を保存しますか？</translation>
     </message>
   </context>
   <context>
@@ -673,15 +673,15 @@ Do you want to set torrent root folder and try again?</source>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="140"/>
       <source>%1 of %n match(es)</source>
-      <translation>
-        <numerusform>％1 /％nは（es）にマッチします</numerusform>
+      <translation type="unfinished">
+        <numerusform>%1 /%nは（es）にマッチします</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="192"/>
       <source>%n value(s) was(were) replaced</source>
-      <translation>
-        <numerusform>％nの値が置き換えられました</numerusform>
+      <translation type="unfinished">
+        <numerusform>%nの値が置き換えられました</numerusform>
       </translation>
     </message>
   </context>
@@ -698,12 +698,12 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../mainwindow.cpp" line="108"/>
       <source>Can't open %1</source>
-      <translation>％1を開くことができません</translation>
+      <translation type="unfinished">%1を開くことができません</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="143"/>
       <source>Can't read from %1</source>
-      <translation>％1から読み込めません</translation>
+      <translation type="unfinished">%1から読み込めません</translation>
     </message>
   </context>
 </TS>

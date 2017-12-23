@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="id" sourcelanguage="en">
+<TS version="2.1" language="id" sourcelanguage="en">
   <context>
     <name>AboutDlg</name>
     <message>
@@ -24,22 +24,22 @@
       <translation>Periksa pembaruan</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="136"/>
+      <location filename="../aboutdlg.cpp" line="139"/>
       <source>About %1</source>
       <translation>Tentang %1</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="190"/>
+      <location filename="../aboutdlg.cpp" line="193"/>
       <source>Something went wrong</source>
       <translation>Ada sesuatu yang salah</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="194"/>
+      <location filename="../aboutdlg.cpp" line="197"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
       <translation>Versi baru &lt;a href="%2"&gt;%1&lt;/a&gt; telah terdeteksi</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="197"/>
+      <location filename="../aboutdlg.cpp" line="200"/>
       <source>The latest version is installed</source>
       <translation>Versi terbaru sudah terinstall</translation>
     </message>
@@ -47,22 +47,22 @@
   <context>
     <name>BencodeModel</name>
     <message>
-      <location filename="../bencodemodel.cpp" line="692"/>
+      <location filename="../bencodemodel.cpp" line="693"/>
       <source>Name</source>
       <translation>Nama</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="693"/>
+      <location filename="../bencodemodel.cpp" line="694"/>
       <source>Type</source>
       <translation>Tipe</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="694"/>
+      <location filename="../bencodemodel.cpp" line="695"/>
       <source>Hex</source>
       <translation>Kutuk</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="695"/>
+      <location filename="../bencodemodel.cpp" line="696"/>
       <source>Value</source>
       <translation>Nilai</translation>
     </message>
@@ -70,12 +70,12 @@
   <context>
     <name>DateWidget</name>
     <message>
-      <location filename="../datewidget.cpp" line="64"/>
+      <location filename="../datewidget.cpp" line="67"/>
       <source>Clean</source>
       <translation>Bersih</translation>
     </message>
     <message>
-      <location filename="../datewidget.cpp" line="80"/>
+      <location filename="../datewidget.cpp" line="83"/>
       <source>Show calendar</source>
       <translation>Tampilkan kalender</translation>
     </message>
@@ -83,12 +83,12 @@
   <context>
     <name>FolderEdit</name>
     <message>
-      <location filename="../folderedit.cpp" line="42"/>
+      <location filename="../folderedit.cpp" line="45"/>
       <source>Choose folder</source>
       <translation>Pilih folder</translation>
     </message>
     <message>
-      <location filename="../folderedit.cpp" line="57"/>
+      <location filename="../folderedit.cpp" line="60"/>
       <source>Add Folder</source>
       <translation>Tambah Folder</translation>
     </message>
@@ -103,7 +103,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
-      <location filename="../mainwindow.cpp" line="349"/>
+      <location filename="../mainwindow.cpp" line="345"/>
       <source>Open</source>
       <translation>Buka</translation>
     </message>
@@ -115,7 +115,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="374"/>
+      <location filename="../mainwindow.cpp" line="370"/>
       <source>Save As</source>
       <translation>Simpan Sebagai</translation>
     </message>
@@ -390,83 +390,83 @@
       <translation>Mentah</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="198"/>
+      <location filename="../mainwindow.cpp" line="201"/>
       <source>Need to calculate piece hashes</source>
       <translation>Perlu untuk menghitung potongan cincang</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="199"/>
+      <location filename="../mainwindow.cpp" line="202"/>
       <source>Please wait</source>
       <translation>Mohon tunggu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="209"/>
+      <location filename="../mainwindow.cpp" line="212"/>
       <source>Auto</source>
       <translation>Otomatis</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="217"/>
+      <location filename="../mainwindow.cpp" line="220"/>
       <source>Path</source>
       <translation>Jalur</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="217"/>
+      <location filename="../mainwindow.cpp" line="220"/>
       <source>Size</source>
       <translation>Ukuran</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="179"/>
+      <location filename="../mainwindow.cpp" line="182"/>
       <source>Torrents (*.torrent)</source>
       <translation>Torrent (*.torrent)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="180"/>
+      <location filename="../mainwindow.cpp" line="183"/>
       <source>uTorrent resume files (*.dat)</source>
       <translation>melanjutkan berkas utorrent (*.dat)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="217"/>
+      <location filename="../mainwindow.cpp" line="220"/>
       <source># Pieces</source>
       <translation># Potongan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="326"/>
-      <location filename="../mainwindow.cpp" line="806"/>
+      <location filename="../mainwindow.cpp" line="322"/>
+      <location filename="../mainwindow.cpp" line="808"/>
       <source>Error</source>
       <translation>Kesalahan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="326"/>
+      <location filename="../mainwindow.cpp" line="322"/>
       <source>Can't open file</source>
       <translatorcomment>Не могу открыть файл</translatorcomment>
       <translation>Tidak bisa membuka berkas</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="583"/>
+      <location filename="../mainwindow.cpp" line="589"/>
       <source>Warning</source>
       <translation>Peringatan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="559"/>
+      <location filename="../mainwindow.cpp" line="565"/>
       <source>Torrent root folder is not set</source>
       <translation>Folder akar torrent tidak diatur</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="369"/>
-      <location filename="../mainwindow.cpp" line="1037"/>
-      <location filename="../mainwindow.cpp" line="1045"/>
-      <location filename="../mainwindow.cpp" line="1056"/>
+      <location filename="../mainwindow.cpp" line="365"/>
+      <location filename="../mainwindow.cpp" line="1041"/>
+      <location filename="../mainwindow.cpp" line="1049"/>
+      <location filename="../mainwindow.cpp" line="1060"/>
       <source>Can't save file</source>
       <translation>Tidak bisa menyimpan berkas</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="369"/>
-      <location filename="../mainwindow.cpp" line="1037"/>
+      <location filename="../mainwindow.cpp" line="365"/>
+      <location filename="../mainwindow.cpp" line="1041"/>
       <source>BEncoded data is not valid</source>
       <translation>BEncoded data tidak sesuai</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="560"/>
+      <location filename="../mainwindow.cpp" line="566"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
@@ -479,68 +479,68 @@ Jika Anda ingin mengedit daftar berkas di torrent saat ini Anda perlu mengatur f
 Apakah Anda ingin mengatur folder akar torrent dan coba lagi?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="583"/>
+      <location filename="../mainwindow.cpp" line="589"/>
       <source>The torrent root folder is not common.</source>
       <translation>Folder akar torrent tidak biasa.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="642"/>
+      <location filename="../mainwindow.cpp" line="648"/>
       <source>Add File</source>
       <translation>Tambahkan berkas</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="664"/>
+      <location filename="../mainwindow.cpp" line="669"/>
       <source>Add Folder</source>
       <translation>Tambahkan Folder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="813"/>
+      <location filename="../mainwindow.cpp" line="815"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translation>Baris: %1 dari %2 Kol: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="995"/>
-      <location filename="../mainwindow.cpp" line="1003"/>
+      <location filename="../mainwindow.cpp" line="999"/>
+      <location filename="../mainwindow.cpp" line="1007"/>
       <source>Error on %1 line: %2</source>
       <translation>Kesalahan pada %1 baris: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1153"/>
+      <location filename="../mainwindow.cpp" line="1157"/>
       <source>B</source>
       <translation>B</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1157"/>
+      <location filename="../mainwindow.cpp" line="1161"/>
       <source>KiB</source>
       <translation>KiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1161"/>
+      <location filename="../mainwindow.cpp" line="1165"/>
       <source>MiB</source>
       <translation>MiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1165"/>
+      <location filename="../mainwindow.cpp" line="1169"/>
       <source>GiB</source>
       <translation>GiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1169"/>
+      <location filename="../mainwindow.cpp" line="1173"/>
       <source>TiB</source>
       <translation>TiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1187"/>
+      <location filename="../mainwindow.cpp" line="1191"/>
       <source>Save file</source>
       <translation>Simpan berkas</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1188"/>
+      <location filename="../mainwindow.cpp" line="1192"/>
       <source>Untitled</source>
       <translation>Tanpa judul</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1189"/>
+      <location filename="../mainwindow.cpp" line="1193"/>
       <source>Save file "%1"?</source>
       <translation>Simpan berkas "%1"?</translation>
     </message>
@@ -548,27 +548,27 @@ Apakah Anda ingin mengatur folder akar torrent dan coba lagi?</translation>
   <context>
     <name>QObject</name>
     <message>
-      <location filename="../bencode.cpp" line="216"/>
+      <location filename="../bencode.cpp" line="219"/>
       <source>list</source>
       <translation>daftar</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="217"/>
+      <location filename="../bencode.cpp" line="220"/>
       <source>dictionary</source>
       <translation>kamus</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="218"/>
+      <location filename="../bencode.cpp" line="221"/>
       <source>integer</source>
       <translation>bilangan bulat</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="219"/>
+      <location filename="../bencode.cpp" line="222"/>
       <source>string</source>
       <translation>deretan</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="220"/>
+      <location filename="../bencode.cpp" line="223"/>
       <source>invalid</source>
       <translation>tidak sah</translation>
     </message>
@@ -651,7 +651,7 @@ Apakah Anda ingin mengatur folder akar torrent dan coba lagi?</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="248"/>
-      <location filename="../searchdlg.cpp" line="42"/>
+      <location filename="../searchdlg.cpp" line="63"/>
       <source>Replace</source>
       <translation>Ganti</translation>
     </message>
@@ -661,24 +661,24 @@ Apakah Anda ingin mengatur folder akar torrent dan coba lagi?</translation>
       <translation>Tutup</translation>
     </message>
     <message>
-      <location filename="../searchdlg.cpp" line="42"/>
+      <location filename="../searchdlg.cpp" line="63"/>
       <source>Find</source>
       <translation>Menemukan</translation>
     </message>
     <message>
-      <location filename="../searchdlg.cpp" line="135"/>
+      <location filename="../searchdlg.cpp" line="156"/>
       <source>No matches found</source>
       <translation>Tidak ditemukan kecocokan</translation>
     </message>
     <message numerus="yes">
-      <location filename="../searchdlg.cpp" line="140"/>
+      <location filename="../searchdlg.cpp" line="161"/>
       <source>%1 of %n match(es)</source>
       <translation>
         <numerusform>%1 dari %n cocok</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../searchdlg.cpp" line="192"/>
+      <location filename="../searchdlg.cpp" line="214"/>
       <source>%n value(s) was(were) replaced</source>
       <translation>
         <numerusform>%n nilai diganti</numerusform>
@@ -688,7 +688,7 @@ Apakah Anda ingin mengatur folder akar torrent dan coba lagi?</translation>
   <context>
     <name>UrlEdit</name>
     <message>
-      <location filename="../urledit.cpp" line="39"/>
+      <location filename="../urledit.cpp" line="42"/>
       <source>Open in internet browser</source>
       <translation>Buka dalam internet browser</translation>
     </message>
@@ -696,12 +696,12 @@ Apakah Anda ingin mengatur folder akar torrent dan coba lagi?</translation>
   <context>
     <name>Worker</name>
     <message>
-      <location filename="../mainwindow.cpp" line="108"/>
+      <location filename="../mainwindow.cpp" line="111"/>
       <source>Can't open %1</source>
       <translation>Tidak dapat membuka %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="143"/>
+      <location filename="../mainwindow.cpp" line="146"/>
       <source>Can't read from %1</source>
       <translation>Tidak dapat membaca dari %1</translation>
     </message>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="zh-TW" sourcelanguage="en">
+<TS version="2.1" language="zh-TW" sourcelanguage="en">
   <context>
     <name>AboutDlg</name>
     <message>
@@ -28,22 +28,22 @@
       <translation>檢查更新</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="136"/>
+      <location filename="../aboutdlg.cpp" line="139"/>
       <source>About %1</source>
       <translation>關於 %1</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="190"/>
+      <location filename="../aboutdlg.cpp" line="193"/>
       <source>Something went wrong</source>
       <translation>出了點問題...</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="194"/>
+      <location filename="../aboutdlg.cpp" line="197"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
       <translation>前50個主題</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="197"/>
+      <location filename="../aboutdlg.cpp" line="200"/>
       <source>The latest version is installed</source>
       <translation>最新版本已安裝</translation>
     </message>
@@ -51,22 +51,22 @@
   <context>
     <name>BencodeModel</name>
     <message>
-      <location filename="../bencodemodel.cpp" line="692"/>
+      <location filename="../bencodemodel.cpp" line="693"/>
       <source>Name</source>
       <translation>名字</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="693"/>
+      <location filename="../bencodemodel.cpp" line="694"/>
       <source>Type</source>
       <translation>類型</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="694"/>
+      <location filename="../bencodemodel.cpp" line="695"/>
       <source>Hex</source>
       <translation>Hex</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="695"/>
+      <location filename="../bencodemodel.cpp" line="696"/>
       <source>Value</source>
       <translation>价值</translation>
     </message>
@@ -74,12 +74,12 @@
   <context>
     <name>DateWidget</name>
     <message>
-      <location filename="../datewidget.cpp" line="64"/>
+      <location filename="../datewidget.cpp" line="67"/>
       <source>Clean</source>
       <translation>清理</translation>
     </message>
     <message>
-      <location filename="../datewidget.cpp" line="80"/>
+      <location filename="../datewidget.cpp" line="83"/>
       <source>Show calendar</source>
       <translation>顯示日曆</translation>
     </message>
@@ -87,12 +87,12 @@
   <context>
     <name>FolderEdit</name>
     <message>
-      <location filename="../folderedit.cpp" line="42"/>
+      <location filename="../folderedit.cpp" line="45"/>
       <source>Choose folder</source>
       <translation>選擇文件夾</translation>
     </message>
     <message>
-      <location filename="../folderedit.cpp" line="57"/>
+      <location filename="../folderedit.cpp" line="60"/>
       <source>Add Folder</source>
       <translation>添加資料夾</translation>
     </message>
@@ -107,7 +107,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
-      <location filename="../mainwindow.cpp" line="349"/>
+      <location filename="../mainwindow.cpp" line="345"/>
       <source>Open</source>
       <translation>打開</translation>
     </message>
@@ -119,7 +119,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="374"/>
+      <location filename="../mainwindow.cpp" line="370"/>
       <source>Save As</source>
       <translation>另存為</translation>
     </message>
@@ -379,83 +379,83 @@
       <translation>原始</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="198"/>
+      <location filename="../mainwindow.cpp" line="201"/>
       <source>Need to calculate piece hashes</source>
       <translation>需要計算片斷雜湊值</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="199"/>
+      <location filename="../mainwindow.cpp" line="202"/>
       <source>Please wait</source>
       <translation>请稍候</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="209"/>
+      <location filename="../mainwindow.cpp" line="212"/>
       <source>Auto</source>
       <translation>自動</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="217"/>
+      <location filename="../mainwindow.cpp" line="220"/>
       <source>Path</source>
       <translation>路徑</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="217"/>
+      <location filename="../mainwindow.cpp" line="220"/>
       <source>Size</source>
       <translation>大小</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="179"/>
+      <location filename="../mainwindow.cpp" line="182"/>
       <source>Torrents (*.torrent)</source>
       <translation>Torrents (*.torrent)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="180"/>
+      <location filename="../mainwindow.cpp" line="183"/>
       <source>uTorrent resume files (*.dat)</source>
       <translation>uTorrent 恢復檔 (*. dat)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="217"/>
+      <location filename="../mainwindow.cpp" line="220"/>
       <source># Pieces</source>
       <translation># 片斷</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="326"/>
-      <location filename="../mainwindow.cpp" line="806"/>
+      <location filename="../mainwindow.cpp" line="322"/>
+      <location filename="../mainwindow.cpp" line="808"/>
       <source>Error</source>
       <translation>錯誤</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="326"/>
+      <location filename="../mainwindow.cpp" line="322"/>
       <source>Can't open file</source>
       <translatorcomment>Не могу открыть файл</translatorcomment>
       <translation>無法打開文件</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="583"/>
+      <location filename="../mainwindow.cpp" line="589"/>
       <source>Warning</source>
       <translation>警告</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="559"/>
+      <location filename="../mainwindow.cpp" line="565"/>
       <source>Torrent root folder is not set</source>
       <translation>Torrent根文件夾未設置</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="369"/>
-      <location filename="../mainwindow.cpp" line="1037"/>
-      <location filename="../mainwindow.cpp" line="1045"/>
-      <location filename="../mainwindow.cpp" line="1056"/>
+      <location filename="../mainwindow.cpp" line="365"/>
+      <location filename="../mainwindow.cpp" line="1041"/>
+      <location filename="../mainwindow.cpp" line="1049"/>
+      <location filename="../mainwindow.cpp" line="1060"/>
       <source>Can't save file</source>
       <translation>無法保存文件</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="369"/>
-      <location filename="../mainwindow.cpp" line="1037"/>
+      <location filename="../mainwindow.cpp" line="365"/>
+      <location filename="../mainwindow.cpp" line="1041"/>
       <source>BEncoded data is not valid</source>
       <translation>編碼的數據無效</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="560"/>
+      <location filename="../mainwindow.cpp" line="566"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
@@ -473,68 +473,68 @@ Torrent只能從完全下載的文件中生成。
 你想設置洪流根文件夾, 然後再試一次嗎?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="583"/>
+      <location filename="../mainwindow.cpp" line="589"/>
       <source>The torrent root folder is not common.</source>
       <translation>Torrent 根文件夾不常見。</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="642"/>
+      <location filename="../mainwindow.cpp" line="648"/>
       <source>Add File</source>
       <translation>添加文件</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="664"/>
+      <location filename="../mainwindow.cpp" line="669"/>
       <source>Add Folder</source>
       <translation>新增文件夾</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="813"/>
+      <location filename="../mainwindow.cpp" line="815"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translation>線: %1 %2 上校: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="995"/>
-      <location filename="../mainwindow.cpp" line="1003"/>
+      <location filename="../mainwindow.cpp" line="999"/>
+      <location filename="../mainwindow.cpp" line="1007"/>
       <source>Error on %1 line: %2</source>
       <translation>%1 行上的錯誤: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1153"/>
+      <location filename="../mainwindow.cpp" line="1157"/>
       <source>B</source>
       <translation>B</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1157"/>
+      <location filename="../mainwindow.cpp" line="1161"/>
       <source>KiB</source>
       <translation>KiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1161"/>
+      <location filename="../mainwindow.cpp" line="1165"/>
       <source>MiB</source>
       <translation>MiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1165"/>
+      <location filename="../mainwindow.cpp" line="1169"/>
       <source>GiB</source>
       <translation>GiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1169"/>
+      <location filename="../mainwindow.cpp" line="1173"/>
       <source>TiB</source>
       <translation>TiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1187"/>
+      <location filename="../mainwindow.cpp" line="1191"/>
       <source>Save file</source>
       <translation>儲存檔案</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1188"/>
+      <location filename="../mainwindow.cpp" line="1192"/>
       <source>Untitled</source>
       <translation>無標題文檔</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1189"/>
+      <location filename="../mainwindow.cpp" line="1193"/>
       <source>Save file "%1"?</source>
       <translation>是否保存檔 "%1"？</translation>
     </message>
@@ -542,27 +542,27 @@ Torrent只能從完全下載的文件中生成。
   <context>
     <name>QObject</name>
     <message>
-      <location filename="../bencode.cpp" line="216"/>
+      <location filename="../bencode.cpp" line="219"/>
       <source>list</source>
       <translation>清單</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="217"/>
+      <location filename="../bencode.cpp" line="220"/>
       <source>dictionary</source>
       <translation>字典</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="218"/>
+      <location filename="../bencode.cpp" line="221"/>
       <source>integer</source>
       <translation>整數</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="219"/>
+      <location filename="../bencode.cpp" line="222"/>
       <source>string</source>
       <translation>字串</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="220"/>
+      <location filename="../bencode.cpp" line="223"/>
       <source>invalid</source>
       <translation>無效</translation>
     </message>
@@ -646,7 +646,7 @@ Torrent只能從完全下載的文件中生成。
     </message>
     <message>
       <location filename="../searchdlg.ui" line="248"/>
-      <location filename="../searchdlg.cpp" line="42"/>
+      <location filename="../searchdlg.cpp" line="63"/>
       <source>Replace</source>
       <translation>更換</translation>
     </message>
@@ -656,24 +656,24 @@ Torrent只能從完全下載的文件中生成。
       <translation>關閉</translation>
     </message>
     <message>
-      <location filename="../searchdlg.cpp" line="42"/>
+      <location filename="../searchdlg.cpp" line="63"/>
       <source>Find</source>
       <translation>尋找</translation>
     </message>
     <message>
-      <location filename="../searchdlg.cpp" line="135"/>
+      <location filename="../searchdlg.cpp" line="156"/>
       <source>No matches found</source>
       <translation>找不到匹配項</translation>
     </message>
     <message numerus="yes">
-      <location filename="../searchdlg.cpp" line="140"/>
+      <location filename="../searchdlg.cpp" line="161"/>
       <source>%1 of %n match(es)</source>
       <translation>
         <numerusform>%d/%d 個匹配</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../searchdlg.cpp" line="192"/>
+      <location filename="../searchdlg.cpp" line="214"/>
       <source>%n value(s) was(were) replaced</source>
       <translation>
         <numerusform>%n 值已被替換</numerusform>
@@ -683,7 +683,7 @@ Torrent只能從完全下載的文件中生成。
   <context>
     <name>UrlEdit</name>
     <message>
-      <location filename="../urledit.cpp" line="39"/>
+      <location filename="../urledit.cpp" line="42"/>
       <source>Open in internet browser</source>
       <translation>在互聯網瀏覽器中打開</translation>
     </message>
@@ -691,12 +691,12 @@ Torrent只能從完全下載的文件中生成。
   <context>
     <name>Worker</name>
     <message>
-      <location filename="../mainwindow.cpp" line="108"/>
+      <location filename="../mainwindow.cpp" line="111"/>
       <source>Can't open %1</source>
       <translation>無法打開%1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="143"/>
+      <location filename="../mainwindow.cpp" line="146"/>
       <source>Can't read from %1</source>
       <translation>無法讀取%1</translation>
     </message>

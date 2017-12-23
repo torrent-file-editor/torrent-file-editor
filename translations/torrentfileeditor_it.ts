@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="it" sourcelanguage="en">
+<TS version="2.1" language="it" sourcelanguage="en">
   <context>
     <name>AboutDlg</name>
     <message>
@@ -24,22 +24,22 @@
       <translation type="unfinished">Check for Update</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="136"/>
+      <location filename="../aboutdlg.cpp" line="139"/>
       <source>About %1</source>
       <translation>About %1</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="190"/>
+      <location filename="../aboutdlg.cpp" line="193"/>
       <source>Something went wrong</source>
       <translation type="unfinished">Something went wrong</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="194"/>
+      <location filename="../aboutdlg.cpp" line="197"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
       <translation type="unfinished">New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="197"/>
+      <location filename="../aboutdlg.cpp" line="200"/>
       <source>The latest version is installed</source>
       <translation type="unfinished">The latest version is installed</translation>
     </message>
@@ -47,22 +47,22 @@
   <context>
     <name>BencodeModel</name>
     <message>
-      <location filename="../bencodemodel.cpp" line="692"/>
+      <location filename="../bencodemodel.cpp" line="693"/>
       <source>Name</source>
       <translation>Nome</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="693"/>
+      <location filename="../bencodemodel.cpp" line="694"/>
       <source>Type</source>
       <translation>Tipo</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="694"/>
+      <location filename="../bencodemodel.cpp" line="695"/>
       <source>Hex</source>
       <translation>Hex</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="695"/>
+      <location filename="../bencodemodel.cpp" line="696"/>
       <source>Value</source>
       <translation>Valore</translation>
     </message>
@@ -70,12 +70,12 @@
   <context>
     <name>DateWidget</name>
     <message>
-      <location filename="../datewidget.cpp" line="64"/>
+      <location filename="../datewidget.cpp" line="67"/>
       <source>Clean</source>
       <translation>Resetta</translation>
     </message>
     <message>
-      <location filename="../datewidget.cpp" line="80"/>
+      <location filename="../datewidget.cpp" line="83"/>
       <source>Show calendar</source>
       <translation>Mostra Calendario</translation>
     </message>
@@ -83,12 +83,12 @@
   <context>
     <name>FolderEdit</name>
     <message>
-      <location filename="../folderedit.cpp" line="42"/>
+      <location filename="../folderedit.cpp" line="45"/>
       <source>Choose folder</source>
       <translation>Scegli cartella</translation>
     </message>
     <message>
-      <location filename="../folderedit.cpp" line="57"/>
+      <location filename="../folderedit.cpp" line="60"/>
       <source>Add Folder</source>
       <translation>Aggiungi Cartella</translation>
     </message>
@@ -103,7 +103,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
-      <location filename="../mainwindow.cpp" line="349"/>
+      <location filename="../mainwindow.cpp" line="345"/>
       <source>Open</source>
       <translation>Apri</translation>
     </message>
@@ -115,7 +115,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="374"/>
+      <location filename="../mainwindow.cpp" line="370"/>
       <source>Save As</source>
       <translation>Salva con nome</translation>
     </message>
@@ -390,83 +390,83 @@
       <translation>Raw</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="198"/>
+      <location filename="../mainwindow.cpp" line="201"/>
       <source>Need to calculate piece hashes</source>
       <translation>Necessità di calcolare gli hash delle parti</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="199"/>
+      <location filename="../mainwindow.cpp" line="202"/>
       <source>Please wait</source>
       <translation>Attendere</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="209"/>
+      <location filename="../mainwindow.cpp" line="212"/>
       <source>Auto</source>
       <translation>Auto</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="217"/>
+      <location filename="../mainwindow.cpp" line="220"/>
       <source>Path</source>
       <translation>Path</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="217"/>
+      <location filename="../mainwindow.cpp" line="220"/>
       <source>Size</source>
       <translation>Dimensione</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="179"/>
+      <location filename="../mainwindow.cpp" line="182"/>
       <source>Torrents (*.torrent)</source>
       <translation>Torrents (*.torrent)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="180"/>
+      <location filename="../mainwindow.cpp" line="183"/>
       <source>uTorrent resume files (*.dat)</source>
       <translation>uTorrent resume files (*.dat)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="217"/>
+      <location filename="../mainwindow.cpp" line="220"/>
       <source># Pieces</source>
       <translation># Parti</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="326"/>
-      <location filename="../mainwindow.cpp" line="806"/>
+      <location filename="../mainwindow.cpp" line="322"/>
+      <location filename="../mainwindow.cpp" line="808"/>
       <source>Error</source>
       <translation>Errore</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="326"/>
+      <location filename="../mainwindow.cpp" line="322"/>
       <source>Can't open file</source>
       <translatorcomment>Не могу открыть файл</translatorcomment>
       <translation>Impossibile aprire il file</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="583"/>
+      <location filename="../mainwindow.cpp" line="589"/>
       <source>Warning</source>
       <translation>Attenzione</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="559"/>
+      <location filename="../mainwindow.cpp" line="565"/>
       <source>Torrent root folder is not set</source>
       <translation>Non è stata impostata la cartella radice del Torrent</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="369"/>
-      <location filename="../mainwindow.cpp" line="1037"/>
-      <location filename="../mainwindow.cpp" line="1045"/>
-      <location filename="../mainwindow.cpp" line="1056"/>
+      <location filename="../mainwindow.cpp" line="365"/>
+      <location filename="../mainwindow.cpp" line="1041"/>
+      <location filename="../mainwindow.cpp" line="1049"/>
+      <location filename="../mainwindow.cpp" line="1060"/>
       <source>Can't save file</source>
       <translation>Impossibile salvare il file</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="369"/>
-      <location filename="../mainwindow.cpp" line="1037"/>
+      <location filename="../mainwindow.cpp" line="365"/>
+      <location filename="../mainwindow.cpp" line="1041"/>
       <source>BEncoded data is not valid</source>
       <translation>Dati BEncoded non validi</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="560"/>
+      <location filename="../mainwindow.cpp" line="566"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
@@ -475,68 +475,68 @@ Do you want to set torrent root folder and try again?</source>
       <translation>Percorso dei file sul disco non noto. I Torrent possono essere generati solo da file scaricati completamente. Se si desidera modificare l'elenco dei file nel Torrent corrente è necessario impostare la cartella radice Torrent. La cartella radice Torrent è una cartella sul disco dove si trovano tutti i file. Se non tutti i files sono presenti, il file Torrent non puo' essere generato. Si desidera impostare la cartella radice del Torrent e riprovare?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="583"/>
+      <location filename="../mainwindow.cpp" line="589"/>
       <source>The torrent root folder is not common.</source>
       <translation>La cartella radice del Torrent non è comune.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="642"/>
+      <location filename="../mainwindow.cpp" line="648"/>
       <source>Add File</source>
       <translation>Aggiungi file</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="664"/>
+      <location filename="../mainwindow.cpp" line="669"/>
       <source>Add Folder</source>
       <translation>Aggiungi Cartella</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="813"/>
+      <location filename="../mainwindow.cpp" line="815"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translation>Linea: %1 di %2 Col: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="995"/>
-      <location filename="../mainwindow.cpp" line="1003"/>
+      <location filename="../mainwindow.cpp" line="999"/>
+      <location filename="../mainwindow.cpp" line="1007"/>
       <source>Error on %1 line: %2</source>
       <translation>Errore nella riga di %1: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1153"/>
+      <location filename="../mainwindow.cpp" line="1157"/>
       <source>B</source>
       <translation>B</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1157"/>
+      <location filename="../mainwindow.cpp" line="1161"/>
       <source>KiB</source>
       <translation>KiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1161"/>
+      <location filename="../mainwindow.cpp" line="1165"/>
       <source>MiB</source>
       <translation>MiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1165"/>
+      <location filename="../mainwindow.cpp" line="1169"/>
       <source>GiB</source>
       <translation>GiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1169"/>
+      <location filename="../mainwindow.cpp" line="1173"/>
       <source>TiB</source>
       <translation>TiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1187"/>
+      <location filename="../mainwindow.cpp" line="1191"/>
       <source>Save file</source>
       <translation>Salva il file</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1188"/>
+      <location filename="../mainwindow.cpp" line="1192"/>
       <source>Untitled</source>
       <translation>Senza nome</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1189"/>
+      <location filename="../mainwindow.cpp" line="1193"/>
       <source>Save file "%1"?</source>
       <translation>Salvare il file "%1"?</translation>
     </message>
@@ -544,27 +544,27 @@ Do you want to set torrent root folder and try again?</source>
   <context>
     <name>QObject</name>
     <message>
-      <location filename="../bencode.cpp" line="216"/>
+      <location filename="../bencode.cpp" line="219"/>
       <source>list</source>
       <translation>list</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="217"/>
+      <location filename="../bencode.cpp" line="220"/>
       <source>dictionary</source>
       <translation>dictionary</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="218"/>
+      <location filename="../bencode.cpp" line="221"/>
       <source>integer</source>
       <translation>integer</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="219"/>
+      <location filename="../bencode.cpp" line="222"/>
       <source>string</source>
       <translation>string</translation>
     </message>
     <message>
-      <location filename="../bencode.cpp" line="220"/>
+      <location filename="../bencode.cpp" line="223"/>
       <source>invalid</source>
       <translation>invalid</translation>
     </message>
@@ -647,7 +647,7 @@ Do you want to set torrent root folder and try again?</source>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="248"/>
-      <location filename="../searchdlg.cpp" line="42"/>
+      <location filename="../searchdlg.cpp" line="63"/>
       <source>Replace</source>
       <translation>Sostituisci</translation>
     </message>
@@ -657,17 +657,17 @@ Do you want to set torrent root folder and try again?</source>
       <translation>Chiudi</translation>
     </message>
     <message>
-      <location filename="../searchdlg.cpp" line="42"/>
+      <location filename="../searchdlg.cpp" line="63"/>
       <source>Find</source>
       <translation>Cerca</translation>
     </message>
     <message>
-      <location filename="../searchdlg.cpp" line="135"/>
+      <location filename="../searchdlg.cpp" line="156"/>
       <source>No matches found</source>
       <translation>Nessuna corrispondenza trovata</translation>
     </message>
     <message numerus="yes">
-      <location filename="../searchdlg.cpp" line="140"/>
+      <location filename="../searchdlg.cpp" line="161"/>
       <source>%1 of %n match(es)</source>
       <translation type="unfinished">
         <numerusform>%1 of %n match(es)</numerusform>
@@ -675,7 +675,7 @@ Do you want to set torrent root folder and try again?</source>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../searchdlg.cpp" line="192"/>
+      <location filename="../searchdlg.cpp" line="214"/>
       <source>%n value(s) was(were) replaced</source>
       <translation type="unfinished">
         <numerusform>%n valore(i) sostituito(i)</numerusform>
@@ -686,7 +686,7 @@ Do you want to set torrent root folder and try again?</source>
   <context>
     <name>UrlEdit</name>
     <message>
-      <location filename="../urledit.cpp" line="39"/>
+      <location filename="../urledit.cpp" line="42"/>
       <source>Open in internet browser</source>
       <translation>Apri nel browser internet</translation>
     </message>
@@ -694,12 +694,12 @@ Do you want to set torrent root folder and try again?</source>
   <context>
     <name>Worker</name>
     <message>
-      <location filename="../mainwindow.cpp" line="108"/>
+      <location filename="../mainwindow.cpp" line="111"/>
       <source>Can't open %1</source>
       <translation>Impossibile aprire %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="143"/>
+      <location filename="../mainwindow.cpp" line="146"/>
       <source>Can't read from %1</source>
       <translation>Impossibile leggere da %1</translation>
     </message>
