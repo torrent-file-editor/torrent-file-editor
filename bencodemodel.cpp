@@ -367,7 +367,8 @@ void BencodeModel::setFiles(const QList<QPair<QString, qlonglong>> &files)
         _bencode->child("info")->checkAndCreate(Bencode::Type::Integer, "length")->setInteger(totalSize);
     }
     else {
-        _bencode->child("info")->checkAndCreate(Bencode::Type::List, "files");
+        delete _bencode->child("info")->child("files");
+        _bencode->child("info")->appendMapItem(new Bencode(Bencode::Type::List, "files"));
         for (const auto filePair: files) {
             QString file = filePair.first;
             qlonglong size = filePair.second;
@@ -437,7 +438,7 @@ void BencodeModel::setPieces(const QByteArray &pieces)
         if (!_bencode->child("info"))
             _bencode->appendMapItem(new Bencode(Bencode::Type::Dictionary, "info"));
 
-        if (!_bencode->child("pieces"))
+        if (!_bencode->child("info")->child("pieces"))
             _bencode->child("info")->appendMapItem(new Bencode("", "pieces"));
 
         _bencode->child("info")->child("pieces")->setString(pieces);
