@@ -544,13 +544,13 @@ void MainWindow::makeTorrent()
 
     qulonglong totalSize = 0;
     QStringList files;
-    QString baseFolder = ui->leBaseFolder->text();
-    QDir baseDir(baseFolder);
+    QDir baseDir(ui->leBaseFolder->text());
 
     // Check for relative paths
     bool hasRelative = false;
 
     do {
+        hasRelative = false;
         for (int i = 0; i < model->rowCount(); ++i) {
             QString file = model->item(i)->text();
             if (QFileInfo(file).isRelative()) {
@@ -570,6 +570,7 @@ void MainWindow::makeTorrent()
                                               ), QMessageBox::Yes | QMessageBox::No);
             if (button == QMessageBox::Yes) {
                 ui->leBaseFolder->openFolder();
+                baseDir = QDir(ui->leBaseFolder->text());
             }
             else {
                 break;
