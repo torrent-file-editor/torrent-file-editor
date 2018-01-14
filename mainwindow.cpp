@@ -139,6 +139,10 @@ void Worker::doWork(const QStringList &files, int pieceSize)
                 f.close();
                 return;
             }
+
+            if (f.atEnd()) {
+                break;
+            }
         }
 
         // Some error
