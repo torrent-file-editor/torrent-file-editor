@@ -6,12 +6,14 @@
     <message>
       <location filename="../aboutdlg.ui" line="175"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;著者：Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;ライセンス：GNU General Public License v3.0以降&lt;/p&gt;&lt;p&gt;ホームページ：&lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color: #0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;ソース：&lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;に感謝します &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; アプリケーションアイコン&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;著者：Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;ライセンス：GNU General Public License v3.0以降&lt;/p&gt;&lt;p&gt;ホームページ：&lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color: #0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;ソース：&lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;に感謝します &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; アプリケーションアイコン&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="39"/>
       <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
-      <translation type="unfinished">&lt;h3&gt;開発者用ビール&lt;/h3&gt;</translation>
+      <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
+      <translation>&lt;h3&gt;開発者用ビール&lt;/h3&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="85"/>
@@ -26,7 +28,8 @@
     <message>
       <location filename="../aboutdlg.cpp" line="139"/>
       <source>About %1</source>
-      <translation type="unfinished">%1 について</translation>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
+      <translation>%1 について</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="193"/>
@@ -36,7 +39,8 @@
     <message>
       <location filename="../aboutdlg.cpp" line="197"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
-      <translation type="unfinished">新しいバージョンの&lt;a href="%2"&gt;%1 &lt;/a&gt;が検出されました</translation>
+      <translatorcomment>Do not touch %1 it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
+      <translation>新しいバージョンの&lt;a href="%2"&gt;%1 &lt;/a&gt;が検出されました</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="200"/>
@@ -237,7 +241,8 @@
     &lt;p style="margin-left: 20px"&gt;full file path matches Perl-like regular expression&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;
+      <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
+      <translation>&lt;html&gt;
    &lt;head /&gt;
    &lt;body&gt;
      &lt;p&gt; &lt;b&gt;名前&lt;/b&gt;&lt;/p&gt;
@@ -438,7 +443,6 @@
     <message>
       <location filename="../mainwindow.cpp" line="322"/>
       <source>Can't open file</source>
-      <translatorcomment>Не могу открыть файл</translatorcomment>
       <translation>ファイルを開くことができません</translation>
     </message>
     <message>
@@ -496,13 +500,15 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../mainwindow.cpp" line="815"/>
       <source>Line: %1 of %2 Col: %3</source>
-      <translation type="unfinished">行：%1 of %2 Col：%3</translation>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
+      <translation>行：%1 of %2 Col：%3</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="999"/>
       <location filename="../mainwindow.cpp" line="1007"/>
       <source>Error on %1 line: %2</source>
-      <translation type="unfinished">%1行のエラー：%2</translation>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
+      <translation>%1行のエラー：%2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1157"/>
@@ -542,7 +548,8 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../mainwindow.cpp" line="1193"/>
       <source>Save file "%1"?</source>
-      <translation type="unfinished">ファイル "%1"を保存しますか？</translation>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
+      <translation>ファイル "%1"を保存しますか？</translation>
     </message>
   </context>
   <context>
@@ -673,14 +680,16 @@ Do you want to set torrent root folder and try again?</source>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="161"/>
       <source>%1 of %n match(es)</source>
-      <translation type="unfinished">
+      <translatorcomment>Do not touch %1 it must be as is. Make translations for both singular and plural forms. </translatorcomment>
+      <translation>
         <numerusform>%1 /%nは（es）にマッチします</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="214"/>
       <source>%n value(s) was(were) replaced</source>
-      <translation type="unfinished">
+      <translatorcomment>Do not touch %n it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
+      <translation>
         <numerusform>%nの値が置き換えられました</numerusform>
       </translation>
     </message>
@@ -698,12 +707,14 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../mainwindow.cpp" line="111"/>
       <source>Can't open %1</source>
-      <translation type="unfinished">%1を開くことができません</translation>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
+      <translation>%1を開くことができません</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="146"/>
       <source>Can't read from %1</source>
-      <translation type="unfinished">%1から読み込めません</translation>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
+      <translation>%1から読み込めません</translation>
     </message>
   </context>
 </TS>

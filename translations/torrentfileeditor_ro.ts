@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="bn" sourcelanguage="en">
+<TS version="2.0" language="ro" sourcelanguage="en">
   <context>
     <name>AboutDlg</name>
     <message>
       <location filename="../aboutdlg.ui" line="175"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;লেখক: ইভান রোমানভ &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;হোমপেজ: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;ধন্যবাদ &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; আপ্লিকেশন এর জন্য&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="39"/>
       <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
       <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-      <translation>&lt;h3&gt; ডেভেলপারদের জন্য বিয়ার &lt;/h3&gt;</translation>
+      <translation>&lt;h3&gt;Bere pentru Programator&lt;/h3&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="85"/>
       <source>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</source>
-      <translation>সর্বশেষ সংস্করণ উন্নয়ন অনেক সময় এবং প্রচেষ্টা দাবি করেছে স্থির গুরুতর বাগ এবং দরকারী উন্নতিগুলি করা। আমি ক্লান্ত. কিন্তু একটু বিয়ার আমাকে শক্তি ফিরে পেতে সাহায্য করছে তাই বিকাশ অব্যাহত আছে। আপনি যদি এই অ্যাপ্লিকেশনটি পছন্দ করেন, তাহলে আপনি বিকাশকারীকে ধন্যবাদ জানাতে এবং পরবর্তী সংস্করণটিকে একটি ছোট দানের মাধ্যমে প্রকাশ করতে পারেন:</translation>
+      <translation>Ultima versiune a acestei aplicații a necesitat mult timp și efort. Am obosit rezolvând probleme serioase și făcând îmbunătățiri folositoare. O bere m-ar ajuta să îmi recapăt forțele! Dacă vă place această aplicație și vreți să ajutați la următoarea versiune, puteți să donați via:</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="117"/>
       <source>Check for Update</source>
-      <translation>আপডেটের জন্য চেক করুন</translation>
+      <translation>Verificați pentru actualizare</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="139"/>
       <source>About %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>কথা %1</translation>
+      <translation>Despre %1</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="193"/>
       <source>Something went wrong</source>
-      <translation>কিছু একটা ভুল হয়েছে</translation>
+      <translation>Ceva nu a mers bine</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="197"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
       <translatorcomment>Do not touch %1 it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-      <translation>নতুন সংস্করণ &lt;a href="%2"&gt;%1&lt;/a&gt; সনাক্ত করা হয়েছে</translation>
+      <translation>Nouă versiune &lt;a href="%2"&gt;%1&lt;/a&gt; a fost detectată</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="200"/>
       <source>The latest version is installed</source>
-      <translation>সর্বশেষ সংস্করণ ইনস্টল করা হচ্ছে</translation>
+      <translation>Ultima versiune a fost instalată</translation>
     </message>
   </context>
   <context>
@@ -53,22 +53,22 @@
     <message>
       <location filename="../bencodemodel.cpp" line="693"/>
       <source>Name</source>
-      <translation>নাম</translation>
+      <translation>Nume</translation>
     </message>
     <message>
       <location filename="../bencodemodel.cpp" line="694"/>
       <source>Type</source>
-      <translation>প্রকার</translation>
+      <translation>Tip</translation>
     </message>
     <message>
       <location filename="../bencodemodel.cpp" line="695"/>
       <source>Hex</source>
-      <translation>হেক্স</translation>
+      <translation>Hex</translation>
     </message>
     <message>
       <location filename="../bencodemodel.cpp" line="696"/>
       <source>Value</source>
-      <translation>মান</translation>
+      <translation>Valoare</translation>
     </message>
   </context>
   <context>
@@ -76,12 +76,12 @@
     <message>
       <location filename="../datewidget.cpp" line="67"/>
       <source>Clean</source>
-      <translation>পরিষ্কার</translation>
+      <translation>Elimină</translation>
     </message>
     <message>
       <location filename="../datewidget.cpp" line="83"/>
       <source>Show calendar</source>
-      <translation>ক্যালেন্ডার দেখান</translation>
+      <translation>Arată calandar</translation>
     </message>
   </context>
   <context>
@@ -89,12 +89,12 @@
     <message>
       <location filename="../folderedit.cpp" line="45"/>
       <source>Choose folder</source>
-      <translation>ফোল্ডার নির্বাচন করুন</translation>
+      <translation>Alege fișierul</translation>
     </message>
     <message>
       <location filename="../folderedit.cpp" line="60"/>
       <source>Add Folder</source>
-      <translation>ফোল্ডার সংযোজন করুন</translation>
+      <translation>Adăugare dosar</translation>
     </message>
   </context>
   <context>
@@ -103,125 +103,125 @@
       <location filename="../mainwindow.ui" line="30"/>
       <location filename="../mainwindow.ui" line="842"/>
       <source>New</source>
-      <translation>নতুন</translation>
+      <translation>Nou</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
       <location filename="../mainwindow.cpp" line="345"/>
       <source>Open</source>
-      <translation>ওপেন</translation>
+      <translation>Deschide</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="44"/>
       <location filename="../mainwindow.ui" line="858"/>
       <source>Save</source>
-      <translation>সংরক্ষণ করুন</translation>
+      <translation>Salvați</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
       <location filename="../mainwindow.cpp" line="370"/>
       <source>Save As</source>
-      <translation>এইরূপে সংরক্ষণ করুন</translation>
+      <translation>Salvați ca</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="88"/>
       <source>About</source>
-      <translation>সম্পর্কে</translation>
+      <translation>Despre</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="101"/>
       <source>Main</source>
-      <translation>প্রধান</translation>
+      <translation>Principal</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="189"/>
       <source>Pieces</source>
-      <translation>ঘুঁটিগুলি</translation>
+      <translation>Părți</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="148"/>
       <source>Created by</source>
-      <translation>সৃষ্টি করেছেন</translation>
+      <translation>Creat de</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="209"/>
       <source>Piece size</source>
-      <translation>টুকরা আকার</translation>
+      <translation>Mărimea Pieselor</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="199"/>
       <source>Publisher</source>
-      <translation>প্রকাশক</translation>
+      <translation>Producător</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="230"/>
       <source>Name</source>
-      <translation>নাম</translation>
+      <translation>Nume</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="114"/>
       <source>Private torrent</source>
-      <translation>প্রাইভেট টরেন্ট</translation>
+      <translation>Torrent privat</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="216"/>
       <source>URL</source>
-      <translation>ইউআরএল</translation>
+      <translation>URL</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="223"/>
       <source>Date created</source>
-      <translation>তৈরিকৃত তারিখ</translation>
+      <translation>Data creării</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="237"/>
       <source>Hash</source>
-      <translation>হ্যাশ</translation>
+      <translation>Hash</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="307"/>
       <source>Comment</source>
-      <translation>মন্তব্য</translation>
+      <translation>Comentariu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="325"/>
       <source>Trackers</source>
-      <translation>ট্রাকার</translation>
+      <translation>Contoare</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="345"/>
       <source>Files</source>
-      <translation>ফাইল</translation>
+      <translation>Fișiere</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="372"/>
       <source>Add files</source>
-      <translation>ফাইল যোগ করুন</translation>
+      <translation>Adăugați fișiere</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="388"/>
       <source>Add folder</source>
-      <translation>ফোল্ডার সংযোজন করুন</translation>
+      <translation>Adăugați dosar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="404"/>
       <source>Reload files list from current torrent data</source>
-      <translation>বর্তমান টরেন্ট ডেটা থেকে ফাইল তালিকা পুনরায় লোড করুন</translation>
+      <translation>Reîncărcați lista de fișiere din datele actuale ale torrent-ului</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="443"/>
       <source>Move file up</source>
-      <translation>ফাইল উপরে স্থানান্তর</translation>
+      <translation>Mutați fișierele în sus</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="459"/>
       <source>Move file down</source>
-      <translation>ফাইলের নীচে নামান</translation>
+      <translation>Mutați fișierele în jos</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="479"/>
       <source>Filter by </source>
-      <translation>দ্বারা ফিল্টার </translation>
+      <translation>Filtrează după </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="486"/>
@@ -242,72 +242,72 @@
   &lt;/body&gt;
 &lt;/html&gt;</source>
       <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;&lt;b&gt;নামটি&lt;/b&gt;&lt;/p&gt; &lt;p style="margin-left: 20px"&gt; ফাইল নামের বর্ধিতাংশ ঠিক প্যাটার্ন সঙ্গে সমান&lt;/p&gt; &lt;br/&gt; &lt;p&gt;&lt;b&gt;বা&lt;/b&gt;&lt;/p&gt; &lt;p style="margin-left: 20px"&gt; চিহ্নের পর সাম্প্রতিক আসলে প্যাটার্ন সঙ্গে সমান পয়েন্ট, archive.tar.gz জন্য 'gz' যেমন হবে&lt;/p&gt; &lt;br/&gt; &lt;p&gt;&lt;b&gt;ওয়াইল্ডকার্ডসমূহ&lt;/b&gt;&lt;/p&gt; &lt;p style="margin-left: 20px"&gt; ফাইল নামের বর্ধিতাংশ ফাইলের সাথে globbing সাথে মিলে কোথায় '?' এক কোন প্রতীক ও ' *' কোন সংখ্যা কোন চিহ্ন&lt;/p&gt; &lt;br/&gt; &lt;p&gt;&lt;b&gt;নিয়মিত  মত প্রকাশের স্বাধীনতার&lt;/b&gt;&lt;/p&gt; &lt;p style="margin-left: 20px"&gt; সম্পূর্ণ ফাইলের পথটি পার্ল-এর মত রেগুলার এক্সপ্রেশন ম্যাচ&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;  &lt;head/&gt;  &lt;body&gt;    &lt;p&gt;&lt;b&gt;nume&lt;/b&gt;&lt;/p&gt;    &lt;p style="margin-left: 20px"&gt;numele fișierului cu extensie este la fel cu moddelul&lt;/p&gt;    &lt;br/&gt;    &lt;p&gt;&lt;b&gt;extensie&lt;/b&gt;&lt;/p&gt;    &lt;p style="margin-left: 20px"&gt;spre exemplu, dacă simbolurile aflate după ultimul punct sunt la fel cu modelul arhivei 'archive.tar.gz' ar fi 'gz'&lt;/p&gt;    &lt;br/&gt;    &lt;p&gt;&lt;b&gt;wildcards&lt;/b&gt;&lt;/p&gt;    &lt;p style="margin-left: 20px"&gt;numele fișierului cu extensii se potrivește cu fișierul unde '?' este unul orice simbol și '*' este orice număr de simboluri&lt;/p&gt;    &lt;br/&gt;    &lt;p&gt;&lt;b&gt;expresii normale&lt;/b&gt;&lt;/p&gt;    &lt;p style="margin-left: 20px"&gt;calea completă a fișierelor se potrivește cu expresia regulată tip Perl&lt;/p&gt;  &lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="505"/>
       <source>name</source>
-      <translation>নাম</translation>
+      <translation>nume</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="510"/>
       <source>extension</source>
-      <translation>প্রসার</translation>
+      <translation>extensie</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="515"/>
       <source>wildcards</source>
-      <translation>ওয়াইল্ডকার্ডসমূহ</translation>
+      <translation>metacaractere</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="520"/>
       <source>regular expression</source>
-      <translation>রেগুলার এক্সপ্রেশন</translation>
+      <translation>expresii normale</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="538"/>
       <source>Filter files</source>
-      <translation>ফিল্টার ফাইল</translation>
+      <translation>Filtrează fișierele</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="633"/>
       <source>Torrent root folder </source>
-      <translation>টরেন্ট রুট ফোল্ডার </translation>
+      <translation>Dosarul rădăcină al torrent-ului </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="646"/>
       <source>Tree</source>
-      <translation>ট্রি</translation>
+      <translation>Arbore</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="657"/>
       <source>Add tree item</source>
-      <translation>ট্রি আইটেম যোগ করুন</translation>
+      <translation>Adaugă element arbore</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="689"/>
       <source>Move list item up</source>
-      <translation>তালিকার আইটেম উপরে সরান</translation>
+      <translation>Deplasează elementul din listă în sus</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="705"/>
       <source>Move list item down</source>
-      <translation>তালিকার আইটেমটি নিচে সরান</translation>
+      <translation>Deplasează elementul din listă în jos</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="721"/>
       <source>Find</source>
-      <translation>খুঁজুন</translation>
+      <translation>Găsește</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="737"/>
       <source>Replace</source>
-      <translation>প্রতিস্থাপন করুন</translation>
+      <translation>Înlocuiește</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="830"/>
       <source>File</source>
-      <translation>ফাইল</translation>
+      <translation>Fișier</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="845"/>
@@ -317,7 +317,7 @@
     <message>
       <location filename="../mainwindow.ui" line="850"/>
       <source>Open...</source>
-      <translation>খুলুন...</translation>
+      <translation>Deschide...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="853"/>
@@ -332,7 +332,7 @@
     <message>
       <location filename="../mainwindow.ui" line="866"/>
       <source>Save As...</source>
-      <translation>নতুন ভাবে সংরক্ষণ করুন...</translation>
+      <translation>Salvați ca...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="869"/>
@@ -342,103 +342,103 @@
     <message>
       <location filename="../mainwindow.ui" line="874"/>
       <source>About...</source>
-      <translation>সম্পর্কিত কথা...</translation>
+      <translation>Despre...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="65"/>
       <source>Coding</source>
-      <translation>কোডিং</translation>
+      <translation>Codificare</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="356"/>
       <source>Calculate pieces hashes</source>
-      <translation>টুকরা হ্যাশগুলি গণনা করুন</translation>
+      <translation>Calculați numărul de fragmente</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="427"/>
       <source>Remove selected files</source>
-      <translation>নির্বাচিত ফাইলসমূহ অপসারণ করুন</translation>
+      <translation>Elimină fișierele selectate</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="587"/>
       <source>Piece size </source>
-      <translation>টুকরা আকার </translation>
+      <translation>Mărimea părților </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="604"/>
       <source>Total size </source>
-      <translation>মোট আকার </translation>
+      <translation>Dimensiune totală </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="673"/>
       <source>Delete selected tree items</source>
-      <translation>নির্বাচিত ট্রি আইটেমগুলি মুছুন</translation>
+      <translation>Ștergeți elementele selectate ale arborelului</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="773"/>
       <source>Raw</source>
-      <translation>কাঁচা</translation>
+      <translation>Brut</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="201"/>
       <source>Need to calculate piece hashes</source>
-      <translation>টুকরা হ্যাশ গণনা করা প্রয়োজন</translation>
+      <translation>Trebuie să calculați părțile fragmentelor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="202"/>
       <source>Please wait</source>
-      <translation>অনুগ্রহ করে অপেক্ষা করুন</translation>
+      <translation>Vă rugăm așteptați</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="212"/>
       <source>Auto</source>
-      <translation>স্বতস্ফূর্তভাবে</translation>
+      <translation>Automat</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="220"/>
       <source>Path</source>
-      <translation>প্যাথ</translation>
+      <translation>Cale</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="220"/>
       <source>Size</source>
-      <translation>আকার</translation>
+      <translation>Mărime</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="182"/>
       <source>Torrents (*.torrent)</source>
-      <translation>টরেন্ট (*.torrent)</translation>
+      <translation>Torrents (*.torrent)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="183"/>
       <source>uTorrent resume files (*.dat)</source>
-      <translation>uTorrent ফাইল (*.dat) পুনরায় শুরু করুন</translation>
+      <translation>uTorrent reluați fișierele (*.dat)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="220"/>
       <source># Pieces</source>
-      <translation># টুকরা</translation>
+      <translation># Părți</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="322"/>
       <location filename="../mainwindow.cpp" line="808"/>
       <source>Error</source>
-      <translation>ত্রুটি</translation>
+      <translation>Eroare</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="322"/>
       <source>Can't open file</source>
-      <translation>ফাইলটি খোলা যাচ্ছে না</translation>
+      <translation>Nu se poate deschide fișierul</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="589"/>
       <source>Warning</source>
-      <translation>সতর্কতা</translation>
+      <translation>Avertisment</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="565"/>
       <source>Torrent root folder is not set</source>
-      <translation>টরেন্ট রুট ফোল্ডারটি সেট করা নেই</translation>
+      <translation>Rădăcina dosarului torrent-ului nu este setată</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="365"/>
@@ -446,13 +446,13 @@
       <location filename="../mainwindow.cpp" line="1049"/>
       <location filename="../mainwindow.cpp" line="1060"/>
       <source>Can't save file</source>
-      <translation>ফাইল সংরক্ষণ করা যাবে না</translation>
+      <translation>Nu se poate deschide fișierul</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="365"/>
       <location filename="../mainwindow.cpp" line="1041"/>
       <source>BEncoded data is not valid</source>
-      <translation>BEncoded তথ্য বৈধ নয়</translation>
+      <translation>Data BEncoded nu este validă</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="566"/>
@@ -461,39 +461,37 @@
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
 
 Do you want to set torrent root folder and try again?</source>
-      <translation>ডিস্কের ফাইলগুলির পাথ জানা নেই টরেন্ট সম্পূর্ণরূপে ডাউনলোড করা ফাইলগুলি থেকে তৈরি হতে পারে।
-
-যদি আপনি বর্তমান টরেন্টে ফাইল তালিকা সম্পাদনা করতে চান তবে আপনাকে টরেন্ট রুট ফোল্ডার সেট করতে হবে। টরেন্ট রুট ফোল্ডার একটি ফোল্ডার যেখানে সমস্ত ফাইলটি ডিস্কে অবস্থিত। ডিস্কের উপর প্রকৃত ফাইল পাথ টরেন্ট ফাইল থেকে আপেক্ষিক পাথ সহ জোড় মূল ফোল্ডার। যদি কিছু ফাইল অনুপস্থিত থাকে তাহলে টরেন্ট তৈরি করা যাবে না।
-
-আপনি টরেন্ট রুট ফোল্ডার সেট করতে এবং আবার চেষ্টা করতে চান?</translation>
+      <translation>Calea fișierelor de pe disk nu este cunoscută. Torrent-ul poate fi generat doar din fișiere descărcate complet. 
+Dacă vrei să editezi fișiere torrent-ului actual trebuie să setezi dosarul rădăcină al torrent-ului. Dosarul rădăcină al torrent-ului este dosarul în care sunt localizate toate fișierele de pe disk. Calea actuală a fișierului de pe disk este dosarul rădăcină al torrent-ului cu calea relativă din fișierul torrent-ului. Dacă unele fișiere lipsesc, torrent-ul nu poate fi deschis.
+Vrei să stezi rădăcina actuală a dosarului și să încerci din nou?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="589"/>
       <source>The torrent root folder is not common.</source>
-      <translation>টরেন্টের মুল ফোল্ডার সাধারণ নয়।</translation>
+      <translation>Rădăcina dosarului torrent-ului nu este comună.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="648"/>
       <source>Add File</source>
-      <translation>ফাইল যোগ করুন</translation>
+      <translation>Adaugă fișier</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="669"/>
       <source>Add Folder</source>
-      <translation>ফোল্ডার সংযোজন করুন</translation>
+      <translation>Adaugă dosar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="815"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>Line: %1 of %2 Col: %3</translation>
+      <translation>Linie: %1 din %2 Col:%3</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="999"/>
       <location filename="../mainwindow.cpp" line="1007"/>
       <source>Error on %1 line: %2</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>ত্রুটি ধরা পড়েছে %1 line: %2</translation>
+      <translation>Eroare pe %1 linia:%2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1157"/>
@@ -503,38 +501,38 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../mainwindow.cpp" line="1161"/>
       <source>KiB</source>
-      <translation>কে-বি</translation>
+      <translation>KiB</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1165"/>
       <source>MiB</source>
-      <translation>এম-বি</translation>
+      <translation>MiB</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1169"/>
       <source>GiB</source>
-      <translation>জি-বি</translation>
+      <translation>GiB</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1173"/>
       <source>TiB</source>
-      <translation>টি-বি</translation>
+      <translation>TiB</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1191"/>
       <source>Save file</source>
-      <translation>ফাইল সংরক্ষণ করুন</translation>
+      <translation>Salvează fișierul</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1192"/>
       <source>Untitled</source>
-      <translation>শিরোনামহীন</translation>
+      <translation>Fără titlu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1193"/>
       <source>Save file "%1"?</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>ফাইল "%1" সংরক্ষণ করুন?</translation>
+      <translation>Salvează fișierul "%1"?</translation>
     </message>
   </context>
   <context>
@@ -542,27 +540,27 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../bencode.cpp" line="219"/>
       <source>list</source>
-      <translation>তালিকা</translation>
+      <translation>listă</translation>
     </message>
     <message>
       <location filename="../bencode.cpp" line="220"/>
       <source>dictionary</source>
-      <translation>অভিধান</translation>
+      <translation>dicționar</translation>
     </message>
     <message>
       <location filename="../bencode.cpp" line="221"/>
       <source>integer</source>
-      <translation>পূর্ণ সংখ্যা</translation>
+      <translation>număr întreg</translation>
     </message>
     <message>
       <location filename="../bencode.cpp" line="222"/>
       <source>string</source>
-      <translation>দড়ি</translation>
+      <translation>șir</translation>
     </message>
     <message>
       <location filename="../bencode.cpp" line="223"/>
       <source>invalid</source>
-      <translation>অবৈধ</translation>
+      <translation>nu este valid</translation>
     </message>
   </context>
   <context>
@@ -570,105 +568,106 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../searchdlg.ui" line="27"/>
       <source>Key</source>
-      <translation>চাবি</translation>
+      <translation>Cheie</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="39"/>
       <location filename="../searchdlg.ui" line="96"/>
       <source>Match case</source>
-      <translation>মিল খুঁজুন</translation>
+      <translation>Potrivire</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="46"/>
       <location filename="../searchdlg.ui" line="103"/>
       <source>Exact match</source>
-      <translation>সঠিক মিল</translation>
+      <translation>Potrivire exactă</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="56"/>
       <location filename="../searchdlg.ui" line="113"/>
       <source>Wildcards</source>
-      <translation>ওয়াইল্ডকার্ডসমূহ</translation>
+      <translation>Metacaractere</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="63"/>
       <location filename="../searchdlg.ui" line="120"/>
       <source>Regular expression</source>
-      <translation>রেগুলার এক্সপ্রেশন</translation>
+      <translation>Expresii obișnuite</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="84"/>
       <source>Value</source>
-      <translation>মান</translation>
+      <translation>Valoare</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="127"/>
       <source>Hex</source>
-      <translation>হেক্স</translation>
+      <translation>Hex</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="154"/>
       <source>Replace value with</source>
-      <translation>মান দ্বারা প্রতিস্থাপন করুন</translation>
+      <translation>Înlocuiți vloarea cu</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="164"/>
       <source>hex</source>
-      <translation>হেক্স</translation>
+      <translation>hex</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="176"/>
       <source>Direction</source>
-      <translation>দিক</translation>
+      <translation>Direcție</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="182"/>
       <source>Up</source>
-      <translation>উপরে</translation>
+      <translation>Sus</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="189"/>
       <source>Down</source>
-      <translation>নিচে</translation>
+      <translation>Jos</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="204"/>
       <source>Replace All</source>
-      <translation>সমস্ত প্রতিস্থাপন</translation>
+      <translation>Înlocuire tot</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="224"/>
       <source>Find Next</source>
-      <translation>পরবর্তী উপস্থিত অনুসন্ধান</translation>
+      <translation>Găsește următorul</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="248"/>
       <location filename="../searchdlg.cpp" line="63"/>
       <source>Replace</source>
-      <translation>প্রতিস্থাপন করুন</translation>
+      <translation>Înlocuiește</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="231"/>
       <source>Close</source>
-      <translation>বন্ধ করুন</translation>
+      <translation>Închide</translation>
     </message>
     <message>
       <location filename="../searchdlg.cpp" line="63"/>
       <source>Find</source>
-      <translation>খুঁজুন</translation>
+      <translation>Găsește</translation>
     </message>
     <message>
       <location filename="../searchdlg.cpp" line="156"/>
       <source>No matches found</source>
-      <translation>কোন মিল খুঁজে পাওয়া যায় নি</translation>
+      <translation>Nici o potrivire găsită</translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="161"/>
       <source>%1 of %n match(es)</source>
       <translatorcomment>Do not touch %1 it must be as is. Make translations for both singular and plural forms. </translatorcomment>
       <translation>
-        <numerusform>%1 এর %n মিল(es)</numerusform>
-        <numerusform>%1 এর %n মিল(es)</numerusform>
+        <numerusform>%1 din %n potrivire(viri)</numerusform>
+        <numerusform>%1 din %n potrivire(viri)</numerusform>
+        <numerusform>%1 din %n potrivire(viri)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -676,8 +675,9 @@ Do you want to set torrent root folder and try again?</source>
       <source>%n value(s) was(were) replaced</source>
       <translatorcomment>Do not touch %n it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>
-        <numerusform>%n value(s) was(were) প্রতিস্থাপন</numerusform>
-        <numerusform>%n value(s) was(were) প্রতিস্থাপন</numerusform>
+        <numerusform>%n valoare(valorii) a fost(au fost) înlocuită(înlocuite)</numerusform>
+        <numerusform>%n valoare(valorii) a fost(au fost) înlocuită(înlocuite)</numerusform>
+        <numerusform>%n valoare(valorii) a fost(au fost) înlocuită(înlocuite)</numerusform>
       </translation>
     </message>
   </context>
@@ -686,7 +686,7 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../urledit.cpp" line="42"/>
       <source>Open in internet browser</source>
-      <translation>ইন্টারনেট ব্রাউজারে খুলুন</translation>
+      <translation>Deschide în inetrnet browser</translation>
     </message>
   </context>
   <context>
@@ -695,13 +695,13 @@ Do you want to set torrent root folder and try again?</source>
       <location filename="../mainwindow.cpp" line="111"/>
       <source>Can't open %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>%1 খোলা যাবে না</translation>
+      <translation>Nu se poate deschide %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="146"/>
       <source>Can't read from %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>%1 থেকে পড়া যায় না</translation>
+      <translation>Nu se poate citi din %1</translation>
     </message>
   </context>
 </TS>

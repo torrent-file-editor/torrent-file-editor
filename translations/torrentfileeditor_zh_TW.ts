@@ -6,11 +6,13 @@
     <message>
       <location filename="../aboutdlg.ui" line="175"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>作者：Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt; &lt;span style =“text-decoration：underline; color：＃0057ae;”&gt; drizt GNU通用公共許可證v3.0或更高版本&lt;/ p&gt; &lt;p&gt;主頁：&lt;a href =“http：// sourceforge.net / projects / torrent-file-editor /“&gt; &lt;span style =”text-decoration：underline; color：＃0057ae;“&gt; http://sourceforge.net/projects/torrent-file-editor/ &lt;/ span&gt; &gt; &lt;/a&gt; &lt;/ p&gt; &lt;p&gt;來源：&lt;a href="http://github.com/drizt/torrent-file-editor"&gt; &lt;span style =“text-decoration：underline; color：＃ 0057ae;“&gt; http://github.com/drizt/torrent-file-editor &lt;/ span&gt; &lt;/a&gt; &lt;/ p&gt; &lt;p&gt;感謝&lt;a href =”http://rutracker.org/forum /profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style =“text-decoration：underline; color：＃0057ae;”&gt; ALEX Krays &lt;/ span&gt; &lt;/a&gt;用於應用程序圖標&lt;/ p&gt; &lt;// BODY&gt;&lt;/ HTML&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="39"/>
       <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
+      <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>&lt;h3&gt;用於開發人員的啤酒&lt;/h3&gt;</translation>
     </message>
     <message>
@@ -30,6 +32,7 @@
     <message>
       <location filename="../aboutdlg.cpp" line="139"/>
       <source>About %1</source>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>關於 %1</translation>
     </message>
     <message>
@@ -40,6 +43,7 @@
     <message>
       <location filename="../aboutdlg.cpp" line="197"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
+      <translatorcomment>Do not touch %1 it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>前50個主題</translation>
     </message>
     <message>
@@ -241,7 +245,22 @@
     &lt;p style="margin-left: 20px"&gt;full file path matches Perl-like regular expression&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;</source>
-      <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt; &lt;b&gt; 名稱 &lt;/b&gt; &lt;/p&gt; &lt;p style="margin-left: 20px"&gt; 檔案名與副檔名完全等同于模式 &lt;/p&gt; &lt;br/&gt; &lt;p&gt; &lt;b&gt; 擴展 &lt;/b&gt; &lt;/p&gt; &lt;p style="margin-left: 20px"&gt; 在最新點之後的符號與模式完全等同, 對於 "archive.tar.gz", 它將是 "gz", 例如 &lt;/p&gt; &lt;br/&gt; &lt;p&gt; &lt;b&gt; 萬用字元 &lt;/b&gt; &lt;/p&gt; &lt;p style="margin-left: 20px"&gt; 檔案名與檔組合的副檔名匹配, 其中 "？" 是一個任何符號, "*" 是任何符號的任何數位 &lt;/p&gt; &lt;br/&gt; &lt;p&gt; &lt;b&gt; 常規 運算式 &lt;/b&gt; &lt;/p&gt; &lt;p style="margin-left: 20px"&gt; 完整檔路徑與 Perl 類似的正則運算式 &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+      <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
+      <translation>&lt;html&gt;
+ &lt;head/&gt;
+ &lt;body&gt; &lt;p&gt; &lt;b&gt; 名稱 &lt;/b&gt;&lt;/p&gt;
+  &lt;p style="margin-left: 20px"&gt; 檔案名與副檔名完全等同于模式 &lt;/p&gt;
+  &lt;br/&gt;
+  &lt;p&gt;&lt;b&gt; 擴展 &lt;/b&gt;&lt;/p&gt;
+  &lt;p style="margin-left: 20px"&gt; 在最新點之後的符號與模式完全等同, 對於 "archive.tar.gz", 它將是 "gz", 例如 &lt;/p&gt;
+  &lt;br/&gt;
+  &lt;p&gt;&lt;b&gt; 萬用字元 &lt;/b&gt;&lt;/p&gt;
+  &lt;p style="margin-left: 20px"&gt; 檔案名與檔組合的副檔名匹配, 其中 "？" 是一個任何符號, "*" 是任何符號的任何數位 &lt;/p&gt;
+  &lt;br/&gt;
+  &lt;p&gt;&lt;b&gt; 常規 運算式 &lt;/b&gt;&lt;/p&gt;
+  &lt;p style="margin-left: 20px"&gt; 完整檔路徑與 Perl 類似的正則運算式 &lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="505"/>
@@ -427,7 +446,6 @@
     <message>
       <location filename="../mainwindow.cpp" line="322"/>
       <source>Can't open file</source>
-      <translatorcomment>Не могу открыть файл</translatorcomment>
       <translation>無法打開文件</translation>
     </message>
     <message>
@@ -490,12 +508,14 @@ Torrent只能從完全下載的文件中生成。
     <message>
       <location filename="../mainwindow.cpp" line="815"/>
       <source>Line: %1 of %2 Col: %3</source>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>線: %1 %2 上校: %3</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="999"/>
       <location filename="../mainwindow.cpp" line="1007"/>
       <source>Error on %1 line: %2</source>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>%1 行上的錯誤: %2</translation>
     </message>
     <message>
@@ -536,6 +556,7 @@ Torrent只能從完全下載的文件中生成。
     <message>
       <location filename="../mainwindow.cpp" line="1193"/>
       <source>Save file "%1"?</source>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>是否保存檔 "%1"？</translation>
     </message>
   </context>
@@ -606,8 +627,7 @@ Torrent只能從完全下載的文件中生成。
     <message>
       <location filename="../searchdlg.ui" line="127"/>
       <source>Hex</source>
-      <translation>Hex
-</translation>
+      <translation>Hex</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="154"/>
@@ -668,13 +688,15 @@ Torrent只能從完全下載的文件中生成。
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="161"/>
       <source>%1 of %n match(es)</source>
+      <translatorcomment>Do not touch %1 it must be as is. Make translations for both singular and plural forms. </translatorcomment>
       <translation>
-        <numerusform>%d/%d 個匹配</numerusform>
+        <numerusform>%1/%n 個匹配</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="214"/>
       <source>%n value(s) was(were) replaced</source>
+      <translatorcomment>Do not touch %n it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>
         <numerusform>%n 值已被替換</numerusform>
       </translation>
@@ -693,11 +715,13 @@ Torrent只能從完全下載的文件中生成。
     <message>
       <location filename="../mainwindow.cpp" line="111"/>
       <source>Can't open %1</source>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>無法打開%1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="146"/>
       <source>Can't read from %1</source>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>無法讀取%1</translation>
     </message>
   </context>

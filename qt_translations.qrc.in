@@ -7,6 +7,7 @@
         <file>qt_de.qm</file>
         <!-- qt_en.qm missed -->
         <file>qt_es.qm</file>
+        <!-- qt_fi.qm missed -->
         <file>qt_fr.qm</file>
         <file>qt_he.qm</file>
         <file>qt_hu.qm</file>
@@ -17,6 +18,7 @@
         <!-- qt_nl.qm missed -->
         <file>qt_pl.qm</file>
         <!-- qt_pt.qm fixme -->
+        <!-- qt_ro.qm fixme -->
         <file>qt_ru.qm</file>
         <!-- qt_tr.qm missed -->
         <!-- qt_vi.qm missed -->
