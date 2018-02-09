@@ -1,3 +1,10 @@
+if(APPLE)
+  # CPACK_DMG_DS_STORE_SETUP_SCRIPT was introduced only in CMake 3.5
+  cmake_minimum_required(VERSION 3.5)
+else()
+  cmake_minimum_required(VERSION 2.8.11)
+endif()
+
 if(NOT ${CMAKE_VERSION} VERSION_LESS "3.5.0")
   # Enable PVS support
   set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE BOOL "Enable/Disable output of compile commands during generation.")
@@ -5,13 +12,6 @@ endif()
 
 project("Torrent File Editor")
 set(EXE_NAME "torrent-file-editor")
-
-if(APPLE)
-  # CPACK_DMG_DS_STORE_SETUP_SCRIPT was introduced only in CMake 3.5
-  cmake_minimum_required(VERSION 3.5)
-else()
-  cmake_minimum_required(VERSION 2.8.11)
-endif()
 
 if(POLICY CMP0046)
   cmake_policy(SET CMP0046 OLD)
