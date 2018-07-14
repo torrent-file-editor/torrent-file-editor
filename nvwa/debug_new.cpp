@@ -986,24 +986,56 @@ size_t check_leaks_summary()
     }
 
     new_ptr_list_t *summary_ptr = summary_ptr_list.next;
+
+    // sort list
+    bool needSort = true;
+    while (needSort)
+    {
+        needSort = false;
+        summary_ptr = summary_ptr_list.next;
+        while (summary_ptr != summary_ptr_list.prev)
+        {
+            new_ptr_list_t *next = summary_ptr->next;
+
+            if (summary_ptr->size > next->size)
+            {
+                needSort = true;
+                next->prev = summary_ptr->prev;
+                summary_ptr->next = next->next;
+
+                next->next = summary_ptr;
+                summary_ptr->prev = next;
+
+                next->prev->next = next;
+                summary_ptr->next->prev = summary_ptr;
+
+                summary_ptr = next;
+            }
+
+            summary_ptr = summary_ptr->next;
+        }
+    }
+
+    summary_ptr = summary_ptr_list.next;
+
     while (summary_ptr != &summary_ptr_list)
     {
         fprintf(new_output_fp,
-                "Leaked %zu bytes in %u ",
+                "%zu bytes in %u ",
                 summary_ptr->size,
                 summary_ptr->count);
 
         if (summary_ptr->is_array)
-            fprintf(new_output_fp, "calls (");
+            fprintf(new_output_fp, "calls - ");
         else
-            fprintf(new_output_fp, "objects (");
+            fprintf(new_output_fp, "objects - ");
 
         if (summary_ptr->line != 0)
             print_position(summary_ptr->file, summary_ptr->line);
         else
             print_position(summary_ptr->addr, summary_ptr->line);
 
-        fprintf(new_output_fp, ")\n");
+        fprintf(new_output_fp, "\n");
         summary_ptr = summary_ptr->next;
         free(summary_ptr->prev);
     }
