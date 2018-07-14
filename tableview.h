@@ -33,7 +33,17 @@ public:
 signals:
     void deleteRow();
 
+private slots:
+    void copy();
+    void copyWithSize();
+
 protected:
-    QModelIndex moveCursor(CursorAction cursorAction, Qt::KeyboardModifiers modifiers);
-    void keyPressEvent(QKeyEvent *event);
+    QModelIndex moveCursor(CursorAction cursorAction, Qt::KeyboardModifiers modifiers) override;
+    void keyPressEvent(QKeyEvent *event) override;
+    void contextMenuEvent(QContextMenuEvent *event) override;
+
+private:
+    QMenu *_menu{};
+    QAction *_copyAct{};
+    QAction *_copySizeAct{};
 };

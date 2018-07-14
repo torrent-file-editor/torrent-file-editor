@@ -25,10 +25,70 @@
 #include <QClipboard>
 #include <QKeyEvent>
 #include <QItemSelectionModel>
+#include <QMenu>
+#include <QLineEdit>
+
+#ifdef HAVE_QT5
+# include <QStyleHints>
+# define ACCEL_KEY(k) ((!QCoreApplication::testAttribute(Qt::AA_DontShowIconsInMenus)                      \
+                         && QGuiApplication::styleHints()->showShortcutsInContextMenus())                  \
+                       && !QKeySequence(k).toString(QKeySequence::NativeText).isEmpty() ?                  \
+                       QLatin1Char('\t') + QKeySequence(k).toString(QKeySequence::NativeText) : QString())
+#else
+# define ACCEL_KEY(k) (!QCoreApplication::testAttribute(Qt::AA_DontShowIconsInMenus)                       \
+                       && !QKeySequence(k).toString(QKeySequence::NativeText).isEmpty() ?                  \
+                       QLatin1Char('\t') + QKeySequence(k).toString(QKeySequence::NativeText) : QString())
+#endif
+
 
 TableView::TableView(QWidget *parent)
     : QTableView(parent)
+    , _menu(new QMenu(this))
 {
+    setContextMenuPolicy(Qt::DefaultContextMenu);
+
+    _copyAct = new QAction(QLineEdit::tr("&Copy") + ACCEL_KEY(QKeySequence::Copy), this);
+    _copyAct->setIcon(QIcon::fromTheme(QLatin1String("edit-copy")));
+    _copyAct->setShortcut(QKeySequence::Copy);
+    connect(_copyAct, SIGNAL(triggered()), SLOT(copy()));
+    _menu->addAction(_copyAct);
+    addAction(_copyAct);
+
+    _copySizeAct = new QAction(QLatin1String("Copy with Size\tCtrl+Shift+C"), this);
+    _copySizeAct->setShortcut(QKeySequence(QLatin1String("Ctrl+Shift+C")));
+    connect(_copySizeAct, SIGNAL(triggered()), SLOT(copyWithSize()));
+    _menu->addAction(_copySizeAct);
+    addAction(_copySizeAct);
+}
+
+void TableView::copy()
+{
+    QItemSelectionModel *selection = selectionModel();
+    QModelIndexList rows = selection->selectedRows();
+    QStringList files;
+    for (const auto &row: rows) {
+        files << row.data().toString();
+    }
+
+    if (!files.isEmpty()) {
+        QApplication::clipboard()->setText(files.join(QStringLiteral("\n")));
+    }
+}
+
+void TableView::copyWithSize()
+{
+    QItemSelectionModel *selection = selectionModel();
+    QModelIndexList nameRows = selection->selectedRows(0);
+    QModelIndexList sizeRows = selection->selectedRows(1);
+    QStringList files;
+
+    for (int i = 0; i < nameRows.length(); ++i) {
+        files << nameRows.at(i).data().toString() + QLatin1String("\t") + sizeRows.at(i).data().toString();
+    }
+
+    if (!files.isEmpty()) {
+        QApplication::clipboard()->setText(files.join(QStringLiteral("\n")));
+    }
 }
 
 QModelIndex TableView::moveCursor(CursorAction cursorAction, Qt::KeyboardModifiers modifiers) // -V813 PVS-Studio
@@ -54,20 +114,16 @@ void TableView::keyPressEvent(QKeyEvent *event)
     if (event == QKeySequence::Delete) {
         emit deleteRow();
     }
-    else if (event == QKeySequence::Copy) {
-        QItemSelectionModel *selection = selectionModel();
-        QModelIndexList rows = selection->selectedRows();
-        QStringList files;
-        for (const auto &row: rows) {
-            files << row.data().toString();
-        }
-
-        if (!files.isEmpty()) {
-            QApplication::clipboard()->setText(files.join(QStringLiteral("\n")));
-        }
-        event->accept();
-    }
     else {
         QTableView::keyPressEvent(event);
     }
+}
+
+void TableView::contextMenuEvent(QContextMenuEvent *event)
+{
+    bool hasSelection = selectionModel()->hasSelection();
+    _copyAct->setEnabled(hasSelection);
+    _copySizeAct->setEnabled(hasSelection);
+
+    _menu->exec(event->globalPos());
 }
