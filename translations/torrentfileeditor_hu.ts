@@ -4,13 +4,15 @@
   <context>
     <name>AboutDlg</name>
     <message>
-      <location filename="../aboutdlg.ui" line="175"/>
+      <location filename="../aboutdlg.ui" line="184"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Szerző: Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Licenc: GNU Általános Nyilvános Licenc v3.0 vagy újabb&lt;/p&gt;&lt;p&gt;Honlap: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Források: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Köszönet &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt;nek az alkalmazás ikonért&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="39"/>
       <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
+      <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>&lt;h3&gt;Sör a fejlesztőnek&lt;/h3&gt;</translation>
     </message>
     <message>
@@ -19,13 +21,14 @@
       <translation>Az utolsó verzió elkészítése rengeteg időt és erőfeszítést igényelt. Súlyos hibákat javított és hasznos fejlesztéseket hozott. Fáradt vagyok. De egy kis sör segít nekem visszanyerni az erőt és folytatni a fejlesztést. Ha kedveled ezt az alkalmazás, meg akarod köszönni a fejlesztőnek és az új verzió kiadását, tehetsz egy kis adományt ezzel:</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.ui" line="117"/>
+      <location filename="../aboutdlg.ui" line="126"/>
       <source>Check for Update</source>
       <translation type="unfinished">Check for Update</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="139"/>
       <source>About %1</source>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>%1-ről</translation>
     </message>
     <message>
@@ -36,6 +39,7 @@
     <message>
       <location filename="../aboutdlg.cpp" line="197"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
+      <translatorcomment>Do not touch %1 it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation type="unfinished">New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</translation>
     </message>
     <message>
@@ -47,22 +51,22 @@
   <context>
     <name>BencodeModel</name>
     <message>
-      <location filename="../bencodemodel.cpp" line="693"/>
+      <location filename="../bencodemodel.cpp" line="694"/>
       <source>Name</source>
       <translation>Név</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="694"/>
+      <location filename="../bencodemodel.cpp" line="695"/>
       <source>Type</source>
       <translation>Típus</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="695"/>
+      <location filename="../bencodemodel.cpp" line="696"/>
       <source>Hex</source>
       <translation>Hex</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="696"/>
+      <location filename="../bencodemodel.cpp" line="697"/>
       <source>Value</source>
       <translation>Érték</translation>
     </message>
@@ -103,7 +107,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
-      <location filename="../mainwindow.cpp" line="345"/>
+      <location filename="../mainwindow.cpp" line="349"/>
       <source>Open</source>
       <translation>Megnyitás</translation>
     </message>
@@ -115,7 +119,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="370"/>
+      <location filename="../mainwindow.cpp" line="374"/>
       <source>Save As</source>
       <translation>Mentés másként</translation>
     </message>
@@ -237,6 +241,7 @@
     &lt;p style="margin-left: 20px"&gt;full file path matches Perl-like regular expression&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;</source>
+      <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>&lt;html&gt;
   &lt;head/&gt;
   &lt;body&gt;
@@ -390,83 +395,82 @@
       <translation>Nyers</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="201"/>
+      <location filename="../mainwindow.cpp" line="205"/>
       <source>Need to calculate piece hashes</source>
       <translation>Darab hashek számolása szükséges</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="202"/>
+      <location filename="../mainwindow.cpp" line="206"/>
       <source>Please wait</source>
       <translation>Kérlek, várj</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="212"/>
+      <location filename="../mainwindow.cpp" line="216"/>
       <source>Auto</source>
       <translation>Auto</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="220"/>
+      <location filename="../mainwindow.cpp" line="224"/>
       <source>Path</source>
       <translation>Elérési út</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="220"/>
+      <location filename="../mainwindow.cpp" line="224"/>
       <source>Size</source>
       <translation>Méret</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="182"/>
+      <location filename="../mainwindow.cpp" line="186"/>
       <source>Torrents (*.torrent)</source>
       <translation>Torrentek (*.torrent)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="183"/>
+      <location filename="../mainwindow.cpp" line="187"/>
       <source>uTorrent resume files (*.dat)</source>
       <translation>uTorrent folytató fájlok (*.dat)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="220"/>
+      <location filename="../mainwindow.cpp" line="224"/>
       <source># Pieces</source>
       <translation># Darab</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="322"/>
-      <location filename="../mainwindow.cpp" line="808"/>
+      <location filename="../mainwindow.cpp" line="326"/>
+      <location filename="../mainwindow.cpp" line="813"/>
       <source>Error</source>
       <translation>Hiba</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="322"/>
+      <location filename="../mainwindow.cpp" line="326"/>
       <source>Can't open file</source>
-      <translatorcomment>Не могу открыть файл</translatorcomment>
       <translation>Fájl nem nyitható meg</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="589"/>
+      <location filename="../mainwindow.cpp" line="594"/>
       <source>Warning</source>
       <translation>Figyelmeztetés</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="565"/>
+      <location filename="../mainwindow.cpp" line="569"/>
       <source>Torrent root folder is not set</source>
       <translation>Torrent gyökérkönyvtár nincs beállítva</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="365"/>
-      <location filename="../mainwindow.cpp" line="1041"/>
-      <location filename="../mainwindow.cpp" line="1049"/>
-      <location filename="../mainwindow.cpp" line="1060"/>
+      <location filename="../mainwindow.cpp" line="369"/>
+      <location filename="../mainwindow.cpp" line="1046"/>
+      <location filename="../mainwindow.cpp" line="1054"/>
+      <location filename="../mainwindow.cpp" line="1065"/>
       <source>Can't save file</source>
       <translation>Fájl nem menthető</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="365"/>
-      <location filename="../mainwindow.cpp" line="1041"/>
+      <location filename="../mainwindow.cpp" line="369"/>
+      <location filename="../mainwindow.cpp" line="1046"/>
       <source>BEncoded data is not valid</source>
       <translation>Bencoded adat érvénytelen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="566"/>
+      <location filename="../mainwindow.cpp" line="570"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
@@ -479,70 +483,81 @@ Ha szeretnéd módosítani a fájl listát a jelenlegi torrentben, akkor be kell
 Szeretnéd beállítani a torrent gyökérkönyvtárat és újrapróbálni?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="589"/>
+      <location filename="../mainwindow.cpp" line="594"/>
       <source>The torrent root folder is not common.</source>
       <translation>A torrent gyökérkönyvtár nem általános.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="648"/>
+      <location filename="../mainwindow.cpp" line="653"/>
       <source>Add File</source>
       <translation>Fájlok hozzáadása</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="669"/>
+      <location filename="../mainwindow.cpp" line="674"/>
       <source>Add Folder</source>
       <translation>Mappa hozzáadása</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="815"/>
+      <location filename="../mainwindow.cpp" line="820"/>
       <source>Line: %1 of %2 Col: %3</source>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Sor: %1, a %2-ból/ből Oszlop: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="999"/>
-      <location filename="../mainwindow.cpp" line="1007"/>
+      <location filename="../mainwindow.cpp" line="1004"/>
+      <location filename="../mainwindow.cpp" line="1012"/>
       <source>Error on %1 line: %2</source>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Hiba a %1. sorban: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1157"/>
+      <location filename="../mainwindow.cpp" line="1162"/>
       <source>B</source>
       <translation>B</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1161"/>
+      <location filename="../mainwindow.cpp" line="1166"/>
       <source>KiB</source>
       <translation>KiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1165"/>
+      <location filename="../mainwindow.cpp" line="1170"/>
       <source>MiB</source>
       <translation>MiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1169"/>
+      <location filename="../mainwindow.cpp" line="1174"/>
       <source>GiB</source>
       <translation>GiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1173"/>
+      <location filename="../mainwindow.cpp" line="1178"/>
       <source>TiB</source>
       <translation>TiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1191"/>
+      <location filename="../mainwindow.cpp" line="1196"/>
       <source>Save file</source>
       <translation>Fájl mentése</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1192"/>
+      <location filename="../mainwindow.cpp" line="1197"/>
       <source>Untitled</source>
       <translation>Névtelen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1193"/>
+      <location filename="../mainwindow.cpp" line="1198"/>
       <source>Save file "%1"?</source>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>"%1" mentése?</translation>
+    </message>
+  </context>
+  <context>
+    <name>QLineEdit</name>
+    <message>
+      <location filename="../tableview.cpp" line="50"/>
+      <source>&amp;Copy</source>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -673,6 +688,7 @@ Szeretnéd beállítani a torrent gyökérkönyvtárat és újrapróbálni?</tra
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="161"/>
       <source>%1 of %n match(es)</source>
+      <translatorcomment>Do not touch %1 it must be as is. Make translations for both singular and plural forms. </translatorcomment>
       <translation>
         <numerusform>%1 egyezés %n-ból/ből</numerusform>
       </translation>
@@ -680,9 +696,18 @@ Szeretnéd beállítani a torrent gyökérkönyvtárat és újrapróbálni?</tra
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="214"/>
       <source>%n value(s) was(were) replaced</source>
+      <translatorcomment>Do not touch %n it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>
         <numerusform>%n érték lecserélve</numerusform>
       </translation>
+    </message>
+  </context>
+  <context>
+    <name>TableView</name>
+    <message>
+      <location filename="../tableview.cpp" line="57"/>
+      <source>Copy with Size</source>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -698,11 +723,13 @@ Szeretnéd beállítani a torrent gyökérkönyvtárat és újrapróbálni?</tra
     <message>
       <location filename="../mainwindow.cpp" line="111"/>
       <source>Can't open %1</source>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>%1 nem nyitható meg</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="146"/>
+      <location filename="../mainwindow.cpp" line="150"/>
       <source>Can't read from %1</source>
+      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>%1-ból/ből nem lehet olvasni</translation>
     </message>
   </context>

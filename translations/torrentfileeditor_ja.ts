@@ -4,26 +4,26 @@
   <context>
     <name>AboutDlg</name>
     <message>
-      <location filename="../aboutdlg.ui" line="175"/>
+      <location filename="../aboutdlg.ui" line="184"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;著者：Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;ライセンス：GNU General Public License v3.0以降&lt;/p&gt;&lt;p&gt;ホームページ：&lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color: #0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;ソース：&lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;に感謝します &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; アプリケーションアイコン&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;開発者：Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;ライセンス：GNU General Public License v3.0以降&lt;/p&gt;&lt;p&gt;ホームページ：&lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color: #0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;ソースコード：&lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;アイコンは&lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt;さんに頂きました。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="39"/>
       <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
       <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-      <translation>&lt;h3&gt;開発者用ビール&lt;/h3&gt;</translation>
+      <translation>&lt;h3&gt;開発者にビールを！&lt;/h3&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="85"/>
       <source>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</source>
-      <translation>最新バージョンの開発には多くの時間と労力が必要でした。 重大なバグを修正し、改善しました。 つかれた。 しかし、私が力を取り戻し、発展し続けるのを助ける小さなビール。 このアプリが気に入ったら、開発者に感謝し、次のバージョンをリリースして、小さな寄付をすることができます：</translation>
+      <translation>最新版の開発には多くの時間と労力が必要でした。いくつかの重大なバグを修正し、機能追加もして、大変でした。私にビールを頂ければ、開発を続ける元気も出ます。もしこのソフトがお気に召しましたら、開発者に感謝の意を伝え、また次のバージョンのリリースにこぎつけることができますよう、以下のリンクから少しの寄付をお願い致します：</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.ui" line="117"/>
+      <location filename="../aboutdlg.ui" line="126"/>
       <source>Check for Update</source>
-      <translation>更新を確認</translation>
+      <translation>アップデートを確認する</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="139"/>
@@ -34,39 +34,39 @@
     <message>
       <location filename="../aboutdlg.cpp" line="193"/>
       <source>Something went wrong</source>
-      <translation>何かが間違っていた</translation>
+      <translation>何らかの不具合が発生しました。</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="197"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
       <translatorcomment>Do not touch %1 it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-      <translation>新しいバージョンの&lt;a href="%2"&gt;%1 &lt;/a&gt;が検出されました</translation>
+      <translation>新しいバージョン &lt;a href="%2"&gt; %1 &lt;/a&gt; が見つかりました</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="200"/>
       <source>The latest version is installed</source>
-      <translation>最新バージョンがインストールされている</translation>
+      <translation>お使いのソフトウェアは最新版です。</translation>
     </message>
   </context>
   <context>
     <name>BencodeModel</name>
     <message>
-      <location filename="../bencodemodel.cpp" line="693"/>
+      <location filename="../bencodemodel.cpp" line="694"/>
       <source>Name</source>
-      <translation>名</translation>
+      <translation>項目名</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="694"/>
+      <location filename="../bencodemodel.cpp" line="695"/>
       <source>Type</source>
       <translation>タイプ</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="695"/>
+      <location filename="../bencodemodel.cpp" line="696"/>
       <source>Hex</source>
-      <translation>ヘキサ</translation>
+      <translation>Hex</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="696"/>
+      <location filename="../bencodemodel.cpp" line="697"/>
       <source>Value</source>
       <translation>値</translation>
     </message>
@@ -76,12 +76,12 @@
     <message>
       <location filename="../datewidget.cpp" line="67"/>
       <source>Clean</source>
-      <translation>クリーン</translation>
+      <translation>消去</translation>
     </message>
     <message>
       <location filename="../datewidget.cpp" line="83"/>
       <source>Show calendar</source>
-      <translation>カレンダーを表示する</translation>
+      <translation>カレンダーを表示</translation>
     </message>
   </context>
   <context>
@@ -94,7 +94,7 @@
     <message>
       <location filename="../folderedit.cpp" line="60"/>
       <source>Add Folder</source>
-      <translation>フォルダーを追加</translation>
+      <translation>フォルダを追加</translation>
     </message>
   </context>
   <context>
@@ -103,35 +103,35 @@
       <location filename="../mainwindow.ui" line="30"/>
       <location filename="../mainwindow.ui" line="842"/>
       <source>New</source>
-      <translation>新しい</translation>
+      <translation>新規作成</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
-      <location filename="../mainwindow.cpp" line="345"/>
+      <location filename="../mainwindow.cpp" line="349"/>
       <source>Open</source>
-      <translation>開いた</translation>
+      <translation>開く</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="44"/>
       <location filename="../mainwindow.ui" line="858"/>
       <source>Save</source>
-      <translation>セーブ</translation>
+      <translation>保存</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="370"/>
+      <location filename="../mainwindow.cpp" line="374"/>
       <source>Save As</source>
       <translation>名前を付けて保存</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="88"/>
       <source>About</source>
-      <translation>約</translation>
+      <translation>このアプリついて</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="101"/>
       <source>Main</source>
-      <translation>メイン</translation>
+      <translation>全般</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="189"/>
@@ -141,7 +141,7 @@
     <message>
       <location filename="../mainwindow.ui" line="148"/>
       <source>Created by</source>
-      <translation>によって作成された</translation>
+      <translation>作成者</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="209"/>
@@ -151,17 +151,17 @@
     <message>
       <location filename="../mainwindow.ui" line="199"/>
       <source>Publisher</source>
-      <translation>出版社</translation>
+      <translation>公開者</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="230"/>
       <source>Name</source>
-      <translation>名</translation>
+      <translation>名前</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="114"/>
       <source>Private torrent</source>
-      <translation>プライベートトレント</translation>
+      <translation>非公開トレント</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="216"/>
@@ -176,7 +176,7 @@
     <message>
       <location filename="../mainwindow.ui" line="237"/>
       <source>Hash</source>
-      <translation>ハッシュ</translation>
+      <translation>ハッシュ値</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="307"/>
@@ -196,32 +196,32 @@
     <message>
       <location filename="../mainwindow.ui" line="372"/>
       <source>Add files</source>
-      <translation>追加ファイル</translation>
+      <translation>ファイルを追加</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="388"/>
       <source>Add folder</source>
-      <translation>フォルダーを追加</translation>
+      <translation>フォルダを追加</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="404"/>
       <source>Reload files list from current torrent data</source>
-      <translation>現在のトレントデータからファイルリストをリロードする</translation>
+      <translation>現在のトレントデータからファイルのリストを再読み込み</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="443"/>
       <source>Move file up</source>
-      <translation>ファイルを上に移動する</translation>
+      <translation>ファイルを上に移動</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="459"/>
       <source>Move file down</source>
-      <translation>ファイルを下に移動する</translation>
+      <translation>ファイルを下に移動</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="479"/>
       <source>Filter by </source>
-      <translation>フィルタリングする </translation>
+      <translation>絞込み検索 </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="486"/>
@@ -246,28 +246,28 @@
    &lt;head /&gt;
    &lt;body&gt;
      &lt;p&gt; &lt;b&gt;名前&lt;/b&gt;&lt;/p&gt;
-     &lt;p style="margin-left: 20px"&gt;拡張子がpatternと完全に等しいファイル名&lt;/p&gt;
+     &lt;p style="margin-left: 20px"&gt;ファイル名（拡張子を含む）で検索する。（完全一致のみ）&lt;/p&gt;
      &lt;br/&gt;
-     &lt;p&gt;&lt;b&gt;拡張&lt;/b&gt;&lt;/p&gt;
-     &lt;p style="margin-left: 20px"&gt;最新のポイントの後のシンボルはpatternと正確に等しく、 'archive.tar.gz'の場合は 'gz'になります。&lt;/p&gt;
+     &lt;p&gt;&lt;b&gt;拡張子&lt;/b&gt;&lt;/p&gt;
+     &lt;p style="margin-left: 20px"&gt;ファイルの拡張子のみで検索する。拡張子はファイル名に含まれる最後のドット '.' より後の文字列（例：archive.tar.gz は "gz" でのみ検索できる）。（完全一致のみ）&lt;/p&gt;
      &lt;br/&gt;
      &lt;p&gt;&lt;b&gt;ワイルドカード&lt;/b&gt;&lt;/p&gt;
-     &lt;p style="margin-left: 20px"&gt;拡張子の付いたファイル名は、ファイルグロビングと一致します。 任意のシンボルであり、 '*'は任意のシンボルの任意の数です。&lt;/p&gt;
+     &lt;p style="margin-left: 20px"&gt;ファイル名（拡張子を含む）で検索する。ただしワイルドカードが使える（ '?' で任意の1文字に、'*' で0文字以上の文字列にマッチする）。&lt;/p&gt;
      &lt;br/&gt;
      &lt;p&gt;&lt;b&gt;正規表現&lt;/b&gt;&lt;/p&gt;
-     &lt;p style="margin-left: 20px"&gt;完全なファイルパスはPerlのような正規表現と一致します&lt;/p&gt;
+     &lt;p style="margin-left: 20px"&gt;ファイルのフルパスで検索する。ただしPerl風の正規表現が使える。&lt;/p&gt;
    &lt;/body&gt;
 &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="505"/>
       <source>name</source>
-      <translation>名</translation>
+      <translation>名前</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="510"/>
       <source>extension</source>
-      <translation>拡張</translation>
+      <translation>拡張子</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="515"/>
@@ -282,22 +282,22 @@
     <message>
       <location filename="../mainwindow.ui" line="538"/>
       <source>Filter files</source>
-      <translation>ファイルをフィルタリングする</translation>
+      <translation>絞込みを実行</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="633"/>
       <source>Torrent root folder </source>
-      <translation>トレントルートフォルダ </translation>
+      <translation>Torrent ファイルのルートフォルダ </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="646"/>
       <source>Tree</source>
-      <translation>木</translation>
+      <translation>ツリー</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="657"/>
       <source>Add tree item</source>
-      <translation>ツリー項目を追加</translation>
+      <translation>項目を追加</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="689"/>
@@ -332,7 +332,7 @@
     <message>
       <location filename="../mainwindow.ui" line="850"/>
       <source>Open...</source>
-      <translation>開いた</translation>
+      <translation>開く...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="853"/>
@@ -357,22 +357,22 @@
     <message>
       <location filename="../mainwindow.ui" line="874"/>
       <source>About...</source>
-      <translation>約...</translation>
+      <translation>このアプリついて...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="65"/>
       <source>Coding</source>
-      <translation>コーディング</translation>
+      <translation>文字コード</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="356"/>
       <source>Calculate pieces hashes</source>
-      <translation>ピースハッシュを計算する</translation>
+      <translation>ピースのハッシュ値を計算</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="427"/>
       <source>Remove selected files</source>
-      <translation>選択したファイルを削除する</translation>
+      <translation>選択したファイルを削除</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="587"/>
@@ -382,174 +382,182 @@
     <message>
       <location filename="../mainwindow.ui" line="604"/>
       <source>Total size </source>
-      <translation>全体の大きさ </translation>
+      <translation>合計サイズ </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="673"/>
       <source>Delete selected tree items</source>
-      <translation>選択したツリー項目を削除する</translation>
+      <translation>選択項目を削除</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="773"/>
       <source>Raw</source>
-      <translation>生</translation>
+      <translation>直接編集</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="201"/>
+      <location filename="../mainwindow.cpp" line="205"/>
       <source>Need to calculate piece hashes</source>
-      <translation>ピースハッシュを計算する必要がある</translation>
+      <translation>ピースのハッシュ値を計算しています...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="202"/>
+      <location filename="../mainwindow.cpp" line="206"/>
       <source>Please wait</source>
       <translation>お待ちください</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="212"/>
+      <location filename="../mainwindow.cpp" line="216"/>
       <source>Auto</source>
-      <translation>オート</translation>
+      <translation>自動設定</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="220"/>
+      <location filename="../mainwindow.cpp" line="224"/>
       <source>Path</source>
       <translation>パス</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="220"/>
+      <location filename="../mainwindow.cpp" line="224"/>
       <source>Size</source>
       <translation>サイズ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="182"/>
+      <location filename="../mainwindow.cpp" line="186"/>
       <source>Torrents (*.torrent)</source>
-      <translation>トレント（*.torrent）</translation>
+      <translation>Torrent ファイル (*.torrent)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="183"/>
+      <location filename="../mainwindow.cpp" line="187"/>
       <source>uTorrent resume files (*.dat)</source>
-      <translation>uTorrent再開ファイル（*.dat）</translation>
+      <translation>μTorrent 再開ファイル (*.dat)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="220"/>
+      <location filename="../mainwindow.cpp" line="224"/>
       <source># Pieces</source>
-      <translation>＃個</translation>
+      <translation>ピースの個数</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="322"/>
-      <location filename="../mainwindow.cpp" line="808"/>
+      <location filename="../mainwindow.cpp" line="326"/>
+      <location filename="../mainwindow.cpp" line="813"/>
       <source>Error</source>
       <translation>エラー</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="322"/>
+      <location filename="../mainwindow.cpp" line="326"/>
       <source>Can't open file</source>
-      <translation>ファイルを開くことができません</translation>
+      <translation>ファイルを開くことができません：</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="589"/>
+      <location filename="../mainwindow.cpp" line="594"/>
       <source>Warning</source>
       <translation>警告</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="565"/>
+      <location filename="../mainwindow.cpp" line="569"/>
       <source>Torrent root folder is not set</source>
-      <translation>トレントルートフォルダが設定されていません</translation>
+      <translation>ルートフォルダが設定されていません</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="365"/>
-      <location filename="../mainwindow.cpp" line="1041"/>
-      <location filename="../mainwindow.cpp" line="1049"/>
-      <location filename="../mainwindow.cpp" line="1060"/>
+      <location filename="../mainwindow.cpp" line="369"/>
+      <location filename="../mainwindow.cpp" line="1046"/>
+      <location filename="../mainwindow.cpp" line="1054"/>
+      <location filename="../mainwindow.cpp" line="1065"/>
       <source>Can't save file</source>
       <translation>ファイルを保存できません</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="365"/>
-      <location filename="../mainwindow.cpp" line="1041"/>
+      <location filename="../mainwindow.cpp" line="369"/>
+      <location filename="../mainwindow.cpp" line="1046"/>
       <source>BEncoded data is not valid</source>
       <translation>BEncodedデータが無効です</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="566"/>
+      <location filename="../mainwindow.cpp" line="570"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
 
 Do you want to set torrent root folder and try again?</source>
-      <translation>ディスク上のファイルへのパスが不明です。 Torrentは、完全にダウンロードされたファイルからのみ生成できます。
+      <translation>ディスク上のファイルへのパスが不明です。 ダウンロードが完全に終了したファイルでないと、Torrent が生成できません。
 
-現在のトレントでファイルリストを編集する場合は、トレントルートフォルダを設定する必要があります。 トレントルートフォルダは、すべてのファイルをディスク上に置くことができるフォルダです。 ディスク上の実際のファイルパスは、トレントファイルからの相対パスを持つトレントルートフォルダです。 何かファイルが見つからない場合、トレントは生成できません。
+現在の Torrent 内でファイルリストを編集したい場合は、ルートフォルダを設定してください。ルートフォルダは、すべてのファイルを置くことができるディスク上に存在する必要があります。. torrent ファイルには、ルートフォルダに対する各ファイルの相対パスが記録されています。また、. torrent ファイルに記録されたファイルが一つでも見つからないと、Torrent を生成することはできません。すべてのファイルが存在しているかも併せて確認してください。
 
-トレントルートフォルダを設定して再試行しますか？</translation>
+ルートフォルダを確認して再試行しますか？</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="589"/>
+      <location filename="../mainwindow.cpp" line="594"/>
       <source>The torrent root folder is not common.</source>
-      <translation>トレントルートフォルダは一般的ではありません。</translation>
+      <translation>全てのファイルはルートフォルダ内にある必要があります。</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="648"/>
+      <location filename="../mainwindow.cpp" line="653"/>
       <source>Add File</source>
       <translation>ファイルを追加</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="669"/>
+      <location filename="../mainwindow.cpp" line="674"/>
       <source>Add Folder</source>
-      <translation>フォルダーを追加</translation>
+      <translation>フォルダを追加</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="815"/>
+      <location filename="../mainwindow.cpp" line="820"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>行：%1 of %2 Col：%3</translation>
+      <translation>%1 行目 ／ %2 行中：%3 文字目</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="999"/>
-      <location filename="../mainwindow.cpp" line="1007"/>
+      <location filename="../mainwindow.cpp" line="1004"/>
+      <location filename="../mainwindow.cpp" line="1012"/>
       <source>Error on %1 line: %2</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>%1行のエラー：%2</translation>
+      <translation>%1 行目でエラー： %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1157"/>
+      <location filename="../mainwindow.cpp" line="1162"/>
       <source>B</source>
       <translation>B</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1161"/>
+      <location filename="../mainwindow.cpp" line="1166"/>
       <source>KiB</source>
       <translation>KiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1165"/>
+      <location filename="../mainwindow.cpp" line="1170"/>
       <source>MiB</source>
       <translation>MiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1169"/>
+      <location filename="../mainwindow.cpp" line="1174"/>
       <source>GiB</source>
       <translation>GiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1173"/>
+      <location filename="../mainwindow.cpp" line="1178"/>
       <source>TiB</source>
       <translation>TiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1191"/>
+      <location filename="../mainwindow.cpp" line="1196"/>
       <source>Save file</source>
       <translation>ファイルを保存</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1192"/>
+      <location filename="../mainwindow.cpp" line="1197"/>
       <source>Untitled</source>
-      <translation>無題</translation>
+      <translation>名称未設定</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1193"/>
+      <location filename="../mainwindow.cpp" line="1198"/>
       <source>Save file "%1"?</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>ファイル "%1"を保存しますか？</translation>
+      <translation>ファイル "%1" を保存しますか？</translation>
+    </message>
+  </context>
+  <context>
+    <name>QLineEdit</name>
+    <message>
+      <location filename="../tableview.cpp" line="50"/>
+      <source>&amp;Copy</source>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -557,22 +565,22 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../bencode.cpp" line="219"/>
       <source>list</source>
-      <translation>リスト</translation>
+      <translation>list</translation>
     </message>
     <message>
       <location filename="../bencode.cpp" line="220"/>
       <source>dictionary</source>
-      <translation>辞書</translation>
+      <translation>dictionary</translation>
     </message>
     <message>
       <location filename="../bencode.cpp" line="221"/>
       <source>integer</source>
-      <translation>整数</translation>
+      <translation>integer</translation>
     </message>
     <message>
       <location filename="../bencode.cpp" line="222"/>
       <source>string</source>
-      <translation>文字列</translation>
+      <translation>string</translation>
     </message>
     <message>
       <location filename="../bencode.cpp" line="223"/>
@@ -591,13 +599,13 @@ Do you want to set torrent root folder and try again?</source>
       <location filename="../searchdlg.ui" line="39"/>
       <location filename="../searchdlg.ui" line="96"/>
       <source>Match case</source>
-      <translation>マッチケース</translation>
+      <translation>大文字と小文字を区別</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="46"/>
       <location filename="../searchdlg.ui" line="103"/>
       <source>Exact match</source>
-      <translation>完全に一致</translation>
+      <translation>完全一致のみ</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="56"/>
@@ -619,17 +627,17 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../searchdlg.ui" line="127"/>
       <source>Hex</source>
-      <translation>ヘキサ</translation>
+      <translation>Hex</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="154"/>
       <source>Replace value with</source>
-      <translation>値を</translation>
+      <translation>値を置換する：</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="164"/>
       <source>hex</source>
-      <translation>16進数</translation>
+      <translation>Hex</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="176"/>
@@ -639,22 +647,22 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../searchdlg.ui" line="182"/>
       <source>Up</source>
-      <translation>アップ</translation>
+      <translation>上へ</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="189"/>
       <source>Down</source>
-      <translation>ダウン</translation>
+      <translation>下へ</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="204"/>
       <source>Replace All</source>
-      <translation>すべてを置換</translation>
+      <translation>すべて置換</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="224"/>
       <source>Find Next</source>
-      <translation>次を見つける</translation>
+      <translation>次を検索</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="248"/>
@@ -675,14 +683,14 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../searchdlg.cpp" line="156"/>
       <source>No matches found</source>
-      <translation>一致が見つかりません</translation>
+      <translation>一致するものが見つかりません</translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="161"/>
       <source>%1 of %n match(es)</source>
       <translatorcomment>Do not touch %1 it must be as is. Make translations for both singular and plural forms. </translatorcomment>
       <translation>
-        <numerusform>%1 /%nは（es）にマッチします</numerusform>
+        <numerusform>%1 個目 ／ %n 個中</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -690,8 +698,16 @@ Do you want to set torrent root folder and try again?</source>
       <source>%n value(s) was(were) replaced</source>
       <translatorcomment>Do not touch %n it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>
-        <numerusform>%nの値が置き換えられました</numerusform>
+        <numerusform>%n 個の値が置換されました。</numerusform>
       </translation>
+    </message>
+  </context>
+  <context>
+    <name>TableView</name>
+    <message>
+      <location filename="../tableview.cpp" line="57"/>
+      <source>Copy with Size</source>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -699,7 +715,7 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../urledit.cpp" line="42"/>
       <source>Open in internet browser</source>
-      <translation>インターネットブラウザで開く</translation>
+      <translation>ブラウザで開く</translation>
     </message>
   </context>
   <context>
@@ -708,13 +724,13 @@ Do you want to set torrent root folder and try again?</source>
       <location filename="../mainwindow.cpp" line="111"/>
       <source>Can't open %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>%1を開くことができません</translation>
+      <translation>%1 を開くことができません</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="146"/>
+      <location filename="../mainwindow.cpp" line="150"/>
       <source>Can't read from %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>%1から読み込めません</translation>
+      <translation>%1 から読み込むことができません</translation>
     </message>
   </context>
 </TS>

@@ -4,7 +4,7 @@
   <context>
     <name>AboutDlg</name>
     <message>
-      <location filename="../aboutdlg.ui" line="175"/>
+      <location filename="../aboutdlg.ui" line="184"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>&lt;html&gt;
@@ -30,7 +30,7 @@
       <translation>הפיתוח של הגרסה האחרונה יש דרש הרבה זמן ומאמץ. תוקנו באגים רציניים ושיפורים שימושיים. אני עייף. אבל קצת בירה כדי לעזור לי להחזיר את כוח ולהמשיך להתפתח. אם אתה אוהב את היישום הזה, אתה רוצה להודות היזם ולהביא לשחרר את הגירסה הבאה יכולה לעשות תרומה קטנה באמצעות:</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.ui" line="117"/>
+      <location filename="../aboutdlg.ui" line="126"/>
       <source>Check for Update</source>
       <translation>בדוק עדכונים</translation>
     </message>
@@ -60,22 +60,22 @@
   <context>
     <name>BencodeModel</name>
     <message>
-      <location filename="../bencodemodel.cpp" line="693"/>
+      <location filename="../bencodemodel.cpp" line="694"/>
       <source>Name</source>
       <translation>שם</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="694"/>
+      <location filename="../bencodemodel.cpp" line="695"/>
       <source>Type</source>
       <translation>סוּג</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="695"/>
+      <location filename="../bencodemodel.cpp" line="696"/>
       <source>Hex</source>
       <translation>הקס</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="696"/>
+      <location filename="../bencodemodel.cpp" line="697"/>
       <source>Value</source>
       <translation>ערך</translation>
     </message>
@@ -116,7 +116,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
-      <location filename="../mainwindow.cpp" line="345"/>
+      <location filename="../mainwindow.cpp" line="349"/>
       <source>Open</source>
       <translation>לִפְתוֹחַ</translation>
     </message>
@@ -128,7 +128,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="370"/>
+      <location filename="../mainwindow.cpp" line="374"/>
       <source>Save As</source>
       <translation>שמור כ</translation>
     </message>
@@ -389,82 +389,82 @@
       <translation>גלם</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="201"/>
+      <location filename="../mainwindow.cpp" line="205"/>
       <source>Need to calculate piece hashes</source>
       <translation>עליך לחשב את hash של היצירה</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="202"/>
+      <location filename="../mainwindow.cpp" line="206"/>
       <source>Please wait</source>
       <translation>המתן בבקשה</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="212"/>
+      <location filename="../mainwindow.cpp" line="216"/>
       <source>Auto</source>
       <translation>אוטומטי</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="220"/>
+      <location filename="../mainwindow.cpp" line="224"/>
       <source>Path</source>
       <translation>נָתִיב</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="220"/>
+      <location filename="../mainwindow.cpp" line="224"/>
       <source>Size</source>
       <translation>גודל</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="182"/>
+      <location filename="../mainwindow.cpp" line="186"/>
       <source>Torrents (*.torrent)</source>
       <translation>טורנטים (*. טורנט)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="183"/>
+      <location filename="../mainwindow.cpp" line="187"/>
       <source>uTorrent resume files (*.dat)</source>
       <translation>uTorrent לחדש קבצים (*.dat)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="220"/>
+      <location filename="../mainwindow.cpp" line="224"/>
       <source># Pieces</source>
       <translation># חתיכות</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="322"/>
-      <location filename="../mainwindow.cpp" line="808"/>
+      <location filename="../mainwindow.cpp" line="326"/>
+      <location filename="../mainwindow.cpp" line="813"/>
       <source>Error</source>
       <translation>שְׁגִיאָה</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="322"/>
+      <location filename="../mainwindow.cpp" line="326"/>
       <source>Can't open file</source>
       <translation>לא ניתן לפתוח את הקובץ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="589"/>
+      <location filename="../mainwindow.cpp" line="594"/>
       <source>Warning</source>
       <translation>אַזהָרָה</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="565"/>
+      <location filename="../mainwindow.cpp" line="569"/>
       <source>Torrent root folder is not set</source>
       <translation>סיקור בתיקיית השורש אינו מוגדר</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="365"/>
-      <location filename="../mainwindow.cpp" line="1041"/>
-      <location filename="../mainwindow.cpp" line="1049"/>
-      <location filename="../mainwindow.cpp" line="1060"/>
+      <location filename="../mainwindow.cpp" line="369"/>
+      <location filename="../mainwindow.cpp" line="1046"/>
+      <location filename="../mainwindow.cpp" line="1054"/>
+      <location filename="../mainwindow.cpp" line="1065"/>
       <source>Can't save file</source>
       <translation>לא ניתן לשמור את הקובץ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="365"/>
-      <location filename="../mainwindow.cpp" line="1041"/>
+      <location filename="../mainwindow.cpp" line="369"/>
+      <location filename="../mainwindow.cpp" line="1046"/>
       <source>BEncoded data is not valid</source>
       <translation>נתונים לא מקודדים אינם חוקיים</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="566"/>
+      <location filename="../mainwindow.cpp" line="570"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
@@ -475,73 +475,81 @@ Do you want to set torrent root folder and try again?</source>
 האם ברצונך להגדיר תיקיית השורש סיקור ולנסות שוב?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="589"/>
+      <location filename="../mainwindow.cpp" line="594"/>
       <source>The torrent root folder is not common.</source>
       <translation>תיקיית השורש סיקור אינו נפוץ.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="648"/>
+      <location filename="../mainwindow.cpp" line="653"/>
       <source>Add File</source>
       <translation>הוסף קובץ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="669"/>
+      <location filename="../mainwindow.cpp" line="674"/>
       <source>Add Folder</source>
       <translation>הוסף תיקיה</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="815"/>
+      <location filename="../mainwindow.cpp" line="820"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>קו: %1 של %2 Col: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="999"/>
-      <location filename="../mainwindow.cpp" line="1007"/>
+      <location filename="../mainwindow.cpp" line="1004"/>
+      <location filename="../mainwindow.cpp" line="1012"/>
       <source>Error on %1 line: %2</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>שגיאה בשורה% 1:% 2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1157"/>
+      <location filename="../mainwindow.cpp" line="1162"/>
       <source>B</source>
       <translation>בייט</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1161"/>
+      <location filename="../mainwindow.cpp" line="1166"/>
       <source>KiB</source>
       <translation>קיב</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1165"/>
+      <location filename="../mainwindow.cpp" line="1170"/>
       <source>MiB</source>
       <translation>MiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1169"/>
+      <location filename="../mainwindow.cpp" line="1174"/>
       <source>GiB</source>
       <translation>GiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1173"/>
+      <location filename="../mainwindow.cpp" line="1178"/>
       <source>TiB</source>
       <translation>טיב</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1191"/>
+      <location filename="../mainwindow.cpp" line="1196"/>
       <source>Save file</source>
       <translation>שמור את הקובץ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1192"/>
+      <location filename="../mainwindow.cpp" line="1197"/>
       <source>Untitled</source>
       <translation>ללא כותרת</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1193"/>
+      <location filename="../mainwindow.cpp" line="1198"/>
       <source>Save file "%1"?</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>האם לשמור את הקובץ "%1"?</translation>
+    </message>
+  </context>
+  <context>
+    <name>QLineEdit</name>
+    <message>
+      <location filename="../tableview.cpp" line="50"/>
+      <source>&amp;Copy</source>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -676,8 +684,6 @@ Do you want to set torrent root folder and try again?</source>
       <translation>
         <numerusform>% 1 מתוך% n ההתאמות</numerusform>
         <numerusform>% 1 מתוך% n ההתאמות</numerusform>
-        <numerusform>%d %d התאמות</numerusform>
-        <numerusform>%d %d התאמות</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -687,9 +693,15 @@ Do you want to set torrent root folder and try again?</source>
       <translation>
         <numerusform>% n ערכים (הוחלפו)</numerusform>
         <numerusform>% n ערכים (הוחלפו)</numerusform>
-        <numerusform>%n was(were) (ים) הוחלף</numerusform>
-        <numerusform>%n was(were) (ים) הוחלף</numerusform>
       </translation>
+    </message>
+  </context>
+  <context>
+    <name>TableView</name>
+    <message>
+      <location filename="../tableview.cpp" line="57"/>
+      <source>Copy with Size</source>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -709,7 +721,7 @@ Do you want to set torrent root folder and try again?</source>
       <translation>לא ניתן לפתוח את% 1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="146"/>
+      <location filename="../mainwindow.cpp" line="150"/>
       <source>Can't read from %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>לא ניתן לקרוא מ-% 1</translation>
