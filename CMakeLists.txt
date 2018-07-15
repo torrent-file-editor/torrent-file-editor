@@ -13,10 +13,6 @@ endif()
 project("Torrent File Editor")
 set(EXE_NAME "torrent-file-editor")
 
-if(POLICY CMP0046)
-  cmake_policy(SET CMP0046 OLD)
-endif()
-
 # Fallback version. Will be used when compiling out of git repository.
 set(APP_VERSION "0.3.10")
 
