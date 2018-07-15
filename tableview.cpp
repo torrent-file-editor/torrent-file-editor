@@ -54,7 +54,7 @@ TableView::TableView(QWidget *parent)
     _menu->addAction(_copyAct);
     addAction(_copyAct);
 
-    _copySizeAct = new QAction(QLatin1String("Copy with Size"), this);
+    _copySizeAct = new QAction(tr("Copy with Size"), this);
     _copySizeAct->setShortcut(QKeySequence(Qt::ShiftModifier | Qt::ControlModifier | Qt::Key_C));
     connect(_copySizeAct, SIGNAL(triggered()), SLOT(copyWithSize()));
     _menu->addAction(_copySizeAct);
