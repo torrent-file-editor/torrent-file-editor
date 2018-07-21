@@ -83,6 +83,7 @@ public:
 
     int pieces() const;
     QString hash() const;
+    QString magnetLink() const;
 
     void setComment(const QString &comment);
     QString comment() const;

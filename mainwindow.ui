@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>704</width>
-    <height>533</height>
+    <width>659</width>
+    <height>493</height>
    </rect>
   </property>
   <property name="acceptDrops">
@@ -280,7 +280,7 @@
               </property>
              </widget>
             </item>
-            <item row="10" column="0">
+            <item row="11" column="0">
              <spacer name="verticalSpacer">
               <property name="orientation">
                <enum>Qt::Vertical</enum>
@@ -292,6 +292,23 @@
                </size>
               </property>
              </spacer>
+            </item>
+            <item row="10" column="0">
+             <widget class="QLabel" name="label_17">
+              <property name="text">
+               <string>Magnet link</string>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="1">
+             <widget class="UrlEdit" name="leMagnetLink">
+              <property name="focusPolicy">
+               <enum>Qt::ClickFocus</enum>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
             </item>
            </layout>
           </widget>
@@ -821,8 +838,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>704</width>
-     <height>27</height>
+     <width>659</width>
+     <height>29</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -927,6 +944,9 @@
   <tabstop>leBaseFolder</tabstop>
   <tabstop>treeJson</tabstop>
   <tabstop>pteEditor</tabstop>
+  <tabstop>cmbFilesFilter</tabstop>
+  <tabstop>lneFilesFilter</tabstop>
+  <tabstop>leMagnetLink</tabstop>
  </tabstops>
  <resources>
   <include location="resources.qrc"/>
@@ -1019,8 +1039,8 @@
    <slot>updateBencodeFromComment()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>572</x>
-     <y>299</y>
+     <x>554</x>
+     <y>430</y>
     </hint>
     <hint type="destinationlabel">
      <x>927</x>
@@ -1035,8 +1055,8 @@
    <slot>updateBencodeFromTrackers()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>672</x>
-     <y>299</y>
+     <x>641</x>
+     <y>430</y>
     </hint>
     <hint type="destinationlabel">
      <x>1002</x>
@@ -1147,8 +1167,8 @@
    <slot>updateFiles()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>566</x>
-     <y>515</y>
+     <x>115</x>
+     <y>158</y>
     </hint>
     <hint type="destinationlabel">
      <x>1133</x>
@@ -1227,8 +1247,8 @@
    <slot>removeFile()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>189</x>
-     <y>137</y>
+     <x>115</x>
+     <y>142</y>
     </hint>
     <hint type="destinationlabel">
      <x>841</x>
@@ -1243,8 +1263,8 @@
    <slot>upFile()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>223</x>
-     <y>137</y>
+     <x>115</x>
+     <y>142</y>
     </hint>
     <hint type="destinationlabel">
      <x>686</x>
@@ -1259,8 +1279,8 @@
    <slot>downFile()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>257</x>
-     <y>137</y>
+     <x>115</x>
+     <y>142</y>
     </hint>
     <hint type="destinationlabel">
      <x>792</x>
@@ -1275,8 +1295,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>683</x>
-     <y>58</y>
+     <x>651</x>
+     <y>68</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -1355,8 +1375,8 @@
    <slot>downTreeItem()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>146</x>
-     <y>137</y>
+     <x>115</x>
+     <y>142</y>
     </hint>
     <hint type="destinationlabel">
      <x>163</x>
@@ -1467,8 +1487,8 @@
    <slot>filterFiles()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>659</x>
-     <y>137</y>
+     <x>115</x>
+     <y>142</y>
     </hint>
     <hint type="destinationlabel">
      <x>693</x>
@@ -1483,8 +1503,8 @@
    <slot>updateFilesPieces()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>126</x>
-     <y>515</y>
+     <x>105</x>
+     <y>159</y>
     </hint>
     <hint type="destinationlabel">
      <x>162</x>
@@ -1499,8 +1519,8 @@
    <slot>showTreeSearchWindow()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>166</x>
-     <y>129</y>
+     <x>115</x>
+     <y>142</y>
     </hint>
     <hint type="destinationlabel">
      <x>692</x>
@@ -1515,8 +1535,8 @@
    <slot>showTreeReplaceWindow()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>203</x>
-     <y>131</y>
+     <x>115</x>
+     <y>142</y>
     </hint>
     <hint type="destinationlabel">
      <x>706</x>
@@ -1531,8 +1551,8 @@
    <slot>reloadFiles()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>140</x>
-     <y>127</y>
+     <x>115</x>
+     <y>142</y>
     </hint>
     <hint type="destinationlabel">
      <x>703</x>
@@ -1571,5 +1591,6 @@
   <slot>showTreeSearchWindow()</slot>
   <slot>showTreeReplaceWindow()</slot>
   <slot>reloadFiles()</slot>
+  <slot>copyMagnet()</slot>
  </slots>
 </ui>

@@ -27,6 +27,7 @@
 #include <QCryptographicHash>
 #include <QStringList>
 #include <QDebug>
+#include <QUrl>
 
 BencodeModel::BencodeModel(QObject *parent)
     : AbstractTreeModel(new Bencode(Bencode::Type::Dictionary), parent)
@@ -287,6 +288,24 @@ QString BencodeModel::hash() const
     if (_bencode && _bencode->child("info"))
         hash = QCryptographicHash::hash(_bencode->child("info")->toRaw(), QCryptographicHash::Sha1).toHex();
     return QString::fromUtf8(hash);
+}
+
+QString BencodeModel::magnetLink() const
+{
+    QByteArray link;
+
+    if (!hash().isEmpty()) {
+        link = "magnet:?xt=urn:btih:" + hash().toUtf8();
+        if (!name().isEmpty()) {
+            link += "&dn=" + QUrl::toPercentEncoding(name());
+        }
+
+        for (const QString &tracker: trackers()) {
+            link += "&tr=" + QUrl::toPercentEncoding(tracker);
+        }
+    }
+
+    return QString::fromUtf8(link);
 }
 
 void BencodeModel::setComment(const QString &comment)

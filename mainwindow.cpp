@@ -48,6 +48,8 @@
 #include <QTextDocument>
 #include <QMimeData>
 #include <QElapsedTimer>
+#include <QShortcut>
+#include <QClipboard>
 
 #ifdef HAVE_QT5
 # include <QJsonDocument>
@@ -277,6 +279,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->btnFindTreeItem->setIcon(QIcon::fromTheme(QStringLiteral("edit-find"), QIcon(QStringLiteral(":/icons/edit-find"))));
     ui->btnReplaceTreeItem->setIcon(QIcon::fromTheme(QStringLiteral("edit-find-replace"), QIcon(QStringLiteral(":/icons/edit-find-replace"))));
 
+    new QShortcut(QKeySequence(Qt::ControlModifier | Qt::Key_G), this, SLOT(copyMagnetLink()));
+
     fillCoding();
     updateFilesSize();
 
@@ -395,6 +399,14 @@ void MainWindow::showAbout()
     dlg.adjustSize();
     dlg.setFixedSize(dlg.size());
     dlg.exec();
+}
+
+void MainWindow::copyMagnetLink()
+{
+    QString link = ui->leMagnetLink->text();
+    if (!link.isEmpty()) {
+        qApp->clipboard()->setText(link);
+    }
 }
 
 void MainWindow::openUrl()
@@ -522,6 +534,7 @@ void MainWindow::updateBencodeFromSimple()
     _bencodeModel->setCreationTime(ui->dateCreated->dateTime());
     _bencodeModel->setPrivateTorrent(ui->chkPrivateTorrent->isChecked());
     ui->leHash->setText(_bencodeModel->hash());
+    ui->leMagnetLink->setText(_bencodeModel->magnetLink());
 }
 
 void MainWindow::updateBencodeFromComment()
@@ -532,6 +545,7 @@ void MainWindow::updateBencodeFromComment()
 void MainWindow::updateBencodeFromTrackers()
 {
     _bencodeModel->setTrackers(ui->pteTrackers->toPlainText().trimmed().split(QStringLiteral("\n")));
+    ui->leMagnetLink->setText(_bencodeModel->magnetLink());
 }
 
 void MainWindow::updateEncoding(const QString &encoding)
@@ -981,6 +995,7 @@ void MainWindow::updateSimple()
     ui->chkPrivateTorrent->setChecked(_bencodeModel->privateTorrent());
     ui->pteTrackers->setPlainText(_bencodeModel->trackers().join(QStringLiteral("\n")));
     ui->leHash->setText(_bencodeModel->hash());
+    ui->leMagnetLink->setText(_bencodeModel->magnetLink());
 }
 
 void MainWindow::updateBencodeFromRaw()
