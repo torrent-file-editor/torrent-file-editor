@@ -84,7 +84,7 @@ void CheckUpdate::start()
     QByteArray ba(cBuffer, dwBytesRead);
 #ifdef HAVE_QT5
     QJsonParseError error;
-    QVariantMap variant = QJsonDocument::fromJson(ba, &error).toVariant();
+    QVariantMap variant = QJsonDocument::fromJson(ba, &error).toVariant().toMap();
     if (error.error) {
         emit finished(QString(), QString());
         return;

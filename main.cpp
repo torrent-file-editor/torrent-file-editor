@@ -82,7 +82,7 @@ void winDebugHandler(QtMsgType type, const char *msg)
         }
 # ifdef HAVE_QT5
         debugMsg += msg;
-        debugMsg += QStringLiteral(" (%1:%2, %3)").arg(context.file).arg(context.line).arg(context.function);
+        debugMsg += QStringLiteral(" (%1:%2, %3)").arg(QString::fromUtf8(context.file), QString::number(context.line), QString::fromUtf8(context.function));
 # else
         debugMsg += QLatin1String(msg);
 # endif
@@ -243,7 +243,11 @@ int main(int argc, char *argv[])
     }
 
 #ifdef Q_OS_WIN
+# ifdef HAVE_QT5
+    qInstallMessageHandler(winDebugHandler);
+# else
     qInstallMsgHandler(winDebugHandler);
+# endif
 #endif
 
     int returnCode = 0;
