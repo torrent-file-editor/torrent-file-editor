@@ -122,13 +122,17 @@ else()
   find_package(QJSON 0.8.0 REQUIRED)
   add_definitions("'-DQStringLiteral(str)=QString::fromUtf8(\"\" str \"\", sizeof(str) - 1)'")
 
-  if(WIN32)
+  if(WIN32 AND (NOT BUILD_SHARED))
     string(REPLACE "-DQT_DLL" "" QT_DEFINITIONS "${QT_DEFINITIONS}")
     set(QT_DEFINITIONS ${QT_DEFINITIONS} "-DQT_NODLL")
     add_definitions(-DQJSON_STATIC)
   endif()
 
   include(${QT_USE_FILE})
+endif()
+
+if(WIN32 AND (NOT BUILD_SHARED))
+  add_definitions(-DBUILD_STATIC)
 endif()
 
 macro(qt_add_translation ARG1 ARG2)
@@ -151,10 +155,17 @@ foreach(l ${LANGS})
   list(APPEND TRANSLATIONS ${CMAKE_SOURCE_DIR}/translations/torrentfileeditor_${l}.ts)
 endforeach()
 
-if(WIN32 AND NOT QT5_BUILD)
+if(WIN32)
+  if(QT5_BUILD)
+    get_target_property(QT_QMAKE_EXECUTABLE Qt5::qmake IMPORTED_LOCATION)
+    execute_process(COMMAND ${QT_QMAKE_EXECUTABLE} -query QT_INSTALL_TRANSLATIONS
+                    OUTPUT_VARIABLE QT_TRANSLATIONS_DIR
+                    OUTPUT_STRIP_TRAILING_WHITESPACE
+    )
+  endif()
   foreach(l ${LANGS})
-    if(EXISTS "/usr/i686-w64-mingw32/sys-root/mingw/share/qt4/translations/qt_${l}.qm")
-      configure_file("/usr/i686-w64-mingw32/sys-root/mingw/share/qt4/translations/qt_${l}.qm" "qt_${l}.qm" COPYONLY)
+    if(EXISTS "${QT_TRANSLATIONS_DIR}/qt_${l}.qm")
+      configure_file("${QT_TRANSLATIONS_DIR}/qt_${l}.qm" "qt_${l}.qm" COPYONLY)
     endif()
   endforeach()
 endif()
@@ -252,9 +263,31 @@ qt4_wrap_cpp(MOC_SOURCES ${HEADERS})
 qt4_wrap_ui(UI_SOURCES ${FORMS})
 
 if(WIN32)
-  set(START_STATIC -Wl,-Bstatic)
-  set(END_STATIC z jpeg png tiff stdc++ -lwinpthread -Wl,-Bdynamic  ws2_32 winmm imm32 wininet)
-  set(QJSON_LIBRARIES qjson.a)
+  if(NOT BUILD_SHARED)
+    set(START_STATIC -Wl,-Bstatic)
+    set(END_STATIC z jpeg png tiff stdc++ -lwinpthread -Wl,-Bdynamic)
+    set(QJSON_LIBRARIES qjson.a)
+    if(QT5_BUILD)
+      find_package(PkgConfig REQUIRED)
+      pkg_check_modules(QT5_PKGCONFIG Qt5Widgets)
+
+      set(EXTRA_LIBS
+          Qt5::QWindowsIntegrationPlugin
+          Qt5::QICOPlugin
+          Qt5::QJpegPlugin
+          Qt5::QGifPlugin
+          Qt5::QWindowsVistaStylePlugin
+          ${QT5_PKGCONFIG_LDFLAGS}
+          Qt5AccessibilitySupport
+          Qt5EventDispatcherSupport
+          Qt5FontDatabaseSupport
+          Qt5ThemeSupport
+          jpeg
+      )
+    endif()
+  endif()
+
+  list(APPEND EXTRA_LIBS ws2_32 winmm imm32 wininet)
 
   # resource compilation for MinGW
   add_custom_command(
@@ -280,9 +313,9 @@ add_executable(${EXE_NAME} WIN32 MACOSX_BUNDLE ${QM} ${HEADERS} ${PLAIN_HEADERS}
 add_dependencies(${EXE_NAME} update_version)
 
 if(QT5_BUILD)
-  target_link_libraries(${EXE_NAME} ${START_STATIC} Qt5::Core Qt5::Gui Qt5::Widgets ${END_STATIC} ${NWVA_LIBS})
+  target_link_libraries(${EXE_NAME} ${START_STATIC} Qt5::Core Qt5::Gui Qt5::Widgets ${END_STATIC} ${EXTRA_LIBS} ${NWVA_LIBS})
 else()
-  target_link_libraries(${EXE_NAME} ${START_STATIC} ${QJSON_LIBRARIES} ${START_STATIC} ${QT_LIBRARIES} ${END_STATIC} ${NWVA_LIBS})
+  target_link_libraries(${EXE_NAME} ${START_STATIC} ${QJSON_LIBRARIES} ${START_STATIC} ${QT_LIBRARIES} ${END_STATIC} ${EXTRA_LIBS} ${NWVA_LIBS})
 endif()
 
 if(APPLE)
