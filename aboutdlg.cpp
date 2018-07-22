@@ -23,6 +23,9 @@
 #include "ui_aboutdlg.h"
 #include "application.h"
 
+#include <QShortcut>
+#include <QKeySequence>
+
 #ifdef Q_OS_WIN
 # include "checkupdate.h"
 # include <QThread>
@@ -147,6 +150,8 @@ AboutDlg::AboutDlg(QWidget *parent)
 #ifndef Q_OS_WIN
     ui->btCheckUpdate->hide();
 #endif
+
+    new QShortcut(QKeySequence(Qt::ControlModifier | Qt::Key_Q), this, SLOT(aboutQt()));
 }
 
 AboutDlg::~AboutDlg()
@@ -205,4 +210,9 @@ void AboutDlg::showUpdate(const QString &version, const QString &url)
     Q_UNUSED(version);
     Q_UNUSED(url);
 #endif
+}
+
+void AboutDlg::aboutQt()
+{
+    qApp->aboutQt();
 }

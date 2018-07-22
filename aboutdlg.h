@@ -38,6 +38,7 @@ public:
 private slots:
     void checkUpdate();
     void showUpdate(const QString &version, const QString &url);
+    void aboutQt();
 
 private:
     Ui::AboutDlg *ui;
