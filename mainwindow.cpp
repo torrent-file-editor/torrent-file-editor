@@ -492,12 +492,15 @@ bool MainWindow::isModified() const
 
 void MainWindow::updateTitle()
 {
-    if (_fileName.isEmpty())
+    if (_fileName.isEmpty()) {
         setWindowTitle(qApp->applicationName());
-    else if (isModified())
-        setWindowTitle(QStringLiteral("* %2 - %1").arg(qApp->applicationName(), _fileName));
-    else
-        setWindowTitle(QStringLiteral("%2 - %1").arg(qApp->applicationName(), _fileName));
+    }
+    else if (isModified()) {
+        setWindowTitle(QStringLiteral("* %2 - %1").arg(qApp->applicationName(), QDir::toNativeSeparators(_fileName)));
+    }
+    else {
+        setWindowTitle(QStringLiteral("%2 - %1").arg(qApp->applicationName(), QDir::toNativeSeparators(_fileName)));
+    }
 }
 
 void MainWindow::updateTab(int n)
