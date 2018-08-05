@@ -24,11 +24,31 @@
 #include <QUrl>
 #include <QPushButton>
 #include <QDesktopServices>
+#include <QApplication>
+#include <QClipboard>
 
 UrlEdit::UrlEdit(QWidget *parent)
     : LineEditWidget(parent)
     , _pbOpenUrl(new QPushButton(this))
+    , _pbCopyUrl(new QPushButton(this))
 {
+    _pbCopyUrl->setObjectName(QStringLiteral("pbCopyUrl"));
+    _pbCopyUrl->setIcon(QIcon::fromTheme(QStringLiteral("edit-copy"), QIcon(QStringLiteral(":/icons/edit-copy.png"))));
+    _pbCopyUrl->setContentsMargins(0, 0, 0, 0);
+    _pbCopyUrl->setFocusPolicy(Qt::NoFocus);
+    _pbCopyUrl->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    _pbCopyUrl->setIconSize(QSize(16, 16));
+    _pbCopyUrl->setAutoFillBackground(true);
+    _pbCopyUrl->setCursor(Qt::PointingHandCursor);
+    _pbCopyUrl->resize(0, 0);
+    _pbCopyUrl->setFlat(true);
+    _pbCopyUrl->setToolTip(QLineEdit::tr("&Copy").remove(QLatin1Char('&')));
+    _pbCopyUrl->setMinimumWidth(24);
+    _pbCopyUrl->setMaximumWidth(24);
+    addWidget(_pbCopyUrl);
+
+    connect(_pbCopyUrl, SIGNAL(clicked()), SLOT(copyAll()));
+
     _pbOpenUrl->setObjectName(QStringLiteral("pbOpenUrl"));
     _pbOpenUrl->setIcon(QIcon::fromTheme(QStringLiteral("applications-internet"), QIcon(QStringLiteral(":/icons/applications-internet.png"))));
     _pbOpenUrl->setContentsMargins(0, 0, 0, 0);
@@ -52,4 +72,9 @@ void UrlEdit::openUrl()
     QUrl url(text());
     if (url.isValid())
         QDesktopServices::openUrl(url);
+}
+
+void UrlEdit::copyAll()
+{
+    qApp->clipboard()->setText(text());
 }

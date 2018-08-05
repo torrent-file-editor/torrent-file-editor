@@ -39,6 +39,7 @@
         <file>./icons/folder-new.png</file>
         <file>./icons/edit-find.png</file>
         <file>./icons/edit-find-replace.png</file>
+        <file>./icons/edit-copy.png</file>
         <file>./icons/view-refresh.png</file>
     </qresource>
 </RCC>

@@ -34,8 +34,10 @@ public:
 
 protected slots:
     void openUrl();
+    void copyAll();
 
 private:
     // Inner widgets
     QPushButton *_pbOpenUrl;
+    QPushButton *_pbCopyUrl;
 };
