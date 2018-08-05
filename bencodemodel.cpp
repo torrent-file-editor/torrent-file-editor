@@ -450,6 +450,47 @@ QList<QPair<QString, qlonglong>> BencodeModel::files() const
     return res;
 }
 
+qulonglong BencodeModel::totalSize() const
+{
+    qulonglong res = 0;
+
+    Bencode *info = _bencode->child("info");
+    if (!info) {
+        return res;
+    }
+
+    // Torrent contains only one file
+    if (!info->child("files")) {
+        QString baseName;
+        if (info->child("name") && info->child("name")->isString()) {
+            qlonglong length = 0;
+            if (info->child("length") && info->child("length")->isInteger()) {
+                length = info->child("length")->integer();
+            }
+            res += length;
+        }
+    }
+    else {
+        Bencode *list = info->child("files");
+        if (!list) {
+            return res;
+        }
+
+        for (int i = 0; i < list->childCount(); i++) {
+            Bencode *item = list->child(i);
+            QStringList path;
+            Bencode *pathList = item->child("path");
+            if (!pathList) {
+                continue;
+            }
+
+            res += item->child("length")->integer();
+        }
+    }
+
+    return res;
+}
+
 void BencodeModel::setPieces(const QByteArray &pieces)
 {
     if (!pieces.isEmpty()) {

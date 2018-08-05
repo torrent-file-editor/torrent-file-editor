@@ -76,6 +76,7 @@ public slots:
     void saveAs();
     void showAbout();
     void copyMagnetLink();
+    void copyMagnetExtra();
 
     void openUrl();
 

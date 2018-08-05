@@ -280,6 +280,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->btnReplaceTreeItem->setIcon(QIcon::fromTheme(QStringLiteral("edit-find-replace"), QIcon(QStringLiteral(":/icons/edit-find-replace"))));
 
     new QShortcut(QKeySequence(Qt::ControlModifier | Qt::Key_G), this, SLOT(copyMagnetLink()));
+    new QShortcut(QKeySequence(Qt::ControlModifier | Qt::ShiftModifier | Qt::Key_T), this, SLOT(copyMagnetExtra()));
 
     fillCoding();
     updateFilesSize();
@@ -406,6 +407,17 @@ void MainWindow::copyMagnetLink()
     QString link = ui->leMagnetLink->text();
     if (!link.isEmpty()) {
         qApp->clipboard()->setText(link);
+    }
+}
+
+void MainWindow::copyMagnetExtra()
+{
+    QString name = _bencodeModel->name();
+    qulonglong size = _bencodeModel->totalSize();
+    QString link = ui->leMagnetLink->text();
+    if (size && !name.isEmpty() && !link.isEmpty()) {
+        QString str = QString(QLatin1String("%1\t%2\t%3")).arg(name, smartSize(size), link);
+        qApp->clipboard()->setText(str);
     }
 }
 

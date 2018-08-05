@@ -93,6 +93,7 @@ public:
 
     void setFiles(const QList<QPair<QString, qlonglong>> &files);
     QList<QPair<QString, qlonglong>> files() const;
+    qulonglong totalSize() const;
 
     void setPieces(const QByteArray &pieces);
 
