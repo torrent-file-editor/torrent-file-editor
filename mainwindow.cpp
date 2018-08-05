@@ -1006,6 +1006,9 @@ void MainWindow::updateSimple()
     int pieces = _bencodeModel->pieces();
     ui->lePieces->setText(pieces ? QLocale::system().toString(pieces) : QString());
 
+    qulonglong totalSize = _bencodeModel->totalSize();
+    ui->leTorrentTotalSize->setText(totalSize ? smartSize(totalSize) : QStringLiteral("0"));
+
     ui->dateCreated->setDateTime(_bencodeModel->creationTime());
     ui->chkPrivateTorrent->setChecked(_bencodeModel->privateTorrent());
     ui->pteTrackers->setPlainText(_bencodeModel->trackers().join(QStringLiteral("\n")));
