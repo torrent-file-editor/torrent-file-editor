@@ -26,6 +26,7 @@
 #include <QDesktopWidget>
 #include <QEvent>
 #include <QRegExpValidator>
+#include <QAbstractButton>
 
 LineEditWidget::LineEditWidget(QWidget *parent)
     : QLineEdit(parent)
@@ -70,8 +71,14 @@ void LineEditWidget::showEvent(QShowEvent *e)
 {
     // Width of standard QLineEdit plus extended tool buttons
     int width = 0;
-    for(int i = _toolbuttons.size() - 1; i >= 0; i--) {
-        width += _toolbuttons[i]->width();
+    for (QWidget *w: _toolbuttons) {
+        if (w->isVisible()) {
+            width += w->width();
+            QAbstractButton *bt = qobject_cast<QAbstractButton*>(w);
+            if (bt && bt->iconSize().height() > bt->height()) {
+                bt->setIconSize(QSize(bt->height(), bt->height()));
+            }
+        }
     }
 
     setTextMargins(0, 0, width, 0);

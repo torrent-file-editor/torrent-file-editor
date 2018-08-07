@@ -37,7 +37,6 @@ UrlEdit::UrlEdit(QWidget *parent)
     _pbCopyUrl->setContentsMargins(0, 0, 0, 0);
     _pbCopyUrl->setFocusPolicy(Qt::NoFocus);
     _pbCopyUrl->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-    _pbCopyUrl->setIconSize(QSize(16, 16));
     _pbCopyUrl->setAutoFillBackground(true);
     _pbCopyUrl->setCursor(Qt::PointingHandCursor);
     _pbCopyUrl->resize(0, 0);
@@ -54,7 +53,6 @@ UrlEdit::UrlEdit(QWidget *parent)
     _pbOpenUrl->setContentsMargins(0, 0, 0, 0);
     _pbOpenUrl->setFocusPolicy(Qt::NoFocus);
     _pbOpenUrl->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-    _pbOpenUrl->setIconSize(QSize(16, 16));
     _pbOpenUrl->setAutoFillBackground(true);
     _pbOpenUrl->setCursor(Qt::PointingHandCursor);
     _pbOpenUrl->resize(0, 0);

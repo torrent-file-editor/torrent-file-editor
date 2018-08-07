@@ -59,7 +59,6 @@ DateWidget::DateWidget(QWidget *parent)
     _tbClean->setContentsMargins(0, 0, 0, 0);
     _tbClean->setFocusPolicy(Qt::NoFocus);
     _tbClean->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-    _tbClean->setIconSize(QSize(16, 16));
     _tbClean->setAutoFillBackground(true);
     _tbClean->setCursor(Qt::PointingHandCursor);
     _tbClean->resize(0, 0);
@@ -74,7 +73,6 @@ DateWidget::DateWidget(QWidget *parent)
     _tbCalendar->setContentsMargins(0, 0, 0, 0);
     _tbCalendar->setFocusPolicy(Qt::NoFocus);
     _tbCalendar->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-    _tbCalendar->setIconSize(QSize(16, 16));
     _tbCalendar->setAutoFillBackground(true);
     _tbCalendar->setCursor(QCursor(Qt::ArrowCursor));
     _tbCalendar->resize(0, 0);

@@ -42,5 +42,18 @@
         <file>./icons/gnome/16x16/text-x-generic.png</file>
         <file>./icons/gnome/16x16/view-refresh.png</file>
         <file>./icons/gnome/16x16/x-office-calendar.png</file>
+        <file>./icons/gnome/14x14/applications-internet.png</file>
+        <file>./icons/gnome/14x14/document-new.png</file>
+        <file>./icons/gnome/14x14/edit-clear.png</file>
+        <file>./icons/gnome/14x14/edit-copy.png</file>
+        <file>./icons/gnome/14x14/edit-delete.png</file>
+        <file>./icons/gnome/14x14/edit-find-replace.png</file>
+        <file>./icons/gnome/14x14/edit-find.png</file>
+        <file>./icons/gnome/14x14/folder-new.png</file>
+        <file>./icons/gnome/14x14/list-add.png</file>
+        <file>./icons/gnome/14x14/list-remove.png</file>
+        <file>./icons/gnome/14x14/text-x-generic.png</file>
+        <file>./icons/gnome/14x14/view-refresh.png</file>
+        <file>./icons/gnome/14x14/x-office-calendar.png</file>
     </qresource>
 </RCC>

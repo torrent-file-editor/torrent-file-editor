@@ -3,8 +3,12 @@ Name=GNOME
 Comment=Default GNOME Theme
 
 # Directory list
-Directories=16x16
+Directories=16x16, 14x14
 
 [16x16]
 Size=16
+Type=Fixed
+
+[14x14]
+Size=14
 Type=Fixed

@@ -37,7 +37,6 @@ FolderEdit::FolderEdit(QWidget *parent)
     _pbOpenFolder->setContentsMargins(0, 0, 0, 0);
     _pbOpenFolder->setFocusPolicy(Qt::NoFocus);
     _pbOpenFolder->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-    _pbOpenFolder->setIconSize(QSize(16, 16));
     _pbOpenFolder->setAutoFillBackground(true);
     _pbOpenFolder->setCursor(Qt::PointingHandCursor);
     _pbOpenFolder->resize(0, 0);
