@@ -1,0 +1,10 @@
+[Icon Theme]
+Name=GNOME
+Comment=Default GNOME Theme
+
+# Directory list
+Directories=16x16
+
+[16x16]
+Size=16
+Type=Fixed

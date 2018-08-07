@@ -35,6 +35,10 @@ Application::Application(int &argc, char **argv)
     setApplicationVersion(QStringLiteral(APP_VERSION));
 
     setStyle(new ProxyStyle());
+
+    if (QIcon::themeName().isEmpty()) {
+        QIcon::setThemeName(QStringLiteral("gnome"));
+    }
 }
 
 bool Application::event(QEvent *event)

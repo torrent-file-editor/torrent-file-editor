@@ -255,29 +255,29 @@ MainWindow::MainWindow(QWidget *parent)
     ui->treeJson->header()->setMovable(false);
 #endif
 
-    ui->btnNew->setIcon(QIcon(QStringLiteral(":/icons/text-x-generic.png")));
+    ui->btnNew->setIcon(QIcon::fromTheme(QStringLiteral("text-x-generic")));
     ui->btnOpen->setIcon(qApp->style()->standardIcon(QStyle::SP_DialogOpenButton)); // -V807 PVS-Studio
     ui->btnSave->setIcon(qApp->style()->standardIcon(QStyle::SP_DialogSaveButton));
     ui->btnSaveAs->setIcon(qApp->style()->standardIcon(QStyle::SP_DialogSaveButton));
 
-    ui->btnRemoveFiles->setIcon(QIcon::fromTheme(QStringLiteral("list-remove"), QIcon(QStringLiteral(":/icons/list-remove.png"))));
+    ui->btnRemoveFiles->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
 
     ui->btnMakeTorrent->setIcon(QIcon(QStringLiteral(":/icons/hammer.png")));
-    ui->btnAddFile->setIcon(QIcon::fromTheme(QStringLiteral("document-new"), QIcon(QStringLiteral(":/icons/document-new.png"))));
-    ui->btnAddFolder->setIcon(QIcon::fromTheme(QStringLiteral("folder-new"), QIcon(QStringLiteral(":/icons/folder-new.png"))));
-    ui->btnReloadFiles->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh"), QIcon(QStringLiteral(":/icons/view-refresh"))));
+    ui->btnAddFile->setIcon(QIcon::fromTheme(QStringLiteral("document-new")));
+    ui->btnAddFolder->setIcon(QIcon::fromTheme(QStringLiteral("folder-new")));
+    ui->btnReloadFiles->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
     ui->btnUpFile->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowUp));
     ui->btnDownFile->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowDown));
     ui->btnFilesFilter->setIcon(QIcon(QStringLiteral(":/icons/files-filter.png")));
 
     ui->btnAbout->setIcon(qApp->style()->standardIcon(QStyle::SP_MessageBoxQuestion));
 
-    ui->btnAddTreeItem->setIcon(QIcon::fromTheme(QStringLiteral("list-add"), QIcon(QStringLiteral(":/icons/list-add.png"))));
-    ui->btnRemoveTreeItem->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete"), QIcon(QStringLiteral(":/icons/edit-delete.png"))));
+    ui->btnAddTreeItem->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
+    ui->btnRemoveTreeItem->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete")));
     ui->btnUpTreeItem->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowUp));
     ui->btnDownTreeItem->setIcon(qApp->style()->standardIcon(QStyle::SP_ArrowDown));
-    ui->btnFindTreeItem->setIcon(QIcon::fromTheme(QStringLiteral("edit-find"), QIcon(QStringLiteral(":/icons/edit-find"))));
-    ui->btnReplaceTreeItem->setIcon(QIcon::fromTheme(QStringLiteral("edit-find-replace"), QIcon(QStringLiteral(":/icons/edit-find-replace"))));
+    ui->btnFindTreeItem->setIcon(QIcon::fromTheme(QStringLiteral("edit-find")));
+    ui->btnReplaceTreeItem->setIcon(QIcon::fromTheme(QStringLiteral("edit-find-replace")));
 
     new QShortcut(QKeySequence(Qt::ControlModifier | Qt::Key_G), this, SLOT(copyMagnetLink()));
     new QShortcut(QKeySequence(Qt::ControlModifier | Qt::ShiftModifier | Qt::Key_T), this, SLOT(copyMagnetExtra()));

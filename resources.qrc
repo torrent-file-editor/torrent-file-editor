@@ -28,18 +28,19 @@
         <file>./icons/ya_money_logo_eng.png</file>
 
         <!-- icons token from gnome-icon-theme Fedora RPM package -->
-        <file>./icons/applications-internet.png</file>
-        <file>./icons/edit-clear.png</file>
-        <file>./icons/x-office-calendar.png</file>
-        <file>./icons/edit-delete.png</file>
-        <file>./icons/list-add.png</file>
-        <file>./icons/list-remove.png</file>
-        <file>./icons/text-x-generic.png</file>
-        <file>./icons/document-new.png</file>
-        <file>./icons/folder-new.png</file>
-        <file>./icons/edit-find.png</file>
-        <file>./icons/edit-find-replace.png</file>
-        <file>./icons/edit-copy.png</file>
-        <file>./icons/view-refresh.png</file>
+        <file>./icons/gnome/index.theme</file>
+        <file>./icons/gnome/16x16/applications-internet.png</file>
+        <file>./icons/gnome/16x16/document-new.png</file>
+        <file>./icons/gnome/16x16/edit-clear.png</file>
+        <file>./icons/gnome/16x16/edit-copy.png</file>
+        <file>./icons/gnome/16x16/edit-delete.png</file>
+        <file>./icons/gnome/16x16/edit-find-replace.png</file>
+        <file>./icons/gnome/16x16/edit-find.png</file>
+        <file>./icons/gnome/16x16/folder-new.png</file>
+        <file>./icons/gnome/16x16/list-add.png</file>
+        <file>./icons/gnome/16x16/list-remove.png</file>
+        <file>./icons/gnome/16x16/text-x-generic.png</file>
+        <file>./icons/gnome/16x16/view-refresh.png</file>
+        <file>./icons/gnome/16x16/x-office-calendar.png</file>
     </qresource>
 </RCC>

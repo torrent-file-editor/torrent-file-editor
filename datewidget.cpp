@@ -55,7 +55,7 @@ DateWidget::DateWidget(QWidget *parent)
     , _calendar(new QCalendarWidget(this))
 {
     _tbClean->setObjectName(QStringLiteral("brClear"));
-    _tbClean->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear"), QIcon(QStringLiteral(":/icons/edit-clear.png"))));
+    _tbClean->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear")));
     _tbClean->setContentsMargins(0, 0, 0, 0);
     _tbClean->setFocusPolicy(Qt::NoFocus);
     _tbClean->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -70,7 +70,7 @@ DateWidget::DateWidget(QWidget *parent)
     addWidget(_tbClean);
 
     _tbCalendar->setObjectName(QStringLiteral("tbCalendar"));
-    _tbCalendar->setIcon(QIcon::fromTheme(QStringLiteral("x-office-calendar"), QIcon(QStringLiteral(":/icons/x-office-calendar.png"))));
+    _tbCalendar->setIcon(QIcon::fromTheme(QStringLiteral("x-office-calendar")));
     _tbCalendar->setContentsMargins(0, 0, 0, 0);
     _tbCalendar->setFocusPolicy(Qt::NoFocus);
     _tbCalendar->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);

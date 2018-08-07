@@ -33,7 +33,7 @@ UrlEdit::UrlEdit(QWidget *parent)
     , _pbCopyUrl(new QPushButton(this))
 {
     _pbCopyUrl->setObjectName(QStringLiteral("pbCopyUrl"));
-    _pbCopyUrl->setIcon(QIcon::fromTheme(QStringLiteral("edit-copy"), QIcon(QStringLiteral(":/icons/edit-copy.png"))));
+    _pbCopyUrl->setIcon(QIcon::fromTheme(QStringLiteral("edit-copy")));
     _pbCopyUrl->setContentsMargins(0, 0, 0, 0);
     _pbCopyUrl->setFocusPolicy(Qt::NoFocus);
     _pbCopyUrl->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -50,7 +50,7 @@ UrlEdit::UrlEdit(QWidget *parent)
     connect(_pbCopyUrl, SIGNAL(clicked()), SLOT(copyAll()));
 
     _pbOpenUrl->setObjectName(QStringLiteral("pbOpenUrl"));
-    _pbOpenUrl->setIcon(QIcon::fromTheme(QStringLiteral("applications-internet"), QIcon(QStringLiteral(":/icons/applications-internet.png"))));
+    _pbOpenUrl->setIcon(QIcon::fromTheme(QStringLiteral("applications-internet")));
     _pbOpenUrl->setContentsMargins(0, 0, 0, 0);
     _pbOpenUrl->setFocusPolicy(Qt::NoFocus);
     _pbOpenUrl->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
