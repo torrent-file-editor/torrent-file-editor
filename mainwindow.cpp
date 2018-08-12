@@ -221,6 +221,11 @@ MainWindow::MainWindow(QWidget *parent)
         ui->cmbPieceSizes->addItem(smartSize(pieceSize), pieceSize);
     }
 
+#ifdef Q_OS_WIN
+    setStyleSheet(QStringLiteral("QSplitter::handle { background-color: rgba(0, 0, 0, 0) }\n"
+                                 "QSplitter { background-color: rgba(0, 0, 0, 0) }"));
+#endif
+
     QStandardItemModel *model = new QStandardItemModel(0, 4, this);
     QStringList headers;
     headers << tr("Path") << tr("Size") << tr("# Pieces") << QString() /* dummy */;
