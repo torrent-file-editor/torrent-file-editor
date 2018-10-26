@@ -12,6 +12,8 @@ add_custom_target(lupdate)
 foreach(l ${LANGS})
   add_custom_target(
     fix_${l}
+    COMMAND "xmllint" "--noblanks" "torrentfileeditor_${l}.ts" "--output" "torrentfileeditor_${l}.ts"
+    COMMAND "perl" "-pi" "-e" "s|<context><name>QLineEdit.*?</context>||g" "torrentfileeditor_${l}.ts"
     COMMAND "xmllint" "--format" "torrentfileeditor_${l}.ts" "--output" "torrentfileeditor_${l}.ts"
     WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
     VERBATIM
