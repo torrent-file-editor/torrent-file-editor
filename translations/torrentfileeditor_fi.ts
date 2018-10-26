@@ -538,14 +538,6 @@ Haluatko asettaa torrent-pääkansioon ja yrittää uudelleen?</translation>
     </message>
   </context>
   <context>
-    <name>QLineEdit</name>
-    <message>
-      <location filename="../tableview.cpp" line="50"/>
-      <source>&amp;Copy</source>
-      <translation type="unfinished"/>
-    </message>
-  </context>
-  <context>
     <name>QObject</name>
     <message>
       <location filename="../bencode.cpp" line="219"/>
@@ -694,7 +686,7 @@ Haluatko asettaa torrent-pääkansioon ja yrittää uudelleen?</translation>
     <message>
       <location filename="../tableview.cpp" line="57"/>
       <source>Copy with Size</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Copy with Size</translation>
     </message>
   </context>
   <context>

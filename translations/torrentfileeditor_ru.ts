@@ -553,14 +553,6 @@ Do you want to set torrent root folder and try again?</source>
     </message>
   </context>
   <context>
-    <name>QLineEdit</name>
-    <message>
-      <location filename="../tableview.cpp" line="50"/>
-      <source>&amp;Copy</source>
-      <translation/>
-    </message>
-  </context>
-  <context>
     <name>QObject</name>
     <message>
       <location filename="../bencode.cpp" line="219"/>
@@ -689,8 +681,9 @@ Do you want to set torrent root folder and try again?</source>
       <location filename="../searchdlg.cpp" line="161"/>
       <source>%1 of %n match(es)</source>
       <translatorcomment>Do not touch %1 it must be as is. Make translations for both singular and plural forms. </translatorcomment>
-      <translation>
+      <translation type="unfinished">
         <numerusform>%1 из %n совпадения</numerusform>
+        <numerusform>%1 из %n совпадений</numerusform>
         <numerusform>%1 из %n совпадений</numerusform>
         <numerusform>%1 из %n совпадений</numerusform>
       </translation>
@@ -699,9 +692,10 @@ Do you want to set torrent root folder and try again?</source>
       <location filename="../searchdlg.cpp" line="214"/>
       <source>%n value(s) was(were) replaced</source>
       <translatorcomment>Do not touch %n it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-      <translation>
+      <translation type="unfinished">
         <numerusform>%n значение заменено</numerusform>
         <numerusform>%n значения заменено</numerusform>
+        <numerusform>%n значений заменено</numerusform>
         <numerusform>%n значений заменено</numerusform>
       </translation>
     </message>

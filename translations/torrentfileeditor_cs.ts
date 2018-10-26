@@ -553,14 +553,6 @@ Do you want to set torrent root folder and try again?</translation>
     </message>
   </context>
   <context>
-    <name>QLineEdit</name>
-    <message>
-      <location filename="../tableview.cpp" line="50"/>
-      <source>&amp;Copy</source>
-      <translation type="unfinished"/>
-    </message>
-  </context>
-  <context>
     <name>QObject</name>
     <message>
       <location filename="../bencode.cpp" line="219"/>
@@ -693,6 +685,7 @@ Do you want to set torrent root folder and try again?</translation>
         <numerusform>%1 z %n shody</numerusform>
         <numerusform>%1 z %n shod</numerusform>
         <numerusform>%1 z %n shod</numerusform>
+        <numerusform>%1 z %n shod</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -703,6 +696,7 @@ Do you want to set torrent root folder and try again?</translation>
         <numerusform>%n hodnota byla nahrazena</numerusform>
         <numerusform>%n hodnoty byly nahrazeny</numerusform>
         <numerusform>%n hodnot bylo nahrazeno</numerusform>
+        <numerusform>%n hodnot bylo nahrazeno</numerusform>
       </translation>
     </message>
   </context>
@@ -711,7 +705,7 @@ Do you want to set torrent root folder and try again?</translation>
     <message>
       <location filename="../tableview.cpp" line="57"/>
       <source>Copy with Size</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Copy with Size</translation>
     </message>
   </context>
   <context>

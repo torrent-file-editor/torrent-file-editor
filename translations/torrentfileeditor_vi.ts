@@ -29,7 +29,7 @@
       <location filename="../aboutdlg.cpp" line="139"/>
       <source>About %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>Khoảng %1</translation>
+      <translation>Giới thiệu về %1</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="193"/>
@@ -76,7 +76,7 @@
     <message>
       <location filename="../datewidget.cpp" line="67"/>
       <source>Clean</source>
-      <translation>Dọn dẹp</translation>
+      <translation>Xóa sạch</translation>
     </message>
     <message>
       <location filename="../datewidget.cpp" line="83"/>
@@ -115,7 +115,7 @@
       <location filename="../mainwindow.ui" line="44"/>
       <location filename="../mainwindow.ui" line="858"/>
       <source>Save</source>
-      <translation>Tiết kiệm</translation>
+      <translation>Lưu lại</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
@@ -126,12 +126,12 @@
     <message>
       <location filename="../mainwindow.ui" line="88"/>
       <source>About</source>
-      <translation>Trong khoảng</translation>
+      <translation>Giới thiệu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="101"/>
       <source>Main</source>
-      <translation>Chủ yếu</translation>
+      <translation>Chính</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="189"/>
@@ -161,7 +161,7 @@
     <message>
       <location filename="../mainwindow.ui" line="114"/>
       <source>Private torrent</source>
-      <translation>Torrent cá nhân</translation>
+      <translation>Torrent riêng tư</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="216"/>
@@ -176,7 +176,7 @@
     <message>
       <location filename="../mainwindow.ui" line="237"/>
       <source>Hash</source>
-      <translation>Hash</translation>
+      <translation>Mã băm</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="307"/>
@@ -191,12 +191,12 @@
     <message>
       <location filename="../mainwindow.ui" line="345"/>
       <source>Files</source>
-      <translation>Các tập tin</translation>
+      <translation>Tập tin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="372"/>
       <source>Add files</source>
-      <translation>Thêm các tập tin</translation>
+      <translation>Thêm tập tin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="388"/>
@@ -264,7 +264,7 @@
     <message>
       <location filename="../mainwindow.ui" line="510"/>
       <source>extension</source>
-      <translation>sự mở rộng</translation>
+      <translation>phần mở rộng</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="515"/>
@@ -274,7 +274,7 @@
     <message>
       <location filename="../mainwindow.ui" line="520"/>
       <source>regular expression</source>
-      <translation>biểu hiện thông thường</translation>
+      <translation>biểu thức chính quy</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="538"/>
@@ -546,14 +546,6 @@ Do you want to set torrent root folder and try again?</source>
     </message>
   </context>
   <context>
-    <name>QLineEdit</name>
-    <message>
-      <location filename="../tableview.cpp" line="50"/>
-      <source>&amp;Copy</source>
-      <translation type="unfinished"/>
-    </message>
-  </context>
-  <context>
     <name>QObject</name>
     <message>
       <location filename="../bencode.cpp" line="219"/>
@@ -700,7 +692,7 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../tableview.cpp" line="57"/>
       <source>Copy with Size</source>
-      <translation type="unfinished"/>
+      <translation>Sao chép với kích thước</translation>
     </message>
   </context>
   <context>

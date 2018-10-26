@@ -553,14 +553,6 @@ Torrent kök dizinini ayarlamak ve tekrar denemek istiyor musunuz?</translation>
     </message>
   </context>
   <context>
-    <name>QLineEdit</name>
-    <message>
-      <location filename="../tableview.cpp" line="50"/>
-      <source>&amp;Copy</source>
-      <translation type="unfinished"/>
-    </message>
-  </context>
-  <context>
     <name>QObject</name>
     <message>
       <location filename="../bencode.cpp" line="219"/>
@@ -691,6 +683,7 @@ Torrent kök dizinini ayarlamak ve tekrar denemek istiyor musunuz?</translation>
       <translatorcomment>Do not touch %1 it must be as is. Make translations for both singular and plural forms. </translatorcomment>
       <translation>
         <numerusform>%1/%n eşleşme</numerusform>
+        <numerusform>%1/%n eşleşme</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -698,6 +691,7 @@ Torrent kök dizinini ayarlamak ve tekrar denemek istiyor musunuz?</translation>
       <source>%n value(s) was(were) replaced</source>
       <translatorcomment>Do not touch %n it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>
+        <numerusform>%n değer değiştirildi</numerusform>
         <numerusform>%n değer değiştirildi</numerusform>
       </translation>
     </message>
@@ -707,7 +701,7 @@ Torrent kök dizinini ayarlamak ve tekrar denemek istiyor musunuz?</translation>
     <message>
       <location filename="../tableview.cpp" line="57"/>
       <source>Copy with Size</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Copy with Size</translation>
     </message>
   </context>
   <context>

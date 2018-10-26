@@ -553,14 +553,6 @@ Apakah Anda ingin mengatur folder akar torrent dan coba lagi?</translation>
     </message>
   </context>
   <context>
-    <name>QLineEdit</name>
-    <message>
-      <location filename="../tableview.cpp" line="50"/>
-      <source>&amp;Copy</source>
-      <translation type="unfinished"/>
-    </message>
-  </context>
-  <context>
     <name>QObject</name>
     <message>
       <location filename="../bencode.cpp" line="219"/>
@@ -707,7 +699,7 @@ Apakah Anda ingin mengatur folder akar torrent dan coba lagi?</translation>
     <message>
       <location filename="../tableview.cpp" line="57"/>
       <source>Copy with Size</source>
-      <translation type="unfinished"/>
+      <translation type="unfinished">Copy with Size</translation>
     </message>
   </context>
   <context>
