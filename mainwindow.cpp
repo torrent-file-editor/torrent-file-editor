@@ -564,7 +564,13 @@ void MainWindow::updateBencodeFromComment()
 
 void MainWindow::updateBencodeFromTrackers()
 {
-    _bencodeModel->setTrackers(ui->pteTrackers->toPlainText().trimmed().split(QStringLiteral("\n")));
+    QStringList trackers = ui->pteTrackers->toPlainText().trimmed().split(QStringLiteral("\n"));
+
+    if (trackers == _bencodeModel->trackers()) {
+        return;
+    }
+
+    _bencodeModel->setTrackers(trackers);
     ui->leMagnetLink->setText(_bencodeModel->magnetLink());
 }
 
