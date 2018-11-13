@@ -400,7 +400,7 @@ if(APPLE)
       \"\${CMAKE_INSTALL_PREFIX}/${PLUGINS_DEST_PATH}/*${CMAKE_SHARED_LIBRARY_SUFFIX}\"
     )
     include(BundleUtilities)
-    fixup_bundle(\"${APPS}\" \"\${QTPLUGINS}\" \"${QT_LIBRARY_DIR}\")
+    fixup_bundle(\"${APPS}\" \"\${QTPLUGINS}\" \"${QT_LIBRARY_DIR};${SPARKLE_LIBRARY}\")
     file(GLOB BINARIES
       \"${APPS}/Contents/Frameworks/*.framework\"
       \"${APPS}/Contents/Frameworks/Sparkle.framework/Resources/Autoupdate.app\"

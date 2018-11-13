@@ -38,14 +38,16 @@ on run argv
         set sidebar width to 0
         set statusbar visible to false
         set toolbar visible to false
-        set the bounds to { 500, 300, 991, 600 }
+        set the bounds to { 500, 300, 991, 620 }
         set position of item "Torrent File Editor.app" to { 400, 210 }
         set position of item "Applications" to { 97, 205 }
         set position of item ".DS_Store" to { 540, 10 }
         set position of item ".fseventsd" to { 540, 130 }
         set position of item ".background" to { 540, 230 }
-        set position of item ".Trashes" to { 640, 10 }
-      end tell
+        if exists item ".Trashes" then
+          set position of item ".Trashes" to { 640, 10 }
+        end if
+        end tell
       update without registering applications
       delay 5
     close
