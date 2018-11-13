@@ -17,7 +17,7 @@
  *
  */
 
-#include "SparkleAutoUpdater.h"
+#include "sparkleautoupdater.h"
 
 // MacOSX10.7 SDK has missed NS_ENUM
 
