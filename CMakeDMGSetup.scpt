@@ -47,7 +47,7 @@ on run argv
         if exists item ".Trashes" then
           set position of item ".Trashes" to { 640, 10 }
         end if
-        end tell
+      end tell
       update without registering applications
       delay 5
     close
