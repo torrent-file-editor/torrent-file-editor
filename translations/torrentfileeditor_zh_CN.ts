@@ -7,18 +7,18 @@
       <location filename="../aboutdlg.ui" line="184"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;作者：Ivan Romanov&lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;授权许可：GNU通用公共许可协议3.0及以上版本&lt;/p&gt;&lt;p&gt;主页：&lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;源代码：&lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;鸣谢：&lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt;提供应用图标&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;作者: Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;授权许可: GNU 通用公共许可协议 3.0 及以上版本&lt;/p&gt;&lt;p&gt;主页: &lt;a href="http://sourceforge.net/projects/torrent-file-editor/"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://sourceforge.net/projects/torrent-file-editor/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;源代码: &lt;a href="http://github.com/drizt/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;http://github.com/drizt/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;感谢 &lt;a href="http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; 提供应用图标&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="39"/>
       <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
       <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-      <translation>&lt;h3&gt;给开发者买杯啤酒吧！&lt;/h3&gt;</translation>
+      <translation>&lt;h3&gt;给开发者买杯啤酒&lt;/h3&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="85"/>
       <source>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</source>
-      <translation>开发最新版本花费了我大量的时间和精力。最新版里修复了严重的Bug以及进行了大的改进。我有点累了，不过一小杯啤酒能让我满血复活并且继续开发。如果你喜欢这个应用，系想要感谢开发者并且帮助下一个版本来到这个世界，你可以通过下面的方法进行一点小小的捐助：</translation>
+      <translation>开发最新版本花了我很多时间和精力，修复了一些严重的 Bug 并做了一些实用的改进。我有点累了，不过给我点啤酒能鼓励我满血复活并且继续开发。如果你喜欢这个应用，想要感谢开发者并且希望能继续更新下去，可以通过以下方式给我一点小小的捐助：</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="126"/>
@@ -29,23 +29,23 @@
       <location filename="../aboutdlg.cpp" line="139"/>
       <source>About %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>关于%1</translation>
+      <translation>关于 %1</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="193"/>
       <source>Something went wrong</source>
-      <translation>出错了</translation>
+      <translation>检查更新出错</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="197"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
       <translatorcomment>Do not touch %1 it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-      <translation>检测到新版本 &lt;a href="%2"&gt;%1 &lt;/a&gt;</translation>
+      <translation>检测到新版本: &lt;a href="%2"&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="200"/>
       <source>The latest version is installed</source>
-      <translation>已安裝最新版</translation>
+      <translation>已是最新版</translation>
     </message>
   </context>
   <context>
@@ -53,7 +53,7 @@
     <message>
       <location filename="../bencodemodel.cpp" line="694"/>
       <source>Name</source>
-      <translation>名称</translation>
+      <translation>键名称</translation>
     </message>
     <message>
       <location filename="../bencodemodel.cpp" line="695"/>
@@ -131,22 +131,22 @@
     <message>
       <location filename="../mainwindow.ui" line="101"/>
       <source>Main</source>
-      <translation>主要</translation>
+      <translation>摘要</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="189"/>
       <source>Pieces</source>
-      <translation>块</translation>
+      <translation>分块数</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="148"/>
       <source>Created by</source>
-      <translation>创建者</translation>
+      <translation>创建工具</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="209"/>
       <source>Piece size</source>
-      <translation>块大小</translation>
+      <translation>分块大小</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="199"/>
@@ -181,12 +181,12 @@
     <message>
       <location filename="../mainwindow.ui" line="307"/>
       <source>Comment</source>
-      <translation>评论</translation>
+      <translation>注释</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="325"/>
       <source>Trackers</source>
-      <translation>服务器 (Trackers)</translation>
+      <translation>Tracker 服务器</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="345"/>
@@ -246,16 +246,16 @@
   &lt;head/&gt;
   &lt;body&gt;
     &lt;p&gt;&lt;b&gt;文件名&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;文件名及拓展名完全符合筛选条件&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;文件名及扩展名完全符合筛选条件&lt;/p&gt;
     &lt;br/&gt;
-    &lt;p&gt;&lt;b&gt;拓展名&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;在最后一个半角句号"."之后的字符完全符合筛选条件，例如“archive.tar.gz”将会是“.gz”&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;扩展名&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;最后一个半角点 "." 之后的字符完全符合筛选条件，例如 "archive.tar.gz" 对应 "gz"&lt;/p&gt;
     &lt;br/&gt;
     &lt;p&gt;&lt;b&gt;通配符&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;文件名及拓展名与带通配符的筛选条件匹配。筛选条件中“?”代表一个任意字符，"*"代表任意个任意字符&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;文件名及扩展名与含通配符的筛选条件匹配，通配符 "?" 代表任意一个字符，"*" 代表任意多个字符&lt;/p&gt;
     &lt;br/&gt;
     &lt;p&gt;&lt;b&gt;正则表达式&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;完整文件路径匹配类Perl的正则表达式&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;完整文件路径名匹配正则表达式 (类 Perl)&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;</translation>
     </message>
@@ -282,7 +282,7 @@
     <message>
       <location filename="../mainwindow.ui" line="538"/>
       <source>Filter files</source>
-      <translation>过滤文件</translation>
+      <translation>筛选文件</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="633"/>
@@ -292,7 +292,7 @@
     <message>
       <location filename="../mainwindow.ui" line="646"/>
       <source>Tree</source>
-      <translation>树（Tree）</translation>
+      <translation>树形结构</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="657"/>
@@ -367,7 +367,7 @@
     <message>
       <location filename="../mainwindow.ui" line="356"/>
       <source>Calculate pieces hashes</source>
-      <translation>计算块哈希值</translation>
+      <translation>计算分块哈希值</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="427"/>
@@ -377,7 +377,7 @@
     <message>
       <location filename="../mainwindow.ui" line="587"/>
       <source>Piece size </source>
-      <translation>块大小 </translation>
+      <translation>分块大小 </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="604"/>
@@ -432,7 +432,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="224"/>
       <source># Pieces</source>
-      <translation># 块</translation>
+      <translation>分块数</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="326"/>
@@ -467,7 +467,7 @@
       <location filename="../mainwindow.cpp" line="369"/>
       <location filename="../mainwindow.cpp" line="1046"/>
       <source>BEncoded data is not valid</source>
-      <translation>BEncode数据无效</translation>
+      <translation>BEncode 数据无效</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="570"/>
@@ -485,7 +485,7 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../mainwindow.cpp" line="594"/>
       <source>The torrent root folder is not common.</source>
-      <translation>种子根目录不是常见目录。</translation>
+      <translation>种子根目录不一致。</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="653"/>
@@ -501,14 +501,14 @@ Do you want to set torrent root folder and try again?</source>
       <location filename="../mainwindow.cpp" line="820"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>%2行中的第%1行 第%3列</translation>
+      <translation>第 %1 行 (共 %2 行) 第 %3 列</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1004"/>
       <location filename="../mainwindow.cpp" line="1012"/>
       <source>Error on %1 line: %2</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>在%1行中发生错误：%2</translation>
+      <translation>第 %1 行有错误: %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1162"/>
@@ -549,7 +549,7 @@ Do you want to set torrent root folder and try again?</source>
       <location filename="../mainwindow.cpp" line="1198"/>
       <source>Save file "%1"?</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>是否保存“%1”？</translation>
+      <translation>是否要保存 "%1"？</translation>
     </message>
   </context>
   <context>
@@ -567,7 +567,7 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../bencode.cpp" line="221"/>
       <source>integer</source>
-      <translation>整型</translation>
+      <translation>整数</translation>
     </message>
     <message>
       <location filename="../bencode.cpp" line="222"/>
@@ -585,13 +585,13 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../searchdlg.ui" line="27"/>
       <source>Key</source>
-      <translation>关键字</translation>
+      <translation>键名称</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="39"/>
       <location filename="../searchdlg.ui" line="96"/>
       <source>Match case</source>
-      <translation>大小写匹配</translation>
+      <translation>区分大小写</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="46"/>
@@ -649,7 +649,7 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../searchdlg.ui" line="204"/>
       <source>Replace All</source>
-      <translation>替换全部</translation>
+      <translation>全部替换</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="224"/>
@@ -675,14 +675,14 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../searchdlg.cpp" line="156"/>
       <source>No matches found</source>
-      <translation>未找到匹配项</translation>
+      <translation>无匹配项</translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="161"/>
       <source>%1 of %n match(es)</source>
       <translatorcomment>Do not touch %1 it must be as is. Make translations for both singular and plural forms. </translatorcomment>
       <translation>
-        <numerusform>%n 个中的%1个符合条件。</numerusform>
+        <numerusform>第 %1 个匹配项 (共 %n 个)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -690,7 +690,7 @@ Do you want to set torrent root folder and try again?</source>
       <source>%n value(s) was(were) replaced</source>
       <translatorcomment>Do not touch %n it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>
-        <numerusform>%n 个值已被替换。</numerusform>
+        <numerusform>完成 %n 处替换</numerusform>
       </translation>
     </message>
   </context>
@@ -699,7 +699,7 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../tableview.cpp" line="57"/>
       <source>Copy with Size</source>
-      <translation type="unfinished">Copy with Size</translation>
+      <translation>复制文件名和大小</translation>
     </message>
   </context>
   <context>
@@ -716,13 +716,13 @@ Do you want to set torrent root folder and try again?</source>
       <location filename="../mainwindow.cpp" line="111"/>
       <source>Can't open %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>无法打开%1</translation>
+      <translation>无法打开 %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="150"/>
       <source>Can't read from %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>无法读取%1</translation>
+      <translation>无法读取 %1</translation>
     </message>
   </context>
 </TS>
