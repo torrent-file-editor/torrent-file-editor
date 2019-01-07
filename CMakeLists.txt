@@ -369,6 +369,11 @@ if(APPLE)
     install(FILES "${_loc}" DESTINATION ${PLUGINS_DEST_PATH}/printsupport/ COMPONENT Runtime)
   endforeach()
 
+  if(TARGET Qt5::QMacStylePlugin)
+    get_target_property(_loc Qt5::QMacStylePlugin LOCATION)
+    install(FILES "${_loc}" DESTINATION ${PLUGINS_DEST_PATH}/styles/ COMPONENT Runtime)
+  endif()
+
   # Install public key for Sparkle Updater
   install(FILES "dsa_pub.pem" DESTINATION "${PROJECT_NAME}.app/Contents/Resources" COMPONENT Runtime)
 
