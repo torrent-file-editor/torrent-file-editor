@@ -4,28 +4,48 @@
         <!-- drawed special for Torrent File Editor and published for free -->
         <file>./icons/app_32.png</file>
         <file>./icons/app_64.png</file>
+        <file>./icons/app_32@2x.png</file>
+        <file>./icons/app_64@2x.png</file>
 
         <!-- from Oxygen team http://www.oxygen-icons.org/ -->
         <!-- http://www.iconsearch.ru/detailed/19428/1/ -->
         <file>./icons/hammer.png</file>
+        <file>./icons/hammer@2x.png</file>
 
         <!-- from FatCow project http://www.fatcow.com/free-icons -->
         <!-- link to icons archive http://www.fatcow.com/images/fatcow-icons/fatcow-hosting-icons-3.9.2-all.zip -->
         <!-- licensed under CC Attribution 4.0 http://creativecommons.org/licenses/by/4.0/ -->
         <file>./icons/files-filter.png</file>
+        <file>./icons/files-filter@2x.png</file>
 
         <!-- from Icons8 https://icons8.com/web-app/13300/beer -->
         <!-- licensed under CC BY-ND 3.0 https://creativecommons.org/licenses/by-nd/3.0/ -->
         <file>./icons/beer.png</file>
+        <file>./icons/beer@2x.png</file>
 
         <!-- https://www.webmoney.ru/img/icons/wmlogo_16.png -->
         <file>./icons/wmlogo_16.png</file>
+        <file>./icons/wmlogo_16@2x.png</file>
 
         <!-- https://money.yandex.ru/partners/doc.xml?id=522991 -->
         <file>./icons/ya_money_logo_eng.png</file>
+        <file>./icons/ya_money_logo_eng@2x.png</file>
 
         <!-- icons token from gnome-icon-theme Fedora RPM package -->
         <file>./icons/gnome/index.theme</file>
+        <file>./icons/gnome/32x32/applications-internet.png</file>
+        <file>./icons/gnome/32x32/document-new.png</file>
+        <file>./icons/gnome/32x32/edit-clear.png</file>
+        <file>./icons/gnome/32x32/edit-copy.png</file>
+        <file>./icons/gnome/32x32/edit-delete.png</file>
+        <file>./icons/gnome/32x32/edit-find-replace.png</file>
+        <file>./icons/gnome/32x32/edit-find.png</file>
+        <file>./icons/gnome/32x32/folder-new.png</file>
+        <file>./icons/gnome/32x32/list-add.png</file>
+        <file>./icons/gnome/32x32/list-remove.png</file>
+        <file>./icons/gnome/32x32/text-x-generic.png</file>
+        <file>./icons/gnome/32x32/view-refresh.png</file>
+        <file>./icons/gnome/32x32/x-office-calendar.png</file>
         <file>./icons/gnome/16x16/applications-internet.png</file>
         <file>./icons/gnome/16x16/document-new.png</file>
         <file>./icons/gnome/16x16/edit-clear.png</file>
