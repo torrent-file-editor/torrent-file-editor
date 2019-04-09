@@ -85,7 +85,16 @@ if(DISABLE_DONATION)
   add_definitions(-DNO_DONATION)
 endif()
 
-option(ENABLE_NVWA "Check for memory leaks" OFF)
+if(UNIX)
+  option(ENABLE_NVWA "Check for memory leaks" OFF)
+else()
+  # Not working correctly on Windows. See https://stackoverflow.com/questions/46025819/global-overload-operator-new-delete-in-mingw
+  set(ENABLE_NVWA OFF)
+
+  # For Windows by default build single binary without any dependencies
+  option(BUILD_SHARED "Link with shared libraries" OFF)
+endif()
+
 if(ENABLE_NVWA)
   add_definitions(
     -DENABLE_NVWA
