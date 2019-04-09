@@ -686,7 +686,7 @@ Vrei să stezi rădăcina actuală a dosarului și să încerci din nou?</transl
     <message>
       <location filename="../tableview.cpp" line="57"/>
       <source>Copy with Size</source>
-      <translation type="unfinished">Copy with Size</translation>
+      <translation>Copiază cu Dimensiunea</translation>
     </message>
   </context>
   <context>

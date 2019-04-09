@@ -701,7 +701,7 @@ Möchten Sie jetzt das Stammverzeichnis setzen und erneut versuchen?</translatio
     <message>
       <location filename="../tableview.cpp" line="57"/>
       <source>Copy with Size</source>
-      <translation type="unfinished">Copy with Size</translation>
+      <translation>Mit Größe kopieren</translation>
     </message>
   </context>
   <context>
