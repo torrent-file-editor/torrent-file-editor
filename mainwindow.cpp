@@ -533,6 +533,7 @@ void MainWindow::updateTab(int n)
 
     case JsonTreeTab:
         ui->treeJson->setFocus();
+        ui->treeJson->expand(ui->treeJson->model()->index(0, 0));
         break;
 
     case RawTab:
