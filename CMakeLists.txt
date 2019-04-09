@@ -121,6 +121,7 @@ else()
   find_package(Qt4 REQUIRED)
   find_package(QJSON 0.8.0 REQUIRED)
   add_definitions("'-DQStringLiteral(str)=QString::fromUtf8(\"\" str \"\", sizeof(str) - 1)'")
+  include_directories(${QJSON_INCLUDE_DIR})
 
   if(WIN32 AND (NOT BUILD_SHARED))
     string(REPLACE "-DQT_DLL" "" QT_DEFINITIONS "${QT_DEFINITIONS}")
