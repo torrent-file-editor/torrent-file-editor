@@ -231,8 +231,13 @@ int main(int argc, char *argv[])
 
     if (argc == 4) { // -V112 PVS-Studio
         QString command = QString::fromUtf8(argv[1]);
+#ifndef Q_OS_WIN
         QString source = QString::fromUtf8(argv[2]);
         QString dest = QString::fromUtf8(argv[3]);
+#else
+        QString source = QString::fromLocal8Bit(argv[2]);
+        QString dest = QString::fromLocal8Bit(argv[3]);
+#endif
 
         if (command == QLatin1String("--to-json") || command == QLatin1String("--from-json")) {
             int retCode = 0;
