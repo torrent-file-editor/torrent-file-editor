@@ -46,6 +46,14 @@ void ComboBox::leaveEvent(QEvent *event)
         close();
 }
 
+void ComboBox::wheelEvent(QWheelEvent *event)
+{
+    Q_UNUSED(event);
+
+    // do nothing to prevent unexpected table changes
+    // also see https://stackoverflow.com/questions/3241830/qt-how-to-disable-mouse-scrolling-of-qcombobox
+}
+
 void ComboBox::close()
 {
     QComboBox::close();

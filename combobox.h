@@ -32,7 +32,8 @@ public:
     void hidePopup();
 
 protected:
-    void leaveEvent(QEvent *event);
+    void leaveEvent(QEvent *event) override;
+    void wheelEvent(QWheelEvent *event) override;
 
 public slots:
     void close();
