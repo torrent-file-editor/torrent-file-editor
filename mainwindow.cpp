@@ -1080,8 +1080,11 @@ void MainWindow::updateRaw()
     serializer.setIndentMode(QJson::IndentFull);
     QByteArray ba = serializer.serialize(res);
 #endif
-    ui->pteEditor->setPlainText(QString::fromLatin1(ba));
-    ui->pteEditor->document()->setModified(false);
+    QString newRawText = QString::fromLatin1(ba);
+    if (newRawText != ui->pteEditor->toPlainText()) {
+        ui->pteEditor->setPlainText(newRawText);
+        ui->pteEditor->document()->setModified(false);
+    }
 }
 
 bool MainWindow::saveTo(const QString &fileName)
