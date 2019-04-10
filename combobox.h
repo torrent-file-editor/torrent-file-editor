@@ -28,8 +28,8 @@ class ComboBox : public QComboBox
     Q_OBJECT
 
 public:
-    ComboBox(QWidget *parent = 0);
-    void hidePopup();
+    ComboBox(QWidget *parent = nullptr);
+    void hidePopup() override;
 
 protected:
     void leaveEvent(QEvent *event) override;
