@@ -832,9 +832,9 @@
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_5">
         <item>
-         <widget class="QPlainTextEdit" name="pteEditor">
+         <widget class="PlainTextEdit" name="pteEditor">
           <property name="lineWrapMode">
-           <enum>QPlainTextEdit::NoWrap</enum>
+           <enum>QPlainTextEdit::WidgetWidth</enum>
           </property>
          </widget>
         </item>
@@ -962,6 +962,11 @@
    <class>TreeView</class>
    <extends>QTreeView</extends>
    <header>treeview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>PlainTextEdit</class>
+   <extends>QPlainTextEdit</extends>
+   <header>plaintextedit.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

@@ -194,6 +194,7 @@ set(HEADERS
   ${CMAKE_SOURCE_DIR}/treeview.h
   ${CMAKE_SOURCE_DIR}/combobox.h
   ${CMAKE_SOURCE_DIR}/searchdlg.h
+  ${CMAKE_SOURCE_DIR}/plaintextedit.h
 )
 
 if(WIN32)
@@ -239,6 +240,7 @@ set(SOURCES
   ${CMAKE_SOURCE_DIR}/treeview.cpp
   ${CMAKE_SOURCE_DIR}/combobox.cpp
   ${CMAKE_SOURCE_DIR}/searchdlg.cpp
+  ${CMAKE_SOURCE_DIR}/plaintextedit.cpp
 )
 
 if(WIN32)
