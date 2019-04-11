@@ -627,6 +627,17 @@ void MainWindow::makeTorrent()
     if (hasRelative)
         return;
 
+    if (model->rowCount() > 1) {
+        if (baseDir.isRoot()) {
+            QMessageBox::warning(this, tr("Warning"), tr("The filesystem root can't be used as a torrent root folder."));
+            return;
+        }
+        else if (ui->leBaseFolder->text().isEmpty()) {
+            QMessageBox::warning(this, tr("Warning"), tr("The torrent root folder is not set."));
+            return;
+        }
+    }
+
     // Check for common origin folder and calculate total torrent size
     for (int i = 0; i < model->rowCount(); ++i) {
         QString file = model->item(i)->text();
