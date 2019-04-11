@@ -26,24 +26,24 @@
       <translation>检查更新</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="139"/>
+      <location filename="../aboutdlg.cpp" line="142"/>
       <source>About %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>关于 %1</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="193"/>
+      <location filename="../aboutdlg.cpp" line="198"/>
       <source>Something went wrong</source>
       <translation>检查更新出错</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="197"/>
+      <location filename="../aboutdlg.cpp" line="202"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
       <translatorcomment>Do not touch %1 it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>检测到新版本: &lt;a href="%2"&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="200"/>
+      <location filename="../aboutdlg.cpp" line="205"/>
       <source>The latest version is installed</source>
       <translation>已是最新版</translation>
     </message>
@@ -51,22 +51,22 @@
   <context>
     <name>BencodeModel</name>
     <message>
-      <location filename="../bencodemodel.cpp" line="694"/>
+      <location filename="../bencodemodel.cpp" line="754"/>
       <source>Name</source>
       <translation>键名称</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="695"/>
+      <location filename="../bencodemodel.cpp" line="755"/>
       <source>Type</source>
       <translation>类型</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="696"/>
+      <location filename="../bencodemodel.cpp" line="756"/>
       <source>Hex</source>
       <translation>十六进制</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="697"/>
+      <location filename="../bencodemodel.cpp" line="757"/>
       <source>Value</source>
       <translation>值</translation>
     </message>
@@ -74,12 +74,12 @@
   <context>
     <name>DateWidget</name>
     <message>
-      <location filename="../datewidget.cpp" line="67"/>
+      <location filename="../datewidget.cpp" line="66"/>
       <source>Clean</source>
       <translation>清除</translation>
     </message>
     <message>
-      <location filename="../datewidget.cpp" line="83"/>
+      <location filename="../datewidget.cpp" line="81"/>
       <source>Show calendar</source>
       <translation>显示日历</translation>
     </message>
@@ -87,12 +87,12 @@
   <context>
     <name>FolderEdit</name>
     <message>
-      <location filename="../folderedit.cpp" line="45"/>
+      <location filename="../folderedit.cpp" line="44"/>
       <source>Choose folder</source>
       <translation>选择文件夹</translation>
     </message>
     <message>
-      <location filename="../folderedit.cpp" line="60"/>
+      <location filename="../folderedit.cpp" line="59"/>
       <source>Add Folder</source>
       <translation>添加文件夹</translation>
     </message>
@@ -101,25 +101,25 @@
     <name>MainWindow</name>
     <message>
       <location filename="../mainwindow.ui" line="30"/>
-      <location filename="../mainwindow.ui" line="842"/>
+      <location filename="../mainwindow.ui" line="900"/>
       <source>New</source>
       <translation>新建</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
-      <location filename="../mainwindow.cpp" line="349"/>
+      <location filename="../mainwindow.cpp" line="359"/>
       <source>Open</source>
       <translation>打开</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="44"/>
-      <location filename="../mainwindow.ui" line="858"/>
+      <location filename="../mainwindow.ui" line="916"/>
       <source>Save</source>
       <translation>保存</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="374"/>
+      <location filename="../mainwindow.cpp" line="384"/>
       <source>Save As</source>
       <translation>另存为</translation>
     </message>
@@ -179,52 +179,57 @@
       <translation>哈希值</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="307"/>
+      <location filename="../mainwindow.ui" line="311"/>
+      <source>Magnet link</source>
+      <translation type="unfinished">Magnet link</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="365"/>
       <source>Comment</source>
       <translation>注释</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="325"/>
+      <location filename="../mainwindow.ui" line="383"/>
       <source>Trackers</source>
       <translation>Tracker 服务器</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="345"/>
+      <location filename="../mainwindow.ui" line="403"/>
       <source>Files</source>
       <translation>文件</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="372"/>
+      <location filename="../mainwindow.ui" line="430"/>
       <source>Add files</source>
       <translation>添加文件</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="388"/>
+      <location filename="../mainwindow.ui" line="446"/>
       <source>Add folder</source>
       <translation>添加文件夹</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="404"/>
+      <location filename="../mainwindow.ui" line="462"/>
       <source>Reload files list from current torrent data</source>
       <translation>从当前种子数据中重新载入文件列表</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="443"/>
+      <location filename="../mainwindow.ui" line="501"/>
       <source>Move file up</source>
       <translation>向上移动文件</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="459"/>
+      <location filename="../mainwindow.ui" line="517"/>
       <source>Move file down</source>
       <translation>向下移动文件</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="479"/>
+      <location filename="../mainwindow.ui" line="537"/>
       <source>Filter by </source>
       <translation>筛选条件 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="486"/>
+      <location filename="../mainwindow.ui" line="544"/>
       <source>&lt;html&gt;
   &lt;head/&gt;
   &lt;body&gt;
@@ -260,102 +265,102 @@
 &lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="505"/>
+      <location filename="../mainwindow.ui" line="563"/>
       <source>name</source>
       <translation>文件名</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="510"/>
+      <location filename="../mainwindow.ui" line="568"/>
       <source>extension</source>
       <translation>扩展名</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="515"/>
+      <location filename="../mainwindow.ui" line="573"/>
       <source>wildcards</source>
       <translation>通配符</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="520"/>
+      <location filename="../mainwindow.ui" line="578"/>
       <source>regular expression</source>
       <translation>正规表达式</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="538"/>
+      <location filename="../mainwindow.ui" line="596"/>
       <source>Filter files</source>
       <translation>筛选文件</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="633"/>
+      <location filename="../mainwindow.ui" line="691"/>
       <source>Torrent root folder </source>
       <translation>种子根目录 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="646"/>
+      <location filename="../mainwindow.ui" line="704"/>
       <source>Tree</source>
       <translation>树形结构</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="657"/>
+      <location filename="../mainwindow.ui" line="715"/>
       <source>Add tree item</source>
       <translation>添加树项目</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="689"/>
+      <location filename="../mainwindow.ui" line="747"/>
       <source>Move list item up</source>
       <translation>上移列表项目</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="705"/>
+      <location filename="../mainwindow.ui" line="763"/>
       <source>Move list item down</source>
       <translation>下移列表项目</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="721"/>
+      <location filename="../mainwindow.ui" line="779"/>
       <source>Find</source>
       <translation>查找</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="737"/>
+      <location filename="../mainwindow.ui" line="795"/>
       <source>Replace</source>
       <translation>替换</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="830"/>
+      <location filename="../mainwindow.ui" line="888"/>
       <source>File</source>
       <translation>文件</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="845"/>
+      <location filename="../mainwindow.ui" line="903"/>
       <source>Ctrl+N</source>
       <translation>Ctrl+N</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="850"/>
+      <location filename="../mainwindow.ui" line="908"/>
       <source>Open...</source>
       <translation>打开...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="853"/>
+      <location filename="../mainwindow.ui" line="911"/>
       <source>Ctrl+O</source>
       <translation>Ctrl+O</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="861"/>
+      <location filename="../mainwindow.ui" line="919"/>
       <source>Ctrl+S</source>
       <translation>Ctrl+S</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="866"/>
+      <location filename="../mainwindow.ui" line="924"/>
       <source>Save As...</source>
       <translation>另存为...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="869"/>
+      <location filename="../mainwindow.ui" line="927"/>
       <source>Ctrl+Shift+S</source>
       <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="874"/>
+      <location filename="../mainwindow.ui" line="932"/>
       <source>About...</source>
       <translation>关于...</translation>
     </message>
@@ -365,112 +370,115 @@
       <translation>编码</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="356"/>
+      <location filename="../mainwindow.ui" line="414"/>
       <source>Calculate pieces hashes</source>
       <translation>计算分块哈希值</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="427"/>
+      <location filename="../mainwindow.ui" line="485"/>
       <source>Remove selected files</source>
       <translation>移除选中的文件</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="587"/>
+      <location filename="../mainwindow.ui" line="645"/>
       <source>Piece size </source>
       <translation>分块大小 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="604"/>
+      <location filename="../mainwindow.ui" line="328"/>
+      <location filename="../mainwindow.ui" line="662"/>
       <source>Total size </source>
       <translation>总大小 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="673"/>
+      <location filename="../mainwindow.ui" line="731"/>
       <source>Delete selected tree items</source>
       <translation>删除选中的树项目</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="773"/>
+      <location filename="../mainwindow.ui" line="831"/>
       <source>Raw</source>
       <translation>原始数据</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="205"/>
+      <location filename="../mainwindow.cpp" line="207"/>
       <source>Need to calculate piece hashes</source>
       <translation>需要计算块哈希值</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="206"/>
+      <location filename="../mainwindow.cpp" line="208"/>
       <source>Please wait</source>
       <translation>请稍候</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="216"/>
+      <location filename="../mainwindow.cpp" line="218"/>
       <source>Auto</source>
       <translation>自动</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="224"/>
+      <location filename="../mainwindow.cpp" line="231"/>
       <source>Path</source>
       <translation>路径</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="224"/>
+      <location filename="../mainwindow.cpp" line="231"/>
       <source>Size</source>
       <translation>大小</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="186"/>
+      <location filename="../mainwindow.cpp" line="188"/>
       <source>Torrents (*.torrent)</source>
       <translation>种子文件 (*.torrent)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="187"/>
+      <location filename="../mainwindow.cpp" line="189"/>
       <source>uTorrent resume files (*.dat)</source>
       <translation>uTorrent 恢复文件 (*.dat)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="224"/>
+      <location filename="../mainwindow.cpp" line="231"/>
       <source># Pieces</source>
       <translation>分块数</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="326"/>
-      <location filename="../mainwindow.cpp" line="813"/>
+      <location filename="../mainwindow.cpp" line="336"/>
+      <location filename="../mainwindow.cpp" line="867"/>
       <source>Error</source>
       <translation>错误</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="326"/>
+      <location filename="../mainwindow.cpp" line="336"/>
       <source>Can't open file</source>
       <translation>无法打开文件</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="594"/>
+      <location filename="../mainwindow.cpp" line="634"/>
+      <location filename="../mainwindow.cpp" line="638"/>
+      <location filename="../mainwindow.cpp" line="648"/>
       <source>Warning</source>
       <translation>警告</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="569"/>
+      <location filename="../mainwindow.cpp" line="612"/>
       <source>Torrent root folder is not set</source>
       <translation>种子根目录未设置</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="369"/>
-      <location filename="../mainwindow.cpp" line="1046"/>
-      <location filename="../mainwindow.cpp" line="1054"/>
-      <location filename="../mainwindow.cpp" line="1065"/>
+      <location filename="../mainwindow.cpp" line="379"/>
+      <location filename="../mainwindow.cpp" line="1107"/>
+      <location filename="../mainwindow.cpp" line="1115"/>
+      <location filename="../mainwindow.cpp" line="1126"/>
       <source>Can't save file</source>
       <translation>无法保存文件</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="369"/>
-      <location filename="../mainwindow.cpp" line="1046"/>
+      <location filename="../mainwindow.cpp" line="379"/>
+      <location filename="../mainwindow.cpp" line="1107"/>
       <source>BEncoded data is not valid</source>
       <translation>BEncode 数据无效</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="570"/>
+      <location filename="../mainwindow.cpp" line="613"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
@@ -483,70 +491,80 @@ Do you want to set torrent root folder and try again?</source>
 是否要设定种子根目录并重试？</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="594"/>
+      <location filename="../mainwindow.cpp" line="634"/>
+      <source>The filesystem root can't be used as a torrent root folder.</source>
+      <translation type="unfinished">The filesystem root can't be used as a torrent root folder.</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="638"/>
+      <source>The torrent root folder is not set.</source>
+      <translation type="unfinished">The torrent root folder is not set.</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="648"/>
       <source>The torrent root folder is not common.</source>
       <translation>种子根目录不一致。</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="653"/>
+      <location filename="../mainwindow.cpp" line="707"/>
       <source>Add File</source>
       <translation>添加文件</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="674"/>
+      <location filename="../mainwindow.cpp" line="728"/>
       <source>Add Folder</source>
       <translation>添加文件夹</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="820"/>
+      <location filename="../mainwindow.cpp" line="874"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>第 %1 行 (共 %2 行) 第 %3 列</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1004"/>
-      <location filename="../mainwindow.cpp" line="1012"/>
+      <location filename="../mainwindow.cpp" line="1062"/>
+      <location filename="../mainwindow.cpp" line="1070"/>
       <source>Error on %1 line: %2</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>第 %1 行有错误: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1162"/>
+      <location filename="../mainwindow.cpp" line="1223"/>
       <source>B</source>
       <translation>B</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1166"/>
+      <location filename="../mainwindow.cpp" line="1227"/>
       <source>KiB</source>
       <translation>KiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1170"/>
+      <location filename="../mainwindow.cpp" line="1231"/>
       <source>MiB</source>
       <translation>MiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1174"/>
+      <location filename="../mainwindow.cpp" line="1235"/>
       <source>GiB</source>
       <translation>GiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1178"/>
+      <location filename="../mainwindow.cpp" line="1239"/>
       <source>TiB</source>
       <translation>TiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1196"/>
+      <location filename="../mainwindow.cpp" line="1257"/>
       <source>Save file</source>
       <translation>保存文件</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1197"/>
+      <location filename="../mainwindow.cpp" line="1258"/>
       <source>Untitled</source>
       <translation>未命名</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1198"/>
+      <location filename="../mainwindow.cpp" line="1259"/>
       <source>Save file "%1"?</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>是否要保存 "%1"？</translation>
@@ -705,7 +723,7 @@ Do you want to set torrent root folder and try again?</source>
   <context>
     <name>UrlEdit</name>
     <message>
-      <location filename="../urledit.cpp" line="42"/>
+      <location filename="../urledit.cpp" line="60"/>
       <source>Open in internet browser</source>
       <translation>在浏览器中打开</translation>
     </message>
@@ -713,13 +731,13 @@ Do you want to set torrent root folder and try again?</source>
   <context>
     <name>Worker</name>
     <message>
-      <location filename="../mainwindow.cpp" line="111"/>
+      <location filename="../mainwindow.cpp" line="113"/>
       <source>Can't open %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>无法打开 %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="150"/>
+      <location filename="../mainwindow.cpp" line="152"/>
       <source>Can't read from %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>无法读取 %1</translation>

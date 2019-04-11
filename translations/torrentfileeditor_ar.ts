@@ -26,24 +26,24 @@
       <translation>ابحث عن تحديثات</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="139"/>
+      <location filename="../aboutdlg.cpp" line="142"/>
       <source>About %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>حول %1</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="193"/>
+      <location filename="../aboutdlg.cpp" line="198"/>
       <source>Something went wrong</source>
       <translation>حدث خطأ ما</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="197"/>
+      <location filename="../aboutdlg.cpp" line="202"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
       <translatorcomment>Do not touch %1 it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>هناك إصدار جديد &lt;a href="%2"&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="200"/>
+      <location filename="../aboutdlg.cpp" line="205"/>
       <source>The latest version is installed</source>
       <translation>لديك أحدث إصدار من البرنامج</translation>
     </message>
@@ -51,22 +51,22 @@
   <context>
     <name>BencodeModel</name>
     <message>
-      <location filename="../bencodemodel.cpp" line="694"/>
+      <location filename="../bencodemodel.cpp" line="754"/>
       <source>Name</source>
       <translation>الاسم</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="695"/>
+      <location filename="../bencodemodel.cpp" line="755"/>
       <source>Type</source>
       <translation>النوع</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="696"/>
+      <location filename="../bencodemodel.cpp" line="756"/>
       <source>Hex</source>
       <translation>Hex</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="697"/>
+      <location filename="../bencodemodel.cpp" line="757"/>
       <source>Value</source>
       <translation>القيمة</translation>
     </message>
@@ -74,12 +74,12 @@
   <context>
     <name>DateWidget</name>
     <message>
-      <location filename="../datewidget.cpp" line="67"/>
+      <location filename="../datewidget.cpp" line="66"/>
       <source>Clean</source>
       <translation>إزالة</translation>
     </message>
     <message>
-      <location filename="../datewidget.cpp" line="83"/>
+      <location filename="../datewidget.cpp" line="81"/>
       <source>Show calendar</source>
       <translation>إظهار التقويم</translation>
     </message>
@@ -87,12 +87,12 @@
   <context>
     <name>FolderEdit</name>
     <message>
-      <location filename="../folderedit.cpp" line="45"/>
+      <location filename="../folderedit.cpp" line="44"/>
       <source>Choose folder</source>
       <translation>اختر مجلد</translation>
     </message>
     <message>
-      <location filename="../folderedit.cpp" line="60"/>
+      <location filename="../folderedit.cpp" line="59"/>
       <source>Add Folder</source>
       <translation>إضافة مجلد</translation>
     </message>
@@ -101,25 +101,25 @@
     <name>MainWindow</name>
     <message>
       <location filename="../mainwindow.ui" line="30"/>
-      <location filename="../mainwindow.ui" line="842"/>
+      <location filename="../mainwindow.ui" line="900"/>
       <source>New</source>
       <translation>البدء من جديد</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
-      <location filename="../mainwindow.cpp" line="349"/>
+      <location filename="../mainwindow.cpp" line="359"/>
       <source>Open</source>
       <translation>افتح</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="44"/>
-      <location filename="../mainwindow.ui" line="858"/>
+      <location filename="../mainwindow.ui" line="916"/>
       <source>Save</source>
       <translation>حفظ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="374"/>
+      <location filename="../mainwindow.cpp" line="384"/>
       <source>Save As</source>
       <translation>حفظ باسم</translation>
     </message>
@@ -179,52 +179,57 @@
       <translation>الهاش</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="307"/>
+      <location filename="../mainwindow.ui" line="311"/>
+      <source>Magnet link</source>
+      <translation type="unfinished">Magnet link</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="365"/>
       <source>Comment</source>
       <translation>ملاحظة</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="325"/>
+      <location filename="../mainwindow.ui" line="383"/>
       <source>Trackers</source>
       <translation>التراكر</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="345"/>
+      <location filename="../mainwindow.ui" line="403"/>
       <source>Files</source>
       <translation>الملفات</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="372"/>
+      <location filename="../mainwindow.ui" line="430"/>
       <source>Add files</source>
       <translation>إضافة ملفات</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="388"/>
+      <location filename="../mainwindow.ui" line="446"/>
       <source>Add folder</source>
       <translation>إضافة مجلد</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="404"/>
+      <location filename="../mainwindow.ui" line="462"/>
       <source>Reload files list from current torrent data</source>
       <translation>تحديث قائمة الملفات من التورنت المفتوح حاليا</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="443"/>
+      <location filename="../mainwindow.ui" line="501"/>
       <source>Move file up</source>
       <translation>حرِّك الملف لأعلى</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="459"/>
+      <location filename="../mainwindow.ui" line="517"/>
       <source>Move file down</source>
       <translation>حرِّك الملف لأسفل</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="479"/>
+      <location filename="../mainwindow.ui" line="537"/>
       <source>Filter by </source>
       <translation>فرز بواسطة </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="486"/>
+      <location filename="../mainwindow.ui" line="544"/>
       <source>&lt;html&gt;
   &lt;head/&gt;
   &lt;body&gt;
@@ -261,102 +266,102 @@
 &lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="505"/>
+      <location filename="../mainwindow.ui" line="563"/>
       <source>name</source>
       <translation>الاسم</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="510"/>
+      <location filename="../mainwindow.ui" line="568"/>
       <source>extension</source>
       <translation>الامتداد</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="515"/>
+      <location filename="../mainwindow.ui" line="573"/>
       <source>wildcards</source>
       <translation>نجوم (*)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="520"/>
+      <location filename="../mainwindow.ui" line="578"/>
       <source>regular expression</source>
       <translation>التعبير النمطي</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="538"/>
+      <location filename="../mainwindow.ui" line="596"/>
       <source>Filter files</source>
       <translation>فرز الملفات</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="633"/>
+      <location filename="../mainwindow.ui" line="691"/>
       <source>Torrent root folder </source>
       <translation>مسار الملفات </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="646"/>
+      <location filename="../mainwindow.ui" line="704"/>
       <source>Tree</source>
       <translation>شجرة</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="657"/>
+      <location filename="../mainwindow.ui" line="715"/>
       <source>Add tree item</source>
       <translation>إضافة فرع للشجرة</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="689"/>
+      <location filename="../mainwindow.ui" line="747"/>
       <source>Move list item up</source>
       <translation>حرّك لأعلى</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="705"/>
+      <location filename="../mainwindow.ui" line="763"/>
       <source>Move list item down</source>
       <translation>حرّك لأسفل</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="721"/>
+      <location filename="../mainwindow.ui" line="779"/>
       <source>Find</source>
       <translation>البحث</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="737"/>
+      <location filename="../mainwindow.ui" line="795"/>
       <source>Replace</source>
       <translation>بحث واستبدال</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="830"/>
+      <location filename="../mainwindow.ui" line="888"/>
       <source>File</source>
       <translation>ملف</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="845"/>
+      <location filename="../mainwindow.ui" line="903"/>
       <source>Ctrl+N</source>
       <translation>Ctrl+N</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="850"/>
+      <location filename="../mainwindow.ui" line="908"/>
       <source>Open...</source>
       <translation>افتح...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="853"/>
+      <location filename="../mainwindow.ui" line="911"/>
       <source>Ctrl+O</source>
       <translation>Ctrl+O</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="861"/>
+      <location filename="../mainwindow.ui" line="919"/>
       <source>Ctrl+S</source>
       <translation>Ctrl+S</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="866"/>
+      <location filename="../mainwindow.ui" line="924"/>
       <source>Save As...</source>
       <translation>حفظ باسم...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="869"/>
+      <location filename="../mainwindow.ui" line="927"/>
       <source>Ctrl+Shift+S</source>
       <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="874"/>
+      <location filename="../mainwindow.ui" line="932"/>
       <source>About...</source>
       <translation>حول...</translation>
     </message>
@@ -366,112 +371,115 @@
       <translation>برمجة</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="356"/>
+      <location filename="../mainwindow.ui" line="414"/>
       <source>Calculate pieces hashes</source>
       <translation>احسب هاشات القطع</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="427"/>
+      <location filename="../mainwindow.ui" line="485"/>
       <source>Remove selected files</source>
       <translation>إزالة الملفات المحددة</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="587"/>
+      <location filename="../mainwindow.ui" line="645"/>
       <source>Piece size </source>
       <translation>حجم القطعة </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="604"/>
+      <location filename="../mainwindow.ui" line="328"/>
+      <location filename="../mainwindow.ui" line="662"/>
       <source>Total size </source>
       <translation>الحجم الكلي </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="673"/>
+      <location filename="../mainwindow.ui" line="731"/>
       <source>Delete selected tree items</source>
       <translation>مسح المحدد من الشجرة</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="773"/>
+      <location filename="../mainwindow.ui" line="831"/>
       <source>Raw</source>
       <translation>نص خام</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="205"/>
+      <location filename="../mainwindow.cpp" line="207"/>
       <source>Need to calculate piece hashes</source>
       <translation>بحاجة لحساب هاشات القطع</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="206"/>
+      <location filename="../mainwindow.cpp" line="208"/>
       <source>Please wait</source>
       <translation>يُرجى الانتظار</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="216"/>
+      <location filename="../mainwindow.cpp" line="218"/>
       <source>Auto</source>
       <translation>تلقائيا</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="224"/>
+      <location filename="../mainwindow.cpp" line="231"/>
       <source>Path</source>
       <translation>المسار</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="224"/>
+      <location filename="../mainwindow.cpp" line="231"/>
       <source>Size</source>
       <translation>الحجم</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="186"/>
+      <location filename="../mainwindow.cpp" line="188"/>
       <source>Torrents (*.torrent)</source>
       <translation>ملفات التورنت (*.torrent)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="187"/>
+      <location filename="../mainwindow.cpp" line="189"/>
       <source>uTorrent resume files (*.dat)</source>
       <translation>ملفات uTorrent الغير مكتملة (*.dat)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="224"/>
+      <location filename="../mainwindow.cpp" line="231"/>
       <source># Pieces</source>
       <translation>عدد القطع#</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="326"/>
-      <location filename="../mainwindow.cpp" line="813"/>
+      <location filename="../mainwindow.cpp" line="336"/>
+      <location filename="../mainwindow.cpp" line="867"/>
       <source>Error</source>
       <translation>خطأ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="326"/>
+      <location filename="../mainwindow.cpp" line="336"/>
       <source>Can't open file</source>
       <translation>لا يمكن فتح الملف</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="594"/>
+      <location filename="../mainwindow.cpp" line="634"/>
+      <location filename="../mainwindow.cpp" line="638"/>
+      <location filename="../mainwindow.cpp" line="648"/>
       <source>Warning</source>
       <translation>تحذير</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="569"/>
+      <location filename="../mainwindow.cpp" line="612"/>
       <source>Torrent root folder is not set</source>
       <translation>لم يتم تحديد مسار الملفات</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="369"/>
-      <location filename="../mainwindow.cpp" line="1046"/>
-      <location filename="../mainwindow.cpp" line="1054"/>
-      <location filename="../mainwindow.cpp" line="1065"/>
+      <location filename="../mainwindow.cpp" line="379"/>
+      <location filename="../mainwindow.cpp" line="1107"/>
+      <location filename="../mainwindow.cpp" line="1115"/>
+      <location filename="../mainwindow.cpp" line="1126"/>
       <source>Can't save file</source>
       <translation>لا يمكن حفظ الملف</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="369"/>
-      <location filename="../mainwindow.cpp" line="1046"/>
+      <location filename="../mainwindow.cpp" line="379"/>
+      <location filename="../mainwindow.cpp" line="1107"/>
       <source>BEncoded data is not valid</source>
       <translation>بيانات البي إنكود غير صالحة</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="570"/>
+      <location filename="../mainwindow.cpp" line="613"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
@@ -482,70 +490,80 @@ Do you want to set torrent root folder and try again?</source>
 أتريد تحديد مسار الملفات والمحاولة مرة أخرى؟</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="594"/>
+      <location filename="../mainwindow.cpp" line="634"/>
+      <source>The filesystem root can't be used as a torrent root folder.</source>
+      <translation type="unfinished">The filesystem root can't be used as a torrent root folder.</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="638"/>
+      <source>The torrent root folder is not set.</source>
+      <translation type="unfinished">The torrent root folder is not set.</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="648"/>
       <source>The torrent root folder is not common.</source>
       <translation>للملفات مسارات مختلفة.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="653"/>
+      <location filename="../mainwindow.cpp" line="707"/>
       <source>Add File</source>
       <translation>إضافة ملف</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="674"/>
+      <location filename="../mainwindow.cpp" line="728"/>
       <source>Add Folder</source>
       <translation>إضافة مجلد</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="820"/>
+      <location filename="../mainwindow.cpp" line="874"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>الصف الـ %1 من أصل %2 العمود الـ %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1004"/>
-      <location filename="../mainwindow.cpp" line="1012"/>
+      <location filename="../mainwindow.cpp" line="1062"/>
+      <location filename="../mainwindow.cpp" line="1070"/>
       <source>Error on %1 line: %2</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>خطأ في السطر الـ %1: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1162"/>
+      <location filename="../mainwindow.cpp" line="1223"/>
       <source>B</source>
       <translation>بايت</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1166"/>
+      <location filename="../mainwindow.cpp" line="1227"/>
       <source>KiB</source>
       <translation>كيلوبايت</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1170"/>
+      <location filename="../mainwindow.cpp" line="1231"/>
       <source>MiB</source>
       <translation>ميجا بايت</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1174"/>
+      <location filename="../mainwindow.cpp" line="1235"/>
       <source>GiB</source>
       <translation>جيجا بايت</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1178"/>
+      <location filename="../mainwindow.cpp" line="1239"/>
       <source>TiB</source>
       <translation>تيرا بايت</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1196"/>
+      <location filename="../mainwindow.cpp" line="1257"/>
       <source>Save file</source>
       <translation>حفظ الملف</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1197"/>
+      <location filename="../mainwindow.cpp" line="1258"/>
       <source>Untitled</source>
       <translation>بلا اسم</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1198"/>
+      <location filename="../mainwindow.cpp" line="1259"/>
       <source>Save file "%1"?</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>حفظ الملف "%1"؟</translation>
@@ -714,7 +732,7 @@ Do you want to set torrent root folder and try again?</source>
   <context>
     <name>UrlEdit</name>
     <message>
-      <location filename="../urledit.cpp" line="42"/>
+      <location filename="../urledit.cpp" line="60"/>
       <source>Open in internet browser</source>
       <translation>افتح في متصفح الإنترنت</translation>
     </message>
@@ -722,13 +740,13 @@ Do you want to set torrent root folder and try again?</source>
   <context>
     <name>Worker</name>
     <message>
-      <location filename="../mainwindow.cpp" line="111"/>
+      <location filename="../mainwindow.cpp" line="113"/>
       <source>Can't open %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>لا يمكن فتح الملف %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="150"/>
+      <location filename="../mainwindow.cpp" line="152"/>
       <source>Can't read from %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>لا يمكن قراءة الملف %1</translation>
