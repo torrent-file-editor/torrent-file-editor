@@ -451,7 +451,9 @@ void MainWindow::dropEvent(QDropEvent *event) // -V2009 PVS-Studio
             path = fi.symLinkTarget();
         }
 #endif
-        open(path);
+        if (showNeedSaveFile()) {
+            open(path);
+        }
     }
 }
 
