@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/drizt/torrent-file-editor.svg?branch=master)](https://travis-ci.org/drizt/torrent-file-editor)
+[![Build Status](https://travis-ci.org/torrent-file-editor/torrent-file-editor.svg?branch=master)](https://travis-ci.org/torrent-file-editor/torrent-file-editor)
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/torrent-file-editor/localized.svg)](https://crowdin.com/project/torrent-file-editor)
 
 Torrent File Editor
@@ -9,7 +9,7 @@ Qt based GUI tool designed to create and edit .torrent files
 Author: Ivan Romanov <[drizt72@zoho.eu](mailto:drizt72@zoho.eu)>  
 License: GNU General Public License v3.0 or later  
 Homepage: https://sourceforge.net/projects/torrent-file-editor  
-Sources: https://github.com/drizt/torrent-file-editor  
+Sources: https://github.com/torrent-file-editor/torrent-file-editor  
 Crowdin translations: https://crowdin.com/project/torrent-file-editor
 
 Build Instructions
