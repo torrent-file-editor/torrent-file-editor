@@ -181,7 +181,7 @@
     <message>
       <location filename="../mainwindow.ui" line="311"/>
       <source>Magnet link</source>
-      <translation type="unfinished">Magnet link</translation>
+      <translation>磁力链接</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="365"/>
@@ -282,7 +282,7 @@
     <message>
       <location filename="../mainwindow.ui" line="578"/>
       <source>regular expression</source>
-      <translation>正规表达式</translation>
+      <translation>正则表达式</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="596"/>
@@ -493,12 +493,12 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../mainwindow.cpp" line="634"/>
       <source>The filesystem root can't be used as a torrent root folder.</source>
-      <translation type="unfinished">The filesystem root can't be used as a torrent root folder.</translation>
+      <translation>文件系统根目录不能用作种子根目录。</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="638"/>
       <source>The torrent root folder is not set.</source>
-      <translation type="unfinished">The torrent root folder is not set.</translation>
+      <translation>种子根目录未设置。</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="648"/>

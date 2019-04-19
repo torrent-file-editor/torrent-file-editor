@@ -181,7 +181,7 @@
     <message>
       <location filename="../mainwindow.ui" line="311"/>
       <source>Magnet link</source>
-      <translation type="unfinished">Magnet link</translation>
+      <translation>Link Magnético</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="365"/>
@@ -488,12 +488,12 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../mainwindow.cpp" line="634"/>
       <source>The filesystem root can't be used as a torrent root folder.</source>
-      <translation type="unfinished">The filesystem root can't be used as a torrent root folder.</translation>
+      <translation>A raiz do sistema de arquivos não pode ser usada como pasta raiz do torrent.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="638"/>
       <source>The torrent root folder is not set.</source>
-      <translation type="unfinished">The torrent root folder is not set.</translation>
+      <translation>A pasta raiz do torrent não foi definida.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="648"/>
@@ -714,7 +714,7 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../tableview.cpp" line="57"/>
       <source>Copy with Size</source>
-      <translation type="unfinished">Copy with Size</translation>
+      <translation>Copiar com Tamanho</translation>
     </message>
   </context>
   <context>
