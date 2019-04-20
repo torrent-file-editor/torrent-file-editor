@@ -54,7 +54,7 @@
     <key>NSHighResolutionCapable</key>
     <string>True</string>
     <key>SUFeedURL</key>
-    <string>https://downloads.sourceforge.net/torrent-file-editor/appcast.xml</string>
+    <string>https://torrent-file-editor.github.io/appcast/appcast.xml</string>
     <key>SUPublicDSAKeyFile</key>
     <string>dsa_pub.pem</string>
     <key>SUScheduledCheckInterval</key>

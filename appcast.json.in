@@ -1,5 +1,5 @@
 {
   "version": "${APP_VERSION}",
-  "url-win-x32": "https://downloads.sourceforge.net/project/torrent-file-editor/v${APP_VERSION}/torrent-file-editor-${APP_VERSION}-x32.exe",
-  "url-win-x64": "https://downloads.sourceforge.net/project/torrent-file-editor/v${APP_VERSION}/torrent-file-editor-${APP_VERSION}-x64.exe"
+  "url-win-x32": "https://github.com/torrent-file-editor/torrent-file-editor/releases/download/v${APP_VERSION}/torrent-file-editor-${APP_VERSION}-x32.exe",
+  "url-win-x64": "https://github.com/torrent-file-editor/torrent-file-editor/releases/download/v${APP_VERSION}/torrent-file-editor-${APP_VERSION}-x64.exe"
 }

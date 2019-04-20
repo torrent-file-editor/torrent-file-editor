@@ -12,6 +12,6 @@ execute_process(
   OUTPUT_VARIABLE DSA_SIGNATURE
   OUTPUT_STRIP_TRAILING_WHITESPACE
 )
-set(DMG_URL "https://downloads.sourceforge.net/torrent-file-editor/${APP_NAME}-${APP_VERSION}.dmg")
+set(DMG_URL "https://github.com/torrent-file-editor/torrent-file-editor/releases/download/v${APP_VERSION}/${APP_NAME}-${APP_VERSION}.dmg")
 execute_process(COMMAND stat -f "%z" "${CMAKE_BINARY_DIR}/${APP_NAME}-${APP_VERSION}.dmg" OUTPUT_VARIABLE DMG_LENGTH OUTPUT_STRIP_TRAILING_WHITESPACE)
 configure_file(${CMAKE_CURRENT_LIST_DIR}/appcast.xml.in ${CMAKE_BINARY_DIR}/appcast.xml)
