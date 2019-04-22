@@ -36,7 +36,12 @@ protected slots:
     void openUrl();
     void copyAll();
 
+protected:
+    void changeEvent(QEvent *event) override;
+
 private:
+    void updateTranslations();
+
     // Inner widgets
     QPushButton *_pbOpenUrl;
     QPushButton *_pbCopyUrl;

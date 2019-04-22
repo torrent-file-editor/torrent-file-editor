@@ -83,6 +83,9 @@
        </spacer>
       </item>
       <item>
+       <widget class="QComboBox" name="cmbTranslation"/>
+      </item>
+      <item>
        <widget class="QPushButton" name="btnAbout">
         <property name="text">
          <string>About</string>

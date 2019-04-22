@@ -47,7 +47,7 @@ TableView::TableView(QWidget *parent)
 {
     setContextMenuPolicy(Qt::DefaultContextMenu);
 
-    _copyAct = new QAction(QLineEdit::tr("&Copy") + ACCEL_KEY(QKeySequence::Copy), this);
+    _copyAct = new QAction(this);
     _copyAct->setIcon(QIcon::fromTheme(QLatin1String("edit-copy")));
     _copyAct->setShortcut(QKeySequence::Copy);
     connect(_copyAct, SIGNAL(triggered()), SLOT(copy()));
@@ -59,6 +59,8 @@ TableView::TableView(QWidget *parent)
     connect(_copySizeAct, SIGNAL(triggered()), SLOT(copyWithSize()));
     _menu->addAction(_copySizeAct);
     addAction(_copySizeAct);
+
+    updateTranslations();
 }
 
 void TableView::copy()
@@ -126,4 +128,24 @@ void TableView::contextMenuEvent(QContextMenuEvent *event)
     _copySizeAct->setEnabled(hasSelection);
 
     _menu->exec(event->globalPos());
+}
+
+void TableView::changeEvent(QEvent *event)
+{
+    switch(event->type()) {
+    case QEvent::LanguageChange:
+        updateTranslations();
+        break;
+
+    default:
+        break;
+    }
+
+    QTableView::changeEvent(event);
+}
+
+void TableView::updateTranslations()
+{
+    _copyAct->setText(QLineEdit::tr("&Copy") + ACCEL_KEY(QKeySequence::Copy));
+    _copySizeAct->setText(tr("Copy with Size"));
 }

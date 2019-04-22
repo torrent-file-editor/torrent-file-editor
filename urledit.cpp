@@ -41,7 +41,6 @@ UrlEdit::UrlEdit(QWidget *parent)
     _pbCopyUrl->setCursor(Qt::PointingHandCursor);
     _pbCopyUrl->resize(0, 0);
     _pbCopyUrl->setFlat(true);
-    _pbCopyUrl->setToolTip(QLineEdit::tr("&Copy").remove(QLatin1Char('&')));
     _pbCopyUrl->setMinimumWidth(24);
     _pbCopyUrl->setMaximumWidth(24);
     addWidget(_pbCopyUrl);
@@ -57,12 +56,13 @@ UrlEdit::UrlEdit(QWidget *parent)
     _pbOpenUrl->setCursor(Qt::PointingHandCursor);
     _pbOpenUrl->resize(0, 0);
     _pbOpenUrl->setFlat(true);
-    _pbOpenUrl->setToolTip(tr("Open in internet browser"));
     _pbOpenUrl->setMinimumWidth(24);
     _pbOpenUrl->setMaximumWidth(24);
     addWidget(_pbOpenUrl);
 
     connect(_pbOpenUrl, SIGNAL(clicked()), SLOT(openUrl()));
+
+    updateTranslations();
 }
 
 void UrlEdit::openUrl()
@@ -75,4 +75,24 @@ void UrlEdit::openUrl()
 void UrlEdit::copyAll()
 {
     qApp->clipboard()->setText(text());
+}
+
+void UrlEdit::changeEvent(QEvent *event)
+{
+    switch(event->type()) {
+    case QEvent::LanguageChange:
+        updateTranslations();
+        break;
+
+    default:
+        break;
+    }
+
+    LineEditWidget::changeEvent(event);
+}
+
+void UrlEdit::updateTranslations()
+{
+    _pbCopyUrl->setToolTip(QLineEdit::tr("&Copy").remove(QLatin1Char('&')));
+    _pbOpenUrl->setToolTip(tr("Open in internet browser"));
 }

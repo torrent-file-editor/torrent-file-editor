@@ -50,6 +50,8 @@
 #include <QElapsedTimer>
 #include <QShortcut>
 #include <QClipboard>
+#include <QTranslator>
+#include <QLibraryInfo>
 
 #ifdef HAVE_QT5
 # include <QJsonDocument>
@@ -296,6 +298,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(_bencodeModel, SIGNAL(rowsInserted(const QModelIndex&, int, int)), SLOT(updateTitle()));
     connect(_bencodeModel, SIGNAL(layoutChanged()), SLOT(updateTitle()));
     connect(_bencodeModel, SIGNAL(modelReset()), SLOT(updateTitle()));
+
+    ui->cmbTranslation->hide();
+    _showTranslations = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_T), this, SLOT(showTranslations()));
 }
 
 MainWindow::~MainWindow()
@@ -307,6 +312,68 @@ MainWindow::~MainWindow()
 MainWindow *MainWindow::instance()
 {
     return _instance;
+}
+
+void MainWindow::showTranslations()
+{
+    _showTranslations->setEnabled(false);
+
+    QDir dir(QStringLiteral(":/translations"));
+    QStringList translations = dir.entryList(QDir::Filter::NoDotAndDotDot | QDir::Filter::Files);
+    QString langs;
+    QString locales;
+    for (const QString &translation: translations) {
+        QString lang = translation.section(QLatin1Char('_'), 1).section(QLatin1Char('.'), 0, 0);
+        langs += lang + QLatin1String(" ");
+        QLocale locale(lang);
+        locales += locale.name() + QLatin1String(" ");
+
+        QString item = QString::fromUtf8("%1 (%2) - %3 - %4").arg(QLocale::languageToString(locale.language()), QLocale::countryToString(locale.country()), locale.name(), lang);
+        ui->cmbTranslation->addItem(item, locale.name());
+    }
+
+    ui->pteComment->setPlainText(langs + QLatin1Char('\n') + locales);
+
+    int index = ui->cmbTranslation->findData(QLocale().name());
+    if (index < 0) {
+        index = ui->cmbTranslation->findData(QStringLiteral("en_US"));
+    }
+    ui->cmbTranslation->setCurrentIndex(index);
+    ui->cmbTranslation->show();
+    connect(ui->cmbTranslation, SIGNAL(currentIndexChanged(int)), this, SLOT(changeTranslation(int)));
+}
+
+void MainWindow::changeTranslation(int index)
+{
+    if (_translator) {
+        qApp->removeTranslator(_translator);
+        qApp->removeTranslator(_translatorQt);
+    }
+    else {
+        _translator = new QTranslator(this);
+        _translatorQt = new QTranslator(this);
+    }
+
+    QLocale locale(ui->cmbTranslation->itemData(index).toString());
+    if (_translator->load(locale, QStringLiteral("torrentfileeditor"), QStringLiteral("_"), QStringLiteral(":/translations"))) {
+        qApp->installTranslator(_translator);
+    }
+
+#ifdef Q_OS_WIN
+    QString qtTranslationsPath(QStringLiteral(":/translations"));
+#else
+    QString qtTranslationsPath = QLibraryInfo::location(QLibraryInfo::TranslationsPath);
+#endif
+
+#ifdef HAVE_QT5
+    QString qtTranslationsName(QStringLiteral("qtbase"));
+#else
+    QString qtTranslationsName(QStringLiteral("qt"));
+#endif
+
+    if (_translatorQt->load(locale, qtTranslationsName, QStringLiteral("_"), qtTranslationsPath)) {
+        qApp->installTranslator(_translatorQt);
+    }
 }
 
 void MainWindow::create()
@@ -463,6 +530,20 @@ void MainWindow::closeEvent(QCloseEvent *event)
         event->accept();
     else
         event->ignore();
+}
+
+void MainWindow::changeEvent(QEvent *event)
+{
+    switch(event->type()) {
+    case QEvent::LanguageChange:
+        ui->retranslateUi(this);
+        break;
+
+    default:
+        break;
+    }
+
+    QMainWindow::changeEvent(event);
 }
 
 // Token from qmmp

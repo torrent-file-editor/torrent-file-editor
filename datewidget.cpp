@@ -63,7 +63,6 @@ DateWidget::DateWidget(QWidget *parent)
     _tbClean->setCursor(Qt::PointingHandCursor);
     _tbClean->resize(0, 0);
     _tbClean->setFlat(true);
-    _tbClean->setToolTip(tr("Clean"));
     _tbClean->setMinimumWidth(24);
     _tbClean->setMaximumWidth(24);
     addWidget(_tbClean);
@@ -78,7 +77,6 @@ DateWidget::DateWidget(QWidget *parent)
     _tbCalendar->resize(0, 0);
     _tbCalendar->setFlat(true);
     _tbCalendar->setCursor(Qt::PointingHandCursor);
-    _tbCalendar->setToolTip(tr("Show calendar"));
     _tbCalendar->setMinimumWidth(24);
     _tbCalendar->setMaximumWidth(24);
     addWidget(_tbCalendar);
@@ -92,6 +90,8 @@ DateWidget::DateWidget(QWidget *parent)
     connect(_tbClean, SIGNAL(clicked()), SLOT(internalClear()));
 
     setOptimalLength(QDateTime(QDate(2000, 12, 12), QTime(10, 10, 10)).toString(dateFormat()).size());
+
+    updateTranslations();
 }
 
 void DateWidget::setDate(const QDate &date)
@@ -149,4 +149,25 @@ void DateWidget::internalClear()
 {
     clear();
     emit textEdited(QString());
+}
+
+void DateWidget::changeEvent(QEvent *event)
+{
+    switch(event->type()) {
+    case QEvent::LanguageChange:
+        updateTranslations();
+        break;
+
+    default:
+        break;
+    }
+
+    LineEditWidget::changeEvent(event);
+}
+
+void DateWidget::updateTranslations()
+{
+    _tbClean->setToolTip(tr("Clean"));
+    _tbCalendar->setToolTip(tr("Show calendar"));
+
 }

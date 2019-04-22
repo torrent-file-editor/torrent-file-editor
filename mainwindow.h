@@ -30,6 +30,8 @@ class QProgressDialog;
 class Bencode;
 class BencodeModel;
 class SearchDlg;
+class QShortcut;
+class QTranslator;
 
 class Worker : public QObject
 {
@@ -69,6 +71,9 @@ signals:
     void needHash(const QStringList &files, int pieceSize);
 
 public slots:
+    void showTranslations();
+    void changeTranslation(int index);
+
     void create();
     void open(const QString &fileName);
     void open();
@@ -118,6 +123,7 @@ protected:
     void dragEnterEvent(QDragEnterEvent *event);
     void dropEvent(QDropEvent *event);
     void closeEvent(QCloseEvent *event);
+    void changeEvent(QEvent *event);
 
 private:
     enum Tabs { SimpleTab, FilesTab, JsonTreeTab, RawTab, LogTab };
@@ -150,6 +156,9 @@ private:
     QString _lastFolder;
     SearchDlg *_searchDlg;
     QString _torrentLastFolder;
+    QShortcut *_showTranslations;
+    QTranslator *_translator{};
+    QTranslator *_translatorQt{};
 
     static MainWindow *_instance;
 };

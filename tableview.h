@@ -41,8 +41,11 @@ protected:
     QModelIndex moveCursor(CursorAction cursorAction, Qt::KeyboardModifiers modifiers) override;
     void keyPressEvent(QKeyEvent *event) override;
     void contextMenuEvent(QContextMenuEvent *event) override;
+    void changeEvent(QEvent *event) override;
 
 private:
+    void updateTranslations();
+
     QMenu *_menu{};
     QAction *_copyAct{};
     QAction *_copySizeAct{};

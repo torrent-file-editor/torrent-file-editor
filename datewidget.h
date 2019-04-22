@@ -64,7 +64,12 @@ protected slots:
     void calendarSetDate();
     void internalClear();
 
+protected:
+    void changeEvent(QEvent *event) override;
+
 private:
+    void updateTranslations();
+
     // Inner widgets
     QPushButton *_tbCalendar;
     QPushButton *_tbClean;
