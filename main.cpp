@@ -280,11 +280,7 @@ int main(int argc, char *argv[])
     QString qtTranslationsPath = QLibraryInfo::location(QLibraryInfo::TranslationsPath);
 #endif
 
-#ifdef HAVE_QT5
-    QString qtTranslationsName(QStringLiteral("qtbase"));
-#else
     QString qtTranslationsName(QStringLiteral("qt"));
-#endif
 
     QTranslator qtTranslator;
     if (qtTranslator.load(QLocale(), qtTranslationsName, QStringLiteral("_"), qtTranslationsPath))

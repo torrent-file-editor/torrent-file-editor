@@ -365,9 +365,6 @@ void MainWindow::changeTranslation(int index)
     QString qtTranslationsPath = QLibraryInfo::location(QLibraryInfo::TranslationsPath);
 #endif
 
-#ifdef HAVE_QT5
-    QString qtTranslationsName(QStringLiteral("qtbase"));
-#else
     QString qtTranslationsName(QStringLiteral("qt"));
 #endif
 
