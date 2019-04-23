@@ -87,26 +87,26 @@ Also feel free to open an issue on GitHub or send me pull requests.
 
 **Translations**
 
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/sa.svg" width="24" height="24" /> Arabic - العربية  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/bd.svg" width="24" height="24" /> Bengali - বাংলা  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/cn.svg" width="24" height="24" /> Simplified Chinese - 简化字  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/tw.svg" width="24" height="24" /> Traditional Chinese - 正體字/繁體字  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/cz.svg" width="24" height="24" /> Czech – Česky  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/nl.svg" width="24" height="24" /> Dutch - Nederlands  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/us.svg" width="24" height="24" /> English - English  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/fi.svg" width="24" height="24" /> Finnish – Suomi  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/fr.svg" width="24" height="24" /> French – Français  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/de.svg" width="24" height="24" /> German – Deutsch  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/il.svg" width="24" height="24" /> Hebrew - עברית‎  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/hu.svg" width="24" height="24" /> Hungarian - Magyar  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/id.svg" width="24" height="24" /> Indonesian – Bahasa Indonesia  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/it.svg" width="24" height="24" /> Italian – Italiano  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/jp.svg" width="24" height="24" /> Japanese - 日本語  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/kr.svg" width="24" height="24" /> Korean - 조선말, 한국어  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/pl.svg" width="24" height="24" /> Polish – Polski  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/br.svg" width="24" height="24" /> Brazilian Portuguese – Português brasileiro  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/ro.svg" width="24" height="24" /> Romanian - Română  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/ru.svg" width="24" height="24" /> Russian - Русский  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/es.svg" width="24" height="24" /> Spanish – Español  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/tr.svg" width="24" height="24" /> Turkish – Türkçe  
-<img src="https://lipis.github.io/flag-icon-css/flags/4x3/vn.svg" width="24" height="24" /> Vietnamese - Việtnam  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/sa.svg" width="24" height="24">  العربية - Arabic  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/bd.svg" width="24" height="24">  বাংলা - Bengali  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/cn.svg" width="24" height="24">  简体中文 - Chinese Simplified  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/tw.svg" width="24" height="24">  繁體中文 - Chinese Traditional  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/cz.svg" width="24" height="24">  Čeština - Czech  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/nl.svg" width="24" height="24">  Nederlands - Dutch  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/us.svg" width="24" height="24">  English - English  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/fi.svg" width="24" height="24">  Suomi - Finnish  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/fr.svg" width="24" height="24">  Français - French  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/de.svg" width="24" height="24">  Deutsch - German  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/il.svg" width="24" height="24">  עברית‎ - Hebrew  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/hu.svg" width="24" height="24">  Magyar - Hungarian  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/id.svg" width="24" height="24">  Indonesia - Indonesian  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/it.svg" width="24" height="24">  Italiano - Italian  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/jp.svg" width="24" height="24">  日本語 - Japanese  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/kr.svg" width="24" height="24">  한국어 - Korean  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/pl.svg" width="24" height="24">  Polski - Polish  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/br.svg" width="24" height="24">  Português  (Brasil) - Portuguese (Brazil)  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/ro.svg" width="24" height="24">  Română - Romanian  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/ru.svg" width="24" height="24">  Русский - Russian  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/es.svg" width="24" height="24">  Español - Spanish  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/tr.svg" width="24" height="24">  Türkçe - Turkish  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/vn.svg" width="24" height="24">  Tiếng Việt - Vietnamese  
