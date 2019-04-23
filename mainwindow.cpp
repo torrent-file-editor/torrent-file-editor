@@ -301,6 +301,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->cmbTranslation->hide();
     _showTranslations = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_T), this, SLOT(showTranslations()));
+
+    changeTranslation(-1);
 }
 
 MainWindow::~MainWindow()
@@ -354,7 +356,7 @@ void MainWindow::changeTranslation(int index)
         _translatorQt = new QTranslator(this);
     }
 
-    QLocale locale(ui->cmbTranslation->itemData(index).toString());
+    QLocale locale = index < 0 ? QLocale() : QLocale(ui->cmbTranslation->itemData(index).toString());
     if (_translator->load(locale, QStringLiteral("torrentfileeditor"), QStringLiteral("_"), QStringLiteral(":/translations"))) {
         qApp->installTranslator(_translator);
     }
@@ -366,7 +368,6 @@ void MainWindow::changeTranslation(int index)
 #endif
 
     QString qtTranslationsName(QStringLiteral("qt"));
-#endif
 
     if (_translatorQt->load(locale, qtTranslationsName, QStringLiteral("_"), qtTranslationsPath)) {
         qApp->installTranslator(_translatorQt);

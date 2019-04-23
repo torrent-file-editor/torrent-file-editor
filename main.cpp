@@ -24,10 +24,7 @@
 #include "bencode.h"
 
 #include <QVariant>
-#include <QTranslator>
-#include <QLocale>
 #include <QFile>
-#include <QLibraryInfo>
 
 // Allow run Qt5 static version https://github.com/tonytheodore/mxe/commit/497669fa44356db0cd8335e2554b7bac12eb88c2
 #if defined HAVE_QT5 && defined Q_OS_WIN && defined BUILD_STATIC
@@ -269,22 +266,6 @@ int main(int argc, char *argv[])
     // For nvwa purposes. Need to delete local objects before leaks checking.
     {
     Application a(argc, argv);
-
-    QTranslator translator;
-    if (translator.load(QLocale(), QStringLiteral("torrentfileeditor"), QStringLiteral("_"), QStringLiteral(":/translations")))
-        a.installTranslator(&translator);
-
-#ifdef Q_OS_WIN
-    QString qtTranslationsPath(QStringLiteral(":/translations"));
-#else
-    QString qtTranslationsPath = QLibraryInfo::location(QLibraryInfo::TranslationsPath);
-#endif
-
-    QString qtTranslationsName(QStringLiteral("qt"));
-
-    QTranslator qtTranslator;
-    if (qtTranslator.load(QLocale(), qtTranslationsName, QStringLiteral("_"), qtTranslationsPath))
-        a.installTranslator(&qtTranslator);
 
     MainWindow w;
     a.setMainWindow(&w);
