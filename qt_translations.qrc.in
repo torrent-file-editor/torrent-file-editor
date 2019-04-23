@@ -17,7 +17,7 @@
         <file>qt_ko.qm</file>
         <!-- qt_nl.qm missed -->
         <file>qt_pl.qm</file>
-        <!-- qt_pt.qm fixme -->
+        <file>qt_pt.qm</file>
         <!-- qt_ro.qm fixme -->
         <file>qt_ru.qm</file>
         <!-- qt_tr.qm missed -->

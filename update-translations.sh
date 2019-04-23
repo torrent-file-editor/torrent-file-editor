@@ -36,7 +36,7 @@ langsmap="ar_SA:ar:Arabic - العربية
           ja_JP:ja:Japanese - 日本語
           ko_KR:ko:Korean - 조선말, 한국어
           pl_PL:pl:Polish – Polski
-          pt_BR:pt_BR:Brazilian Portuguese – Português brasileiro
+          pt_BR:pt:Brazilian Portuguese – Português brasileiro
           ro_RO:ro:Romanian - Română
           ru_RU:ru:Russian - Русский
           es_ES:es:Spanish – Español
