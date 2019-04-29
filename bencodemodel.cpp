@@ -22,13 +22,6 @@
 #include "bencodemodel.h"
 #include "bencode.h"
 
-#include <QTextCodec>
-#include <QDateTime>
-#include <QCryptographicHash>
-#include <QStringList>
-#include <QDebug>
-#include <QUrl>
-
 BencodeModel::BencodeModel(QObject *parent)
     : AbstractTreeModel(new Bencode(Bencode::Type::Dictionary), parent)
     , _bencode(new Bencode(Bencode::Type::Dictionary, "root"))

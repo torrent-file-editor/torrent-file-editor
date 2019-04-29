@@ -23,9 +23,6 @@
 #include "bencodemodel.h"
 #include "combobox.h"
 
-#include <QMouseEvent>
-#include <QComboBox>
-
 TreeView::TreeView(QWidget *parent)
     : QTreeView(parent)
 {

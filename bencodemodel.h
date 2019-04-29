@@ -24,12 +24,6 @@
 #include "abstracttreemodel.h"
 #include "bencode.h"
 
-#include <QString>
-#include <QList>
-#include <QPair>
-
-class QTextCodec;
-
 class BencodeModel : public AbstractTreeModel<Bencode>
 {
     Q_OBJECT

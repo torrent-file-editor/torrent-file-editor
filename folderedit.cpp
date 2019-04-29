@@ -21,12 +21,6 @@
 
 #include "folderedit.h"
 
-#include <QUrl>
-#include <QPushButton>
-#include <QApplication>
-#include <QStyle>
-#include <QFileDialog>
-
 FolderEdit::FolderEdit(QWidget *parent)
     : LineEditWidget(parent)
     , _pbOpenFolder(new QPushButton(this))

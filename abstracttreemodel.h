@@ -21,8 +21,6 @@
 
 #pragma once
 
-#include <QAbstractItemModel>
-
 #include "abstracttreenode.h"
 
 template<typename T>

@@ -25,8 +25,6 @@
 #include "mainwindow.h"
 #include "proxystyle.h"
 
-#include <QFileOpenEvent>
-
 Application::Application(int &argc, char **argv)
     : QApplication(argc, argv)
     , _mainWindow(nullptr)

@@ -21,10 +21,6 @@
 
 #include "plaintextedit.h"
 
-#include <QColor>
-#include <QPainter>
-#include <QTextBlock>
-
 PlainTextEditNumber::PlainTextEditNumber(QWidget *editor)
     : QWidget(editor)
 {

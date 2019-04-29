@@ -23,11 +23,6 @@
 
 #include "lineeditwidget.h"
 
-#include <QDateTime>
-
-class QPushButton;
-class QCalendarWidget;
-
 class DateWidget : public LineEditWidget
 {
     Q_OBJECT

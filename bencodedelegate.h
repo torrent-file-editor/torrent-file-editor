@@ -21,8 +21,6 @@
 
 #pragma once
 
-#include <QStyledItemDelegate>
-
 class BencodeDelegate : public QStyledItemDelegate
 {
     Q_OBJECT

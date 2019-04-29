@@ -23,15 +23,9 @@
 #include "ui_aboutdlg.h"
 #include "application.h"
 
-#include <QShortcut>
-#include <QKeySequence>
-
 #ifdef Q_OS_WIN
 # include "checkupdate.h"
-# include <QThread>
 #endif
-
-#include <QRegExp>
 
 #define VERSION_LABEL                               \
     "<style>"                                       \

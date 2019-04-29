@@ -23,10 +23,6 @@
 
 #include "abstracttreenode.h"
 
-#include <QVariant>
-#include <QMap>
-#include <QList>
-
 class Bencode : public AbstractTreeNode<Bencode>
 {
 public:

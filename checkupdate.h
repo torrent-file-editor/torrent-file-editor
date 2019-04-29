@@ -21,8 +21,6 @@
 
 #pragma once
 
-#include <QObject>
-
 class CheckUpdate : public QObject
 {
     Q_OBJECT

@@ -21,12 +21,6 @@
 
 #include "urledit.h"
 
-#include <QUrl>
-#include <QPushButton>
-#include <QDesktopServices>
-#include <QApplication>
-#include <QClipboard>
-
 UrlEdit::UrlEdit(QWidget *parent)
     : LineEditWidget(parent)
     , _pbOpenUrl(new QPushButton(this))

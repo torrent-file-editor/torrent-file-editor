@@ -21,9 +21,6 @@
 
 #include "bencode.h"
 
-#include <QDebug>
-#include <QStringList>
-
 QStringList hexKeys
 {
     QStringLiteral("pieces"),

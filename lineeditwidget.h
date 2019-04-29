@@ -21,13 +21,6 @@
 
 #pragma once
 
-#include <QLineEdit>
-#include <QToolButton>
-#include <QList>
-
-class QFrame;
-class QHBoxLayout;
-
 class LineEditWidget : public QLineEdit
 {
 	Q_OBJECT

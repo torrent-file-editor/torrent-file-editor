@@ -24,8 +24,6 @@
 #include "bencode.h"
 #include "combobox.h"
 
-#include <QEvent>
-
 BencodeDelegate::BencodeDelegate(QObject *parent)
     : QStyledItemDelegate(parent)
 {

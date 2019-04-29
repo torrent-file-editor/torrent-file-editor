@@ -1,0 +1,6 @@
+include(Platform/Windows-MSVC)
+set(_COMPILE_CXXPCH " /TP")
+if(NOT CMAKE_CXX_COMPILER_VERSION VERSION_LESS 18.0)
+  set(_FS_CXXPCH " /FS")
+endif()
+__windows_compiler_msvc(CXXPCH)

@@ -21,8 +21,6 @@
 
 #pragma once
 
-#include <QProxyStyle>
-
 class ProxyStyle : public QProxyStyle
 {
 public:

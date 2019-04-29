@@ -21,9 +21,6 @@
 
 #pragma once
 
-#include <QApplication>
-#include <QDateTime>
-
 class MainWindow;
 
 class Application : public QApplication

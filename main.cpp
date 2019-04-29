@@ -23,9 +23,6 @@
 #include "application.h"
 #include "bencode.h"
 
-#include <QVariant>
-#include <QFile>
-
 // Allow run Qt5 static version https://github.com/tonytheodore/mxe/commit/497669fa44356db0cd8335e2554b7bac12eb88c2
 #if defined HAVE_QT5 && defined Q_OS_WIN && defined BUILD_STATIC
 #include <QtPlugin>
@@ -36,15 +33,7 @@ Q_IMPORT_PLUGIN(QICOPlugin)
 Q_IMPORT_PLUGIN(QJpegPlugin)
 #endif
 
-#ifdef HAVE_QT5
-# include <QJsonDocument>
-#else
-# include <qjson/serializer.h>
-# include <qjson/parser.h>
-#endif
-
 #ifdef Q_OS_WIN
-# include <windows.h>
 HANDLE hConsole = NULL;
 #endif
 

@@ -10,7 +10,14 @@ if(NOT ${CMAKE_VERSION} VERSION_LESS "3.5.0")
   set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE BOOL "Enable/Disable output of compile commands during generation.")
 endif()
 
-project("Torrent File Editor")
+if(NOT ${CMAKE_VERSION} VERSION_LESS "3.0.0")
+  list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/CMakePCHCompiler")
+  option(ENABLE_PCH "Enable PCH to speed up compiling" ON)
+else()
+  set(ENABLE_PCH OFF)
+endif()
+
+project("Torrent File Editor" CXX CXXPCH)
 set(EXE_NAME "torrent-file-editor")
 
 # Fallback version. Will be used when compiling out of git repository.
@@ -32,7 +39,12 @@ add_custom_target(update_version ALL
 )
 
 # Enable C++11
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+if(${CMAKE_VERSION} VERSION_LESS "3.1.0")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+else()
+  set(CMAKE_CXX_STANDARD 11)
+  set(CMAKE_CXX_STANDARD_REQUIRED ON)
+endif()
 
 # Enable all warnings
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic")
@@ -109,6 +121,11 @@ if(QT5_BUILD)
   find_package(Qt5Widgets REQUIRED)
   find_package(Qt5LinguistTools REQUIRED)
 
+  # workaround for https://github.com/nanoant/CMakePCHCompiler/issues/33
+  get_target_property(Qt5GuiIncDirs Qt5::Gui INTERFACE_INCLUDE_DIRECTORIES)
+  list(REMOVE_ITEM Qt5GuiIncDirs "/usr/include")
+  set_target_properties(Qt5::Gui PROPERTIES INTERFACE_INCLUDE_DIRECTORIES "${Qt5GuiIncDirs}")
+
   add_definitions(-DHAVE_QT5)
 
   macro(QT4_ADD_TRANSLATION)
@@ -127,10 +144,22 @@ if(QT5_BUILD)
     qt5_wrap_ui(${ARGN})
   endmacro()
 else()
-  find_package(Qt4 REQUIRED)
+  find_package(Qt4 REQUIRED QtCore QtGui)
+
   find_package(QJSON 0.8.0 REQUIRED)
   add_definitions("'-DQStringLiteral(str)=QString::fromUtf8(\"\" str \"\", sizeof(str) - 1)'")
-  include_directories(${QJSON_INCLUDE_DIR})
+
+  # workaround for https://github.com/nanoant/CMakePCHCompiler/issues/33
+  get_target_property(Qt4GuiIncDirs Qt4::QtGui INTERFACE_INCLUDE_DIRECTORIES)
+  list(REMOVE_ITEM Qt4GuiIncDirs "/usr/include")
+  set_target_properties(Qt4::QtGui PROPERTIES INTERFACE_INCLUDE_DIRECTORIES "${Qt4GuiIncDirs}")
+  get_target_property(Qt4CoreIncDirs Qt4::QtCore INTERFACE_INCLUDE_DIRECTORIES)
+  list(REMOVE_ITEM Qt4CoreIncDirs "/usr/include")
+  set_target_properties(Qt4::QtCore PROPERTIES INTERFACE_INCLUDE_DIRECTORIES "${Qt4CoreIncDirs}")
+  list(REMOVE_ITEM QT_INCLUDE_DIR "/usr/include")
+  if (NOT ${QJSON_INCLUDE_DIR} STREQUAL "/usr/include")
+    include_directories(${QJSON_INCLUDE_DIR})
+  endif()
 
   if(WIN32 AND (NOT BUILD_SHARED))
     string(REPLACE "-DQT_DLL" "" QT_DEFINITIONS "${QT_DEFINITIONS}")
@@ -210,6 +239,10 @@ set(PLAIN_HEADERS
   ${CMAKE_SOURCE_DIR}/proxystyle.h
   ${CMAKE_BINARY_DIR}/config.h
 )
+
+if(NOT ${ENABLE_PCH})
+  list(APPEND PLAIN_HEADERS "${CMAKE_SOURCE_DIR}/pch.h")
+endif()
 
 # config.h is a generated file
 set_source_files_properties(${CMAKE_BINARY_DIR}/config.h
@@ -322,6 +355,14 @@ if(ENABLE_NVWA)
 endif()
 add_executable(${EXE_NAME} WIN32 MACOSX_BUNDLE ${QM} ${HEADERS} ${PLAIN_HEADERS} ${SOURCES} ${MOC_SOURCES} ${QRC_SOURCES} ${UI_SOURCES} ${NWVA_TARGET})
 
+if(NOT ENABLE_PCH)
+  if(${CMAKE_VERSION} VERSION_LESS "2.8.12")
+    target_compile_definitions(${EXE_NAME} PUBLIC $<$<COMPILE_LANGUAGE:CXX>:-include;${CMAKE_SOURCE_DIR}/pch.h>)
+  else()
+    target_compile_options(${EXE_NAME} PUBLIC $<$<COMPILE_LANGUAGE:CXX>:-include;${CMAKE_SOURCE_DIR}/pch.h>)
+  endif()
+endif()
+
 add_dependencies(${EXE_NAME} update_version)
 
 if(QT5_BUILD)
@@ -332,6 +373,10 @@ endif()
 
 if(APPLE)
   target_link_libraries(${EXE_NAME} ${SPARKLE_LIBRARY} "-framework AppKit")
+endif()
+
+if(ENABLE_PCH)
+  target_precompiled_header(${EXE_NAME} pch.h)
 endif()
 
 add_subdirectory(translations)

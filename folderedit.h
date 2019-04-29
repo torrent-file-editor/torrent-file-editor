@@ -23,8 +23,6 @@
 
 #include "lineeditwidget.h"
 
-class QPushButton;
-
 class FolderEdit : public LineEditWidget
 {
     Q_OBJECT

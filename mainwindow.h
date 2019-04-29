@@ -21,17 +21,8 @@
 
 #pragma once
 
-#include <QMainWindow>
-#include <QStandardItem>
-#include <QStringList>
-#include <QModelIndex>
-
-class QProgressDialog;
-class Bencode;
 class BencodeModel;
 class SearchDlg;
-class QShortcut;
-class QTranslator;
 
 class Worker : public QObject
 {

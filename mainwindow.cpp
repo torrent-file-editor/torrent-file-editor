@@ -27,44 +27,6 @@
 #include "bencodedelegate.h"
 #include "searchdlg.h"
 
-#include <QFileDialog>
-#include <QFile>
-#include <QMessageBox>
-#include <QDesktopServices>
-#include <QIcon>
-#include <QUrl>
-#include <QLocale>
-#include <QApplication>
-#include <qmath.h>
-#include <QStandardItemModel>
-#include <QDirIterator>
-#include <QProgressDialog>
-#include <QThread>
-#include <QTextCodec>
-#include <QAbstractItemDelegate>
-#include <QPersistentModelIndex>
-#include <QInputDialog>
-#include <QCryptographicHash>
-#include <QTextDocument>
-#include <QMimeData>
-#include <QElapsedTimer>
-#include <QShortcut>
-#include <QClipboard>
-#include <QTranslator>
-#include <QLibraryInfo>
-
-#ifdef HAVE_QT5
-# include <QJsonDocument>
-#else
-# include <qjson/serializer.h>
-# include <qjson/parser.h>
-#endif
-
-#ifdef Q_OS_WIN
-# include <io.h>
-# include <windows.h>
-#endif
-
 #define PROGRESS_TIMEOUT 500 /* ms */
 
 // FIXME: workaround for symlink wrong size https://bugreports.qt.io/browse/QTBUG-24831

@@ -21,13 +21,6 @@
 
 #include "tableview.h"
 
-#include <QApplication>
-#include <QClipboard>
-#include <QKeyEvent>
-#include <QItemSelectionModel>
-#include <QMenu>
-#include <QLineEdit>
-
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 # include <QStyleHints>
 # define ACCEL_KEY(k) ((!QCoreApplication::testAttribute(Qt::AA_DontShowIconsInMenus)                      \

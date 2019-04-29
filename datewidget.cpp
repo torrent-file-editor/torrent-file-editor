@@ -21,19 +21,6 @@
 
 #include "datewidget.h"
 
-#include <QKeyEvent>
-#include <QLineEdit>
-#include <QCalendarWidget>
-#include <QIcon>
-#include <QHBoxLayout>
-#include <QRegExp>
-#include <QRegExpValidator>
-#include <QApplication>
-#include <QDesktopWidget>
-#include <QLocale>
-#include <QKeyEvent>
-#include <QPushButton>
-
 // Always use format of current locale
 inline QString dateFormat()
 {

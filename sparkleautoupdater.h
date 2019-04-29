@@ -22,8 +22,6 @@
 
 #pragma once
 
-#include <QString>
-
 class SparkleAutoUpdater
 {
 public:

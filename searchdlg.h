@@ -21,14 +21,7 @@
 
 #pragma once
 
-#include <QDialog>
-#include <QModelIndex>
-
 class BencodeModel;
-
-#ifdef Q_OS_MAC
-class QSizeGrip;
-#endif
 
 namespace Ui { class SearchDlg; }
 

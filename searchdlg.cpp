@@ -23,10 +23,6 @@
 #include "ui_searchdlg.h"
 #include "bencodemodel.h"
 
-#ifdef Q_OS_MAC
-# include <QSizeGrip>
-#endif
-
 SearchDlg::SearchDlg(BencodeModel *model, QWidget *parent)
 #ifdef Q_OS_WIN
     : QDialog(parent, Qt::Tool | Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint | Qt::MSWindowsFixedSizeDialogHint)

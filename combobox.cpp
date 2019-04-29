@@ -21,11 +21,6 @@
 
 #include "combobox.h"
 
-#include <QAbstractItemView>
-#include <QTimer>
-#include <QShowEvent>
-#include <QCursor>
-
 ComboBox::ComboBox(QWidget *parent)
     : QComboBox(parent)
 {

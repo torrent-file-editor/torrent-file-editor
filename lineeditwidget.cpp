@@ -21,13 +21,6 @@
 
 #include "lineeditwidget.h"
 
-#include <QBoxLayout>
-#include <QApplication>
-#include <QDesktopWidget>
-#include <QEvent>
-#include <QRegExpValidator>
-#include <QAbstractButton>
-
 LineEditWidget::LineEditWidget(QWidget *parent)
     : QLineEdit(parent)
     , _layout(new QHBoxLayout())

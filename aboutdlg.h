@@ -21,8 +21,6 @@
 
 #pragma once
 
-#include <QDialog>
-
 class QThread;
 
 namespace Ui { class AboutDlg; }

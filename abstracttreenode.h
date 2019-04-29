@@ -21,10 +21,6 @@
 
 #pragma once
 
-#include <QList>
-#include <QStringList>
-#include <QTextStream>
-
 template<typename T>
 class AbstractTreeNode
 {

@@ -21,9 +21,6 @@
 
 #pragma once
 
-#include <QPlainTextEdit>
-#include <QObject>
-
 class PlainTextEditNumber : public QWidget
 {
     Q_OBJECT

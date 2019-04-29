@@ -21,19 +21,6 @@
 
 #include "checkupdate.h"
 
-#ifdef HAVE_QT5
-# include <QJsonDocument>
-#else
-# include <qjson/serializer.h>
-# include <qjson/parser.h>
-#endif
-
-#include <QVariantMap>
-
-#include <tchar.h>
-#include <windows.h>
-#include <wininet.h>
-
 #define CHUNK_SIZE 1024 * 1024 /* 1MiB */
 #define CAST_URL "https://downloads.sourceforge.net/torrent-file-editor/appcast.json"
 
