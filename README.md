@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/torrent-file-editor/torrent-file-editor.svg?branch=master)](https://travis-ci.org/torrent-file-editor/torrent-file-editor)
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/torrent-file-editor/localized.svg)](https://crowdin.com/project/torrent-file-editor)
+[![Version](https://badge.fury.io/gh/torrent-file-editor%2Ftorrent-file-editor.svg)](https://badge.fury.io/gh/torrent-file-editor%2Ftorrent-file-editor)
 
 Torrent File Editor
 ===================
