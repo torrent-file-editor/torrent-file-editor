@@ -72,7 +72,7 @@ for lang in $langsmap; do
     country=$(echo $srclang | cut -f2 -d_ | tr '[:upper:]' '[:lower:]')
 
     echo "<img src=\"https://lipis.github.io/flag-icon-css/flags/4x3/$country.svg\" width=\"24\" height=\"24\">  $nativelang - $englishlang  " >> ../all_languages.txt
-    echo "  - {country: \"$country\", humanlang: \"$nativelang - $englishlang\"}" >> ../all_languages.yaml
+    echo "  - {country: \"$country\", nativelang: \"$nativelang\", englishlang: \"$englishlang\"}" >> ../all_languages.yaml
     cp "tmp/torrentfileeditor_$srclang.ts" "torrentfileeditor_$dstlang.ts"
 done
 unset IFS
