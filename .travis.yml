@@ -2,8 +2,6 @@ git:
   depth: 1
   quiet: true
 
-language: cpp
-
 matrix:
   include:
     - {name: "Ubuntu 14.04 Qt5", os: "linux", dist: "trusty",  env: "QT5_BUILD=ON",   compiler: "gcc", addons: {apt: {packages: "qtbase5-dev qttools5-dev qttools5-dev-tools"}}}

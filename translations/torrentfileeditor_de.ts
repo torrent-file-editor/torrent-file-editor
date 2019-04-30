@@ -1,51 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de" sourcelanguage="en">
+<TS version="2.1" language="de_DE">
 <context>
     <name>AboutDlg</name>
     <message>
-        <location filename="../aboutdlg.ui" line="184"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href=&quot;mailto:drizt72@zoho.eu&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href=&quot;https://torrent-file-editor.github.io&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;https://torrent-file-editor.github.io&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href=&quot;https://github.com/torrent-file-editor/torrent-file-editor&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;https://github.com/torrent-file-editor/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href=&quot;http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Autor: Ivan Romanov &lt;a href=&quot;mailto:drizt72@zoho.eu&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Lizenz: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Homepage: &lt;a href=&quot;https://torrent-file-editor.github.io&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;https://torrent-file-editor.github.io&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Quellen: &lt;a href=&quot;https://github.com/torrent-file-editor/torrent-file-editor&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;https://github.com/torrent-file-editor/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Dank an &lt;a href=&quot;http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; für das Anwendungssymbol&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
         <location filename="../aboutdlg.ui" line="39"/>
         <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
-        <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-        <translation>&lt;h3&gt;Bier für den Entwickler&lt;/h3&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutdlg.ui" line="85"/>
         <source>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I&apos;m tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</source>
-        <translation>Die Entwicklung der neuesten Version verlangt viel Zeit und Mühe. Schwerwiegende Fehler wurden behoben und nützliche Verbesserungen gemacht. Ich bin erschöpft. Aber ein Bier würde mir zu neuer Stärke verhelfen und die Entwicklung voran treiben. Wenn Ihnen diese Anwendung gefällt, Sie dem Entwickler danken wollen und ihn ermutigen wollen die nächste Version zu releasen, können Sie hier einen kleinen Betrag spenden:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutdlg.ui" line="126"/>
         <source>Check for Update</source>
-        <translation>Nach Updates suchen</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../aboutdlg.ui" line="184"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href=&quot;mailto:drizt72@zoho.eu&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href=&quot;https://torrent-file-editor.github.io&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;https://torrent-file-editor.github.io&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href=&quot;https://github.com/torrent-file-editor/torrent-file-editor&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;https://github.com/torrent-file-editor/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href=&quot;http://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutdlg.cpp" line="136"/>
         <source>About %1</source>
-        <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-        <translation>Über %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutdlg.cpp" line="192"/>
         <source>Something went wrong</source>
-        <translation>Etwas lief schief</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutdlg.cpp" line="196"/>
         <source>New version &lt;a href=&quot;%2&quot;&gt;%1&lt;/a&gt; has been detected</source>
-        <translatorcomment>Do not touch %1 it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-        <translation>Neue Version &lt;a href=&quot;%2&quot;&gt;%1&lt;/a&gt; wurde gefunden</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutdlg.cpp" line="199"/>
         <source>The latest version is installed</source>
-        <translation>Die neueste Version ist bereits installiert</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -53,22 +49,22 @@
     <message>
         <location filename="../bencodemodel.cpp" line="747"/>
         <source>Name</source>
-        <translation>Name</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../bencodemodel.cpp" line="748"/>
         <source>Type</source>
-        <translation>Typ</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../bencodemodel.cpp" line="749"/>
         <source>Hex</source>
-        <translation>Hexadezimal</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../bencodemodel.cpp" line="750"/>
         <source>Value</source>
-        <translation>Wert</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -76,12 +72,12 @@
     <message>
         <location filename="../datewidget.cpp" line="157"/>
         <source>Clean</source>
-        <translation>Löschen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../datewidget.cpp" line="158"/>
         <source>Show calendar</source>
-        <translation>Kalender anzeigen</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -89,12 +85,12 @@
     <message>
         <location filename="../folderedit.cpp" line="38"/>
         <source>Choose folder</source>
-        <translation>Ordner auswählen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../folderedit.cpp" line="53"/>
         <source>Add Folder</source>
-        <translation>Ordner hinzufügen</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -103,130 +99,151 @@
         <location filename="../mainwindow.ui" line="30"/>
         <location filename="../mainwindow.ui" line="903"/>
         <source>New</source>
-        <translation>Neu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="37"/>
         <location filename="../mainwindow.cpp" line="386"/>
         <source>Open</source>
-        <translation>Öffnen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="44"/>
         <location filename="../mainwindow.ui" line="919"/>
         <source>Save</source>
-        <translation>Speichern</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="51"/>
         <location filename="../mainwindow.cpp" line="411"/>
         <source>Save As</source>
-        <translation>Speichern als</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="65"/>
+        <source>Coding</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="91"/>
         <source>About</source>
-        <translation>Über</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="104"/>
         <source>Main</source>
-        <translation>Hauptmenü</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="192"/>
-        <source>Pieces</source>
-        <translation>Stücke</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="151"/>
-        <source>Created by</source>
-        <translation>Erstellt von</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="212"/>
-        <source>Piece size</source>
-        <translation>Stückgröße</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="202"/>
-        <source>Publisher</source>
-        <translation>Herausgeber</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="233"/>
-        <source>Name</source>
-        <translation>Name</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="117"/>
         <source>Private torrent</source>
-        <translation>Privater Torrent</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="151"/>
+        <source>Created by</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="192"/>
+        <source>Pieces</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="202"/>
+        <source>Publisher</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="212"/>
+        <source>Piece size</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
         <source>URL</source>
-        <translation>URL</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
         <source>Date created</source>
-        <translation>Erstelldatum</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="233"/>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="240"/>
         <source>Hash</source>
-        <translation>Hash</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="314"/>
         <source>Magnet link</source>
-        <translation type="unfinished">Magnet link</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="331"/>
+        <location filename="../mainwindow.ui" line="665"/>
+        <source>Total size </source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="368"/>
         <source>Comment</source>
-        <translation>Kommentar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="386"/>
         <source>Trackers</source>
-        <translation>Tracker</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="406"/>
         <source>Files</source>
-        <translation>Dateien</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="417"/>
+        <source>Calculate pieces hashes</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="433"/>
         <source>Add files</source>
-        <translation>Dateien hinzufügen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="449"/>
         <source>Add folder</source>
-        <translation>Ordner hinzufügen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="465"/>
         <source>Reload files list from current torrent data</source>
-        <translation>Lade Dateiliste aus aktuellem Torrent neu</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="488"/>
+        <source>Remove selected files</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="504"/>
         <source>Move file up</source>
-        <translation>Datei nach oben verschieben</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="520"/>
         <source>Move file down</source>
-        <translation>Datei nach unten verschieben</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="540"/>
         <source>Filter by </source>
-        <translation>Sortieren nach </translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="547"/>
@@ -246,222 +263,173 @@
     &lt;p style=&quot;margin-left: 20px&quot;&gt;full file path matches Perl-like regular expression&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;</source>
-        <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-        <translation>&lt;html&gt;
-  &lt;head/&gt;
-  &lt;body&gt;
-    &lt;p&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/p&gt;
-    &lt;p style=&quot;margin-left: 20px&quot;&gt;Dateiname mit Erweiterung entspricht exakt dem Muster&lt;/p&gt;
-    &lt;br/&gt;
-    &lt;p&gt;&lt;b&gt;Erweiterung&lt;/b&gt;&lt;/p&gt;
-    &lt;p style=&quot;margin-left: 20px&quot;&gt;die Symbole nach dem letzten Punkt entsprechen genau dem Muster, für &apos;archive.tar.gz&apos; wird es beispielsweise &apos;gz&apos; sein&lt;/p&gt;
-    &lt;br/&gt;
-    &lt;p&gt;&lt;b&gt;Platzhalter&lt;/b&gt;&lt;/p&gt;
-    &lt;p style=&quot;margin-left: 20px&quot;&gt;Dateiname mit Erweiterung stimmt mit Dateiglobbing überein, wobei &apos;?&apos; ein beliebiges Symbol und &apos;*&apos; eine beliebige Anzahl von Symbolen ist&lt;/p&gt;
-    &lt;br/&gt;
-    &lt;p&gt;&lt;b&gt;regulärer Ausdruck&lt;/b&gt;&lt;/p&gt;
-    &lt;p style=&quot;margin-left: 20px&quot;&gt;vollständiger Dateipfad entspricht Perl-ähnlichem regulären Ausdruck&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="566"/>
         <source>name</source>
-        <translation>Name</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="571"/>
         <source>extension</source>
-        <translation>Dateityp</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="576"/>
         <source>wildcards</source>
-        <translation>Wildcards</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="581"/>
         <source>regular expression</source>
-        <translation>regulärer Ausdruck</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="599"/>
         <source>Filter files</source>
-        <translation>Dateien filtern</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="694"/>
-        <source>Torrent root folder </source>
-        <translation>Torrent Stammverzeichnis </translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="707"/>
-        <source>Tree</source>
-        <translation>Baum</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="718"/>
-        <source>Add tree item</source>
-        <translation>Baumelement hinzufügen</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="750"/>
-        <source>Move list item up</source>
-        <translation>Listenelement nach oben verschieben</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="766"/>
-        <source>Move list item down</source>
-        <translation>Listenelement nach unten verschieben</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="782"/>
-        <source>Find</source>
-        <translation>Suchen</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="798"/>
-        <source>Replace</source>
-        <translation>Ersetzen</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="891"/>
-        <source>File</source>
-        <translation>Datei</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="906"/>
-        <source>Ctrl+N</source>
-        <translation>Strg+N</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="911"/>
-        <source>Open...</source>
-        <translation>Öffnen...</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="914"/>
-        <source>Ctrl+O</source>
-        <translation>Strg+O</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="922"/>
-        <source>Ctrl+S</source>
-        <translation>Strg+S</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="927"/>
-        <source>Save As...</source>
-        <translation>Speichern als...</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="930"/>
-        <source>Ctrl+Shift+S</source>
-        <translation>Strg+Umschalt+S</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="935"/>
-        <source>About...</source>
-        <translation>Über...</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="65"/>
-        <source>Coding</source>
-        <translation>Kodierung</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="417"/>
-        <source>Calculate pieces hashes</source>
-        <translation>Berechne Teil Hashes</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="488"/>
-        <source>Remove selected files</source>
-        <translation>Entferne ausgewählte Dateien</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="648"/>
         <source>Piece size </source>
-        <translation>Stückgröße </translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="331"/>
-        <location filename="../mainwindow.ui" line="665"/>
-        <source>Total size </source>
-        <translation>Gesamtgröße </translation>
+        <location filename="../mainwindow.ui" line="694"/>
+        <source>Torrent root folder </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="707"/>
+        <source>Tree</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="718"/>
+        <source>Add tree item</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="734"/>
         <source>Delete selected tree items</source>
-        <translation>Lösche gewähle Baumelemente</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="750"/>
+        <source>Move list item up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="766"/>
+        <source>Move list item down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="782"/>
+        <source>Find</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="798"/>
+        <source>Replace</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="834"/>
         <source>Raw</source>
-        <translation>Unbearbeitet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="171"/>
-        <source>Need to calculate piece hashes</source>
-        <translation>Stück-Hashwerte müssen berechnet werden</translation>
+        <location filename="../mainwindow.ui" line="891"/>
+        <source>File</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="172"/>
-        <source>Please wait</source>
-        <translation>Bitte warten</translation>
+        <location filename="../mainwindow.ui" line="906"/>
+        <source>Ctrl+N</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="182"/>
-        <source>Auto</source>
-        <translation>Automatisch</translation>
+        <location filename="../mainwindow.ui" line="911"/>
+        <source>Open...</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="195"/>
-        <source>Path</source>
-        <translation>Pfad</translation>
+        <location filename="../mainwindow.ui" line="914"/>
+        <source>Ctrl+O</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="195"/>
-        <source>Size</source>
-        <translation>Größe</translation>
+        <location filename="../mainwindow.ui" line="922"/>
+        <source>Ctrl+S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="927"/>
+        <source>Save As...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="930"/>
+        <source>Ctrl+Shift+S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="935"/>
+        <source>About...</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="152"/>
         <source>Torrents (*.torrent)</source>
-        <translation>Torrents (*.torrent)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="153"/>
         <source>uTorrent resume files (*.dat)</source>
-        <translation>uTorrent-Fortsetzungsdateien (*.dat)</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="171"/>
+        <source>Need to calculate piece hashes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="172"/>
+        <source>Please wait</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="182"/>
+        <source>Auto</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="195"/>
+        <source>Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="195"/>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="195"/>
         <source># Pieces</source>
-        <translation># Teile</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="363"/>
         <location filename="../mainwindow.cpp" line="908"/>
         <source>Error</source>
-        <translation>Fehler</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="363"/>
         <source>Can&apos;t open file</source>
-        <translation>Datei kann nicht geöffnet werden</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="675"/>
-        <location filename="../mainwindow.cpp" line="679"/>
-        <location filename="../mainwindow.cpp" line="689"/>
-        <source>Warning</source>
-        <translation>Warnung</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="653"/>
-        <source>Torrent root folder is not set</source>
-        <translation>Torrent Stammverzeichnis nicht definiert</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="406"/>
@@ -469,13 +437,18 @@
         <location filename="../mainwindow.cpp" line="1156"/>
         <location filename="../mainwindow.cpp" line="1167"/>
         <source>Can&apos;t save file</source>
-        <translation>Konnte Datei nicht speichern</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="406"/>
         <location filename="../mainwindow.cpp" line="1148"/>
         <source>BEncoded data is not valid</source>
-        <translation>BEncoded Daten sind ungültig</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="653"/>
+        <source>Torrent root folder is not set</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="654"/>
@@ -484,90 +457,90 @@
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can&apos;t be generated.
 
 Do you want to set torrent root folder and try again?</source>
-        <translation>Der Pfad zu den Datei auf der Festplatte ist unbekannt. Torrents können nur aus vollständigen Dateien erstellt werden. 
-
-Wenn Sie die Dateiliste des aktuellen Torrents bearbeiten möchten, müssen sie das Stammverzeichnis festlegen. Das Stammverzeichnis ist der Ordner, in welchem sich alle im Torrent enthaltenen Dateien befinden. Der Dateipfad, einer Datei im Torrent, ist relativ zum Stammverzeichnis. Wenn Dateien fehlen kann der Torrent nicht erstellt werden!
-
-Möchten Sie jetzt das Stammverzeichnis setzen und erneut versuchen?</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="675"/>
+        <location filename="../mainwindow.cpp" line="679"/>
+        <location filename="../mainwindow.cpp" line="689"/>
+        <source>Warning</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="675"/>
         <source>The filesystem root can&apos;t be used as a torrent root folder.</source>
-        <translation type="unfinished">The filesystem root can&apos;t be used as a torrent root folder.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="679"/>
         <source>The torrent root folder is not set.</source>
-        <translation type="unfinished">The torrent root folder is not set.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="689"/>
         <source>The torrent root folder is not common.</source>
-        <translation>Der Torrent-Stammordner ist ungewöhnlich.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="748"/>
         <source>Add File</source>
-        <translation>Datei hinzufügen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="769"/>
         <source>Add Folder</source>
-        <translation>Ordner hinzufügen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="915"/>
         <source>Line: %1 of %2 Col: %3</source>
-        <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-        <translation>Zeile: %1 von %2 Spalte: %3</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1103"/>
         <location filename="../mainwindow.cpp" line="1111"/>
         <source>Error on %1 line: %2</source>
-        <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-        <translation>Fehler bei %1 Zeile: %2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1264"/>
         <source>B</source>
-        <translation>B</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1268"/>
         <source>KiB</source>
-        <translation>KiB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1272"/>
         <source>MiB</source>
-        <translation>MiB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1276"/>
         <source>GiB</source>
-        <translation>GiB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1280"/>
         <source>TiB</source>
-        <translation>TiB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1298"/>
         <source>Save file</source>
-        <translation>Datei speichern</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1299"/>
         <source>Untitled</source>
-        <translation>Unbenannt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1300"/>
         <source>Save file &quot;%1&quot;?</source>
-        <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-        <translation>Datei &quot;%1&quot; speichern?</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -584,27 +557,27 @@ Möchten Sie jetzt das Stammverzeichnis setzen und erneut versuchen?</translatio
     <message>
         <location filename="../bencode.cpp" line="216"/>
         <source>list</source>
-        <translation>Liste</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../bencode.cpp" line="217"/>
         <source>dictionary</source>
-        <translation>Wörterbuch</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../bencode.cpp" line="218"/>
         <source>integer</source>
-        <translation>Ganzzahl</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../bencode.cpp" line="219"/>
         <source>string</source>
-        <translation>Zeichenkette</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../bencode.cpp" line="220"/>
         <source>invalid</source>
-        <translation>ungültig</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -612,114 +585,112 @@ Möchten Sie jetzt das Stammverzeichnis setzen und erneut versuchen?</translatio
     <message>
         <location filename="../searchdlg.ui" line="27"/>
         <source>Key</source>
-        <translation>Schlüssel</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../searchdlg.ui" line="39"/>
         <location filename="../searchdlg.ui" line="96"/>
         <source>Match case</source>
-        <translation>Groß-/Kleinschreibung beachten</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../searchdlg.ui" line="46"/>
         <location filename="../searchdlg.ui" line="103"/>
         <source>Exact match</source>
-        <translation>Exakte Übereinstimmung</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../searchdlg.ui" line="56"/>
         <location filename="../searchdlg.ui" line="113"/>
         <source>Wildcards</source>
-        <translation>Platzhalter</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../searchdlg.ui" line="63"/>
         <location filename="../searchdlg.ui" line="120"/>
         <source>Regular expression</source>
-        <translation>Regulärer Ausdruck</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../searchdlg.ui" line="84"/>
         <source>Value</source>
-        <translation>Wert</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../searchdlg.ui" line="127"/>
         <source>Hex</source>
-        <translation>Hexadezimal</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../searchdlg.ui" line="154"/>
         <source>Replace value with</source>
-        <translation>Wert ersetzen mit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../searchdlg.ui" line="164"/>
         <source>hex</source>
-        <translation>hex</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../searchdlg.ui" line="176"/>
         <source>Direction</source>
-        <translation>Suchrichtung</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../searchdlg.ui" line="182"/>
         <source>Up</source>
-        <translation>Oben</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../searchdlg.ui" line="189"/>
         <source>Down</source>
-        <translation>Unten</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../searchdlg.ui" line="204"/>
         <source>Replace All</source>
-        <translation>Alle ersetzen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../searchdlg.ui" line="224"/>
         <source>Find Next</source>
-        <translation>Weitersuchen</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../searchdlg.ui" line="231"/>
+        <source>Close</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../searchdlg.ui" line="248"/>
         <location filename="../searchdlg.cpp" line="59"/>
         <source>Replace</source>
-        <translation>Ersetzen</translation>
-    </message>
-    <message>
-        <location filename="../searchdlg.ui" line="231"/>
-        <source>Close</source>
-        <translation>Schließen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../searchdlg.cpp" line="59"/>
         <source>Find</source>
-        <translation>Suchen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../searchdlg.cpp" line="152"/>
         <source>No matches found</source>
-        <translation>Keine Treffer gefunden</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location filename="../searchdlg.cpp" line="157"/>
         <source>%1 of %n match(es)</source>
-        <translatorcomment>Do not touch %1 it must be as is. Make translations for both singular and plural forms. </translatorcomment>
-        <translation>
-            <numerusform>&quot;%1&quot; von &quot;%n&quot; Treffer</numerusform>
-            <numerusform>&quot;%1&quot; von &quot;%n&quot; Treffern</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../searchdlg.cpp" line="210"/>
         <source>%n value(s) was(were) replaced</source>
-        <translatorcomment>Do not touch %n it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-        <translation>
-            <numerusform>%n Wert(e) wurde(n) ersetzt</numerusform>
-            <numerusform>%n Wert(e) wurde(n) ersetzt</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -729,7 +700,7 @@ Möchten Sie jetzt das Stammverzeichnis setzen und erneut versuchen?</translatio
         <location filename="../tableview.cpp" line="50"/>
         <location filename="../tableview.cpp" line="143"/>
         <source>Copy with Size</source>
-        <translation>Mit Größe kopieren</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -737,7 +708,7 @@ Möchten Sie jetzt das Stammverzeichnis setzen und erneut versuchen?</translatio
     <message>
         <location filename="../urledit.cpp" line="91"/>
         <source>Open in internet browser</source>
-        <translation>Im Internetbrowser öffnen</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -745,14 +716,12 @@ Möchten Sie jetzt das Stammverzeichnis setzen und erneut versuchen?</translatio
     <message>
         <location filename="../mainwindow.cpp" line="77"/>
         <source>Can&apos;t open %1</source>
-        <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-        <translation>%1 kann nicht geöffnet werden</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="116"/>
         <source>Can&apos;t read from %1</source>
-        <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-        <translation>%1 kann nicht gelesen werden</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
