@@ -1,16 +1,17 @@
+git:
+  depth: 1
+  quiet: true
+
 sudo: required
 language: cpp
 
 matrix:
   include:
-    # Ubuntu 14.04 Trusty
-    - {os: "linux", dist: "trusty",  env: "QT5_BUILD=ON",   compiler: "gcc"}
-    - {os: "linux", dist: "trusty",  env: "QT5_BUILD=OFF",  compiler: "gcc"}
-    # Ubuntu 16.04 Xenial
-    - {os: "linux", dist: "xenial",  env: "QT5_BUILD=ON",   compiler: "gcc"}
-    - {os: "linux", dist: "xenial",  env: "QT5_BUILD=OFF",  compiler: "gcc"}
-    # macOS
-    - {os: "osx", compiler: "clang"}
+    - {name: "Ubuntu 14.04 Qt5", os: "linux", dist: "trusty",  env: "QT5_BUILD=ON",   compiler: "gcc"}
+    - {name: "Ubuntu 14.04 Qt4", os: "linux", dist: "trusty",  env: "QT5_BUILD=OFF",  compiler: "gcc"}
+    - {name: "Ubuntu 16.04 Qt5", os: "linux", dist: "xenial",  env: "QT5_BUILD=ON",   compiler: "gcc"}
+    - {name: "Ubuntu 16.04 Qt4", os: "linux", dist: "xenial",  env: "QT5_BUILD=OFF",  compiler: "gcc"}
+    - {name: "macOS", os: "osx", compiler: "clang"}
 
 script:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
