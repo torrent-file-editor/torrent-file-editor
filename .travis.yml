@@ -1,32 +1,30 @@
-os:
-  - linux
-  - osx
-
-dist: trusty
 sudo: required
 language: cpp
 
-compiler:
-  - clang
-  - gcc
-
-env:
-  - QT5_BUILD=ON
-  - QT5_BUILD=OFF
-
 matrix:
-  exclude:
-    - os: linux
-      compiler: clang
-    - os: osx
-      compiler: gcc
-    - os: osx
-      compiler: clang
-      env: QT5_BUILD=OFF
-    
+  include:
+    # Ubuntu 14.04 Trusty
+    - {os: "linux", dist: "trusty",  env: "QT5_BUILD=ON",   compiler: "gcc"}
+    - {os: "linux", dist: "trusty",  env: "QT5_BUILD=OFF",  compiler: "gcc"}
+    # Ubuntu 16.04 Xenial
+    - {os: "linux", dist: "xenial",  env: "QT5_BUILD=ON",   compiler: "gcc"}
+    - {os: "linux", dist: "xenial",  env: "QT5_BUILD=OFF",  compiler: "gcc"}
+    # macOS
+    - {os: "osx", compiler: "clang"}
+
 script:
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cmake -DCMAKE_BUILD_TYPE=Debug -DQT5_BUILD=$QT5_BUILD . && make; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cmake -DCMAKE_BUILD_TYPE=Debug . -DCMAKE_PREFIX_PATH=$(brew cask info sparkle | grep /usr/local/Caskroom | cut -d' ' -f 1)\;$(brew --prefix qt5) && make; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
+            -DCMAKE_BUILD_TYPE=Debug
+            -DQT5_BUILD=$QT5_BUILD
+            . && make;
+    fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
+            -DCMAKE_BUILD_TYPE=Debug
+            -DCMAKE_PREFIX_PATH=$(brew cask info sparkle | grep /usr/local/Caskroom | cut -d' ' -f 1)\;$(brew --prefix qt5)
+            . && make;
+    fi
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update -qq; fi
