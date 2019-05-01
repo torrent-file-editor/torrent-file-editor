@@ -2,39 +2,28 @@ git:
   depth: 1
   quiet: true
 
-sudo: required
 language: cpp
 
 matrix:
   include:
-    - {name: "Ubuntu 14.04 Qt5", os: "linux", dist: "trusty",  env: "QT5_BUILD=ON",   compiler: "gcc"}
-    - {name: "Ubuntu 14.04 Qt4", os: "linux", dist: "trusty",  env: "QT5_BUILD=OFF",  compiler: "gcc"}
-    - {name: "Ubuntu 16.04 Qt5", os: "linux", dist: "xenial",  env: "QT5_BUILD=ON",   compiler: "gcc"}
-    - {name: "Ubuntu 16.04 Qt4", os: "linux", dist: "xenial",  env: "QT5_BUILD=OFF",  compiler: "gcc"}
-    - {name: "macOS", os: "osx", compiler: "clang"}
+    - {name: "Ubuntu 14.04 Qt5", os: "linux", dist: "trusty",  env: "QT5_BUILD=ON",   compiler: "gcc", addons: {apt: {packages: "qtbase5-dev qttools5-dev qttools5-dev-tools"}}}
+    - {name: "Ubuntu 14.04 Qt4", os: "linux", dist: "trusty",  env: "QT5_BUILD=OFF",  compiler: "gcc", addons: {apt: {packages: "libqt4-dev libqjson-dev"}}}
+    - {name: "Ubuntu 16.04 Qt5", os: "linux", dist: "xenial",  env: "QT5_BUILD=ON",   compiler: "gcc", addons: {apt: {packages: "qtbase5-dev qttools5-dev qttools5-dev-tools"}}}
+    - {name: "Ubuntu 16.04 Qt4", os: "linux", dist: "xenial",  env: "QT5_BUILD=OFF",  compiler: "gcc", addons: {apt: {packages: "libqt4-dev libqjson-dev"}}}
+    - {name: "macOS", os: "osx", addons: {homebrew: {packages: "qt5", casks: "sparkle"}}}
 
 script:
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
-            -DCMAKE_BUILD_TYPE=Debug
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON \
+            -DCMAKE_BUILD_TYPE=Debug         \
             -DQT5_BUILD=$QT5_BUILD
-            . && make;
+      cmake --build .
     fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
-            -DCMAKE_BUILD_TYPE=Debug
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON \
+            -DCMAKE_BUILD_TYPE=Debug         \
             -DCMAKE_PREFIX_PATH=$(brew cask info sparkle | grep /usr/local/Caskroom | cut -d' ' -f 1)\;$(brew --prefix qt5)
-            . && make;
+      cmake --build .
     fi
-
-before_install:
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update -qq; fi
-  - if [[ "$QT5_BUILD" == "ON" && "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -qq qtbase5-dev qttools5-dev qttools5-dev-tools; fi
-  - if [[ "$QT5_BUILD" == "OFF" && "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -qq libqt4-dev libqjson-dev; fi
-  - if [[ "$CXX" == "clang++" && "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -qq libstdc++-4.8-dev; fi
-  - if [[ "$CXX" == "g++" && "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -qq g++; fi
-
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew outdated cmake || brew upgrade cmake; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install qt5; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew cask install sparkle; fi
