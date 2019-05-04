@@ -1,7 +1,7 @@
 CMake Precompiled Headers
 =========================
 
-CMakePCHCompiler module defines extra CXXPCH compiler that compiles `.h` into `.pch/.gch`.
+CMakePCHCompiler module defines extra `CXXPCH`/`CPCH` "meta"-compiler that compiles `.h` into `.pch/.gch` using existing `CXX`/`C` compiler.
 
 For convenience it defines
 
@@ -11,15 +11,27 @@ For convenience it defines
 
 Uses given header as precompiled header for given target.
 
-Optionally it may share compiled header object with other target, so it is
-precompiled just once.
+Optionally it may share compiled header object with other target, so it is precompiled just once.
 
-Also header may be given different type that default `c++-header`.
+**NOTE**: While CMakePCHCompiler ensures that precompiled header is included as first compile unit for each source file, it is still recommended to keep `#include "prefix.h"` (where `prefix.h` is your header file you want to pre-compile - `header` argument) in your source code to ensure your code remains portable regardless of precompiled headers being enabled or not.
+
+For more details how to use precompiled header with your library and/or compiler refer to their documentation i.e. GCC, Qt, etc.
+
+**IMPORTANT** Before you submit issue report or feature request, please...
+--------------------------------------------------------------------------
+
+[pchissue]: https://gitlab.kitware.com/cmake/cmake/issues/1260
+
+1. Read this `README.md` file completely to understand intentions and limitations of this project.
+2. Understand that CMakePCHCompiler is neither official nor proper way to provide PCH support in CMake.
+3. Request first proper precompiled headers support from CMake's maintainers, adding your comment in [dedicated issue at CMake's issue tracker][pchissue].
+4. Understand that the CMakePCHCompiler authors are neither compensated for their efforts not affiliated with KitWare (CMake's authors).
+5. If you know or think you know how to fix / extend CMakePCHCompiler, try to provide PR.
 
 Why this project exists
 -----------------------
 
-[rfc]: http://thread.gmane.org/gmane.comp.programming.tools.cmake.devel/12589
+[rfc]: https://cmake.org/pipermail/cmake-developers/2015-February/024598.html
 
 So far, native support for precompiled headers was requested at CMake's mailing lists and/or its issue tracker many times, however until today CMake does not provide PCH support. This project was started in 2015 as a proof-of-concept implementation accompanying [RFC: CMake precompiled header support and custom compiler based implementation][rfc].
 
@@ -28,8 +40,6 @@ So far, native support for precompiled headers was requested at CMake's mailing 
 [pchnativepr]: https://gitlab.kitware.com/cmake/cmake/merge_requests/984
 
 Recently there was an [effort for such a native implementation][pchnativepr], but this has not been finalized and later discarded. Therefore this project is meant to be maintained until native implementation will arrive to CMake.
-
-[pchissue]: https://gitlab.kitware.com/cmake/cmake/issues/1260
 
 See also an [umbrella issue at CMake's issue tracker][pchissue] (KitWare's GitLab) for more information on native PCH support.
 
@@ -54,18 +64,20 @@ More information can be found at [Visual Studio Community][z7vscomm] and is trac
 Example
 -------
 
-	cmake_minimum_required(VERSION 3.0)
+~~~cmake
+cmake_minimum_required(VERSION 3.0)
 
-	list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/CMakePCHCompiler)
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/CMakePCHCompiler)
 
-	project(pchtest CXX CXXPCH)
+project(pchtest CXX CXXPCH)
 
-	add_library(engine SHARED src/engine.cpp src/library.cpp)
-	target_precompiled_header(engine src/prefix.h)
+add_library(engine SHARED src/engine.cpp src/library.cpp)
+target_precompiled_header(engine src/prefix.h)
 
-	add_executable(demo src/demo.cpp)
-	target_link_libraries(demo engine)
-	target_precompiled_header(demo src/prefix.h REUSE engine)
+add_executable(demo src/demo.cpp)
+target_link_libraries(demo engine)
+target_precompiled_header(demo src/prefix.h REUSE engine)
+~~~
 
 What it is about?
 -----------------
@@ -97,11 +109,13 @@ should handle precompiled headers generation internally, based on given
 compiler command templates. However this may be good start to request native
 support using simple API of:
 
-	target_precompiled_header(<target> <path/to/precompiled_header.h>)
-	target_precompiled_header(<target1> <target2>
-	                          <path/to/precompiled_header.h>)
-	target_precompiled_header(<target> <path/to/precompiled_header.h> REUSE
-	                          <other_target_to_reuse_precompiled_header_from>)
+~~~cmake
+target_precompiled_header(<target> <path/to/precompiled_header.h>)
+target_precompiled_header(<target1> <target2>
+                          <path/to/precompiled_header.h>)
+target_precompiled_header(<target> <path/to/precompiled_header.h> REUSE
+                          <other_target_to_reuse_precompiled_header_from>)
+~~~
 
 How does it work?
 -----------------
@@ -115,7 +129,9 @@ header on given target.
 
 Pre-compiler header is build in new `target.pch` subtarget using:
 
-	add_library(${target}.pch OBJECT ${header})
+~~~cmake
+add_library(${target}.pch OBJECT ${header})
+~~~
 
 This is done on purpose because of few reasons:
 
@@ -135,6 +151,6 @@ License
 
 [authors]: https://github.com/nanoant/CMakePCHCompiler/graphs/contributors
 
-Copyright (c) 2015-2018 [CMakePCHCompiler Authors][authors]
+Copyright (c) 2015-2019 [CMakePCHCompiler Authors][authors]
 
 This code is licensed under the MIT License, see [LICENSE](LICENSE) for details.

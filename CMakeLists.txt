@@ -18,6 +18,7 @@ else()
 endif()
 
 project("Torrent File Editor" CXX CXXPCH)
+
 set(EXE_NAME "torrent-file-editor")
 
 # Fallback version. Will be used when compiling out of git repository.
