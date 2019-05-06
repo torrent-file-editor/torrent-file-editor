@@ -26,6 +26,8 @@ set(MACOSX_BUNDLE_BUNDLE_VERSION "\${APP_VERSION}")
 
 include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
 
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)  # to find FindSparkle.cmake file and PchLinkTarget
+
 # Workaround: On Fedora will be executed cmake not mingw32-cmake for building Windows version
 add_custom_target(update_version ALL
   COMMAND ${CMAKE_COMMAND} -DWIN32=${WIN32} -DAPP_VERSION="v${APP_VERSION}" -P "${CMAKE_SOURCE_DIR}/cmake/Version.cmake"
@@ -56,6 +58,8 @@ option(ENABLE_DEBUG_LOG "Show debugging messages" OFF)
 if(ENABLE_DEBUG_LOG)
   add_definitions(-DDEBUG)
 endif()
+
+option(ENABLE_PCH "Precompiled headers" ON)
 
 if(APPLE)
   # Force Qt5 build on Mac OS X. Qt4 is not supported
@@ -255,7 +259,6 @@ if(APPLE)
     ${CMAKE_SOURCE_DIR}/sparkleautoupdater.mm
   )
 
-  set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)  # to find FindSparkle.cmake file
   find_package(Sparkle REQUIRED)
   include_directories(${SPARKLE_INCLUDE_DIR})
 endif()
@@ -332,6 +335,11 @@ endif()
 
 if(APPLE)
   target_link_libraries(${EXE_NAME} ${SPARKLE_LIBRARY} "-framework AppKit")
+endif()
+
+if(ENABLE_PCH)
+    include(PchLinkTarget)
+    pch_link_target(${EXE_NAME} pch.h)
 endif()
 
 add_subdirectory(translations)
