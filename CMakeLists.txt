@@ -28,7 +28,7 @@ include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
 
 # Workaround: On Fedora will be executed cmake not mingw32-cmake for building Windows version
 add_custom_target(update_version ALL
-  COMMAND ${CMAKE_COMMAND} -DWIN32=${WIN32} -DAPP_VERSION="v${APP_VERSION}" -P "${CMAKE_SOURCE_DIR}/Version.cmake"
+  COMMAND ${CMAKE_COMMAND} -DWIN32=${WIN32} -DAPP_VERSION="v${APP_VERSION}" -P "${CMAKE_SOURCE_DIR}/cmake/Version.cmake"
 )
 
 # Enable C++11
@@ -255,7 +255,7 @@ if(APPLE)
     ${CMAKE_SOURCE_DIR}/sparkleautoupdater.mm
   )
 
-  set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR})  # to find FindSparkle.cmake file
+  set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)  # to find FindSparkle.cmake file
   find_package(Sparkle REQUIRED)
   include_directories(${SPARKLE_INCLUDE_DIR})
 endif()
@@ -439,7 +439,7 @@ if(APPLE)
   include(CPack)
 
   add_custom_target("dmg"
-    COMMAND ${CMAKE_COMMAND} -DPROJECT_NAME=${PROJECT_NAME} -DAPP_NAME=${EXE_NAME} -P "${CMAKE_CURRENT_SOURCE_DIR}/Dmg.cmake"
+    COMMAND ${CMAKE_COMMAND} -DPROJECT_NAME=${PROJECT_NAME} -DAPP_NAME=${EXE_NAME} -P "${CMAKE_CURRENT_SOURCE_DIR}/cmake/Dmg.cmake"
     DEPENDS "${EXE_NAME}"
     WORKING_DIRECTORY "${CMAKE_BINARY_DIR}"
   )
@@ -471,10 +471,10 @@ set(OTHER_FILES
   .gitignore
   .travis.yml
   README.md
-  Dmg.cmake
+  cmake/Dmg.cmake
   appcast.xml.in
   CMakeDMGSetup.scpt
-  Version.cmake
+  cmake/Version.cmake
   build.sh
   PVS-Studio.cfg
   Plog-Converter.cfg

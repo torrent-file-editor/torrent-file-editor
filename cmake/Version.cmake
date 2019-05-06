@@ -120,14 +120,14 @@ endif()
 
 unset(_VERSION)
 
-configure_file(${CMAKE_CURRENT_LIST_DIR}/config.h.in config.h)
+configure_file(${CMAKE_CURRENT_LIST_DIR}/../config.h.in config.h)
 if(WIN32)
-  configure_file(${CMAKE_CURRENT_LIST_DIR}/app.rc.in app.rc)
+  configure_file(${CMAKE_CURRENT_LIST_DIR}/../app.rc.in app.rc)
 endif()
 
 string(REGEX REPLACE "^v" "" APP_VERSION ${APP_VERSION})
 if(WIN32)
-  configure_file(${CMAKE_CURRENT_LIST_DIR}/appcast.json.in appcast.json)
+  configure_file(${CMAKE_CURRENT_LIST_DIR}/../appcast.json.in appcast.json)
 endif()
 file(WRITE version ${APP_VERSION})
 if (APPLE)
