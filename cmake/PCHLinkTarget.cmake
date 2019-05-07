@@ -32,6 +32,10 @@ function(pch_link_target target pch_header)
     endif()
 
     foreach(s ${sources})
+        if(s MATCHES "^\\\$<")
+            continue()
+        endif()
+
         get_source_file_property(langid ${s} LANGUAGE)
 
         if(s MATCHES ${RX})
@@ -41,6 +45,10 @@ function(pch_link_target target pch_header)
 
     if(has_objc)
         foreach(s ${sources})
+            if(s MATCHES "^\\\$<")
+                continue()
+            endif()
+
             get_source_file_property(langid ${s} LANGUAGE)
             if (langid AND (pchlangid STREQUAL langid) AND (NOT ${s} MATCHES ${RX}))
                 set(compile_source ${s})
@@ -55,6 +63,10 @@ function(pch_link_target target pch_header)
         # Propogate PCH header to automoc sources
         target_compile_options(${target} PRIVATE "$<$<COMPILE_LANGUAGE:${pchlangid}>:-include;${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/${target}_pch.dir/${pch_header}>")
         foreach(s ${sources})
+            if(s MATCHES "^\\\$<")
+                continue()
+            endif()
+
             get_source_file_property(langid ${s} LANGUAGE)
 
             if (langid AND (pchlangid STREQUAL langid) AND (NOT s MATCHES ${RX}))
@@ -63,17 +75,25 @@ function(pch_link_target target pch_header)
         endforeach()
     endif()
 
-    message(STATUS "Current list file: ${_current_list_dir}")
-
     add_custom_target(${target}_pch
         ${CMAKE_COMMAND} -DSOURCE_FILE=${compile_source}
                          -DTARGET=${target}
                          -DSOURCE_DIR=${CMAKE_CURRENT_SOURCE_DIR}
-                         -DBINARY_DIR=${CMAKE_CURRENT_BINARY_DIR}
+                         -DBINARY_DIR=${CMAKE_BINARY_DIR}
+                         -DCURRENT_BINARY_DIR=${CMAKE_CURRENT_BINARY_DIR}
                          -DPCH=${pch_header}
                          -DLANG=${pchlangid}
                          -P ${_current_list_dir}/CompilePch.cmake
         BYPRODUCTS ${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/${target}_pch.dir/${pch_header}.gch
     )
     add_dependencies(${target} ${target}_pch)
+
+    if(NOT TARGET compile-parse-compile-commands)
+        add_custom_target(compile-parse-compile-commands
+            ${CMAKE_COMMAND} -DBINARY_DIR=${CMAKE_BINARY_DIR}
+                             -P ${_current_list_dir}/CompileParseCommand.cmake
+            BYPRODUCTS ${CMAKE_BINARY_DIR}/parse-compile-commands${CMAKE_EXECUTABLE_SUFFIX}
+        )
+    endif()
+    add_dependencies(${target}_pch compile-parse-compile-commands)
 endfunction()

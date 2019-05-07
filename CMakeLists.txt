@@ -338,7 +338,7 @@ if(APPLE)
 endif()
 
 if(ENABLE_PCH)
-    include(PchLinkTarget)
+    include(PCHLinkTarget)
     pch_link_target(${EXE_NAME} pch.h)
 endif()
 

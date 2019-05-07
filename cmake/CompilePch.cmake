@@ -1,17 +1,45 @@
 # Must be set:
 # SOURCE_DIR
 # BINARY_DIR
+# CURRENT_BINARY_DIR
 # TARGET
 # PCH
 # SOURCE_FILE
 # LANG
 
-include(${CMAKE_CURRENT_LIST_DIR}/JSONParser.cmake)
+function(compile_pch args pch_path gch_path lang_header binary_dir)
+    string(REGEX REPLACE "\\.gch\$" "" include_gch "${gch_path}")
+    set(include_gch "${binary_dir}/${include_gch}")
 
-include(${CMAKE_CURRENT_LIST_DIR}/JSONParser.cmake)
+    separate_arguments(args NATIVE_COMMAND ${args})
+    list(FIND args "-o" pos)
+    if(pos EQUAL -1)
+        message(FATAL_ERROR "Wrong args:\n${args}")
+    endif()
+
+    list(REMOVE_AT args ${pos})
+    list(REMOVE_AT args ${pos})
+
+    list(FIND args "-c" pos)
+    if(POS EQUAL -1)
+        message(FATAL_ERROR "Wrong args:\n${args}")
+    endif()
+    list(REMOVE_AT args ${pos})
+    list(REMOVE_AT args ${pos})
+
+    string(REPLACE "-include;${include_gch}" "" args "${args}")
+
+    list(APPEND args -x ${lang_header} -c ${pch_path} -o ${gch_path})
+
+    get_filename_component(gch_dir ${gch_path} DIRECTORY)
+    file(MAKE_DIRECTORY ${gch_dir})
+    message(STATUS "Recompile ${PCH} PCH header")
+    execute_process(COMMAND ${args} WORKING_DIRECTORY ${binary_dir})
+    set(WORKING_DIR ${COMMANDS_${I}.directory})
+endfunction()
 
 # Check all required variables is set
-foreach(VAR SOURCE_DIR;BINARY_DIR;TARGET;PCH;SOURCE_FILE;LANG)
+foreach(VAR SOURCE_DIR;BINARY_DIR;TARGET;PCH;SOURCE_FILE;LANG;CURRENT_BINARY_DIR)
     if(NOT DEFINED ${VAR})
         message(FATAL_ERROR "${VAR} is not set.")
     endif()
@@ -37,13 +65,11 @@ endif()
 
 # Read and parse compile_commands.json
 file(READ ${COMPILE_COMMANDS_PATH} COMPILE_COMMANDS_TEXT)
-sbeParseJson(COMMANDS COMPILE_COMMANDS_TEXT)
-
-get_filename_component(BASE_PCH ${PCH} NAME)
 
 # Check GCH file updated
-set(GSH_PATH CMakeFiles/${TARGET}_pch.dir/${BASE_PCH}.gch)
-if(NOT (${PCH_PATH} IS_NEWER_THAN ${BINARY_DIR}/${GSH_PATH}))
+get_filename_component(PCH_NAME ${PCH} NAME)
+set(GSH_PATH CMakeFiles/${TARGET}_pch.dir/${PCH_NAME}.gch)
+if(NOT (${PCH_PATH} IS_NEWER_THAN ${CURRENT_BINARY_DIR}/${GSH_PATH}))
     message(STATUS "Up-to-date ${PCH} PCH header")
     return()
 endif()
@@ -62,40 +88,24 @@ if(NOT IS_ABSOLUTE ${SOURCE_FILE})
     set(SOURCE_FILE ${SOURCE_DIR}/${SOURCE_FILE})
 endif()
 
-# Search given SOURCE_FILE in compile_commands.json
-set(I 0)
-while(COMMANDS_${I}.command)   
-    if(COMMANDS_${I}.file STREQUAL ${SOURCE_FILE})
-        separate_arguments(ARGS NATIVE_COMMAND ${COMMANDS_${I}.command})
-        list(FIND ARGS "-o" POS)
-        if(POS STREQUAL -1)
-            message(FATAL_ERROR "Wrong args:\n${ARGS}")
-        endif()
-
-        list(REMOVE_AT ARGS ${POS})
-        list(REMOVE_AT ARGS ${POS})
-
-        list(FIND ARGS "-c" POS)
-        if(POS STREQUAL -1)
-            message(FATAL_ERROR "Wrong args:\n${ARGS}")
-        endif()
-        list(REMOVE_AT ARGS ${POS})
-        list(REMOVE_AT ARGS ${POS})
-
-        string(REPLACE "-include;${BINARY_DIR}/CMakeFiles/${TARGET}_pch.dir/${BASE_PCH}" "" ARGS "${ARGS}")
-
-        list(APPEND ARGS -x ${LANG_HEADER} -c ${SOURCE_DIR}/${PCH} -o ${GSH_PATH})
-        file(MAKE_DIRECTORY CMakeFiles/${TARGET}_pch.dir)
-        message(STATUS "Recompile ${PCH} PCH header")
-        execute_process(COMMAND ${ARGS} WORKING_DIRECTORY ${BINARY_DIR})
-        set(WORKING_DIR ${COMMANDS_${I}.directory})
-        set(FOUND_SOURCE TRUE)
-        break()
-    endif()
-
-    math(EXPR I "${I} + 1")
-endwhile()
-
-if(NOT FOUND_SOURCE)
-    message(FATAL_ERROR "Source file isn't found in compile_commands.json")
+# Fix source file path
+if("$ENV{MSYSTEM}" STREQUAL MSYS)
+    string(REGEX REPLACE "^/([A-Z])/" "\\1:/" SOURCE_FILE ${SOURCE_FILE})
 endif()
+
+execute_process(
+    COMMAND ${BINARY_DIR}/parse-compile-commands${CMAKE_EXECUTABLE_SUFFIX} ${COMPILE_COMMANDS_PATH} ${SOURCE_FILE}
+    OUTPUT_VARIABLE ARGS
+    RESULT_VARIABLE RESULT
+)
+
+if (NOT ARGS)
+    message(FATAL_ERROR "Can't parse compile command for ${SOURCE_FILE}: ${RESULT}")
+endif()
+
+# Fix args
+if("$ENV{MSYSTEM}" STREQUAL MSYS)
+    string(REGEX REPLACE "^/([A-Z])/" "\\1:/" ARGS "${ARGS}")
+endif()
+
+compile_pch(${ARGS} ${PCH_PATH} ${GSH_PATH} ${LANG_HEADER} ${CURRENT_BINARY_DIR})
