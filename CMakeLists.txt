@@ -59,7 +59,12 @@ if(ENABLE_DEBUG_LOG)
   add_definitions(-DDEBUG)
 endif()
 
-option(ENABLE_PCH "Precompiled headers" ON)
+if(NOT ${CMAKE_VERSION} VERSION_LESS "3.3.0")
+  option(ENABLE_PCH "Precompiled headers" ON)
+else()
+  set(ENABLE_PCH OFF)
+endif()
+
 
 if(APPLE)
   # Force Qt5 build on Mac OS X. Qt4 is not supported
