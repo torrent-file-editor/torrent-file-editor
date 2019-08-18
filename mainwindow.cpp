@@ -1048,7 +1048,7 @@ void MainWindow::removeTreeItem()
     }
 
     if (row >= 0 && row < _bencodeModel->rowCount(parent)) {
-        ui->treeJson->setCurrentIndex(parent.child(row, 0));
+        ui->treeJson->setCurrentIndex(_bencodeModel->index(row, 0, parent));
     }
     else {
         ui->treeJson->setCurrentIndex(QModelIndex());
