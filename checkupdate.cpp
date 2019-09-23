@@ -35,7 +35,7 @@
 #include <wininet.h>
 
 #define CHUNK_SIZE 1024 * 1024 /* 1MiB */
-#define CAST_URL "https://downloads.sourceforge.net/torrent-file-editor/appcast.json"
+#define CAST_URL "https://torrent-file-editor.github.io/appcast/appcast.json"
 
 CheckUpdate::CheckUpdate(QObject *parent)
     : QObject(parent)
