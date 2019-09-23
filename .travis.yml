@@ -10,7 +10,7 @@ matrix:
     - {name: "Ubuntu 14.04 Qt4", os: "linux", dist: "trusty",  env: "QT5_BUILD=OFF",  compiler: "gcc", addons: {apt: {packages: "libqt4-dev libqjson-dev"}}}
     - {name: "Ubuntu 16.04 Qt5", os: "linux", dist: "xenial",  env: "QT5_BUILD=ON",   compiler: "gcc", addons: {apt: {packages: "qtbase5-dev qttools5-dev qttools5-dev-tools"}}}
     - {name: "Ubuntu 16.04 Qt4", os: "linux", dist: "xenial",  env: "QT5_BUILD=OFF",  compiler: "gcc", addons: {apt: {packages: "libqt4-dev libqjson-dev"}}}
-    - {name: "macOS", os: "osx", addons: {homebrew: {packages: "qt5", casks: "sparkle"}}}
+    - {name: "macOS", os: "osx", addons: {homebrew: {packages: "qt5", casks: "sparkle", update: true}}}
 
 script:
   - |
