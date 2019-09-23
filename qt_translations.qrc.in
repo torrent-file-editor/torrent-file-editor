@@ -21,6 +21,7 @@
         <!-- qt_ro.qm fixme -->
         <file>qt_ru.qm</file>
         <!-- qt_tr.qm missed -->
+        <file>qt_uk.qm</file>
         <!-- qt_vi.qm missed -->
         <file>qt_zh_CN.qm</file>
         <file>qt_zh_TW.qm</file>

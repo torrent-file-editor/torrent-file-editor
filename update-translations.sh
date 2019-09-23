@@ -16,7 +16,7 @@ trim()
 }
 
 
-# af_ZA: ar_SA: bn_BD: ca_ES: cs_CZ: da_DK: de_DE: el_GR: en_US: es_ES: fi_FI: fr_FR: he_IL: hu_HU: id_ID: it_IT: ja_JP: ko_KR: nl_NL: no_NO: pl_PL: pt_BR: pt_PT: ro_RO: ru_RU: sr_SP: sv_SE: tr_TR: uk_UA: vi_VN: zh_CN: zh_TW:
+# af_ZA: ar_SA: bn_BD: ca_ES: cs_CZ: da_DK: de_DE: el_GR: en_US: es_ES: fi_FI: fr_FR: he_IL: hu_HU: id_ID: it_IT: ja_JP: ko_KR: nl_NL: no_NO: pl_PL: pt_BR: pt_PT: ro_RO: ru_RU: sr_SP: sv_SE: tr_TR: uk_UA: vi_VN: zh_CN: zh_TW: uk_UA
 
 langsmap="ar_SA:ar:Arabic:العربية
           bn_BD:bn:Bengali:বাংলা
@@ -40,7 +40,8 @@ langsmap="ar_SA:ar:Arabic:العربية
           ru_RU:ru:Russian:Русский
           es_ES:es:Spanish:Español
           tr_TR:tr:Turkish:Türkçe
-          vi_VN:vi:Vietnamese:Tiếng Việt"
+          vi_VN:vi:Vietnamese:Tiếng Việt
+          uk_UA:uk:Ukrainian:Украї́нська"
 
 pushd translations
 [ -d tmp ] && rm -fr tmp
