@@ -486,12 +486,12 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../mainwindow.cpp" line="634"/>
       <source>The filesystem root can't be used as a torrent root folder.</source>
-      <translation type="unfinished">The filesystem root can't be used as a torrent root folder.</translation>
+      <translation>Gốc của hệ thống tập tin không thể sử dụng như là thư mục gốc torrent.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="638"/>
       <source>The torrent root folder is not set.</source>
-      <translation type="unfinished">The torrent root folder is not set.</translation>
+      <translation>Thư mục gốc torrent chưa được đặt.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="648"/>

@@ -23,7 +23,7 @@
     <message>
       <location filename="../aboutdlg.ui" line="126"/>
       <source>Check for Update</source>
-      <translation>Buscar Actualizaciones</translation>
+      <translation>Buscar actualizaciones</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="142"/>
@@ -131,7 +131,7 @@
     <message>
       <location filename="../mainwindow.ui" line="101"/>
       <source>Main</source>
-      <translation>Inicio</translation>
+      <translation>Principal</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="189"/>
@@ -181,7 +181,7 @@
     <message>
       <location filename="../mainwindow.ui" line="311"/>
       <source>Magnet link</source>
-      <translation type="unfinished">Magnet link</translation>
+      <translation>Enlace magnet</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="365"/>
@@ -201,12 +201,12 @@
     <message>
       <location filename="../mainwindow.ui" line="430"/>
       <source>Add files</source>
-      <translation>Agregar archivos</translation>
+      <translation>Añadir archivos</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="446"/>
       <source>Add folder</source>
-      <translation>Agregar carpeta</translation>
+      <translation>Añadir carpeta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="462"/>
@@ -493,12 +493,12 @@ Si quieres editar la lista de archivos en el torrent actual, primero debes elegi
     <message>
       <location filename="../mainwindow.cpp" line="634"/>
       <source>The filesystem root can't be used as a torrent root folder.</source>
-      <translation type="unfinished">The filesystem root can't be used as a torrent root folder.</translation>
+      <translation>La raíz del sistema de archivos no puede ser usada como una carpeta raíz del torrent.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="638"/>
       <source>The torrent root folder is not set.</source>
-      <translation type="unfinished">The torrent root folder is not set.</translation>
+      <translation>La carpeta raíz del torrent no está establecida.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="648"/>
@@ -719,7 +719,7 @@ Si quieres editar la lista de archivos en el torrent actual, primero debes elegi
     <message>
       <location filename="../tableview.cpp" line="57"/>
       <source>Copy with Size</source>
-      <translation type="unfinished">Copy with Size</translation>
+      <translation>Copiar con tamaño</translation>
     </message>
   </context>
   <context>
