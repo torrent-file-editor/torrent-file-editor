@@ -13,12 +13,12 @@
       <location filename="../aboutdlg.ui" line="39"/>
       <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
       <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-      <translation>&lt;h3&gt;olutta kehittäjälle&lt;/h3&gt;</translation>
+      <translation>&lt;h3&gt;Olutta kehittäjälle&lt;/h3&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="85"/>
       <source>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</source>
-      <translation>Uusimman version kehittäminen vaati paljon aikaa ja vaivaa. Korjattu vakavia vikoja ja hyödyllisiä parannuksia. Olen väsynyt. Mutta vähän olutta auttamaan minua palauttamaan voimaa ja kehittymään edelleen. Jos pidät tästä sovelluksesta, haluat kiittää kehittäjää ja julkaista sen seuraavalle versiolle:</translation>
+      <translation>Uusimman version kehittäminen vaati paljon aikaa ja vaivaa. Korjattu vakavia vikoja ja hyödyllisiä parannuksia. Olen väsynyt. Mutta vähän olutta auttamaan minua palauttamaan voimaa ja kehittymään edelleen. Jos pidät tästä sovelluksesta, haluat kiittää kehittäjää ja haluat että seuraavakin versio julkaistaan:</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="126"/>
@@ -29,7 +29,7 @@
       <location filename="../aboutdlg.cpp" line="142"/>
       <source>About %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>Noin%1</translation>
+      <translation>Tietoja %1</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="198"/>
@@ -63,7 +63,7 @@
     <message>
       <location filename="../bencodemodel.cpp" line="756"/>
       <source>Hex</source>
-      <translation>Hek</translation>
+      <translation>Heksa</translation>
     </message>
     <message>
       <location filename="../bencodemodel.cpp" line="757"/>
@@ -76,7 +76,7 @@
     <message>
       <location filename="../datewidget.cpp" line="66"/>
       <source>Clean</source>
-      <translation>Puhdas</translation>
+      <translation>Tyhjennä</translation>
     </message>
     <message>
       <location filename="../datewidget.cpp" line="81"/>
@@ -109,13 +109,13 @@
       <location filename="../mainwindow.ui" line="37"/>
       <location filename="../mainwindow.cpp" line="359"/>
       <source>Open</source>
-      <translation>Avata</translation>
+      <translation>Avaa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="44"/>
       <location filename="../mainwindow.ui" line="916"/>
       <source>Save</source>
-      <translation>Tallentaa</translation>
+      <translation>Tallenna</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
@@ -126,17 +126,17 @@
     <message>
       <location filename="../mainwindow.ui" line="88"/>
       <source>About</source>
-      <translation>Noin</translation>
+      <translation>Tietoja</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="101"/>
       <source>Main</source>
-      <translation>Tärkein</translation>
+      <translation>Yleiset</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="189"/>
       <source>Pieces</source>
-      <translation>Kappaletta</translation>
+      <translation>Paloja</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="148"/>
@@ -146,12 +146,12 @@
     <message>
       <location filename="../mainwindow.ui" line="209"/>
       <source>Piece size</source>
-      <translation>Osan koko</translation>
+      <translation>Palan koko</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="199"/>
       <source>Publisher</source>
-      <translation>Kustantaja</translation>
+      <translation>Julkaisija</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="230"/>
@@ -171,17 +171,17 @@
     <message>
       <location filename="../mainwindow.ui" line="223"/>
       <source>Date created</source>
-      <translation>Päivämäärä luotu</translation>
+      <translation>Luontipäivä</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="237"/>
       <source>Hash</source>
-      <translation type="unfinished">Hash</translation>
+      <translation>Hash</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="311"/>
       <source>Magnet link</source>
-      <translation type="unfinished">Magnet link</translation>
+      <translation>Magnet Link</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="365"/>
@@ -191,7 +191,7 @@
     <message>
       <location filename="../mainwindow.ui" line="383"/>
       <source>Trackers</source>
-      <translation>Trackers</translation>
+      <translation>Trackerit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="403"/>
@@ -211,17 +211,17 @@
     <message>
       <location filename="../mainwindow.ui" line="462"/>
       <source>Reload files list from current torrent data</source>
-      <translation>Lataa tiedostojen luettelo nykyisistä torrent tiedoista</translation>
+      <translation>Lataa tiedostolista nykyisestä torrent datoista</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="501"/>
       <source>Move file up</source>
-      <translation>Siirrä tiedosto ylös</translation>
+      <translation>Siirrä tiedostoa ylös</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="517"/>
       <source>Move file down</source>
-      <translation>Siirrä tiedosto alas</translation>
+      <translation>Siirrä tiedostoa alas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="537"/>
@@ -247,7 +247,22 @@
   &lt;/body&gt;
 &lt;/html&gt;</source>
       <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-      <translation>&lt;html&gt;  &lt;head/&gt;  &lt;body&gt;    &lt;p&gt;&lt;b&gt;nimi&lt;/b&gt;&lt;/p&gt;    &lt;p style="margin-left: 20px"&gt;tiedoston nimi, jonka laajennus on täsmälleen sama kuin kuvio&lt;/p&gt;    &lt;br/&gt;    &lt;p&gt;&lt;b&gt;laajentaminen&lt;/b&gt;&lt;/p&gt;    &lt;p style="margin-left: 20px"&gt;viimeisen pisteen jälkeiset symbolit ovat täsmälleen sama kuin kuvio, 'archive.tar.gz' on esimerkiksi 'gz'&lt;/p&gt;    &lt;br/&gt;    &lt;p&gt;&lt;b&gt;jokerimerkit&lt;/b&gt;&lt;/p&gt;    &lt;p style="margin-left: 20px"&gt;tiedoston nimi, jossa laajennus vastaa tiedostoa, jossa "?" on jokin symboli ja "*" tarkoittaa minkä tahansa symbolin numeroa&lt;/p&gt;    &lt;br/&gt;    &lt;p&gt;&lt;b&gt;tavallinen ilme&lt;/b&gt;&lt;/p&gt;    &lt;p style="margin-left: 20px"&gt;koko tiedostopolku vastaa Perlin kaltaista säännöllistä lauseketta&lt;/p&gt;  &lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;
+  &lt;head/&gt;
+  &lt;body&gt;
+    &lt;p&gt;&lt;b&gt;nimi&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;tiedostonimi päätteen kanssa vastaa tarkalleen&lt;/p&gt;
+    &lt;br/&gt;
+    &lt;p&gt;&lt;b&gt;tiedostopääte&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;viimeisen pisteen jälkeiset symbolit vastaavat, 'archive.tar.gz' on esimerkiksi 'gz'&lt;/p&gt;
+    &lt;br/&gt;
+    &lt;p&gt;&lt;b&gt;jokerimerkit&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;tiedostonimi päätteen kanssa, jossa "?" on jokin symboli ja "*" tarkoittaa mitä tahansa määrää mitä tahansa symbolia&lt;/p&gt;
+    &lt;br/&gt;
+    &lt;p&gt;&lt;b&gt;säännöllinen lauseke&lt;/b&gt;&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;koko tiedostopolku vastaa Perlin kaltaista säännöllistä lauseketta&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="563"/>
@@ -257,7 +272,7 @@
     <message>
       <location filename="../mainwindow.ui" line="568"/>
       <source>extension</source>
-      <translation>laajentaminen</translation>
+      <translation>pääte</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="573"/>
@@ -267,7 +282,7 @@
     <message>
       <location filename="../mainwindow.ui" line="578"/>
       <source>regular expression</source>
-      <translation>tavallinen ilme</translation>
+      <translation>säännöllinen lauseke</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="596"/>
@@ -277,7 +292,7 @@
     <message>
       <location filename="../mainwindow.ui" line="691"/>
       <source>Torrent root folder </source>
-      <translation>Torrent pääkansio </translation>
+      <translation>Torrentin pääkansio </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="704"/>
@@ -287,27 +302,27 @@
     <message>
       <location filename="../mainwindow.ui" line="715"/>
       <source>Add tree item</source>
-      <translation>Lisää puun kohde</translation>
+      <translation>Lisää puuhun kohde</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="747"/>
       <source>Move list item up</source>
-      <translation>Siirrä luettelokohtaa ylös</translation>
+      <translation>Siirrä luettelossa ylöspäin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="763"/>
       <source>Move list item down</source>
-      <translation>Siirrä luetteloa alaspäin</translation>
+      <translation>Siirrä luettelossa alaspäin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="779"/>
       <source>Find</source>
-      <translation>Löytö</translation>
+      <translation>Etsi</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="795"/>
       <source>Replace</source>
-      <translation>Korvata</translation>
+      <translation>Korvaa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="888"/>
@@ -322,7 +337,7 @@
     <message>
       <location filename="../mainwindow.ui" line="908"/>
       <source>Open...</source>
-      <translation>Avata...</translation>
+      <translation>Avaa...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="911"/>
@@ -347,17 +362,17 @@
     <message>
       <location filename="../mainwindow.ui" line="932"/>
       <source>About...</source>
-      <translation>Noin...</translation>
+      <translation>Tietoja...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="65"/>
       <source>Coding</source>
-      <translation type="unfinished">Coding</translation>
+      <translation>Merkistö</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="414"/>
       <source>Calculate pieces hashes</source>
-      <translation type="unfinished">Calculate pieces hashes</translation>
+      <translation>Laske palojen hashit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="485"/>
@@ -367,7 +382,7 @@
     <message>
       <location filename="../mainwindow.ui" line="645"/>
       <source>Piece size </source>
-      <translation>Osan koko </translation>
+      <translation>Palojen koko </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="328"/>
@@ -378,12 +393,12 @@
     <message>
       <location filename="../mainwindow.ui" line="731"/>
       <source>Delete selected tree items</source>
-      <translation type="unfinished">Delete selected tree items</translation>
+      <translation>Poista valittu puusta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="831"/>
       <source>Raw</source>
-      <translation type="unfinished">Raw</translation>
+      <translation>Raaka</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="207"/>
@@ -393,27 +408,27 @@
     <message>
       <location filename="../mainwindow.cpp" line="208"/>
       <source>Please wait</source>
-      <translation type="unfinished">Please wait</translation>
+      <translation>Odota</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="218"/>
       <source>Auto</source>
-      <translation type="unfinished">Auto</translation>
+      <translation>Auto</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="231"/>
       <source>Path</source>
-      <translation type="unfinished">Path</translation>
+      <translation>Polku</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="231"/>
       <source>Size</source>
-      <translation type="unfinished">Size</translation>
+      <translation>Koko</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="188"/>
       <source>Torrents (*.torrent)</source>
-      <translation type="unfinished">Torrents (*.torrent)</translation>
+      <translation>Torrentit (*.torrent)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="189"/>
@@ -423,30 +438,30 @@
     <message>
       <location filename="../mainwindow.cpp" line="231"/>
       <source># Pieces</source>
-      <translation type="unfinished"># Pieces</translation>
+      <translation># Paloja</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="336"/>
       <location filename="../mainwindow.cpp" line="867"/>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Virhe</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="336"/>
       <source>Can't open file</source>
-      <translation type="unfinished">Can't open file</translation>
+      <translation>Tiedostoa ei voi avata</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="634"/>
       <location filename="../mainwindow.cpp" line="638"/>
       <location filename="../mainwindow.cpp" line="648"/>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Varoitus</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="612"/>
       <source>Torrent root folder is not set</source>
-      <translation type="unfinished">Torrent root folder is not set</translation>
+      <translation>Torrentin pääkansiota ei ole valittu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="379"/>
@@ -454,7 +469,7 @@
       <location filename="../mainwindow.cpp" line="1115"/>
       <location filename="../mainwindow.cpp" line="1126"/>
       <source>Can't save file</source>
-      <translation type="unfinished">Can't save file</translation>
+      <translation>Tiedostoa ei voi tallentaa</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="379"/>
@@ -469,21 +484,21 @@
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
 
 Do you want to set torrent root folder and try again?</source>
-      <translation>Polku tiedostoihin levylle tiedossa. Torrentia voidaan luoda vain täysin ladatuilta tiedostoilta.
+      <translation>Polku tiedostoihin levyllä ei tiedossa. Torrenti voidaan luoda vain täysin ladatuista tiedostoista.
 
-Jos haluat muokata tiedostoluetteloa nykyisessä torrentissa, sinun on asetettava torrent-pääkansio. Torrentin pääkansio on kansio, johon kaikki tiedostot voidaan sijoittaa levylle. Levyn todellinen tiedostopolku on torrent-pääkansio, jolla on suhteellinen polku torrent-tiedostosta. Jos jotain tiedostoa puuttuu, torrentia ei voi luoda.
+Jos haluat muokata nykyisen torrentin tiedostoluetteloa sinun on asetettava torrent-pääkansio. Torrentin pääkansio on kansio, johon kaikki tiedostot voidaan sijoittaa levylle. Levyn todellinen tiedostopolku on torrent-pääkansio, jolla on suhteellinen polku torrent-tiedostosta. Jos joku tiedosto puuttuu, torrentia ei voi luoda.
 
 Haluatko asettaa torrent-pääkansioon ja yrittää uudelleen?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="634"/>
       <source>The filesystem root can't be used as a torrent root folder.</source>
-      <translation type="unfinished">The filesystem root can't be used as a torrent root folder.</translation>
+      <translation>Tiedostojärjestelmän juurta ei voi käyttää torrentin pääkansiona.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="638"/>
       <source>The torrent root folder is not set.</source>
-      <translation type="unfinished">The torrent root folder is not set.</translation>
+      <translation>Torrentin pääkansiota ei ole asetettu.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="648"/>
@@ -493,55 +508,57 @@ Haluatko asettaa torrent-pääkansioon ja yrittää uudelleen?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="707"/>
       <source>Add File</source>
-      <translation type="unfinished">Add File</translation>
+      <translation>Lisää tiedosto</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="728"/>
       <source>Add Folder</source>
-      <translation type="unfinished">Add Folder</translation>
+      <translation>Lisää kansio</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="874"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation type="unfinished">Line: %1 of %2 Col: %3</translation>
+      <translation>Rivi: %1 / %2 Sarake: %3</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1062"/>
       <location filename="../mainwindow.cpp" line="1070"/>
       <source>Error on %1 line: %2</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation type="unfinished">Error on %1 line: %2</translation>
+      <translation>Virhe rivillä %1 : %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1223"/>
       <source>B</source>
-      <translation type="unfinished">B</translation>
+      <translation>B</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1227"/>
       <source>KiB</source>
-      <translation type="unfinished">KiB</translation>
+      <translation>KiB</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1231"/>
       <source>MiB</source>
-      <translation type="unfinished">MiB</translation>
+      <translation>MiB</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1235"/>
       <source>GiB</source>
-      <translation type="unfinished">GiB</translation>
+      <translation>GiB</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1239"/>
       <source>TiB</source>
-      <translation type="unfinished">TiB</translation>
+      <translation>TiB
+
+Tebibyte</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1257"/>
       <source>Save file</source>
-      <translation type="unfinished">Save file</translation>
+      <translation>Tallenna tiedosto</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1258"/>
@@ -575,7 +592,7 @@ Haluatko asettaa torrent-pääkansioon ja yrittää uudelleen?</translation>
     <message>
       <location filename="../bencode.cpp" line="222"/>
       <source>string</source>
-      <translation>jono</translation>
+      <translation>merkkijono</translation>
     </message>
     <message>
       <location filename="../bencode.cpp" line="223"/>
@@ -594,13 +611,13 @@ Haluatko asettaa torrent-pääkansioon ja yrittää uudelleen?</translation>
       <location filename="../searchdlg.ui" line="39"/>
       <location filename="../searchdlg.ui" line="96"/>
       <source>Match case</source>
-      <translation>Match case</translation>
+      <translation>Erottele kirjainkoko</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="46"/>
       <location filename="../searchdlg.ui" line="103"/>
       <source>Exact match</source>
-      <translation type="unfinished">Exact match</translation>
+      <translation>Tarkka osuma</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="56"/>
@@ -612,7 +629,7 @@ Haluatko asettaa torrent-pääkansioon ja yrittää uudelleen?</translation>
       <location filename="../searchdlg.ui" line="63"/>
       <location filename="../searchdlg.ui" line="120"/>
       <source>Regular expression</source>
-      <translation>Tavallinen ilme</translation>
+      <translation>Säännöllinen lauseke</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="84"/>
@@ -622,17 +639,17 @@ Haluatko asettaa torrent-pääkansioon ja yrittää uudelleen?</translation>
     <message>
       <location filename="../searchdlg.ui" line="127"/>
       <source>Hex</source>
-      <translation>Hek</translation>
+      <translation>Heksa</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="154"/>
       <source>Replace value with</source>
-      <translation>Korvaa arvo painamalla</translation>
+      <translation>Korvaa arvo</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="164"/>
       <source>hex</source>
-      <translation>hek</translation>
+      <translation>heksa</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="176"/>
@@ -663,17 +680,17 @@ Haluatko asettaa torrent-pääkansioon ja yrittää uudelleen?</translation>
       <location filename="../searchdlg.ui" line="248"/>
       <location filename="../searchdlg.cpp" line="63"/>
       <source>Replace</source>
-      <translation>Korvata</translation>
+      <translation>Korvaa</translation>
     </message>
     <message>
       <location filename="../searchdlg.ui" line="231"/>
       <source>Close</source>
-      <translation>Kiinni</translation>
+      <translation>Sulje</translation>
     </message>
     <message>
       <location filename="../searchdlg.cpp" line="63"/>
       <source>Find</source>
-      <translation>Löytö</translation>
+      <translation>Etsi</translation>
     </message>
     <message>
       <location filename="../searchdlg.cpp" line="156"/>
@@ -685,8 +702,8 @@ Haluatko asettaa torrent-pääkansioon ja yrittää uudelleen?</translation>
       <source>%1 of %n match(es)</source>
       <translatorcomment>Do not touch %1 it must be as is. Make translations for both singular and plural forms. </translatorcomment>
       <translation>
-        <numerusform>%n: n %1 ottelu(ista)</numerusform>
-        <numerusform>%n: n %1 ottelu(ista)</numerusform>
+        <numerusform>%1 osuma </numerusform>
+        <numerusform>%1 / %n osumasta</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -694,8 +711,8 @@ Haluatko asettaa torrent-pääkansioon ja yrittää uudelleen?</translation>
       <source>%n value(s) was(were) replaced</source>
       <translatorcomment>Do not touch %n it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>
-        <numerusform>%n arvo(t) (on) korvattu</numerusform>
-        <numerusform>%n arvo(t) (on) korvattu</numerusform>
+        <numerusform>%n arvo korvattu</numerusform>
+        <numerusform>%n arvoa korvattu</numerusform>
       </translation>
     </message>
   </context>
@@ -721,13 +738,13 @@ Haluatko asettaa torrent-pääkansioon ja yrittää uudelleen?</translation>
       <location filename="../mainwindow.cpp" line="113"/>
       <source>Can't open %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>%1 ei voi avata</translation>
+      <translation>Ei voi avata %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="152"/>
       <source>Can't read from %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>Ei voi lukea %1: stä</translation>
+      <translation>Ei voi lukea %1</translation>
     </message>
   </context>
 </TS>
