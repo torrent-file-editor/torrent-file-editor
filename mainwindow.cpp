@@ -217,7 +217,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     _instance = this;
 
-    ui->cmbPieceSizes->addItem(tr("Auto"), 0);
+    ui->cmbPieceSizes->addItem(QString(), 0);
     for (int i = 5; i < 16; ++i) {
         qulonglong pieceSize = 1024 * static_cast<qulonglong>(qPow(2, i));
         ui->cmbPieceSizes->addItem(smartSize(pieceSize), pieceSize);
@@ -230,7 +230,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     QStandardItemModel *model = new QStandardItemModel(0, 4, this);
     QStringList headers;
-    headers << tr("Path") << tr("Size") << tr("# Pieces") << QString() /* dummy */;
+    headers << QString() << QString() << QString() << QString() /* dummy */;
     model->setHorizontalHeaderLabels(headers);
     model->horizontalHeaderItem(0)->setTextAlignment(Qt::AlignLeft); // -V525 PVS-Studio
     model->horizontalHeaderItem(1)->setTextAlignment(Qt::AlignRight);
@@ -534,7 +534,7 @@ void MainWindow::changeEvent(QEvent *event)
 {
     switch(event->type()) {
     case QEvent::LanguageChange:
-        ui->retranslateUi(this);
+        retranslateUi();
         break;
 
     default:
@@ -1352,4 +1352,16 @@ bool MainWindow::showNeedSaveFile()
     }
 
     return res;
+}
+
+void MainWindow::retranslateUi()
+{
+    ui->retranslateUi(this);
+
+    ui->cmbPieceSizes->setItemText(0, tr("Auto"));
+
+    QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->viewFiles->model());
+    QStringList headers;
+    headers << tr("Path") << tr("Size") << tr("# Pieces") << QString() /* dummy */;
+    model->setHorizontalHeaderLabels(headers);
 }

@@ -106,6 +106,20 @@ void LineEditWidget::setRxValidator(const QString &str)
     setValidator(validator);
 }
 
+void LineEditWidget::changeEvent(QEvent *event)
+{
+    switch(event->type()) {
+    case QEvent::LanguageChange:
+        retranslateUi();
+        break;
+
+    default:
+        break;
+    }
+
+    QLineEdit::changeEvent(event);
+}
+
 void LineEditWidget::addWidget(QWidget *w)
 {
     _toolbuttons << w;

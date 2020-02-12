@@ -146,6 +146,8 @@ private:
     void processEvents();
     bool showNeedSaveFile();
 
+    void retranslateUi();
+
     Ui::MainWindow *ui;
     QString _fileName;
 

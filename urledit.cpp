@@ -62,7 +62,7 @@ UrlEdit::UrlEdit(QWidget *parent)
 
     connect(_pbOpenUrl, SIGNAL(clicked()), SLOT(openUrl()));
 
-    updateTranslations();
+    retranslateUi();
 }
 
 void UrlEdit::openUrl()
@@ -77,21 +77,7 @@ void UrlEdit::copyAll()
     qApp->clipboard()->setText(text());
 }
 
-void UrlEdit::changeEvent(QEvent *event)
-{
-    switch(event->type()) {
-    case QEvent::LanguageChange:
-        updateTranslations();
-        break;
-
-    default:
-        break;
-    }
-
-    LineEditWidget::changeEvent(event);
-}
-
-void UrlEdit::updateTranslations()
+void UrlEdit::retranslateUi()
 {
     _pbCopyUrl->setToolTip(QLineEdit::tr("&Copy").remove(QLatin1Char('&')));
     _pbOpenUrl->setToolTip(tr("Open in internet browser"));

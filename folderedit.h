@@ -36,6 +36,9 @@ public:
 public slots:
     void openFolder();
 
+protected:
+    void retranslateUi() override;
+
 private:
     // Inner widgets
     QPushButton *_pbOpenFolder;

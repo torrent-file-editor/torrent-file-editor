@@ -65,10 +65,9 @@ protected slots:
     void internalClear();
 
 protected:
-    void changeEvent(QEvent *event) override;
+    void retranslateUi() override;
 
 private:
-    void updateTranslations();
 
     // Inner widgets
     QPushButton *_tbCalendar;

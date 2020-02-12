@@ -37,10 +37,7 @@ protected slots:
     void copyAll();
 
 protected:
-    void changeEvent(QEvent *event) override;
-
-private:
-    void updateTranslations();
+    void retranslateUi() override;
 
     // Inner widgets
     QPushButton *_pbOpenUrl;

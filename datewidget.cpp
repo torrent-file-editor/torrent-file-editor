@@ -91,7 +91,7 @@ DateWidget::DateWidget(QWidget *parent)
 
     setOptimalLength(QDateTime(QDate(2000, 12, 12), QTime(10, 10, 10)).toString(dateFormat()).size());
 
-    updateTranslations();
+    retranslateUi();
 }
 
 void DateWidget::setDate(const QDate &date)
@@ -151,23 +151,8 @@ void DateWidget::internalClear()
     emit textEdited(QString());
 }
 
-void DateWidget::changeEvent(QEvent *event)
-{
-    switch(event->type()) {
-    case QEvent::LanguageChange:
-        updateTranslations();
-        break;
-
-    default:
-        break;
-    }
-
-    LineEditWidget::changeEvent(event);
-}
-
-void DateWidget::updateTranslations()
+void DateWidget::retranslateUi()
 {
     _tbClean->setToolTip(tr("Clean"));
     _tbCalendar->setToolTip(tr("Show calendar"));
-
 }

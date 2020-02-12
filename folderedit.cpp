@@ -41,12 +41,13 @@ FolderEdit::FolderEdit(QWidget *parent)
     _pbOpenFolder->setCursor(Qt::PointingHandCursor);
     _pbOpenFolder->resize(0, 0);
     _pbOpenFolder->setFlat(true);
-    _pbOpenFolder->setToolTip(tr("Choose folder"));
     _pbOpenFolder->setMinimumWidth(24);
     _pbOpenFolder->setMaximumWidth(24);
     addWidget(_pbOpenFolder);
 
     connect(_pbOpenFolder, SIGNAL(clicked()), SLOT(openFolder()));
+
+    retranslateUi();
 }
 
 void FolderEdit::setFolder(const QString &path)
@@ -63,4 +64,9 @@ void FolderEdit::openFolder()
     _path = path;
     setText(path);
     emit textEdited(path);
+}
+
+void FolderEdit::retranslateUi()
+{
+    _pbOpenFolder->setToolTip(tr("Choose folder"));
 }

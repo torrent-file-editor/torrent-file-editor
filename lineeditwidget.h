@@ -50,9 +50,13 @@ public:
 	void setRxValidator(const QString &str);
 
 protected:
-	void addWidget(QWidget *w);
+    // reimplemented
+    void changeEvent(QEvent *event) override;
+
+    void addWidget(QWidget *w);
 	void setPopup(QWidget* w);
 	QFrame *popup() const { return _popup; };
+    virtual void retranslateUi() {}
 
 protected slots:
 	virtual void showPopup();
