@@ -388,7 +388,7 @@ void BencodeModel::setFiles(const QList<QPair<QString, qlonglong>> &files)
     else {
         delete _bencode->child("info")->child("files");
         _bencode->child("info")->appendMapItem(new Bencode(Bencode::Type::List, "files"));
-        for (const auto filePair: files) {
+        for (const auto &filePair: files) {
             QString file = filePair.first;
             qlonglong size = filePair.second;
 
