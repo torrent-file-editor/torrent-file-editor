@@ -36,6 +36,7 @@ signals:
 private slots:
     void copy();
     void copyWithSize();
+    void copyWoExt();
 
 protected:
     QModelIndex moveCursor(CursorAction cursorAction, Qt::KeyboardModifiers modifiers) override;
@@ -49,4 +50,5 @@ private:
     QMenu *_menu{};
     QAction *_copyAct{};
     QAction *_copySizeAct{};
+    QAction *_copyWoExtAct{};
 };

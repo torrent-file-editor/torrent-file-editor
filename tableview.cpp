@@ -27,6 +27,7 @@
 #include <QItemSelectionModel>
 #include <QMenu>
 #include <QLineEdit>
+#include <QDir>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 # include <QStyleHints>
@@ -60,6 +61,11 @@ TableView::TableView(QWidget *parent)
     _menu->addAction(_copySizeAct);
     addAction(_copySizeAct);
 
+    _copyWoExtAct = new QAction(tr("Copy Filename"), this);
+    connect(_copyWoExtAct, SIGNAL(triggered()), SLOT(copyWoExt()));
+    _menu->addAction(_copyWoExtAct);
+    addAction(_copyWoExtAct);
+
     updateTranslations();
 }
 
@@ -86,6 +92,30 @@ void TableView::copyWithSize()
 
     for (int i = 0; i < nameRows.length(); ++i) {
         files << nameRows.at(i).data().toString() + QLatin1String("\t") + sizeRows.at(i).data().toString();
+    }
+
+    if (!files.isEmpty()) {
+        QApplication::clipboard()->setText(files.join(QStringLiteral("\n")));
+    }
+}
+
+void TableView::copyWoExt()
+{
+    QItemSelectionModel *selection = selectionModel();
+    QModelIndexList nameRows = selection->selectedRows(0);
+    QStringList files;
+
+    for (int i = 0; i < nameRows.length(); ++i) {
+        QString filename = nameRows.at(i).data().toString();
+
+        if (filename.contains(QDir::separator())) {
+            filename = filename.section(QDir::separator(), -1);
+        }
+
+        if (filename.contains(QLatin1String("."))) {
+            filename = filename.section(QLatin1String("."), 0, -2);
+        }
+        files << filename;
     }
 
     if (!files.isEmpty()) {
@@ -148,4 +178,5 @@ void TableView::updateTranslations()
 {
     _copyAct->setText(QLineEdit::tr("&Copy") + ACCEL_KEY(QKeySequence::Copy));
     _copySizeAct->setText(tr("Copy with Size"));
+    _copyWoExtAct->setText(tr("Copy Filename"));
 }
