@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="af" sourcelanguage="en">
+<TS version="2.1" language="af" sourcelanguage="en">
   <context>
     <name>AboutDlg</name>
     <message>
@@ -74,12 +74,12 @@
   <context>
     <name>DateWidget</name>
     <message>
-      <location filename="../datewidget.cpp" line="66"/>
+      <location filename="../datewidget.cpp" line="156"/>
       <source>Clean</source>
       <translation>Skoon</translation>
     </message>
     <message>
-      <location filename="../datewidget.cpp" line="81"/>
+      <location filename="../datewidget.cpp" line="157"/>
       <source>Show calendar</source>
       <translation>Toon kalender</translation>
     </message>
@@ -87,12 +87,12 @@
   <context>
     <name>FolderEdit</name>
     <message>
-      <location filename="../folderedit.cpp" line="44"/>
+      <location filename="../folderedit.cpp" line="71"/>
       <source>Choose folder</source>
       <translation>Kies vouer</translation>
     </message>
     <message>
-      <location filename="../folderedit.cpp" line="59"/>
+      <location filename="../folderedit.cpp" line="60"/>
       <source>Add Folder</source>
       <translation>Voeg Vouer Toe</translation>
     </message>
@@ -101,135 +101,135 @@
     <name>MainWindow</name>
     <message>
       <location filename="../mainwindow.ui" line="30"/>
-      <location filename="../mainwindow.ui" line="900"/>
+      <location filename="../mainwindow.ui" line="903"/>
       <source>New</source>
       <translation>Nuut</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
-      <location filename="../mainwindow.cpp" line="359"/>
+      <location filename="../mainwindow.cpp" line="424"/>
       <source>Open</source>
       <translation>Open</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="44"/>
-      <location filename="../mainwindow.ui" line="916"/>
+      <location filename="../mainwindow.ui" line="919"/>
       <source>Save</source>
       <translation>Bewaar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="384"/>
+      <location filename="../mainwindow.cpp" line="449"/>
       <source>Save As</source>
       <translation>Bewaar As</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="88"/>
+      <location filename="../mainwindow.ui" line="91"/>
       <source>About</source>
       <translation>Oor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="101"/>
+      <location filename="../mainwindow.ui" line="104"/>
       <source>Main</source>
       <translation>Algemeen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="189"/>
+      <location filename="../mainwindow.ui" line="192"/>
       <source>Pieces</source>
       <translation>Stukke</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="148"/>
+      <location filename="../mainwindow.ui" line="151"/>
       <source>Created by</source>
       <translation>Geskep deur</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="209"/>
+      <location filename="../mainwindow.ui" line="212"/>
       <source>Piece size</source>
       <translation>Stuksgrootte</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="199"/>
+      <location filename="../mainwindow.ui" line="202"/>
       <source>Publisher</source>
       <translation>Uitgewer</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="230"/>
+      <location filename="../mainwindow.ui" line="233"/>
       <source>Name</source>
       <translation>Naam</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="114"/>
+      <location filename="../mainwindow.ui" line="117"/>
       <source>Private torrent</source>
       <translation>Privaat torrent</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="216"/>
+      <location filename="../mainwindow.ui" line="219"/>
       <source>URL</source>
       <translation>Bronadres</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="223"/>
+      <location filename="../mainwindow.ui" line="226"/>
       <source>Date created</source>
       <translation>Datum geskep</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="237"/>
+      <location filename="../mainwindow.ui" line="240"/>
       <source>Hash</source>
       <translation>Huts</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="311"/>
+      <location filename="../mainwindow.ui" line="314"/>
       <source>Magnet link</source>
       <translation>Magneetskakel</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="365"/>
+      <location filename="../mainwindow.ui" line="368"/>
       <source>Comment</source>
       <translation>Kommentaar</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="383"/>
+      <location filename="../mainwindow.ui" line="386"/>
       <source>Trackers</source>
       <translation>Spoorders</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="403"/>
+      <location filename="../mainwindow.ui" line="406"/>
       <source>Files</source>
       <translation>Lêers</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="430"/>
+      <location filename="../mainwindow.ui" line="433"/>
       <source>Add files</source>
       <translation>Voeg lêers toe</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="446"/>
+      <location filename="../mainwindow.ui" line="449"/>
       <source>Add folder</source>
       <translation>Voeg vouers toe</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="462"/>
+      <location filename="../mainwindow.ui" line="465"/>
       <source>Reload files list from current torrent data</source>
       <translation>Herlaai lêerlys van huidige torrentdata</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="501"/>
+      <location filename="../mainwindow.ui" line="504"/>
       <source>Move file up</source>
       <translation>Skuif lêer op</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="517"/>
+      <location filename="../mainwindow.ui" line="520"/>
       <source>Move file down</source>
       <translation>Skuif lêer af</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="537"/>
+      <location filename="../mainwindow.ui" line="540"/>
       <source>Filter by </source>
       <translation>Filtreer volgens </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="544"/>
+      <location filename="../mainwindow.ui" line="547"/>
       <source>&lt;html&gt;
   &lt;head/&gt;
   &lt;body&gt;
@@ -265,102 +265,102 @@
 &lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="563"/>
+      <location filename="../mainwindow.ui" line="566"/>
       <source>name</source>
       <translation>naam</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="568"/>
+      <location filename="../mainwindow.ui" line="571"/>
       <source>extension</source>
       <translation>uitbreiding</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="573"/>
+      <location filename="../mainwindow.ui" line="576"/>
       <source>wildcards</source>
       <translation>oorheersstringe</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="578"/>
+      <location filename="../mainwindow.ui" line="581"/>
       <source>regular expression</source>
       <translation>standaarduitdrukking</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="596"/>
+      <location filename="../mainwindow.ui" line="599"/>
       <source>Filter files</source>
       <translation>Filtreer lêers</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="691"/>
+      <location filename="../mainwindow.ui" line="694"/>
       <source>Torrent root folder </source>
       <translation>Torrent-stamvouer </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="704"/>
+      <location filename="../mainwindow.ui" line="707"/>
       <source>Tree</source>
       <translation>Boom</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="715"/>
+      <location filename="../mainwindow.ui" line="718"/>
       <source>Add tree item</source>
       <translation>Voeg boomitem toe</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="747"/>
+      <location filename="../mainwindow.ui" line="750"/>
       <source>Move list item up</source>
       <translation>Skuif lysitem op</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="763"/>
+      <location filename="../mainwindow.ui" line="766"/>
       <source>Move list item down</source>
       <translation>Skuif lysitem af</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="779"/>
+      <location filename="../mainwindow.ui" line="782"/>
       <source>Find</source>
       <translation>Vind</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="795"/>
+      <location filename="../mainwindow.ui" line="798"/>
       <source>Replace</source>
       <translation>Vervang</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="888"/>
+      <location filename="../mainwindow.ui" line="891"/>
       <source>File</source>
       <translation>Argief</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="903"/>
+      <location filename="../mainwindow.ui" line="906"/>
       <source>Ctrl+N</source>
       <translation>Ctrl+N</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="908"/>
+      <location filename="../mainwindow.ui" line="911"/>
       <source>Open...</source>
       <translation>Open…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="911"/>
+      <location filename="../mainwindow.ui" line="914"/>
       <source>Ctrl+O</source>
       <translation>Ctrl+O</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="919"/>
+      <location filename="../mainwindow.ui" line="922"/>
       <source>Ctrl+S</source>
       <translation>Ctrl+S</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="924"/>
+      <location filename="../mainwindow.ui" line="927"/>
       <source>Save As...</source>
       <translation>Bewaar As…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="927"/>
+      <location filename="../mainwindow.ui" line="930"/>
       <source>Ctrl+Shift+S</source>
       <translation>Ctrl+Wissel+S</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="932"/>
+      <location filename="../mainwindow.ui" line="935"/>
       <source>About...</source>
       <translation>Oor…</translation>
     </message>
@@ -370,115 +370,115 @@
       <translation>Kodering</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="414"/>
+      <location filename="../mainwindow.ui" line="417"/>
       <source>Calculate pieces hashes</source>
       <translation>Bereken stukhutse</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="485"/>
+      <location filename="../mainwindow.ui" line="488"/>
       <source>Remove selected files</source>
       <translation>Verwyder gekose lêers</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="645"/>
+      <location filename="../mainwindow.ui" line="648"/>
       <source>Piece size </source>
       <translation>Stuksgrootte </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="328"/>
-      <location filename="../mainwindow.ui" line="662"/>
+      <location filename="../mainwindow.ui" line="331"/>
+      <location filename="../mainwindow.ui" line="665"/>
       <source>Total size </source>
       <translation>Totale grootte </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="731"/>
+      <location filename="../mainwindow.ui" line="734"/>
       <source>Delete selected tree items</source>
       <translation>Skrap gekose boomitems</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="831"/>
+      <location filename="../mainwindow.ui" line="834"/>
       <source>Raw</source>
       <translation>Rou</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="207"/>
+      <location filename="../mainwindow.cpp" line="209"/>
       <source>Need to calculate piece hashes</source>
       <translation>Moet stukhutse bereken</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="208"/>
+      <location filename="../mainwindow.cpp" line="210"/>
       <source>Please wait</source>
       <translation>Wag asb.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="218"/>
+      <location filename="../mainwindow.cpp" line="1361"/>
       <source>Auto</source>
       <translation>Outom.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="231"/>
+      <location filename="../mainwindow.cpp" line="1365"/>
       <source>Path</source>
       <translation>Pad</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="231"/>
+      <location filename="../mainwindow.cpp" line="1365"/>
       <source>Size</source>
       <translation>Grootte</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="188"/>
+      <location filename="../mainwindow.cpp" line="190"/>
       <source>Torrents (*.torrent)</source>
       <translation>Torrents (*.torrent)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="189"/>
+      <location filename="../mainwindow.cpp" line="191"/>
       <source>uTorrent resume files (*.dat)</source>
       <translation>uTorrent-hervatlêers (*.dat)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="231"/>
+      <location filename="../mainwindow.cpp" line="1365"/>
       <source># Pieces</source>
       <translation># Stukke</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="336"/>
-      <location filename="../mainwindow.cpp" line="867"/>
+      <location filename="../mainwindow.cpp" line="401"/>
+      <location filename="../mainwindow.cpp" line="946"/>
       <source>Error</source>
       <translation>Fout</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="336"/>
+      <location filename="../mainwindow.cpp" line="401"/>
       <source>Can't open file</source>
       <translation>Kan nie lêer open nie</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="634"/>
-      <location filename="../mainwindow.cpp" line="638"/>
-      <location filename="../mainwindow.cpp" line="648"/>
+      <location filename="../mainwindow.cpp" line="713"/>
+      <location filename="../mainwindow.cpp" line="717"/>
+      <location filename="../mainwindow.cpp" line="727"/>
       <source>Warning</source>
       <translation>Waarskuwing</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="612"/>
+      <location filename="../mainwindow.cpp" line="691"/>
       <source>Torrent root folder is not set</source>
       <translation>Torrent-stamvouer is nie ingestel nie</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="379"/>
-      <location filename="../mainwindow.cpp" line="1107"/>
-      <location filename="../mainwindow.cpp" line="1115"/>
-      <location filename="../mainwindow.cpp" line="1126"/>
+      <location filename="../mainwindow.cpp" line="444"/>
+      <location filename="../mainwindow.cpp" line="1186"/>
+      <location filename="../mainwindow.cpp" line="1194"/>
+      <location filename="../mainwindow.cpp" line="1205"/>
       <source>Can't save file</source>
       <translation>Kan nie lêer bewaar nie</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="379"/>
-      <location filename="../mainwindow.cpp" line="1107"/>
+      <location filename="../mainwindow.cpp" line="444"/>
+      <location filename="../mainwindow.cpp" line="1186"/>
       <source>BEncoded data is not valid</source>
       <translation>BEncoded-data is ongeldig</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="613"/>
+      <location filename="../mainwindow.cpp" line="692"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
@@ -491,80 +491,80 @@ Indien u die lêerlys in die huidige torrent wil wysig, moet u die torrent-stamv
 Wil u die torrent-stamvouer instel en weer probeer?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="634"/>
+      <location filename="../mainwindow.cpp" line="713"/>
       <source>The filesystem root can't be used as a torrent root folder.</source>
       <translation>Die lêerstelselstam kan nie as ’n torrent-stamvouer gebruik word nie.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="638"/>
+      <location filename="../mainwindow.cpp" line="717"/>
       <source>The torrent root folder is not set.</source>
       <translation>Die torrent-stamvouer is nie ingestel nie.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="648"/>
+      <location filename="../mainwindow.cpp" line="727"/>
       <source>The torrent root folder is not common.</source>
       <translation>Die torrent-stamvouer is nie gebruiklik nie.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="707"/>
+      <location filename="../mainwindow.cpp" line="786"/>
       <source>Add File</source>
       <translation>Voeg Lêer Toe</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="728"/>
+      <location filename="../mainwindow.cpp" line="807"/>
       <source>Add Folder</source>
       <translation>Voeg Vouer Toe</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="874"/>
+      <location filename="../mainwindow.cpp" line="953"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Reël: %1 van %2 Kol: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1062"/>
-      <location filename="../mainwindow.cpp" line="1070"/>
+      <location filename="../mainwindow.cpp" line="1141"/>
+      <location filename="../mainwindow.cpp" line="1149"/>
       <source>Error on %1 line: %2</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Fout op %1 reël: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1223"/>
+      <location filename="../mainwindow.cpp" line="1302"/>
       <source>B</source>
       <translation>G</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1227"/>
+      <location filename="../mainwindow.cpp" line="1306"/>
       <source>KiB</source>
       <translation>KiG</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1231"/>
+      <location filename="../mainwindow.cpp" line="1310"/>
       <source>MiB</source>
       <translation>MiG</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1235"/>
+      <location filename="../mainwindow.cpp" line="1314"/>
       <source>GiB</source>
       <translation>GiG</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1239"/>
+      <location filename="../mainwindow.cpp" line="1318"/>
       <source>TiB</source>
       <translation>TiG</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1257"/>
+      <location filename="../mainwindow.cpp" line="1336"/>
       <source>Save file</source>
       <translation>Bewaar lêer</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1258"/>
+      <location filename="../mainwindow.cpp" line="1337"/>
       <source>Untitled</source>
       <translation>Naamloos</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1259"/>
+      <location filename="../mainwindow.cpp" line="1338"/>
       <source>Save file "%1"?</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Bewaar lêer “%1”?</translation>
@@ -717,15 +717,22 @@ Wil u die torrent-stamvouer instel en weer probeer?</translation>
   <context>
     <name>TableView</name>
     <message>
-      <location filename="../tableview.cpp" line="57"/>
+      <location filename="../tableview.cpp" line="58"/>
+      <location filename="../tableview.cpp" line="181"/>
       <source>Copy with Size</source>
       <translation>Kopieer met Grootte</translation>
+    </message>
+    <message>
+      <location filename="../tableview.cpp" line="64"/>
+      <location filename="../tableview.cpp" line="182"/>
+      <source>Copy Filename</source>
+      <translation type="unfinished">Copy Filename</translation>
     </message>
   </context>
   <context>
     <name>UrlEdit</name>
     <message>
-      <location filename="../urledit.cpp" line="60"/>
+      <location filename="../urledit.cpp" line="83"/>
       <source>Open in internet browser</source>
       <translation>Open in internetblaaier</translation>
     </message>
@@ -733,13 +740,13 @@ Wil u die torrent-stamvouer instel en weer probeer?</translation>
   <context>
     <name>Worker</name>
     <message>
-      <location filename="../mainwindow.cpp" line="113"/>
+      <location filename="../mainwindow.cpp" line="115"/>
       <source>Can't open %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Kan nie %1 open nie</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="152"/>
+      <location filename="../mainwindow.cpp" line="154"/>
       <source>Can't read from %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Kan nie vanaf %1 lees nie</translation>

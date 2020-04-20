@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fr" sourcelanguage="en">
+<TS version="2.1" language="fr" sourcelanguage="en">
   <context>
     <name>AboutDlg</name>
     <message>
@@ -74,12 +74,12 @@
   <context>
     <name>DateWidget</name>
     <message>
-      <location filename="../datewidget.cpp" line="66"/>
+      <location filename="../datewidget.cpp" line="156"/>
       <source>Clean</source>
       <translation>Effacer</translation>
     </message>
     <message>
-      <location filename="../datewidget.cpp" line="81"/>
+      <location filename="../datewidget.cpp" line="157"/>
       <source>Show calendar</source>
       <translation>Afficher le calendrier</translation>
     </message>
@@ -87,12 +87,12 @@
   <context>
     <name>FolderEdit</name>
     <message>
-      <location filename="../folderedit.cpp" line="44"/>
+      <location filename="../folderedit.cpp" line="71"/>
       <source>Choose folder</source>
       <translation>Sélectionner un dossier</translation>
     </message>
     <message>
-      <location filename="../folderedit.cpp" line="59"/>
+      <location filename="../folderedit.cpp" line="60"/>
       <source>Add Folder</source>
       <translation>Ajouter un dossier</translation>
     </message>
@@ -101,135 +101,135 @@
     <name>MainWindow</name>
     <message>
       <location filename="../mainwindow.ui" line="30"/>
-      <location filename="../mainwindow.ui" line="900"/>
+      <location filename="../mainwindow.ui" line="903"/>
       <source>New</source>
       <translation>Nouveau</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
-      <location filename="../mainwindow.cpp" line="359"/>
+      <location filename="../mainwindow.cpp" line="424"/>
       <source>Open</source>
       <translation>Ouvrir</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="44"/>
-      <location filename="../mainwindow.ui" line="916"/>
+      <location filename="../mainwindow.ui" line="919"/>
       <source>Save</source>
       <translation>Enregistrer</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="384"/>
+      <location filename="../mainwindow.cpp" line="449"/>
       <source>Save As</source>
       <translation>Enregistrer sous</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="88"/>
+      <location filename="../mainwindow.ui" line="91"/>
       <source>About</source>
       <translation>À propos</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="101"/>
+      <location filename="../mainwindow.ui" line="104"/>
       <source>Main</source>
       <translation>Général</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="189"/>
+      <location filename="../mainwindow.ui" line="192"/>
       <source>Pieces</source>
       <translation>Parties</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="148"/>
+      <location filename="../mainwindow.ui" line="151"/>
       <source>Created by</source>
       <translation>Créé par</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="209"/>
+      <location filename="../mainwindow.ui" line="212"/>
       <source>Piece size</source>
       <translation>Taille de pièce</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="199"/>
+      <location filename="../mainwindow.ui" line="202"/>
       <source>Publisher</source>
       <translation>Publié par</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="230"/>
+      <location filename="../mainwindow.ui" line="233"/>
       <source>Name</source>
       <translation>Nom</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="114"/>
+      <location filename="../mainwindow.ui" line="117"/>
       <source>Private torrent</source>
       <translation>Torrent privé</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="216"/>
+      <location filename="../mainwindow.ui" line="219"/>
       <source>URL</source>
       <translation>URL</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="223"/>
+      <location filename="../mainwindow.ui" line="226"/>
       <source>Date created</source>
       <translation>Date de création</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="237"/>
+      <location filename="../mainwindow.ui" line="240"/>
       <source>Hash</source>
       <translation>Hash</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="311"/>
+      <location filename="../mainwindow.ui" line="314"/>
       <source>Magnet link</source>
       <translation type="unfinished">Magnet link</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="365"/>
+      <location filename="../mainwindow.ui" line="368"/>
       <source>Comment</source>
       <translation>Commentaire</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="383"/>
+      <location filename="../mainwindow.ui" line="386"/>
       <source>Trackers</source>
       <translation>Trackers</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="403"/>
+      <location filename="../mainwindow.ui" line="406"/>
       <source>Files</source>
       <translation>Fichiers</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="430"/>
+      <location filename="../mainwindow.ui" line="433"/>
       <source>Add files</source>
       <translation>Ajouter des fichiers</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="446"/>
+      <location filename="../mainwindow.ui" line="449"/>
       <source>Add folder</source>
       <translation>Ajouter un dossier</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="462"/>
+      <location filename="../mainwindow.ui" line="465"/>
       <source>Reload files list from current torrent data</source>
       <translation>Recharger la liste des fichiers depuis le fichier torrent</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="501"/>
+      <location filename="../mainwindow.ui" line="504"/>
       <source>Move file up</source>
       <translation>Déplacer le fichier vers le haut</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="517"/>
+      <location filename="../mainwindow.ui" line="520"/>
       <source>Move file down</source>
       <translation>Déplacer le fichier vers le bas</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="537"/>
+      <location filename="../mainwindow.ui" line="540"/>
       <source>Filter by </source>
       <translation>Filtrer par </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="544"/>
+      <location filename="../mainwindow.ui" line="547"/>
       <source>&lt;html&gt;
   &lt;head/&gt;
   &lt;body&gt;
@@ -250,102 +250,102 @@
       <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;&lt;b&gt;nom&lt;/b&gt;&lt;/p&gt; de &lt;p style="margin-left: 20px"&gt; nom de fichier avec extension = recherche&lt;/p&gt; &lt;br/&gt; &lt;p&gt;&lt;b&gt;extension&lt;/b&gt;&lt;/p&gt; &lt;p style="margin-left: 20px"&gt; les symboles après le dernier point = recherche, pour « archive.tar.gz » ce sera « gz » par exemple&lt;/p&gt; &lt;br/&gt; &lt;p&gt;&lt;b&gt;wildcards&lt;/b&gt;&lt;/p&gt; &lt;p style="margin-left: 20px"&gt; nom de fichier avec l’extension = recherche, où ' ?' est n’importe quel symbole une fois et ' *' est n’importe quel symbole n fois&lt;/p&gt; &lt;br/&gt; &lt;p&gt;&lt;b&gt;expression régulière&lt;/b&gt;&lt;/p&gt;, &lt;p style="margin-left: 20px"&gt; chemin d’accès complet du fichier = l’expression régulière type Perl entrée en guise de recherche&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;p style="margin-left: 20px"&gt;</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="563"/>
+      <location filename="../mainwindow.ui" line="566"/>
       <source>name</source>
       <translation>nom</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="568"/>
+      <location filename="../mainwindow.ui" line="571"/>
       <source>extension</source>
       <translation>extension</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="573"/>
+      <location filename="../mainwindow.ui" line="576"/>
       <source>wildcards</source>
       <translation>caractères génériques</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="578"/>
+      <location filename="../mainwindow.ui" line="581"/>
       <source>regular expression</source>
       <translation>expression régulière</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="596"/>
+      <location filename="../mainwindow.ui" line="599"/>
       <source>Filter files</source>
       <translation>Filtrer les fichiers</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="691"/>
+      <location filename="../mainwindow.ui" line="694"/>
       <source>Torrent root folder </source>
       <translation>Dossier racine du fichier torrent </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="704"/>
+      <location filename="../mainwindow.ui" line="707"/>
       <source>Tree</source>
       <translation>Données d'arbre</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="715"/>
+      <location filename="../mainwindow.ui" line="718"/>
       <source>Add tree item</source>
       <translation>Ajouter un élément</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="747"/>
+      <location filename="../mainwindow.ui" line="750"/>
       <source>Move list item up</source>
       <translation>Déplacer l'élément vers le haut</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="763"/>
+      <location filename="../mainwindow.ui" line="766"/>
       <source>Move list item down</source>
       <translation>Déplacer l’élément vers le bas</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="779"/>
+      <location filename="../mainwindow.ui" line="782"/>
       <source>Find</source>
       <translation>Rechercher</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="795"/>
+      <location filename="../mainwindow.ui" line="798"/>
       <source>Replace</source>
       <translation>Remplacer</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="888"/>
+      <location filename="../mainwindow.ui" line="891"/>
       <source>File</source>
       <translation>Fichier</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="903"/>
+      <location filename="../mainwindow.ui" line="906"/>
       <source>Ctrl+N</source>
       <translation>Ctrl + N</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="908"/>
+      <location filename="../mainwindow.ui" line="911"/>
       <source>Open...</source>
       <translation>Ouvrir...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="911"/>
+      <location filename="../mainwindow.ui" line="914"/>
       <source>Ctrl+O</source>
       <translation>Ctrl + O</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="919"/>
+      <location filename="../mainwindow.ui" line="922"/>
       <source>Ctrl+S</source>
       <translation>Ctrl + S</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="924"/>
+      <location filename="../mainwindow.ui" line="927"/>
       <source>Save As...</source>
       <translation>Enregistrer sous...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="927"/>
+      <location filename="../mainwindow.ui" line="930"/>
       <source>Ctrl+Shift+S</source>
       <translation>Ctrl + Maj + S</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="932"/>
+      <location filename="../mainwindow.ui" line="935"/>
       <source>About...</source>
       <translation>A propos...</translation>
     </message>
@@ -355,115 +355,115 @@
       <translation>Encodage</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="414"/>
+      <location filename="../mainwindow.ui" line="417"/>
       <source>Calculate pieces hashes</source>
       <translation>Calculer les hashs des pièces</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="485"/>
+      <location filename="../mainwindow.ui" line="488"/>
       <source>Remove selected files</source>
       <translation>Enlever les fichier sélectionnés</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="645"/>
+      <location filename="../mainwindow.ui" line="648"/>
       <source>Piece size </source>
       <translation>Taille de pièce </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="328"/>
-      <location filename="../mainwindow.ui" line="662"/>
+      <location filename="../mainwindow.ui" line="331"/>
+      <location filename="../mainwindow.ui" line="665"/>
       <source>Total size </source>
       <translation>Taille totale </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="731"/>
+      <location filename="../mainwindow.ui" line="734"/>
       <source>Delete selected tree items</source>
       <translation>Enlever les éléments sélectionnés</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="831"/>
+      <location filename="../mainwindow.ui" line="834"/>
       <source>Raw</source>
       <translation>Données brutes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="207"/>
+      <location filename="../mainwindow.cpp" line="209"/>
       <source>Need to calculate piece hashes</source>
       <translation>En cours de calcul des hashs de pièce</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="208"/>
+      <location filename="../mainwindow.cpp" line="210"/>
       <source>Please wait</source>
       <translation>Veuillez patienter</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="218"/>
+      <location filename="../mainwindow.cpp" line="1361"/>
       <source>Auto</source>
       <translation>Auto</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="231"/>
+      <location filename="../mainwindow.cpp" line="1365"/>
       <source>Path</source>
       <translation>Chemin d’accès</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="231"/>
+      <location filename="../mainwindow.cpp" line="1365"/>
       <source>Size</source>
       <translation>Taille</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="188"/>
+      <location filename="../mainwindow.cpp" line="190"/>
       <source>Torrents (*.torrent)</source>
       <translation>Torrents (* .torrent)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="189"/>
+      <location filename="../mainwindow.cpp" line="191"/>
       <source>uTorrent resume files (*.dat)</source>
       <translation>fichiers de reprise uTorrent (*.dat)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="231"/>
+      <location filename="../mainwindow.cpp" line="1365"/>
       <source># Pieces</source>
       <translation># Pièces</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="336"/>
-      <location filename="../mainwindow.cpp" line="867"/>
+      <location filename="../mainwindow.cpp" line="401"/>
+      <location filename="../mainwindow.cpp" line="946"/>
       <source>Error</source>
       <translation>Erreur</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="336"/>
+      <location filename="../mainwindow.cpp" line="401"/>
       <source>Can't open file</source>
       <translation>Échec d'ouverture du fichier</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="634"/>
-      <location filename="../mainwindow.cpp" line="638"/>
-      <location filename="../mainwindow.cpp" line="648"/>
+      <location filename="../mainwindow.cpp" line="713"/>
+      <location filename="../mainwindow.cpp" line="717"/>
+      <location filename="../mainwindow.cpp" line="727"/>
       <source>Warning</source>
       <translation>Avertissement</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="612"/>
+      <location filename="../mainwindow.cpp" line="691"/>
       <source>Torrent root folder is not set</source>
       <translation>Le dossier racine du fichier torrent n'a pas été sélectionné</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="379"/>
-      <location filename="../mainwindow.cpp" line="1107"/>
-      <location filename="../mainwindow.cpp" line="1115"/>
-      <location filename="../mainwindow.cpp" line="1126"/>
+      <location filename="../mainwindow.cpp" line="444"/>
+      <location filename="../mainwindow.cpp" line="1186"/>
+      <location filename="../mainwindow.cpp" line="1194"/>
+      <location filename="../mainwindow.cpp" line="1205"/>
       <source>Can't save file</source>
       <translation>Impossible d’enregistrer le fichier</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="379"/>
-      <location filename="../mainwindow.cpp" line="1107"/>
+      <location filename="../mainwindow.cpp" line="444"/>
+      <location filename="../mainwindow.cpp" line="1186"/>
       <source>BEncoded data is not valid</source>
       <translation>Les données BEncoded sont invalides</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="613"/>
+      <location filename="../mainwindow.cpp" line="692"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
@@ -476,80 +476,80 @@ Si vous voulez changer la liste des fichiers de votre torrent, vous devez sélec
 Voulez-vous sélectionner un dossier racine et réessayer ?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="634"/>
+      <location filename="../mainwindow.cpp" line="713"/>
       <source>The filesystem root can't be used as a torrent root folder.</source>
       <translation type="unfinished">The filesystem root can't be used as a torrent root folder.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="638"/>
+      <location filename="../mainwindow.cpp" line="717"/>
       <source>The torrent root folder is not set.</source>
       <translation type="unfinished">The torrent root folder is not set.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="648"/>
+      <location filename="../mainwindow.cpp" line="727"/>
       <source>The torrent root folder is not common.</source>
       <translation>Le dossier racine du fichier torrent n'a pas été sélectionné.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="707"/>
+      <location filename="../mainwindow.cpp" line="786"/>
       <source>Add File</source>
       <translation>Ajouter un fichier</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="728"/>
+      <location filename="../mainwindow.cpp" line="807"/>
       <source>Add Folder</source>
       <translation>Ajouter un dossier</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="874"/>
+      <location filename="../mainwindow.cpp" line="953"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Ligne : %1 de %2 Col : %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1062"/>
-      <location filename="../mainwindow.cpp" line="1070"/>
+      <location filename="../mainwindow.cpp" line="1141"/>
+      <location filename="../mainwindow.cpp" line="1149"/>
       <source>Error on %1 line: %2</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Erreur à la ligne %1 : %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1223"/>
+      <location filename="../mainwindow.cpp" line="1302"/>
       <source>B</source>
       <translation>O</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1227"/>
+      <location filename="../mainwindow.cpp" line="1306"/>
       <source>KiB</source>
       <translation>KO</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1231"/>
+      <location filename="../mainwindow.cpp" line="1310"/>
       <source>MiB</source>
       <translation>MO</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1235"/>
+      <location filename="../mainwindow.cpp" line="1314"/>
       <source>GiB</source>
       <translation>GO</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1239"/>
+      <location filename="../mainwindow.cpp" line="1318"/>
       <source>TiB</source>
       <translation>TO</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1257"/>
+      <location filename="../mainwindow.cpp" line="1336"/>
       <source>Save file</source>
       <translation>Enregistrer le fichier</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1258"/>
+      <location filename="../mainwindow.cpp" line="1337"/>
       <source>Untitled</source>
       <translation>Sans titre</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1259"/>
+      <location filename="../mainwindow.cpp" line="1338"/>
       <source>Save file "%1"?</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Enregistrez le fichier « %1 » ?</translation>
@@ -702,15 +702,22 @@ Voulez-vous sélectionner un dossier racine et réessayer ?</translation>
   <context>
     <name>TableView</name>
     <message>
-      <location filename="../tableview.cpp" line="57"/>
+      <location filename="../tableview.cpp" line="58"/>
+      <location filename="../tableview.cpp" line="181"/>
       <source>Copy with Size</source>
       <translation type="unfinished">Copy with Size</translation>
+    </message>
+    <message>
+      <location filename="../tableview.cpp" line="64"/>
+      <location filename="../tableview.cpp" line="182"/>
+      <source>Copy Filename</source>
+      <translation type="unfinished">Copy Filename</translation>
     </message>
   </context>
   <context>
     <name>UrlEdit</name>
     <message>
-      <location filename="../urledit.cpp" line="60"/>
+      <location filename="../urledit.cpp" line="83"/>
       <source>Open in internet browser</source>
       <translation>Ouvrir dans le navigateur</translation>
     </message>
@@ -718,13 +725,13 @@ Voulez-vous sélectionner un dossier racine et réessayer ?</translation>
   <context>
     <name>Worker</name>
     <message>
-      <location filename="../mainwindow.cpp" line="113"/>
+      <location filename="../mainwindow.cpp" line="115"/>
       <source>Can't open %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Impossible d’ouvrir %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="152"/>
+      <location filename="../mainwindow.cpp" line="154"/>
       <source>Can't read from %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Impossible de lire %1</translation>
