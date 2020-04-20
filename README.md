@@ -112,3 +112,4 @@ Also feel free to open an issue on GitHub or send me pull requests.
 <img src="https://lipis.github.io/flag-icon-css/flags/4x3/es.svg" width="24" height="24">  Español - Spanish  
 <img src="https://lipis.github.io/flag-icon-css/flags/4x3/tr.svg" width="24" height="24">  Türkçe - Turkish  
 <img src="https://lipis.github.io/flag-icon-css/flags/4x3/vn.svg" width="24" height="24">  Tiếng Việt - Vietnamese  
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/ua.svg" width="24" height="24">  Украї́нська - Ukrainian  
