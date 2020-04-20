@@ -156,6 +156,7 @@ void TableView::contextMenuEvent(QContextMenuEvent *event)
     bool hasSelection = selectionModel()->hasSelection();
     _copyAct->setEnabled(hasSelection);
     _copySizeAct->setEnabled(hasSelection);
+    _copyWoExtAct->setEnabled(hasSelection);
 
     _menu->exec(event->globalPos());
 }
