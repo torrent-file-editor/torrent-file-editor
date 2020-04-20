@@ -18,7 +18,8 @@ trim()
 
 # af_ZA: ar_SA: bn_BD: ca_ES: cs_CZ: da_DK: de_DE: el_GR: en_US: es_ES: fi_FI: fr_FR: he_IL: hu_HU: id_ID: it_IT: ja_JP: ko_KR: nl_NL: no_NO: pl_PL: pt_BR: pt_PT: ro_RO: ru_RU: sr_SP: sv_SE: tr_TR: uk_UA: vi_VN: zh_CN: zh_TW: uk_UA
 
-langsmap="ar_SA:ar:Arabic:العربية
+langsmap="af_ZA:af:Afrikaans:Afrikaans
+          ar_SA:ar:Arabic:العربية
           bn_BD:bn:Bengali:বাংলা
           zh_CN:zh_CN:Chinese Simplified:简体中文
           zh_TW:zh_TW:Chinese Traditional:繁體中文

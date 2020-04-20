@@ -1,6 +1,7 @@
 <!DOCTYPE RCC>
 <RCC version="1.0">
     <qresource prefix="/translations">
+        <!-- qt_af.qm missed -->
         <file>qt_ar.qm</file>
         <!-- qt_bn.qm missed -->
         <file>qt_cs.qm</file>
