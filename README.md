@@ -88,6 +88,7 @@ Also feel free to open an issue on GitHub or send me pull requests.
 
 **Translations**
 
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/za.svg" width="24" height="24">  Afrikaans - Afrikaans  
 <img src="https://lipis.github.io/flag-icon-css/flags/4x3/sa.svg" width="24" height="24">  العربية - Arabic  
 <img src="https://lipis.github.io/flag-icon-css/flags/4x3/bd.svg" width="24" height="24">  বাংলা - Bengali  
 <img src="https://lipis.github.io/flag-icon-css/flags/4x3/cn.svg" width="24" height="24">  简体中文 - Chinese Simplified  
