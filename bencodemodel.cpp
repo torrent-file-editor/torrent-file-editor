@@ -556,7 +556,12 @@ void BencodeModel::appendRow(const QModelIndex &parent)
     QModelIndex parentIndex = parent;
     if (!parentItem->isList() && !parentItem->isDictionary()) {
         parentItem = parentItem->parent();
+
+        // In Qt4 QModelIdex has user-defined copy constructor but hasn't user-defined assignment
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-copy"
         parentIndex = parent.parent();
+#pragma GCC diagnostic pop
     }
 
     if (parentItem->isList()) {
