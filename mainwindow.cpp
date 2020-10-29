@@ -809,7 +809,7 @@ void MainWindow::addFolder()
         return;
 
     _lastFolder = QFileInfo(path).absolutePath();
-    ui->leBaseFolder->setFolder(_lastFolder);
+    ui->leBaseFolder->setFolder(QDir::toNativeSeparators(_lastFolder));
     QDirIterator it(path, QDirIterator::Subdirectories);
 
     QStringList files;
@@ -829,7 +829,7 @@ void MainWindow::addFolder()
     }
 
     if (ui->leBaseFolder->text().isEmpty())
-        ui->leBaseFolder->setText(path);
+        ui->leBaseFolder->setText(QDir::toNativeSeparators(path));
 
     updateFilesSize();
     ui->viewFiles->scrollToBottom();
