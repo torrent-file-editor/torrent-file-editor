@@ -515,7 +515,7 @@ QByteArray Bencode::toRaw(const Bencode *bencode)
 
     case String: {
         QByteArray ba = bencode->_string;
-        res += QString::number(ba.size()).toUtf8();
+        res += QString::number(ba.size()).toLatin1();
         res += ':';
         res += ba;
 #ifdef DEBUG
@@ -548,7 +548,7 @@ QByteArray Bencode::toRaw(const Bencode *bencode)
 #ifdef DEBUG
             qDebug() << "encode" << fromRawString(key) << "item";
 #endif
-            res += QString::number(key.size()).toUtf8();
+            res += QString::number(key.size()).toLatin1();
             res += ':';
             res += key;
 
