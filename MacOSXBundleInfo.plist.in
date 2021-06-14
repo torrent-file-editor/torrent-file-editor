@@ -12,7 +12,7 @@
 				<string>torrent</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>BittorrentDocument</string>
+			<string>application.icns</string>
 			<key>CFBundleTypeName</key>
 			<string>BitTorrent Document</string>
 			<key>CFBundleTypeRole</key>
