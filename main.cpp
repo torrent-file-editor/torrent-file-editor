@@ -245,9 +245,9 @@ int main(int argc, char *argv[])
                 retCode = -1;
             }
             else if (command == QLatin1String("--to-json"))
-                retCode = toJson(source, dest) ? -1 : 0;
+                retCode = toJson(source, dest) ? 0 : -1;
             else
-                retCode = fromJson(source, dest) ? -1 : 0;
+                retCode = fromJson(source, dest) ? 0 : -1;
 
             closeWinConsole();
             return retCode;
