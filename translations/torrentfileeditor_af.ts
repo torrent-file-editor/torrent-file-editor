@@ -726,7 +726,7 @@ Wil u die torrent-stamvouer instel en weer probeer?</translation>
       <location filename="../tableview.cpp" line="64"/>
       <location filename="../tableview.cpp" line="182"/>
       <source>Copy Filename</source>
-      <translation type="unfinished">Copy Filename</translation>
+      <translation>Kopieer Lêernaam</translation>
     </message>
   </context>
   <context>

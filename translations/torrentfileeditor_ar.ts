@@ -181,7 +181,7 @@
     <message>
       <location filename="../mainwindow.ui" line="314"/>
       <source>Magnet link</source>
-      <translation type="unfinished">Magnet link</translation>
+      <translation>رابط الماجنت</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="368"/>
@@ -492,12 +492,12 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../mainwindow.cpp" line="713"/>
       <source>The filesystem root can't be used as a torrent root folder.</source>
-      <translation type="unfinished">The filesystem root can't be used as a torrent root folder.</translation>
+      <translation>لا يمكن اختيار الأصل كمسار للملفات</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="717"/>
       <source>The torrent root folder is not set.</source>
-      <translation type="unfinished">The torrent root folder is not set.</translation>
+      <translation>لم يتم تحديد مسار الملفات</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="727"/>
@@ -727,13 +727,13 @@ Do you want to set torrent root folder and try again?</source>
       <location filename="../tableview.cpp" line="58"/>
       <location filename="../tableview.cpp" line="181"/>
       <source>Copy with Size</source>
-      <translation type="unfinished">Copy with Size</translation>
+      <translation>انسخ اسم الملف وحجمه</translation>
     </message>
     <message>
       <location filename="../tableview.cpp" line="64"/>
       <location filename="../tableview.cpp" line="182"/>
       <source>Copy Filename</source>
-      <translation type="unfinished">Copy Filename</translation>
+      <translation>انسخ اسم الملف</translation>
     </message>
   </context>
   <context>

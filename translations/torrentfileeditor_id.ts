@@ -181,7 +181,7 @@
     <message>
       <location filename="../mainwindow.ui" line="314"/>
       <source>Magnet link</source>
-      <translation type="unfinished">Magnet link</translation>
+      <translation>Tautan magnet</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="368"/>
@@ -493,12 +493,12 @@ Apakah Anda ingin mengatur folder akar torrent dan coba lagi?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="713"/>
       <source>The filesystem root can't be used as a torrent root folder.</source>
-      <translation type="unfinished">The filesystem root can't be used as a torrent root folder.</translation>
+      <translation>Root sistem file tidak dapat digunakan sebagai folder root torrent.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="717"/>
       <source>The torrent root folder is not set.</source>
-      <translation type="unfinished">The torrent root folder is not set.</translation>
+      <translation>Folder root torrent belum disetel.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="727"/>
@@ -718,13 +718,13 @@ Apakah Anda ingin mengatur folder akar torrent dan coba lagi?</translation>
       <location filename="../tableview.cpp" line="58"/>
       <location filename="../tableview.cpp" line="181"/>
       <source>Copy with Size</source>
-      <translation type="unfinished">Copy with Size</translation>
+      <translation>Salin dengan Ukuran</translation>
     </message>
     <message>
       <location filename="../tableview.cpp" line="64"/>
       <location filename="../tableview.cpp" line="182"/>
       <source>Copy Filename</source>
-      <translation type="unfinished">Copy Filename</translation>
+      <translation>Salin Nama File</translation>
     </message>
   </context>
   <context>

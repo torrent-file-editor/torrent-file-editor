@@ -721,7 +721,7 @@ Do you want to set torrent root folder and try again?</source>
       <location filename="../tableview.cpp" line="64"/>
       <location filename="../tableview.cpp" line="182"/>
       <source>Copy Filename</source>
-      <translation type="unfinished">Copy Filename</translation>
+      <translation>Copiar o nome do arquivo</translation>
     </message>
   </context>
   <context>

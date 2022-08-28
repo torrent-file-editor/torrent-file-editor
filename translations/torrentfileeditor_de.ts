@@ -726,7 +726,7 @@ Möchten Sie jetzt das Stammverzeichnis setzen und erneut versuchen?</translatio
       <location filename="../tableview.cpp" line="64"/>
       <location filename="../tableview.cpp" line="182"/>
       <source>Copy Filename</source>
-      <translation type="unfinished">Copy Filename</translation>
+      <translation>Dateiname kopieren</translation>
     </message>
   </context>
   <context>

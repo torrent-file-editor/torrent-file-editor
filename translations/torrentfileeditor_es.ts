@@ -136,7 +136,7 @@
     <message>
       <location filename="../mainwindow.ui" line="192"/>
       <source>Pieces</source>
-      <translation>Piezas</translation>
+      <translation>Partes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="151"/>
@@ -146,7 +146,7 @@
     <message>
       <location filename="../mainwindow.ui" line="212"/>
       <source>Piece size</source>
-      <translation>Tamaño de la pieza</translation>
+      <translation>Tamaño de la parte</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="202"/>
@@ -372,7 +372,7 @@
     <message>
       <location filename="../mainwindow.ui" line="417"/>
       <source>Calculate pieces hashes</source>
-      <translation>Calcular valores hash de piezas</translation>
+      <translation>Calcular valores hash de partes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="488"/>
@@ -382,7 +382,7 @@
     <message>
       <location filename="../mainwindow.ui" line="648"/>
       <source>Piece size </source>
-      <translation>Tamaño de la pieza </translation>
+      <translation>Tamaño de la parte </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="331"/>
@@ -403,7 +403,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="209"/>
       <source>Need to calculate piece hashes</source>
-      <translation>Es necesario de calcular el hash de la pieza</translation>
+      <translation>Es necesario de calcular el hash de las partes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="210"/>
@@ -413,7 +413,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="1361"/>
       <source>Auto</source>
-      <translation>Automatico</translation>
+      <translation>Automático</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1365"/>
@@ -438,7 +438,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="1365"/>
       <source># Pieces</source>
-      <translation>N° de piezas</translation>
+      <translation>N° de partes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="401"/>
@@ -726,7 +726,7 @@ Si quieres editar la lista de archivos en el torrent actual, primero debes elegi
       <location filename="../tableview.cpp" line="64"/>
       <location filename="../tableview.cpp" line="182"/>
       <source>Copy Filename</source>
-      <translation type="unfinished">Copy Filename</translation>
+      <translation>Copiar nombre del archivo</translation>
     </message>
   </context>
   <context>

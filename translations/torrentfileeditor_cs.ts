@@ -23,7 +23,7 @@
     <message>
       <location filename="../aboutdlg.ui" line="126"/>
       <source>Check for Update</source>
-      <translation type="unfinished">Check for Update</translation>
+      <translation>Zkontrolovat aktualizace</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="142"/>
@@ -34,7 +34,7 @@
     <message>
       <location filename="../aboutdlg.cpp" line="198"/>
       <source>Something went wrong</source>
-      <translation type="unfinished">Something went wrong</translation>
+      <translation>Vyskytla se chyba</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="202"/>
@@ -45,7 +45,7 @@
     <message>
       <location filename="../aboutdlg.cpp" line="205"/>
       <source>The latest version is installed</source>
-      <translation type="unfinished">The latest version is installed</translation>
+      <translation>Je již nainstalována nejnovější verze.</translation>
     </message>
   </context>
   <context>
@@ -498,7 +498,7 @@ Do you want to set torrent root folder and try again?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="717"/>
       <source>The torrent root folder is not set.</source>
-      <translation type="unfinished">The torrent root folder is not set.</translation>
+      <translation>Kořenová složka torrentu není nastavena</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="727"/>
