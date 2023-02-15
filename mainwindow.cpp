@@ -118,10 +118,8 @@ void Worker::doWork(const QStringList &files, int pieceSize)
         }
 
         int readed;
-        int j = 0;
         while ((readed = f.read(piece.data() + piecePos, pieceSize - piecePos)) > 0) {  // -V104 PVS-Studio
             piecePos += readed;
-            j++;
             if (piecePos == pieceSize || ((i == files.size() - 1) && f.atEnd())) {
                 piece.resize(piecePos);
                 piecePos = 0;
