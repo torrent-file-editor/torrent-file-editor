@@ -40,7 +40,7 @@
       <location filename="../aboutdlg.cpp" line="202"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
       <translatorcomment>Do not touch %1 it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-      <translation>检测到新版本 &lt;a href="%2"&gt;%1 &lt;/a&gt;</translation>
+      <translation>检测到新版本: &lt;a href="%2"&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="205"/>
@@ -428,12 +428,12 @@
     <message>
       <location filename="../mainwindow.cpp" line="190"/>
       <source>Torrents (*.torrent)</source>
-      <translation>种子文件（*.torrent）</translation>
+      <translation>种子文件 (*.torrent)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="191"/>
       <source>uTorrent resume files (*.dat)</source>
-      <translation>uTorrent 恢复文件（*.dat）</translation>
+      <translation>uTorrent 恢复文件 (*.dat)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1365"/>
@@ -567,7 +567,7 @@ Do you want to set torrent root folder and try again?</source>
       <location filename="../mainwindow.cpp" line="1338"/>
       <source>Save file "%1"?</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>是否要保存「%1」？</translation>
+      <translation>是否要保存 "%1"？</translation>
     </message>
   </context>
   <context>
@@ -700,7 +700,7 @@ Do you want to set torrent root folder and try again?</source>
       <source>%1 of %n match(es)</source>
       <translatorcomment>Do not touch %1 it must be as is. Make translations for both singular and plural forms. </translatorcomment>
       <translation>
-        <numerusform>第 %1 个匹配项（共 %n 个）</numerusform>
+        <numerusform>第 %1 个匹配项 (共 %n 个)</numerusform>
       </translation>
     </message>
     <message numerus="yes">

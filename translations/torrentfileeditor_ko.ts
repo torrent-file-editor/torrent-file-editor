@@ -175,7 +175,7 @@
     <message>
       <location filename="../mainwindow.ui" line="219"/>
       <source>URL</source>
-      <translation type="unfinished">URL</translation>
+      <translation>URL</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="226"/>
@@ -341,7 +341,7 @@
     <message>
       <location filename="../mainwindow.ui" line="906"/>
       <source>Ctrl+N</source>
-      <translation type="unfinished">Ctrl+N</translation>
+      <translation>Ctrl+N</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="911"/>
@@ -351,12 +351,12 @@
     <message>
       <location filename="../mainwindow.ui" line="914"/>
       <source>Ctrl+O</source>
-      <translation type="unfinished">Ctrl+O</translation>
+      <translation>Ctrl+O</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="922"/>
       <source>Ctrl+S</source>
-      <translation type="unfinished">Ctrl+S</translation>
+      <translation>Ctrl+S</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="927"/>
@@ -366,7 +366,7 @@
     <message>
       <location filename="../mainwindow.ui" line="930"/>
       <source>Ctrl+Shift+S</source>
-      <translation type="unfinished">Ctrl+Shift+S</translation>
+      <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="935"/>
@@ -540,22 +540,22 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../mainwindow.cpp" line="1302"/>
       <source>B</source>
-      <translation type="unfinished">B</translation>
+      <translation>B</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1306"/>
       <source>KiB</source>
-      <translation type="unfinished">KiB</translation>
+      <translation>KiB</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1310"/>
       <source>MiB</source>
-      <translation type="unfinished">MiB</translation>
+      <translation>MiB</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1314"/>
       <source>GiB</source>
-      <translation type="unfinished">GiB</translation>
+      <translation>GiB</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1318"/>
