@@ -1,4 +1,9 @@
-cmake_minimum_required(VERSION 2.8.11)
+if(APPLE)
+  # Fix macOS obsoletes CMake warning
+  cmake_minimum_required(VERSION 3.5)
+else()
+  cmake_minimum_required(VERSION 2.8.11)
+endif()
 
 macro(GET_DATE)
   #
