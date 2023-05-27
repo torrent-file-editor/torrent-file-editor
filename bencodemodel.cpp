@@ -557,13 +557,13 @@ void BencodeModel::appendRow(const QModelIndex &parent)
     if (!parentItem->isList() && !parentItem->isDictionary()) {
         parentItem = parentItem->parent();
 
-#ifdef __GNUC__
+#ifndef __clang__
 # pragma GCC diagnostic push
 # pragma GCC diagnostic ignored "-Wdeprecated-copy"
 #endif
         // In Qt4 QModelIdex has user-defined copy constructor but hasn't user-defined assignment
         parentIndex = parent.parent();
-#ifdef __GNUC__
+#ifndef __clang__
 # pragma GCC diagnostic pop
 #endif
     }
