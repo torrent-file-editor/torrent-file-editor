@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>503</width>
-    <height>449</height>
+    <width>507</width>
+    <height>434</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -66,25 +66,12 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="0" colspan="2">
+      <item row="2" column="0" colspan="2">
        <widget class="QLabel" name="label_7">
         <property name="text">
          <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/icons/wmlogo_16.png&quot;/&gt; Z986009119917 &lt;img src=&quot;:/icons/wmlogo_16.png&quot;/&gt; R131648522366&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://yoomoney.ru/to/410013137242898&quot;&gt;&lt;img src=&quot;:/icons/iomoney.png&quot;/&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="openExternalLinks">
-         <bool>true</bool>
-        </property>
-        <property name="textInteractionFlags">
-         <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0" colspan="2">
-       <widget class="QLabel" name="lbDonation">
-        <property name="text">
-         <string>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</string>
-        </property>
-        <property name="wordWrap">
          <bool>true</bool>
         </property>
         <property name="textInteractionFlags">
@@ -108,16 +95,7 @@
       <property name="spacing">
        <number>0</number>
       </property>
-      <property name="leftMargin">
-       <number>0</number>
-      </property>
-      <property name="topMargin">
-       <number>0</number>
-      </property>
-      <property name="rightMargin">
-       <number>0</number>
-      </property>
-      <property name="bottomMargin">
+      <property name="margin">
        <number>0</number>
       </property>
       <item>

@@ -144,7 +144,6 @@ AboutDlg::AboutDlg(QWidget *parent)
 #ifdef NO_DONATION
     ui->wdgDonation->hide();
 #endif
-    ui->lbDonation->hide();
     ui->lbShowUpdate->hide();
 
 #ifndef Q_OS_WIN
