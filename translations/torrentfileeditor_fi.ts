@@ -11,14 +11,9 @@
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="39"/>
-      <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
+      <source>&lt;h3&gt;Coffee for Developer&lt;/h3&gt;</source>
       <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-      <translation>&lt;h3&gt;Olutta kehittäjälle&lt;/h3&gt;</translation>
-    </message>
-    <message>
-      <location filename="../aboutdlg.ui" line="85"/>
-      <source>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</source>
-      <translation>Uusimman version kehittäminen vaati paljon aikaa ja vaivaa. Korjattu vakavia vikoja ja hyödyllisiä parannuksia. Olen väsynyt. Mutta vähän olutta auttamaan minua palauttamaan voimaa ja kehittymään edelleen. Jos pidät tästä sovelluksesta, haluat kiittää kehittäjää ja haluat että seuraavakin versio julkaistaan:</translation>
+      <translation type="unfinished">&lt;h3&gt;Coffee for Developer&lt;/h3&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="126"/>

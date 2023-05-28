@@ -20,14 +20,9 @@
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="39"/>
-      <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
+      <source>&lt;h3&gt;Coffee for Developer&lt;/h3&gt;</source>
       <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-      <translation>&lt;h3&gt;개발자를 위해 맥주 기부&lt;/h3&gt; :한국어: 비너스걸</translation>
-    </message>
-    <message>
-      <location filename="../aboutdlg.ui" line="85"/>
-      <source>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</source>
-      <translation>최신 버전의 개발에는 많은 시간과 노력이 요구되었습니다. 심각한 버그를 수정하고 유용한 개선을 했습니다. 피곤해요. 하지만 힘을 되찾고 계속 발전하는 데 도움이 될 수 있도록 맥주를 조금만 주세요. 이 앱이 마음에 드신다면 개발자에게 감사드리며 다음 버전을 출시하면 다음과 같은 방법으로 작은 기부를 할 수 있습니다:</translation>
+      <translation type="unfinished">&lt;h3&gt;Coffee for Developer&lt;/h3&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="126"/>

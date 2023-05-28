@@ -20,14 +20,9 @@
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="39"/>
-      <source>&lt;h3&gt;Beer for Developer&lt;/h3&gt;</source>
+      <source>&lt;h3&gt;Coffee for Developer&lt;/h3&gt;</source>
       <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-      <translation>&lt;h3&gt; באר למפתחים &lt;/ h3&gt;</translation>
-    </message>
-    <message>
-      <location filename="../aboutdlg.ui" line="85"/>
-      <source>The development of the latest version has demanded a lot of time and effort. Fixed serious bugs and made useful improvements. I'm tired. But a little beer to help me regain strength and continue to develop. If you like this app, you want to thank the developer and bring release the next version can make a small donation via:</source>
-      <translation>הפיתוח של הגרסה האחרונה יש דרש הרבה זמן ומאמץ. תוקנו באגים רציניים ושיפורים שימושיים. אני עייף. אבל קצת בירה כדי לעזור לי להחזיר את כוח ולהמשיך להתפתח. אם אתה אוהב את היישום הזה, אתה רוצה להודות היזם ולהביא לשחרר את הגירסה הבאה יכולה לעשות תרומה קטנה באמצעות:</translation>
+      <translation type="unfinished">&lt;h3&gt;Coffee for Developer&lt;/h3&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="126"/>
@@ -190,7 +185,7 @@
     <message>
       <location filename="../mainwindow.ui" line="314"/>
       <source>Magnet link</source>
-      <translation type="unfinished">Magnet link</translation>
+      <translation>קישור/י מגנט</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="368"/>
@@ -490,7 +485,7 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../mainwindow.cpp" line="717"/>
       <source>The torrent root folder is not set.</source>
-      <translation type="unfinished">The torrent root folder is not set.</translation>
+      <translation>The torrent root folder is not set.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="727"/>
