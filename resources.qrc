@@ -22,7 +22,7 @@
         <file>./icons/wmlogo_16.png</file>
 
         <!-- https://money.yandex.ru/partners/doc.xml?id=522991 -->
-        <file>./icons/ya_money_logo_eng.png</file>
+        <file>./icons/iomoney.png</file>
 
         <!-- icons token from gnome-icon-theme Fedora RPM package -->
         <file>./icons/gnome/index.theme</file>

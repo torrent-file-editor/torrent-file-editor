@@ -69,7 +69,7 @@
       <item row="3" column="0" colspan="2">
        <widget class="QLabel" name="label_7">
         <property name="text">
-         <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/icons/wmlogo_16.png&quot;/&gt; Z986009119917 &lt;img src=&quot;:/icons/wmlogo_16.png&quot;/&gt; R131648522366&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://yoomoney.ru/to/410013137242898&quot;&gt;&lt;img src=&quot;:/icons/ya_money_logo_eng.png&quot;/&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/icons/wmlogo_16.png&quot;/&gt; Z986009119917 &lt;img src=&quot;:/icons/wmlogo_16.png&quot;/&gt; R131648522366&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://yoomoney.ru/to/410013137242898&quot;&gt;&lt;img src=&quot;:/icons/iomoney.png&quot;/&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="openExternalLinks">
          <bool>true</bool>
