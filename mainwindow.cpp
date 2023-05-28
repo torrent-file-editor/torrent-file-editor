@@ -483,8 +483,9 @@ void MainWindow::copyMagnetExtra()
     QString name = _bencodeModel->name();
     qulonglong size = _bencodeModel->totalSize();
     QString link = ui->leMagnetLink->text();
+    QString url = _bencodeModel->comment();
     if (size && !name.isEmpty() && !link.isEmpty()) {
-        QString str = QString(QLatin1String("%1\t%2\t%3")).arg(name, smartSize(size), link);
+        QString str = QString(QLatin1String("%1\t%2\t%3\t%4")).arg(name, smartSize(size), link, url).trimmed();
         qApp->clipboard()->setText(str);
     }
 }
