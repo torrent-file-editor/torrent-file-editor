@@ -23,8 +23,9 @@
 #include "ui_aboutdlg.h"
 #include "application.h"
 
-#include <QShortcut>
 #include <QKeySequence>
+#include <QLocale>
+#include <QShortcut>
 
 #ifdef Q_OS_WIN
 # include "checkupdate.h"
@@ -156,10 +157,13 @@ AboutDlg::AboutDlg(QWidget *parent)
     , thread(nullptr)
 {
     ui->setupUi(this);
+
+    QString buildDate = QLocale::system().toString(Application::buildDateTime().date());
+
     ui->label->setText(QStringLiteral(VERSION_LABEL)
                        .arg(qApp->applicationName())
                        .arg(qApp->applicationVersion())
-                       .arg(Application::buildDateTime().date().toString(Qt::DefaultLocaleLongDate)));
+                       .arg(buildDate));
     setWindowTitle(QString(tr("About %1")).arg(qApp->applicationName()));
 
 #ifdef NO_DONATION
