@@ -153,7 +153,6 @@ void LineEditWidget::setPopup(QWidget *w)
 
     QBoxLayout *layout = new QBoxLayout(QBoxLayout::TopToBottom);
     layout->setSpacing(0);
-    layout->setMargin(0);
     layout->setContentsMargins(0, 0, 0, 0);
     layout->addWidget(w);
     _popup->setLayout(layout);
