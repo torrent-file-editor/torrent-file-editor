@@ -134,7 +134,7 @@ string(REGEX REPLACE "^v" "" APP_VERSION ${APP_VERSION})
 if(WIN32)
   configure_file(${CMAKE_CURRENT_LIST_DIR}/../appcast.json.in appcast.json)
 endif()
-file(WRITE version ${APP_VERSION})
+file(WRITE appversion ${APP_VERSION})
 if (APPLE)
   configure_file("${CMAKE_BINARY_DIR}/MacOSXBundleInfo.plist.in" "${CMAKE_BINARY_DIR}/Torrent File Editor.app/Contents/Info.plist")
   file(WRITE "${CMAKE_BINARY_DIR}/CPackProperties.cmake"
