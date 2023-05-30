@@ -305,7 +305,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(_bencodeModel, SIGNAL(modelReset()), SLOT(updateTitle()));
 
     ui->cmbTranslation->hide();
-    _showTranslations = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_T), this, SLOT(showTranslations()));
+    _showTranslations = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_T), this, SLOT(showTranslations()));
 
     changeTranslation(-1);
 }
