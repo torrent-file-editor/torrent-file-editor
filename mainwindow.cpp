@@ -55,9 +55,11 @@
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
 # include <QJsonDocument>
+# include <QRegularExpression>
 #else
 # include <qjson/serializer.h>
 # include <qjson/parser.h>
+# include <QRegExp>
 #endif
 
 #ifdef Q_OS_WIN
@@ -547,7 +549,11 @@ void MainWindow::changeEvent(QEvent *event)
 void MainWindow::fillCoding()
 {
     QMap<QString, QTextCodec*> codecMap;
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+    QRegularExpression iso8859RegExp(QStringLiteral("^ISO[- ]8859-([0-9]+).*$"));
+#else
     QRegExp iso8859RegExp(QStringLiteral("ISO[- ]8859-([0-9]+).*"));
+#endif
 
     for (int mib: QTextCodec::availableMibs())
     {
@@ -556,14 +562,22 @@ void MainWindow::fillCoding()
         QString sortKey = QString::fromUtf8(codec->name().toUpper());
         int rank;
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+        QRegularExpressionMatch iso8859RegExpMatch = iso8859RegExp.match(sortKey);
+#endif
         if (sortKey.startsWith(QLatin1String("UTF-8"))) {
             rank = 1; // -V112 PVS-Studio
         }
         else if (sortKey.startsWith(QLatin1String("UTF-16"))) {
             rank = 2; // -V112 PVS-Studio
         }
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+        else if (iso8859RegExpMatch.hasMatch()) {
+            if (iso8859RegExpMatch.captured(1).size() == 1) {
+#else
         else if (iso8859RegExp.exactMatch(sortKey)) {
             if (iso8859RegExp.cap(1).size() == 1) {
+#endif
                 rank = 3; // -V112 PVS-Studio
             }
             else {
