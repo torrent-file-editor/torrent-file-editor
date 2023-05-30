@@ -101,7 +101,11 @@ void SearchDlg::searchNext()
             else if (ui->rdKeyWildcards->isChecked())
                 matchFlags |= Qt::MatchFlag::MatchWildcard;
             else if (ui->rdKeyRegexp->isChecked())
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+                matchFlags |= Qt::MatchFlag::MatchRegularExpression;
+#else
                 matchFlags |= Qt::MatchFlag::MatchRegExp;
+#endif
 
             keys = _model->match(_model->index(0, 0), Qt::DisplayRole, key, -1, matchFlags);
         }
@@ -123,7 +127,11 @@ void SearchDlg::searchNext()
                 matchFlags |= Qt::MatchFlag::MatchWildcard;
             }
             else if (ui->rdValueRegexp->isChecked()) {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+                matchFlags |= Qt::MatchFlag::MatchRegularExpression;
+#else
                 matchFlags |= Qt::MatchFlag::MatchRegExp;
+#endif
             }
             else if (ui->rdValueHex->isChecked()) {
                 matchFlags |= Qt::MatchFlag::MatchContains;
