@@ -15,7 +15,7 @@ if [ -x "$(command -v i686-w64-mingw32.shared-qmake-qt4)" ]; then
     pushd mxe32-qt4-shared
     i686-w64-mingw32.shared-cmake -DCMAKE_BUILD_TYPE=Release ..
     make -j5
-    version=$(cat version)
+    version=$(cat appversion)
     destdir=../${name}-${version}-mxe-qt4-shared-x32
     mkdir $destdir
     mv ${name}.exe $destdir
@@ -35,7 +35,7 @@ if [ -x "$(command -v i686-w64-mingw32.shared-qmake-qt5)" ]; then
     pushd mxe32-qt5-shared
     i686-w64-mingw32.shared-cmake -DCMAKE_BUILD_TYPE=Release -DQT5_BUILD=ON ..
     make -j5
-    version=$(cat version)
+    version=$(cat appversion)
     destdir=../${name}-${version}-mxe-qt5-shared-x32
     mkdir $destdir
     mv ${name}.exe $destdir
@@ -67,7 +67,7 @@ if [ -x "$(command -v x86_64-w64-mingw32.shared-qmake-qt4)" ]; then
     pushd mxe64-qt4-shared
     x86_64-w64-mingw32.shared-cmake -DCMAKE_BUILD_TYPE=Release ..
     make -j5
-    version=$(cat version)
+    version=$(cat appversion)
     destdir=../${name}-${version}-mxe-qt4-shared-x64
     mkdir $destdir
     mv ${name}.exe $destdir
@@ -87,7 +87,7 @@ if [ -x "$(command -v x86_64-w64-mingw32.shared-qmake-qt5)" ]; then
     pushd mxe64-qt5-shared
     x86_64-w64-mingw32.shared-cmake -DCMAKE_BUILD_TYPE=Release -DQT5_BUILD=ON ..
     make -j5
-    version=$(cat version)
+    version=$(cat appversion)
     destdir=../${name}-${version}-mxe-qt5-shared-x64
     mkdir $destdir
     mv ${name}.exe $destdir

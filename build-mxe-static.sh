@@ -15,7 +15,7 @@ if [ -x "$(command -v i686-w64-mingw32.shared-qmake-qt4)" ]; then
     pushd mxe32-qt4-static
     i686-w64-mingw32.static-cmake -DCMAKE_BUILD_TYPE=Release ..
     make -j5
-    version=$(cat version)
+    version=$(cat appversion)
     mv ${name}.exe ../${name}-${version}-mxe-qt4-static-x32.exe
     popd
 fi
@@ -25,7 +25,7 @@ if [ -x "$(command -v i686-w64-mingw32.shared-qmake-qt5)" ]; then
     pushd mxe32-qt5-static
     i686-w64-mingw32.static-cmake -DCMAKE_BUILD_TYPE=Release -DQT5_BUILD=ON ..
     make -j5
-    version=$(cat version)
+    version=$(cat appversion)
     mv ${name}.exe ../${name}-${version}-mxe-qt5-static-x32.exe
     popd
 fi
@@ -35,7 +35,7 @@ if [ -x "$(command -v x86_64-w64-mingw32.shared-qmake-qt4)" ]; then
     pushd mxe64-qt4-static
     x86_64-w64-mingw32.static-cmake -DCMAKE_BUILD_TYPE=Release ..
     make -j5
-    version=$(cat version)
+    version=$(cat appversion)
     mv ${name}.exe ../${name}-${version}-mxe-qt4-static-x64.exe
     popd
 fi
@@ -45,7 +45,7 @@ if [ -x "$(command -v x86_64-w64-mingw32.shared-qmake-qt5)" ]; then
     pushd mxe64-qt5-static
     x86_64-w64-mingw32.static-cmake -DCMAKE_BUILD_TYPE=Release -DQT5_BUILD=ON ..
     make -j5
-    version=$(cat version)
+    version=$(cat appversion)
     mv ${name}.exe ../${name}-${version}-mxe-qt5-static-x64.exe
     popd
 fi
