@@ -59,6 +59,11 @@
 #else
 # include <qjson/serializer.h>
 # include <qjson/parser.h>
+#endif
+
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# include <QRegularExpression>
+#else
 # include <QRegExp>
 #endif
 
@@ -549,7 +554,7 @@ void MainWindow::changeEvent(QEvent *event)
 void MainWindow::fillCoding()
 {
     QMap<QString, QTextCodec*> codecMap;
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
     QRegularExpression iso8859RegExp(QStringLiteral("^ISO[- ]8859-([0-9]+).*$"));
 #else
     QRegExp iso8859RegExp(QStringLiteral("ISO[- ]8859-([0-9]+).*"));
@@ -562,7 +567,7 @@ void MainWindow::fillCoding()
         QString sortKey = QString::fromUtf8(codec->name().toUpper());
         int rank;
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         QRegularExpressionMatch iso8859RegExpMatch = iso8859RegExp.match(sortKey);
 #endif
         if (sortKey.startsWith(QLatin1String("UTF-8"))) {
@@ -571,7 +576,7 @@ void MainWindow::fillCoding()
         else if (sortKey.startsWith(QLatin1String("UTF-16"))) {
             rank = 2; // -V112 PVS-Studio
         }
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         else if (iso8859RegExpMatch.hasMatch()) {
             if (iso8859RegExpMatch.captured(1).size() == 1) {
 #else
@@ -974,7 +979,7 @@ void MainWindow::filterFiles()
     if (pattern.isEmpty())
         return;
 
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
     if (filter == FilesFilters::TemplateFilter) {
         pattern = QRegularExpression::wildcardToRegularExpression(pattern);
     }
@@ -988,14 +993,14 @@ void MainWindow::filterFiles()
 #ifdef Q_OS_LINUX
         // Linux Ext2/3/4 file systems are case sensetive
         Qt::CaseSensitivity cs = Qt::CaseSensitive;
-# if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         QRegularExpression::PatternOptions po = QRegularExpression::NoPatternOption;
 # endif
 #else
         // On Windows FAT32 and NTFS file systems are case insensetive
         // On Mac OS HFS file system is case insensetive by default
         Qt::CaseSensitivity cs = Qt::CaseInsensitive;
-# if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         QRegularExpression::PatternOptions po = QRegularExpression::CaseInsensitiveOption;
 # endif
 #endif
@@ -1013,7 +1018,7 @@ void MainWindow::filterFiles()
             break;
 
         case FilesFilters::TemplateFilter: {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
             QRegularExpression rx(pattern, po);
             QRegularExpressionMatch match = rx.match(fi.fileName());
             if (match.hasMatch()) {
@@ -1027,7 +1032,7 @@ void MainWindow::filterFiles()
 
         case FilesFilters::RegExpFilter: {
             QString path = QDir::toNativeSeparators(fi.filePath());
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
             QRegularExpression rx(pattern, po);
             QRegularExpressionMatch match = rx.match(path);
             if (match.hasMatch()) {
