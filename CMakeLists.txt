@@ -114,8 +114,6 @@ if(QT5_BUILD)
   find_package(Qt5Widgets REQUIRED)
   find_package(Qt5LinguistTools REQUIRED)
 
-  add_definitions(-DHAVE_QT5)
-
   macro(QT4_ADD_TRANSLATION)
     qt5_add_translation(${ARGN})
   endmacro()
