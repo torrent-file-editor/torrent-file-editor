@@ -21,17 +21,15 @@
 
 #include "datewidget.h"
 
+#include <QApplication>
+#include <QCalendarWidget>
+#include <QDesktopWidget>
+#include <QHBoxLayout>
+#include <QIcon>
+#include <QKeyEvent>
 #include <QKeyEvent>
 #include <QLineEdit>
-#include <QCalendarWidget>
-#include <QIcon>
-#include <QHBoxLayout>
-#include <QRegExp>
-#include <QRegExpValidator>
-#include <QApplication>
-#include <QDesktopWidget>
 #include <QLocale>
-#include <QKeyEvent>
 #include <QPushButton>
 
 // Always use format of current locale
