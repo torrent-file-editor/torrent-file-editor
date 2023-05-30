@@ -970,9 +970,15 @@ void MainWindow::filterFiles()
 {
 
     FilesFilters filter = static_cast<FilesFilters>(ui->cmbFilesFilter->currentIndex());
-    QString pattern = QDir::fromNativeSeparators(ui->lneFilesFilter->text());
+    QString pattern = ui->lneFilesFilter->text();
     if (pattern.isEmpty())
         return;
+
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+    if (filter == FilesFilters::TemplateFilter) {
+        pattern = QRegularExpression::wildcardToRegularExpression(pattern);
+    }
+#endif
 
     QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->viewFiles->model());
     for (int i =  model->rowCount() - 1; i >= 0; --i) {
@@ -982,10 +988,16 @@ void MainWindow::filterFiles()
 #ifdef Q_OS_LINUX
         // Linux Ext2/3/4 file systems are case sensetive
         Qt::CaseSensitivity cs = Qt::CaseSensitive;
+# if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+        QRegularExpression::PatternOptions po = QRegularExpression::NoPatternOption;
+# endif
 #else
         // On Windows FAT32 and NTFS file systems are case insensetive
         // On Mac OS HFS file system is case insensetive by default
         Qt::CaseSensitivity cs = Qt::CaseInsensitive;
+# if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+        QRegularExpression::PatternOptions po = QRegularExpression::CaseInsensitiveOption;
+# endif
 #endif
 
         bool removeFile = false;
@@ -1001,15 +1013,30 @@ void MainWindow::filterFiles()
             break;
 
         case FilesFilters::TemplateFilter: {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+            QRegularExpression rx(pattern, po);
+            QRegularExpressionMatch match = rx.match(fi.fileName());
+            if (match.hasMatch()) {
+#else
             QRegExp rx(pattern, cs, QRegExp::Wildcard);
-            if (rx.indexIn(fi.fileName()) >= 0)
+            if (rx.indexIn(fi.fileName()) >= 0) {
+#endif
                 removeFile = true;
+            }
             } break;
 
         case FilesFilters::RegExpFilter: {
+            QString path = QDir::toNativeSeparators(fi.filePath());
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+            QRegularExpression rx(pattern, po);
+            QRegularExpressionMatch match = rx.match(path);
+            if (match.hasMatch()) {
+#else
             QRegExp rx(pattern, cs);
-            if (rx.indexIn(fi.filePath()) >= 0)
+            if (rx.indexIn(path) >= 0) {
+#endif
                 removeFile = true;
+            }
             } break;
         }
 
