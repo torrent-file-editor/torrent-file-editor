@@ -369,7 +369,11 @@ void MainWindow::changeTranslation(int index)
 #ifdef Q_OS_WIN
     QString qtTranslationsPath(QStringLiteral(":/translations"));
 #else
+# if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    QString qtTranslationsPath = QLibraryInfo::path(QLibraryInfo::TranslationsPath);
+# else
     QString qtTranslationsPath = QLibraryInfo::location(QLibraryInfo::TranslationsPath);
+# endif
 #endif
 
     QString qtTranslationsName(QStringLiteral("qt"));
@@ -674,8 +678,9 @@ void MainWindow::updateBencodeFromTrackers()
     ui->leMagnetLink->setText(_bencodeModel->magnetLink());
 }
 
-void MainWindow::updateEncoding(const QString &encoding)
+void MainWindow::updateEncoding()
 {
+    QString encoding = ui->cmbCoding->currentText();
     _bencodeModel->setTextCodec(QTextCodec::codecForName(encoding.toUtf8()));
     updateTab(ui->tabWidget->currentIndex());
 }

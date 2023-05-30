@@ -92,7 +92,7 @@ public slots:
     void updateBencodeFromComment();
     void updateBencodeFromTrackers();
 
-    void updateEncoding(const QString &encoding);
+    void updateEncoding();
 
     void updateTitle();
 

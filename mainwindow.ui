@@ -1355,9 +1355,9 @@
   </connection>
   <connection>
    <sender>cmbCoding</sender>
-   <signal>currentIndexChanged(QString)</signal>
+   <signal>currentIndexChanged(int)</signal>
    <receiver>MainWindow</receiver>
-   <slot>updateEncoding(QString)</slot>
+   <slot>updateEncoding()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>515</x>
@@ -1630,7 +1630,7 @@
   <slot>updateFiles()</slot>
   <slot>updateRawPosition()</slot>
   <slot>showAbout()</slot>
-  <slot>updateEncoding(QString)</slot>
+  <slot>updateEncoding()</slot>
   <slot>addTreeItem()</slot>
   <slot>removeTreeItem()</slot>
   <slot>upTreeItem()</slot>

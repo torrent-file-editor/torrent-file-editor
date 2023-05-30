@@ -34,7 +34,11 @@ add_custom_target(update_version ALL
 )
 
 # Enable C++11
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+if(QT6_BUILD)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
+else()
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+endif()
 
 # Enable all warnings
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic")
@@ -108,7 +112,30 @@ if(ENABLE_NVWA)
   )
 endif()
 
-if(QT5_BUILD)
+
+if(QT6_BUILD)
+  find_package(Qt6Core REQUIRED)
+  find_package(Qt6Gui REQUIRED)
+  find_package(Qt6Widgets REQUIRED)
+  find_package(Qt6LinguistTools REQUIRED)
+  find_package(Qt6Core5Compat REQUIRED)
+
+  macro(QT4_ADD_TRANSLATION)
+    qt6_add_translation(${ARGN})
+  endmacro()
+
+  macro(qt4_add_resources)
+    qt6_add_resources(${ARGN})
+  endmacro()
+
+  macro(qt4_wrap_cpp)
+    qt6_wrap_cpp(${ARGN})
+  endmacro()
+
+  macro(qt4_wrap_ui)
+    qt6_wrap_ui(${ARGN})
+  endmacro()
+elseif(QT5_BUILD)
   find_package(Qt5Core REQUIRED)
   find_package(Qt5Gui REQUIRED)
   find_package(Qt5Widgets REQUIRED)
@@ -149,7 +176,9 @@ if(WIN32 AND (NOT BUILD_SHARED))
 endif()
 
 macro(qt_add_translation ARG1 ARG2)
-  if(QT5_BUILD)
+  if(QT6_BUILD)
+    qt6_add_translation(${ARG1} ${ARG2})
+  elseif(QT5_BUILD)
     qt5_add_translation(${ARG1} ${ARG2})
   else()
     qt4_add_translation(${ARG1} ${ARG2})
@@ -326,7 +355,9 @@ add_executable(${EXE_NAME} WIN32 MACOSX_BUNDLE ${QM} ${HEADERS} ${PLAIN_HEADERS}
 
 add_dependencies(${EXE_NAME} update_version)
 
-if(QT5_BUILD)
+if(QT6_BUILD)
+  target_link_libraries(${EXE_NAME} ${START_STATIC} Qt6::Core Qt6::Gui Qt6::Widgets Qt6::Core5Compat ${END_STATIC} ${EXTRA_LIBS} ${NWVA_LIBS})
+elseif(QT5_BUILD)
   target_link_libraries(${EXE_NAME} ${START_STATIC} Qt5::Core Qt5::Gui Qt5::Widgets ${END_STATIC} ${EXTRA_LIBS} ${NWVA_LIBS})
 else()
   target_link_libraries(${EXE_NAME} ${START_STATIC} ${QJSON_LIBRARIES} ${START_STATIC} ${QT_LIBRARIES} ${END_STATIC} ${EXTRA_LIBS} ${NWVA_LIBS})

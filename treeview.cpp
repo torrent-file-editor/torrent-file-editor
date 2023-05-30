@@ -48,6 +48,7 @@ void TreeView::mouseMoveEvent(QMouseEvent *event)
     }
 }
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 QStyleOptionViewItem TreeView::viewOptions() const
 {
     // Hack. Draw active focused tree when type combobox is showed
@@ -64,3 +65,4 @@ QStyleOptionViewItem TreeView::viewOptions() const
     }
     return options;
 }
+#endif
