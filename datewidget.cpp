@@ -23,7 +23,6 @@
 
 #include <QApplication>
 #include <QCalendarWidget>
-#include <QDesktopWidget>
 #include <QHBoxLayout>
 #include <QIcon>
 #include <QKeyEvent>

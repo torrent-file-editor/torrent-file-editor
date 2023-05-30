@@ -23,14 +23,15 @@
 
 #include <QBoxLayout>
 #include <QApplication>
-#include <QDesktopWidget>
 #include <QEvent>
 #include <QAbstractButton>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
 # include <QRegularExpressionValidator>
+# include <QScreen>
 #else
 # include <QRegExpValidator>
+# include <QDesktopWidget>
 #endif
 
 LineEditWidget::LineEditWidget(QWidget *parent)
@@ -162,7 +163,13 @@ void LineEditWidget::showPopup()
 {
     _popup->adjustSize();
     _popup->move(mapToGlobal(QPoint(width() - _popup->geometry().width(), height())));
+
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+    QSize size = qApp->primaryScreen()->availableSize();
+#else
     QSize size = qApp->desktop()->size();
+#endif
+
     QRect rect = _popup->geometry();
 
     // if widget is beyond edge of display
