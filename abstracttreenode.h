@@ -21,6 +21,7 @@
 
 #pragma once
 
+#include <QIODevice>
 #include <QList>
 #include <QStringList>
 #include <QTextStream>
