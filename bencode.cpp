@@ -162,7 +162,7 @@ Bencode *Bencode::fromJson(const QVariant &json)
 {
     Bencode *res = nullptr;
 
-    switch (json.type()) {
+    switch (json.userType()) {
     case QVariant::String:
         res = new Bencode(toRawString(json.toString()));
         break;

@@ -198,13 +198,20 @@ foreach(l ${LANGS})
 endforeach()
 
 if(WIN32)
-  if(QT5_BUILD)
+  if(QT6_BUILD)
+    get_target_property(QT_QMAKE_EXECUTABLE Qt6::qmake IMPORTED_LOCATION)
+    execute_process(COMMAND ${QT_QMAKE_EXECUTABLE} -query QT_INSTALL_TRANSLATIONS
+                    OUTPUT_VARIABLE QT_TRANSLATIONS_DIR
+                    OUTPUT_STRIP_TRAILING_WHITESPACE
+    )
+  elseif(QT5_BUILD)
     get_target_property(QT_QMAKE_EXECUTABLE Qt5::qmake IMPORTED_LOCATION)
     execute_process(COMMAND ${QT_QMAKE_EXECUTABLE} -query QT_INSTALL_TRANSLATIONS
                     OUTPUT_VARIABLE QT_TRANSLATIONS_DIR
                     OUTPUT_STRIP_TRAILING_WHITESPACE
     )
   endif()
+
   foreach(l ${LANGS})
     if(EXISTS "${QT_TRANSLATIONS_DIR}/qt_${l}.qm")
       configure_file("${QT_TRANSLATIONS_DIR}/qt_${l}.qm" "qt_${l}.qm" COPYONLY)

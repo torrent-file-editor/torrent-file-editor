@@ -35,7 +35,7 @@
 #include <wininet.h>
 
 #define CHUNK_SIZE 1024 * 1024 /* 1MiB */
-#define CAST_URL "https://torrent-file-editor.github.io/appcast/appcast.json"
+#define CAST_URL _T("https://torrent-file-editor.github.io/appcast/appcast.json")
 
 CheckUpdate::CheckUpdate(QObject *parent)
     : QObject(parent)
@@ -82,7 +82,7 @@ void CheckUpdate::start()
     }
 
     QByteArray ba(cBuffer, dwBytesRead);
-#ifdef HAVE_QT5
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
     QJsonParseError error;
     QVariantMap variant = QJsonDocument::fromJson(ba, &error).toVariant().toMap();
     if (error.error) {

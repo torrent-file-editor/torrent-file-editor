@@ -48,12 +48,18 @@ void TreeView::mouseMoveEvent(QMouseEvent *event)
     }
 }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+void TreeView::initViewItemOption(QStyleOptionViewItem *option) const
+{
+    QTreeView::initViewItemOption(option);
+    QStyleOptionViewItem &options = *option;
+#else
 QStyleOptionViewItem TreeView::viewOptions() const
 {
+    QStyleOptionViewItem options = QTreeView::viewOptions();
+#endif
     // Hack. Draw active focused tree when type combobox is showed
     // not just current line as in original QTreeView
-    QStyleOptionViewItem options = QTreeView::viewOptions();
     QList<QComboBox*> list = findChildren<QComboBox*>();
     if (isActiveWindow()) {
         for (auto widget: list) {
@@ -63,6 +69,7 @@ QStyleOptionViewItem TreeView::viewOptions() const
             }
         }
     }
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     return options;
-}
 #endif
+}

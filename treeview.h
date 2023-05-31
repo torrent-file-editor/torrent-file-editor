@@ -32,7 +32,9 @@ public:
 
 protected:
     void mouseMoveEvent(QMouseEvent *event);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QStyleOptionViewItem viewOptions() const;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    void initViewItemOption(QStyleOptionViewItem *option) const override;
+#else
+    QStyleOptionViewItem viewOptions() const override;
 #endif
 };
