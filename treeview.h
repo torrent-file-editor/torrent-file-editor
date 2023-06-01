@@ -31,7 +31,7 @@ public:
     explicit TreeView(QWidget *parent = 0);
 
 protected:
-    void mouseMoveEvent(QMouseEvent *event);
+    void mouseMoveEvent(QMouseEvent *event) override;
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     void initViewItemOption(QStyleOptionViewItem *option) const override;
 #else
