@@ -27,7 +27,7 @@
 #include <QFile>
 
 // Allow run Qt5 static version https://github.com/tonytheodore/mxe/commit/497669fa44356db0cd8335e2554b7bac12eb88c2
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)) && defined Q_OS_WIN && defined BUILD_STATIC
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0) && defined Q_OS_WIN && defined BUILD_STATIC
 #include <QtPlugin>
 Q_IMPORT_PLUGIN(QWindowsVistaStylePlugin)
 Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin)
@@ -36,7 +36,7 @@ Q_IMPORT_PLUGIN(QICOPlugin)
 Q_IMPORT_PLUGIN(QJpegPlugin)
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
 # include <QJsonDocument>
 #else
 # include <qjson/serializer.h>
@@ -58,7 +58,7 @@ HANDLE hConsole = NULL;
 #endif
 
 #ifdef Q_OS_WIN
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
 void winDebugHandler(QtMsgType type, const QMessageLogContext &context, const QString &msg)
 # else
 void winDebugHandler(QtMsgType type, const char *msg)
@@ -87,7 +87,7 @@ void winDebugHandler(QtMsgType type, const char *msg)
             break;
             abort();
         }
-# if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+# if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
         debugMsg += msg;
         debugMsg += QStringLiteral(" (%1:%2, %3)").arg(QString::fromUtf8(context.file), QString::number(context.line), QString::fromUtf8(context.function));
 # else
@@ -154,7 +154,7 @@ bool toJson(const QString &source, const QString &dest)
         return false;
     }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
     QByteArray ba = QJsonDocument::fromVariant(json).toJson();
 #else
     QJson::Serializer serializer;
@@ -185,7 +185,7 @@ bool fromJson(const QString &source, const QString &dest)
     QByteArray ba(sourceFile.readAll());
     sourceFile.close();
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
     QJsonParseError error;
     QVariant variant = QJsonDocument::fromJson(ba, &error).toVariant();
 #else
@@ -255,7 +255,7 @@ int main(int argc, char *argv[])
     }
 
 #ifdef Q_OS_WIN
-# if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+# if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
     qInstallMessageHandler(winDebugHandler);
 # else
     qInstallMsgHandler(winDebugHandler);

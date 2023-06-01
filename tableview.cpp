@@ -29,7 +29,7 @@
 #include <QLineEdit>
 #include <QDir>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
 # include <QStyleHints>
 # define ACCEL_KEY(k) ((!QCoreApplication::testAttribute(Qt::AA_DontShowIconsInMenus)                      \
                          && QGuiApplication::styleHints()->showShortcutsInContextMenus())                  \

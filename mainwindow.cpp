@@ -53,7 +53,7 @@
 #include <QTranslator>
 #include <QLibraryInfo>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
 # include <QJsonDocument>
 # include <QRegularExpression>
 #else
@@ -242,7 +242,7 @@ MainWindow::MainWindow(QWidget *parent)
     model->horizontalHeaderItem(2)->setTextAlignment(Qt::AlignRight);
     ui->viewFiles->setModel(model);
     ui->viewFiles->horizontalHeader()->setHighlightSections(false); // -V807 PVS-Studio
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
     ui->viewFiles->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
     ui->viewFiles->horizontalHeader()->setSectionsMovable(false);
 #else
@@ -255,7 +255,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->treeJson->setModel(_bencodeModel);
     ui->treeJson->setItemDelegate(new BencodeDelegate(this));
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
     for (int i = 0; i < static_cast<int>(BencodeModel::Column::Count); i++) {
         ui->treeJson->header()->setSectionResizeMode(i, QHeaderView::ResizeToContents);
     }
@@ -1183,7 +1183,7 @@ void MainWindow::updateBencodeFromRaw()
     }
 
     QByteArray ba = ui->pteEditor->toPlainText().toLatin1();
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
     QJsonParseError error;
     QVariant variant = QJsonDocument::fromJson(ba, &error).toVariant();
     if (error.error) {
@@ -1216,7 +1216,7 @@ void MainWindow::updateRaw()
         return;
     }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
     QByteArray ba = QJsonDocument::fromVariant(res).toJson();
 #else
     QJson::Serializer serializer;

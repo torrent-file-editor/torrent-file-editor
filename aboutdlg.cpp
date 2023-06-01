@@ -32,7 +32,7 @@
 # include <QThread>
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
 # include <QRegularExpression>
 #else
 # include <QRegExp>
@@ -65,7 +65,7 @@ Version parseVersion(const QString &version)
     QString part1 = version.section(QLatin1Char('-'), 0, 0);
     QString part2 = version.section(QLatin1Char('-'), 1);
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
     QRegularExpression rx(QStringLiteral("^v?(\\d+)\\.(\\d+)\\.(\\d+)$"));
     QRegularExpressionMatch match = rx.match(part1);
     if (match.hasMatch()) {

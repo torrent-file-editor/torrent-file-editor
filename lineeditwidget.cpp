@@ -26,7 +26,7 @@
 #include <QEvent>
 #include <QAbstractButton>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
 # include <QRegularExpressionValidator>
 # include <QScreen>
 #else
@@ -107,7 +107,7 @@ void LineEditWidget::setRxValidator(const QString &str)
         return;
     }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
     QRegularExpression rx(str);
     QRegularExpressionValidator *validator = new QRegularExpressionValidator(rx, this);
 #else
