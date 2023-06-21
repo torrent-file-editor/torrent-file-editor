@@ -22,7 +22,7 @@
       <location filename="../aboutdlg.ui" line="39"/>
       <source>&lt;h3&gt;Coffee for Developer&lt;/h3&gt;</source>
       <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
-      <translation type="unfinished">&lt;h3&gt;Coffee for Developer&lt;/h3&gt;</translation>
+      <translation>&lt;h3&gt;개발자를 위한 커피&lt;/h3&gt;</translation>
     </message>
     <message>
       <location filename="../aboutdlg.ui" line="126"/>
@@ -80,7 +80,7 @@
     <message>
       <location filename="../datewidget.cpp" line="156"/>
       <source>Clean</source>
-      <translation>정리</translation>
+      <translation>지우기</translation>
     </message>
     <message>
       <location filename="../datewidget.cpp" line="157"/>
@@ -155,7 +155,7 @@
     <message>
       <location filename="../mainwindow.ui" line="202"/>
       <source>Publisher</source>
-      <translation>배포자</translation>
+      <translation>발행자</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="233"/>
