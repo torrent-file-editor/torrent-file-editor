@@ -14,7 +14,7 @@ project("Torrent File Editor")
 set(EXE_NAME "torrent-file-editor")
 
 # Fallback version. Will be used when compiling out of git repository.
-set(APP_VERSION "0.3.17")
+set(APP_VERSION "0.3.18")
 
 set(MACOSX_BUNDLE_EXECUTABLE_NAME "${PROJECT_NAME}")
 set(MACOSX_BUNDLE_INFO_STRING "Torrent File Editor \${APP_VERSION}. This program is licensed under the GNU GPL.")
@@ -46,7 +46,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic")
 # If building a release version, make most warnings into errors
 if(CMAKE_BUILD_TYPE STREQUAL Release OR CMAKE_BUILD_TYPE STREQUAL RelWithDbInfo)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror")
-  
+
   # Earlier versions of GCC might not recognise certain pragma directives in the C++ code
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-error=pragmas")
 
