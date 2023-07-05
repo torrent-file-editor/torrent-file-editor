@@ -22,26 +22,54 @@ Need to have
  - QJSON >= 0.8.0 if used Qt4
  - [Sparkle](http://sparkle-project.org/) only for Mac OS X
 
-**Linux:**
+# **Linux:**
+
+## Qt4
 
 Will build Qt4 version by default
 
-    mkdir build && cd build
-    cmake -DCMAKE_BUILD_TYPE=Release -DQT5_BUILD=OFF ..
-    make
+```sh
+mkdir build && cd build
+cmake -DCMAKE_BUILD_TYPE=Release -DQT5_BUILD=OFF ..
+make
+```
+
+## Qt5
+
+```sh
+mkdir build && cd build
+cmake -DCMAKE_BUILD_TYPE=Release -DQT5_BUILD=ON ..
+make
+```
 
 If building Qt5 version on Ubuntu 18.04+, install required Qt5LinguistTools from `qttools5-dev` package.
 
-**Mac OS X:**
+## Qt6
+
+```sh
+mkdir build && cd build
+cmake -DCMAKE_BUILD_TYPE=Release -DQT6_BUILD=ON ..
+make
+```
+
+If cmake report some Qt6 requirements missing, install them.
+
+```sh
+sudo apt install qt6-tools-dev libqt6core5compat6-dev
+```
+
+# **Mac OS X:**
 
 Only Qt5 version
 
-    mkdir build && cd build
-    cmake -DCMAKE_BUILD_TYPE=Release ..
-    make
-    make dmg # to build dmg package
+```sh
+mkdir build && cd build
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make
+make dmg # to build dmg package
+```
 
-**Windows important note**
+# **Windows important note**
 
 Only Qt4 version for a while.
 I use Fedora 26 MinGW to build Windows versions. Furthermore I build
@@ -51,30 +79,36 @@ not work. It is on my TODO list.
 Fedora hasn't a MinGW QJSON package. You need to build your own version.
 It is easy:
 
-    wget https://github.com/flavio/qjson/archive/master.tar.gz -O qjson-master.tar.gz
-    tar zxf qjson-master.tar.gz
-    mkdir qjson-master/win32
-    mkdir qjson-master/win64
-    cd qjson-master/win32
-    mingw32-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DQT4_BUILD=ON  -DQT_INCLUDE_DIRS_NO_SYSTEM=ON -DQT_USE_IMPORTED_TARGETS=OFF ..
-    make
-    sudo make install # will be careful, it installs qjson to system folders
-    cd ../win64
-    mingw64-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DQT4_BUILD=ON  -DQT_INCLUDE_DIRS_NO_SYSTEM=ON -DQT_USE_IMPORTED_TARGETS=OFF ..
-    make
-    sudo make install # be careful, it installs qjson to system folders
+```sh
+wget https://github.com/flavio/qjson/archive/master.tar.gz -O qjson-master.tar.gz
+tar zxf qjson-master.tar.gz
+mkdir qjson-master/win32
+mkdir qjson-master/win64
+cd qjson-master/win32
+mingw32-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DQT4_BUILD=ON  -DQT_INCLUDE_DIRS_NO_SYSTEM=ON -DQT_USE_IMPORTED_TARGETS=OFF ..
+make
+sudo make install # will be careful, it installs qjson to system folders
+cd ../win64
+mingw64-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DQT4_BUILD=ON  -DQT_INCLUDE_DIRS_NO_SYSTEM=ON -DQT_USE_IMPORTED_TARGETS=OFF ..
+make
+sudo make install # be careful, it installs qjson to system folders
+```
 
-**Windows x32:**
+## **Windows x32:**
 
-    mkdir build && cd build
-    mingw32-cmake -DCMAKE_BUILD_TYPE=Release ..
-    make
+```sh
+mkdir build && cd build
+mingw32-cmake -DCMAKE_BUILD_TYPE=Release ..
+make
+```
 
-**Windows x64:**
+## **Windows x64:**
 
-    mkdir build && cd build
-    mingw64-cmake -DCMAKE_BUILD_TYPE=Release ..
-    make
+```sh
+mkdir build && cd build
+mingw64-cmake -DCMAKE_BUILD_TYPE=Release ..
+make
+```
 
 How Can I Help?
 ---------------
