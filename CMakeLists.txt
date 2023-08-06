@@ -101,7 +101,7 @@ else()
   set(ENABLE_NVWA OFF)
 
   # For Windows by default build single binary without any dependencies
-  option(BUILD_SHARED "Link with shared libraries" OFF)
+  option(BUILD_SHARED "Link with shared libraries" ON)
 endif()
 
 if(ENABLE_NVWA)
