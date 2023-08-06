@@ -118,7 +118,6 @@ if(QT6_BUILD)
   find_package(Qt6Gui REQUIRED)
   find_package(Qt6Widgets REQUIRED)
   find_package(Qt6LinguistTools REQUIRED)
-  find_package(Qt6Core5Compat REQUIRED)
 
   macro(QT4_ADD_TRANSLATION)
     qt6_add_translation(${ARGN})
@@ -363,7 +362,7 @@ add_executable(${EXE_NAME} WIN32 MACOSX_BUNDLE ${QM} ${HEADERS} ${PLAIN_HEADERS}
 add_dependencies(${EXE_NAME} update_version)
 
 if(QT6_BUILD)
-  target_link_libraries(${EXE_NAME} ${START_STATIC} Qt6::Core Qt6::Gui Qt6::Widgets Qt6::Core5Compat ${END_STATIC} ${EXTRA_LIBS} ${NWVA_LIBS})
+  target_link_libraries(${EXE_NAME} ${START_STATIC} Qt6::Core Qt6::Gui Qt6::Widgets ${END_STATIC} ${EXTRA_LIBS} ${NWVA_LIBS})
 elseif(QT5_BUILD)
   target_link_libraries(${EXE_NAME} ${START_STATIC} Qt5::Core Qt5::Gui Qt5::Widgets ${END_STATIC} ${EXTRA_LIBS} ${NWVA_LIBS})
 else()
