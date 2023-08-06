@@ -30,7 +30,7 @@ Will build Qt4 version by default
 
 ```sh
 mkdir build && cd build
-cmake -DCMAKE_BUILD_TYPE=Release -DQT5_BUILD=OFF ..
+cmake -DCMAKE_BUILD_TYPE=Release -DQT4_BUILD=ON ..
 make
 ```
 
