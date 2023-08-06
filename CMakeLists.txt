@@ -5,6 +5,8 @@ else()
   cmake_minimum_required(VERSION 2.8.11)
 endif()
 
+include(cmake/QtMajorVersion.cmake)
+
 if(NOT ${CMAKE_VERSION} VERSION_LESS "3.5.0")
   # Enable PVS support
   set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE BOOL "Enable/Disable output of compile commands during generation.")
@@ -64,29 +66,6 @@ add_definitions(-DQT_NO_CAST_FROM_ASCII)
 option(ENABLE_DEBUG_LOG "Show debugging messages" OFF)
 if(ENABLE_DEBUG_LOG)
   add_definitions(-DDEBUG)
-endif()
-
-if(APPLE)
-  # Force Qt5 build on Mac OS X. Qt4 is not supported
-  set(QT5_BUILD ON)
-else()
-  if(QT_QMAKE_EXECUTABLE AND EXISTS ${QT_QMAKE_EXECUTABLE})
-    execute_process(COMMAND ${QT_QMAKE_EXECUTABLE} -query QT_VERSION OUTPUT_VARIABLE QT_VERSION)
-  endif()
-
-  if(QT_VERSION)
-    if(QT_VERSION MATCHES "^5\\.")
-      set(QT5_BUILD_DEFAULT ON)
-    else()
-      set(QT5_BUILD_DEFAULT OFF)
-    endif()
-  elseif(WIN32)
-    set(QT5_BUILD_DEFAULT OFF)
-  else()
-    set(QT5_BUILD_DEFAULT ON)
-  endif()
-
-  option(QT5_BUILD "Force Qt5 build" ${QT5_BUILD_DEFAULT})
 endif()
 
 option(DISABLE_DONATION "Do not show donation text in About dialog" OFF)
