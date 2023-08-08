@@ -204,11 +204,7 @@ macro(qt_add_translation ARG1 ARG2)
 endmacro()
 
 configure_file(translations.qrc.in translations.qrc COPYONLY)
-if(WIN32)
-  configure_file(qt_translations.qrc.in qt_translations.qrc COPYONLY)
-endif()
 
-# NOTE: make changes in qt_translations.qrc.in and translations.qrc.in also
 set(LANGS af ar bn cs de en es fi fr he ko hu id it ja nl pl pt ro ru tr uk vi zh_CN zh_TW)
 
 foreach(l ${LANGS})
@@ -230,11 +226,15 @@ if(WIN32)
     )
   endif()
 
+  set(QT_TRANSLATIONS "")
   foreach(l ${LANGS})
     if(EXISTS "${QT_TRANSLATIONS_DIR}/qt_${l}.qm")
+      set(QT_TRANSLATIONS "${QT_TRANSLATIONS}<file>qt_${l}.qm</file>\n")
       configure_file("${QT_TRANSLATIONS_DIR}/qt_${l}.qm" "qt_${l}.qm" COPYONLY)
     endif()
   endforeach()
+
+  configure_file(qt_translations.qrc.in qt_translations.qrc)
 endif()
 
 set(HEADERS

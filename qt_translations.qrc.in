@@ -1,30 +1,6 @@
 <!DOCTYPE RCC>
 <RCC version="1.0">
-    <qresource prefix="/translations">
-        <!-- qt_af.qm missed -->
-        <file>qt_ar.qm</file>
-        <!-- qt_bn.qm missed -->
-        <file>qt_cs.qm</file>
-        <file>qt_de.qm</file>
-        <!-- qt_en.qm missed -->
-        <file>qt_es.qm</file>
-        <!-- qt_fi.qm missed -->
-        <file>qt_fr.qm</file>
-        <file>qt_he.qm</file>
-        <file>qt_hu.qm</file>
-        <!-- qt_id.qm missed -->
-        <!-- qt_it.qm missed -->
-        <!-- qt_ja.qm missed -->
-        <file>qt_ko.qm</file>
-        <!-- qt_nl.qm missed -->
-        <file>qt_pl.qm</file>
-        <file>qt_pt.qm</file>
-        <!-- qt_ro.qm fixme -->
-        <file>qt_ru.qm</file>
-        <!-- qt_tr.qm missed -->
-        <file>qt_uk.qm</file>
-        <!-- qt_vi.qm missed -->
-        <file>qt_zh_CN.qm</file>
-        <file>qt_zh_TW.qm</file>
-    </qresource>
+  <qresource prefix="/translations">
+@QT_TRANSLATIONS@
+  </qresource>
 </RCC>
