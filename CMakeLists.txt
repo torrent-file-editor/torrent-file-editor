@@ -26,8 +26,52 @@ include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)  # to find FindSparkle.cmake file
 
 # Workaround: On Fedora will be executed cmake not mingw32-cmake for building Windows version
-add_custom_target(update_version ALL
+if(WIN32)
+  set(UPDATE_VERSION_OUTPUT
+    appversion
+    config.h
+    app.rc
+    appcast.json
+  )
+
+  set(UPDATE_VERSION_DEPENDS
+    config.h.in
+    app.rc.in
+    appcast.json.in
+  )
+elseif(APPLE)
+  set(UPDATE_VERSION_OUTPUT
+    appversion
+    config.h
+    "Torrent File Editor.app/Contents/Info.plist"
+  )
+
+  set(UPDATE_VERSION_DEPENDS
+    config.h.in
+    app.rc.in
+    appcast.json.in
+    "${CMAKE_BINARY_DIR}/MacOSXBundleInfo.plist.in"
+  )
+else()
+  set(UPDATE_VERSION_OUTPUT
+    appversion
+    config.h
+  )
+
+  set(UPDATE_VERSION_DEPENDS
+    config.h.in
+  )
+endif()
+
+add_custom_command(
+  OUTPUT ${UPDATE_VERSION_OUTPUT}
   COMMAND ${CMAKE_COMMAND} -DWIN32=${WIN32} -DAPP_VERSION="v${APP_VERSION}" -P "${CMAKE_SOURCE_DIR}/cmake/Version.cmake"
+  DEPENDS ${UPDATE_VERSION_DEPENDS}
+  COMMENT "Generate config.h"
+)
+
+add_custom_target(update_version ALL
+  DEPENDS ${UPDATE_VERSION_OUTPUT}
 )
 
 # Enable C++11
