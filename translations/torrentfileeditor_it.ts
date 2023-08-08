@@ -131,7 +131,7 @@
     <message>
       <location filename="../mainwindow.ui" line="192"/>
       <source>Pieces</source>
-      <translation>Parti</translation>
+      <translation>Segmenti</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="151"/>
