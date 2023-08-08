@@ -484,18 +484,19 @@ endfunction()
 set(OTHER_FILES
   .gitignore
   .travis.yml
-  README.md
-  cmake/Dmg.cmake
-  appcast.xml.in
   CMakeDMGSetup.scpt
-  cmake/Version.cmake
-  build.sh
   PVS-Studio.cfg
   Plog-Converter.cfg
-  translations.qrc.in
-  qt_translations.qrc.in
+  README.md
   appcast.json.in
+  appcast.xml.in
   build.sh
+  build.sh
+  cmake/Dmg.cmake
+  cmake/Version.cmake
+  cmake/Version.cmake
+  qt_translations.qrc.in
+  translations.qrc.in
   update-translations.sh
 )
 
