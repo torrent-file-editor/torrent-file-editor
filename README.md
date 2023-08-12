@@ -17,9 +17,8 @@ Build Instructions
 ------------------
 
 Need to have
- - CMake >= 2.8.11
- - Qt4 or Qt5
- - QJSON >= 0.8.0 if used Qt4
+ - CMake >= 3.5
+ - Qt4 or Qt5 or Qt6
  - [Sparkle](http://sparkle-project.org/) only for Mac OS X
 
 # **Linux:**
@@ -75,24 +74,6 @@ Only Qt4 version for a while.
 I use Fedora 26 MinGW to build Windows versions. Furthermore I build
 portable static versions. Any other build way is not tested and may
 not work. It is on my TODO list.
-
-Fedora hasn't a MinGW QJSON package. You need to build your own version.
-It is easy:
-
-```sh
-wget https://github.com/flavio/qjson/archive/master.tar.gz -O qjson-master.tar.gz
-tar zxf qjson-master.tar.gz
-mkdir qjson-master/win32
-mkdir qjson-master/win64
-cd qjson-master/win32
-mingw32-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DQT4_BUILD=ON  -DQT_INCLUDE_DIRS_NO_SYSTEM=ON -DQT_USE_IMPORTED_TARGETS=OFF ..
-make
-sudo make install # will be careful, it installs qjson to system folders
-cd ../win64
-mingw64-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DQT4_BUILD=ON  -DQT_INCLUDE_DIRS_NO_SYSTEM=ON -DQT_USE_IMPORTED_TARGETS=OFF ..
-make
-sudo make install # be careful, it installs qjson to system folders
-```
 
 ## **Windows x32:**
 
