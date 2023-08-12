@@ -6,10 +6,12 @@ language: cpp
 
 matrix:
   include:
-    - {name: "Ubuntu 14.04 Qt5", os: "linux", dist: "trusty",  env: "QT5_BUILD=ON",   compiler: "gcc", addons: {apt: {packages: "qtbase5-dev qttools5-dev qttools5-dev-tools"}}}
-    - {name: "Ubuntu 14.04 Qt4", os: "linux", dist: "trusty",  env: "QT5_BUILD=OFF",  compiler: "gcc", addons: {apt: {packages: "libqt4-dev libqjson-dev"}}}
-    - {name: "Ubuntu 16.04 Qt5", os: "linux", dist: "xenial",  env: "QT5_BUILD=ON",   compiler: "gcc", addons: {apt: {packages: "qtbase5-dev qttools5-dev qttools5-dev-tools"}}}
-    - {name: "Ubuntu 16.04 Qt4", os: "linux", dist: "xenial",  env: "QT5_BUILD=OFF",  compiler: "gcc", addons: {apt: {packages: "libqt4-dev libqjson-dev"}}}
+    - {name: "Ubuntu 14.04 Qt5", os: "linux", dist: "trusty", env: "QT_VERSION=5", compiler: "gcc", addons: {apt: {packages: "qtbase5-dev qttools5-dev qttools5-dev-tools"}}}
+    - {name: "Ubuntu 14.04 Qt4", os: "linux", dist: "trusty", env: "QT_VERSION=4", compiler: "gcc", addons: {apt: {packages: "libqt4-dev libqjson-dev"}}}
+    - {name: "Ubuntu 16.04 Qt5", os: "linux", dist: "xenial", env: "QT_VERSION=5", compiler: "gcc", addons: {apt: {packages: "qtbase5-dev qttools5-dev qttools5-dev-tools"}}}
+    - {name: "Ubuntu 16.04 Qt4", os: "linux", dist: "xenial", env: "QT_VERSION=4", compiler: "gcc", addons: {apt: {packages: "libqt4-dev libqjson-dev"}}}
+    - {name: "Ubuntu 22.04 Qt5", os: "linux", dist: "xenial", env: "QT_VERSION=5", compiler: "gcc", addons: {apt: {packages: "qtbase5-dev qttools5-dev qttools5-dev-tools"}}}
+    - {name: "Ubuntu 22.04 Qt6", os: "linux", dist: "xenial", env: "QT_VERSION=6", compiler: "gcc", addons: {apt: {packages: "qtbase6-dev qttools6-dev qttools6-dev-tools"}}}
     - {name: "macOS", os: "osx", addons: {homebrew: {packages: "qt5", casks: "sparkle", update: true}}}
 
 script:
@@ -17,7 +19,7 @@ script:
     if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
       cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON \
             -DCMAKE_BUILD_TYPE=Debug         \
-            -DQT5_BUILD=$QT5_BUILD
+            -DQT${QT_VERSION}_BUILD=ON
       cmake --build .
     fi
   - |
