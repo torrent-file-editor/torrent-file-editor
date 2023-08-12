@@ -19,9 +19,10 @@
  *
  */
 
-#include "mainwindow.h"
 #include "application.h"
 #include "bencode.h"
+#include "jsonconverter.h"
+#include "mainwindow.h"
 
 #include <QVariant>
 #include <QFile>
@@ -34,13 +35,6 @@ Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin)
 Q_IMPORT_PLUGIN(QGifPlugin)
 Q_IMPORT_PLUGIN(QICOPlugin)
 Q_IMPORT_PLUGIN(QJpegPlugin)
-#endif
-
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
-# include <QJsonDocument>
-#else
-# include <qjson/serializer.h>
-# include <qjson/parser.h>
 #endif
 
 #ifdef Q_OS_WIN
@@ -154,13 +148,7 @@ bool toJson(const QString &source, const QString &dest)
         return false;
     }
 
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
-    QByteArray ba = QJsonDocument::fromVariant(json).toJson();
-#else
-    QJson::Serializer serializer;
-    serializer.setIndentMode(QJson::IndentFull);
-    QByteArray ba = serializer.serialize(json);
-#endif
+    QString str = JsonConverter::stringify(json);
 
     QFile destFile(dest);
     if (!destFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
@@ -168,7 +156,7 @@ bool toJson(const QString &source, const QString &dest)
         return false;
     }
 
-    destFile.write(ba);
+    destFile.write(str.toUtf8());
     destFile.close();
     return true;
 }
@@ -182,17 +170,10 @@ bool fromJson(const QString &source, const QString &dest)
         return false;
     }
 
-    QByteArray ba(sourceFile.readAll());
+    QString str = QString::fromUtf8(sourceFile.readAll());
     sourceFile.close();
 
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
-    QJsonParseError error;
-    QVariant variant = QJsonDocument::fromJson(ba, &error).toVariant();
-#else
-    QJson::Parser parser;
-    bool ok;
-    QVariant variant = parser.parse(ba, &ok);
-#endif
+    QVariant variant = JsonConverter::parse(str);
 
     if (!variant.isValid()) {
         qDebug("Error: can't parse json format");

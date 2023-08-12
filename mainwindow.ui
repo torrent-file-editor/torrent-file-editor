@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>704</width>
-    <height>533</height>
+    <width>708</width>
+    <height>544</height>
    </rect>
   </property>
   <property name="acceptDrops">
@@ -854,6 +854,9 @@
             <property name="text">
              <string/>
             </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
             <property name="textInteractionFlags">
              <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
             </property>
@@ -861,11 +864,17 @@
           </item>
           <item>
            <widget class="QLabel" name="lblCursorPos">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
              <string/>
             </property>
             <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
             </property>
            </widget>
           </item>
@@ -882,8 +891,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>659</width>
-     <height>29</height>
+     <width>708</width>
+     <height>30</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

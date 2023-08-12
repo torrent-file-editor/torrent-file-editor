@@ -176,14 +176,11 @@ elseif(QT5_BUILD)
   endmacro()
 else()
   find_package(Qt4 REQUIRED)
-  find_package(QJSON 0.8.0 REQUIRED)
   add_definitions("'-DQStringLiteral(str)=QString::fromUtf8(\"\" str \"\", sizeof(str) - 1)'")
-  include_directories(${QJSON_INCLUDE_DIR})
 
   if(WIN32 AND (NOT BUILD_SHARED))
     string(REPLACE "-DQT_DLL" "" QT_DEFINITIONS "${QT_DEFINITIONS}")
     set(QT_DEFINITIONS ${QT_DEFINITIONS} "-DQT_NODLL")
-    add_definitions(-DQJSON_STATIC)
   endif()
 
   include(${QT_USE_FILE})
@@ -262,9 +259,11 @@ endif()
 
 set(PLAIN_HEADERS
   ${CMAKE_SOURCE_DIR}/bencode.h
+  ${CMAKE_SOURCE_DIR}/jsonconverter.h
   ${CMAKE_SOURCE_DIR}/abstracttreemodel.h
   ${CMAKE_SOURCE_DIR}/abstracttreenode.h
   ${CMAKE_SOURCE_DIR}/proxystyle.h
+  ${CMAKE_SOURCE_DIR}/json.hpp
   ${CMAKE_BINARY_DIR}/config.h
 )
 
@@ -282,6 +281,7 @@ set(FORMS
 
 set(SOURCES
   ${CMAKE_SOURCE_DIR}/application.cpp
+  ${CMAKE_SOURCE_DIR}/jsonconverter.cpp
   ${CMAKE_SOURCE_DIR}/main.cpp
   ${CMAKE_SOURCE_DIR}/mainwindow.cpp
   ${CMAKE_SOURCE_DIR}/bencode.cpp
@@ -334,7 +334,6 @@ if(WIN32)
   if(NOT BUILD_SHARED)
     set(START_STATIC -Wl,-Bstatic)
     set(END_STATIC z jpeg png tiff stdc++ -lwinpthread -Wl,-Bdynamic)
-    set(QJSON_LIBRARIES qjson.a)
     if(QT5_BUILD)
       find_package(PkgConfig REQUIRED)
       pkg_check_modules(QT5_PKGCONFIG Qt5Widgets)
@@ -385,7 +384,7 @@ if(QT6_BUILD)
 elseif(QT5_BUILD)
   target_link_libraries(${EXE_NAME} ${START_STATIC} Qt5::Core Qt5::Gui Qt5::Widgets ${END_STATIC} ${EXTRA_LIBS} ${NWVA_LIBS})
 else()
-  target_link_libraries(${EXE_NAME} ${START_STATIC} ${QJSON_LIBRARIES} ${START_STATIC} ${QT_LIBRARIES} ${END_STATIC} ${EXTRA_LIBS} ${NWVA_LIBS})
+  target_link_libraries(${EXE_NAME} ${START_STATIC} ${QT_LIBRARIES} ${END_STATIC} ${EXTRA_LIBS} ${NWVA_LIBS})
 endif()
 
 if(APPLE)

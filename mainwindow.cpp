@@ -19,13 +19,14 @@
  *
  */
 
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
 #include "aboutdlg.h"
 #include "bencode.h"
-#include "bencodemodel.h"
 #include "bencodedelegate.h"
+#include "bencodemodel.h"
+#include "jsonconverter.h"
+#include "mainwindow.h"
 #include "searchdlg.h"
+#include "ui_mainwindow.h"
 
 #include <QFileDialog>
 #include <QFile>
@@ -52,14 +53,6 @@
 #include <QClipboard>
 #include <QTranslator>
 #include <QLibraryInfo>
-
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
-# include <QJsonDocument>
-# include <QRegularExpression>
-#else
-# include <qjson/serializer.h>
-# include <qjson/parser.h>
-#endif
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
 # include <QRegularExpression>
@@ -1182,27 +1175,21 @@ void MainWindow::updateBencodeFromRaw()
         return;
     }
 
-    QByteArray ba = ui->pteEditor->toPlainText().toLatin1();
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
-    QJsonParseError error;
-    QVariant variant = QJsonDocument::fromJson(ba, &error).toVariant();
-    if (error.error) {
-        int line = ba.left(error.offset).count("\n") + 1;
-        ui->lblRawError->setText(QString(tr("Error on %1 line: %2")).arg(line).arg(error.errorString()));
-        return;
-    }
-#else
-    QJson::Parser parser;
-    bool ok;
-    QVariant variant = parser.parse(ba, &ok);
-    if (!ok) {
-        ui->lblRawError->setText(QString(tr("Error on %1 line: %2")).arg(parser.errorLine()).arg(parser.errorString()));
-        return;
-    }
-#endif
+    QString str = ui->pteEditor->toPlainText();
 
-    ui->lblRawError->setText(QString());
-    _bencodeModel->setJson(variant);
+    int byte;
+    QString message;
+
+    QVariant variant = JsonConverter::parse(str, &byte, &message);
+
+    if (variant.isValid()) {
+        ui->lblRawError->setText(QString());
+        _bencodeModel->setJson(variant);
+    }
+    else {
+        int line = str.left(byte).count(QStringLiteral("\n")) + 1;
+        ui->lblRawError->setText(QString(tr("Error on %1 line: %2")).arg(QString::number(line)).arg(message));
+    }
 }
 
 void MainWindow::updateRaw()
@@ -1216,14 +1203,7 @@ void MainWindow::updateRaw()
         return;
     }
 
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
-    QByteArray ba = QJsonDocument::fromVariant(res).toJson();
-#else
-    QJson::Serializer serializer;
-    serializer.setIndentMode(QJson::IndentFull);
-    QByteArray ba = serializer.serialize(res);
-#endif
-    QString newRawText = QString::fromLatin1(ba);
+    QString newRawText = JsonConverter::stringify(res);
     if (newRawText != ui->pteEditor->toPlainText()) {
         ui->pteEditor->setPlainText(newRawText);
         ui->pteEditor->document()->setModified(false);
