@@ -1,0 +1,9 @@
+torrent-file-editor (0.3.18) UNRELEASED; urgency=medium
+
+  IMPORTANT: Please download our source code package torrent-file-editor-0.3.18.tar.gz and NOT the automatically created GitHub packages at the bottom of the list.
+  * Update translations
+  * Add Qt6 support
+  * Various fixes
+  * Replace beer with coffee
+
+ --  Ivan Romanov <drizt72@zoho.eu>  Fri, 18 Aug 2023 22:19:27 +0800

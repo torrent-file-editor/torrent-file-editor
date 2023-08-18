@@ -1,0 +1,12 @@
+Source: torrent-file-editor
+Section: unknown
+Maintainer: Ivan Romanov <drizt72@zoho.eu>
+Priority: optional
+Build-Depends: debhelper (>= 9), qttools5-dev
+
+Package: torrent-file-editor
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Qt based GUI tool designed to
+ create and edit .torrent files
+
