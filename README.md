@@ -56,6 +56,16 @@ If cmake report some Qt6 requirements missing, install them.
 sudo apt install qt6-tools-dev libqt6core5compat6-dev
 ```
 
+## debian
+
+Debian is a stable OS and is using Qt5 currently. With the knowledge of debian packaging this project can be built against Qt6.
+
+Moving to Qt6 is in progress on debian testing, but Debian 12 (bookworm) do have Qt6 support.
+
+```sh
+debuild -us -uc
+```
+
 # **Mac OS X:**
 
 Only Qt5 version
