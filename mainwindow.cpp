@@ -355,8 +355,16 @@ void MainWindow::changeTranslation(int index)
     }
 
     QLocale locale = index < 0 ? QLocale() : QLocale(ui->cmbTranslation->itemData(index).toString());
-    if (_translator->load(locale, QStringLiteral("torrentfileeditor"), QStringLiteral("_"), QStringLiteral(":/translations"))) {
-        qApp->installTranslator(_translator);
+
+    QStringList translationPathes;
+    translationPathes << QCoreApplication::applicationDirPath()
+                      << QStringLiteral(":/translations");
+
+    for (QString path: translationPathes) {
+        if (_translator->load(locale, QStringLiteral("torrentfileeditor"), QStringLiteral("_"), path)) {
+            qApp->installTranslator(_translator);
+            break;
+        }
     }
 
 #ifdef Q_OS_WIN
