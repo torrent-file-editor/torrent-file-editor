@@ -4,7 +4,7 @@
   <context>
     <name>AboutDlg</name>
     <message>
-      <location filename="../aboutdlg.ui" line="184"/>
+      <location filename="../aboutdlg.ui" line="162"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="https://torrent-file-editor.github.io"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;https://torrent-file-editor.github.io&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="https://github.com/torrent-file-editor/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;https://github.com/torrent-file-editor/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="https://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Auteur: Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Licentie: GNU General Public License v3.0 of nieuwer&lt;/p&gt;&lt;p&gt;Homepage: &lt;a href="https://torrent-file-editor.github.io"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;https://torrent-file-editor.github.io&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Broncode: &lt;a href="https://github.com/torrent-file-editor/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;https://github.com/torrent-file-editor/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; bedankt voor het softwareicoon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -16,29 +16,29 @@
       <translation type="unfinished">&lt;h3&gt;Coffee for Developer&lt;/h3&gt;</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.ui" line="126"/>
+      <location filename="../aboutdlg.ui" line="104"/>
       <source>Check for Update</source>
       <translation>Controleer voor beschikbare Updates</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="142"/>
+      <location filename="../aboutdlg.cpp" line="167"/>
       <source>About %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Over %1</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="198"/>
+      <location filename="../aboutdlg.cpp" line="222"/>
       <source>Something went wrong</source>
       <translation>Oeps, er ging iets mis</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="202"/>
+      <location filename="../aboutdlg.cpp" line="226"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
       <translatorcomment>Do not touch %1 it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>Nieuwe versie &lt;a href="%2"&gt;%1&lt;/a&gt; is gedetecteerd</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="205"/>
+      <location filename="../aboutdlg.cpp" line="229"/>
       <source>The latest version is installed</source>
       <translation>De nieuwste versie is geïnstalleerd</translation>
     </message>
@@ -46,22 +46,22 @@
   <context>
     <name>BencodeModel</name>
     <message>
-      <location filename="../bencodemodel.cpp" line="754"/>
+      <location filename="../bencodemodel.cpp" line="763"/>
       <source>Name</source>
       <translation>Naam</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="755"/>
+      <location filename="../bencodemodel.cpp" line="764"/>
       <source>Type</source>
       <translation>Type</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="756"/>
+      <location filename="../bencodemodel.cpp" line="765"/>
       <source>Hex</source>
       <translation>Hex</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="757"/>
+      <location filename="../bencodemodel.cpp" line="766"/>
       <source>Value</source>
       <translation>Waarde</translation>
     </message>
@@ -69,12 +69,12 @@
   <context>
     <name>DateWidget</name>
     <message>
-      <location filename="../datewidget.cpp" line="156"/>
+      <location filename="../datewidget.cpp" line="153"/>
       <source>Clean</source>
       <translation>Legen</translation>
     </message>
     <message>
-      <location filename="../datewidget.cpp" line="157"/>
+      <location filename="../datewidget.cpp" line="154"/>
       <source>Show calendar</source>
       <translation>Bekijk kalender</translation>
     </message>
@@ -96,25 +96,25 @@
     <name>MainWindow</name>
     <message>
       <location filename="../mainwindow.ui" line="30"/>
-      <location filename="../mainwindow.ui" line="903"/>
+      <location filename="../mainwindow.ui" line="912"/>
       <source>New</source>
       <translation>Nieuw</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
-      <location filename="../mainwindow.cpp" line="424"/>
+      <location filename="../mainwindow.cpp" line="426"/>
       <source>Open</source>
       <translation>Openen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="44"/>
-      <location filename="../mainwindow.ui" line="919"/>
+      <location filename="../mainwindow.ui" line="928"/>
       <source>Save</source>
       <translation>Opslaan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="449"/>
+      <location filename="../mainwindow.cpp" line="451"/>
       <source>Save As</source>
       <translation>Opslaan als</translation>
     </message>
@@ -320,42 +320,42 @@
       <translation>Vervangen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="891"/>
+      <location filename="../mainwindow.ui" line="900"/>
       <source>File</source>
       <translation>Bestand</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="906"/>
+      <location filename="../mainwindow.ui" line="915"/>
       <source>Ctrl+N</source>
       <translation>Ctrl+N</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="911"/>
+      <location filename="../mainwindow.ui" line="920"/>
       <source>Open...</source>
       <translation>Openen...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="914"/>
+      <location filename="../mainwindow.ui" line="923"/>
       <source>Ctrl+O</source>
       <translation>Ctrl+O</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="922"/>
+      <location filename="../mainwindow.ui" line="931"/>
       <source>Ctrl+S</source>
       <translation>Ctrl+S</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="927"/>
+      <location filename="../mainwindow.ui" line="936"/>
       <source>Save As...</source>
       <translation>Opslaan als...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="930"/>
+      <location filename="../mainwindow.ui" line="939"/>
       <source>Ctrl+Shift+S</source>
       <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="935"/>
+      <location filename="../mainwindow.ui" line="944"/>
       <source>About...</source>
       <translation>Info...</translation>
     </message>
@@ -396,84 +396,84 @@
       <translation>Ruw</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="209"/>
+      <location filename="../mainwindow.cpp" line="207"/>
       <source>Need to calculate piece hashes</source>
       <translation>Hashes van stukken aan het berekenen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="210"/>
+      <location filename="../mainwindow.cpp" line="208"/>
       <source>Please wait</source>
       <translation>Een ogenblik geduld</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1361"/>
+      <location filename="../mainwindow.cpp" line="1391"/>
       <source>Auto</source>
       <translation>Autom.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1365"/>
+      <location filename="../mainwindow.cpp" line="1395"/>
       <source>Path</source>
       <translation>Pad</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1365"/>
+      <location filename="../mainwindow.cpp" line="1395"/>
       <source>Size</source>
       <translation>Grootte</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="190"/>
+      <location filename="../mainwindow.cpp" line="188"/>
       <source>Torrents (*.torrent)</source>
       <translation>Torrents (*.torrent)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="191"/>
+      <location filename="../mainwindow.cpp" line="189"/>
       <source>uTorrent resume files (*.dat)</source>
       <translation>uTorrent resume bestanden (*.dat)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1365"/>
+      <location filename="../mainwindow.cpp" line="1395"/>
       <source># Pieces</source>
       <translation># Stukken</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="401"/>
-      <location filename="../mainwindow.cpp" line="946"/>
+      <location filename="../mainwindow.cpp" line="403"/>
+      <location filename="../mainwindow.cpp" line="962"/>
       <source>Error</source>
       <translation>Fout</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="401"/>
+      <location filename="../mainwindow.cpp" line="403"/>
       <source>Can't open file</source>
       <translation>Kan bestand niet openen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="713"/>
-      <location filename="../mainwindow.cpp" line="717"/>
-      <location filename="../mainwindow.cpp" line="727"/>
+      <location filename="../mainwindow.cpp" line="729"/>
+      <location filename="../mainwindow.cpp" line="733"/>
+      <location filename="../mainwindow.cpp" line="743"/>
       <source>Warning</source>
       <translation>Waarschuwing</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="691"/>
+      <location filename="../mainwindow.cpp" line="707"/>
       <source>Torrent root folder is not set</source>
       <translation>Torrent hoofdmap is niet ingesteld</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="444"/>
-      <location filename="../mainwindow.cpp" line="1186"/>
-      <location filename="../mainwindow.cpp" line="1194"/>
-      <location filename="../mainwindow.cpp" line="1205"/>
+      <location filename="../mainwindow.cpp" line="446"/>
+      <location filename="../mainwindow.cpp" line="1216"/>
+      <location filename="../mainwindow.cpp" line="1224"/>
+      <location filename="../mainwindow.cpp" line="1235"/>
       <source>Can't save file</source>
       <translation>Kan bestand niet opslaan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="444"/>
-      <location filename="../mainwindow.cpp" line="1186"/>
+      <location filename="../mainwindow.cpp" line="446"/>
+      <location filename="../mainwindow.cpp" line="1216"/>
       <source>BEncoded data is not valid</source>
       <translation>BEncoded gegevens is niet geldig</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="692"/>
+      <location filename="../mainwindow.cpp" line="708"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
@@ -487,80 +487,79 @@ Als u de bestandslijst in de huidige torrent wilt bewerken, moet u de torrent-ho
 Wilt u de torrent-hoofdmap instellen en het opnieuw proberen?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="713"/>
+      <location filename="../mainwindow.cpp" line="729"/>
       <source>The filesystem root can't be used as a torrent root folder.</source>
       <translation type="unfinished">The filesystem root can't be used as a torrent root folder.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="717"/>
+      <location filename="../mainwindow.cpp" line="733"/>
       <source>The torrent root folder is not set.</source>
       <translation type="unfinished">The torrent root folder is not set.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="727"/>
+      <location filename="../mainwindow.cpp" line="743"/>
       <source>The torrent root folder is not common.</source>
       <translation>De hoofdmap van de torrent is niet gebruikelijk.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="786"/>
+      <location filename="../mainwindow.cpp" line="802"/>
       <source>Add File</source>
       <translation>Bestand Toevoegen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="807"/>
+      <location filename="../mainwindow.cpp" line="823"/>
       <source>Add Folder</source>
       <translation>Map Toevoegen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="953"/>
+      <location filename="../mainwindow.cpp" line="969"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Lijn: %1 van %2 Kol: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1141"/>
-      <location filename="../mainwindow.cpp" line="1149"/>
+      <location filename="../mainwindow.cpp" line="1191"/>
       <source>Error on %1 line: %2</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Fout op lijn %1: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1302"/>
+      <location filename="../mainwindow.cpp" line="1332"/>
       <source>B</source>
       <translation>B</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1306"/>
+      <location filename="../mainwindow.cpp" line="1336"/>
       <source>KiB</source>
       <translation>KiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1310"/>
+      <location filename="../mainwindow.cpp" line="1340"/>
       <source>MiB</source>
       <translation>MiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1314"/>
+      <location filename="../mainwindow.cpp" line="1344"/>
       <source>GiB</source>
       <translation>GiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1318"/>
+      <location filename="../mainwindow.cpp" line="1348"/>
       <source>TiB</source>
       <translation>TiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1336"/>
+      <location filename="../mainwindow.cpp" line="1366"/>
       <source>Save file</source>
       <translation>Bestand opslaan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1337"/>
+      <location filename="../mainwindow.cpp" line="1367"/>
       <source>Untitled</source>
       <translation>Untitled</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1338"/>
+      <location filename="../mainwindow.cpp" line="1368"/>
       <source>Save file "%1"?</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Opslaan bestand "%1"?</translation>
@@ -687,12 +686,12 @@ Wilt u de torrent-hoofdmap instellen en het opnieuw proberen?</translation>
       <translation>Zoeken</translation>
     </message>
     <message>
-      <location filename="../searchdlg.cpp" line="156"/>
+      <location filename="../searchdlg.cpp" line="164"/>
       <source>No matches found</source>
       <translation>Geen overeenkomsten gevonden</translation>
     </message>
     <message numerus="yes">
-      <location filename="../searchdlg.cpp" line="161"/>
+      <location filename="../searchdlg.cpp" line="169"/>
       <source>%1 of %n match(es)</source>
       <translatorcomment>Do not touch %1 it must be as is. Make translations for both singular and plural forms. </translatorcomment>
       <translation>
@@ -701,7 +700,7 @@ Wilt u de torrent-hoofdmap instellen en het opnieuw proberen?</translation>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../searchdlg.cpp" line="214"/>
+      <location filename="../searchdlg.cpp" line="222"/>
       <source>%n value(s) was(were) replaced</source>
       <translatorcomment>Do not touch %n it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>
@@ -724,9 +723,19 @@ Wilt u de torrent-hoofdmap instellen en het opnieuw proberen?</translation>
       <source>Copy Filename</source>
       <translation type="unfinished">Copy Filename</translation>
     </message>
+    <message>
+      <location filename="../tableview.cpp" line="180"/>
+      <source>Copy</source>
+      <translation type="unfinished">Copy</translation>
+    </message>
   </context>
   <context>
     <name>UrlEdit</name>
+    <message>
+      <location filename="../urledit.cpp" line="82"/>
+      <source>Copy</source>
+      <translation type="unfinished">Copy</translation>
+    </message>
     <message>
       <location filename="../urledit.cpp" line="83"/>
       <source>Open in internet browser</source>
@@ -742,7 +751,7 @@ Wilt u de torrent-hoofdmap instellen en het opnieuw proberen?</translation>
       <translation>%1 kan niet worden geopend</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="154"/>
+      <location filename="../mainwindow.cpp" line="152"/>
       <source>Can't read from %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Kan niet lezen van %1</translation>

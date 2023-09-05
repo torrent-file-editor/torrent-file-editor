@@ -4,7 +4,7 @@
   <context>
     <name>AboutDlg</name>
     <message>
-      <location filename="../aboutdlg.ui" line="184"/>
+      <location filename="../aboutdlg.ui" line="162"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="https://torrent-file-editor.github.io"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;https://torrent-file-editor.github.io&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="https://github.com/torrent-file-editor/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;https://github.com/torrent-file-editor/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="https://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Автор: Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="https://torrent-file-editor.github.io"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;https://torrent-file-editor.github.io&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="https://github.com/torrent-file-editor/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;https://github.com/torrent-file-editor/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="https://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -16,29 +16,29 @@
       <translation type="unfinished">&lt;h3&gt;Coffee for Developer&lt;/h3&gt;</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.ui" line="126"/>
+      <location filename="../aboutdlg.ui" line="104"/>
       <source>Check for Update</source>
       <translation>Перевірити наявність оновлень</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="142"/>
+      <location filename="../aboutdlg.cpp" line="167"/>
       <source>About %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Про програмне забезпечення %1</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="198"/>
+      <location filename="../aboutdlg.cpp" line="222"/>
       <source>Something went wrong</source>
       <translation>Щось пішло не так</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="202"/>
+      <location filename="../aboutdlg.cpp" line="226"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
       <translatorcomment>Do not touch %1 it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>Нова версію &lt;a href="%2"&gt;%1&lt;/a&gt; було виявлено</translation>
     </message>
     <message>
-      <location filename="../aboutdlg.cpp" line="205"/>
+      <location filename="../aboutdlg.cpp" line="229"/>
       <source>The latest version is installed</source>
       <translation>Встановлено найновішу версію</translation>
     </message>
@@ -46,22 +46,22 @@
   <context>
     <name>BencodeModel</name>
     <message>
-      <location filename="../bencodemodel.cpp" line="754"/>
+      <location filename="../bencodemodel.cpp" line="763"/>
       <source>Name</source>
       <translation>Ім’я</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="755"/>
+      <location filename="../bencodemodel.cpp" line="764"/>
       <source>Type</source>
       <translation>Тип</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="756"/>
+      <location filename="../bencodemodel.cpp" line="765"/>
       <source>Hex</source>
       <translation>Шістнадцятковий</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="757"/>
+      <location filename="../bencodemodel.cpp" line="766"/>
       <source>Value</source>
       <translation>Значення</translation>
     </message>
@@ -69,12 +69,12 @@
   <context>
     <name>DateWidget</name>
     <message>
-      <location filename="../datewidget.cpp" line="156"/>
+      <location filename="../datewidget.cpp" line="153"/>
       <source>Clean</source>
       <translation>Очистити</translation>
     </message>
     <message>
-      <location filename="../datewidget.cpp" line="157"/>
+      <location filename="../datewidget.cpp" line="154"/>
       <source>Show calendar</source>
       <translation>Показати календар</translation>
     </message>
@@ -96,25 +96,25 @@
     <name>MainWindow</name>
     <message>
       <location filename="../mainwindow.ui" line="30"/>
-      <location filename="../mainwindow.ui" line="903"/>
+      <location filename="../mainwindow.ui" line="912"/>
       <source>New</source>
       <translation>Новий</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
-      <location filename="../mainwindow.cpp" line="424"/>
+      <location filename="../mainwindow.cpp" line="426"/>
       <source>Open</source>
       <translation>Відкритий</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="44"/>
-      <location filename="../mainwindow.ui" line="919"/>
+      <location filename="../mainwindow.ui" line="928"/>
       <source>Save</source>
       <translation>Зберегти</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="449"/>
+      <location filename="../mainwindow.cpp" line="451"/>
       <source>Save As</source>
       <translation>Зберегти як</translation>
     </message>
@@ -320,42 +320,42 @@
       <translation>Замінити</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="891"/>
+      <location filename="../mainwindow.ui" line="900"/>
       <source>File</source>
       <translation>Файл</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="906"/>
+      <location filename="../mainwindow.ui" line="915"/>
       <source>Ctrl+N</source>
       <translation>Ctrl+N</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="911"/>
+      <location filename="../mainwindow.ui" line="920"/>
       <source>Open...</source>
       <translation>Відкрити...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="914"/>
+      <location filename="../mainwindow.ui" line="923"/>
       <source>Ctrl+O</source>
       <translation>Ctrl+O</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="922"/>
+      <location filename="../mainwindow.ui" line="931"/>
       <source>Ctrl+S</source>
       <translation>Ctrl+S</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="927"/>
+      <location filename="../mainwindow.ui" line="936"/>
       <source>Save As...</source>
       <translation>Зберегти як...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="930"/>
+      <location filename="../mainwindow.ui" line="939"/>
       <source>Ctrl+Shift+S</source>
       <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="935"/>
+      <location filename="../mainwindow.ui" line="944"/>
       <source>About...</source>
       <translation>Про...</translation>
     </message>
@@ -396,84 +396,84 @@
       <translation>Неформатований</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="209"/>
+      <location filename="../mainwindow.cpp" line="207"/>
       <source>Need to calculate piece hashes</source>
       <translation>Потрібно розрахувати хеші блоків</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="210"/>
+      <location filename="../mainwindow.cpp" line="208"/>
       <source>Please wait</source>
       <translation>Будь ласка, зачекайте</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1361"/>
+      <location filename="../mainwindow.cpp" line="1391"/>
       <source>Auto</source>
       <translation>Автомат.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1365"/>
+      <location filename="../mainwindow.cpp" line="1395"/>
       <source>Path</source>
       <translation>Шлях</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1365"/>
+      <location filename="../mainwindow.cpp" line="1395"/>
       <source>Size</source>
       <translation>Розмір</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="190"/>
+      <location filename="../mainwindow.cpp" line="188"/>
       <source>Torrents (*.torrent)</source>
       <translation>Торенти (*.torrent)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="191"/>
+      <location filename="../mainwindow.cpp" line="189"/>
       <source>uTorrent resume files (*.dat)</source>
       <translation>uTorrent поновити файли (*.dat)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1365"/>
+      <location filename="../mainwindow.cpp" line="1395"/>
       <source># Pieces</source>
       <translation># Частини</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="401"/>
-      <location filename="../mainwindow.cpp" line="946"/>
+      <location filename="../mainwindow.cpp" line="403"/>
+      <location filename="../mainwindow.cpp" line="962"/>
       <source>Error</source>
       <translation>Помилка</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="401"/>
+      <location filename="../mainwindow.cpp" line="403"/>
       <source>Can't open file</source>
       <translation>Не вдалося відкрити файл</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="713"/>
-      <location filename="../mainwindow.cpp" line="717"/>
-      <location filename="../mainwindow.cpp" line="727"/>
+      <location filename="../mainwindow.cpp" line="729"/>
+      <location filename="../mainwindow.cpp" line="733"/>
+      <location filename="../mainwindow.cpp" line="743"/>
       <source>Warning</source>
       <translation>Увага</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="691"/>
+      <location filename="../mainwindow.cpp" line="707"/>
       <source>Torrent root folder is not set</source>
       <translation>Коренева тека torrent не встановлена</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="444"/>
-      <location filename="../mainwindow.cpp" line="1186"/>
-      <location filename="../mainwindow.cpp" line="1194"/>
-      <location filename="../mainwindow.cpp" line="1205"/>
+      <location filename="../mainwindow.cpp" line="446"/>
+      <location filename="../mainwindow.cpp" line="1216"/>
+      <location filename="../mainwindow.cpp" line="1224"/>
+      <location filename="../mainwindow.cpp" line="1235"/>
       <source>Can't save file</source>
       <translation>Не вдається зберегти файл</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="444"/>
-      <location filename="../mainwindow.cpp" line="1186"/>
+      <location filename="../mainwindow.cpp" line="446"/>
+      <location filename="../mainwindow.cpp" line="1216"/>
       <source>BEncoded data is not valid</source>
       <translation>BEкодовані дані недійсні</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="692"/>
+      <location filename="../mainwindow.cpp" line="708"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
@@ -482,80 +482,79 @@ Do you want to set torrent root folder and try again?</source>
       <translation>Шлях до файлів на диску невідомий. Торрент може генеруватися лише з повністю завантажених файлів. Якщо ви хочете відредагувати список файлів у поточному торенті, вам потрібно встановити кореневу теку torrent. Коренева тека torrent - це тека, де всі файли можуть бути розміщені на диску. Фактичний шлях до файлу на диску є кореневою текою torrent з відносним шляхом до файлу торрента. Якщо чогось не вистачає, торент не може бути створений. Ви хочете встановити кореневу теку torrent і спробувати ще раз?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="713"/>
+      <location filename="../mainwindow.cpp" line="729"/>
       <source>The filesystem root can't be used as a torrent root folder.</source>
       <translation>Корінь файлової системи не можна використовувати в якості потокової кореневої теки.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="717"/>
+      <location filename="../mainwindow.cpp" line="733"/>
       <source>The torrent root folder is not set.</source>
       <translation>Коренева тека torrent не встановлена.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="727"/>
+      <location filename="../mainwindow.cpp" line="743"/>
       <source>The torrent root folder is not common.</source>
       <translation>Коренева тека торрента не є загальною.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="786"/>
+      <location filename="../mainwindow.cpp" line="802"/>
       <source>Add File</source>
       <translation>Додати файл</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="807"/>
+      <location filename="../mainwindow.cpp" line="823"/>
       <source>Add Folder</source>
       <translation>Додати теку</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="953"/>
+      <location filename="../mainwindow.cpp" line="969"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Line: %1 of %2 Col: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1141"/>
-      <location filename="../mainwindow.cpp" line="1149"/>
+      <location filename="../mainwindow.cpp" line="1191"/>
       <source>Error on %1 line: %2</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Error on %1 line: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1302"/>
+      <location filename="../mainwindow.cpp" line="1332"/>
       <source>B</source>
       <translation>Б</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1306"/>
+      <location filename="../mainwindow.cpp" line="1336"/>
       <source>KiB</source>
       <translation>Кіб</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1310"/>
+      <location filename="../mainwindow.cpp" line="1340"/>
       <source>MiB</source>
       <translation>Міб</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1314"/>
+      <location filename="../mainwindow.cpp" line="1344"/>
       <source>GiB</source>
       <translation>Гіб</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1318"/>
+      <location filename="../mainwindow.cpp" line="1348"/>
       <source>TiB</source>
       <translation>TiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1336"/>
+      <location filename="../mainwindow.cpp" line="1366"/>
       <source>Save file</source>
       <translation>Зберегти файл</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1337"/>
+      <location filename="../mainwindow.cpp" line="1367"/>
       <source>Untitled</source>
       <translation>Без назви</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1338"/>
+      <location filename="../mainwindow.cpp" line="1368"/>
       <source>Save file "%1"?</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Зберегти файл "%1"?</translation>
@@ -682,12 +681,12 @@ Do you want to set torrent root folder and try again?</source>
       <translation>Знайти</translation>
     </message>
     <message>
-      <location filename="../searchdlg.cpp" line="156"/>
+      <location filename="../searchdlg.cpp" line="164"/>
       <source>No matches found</source>
       <translation>Співпадінь не знайдено</translation>
     </message>
     <message numerus="yes">
-      <location filename="../searchdlg.cpp" line="161"/>
+      <location filename="../searchdlg.cpp" line="169"/>
       <source>%1 of %n match(es)</source>
       <translatorcomment>Do not touch %1 it must be as is. Make translations for both singular and plural forms. </translatorcomment>
       <translation>
@@ -698,7 +697,7 @@ Do you want to set torrent root folder and try again?</source>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../searchdlg.cpp" line="214"/>
+      <location filename="../searchdlg.cpp" line="222"/>
       <source>%n value(s) was(were) replaced</source>
       <translatorcomment>Do not touch %n it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
       <translation>
@@ -723,9 +722,19 @@ Do you want to set torrent root folder and try again?</source>
       <source>Copy Filename</source>
       <translation type="unfinished">Copy Filename</translation>
     </message>
+    <message>
+      <location filename="../tableview.cpp" line="180"/>
+      <source>Copy</source>
+      <translation type="unfinished">Copy</translation>
+    </message>
   </context>
   <context>
     <name>UrlEdit</name>
+    <message>
+      <location filename="../urledit.cpp" line="82"/>
+      <source>Copy</source>
+      <translation type="unfinished">Copy</translation>
+    </message>
     <message>
       <location filename="../urledit.cpp" line="83"/>
       <source>Open in internet browser</source>
@@ -741,7 +750,7 @@ Do you want to set torrent root folder and try again?</source>
       <translation>Не вдалося відкрити файл %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="154"/>
+      <location filename="../mainwindow.cpp" line="152"/>
       <source>Can't read from %1</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Не вдається прочитати з %1</translation>
