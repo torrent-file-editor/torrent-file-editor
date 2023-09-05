@@ -734,7 +734,7 @@ Tebibyte</translation>
     <message>
       <location filename="../tableview.cpp" line="180"/>
       <source>Copy</source>
-      <translation type="unfinished">Copy</translation>
+      <translation>복사</translation>
     </message>
   </context>
   <context>
@@ -742,7 +742,7 @@ Tebibyte</translation>
     <message>
       <location filename="../urledit.cpp" line="82"/>
       <source>Copy</source>
-      <translation type="unfinished">Copy</translation>
+      <translation>복사</translation>
     </message>
     <message>
       <location filename="../urledit.cpp" line="83"/>

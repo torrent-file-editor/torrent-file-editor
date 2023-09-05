@@ -723,7 +723,7 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../tableview.cpp" line="180"/>
       <source>Copy</source>
-      <translation type="unfinished">Copy</translation>
+      <translation>复制</translation>
     </message>
   </context>
   <context>
@@ -731,7 +731,7 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../urledit.cpp" line="82"/>
       <source>Copy</source>
-      <translation type="unfinished">Copy</translation>
+      <translation>复制</translation>
     </message>
     <message>
       <location filename="../urledit.cpp" line="83"/>

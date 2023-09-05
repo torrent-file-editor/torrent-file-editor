@@ -141,7 +141,7 @@
     <message>
       <location filename="../mainwindow.ui" line="212"/>
       <source>Piece size</source>
-      <translation>Dimensione segmenti</translation>
+      <translation>Dimensione segmenti </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="202"/>
@@ -726,7 +726,7 @@ Vuoi impostare la cartella radice del torrent e riprovare?</translation>
     <message>
       <location filename="../tableview.cpp" line="180"/>
       <source>Copy</source>
-      <translation type="unfinished">Copy</translation>
+      <translation>Copia</translation>
     </message>
   </context>
   <context>
@@ -734,7 +734,7 @@ Vuoi impostare la cartella radice del torrent e riprovare?</translation>
     <message>
       <location filename="../urledit.cpp" line="82"/>
       <source>Copy</source>
-      <translation type="unfinished">Copy</translation>
+      <translation>Copia</translation>
     </message>
     <message>
       <location filename="../urledit.cpp" line="83"/>
