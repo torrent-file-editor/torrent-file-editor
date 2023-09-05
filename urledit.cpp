@@ -79,6 +79,6 @@ void UrlEdit::copyAll()
 
 void UrlEdit::retranslateUi()
 {
-    _pbCopyUrl->setToolTip(QLineEdit::tr("&Copy").remove(QLatin1Char('&')));
+    _pbCopyUrl->setToolTip(tr("Copy"));
     _pbOpenUrl->setToolTip(tr("Open in internet browser"));
 }

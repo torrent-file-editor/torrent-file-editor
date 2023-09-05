@@ -177,7 +177,7 @@ void TableView::changeEvent(QEvent *event)
 
 void TableView::updateTranslations()
 {
-    _copyAct->setText(QLineEdit::tr("&Copy") + ACCEL_KEY(QKeySequence::Copy));
+    _copyAct->setText(tr("Copy") + ACCEL_KEY(QKeySequence::Copy));
     _copySizeAct->setText(tr("Copy with Size"));
     _copyWoExtAct->setText(tr("Copy Filename"));
 }
