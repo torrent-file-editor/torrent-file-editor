@@ -1,8 +1,7 @@
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/torrent-file-editor/localized.svg)](https://crowdin.com/project/torrent-file-editor)
 [![Version](https://badge.fury.io/gh/torrent-file-editor%2Ftorrent-file-editor.svg)](https://badge.fury.io/gh/torrent-file-editor%2Ftorrent-file-editor)
 
-Torrent File Editor
-===================
+# **Torrent File Editor**
 
 Qt based GUI tool designed to create and edit .torrent files
 
@@ -12,19 +11,22 @@ Homepage: https://torrent-file-editor.github.io
 Sources: https://github.com/torrent-file-editor/torrent-file-editor  
 Crowdin translations: https://crowdin.com/project/torrent-file-editor
 
-Build Instructions
-------------------
+# Build Instructions
 
 Need to have
  - CMake >= 3.5
  - Qt4 or Qt5 or Qt6
  - [Sparkle](http://sparkle-project.org/) only for Mac OS X
 
-# **Linux:**
+To choose Qt version use `QT*_BUILD=ON` cmake cache entry. Or `QT_QMAKE_EXECUTABLE=/path/to/qmake`. Actually
+QT_QMAKE_EXECUTABLE added for autodecting in Qt Creator. Qt Creator adds this enty for each project. If no any from
+above will be used Qt5.
 
-## Qt4
+## Linux
 
-Will build Qt4 version by default
+Should works for any Linux distribution which has CMake and Qt.
+
+### Qt4
 
 ```sh
 mkdir build && cd build
@@ -32,7 +34,7 @@ cmake -DCMAKE_BUILD_TYPE=Release -DQT4_BUILD=ON ..
 make
 ```
 
-## Qt5
+### Qt5
 
 ```sh
 mkdir build && cd build
@@ -42,7 +44,7 @@ make
 
 If building Qt5 version on Ubuntu 18.04+, install required Qt5LinguistTools from `qttools5-dev` package.
 
-## Qt6
+### Qt6
 
 ```sh
 mkdir build && cd build
@@ -50,13 +52,13 @@ cmake -DCMAKE_BUILD_TYPE=Release -DQT6_BUILD=ON ..
 make
 ```
 
-If cmake report some Qt6 requirements missing, install them.
+If cmake report some Qt6 requirements missing on Ubuntu, install them.
 
 ```sh
 sudo apt install qt6-tools-dev libqt6core5compat6-dev
 ```
 
-# **Mac OS X:**
+## Mac OS X
 
 Only Qt5 version
 
@@ -67,31 +69,17 @@ make
 make dmg # to build dmg package
 ```
 
-# **Windows important note**
+I use macOS Mojave 10.14.4 with Qt 5.5.1 and Sparkle 1.20.0.
 
-Only Qt4 version for a while.
-I use Fedora 26 MinGW to build Windows versions. Furthermore I build
-portable static versions. Any other build way is not tested and may
-not work. It is on my TODO list.
+## Windows
 
-## **Windows x32:**
+Windows version can be build with official MinGW Qt and Qt Creator. For build Qt6 version need to install Qt5Compat
+module. Building with MSVC studio not tested and may not work.
 
-```sh
-mkdir build && cd build
-mingw32-cmake -DCMAKE_BUILD_TYPE=Release ..
-make
-```
+I use Fedora 31 MinGW to build Windows versions. Furthermore I build portable static versions. Package mingw-qt4
+modified with some patch to fix building. See [build.sh](build.sh) for details.
 
-## **Windows x64:**
-
-```sh
-mkdir build && cd build
-mingw64-cmake -DCMAKE_BUILD_TYPE=Release ..
-make
-```
-
-How Can I Help?
----------------
+# How Can I Help?
 
 The Project is translated from English to several languages.
 I would be glad if you add new translations. You can translate the
@@ -102,7 +90,7 @@ always email <[drizt72@zoho.eu](mailto:drizt72@zoho.eu)> me.
 
 Also feel free to open an issue on GitHub or send me pull requests.
 
-**Translations**
+# Translations
 
 <img src="https://flagicons.lipis.dev/flags/4x3/za.svg" width="24" height="24">  Afrikaans - Afrikaans  
 <img src="https://flagicons.lipis.dev/flags/4x3/sa.svg" width="24" height="24">  العربية - Arabic  
