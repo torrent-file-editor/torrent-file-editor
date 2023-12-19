@@ -725,7 +725,7 @@ Möchten Sie jetzt das Stammverzeichnis setzen und erneut versuchen?</translatio
     <message>
       <location filename="../tableview.cpp" line="180"/>
       <source>Copy</source>
-      <translation type="unfinished">Copy</translation>
+      <translation>Kopieren</translation>
     </message>
   </context>
   <context>
@@ -733,7 +733,7 @@ Möchten Sie jetzt das Stammverzeichnis setzen und erneut versuchen?</translatio
     <message>
       <location filename="../urledit.cpp" line="82"/>
       <source>Copy</source>
-      <translation type="unfinished">Copy</translation>
+      <translation>Kopieren</translation>
     </message>
     <message>
       <location filename="../urledit.cpp" line="83"/>
