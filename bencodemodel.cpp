@@ -78,7 +78,7 @@ void BencodeModel::setRaw(const QByteArray &raw)
 
     removeRows(0, rowCount());
     _bencode = newBencode;
-    if (!_bencode)
+    if (!_bencode || !_bencode->isDictionary())
         _bencode = new Bencode(Bencode::Type::Dictionary);
     _bencode->setKey("root");
 

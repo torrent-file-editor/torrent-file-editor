@@ -451,6 +451,13 @@ Bencode *Bencode::parseDictionary(const QByteArray &raw, int &pos)
             return new Bencode();
         }
 
+        // Wrong dictionary. File cut?
+        if (pos >= raw.length()) {
+            delete res;
+            delete value;
+            return new Bencode();
+        }
+
         value->_key = key;
         if (hexKeys.contains(QString::fromUtf8(key)))
             value->_hex = true;
