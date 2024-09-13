@@ -47,7 +47,14 @@ langsmap="af_ZA:af:Afrikaans:Afrikaans
 pushd translations
 [ -d tmp ] && rm -fr tmp
 mkdir tmp
-wget "https://api.crowdin.com/api/project/torrent-file-editor/download/all.zip?key=$CROWDIN_TFE_KEY" -O tmp/torrent-file-editor.zip
+
+# https://support.crowdin.com/developer/api/v2/#tag/Translations/operation/api.projects.translations.builds.getMany
+build_number=$(wget -qO - --header='Accept: application/json' --header="Authorization: Bearer $CROWDIN_TFE_KEY" 'https://api.crowdin.com/api/v2/projects/135825/translations/builds?limit=1' | jq '.data[].data.id')
+
+# https://support.crowdin.com/developer/api/v2/#tag/Translations/operation/api.projects.translations.builds.download.download
+url=$(wget -qO - --header='Accept: application/json' --header="Authorization: Bearer $CROWDIN_TFE_KEY" "https://api.crowdin.com/api/v2/projects/135825/translations/builds/$build_number/download" | jq -r '.data.url')
+
+wget $url -O tmp/torrent-file-editor.zip
 unzip -d tmp tmp/torrent-file-editor.zip
 
 # Check source files
