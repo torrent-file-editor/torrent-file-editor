@@ -176,7 +176,7 @@
     <message>
       <location filename="../mainwindow.ui" line="314"/>
       <source>Magnet link</source>
-      <translation type="unfinished">Magnet link</translation>
+      <translation>磁力連結</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="368"/>
