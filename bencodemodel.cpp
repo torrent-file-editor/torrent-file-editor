@@ -361,11 +361,18 @@ QStringList BencodeModel::trackers() const
     QStringList trackers;
     Bencode *list = _bencode ? _bencode->child("announce-list") : nullptr;
 
-    if (list) {
+    if (list && list->isList()) {
         for (int i = 0; i < list->childCount(); i++) {
             Bencode *bencode = list->child(i);
-            if (bencode->isList() && bencode->childCount() == 1 && bencode->child(0)->isString())
-                trackers << toUnicode(bencode->child(0)->string());
+            if (!bencode || !bencode->isList()) {
+                break;
+            }
+
+            for (Bencode *bencodeItem: bencode->children()) {
+                if (bencodeItem->isString()) {
+                    trackers << toUnicode(bencodeItem->string());
+                }
+            }
         }
     }
 
