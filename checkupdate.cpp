@@ -21,12 +21,7 @@
 
 #include "checkupdate.h"
 
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
-# include <QJsonDocument>
-#else
-# include <qjson/serializer.h>
-# include <qjson/parser.h>
-#endif
+#include "jsonconverter.h"
 
 #include <QVariantMap>
 
@@ -82,22 +77,13 @@ void CheckUpdate::start()
     }
 
     QByteArray ba(cBuffer, dwBytesRead);
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
-    QJsonParseError error;
-    QVariantMap variant = QJsonDocument::fromJson(ba, &error).toVariant().toMap();
-    if (error.error) {
+
+    QVariantMap variant = JsonConverter::parse(QString::fromUtf8(ba)).toMap();
+
+    if (variant.empty()) {
         emit finished(QString(), QString());
         return;
     }
-#else
-    QJson::Parser parser;
-    bool ok;
-    QVariantMap variant = parser.parse(ba, &ok).toMap();
-    if (!ok) {
-        emit finished(QString(), QString());
-        return;
-    }
-#endif
 
     QString version = variant.value(QLatin1String("version")).toString();
 #ifdef Q_OS_WIN64
