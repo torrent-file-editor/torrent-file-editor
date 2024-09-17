@@ -21,8 +21,9 @@
 
 #pragma once
 
-#include <QString>
+// Order is matter! First QString leads to strange building error on Fedora 31 MinGW
 #include <QVariant>
+#include <QString>
 
 class JsonConverter
 {
