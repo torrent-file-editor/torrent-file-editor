@@ -27,6 +27,8 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)  # to find FindSparkle.
 
 # Workaround: On Fedora will be executed cmake not mingw32-cmake for building Windows version
 if(WIN32)
+  # FIXME: this policy fix static .exe liniking with Fedora MinGW
+  cmake_policy(SET CMP0060 OLD)
   set(UPDATE_VERSION_OUTPUT
     appversion
     config.h
