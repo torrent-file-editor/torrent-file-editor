@@ -2,10 +2,8 @@ cmake_minimum_required(VERSION 3.5)
 
 include(cmake/QtMajorVersion.cmake)
 
-if(NOT ${CMAKE_VERSION} VERSION_LESS "3.5.0")
-  # Enable PVS support
-  set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE BOOL "Enable/Disable output of compile commands during generation.")
-endif()
+# Enable PVS support
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE BOOL "Enable/Disable output of compile commands during generation.")
 
 project("Torrent File Editor")
 set(EXE_NAME "torrent-file-editor")
