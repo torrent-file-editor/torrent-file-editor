@@ -46,22 +46,22 @@
   <context>
     <name>BencodeModel</name>
     <message>
-      <location filename="../bencodemodel.cpp" line="763"/>
+      <location filename="../bencodemodel.cpp" line="770"/>
       <source>Name</source>
       <translation>Nome</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="764"/>
+      <location filename="../bencodemodel.cpp" line="771"/>
       <source>Type</source>
       <translation>Tipo</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="765"/>
+      <location filename="../bencodemodel.cpp" line="772"/>
       <source>Hex</source>
       <translation>Hex</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="766"/>
+      <location filename="../bencodemodel.cpp" line="773"/>
       <source>Value</source>
       <translation>Valor</translation>
     </message>
@@ -102,7 +102,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
-      <location filename="../mainwindow.cpp" line="426"/>
+      <location filename="../mainwindow.cpp" line="440"/>
       <source>Open</source>
       <translation>Abrir</translation>
     </message>
@@ -114,7 +114,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="451"/>
+      <location filename="../mainwindow.cpp" line="465"/>
       <source>Save As</source>
       <translation>Salvar Como</translation>
     </message>
@@ -405,17 +405,17 @@
       <translation>Por favor, aguarde</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1391"/>
+      <location filename="../mainwindow.cpp" line="1405"/>
       <source>Auto</source>
       <translation>Auto</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1395"/>
+      <location filename="../mainwindow.cpp" line="1409"/>
       <source>Path</source>
       <translation>Localização</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1395"/>
+      <location filename="../mainwindow.cpp" line="1409"/>
       <source>Size</source>
       <translation>Tamanho</translation>
     </message>
@@ -430,49 +430,49 @@
       <translation>uTorrent retomar arquivos (*. dat)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1395"/>
+      <location filename="../mainwindow.cpp" line="1409"/>
       <source># Pieces</source>
       <translation># Partes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="403"/>
-      <location filename="../mainwindow.cpp" line="962"/>
+      <location filename="../mainwindow.cpp" line="417"/>
+      <location filename="../mainwindow.cpp" line="976"/>
       <source>Error</source>
       <translation>Erro</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="403"/>
+      <location filename="../mainwindow.cpp" line="417"/>
       <source>Can't open file</source>
       <translation>Não foi possível abrir o arquivo</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="729"/>
-      <location filename="../mainwindow.cpp" line="733"/>
       <location filename="../mainwindow.cpp" line="743"/>
+      <location filename="../mainwindow.cpp" line="747"/>
+      <location filename="../mainwindow.cpp" line="757"/>
       <source>Warning</source>
       <translation>Atenção</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="707"/>
+      <location filename="../mainwindow.cpp" line="721"/>
       <source>Torrent root folder is not set</source>
       <translation>Pasta raiz do torrent não está definida</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="446"/>
-      <location filename="../mainwindow.cpp" line="1216"/>
-      <location filename="../mainwindow.cpp" line="1224"/>
-      <location filename="../mainwindow.cpp" line="1235"/>
+      <location filename="../mainwindow.cpp" line="460"/>
+      <location filename="../mainwindow.cpp" line="1230"/>
+      <location filename="../mainwindow.cpp" line="1238"/>
+      <location filename="../mainwindow.cpp" line="1249"/>
       <source>Can't save file</source>
       <translation>Não é possível salvar o arquivo</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="446"/>
-      <location filename="../mainwindow.cpp" line="1216"/>
+      <location filename="../mainwindow.cpp" line="460"/>
+      <location filename="../mainwindow.cpp" line="1230"/>
       <source>BEncoded data is not valid</source>
       <translation>Dados BEncoded não é válido</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="708"/>
+      <location filename="../mainwindow.cpp" line="722"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
@@ -481,79 +481,79 @@ Do you want to set torrent root folder and try again?</source>
       <translation>Os arquivos não foram localizados no disco. O torrente só pode ser gerado a partir de arquivos baixados totalmente. Se você deseja editar a lista de arquivos no torrente atual, precisa definir a pasta de raiz do torrente. A pasta de raiz torrente é uma pasta onde todos os arquivos podem ser localizados no disco. A localização atual do arquivo no disco é pasta de raiz torrente com o caminho relativo do arquivo torrente. Se algum arquivo está faltando, então o torrente não pode ser gerado. Você quer definir a pasta raiz do torrente e tentar novamente?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="729"/>
+      <location filename="../mainwindow.cpp" line="743"/>
       <source>The filesystem root can't be used as a torrent root folder.</source>
       <translation>A raiz do sistema de arquivos não pode ser usada como pasta raiz do torrent.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="733"/>
+      <location filename="../mainwindow.cpp" line="747"/>
       <source>The torrent root folder is not set.</source>
       <translation>A pasta raiz do torrent não foi definida.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="743"/>
+      <location filename="../mainwindow.cpp" line="757"/>
       <source>The torrent root folder is not common.</source>
       <translation>A pasta raiz do torrent não é comum.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="802"/>
+      <location filename="../mainwindow.cpp" line="816"/>
       <source>Add File</source>
       <translation>Adicionar Arquivo</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="823"/>
+      <location filename="../mainwindow.cpp" line="837"/>
       <source>Add Folder</source>
       <translation>Adicionar Pasta</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="969"/>
+      <location filename="../mainwindow.cpp" line="983"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Linha: %1 de %2 Coluna: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1191"/>
+      <location filename="../mainwindow.cpp" line="1205"/>
       <source>Error on %1 line: %2</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Erro em %1 linha: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1332"/>
+      <location filename="../mainwindow.cpp" line="1346"/>
       <source>B</source>
       <translation>B</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1336"/>
+      <location filename="../mainwindow.cpp" line="1350"/>
       <source>KiB</source>
       <translation>KiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1340"/>
+      <location filename="../mainwindow.cpp" line="1354"/>
       <source>MiB</source>
       <translation>MB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1344"/>
+      <location filename="../mainwindow.cpp" line="1358"/>
       <source>GiB</source>
       <translation>GB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1348"/>
+      <location filename="../mainwindow.cpp" line="1362"/>
       <source>TiB</source>
       <translation>TB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1366"/>
+      <location filename="../mainwindow.cpp" line="1380"/>
       <source>Save file</source>
       <translation>Salvar arquivo</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1367"/>
+      <location filename="../mainwindow.cpp" line="1381"/>
       <source>Untitled</source>
       <translation>Sem título</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1368"/>
+      <location filename="../mainwindow.cpp" line="1382"/>
       <source>Save file "%1"?</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>Salvar arquivo "%1"?</translation>

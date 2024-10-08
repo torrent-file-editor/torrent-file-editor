@@ -55,22 +55,22 @@
   <context>
     <name>BencodeModel</name>
     <message>
-      <location filename="../bencodemodel.cpp" line="763"/>
+      <location filename="../bencodemodel.cpp" line="770"/>
       <source>Name</source>
       <translation>이름</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="764"/>
+      <location filename="../bencodemodel.cpp" line="771"/>
       <source>Type</source>
       <translation>유형</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="765"/>
+      <location filename="../bencodemodel.cpp" line="772"/>
       <source>Hex</source>
       <translation>16진수</translation>
     </message>
     <message>
-      <location filename="../bencodemodel.cpp" line="766"/>
+      <location filename="../bencodemodel.cpp" line="773"/>
       <source>Value</source>
       <translation>값</translation>
     </message>
@@ -111,7 +111,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="37"/>
-      <location filename="../mainwindow.cpp" line="426"/>
+      <location filename="../mainwindow.cpp" line="440"/>
       <source>Open</source>
       <translation>열기</translation>
     </message>
@@ -123,7 +123,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="51"/>
-      <location filename="../mainwindow.cpp" line="451"/>
+      <location filename="../mainwindow.cpp" line="465"/>
       <source>Save As</source>
       <translation>다른 이름으로 저장</translation>
     </message>
@@ -415,17 +415,17 @@
       <translation>기다려 주세요</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1391"/>
+      <location filename="../mainwindow.cpp" line="1405"/>
       <source>Auto</source>
       <translation>자동</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1395"/>
+      <location filename="../mainwindow.cpp" line="1409"/>
       <source>Path</source>
       <translation>경로</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1395"/>
+      <location filename="../mainwindow.cpp" line="1409"/>
       <source>Size</source>
       <translation>크기</translation>
     </message>
@@ -440,49 +440,49 @@
       <translation>uTorrent 재개 파일 (*.dat)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1395"/>
+      <location filename="../mainwindow.cpp" line="1409"/>
       <source># Pieces</source>
       <translation># 조각</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="403"/>
-      <location filename="../mainwindow.cpp" line="962"/>
+      <location filename="../mainwindow.cpp" line="417"/>
+      <location filename="../mainwindow.cpp" line="976"/>
       <source>Error</source>
       <translation>오류</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="403"/>
+      <location filename="../mainwindow.cpp" line="417"/>
       <source>Can't open file</source>
       <translation>파일을 열 수 없습니다</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="729"/>
-      <location filename="../mainwindow.cpp" line="733"/>
       <location filename="../mainwindow.cpp" line="743"/>
+      <location filename="../mainwindow.cpp" line="747"/>
+      <location filename="../mainwindow.cpp" line="757"/>
       <source>Warning</source>
       <translation>경고</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="707"/>
+      <location filename="../mainwindow.cpp" line="721"/>
       <source>Torrent root folder is not set</source>
       <translation>토렌트 루트 폴더가 설정되지 않았습니다</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="446"/>
-      <location filename="../mainwindow.cpp" line="1216"/>
-      <location filename="../mainwindow.cpp" line="1224"/>
-      <location filename="../mainwindow.cpp" line="1235"/>
+      <location filename="../mainwindow.cpp" line="460"/>
+      <location filename="../mainwindow.cpp" line="1230"/>
+      <location filename="../mainwindow.cpp" line="1238"/>
+      <location filename="../mainwindow.cpp" line="1249"/>
       <source>Can't save file</source>
       <translation>토렌트 루트 폴더가 설정되지 않았습니다</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="446"/>
-      <location filename="../mainwindow.cpp" line="1216"/>
+      <location filename="../mainwindow.cpp" line="460"/>
+      <location filename="../mainwindow.cpp" line="1230"/>
       <source>BEncoded data is not valid</source>
       <translation>Bencoded 데이터는 유효하지 않습니다</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="708"/>
+      <location filename="../mainwindow.cpp" line="722"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
 If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
@@ -495,81 +495,81 @@ Do you want to set torrent root folder and try again?</source>
 토렌트 루트 폴더를 설정하고 다시 시도하시겠습니까?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="729"/>
+      <location filename="../mainwindow.cpp" line="743"/>
       <source>The filesystem root can't be used as a torrent root folder.</source>
       <translation>파일 시스템 루트를 토렌트 루트 폴더로 사용할 수 없습니다.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="733"/>
+      <location filename="../mainwindow.cpp" line="747"/>
       <source>The torrent root folder is not set.</source>
       <translation>토렌트 루트 폴더가 설정되지 않았습니다.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="743"/>
+      <location filename="../mainwindow.cpp" line="757"/>
       <source>The torrent root folder is not common.</source>
       <translation>토렌트 루트 폴더는 일반적이지 않습니다.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="802"/>
+      <location filename="../mainwindow.cpp" line="816"/>
       <source>Add File</source>
       <translation>파일 추가</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="823"/>
+      <location filename="../mainwindow.cpp" line="837"/>
       <source>Add Folder</source>
       <translation>폴더 추가</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="969"/>
+      <location filename="../mainwindow.cpp" line="983"/>
       <source>Line: %1 of %2 Col: %3</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>줄: %1 / %2 열: %3</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1191"/>
+      <location filename="../mainwindow.cpp" line="1205"/>
       <source>Error on %1 line: %2</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>%1줄 오류: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1332"/>
+      <location filename="../mainwindow.cpp" line="1346"/>
       <source>B</source>
       <translation>B</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1336"/>
+      <location filename="../mainwindow.cpp" line="1350"/>
       <source>KiB</source>
       <translation>KiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1340"/>
+      <location filename="../mainwindow.cpp" line="1354"/>
       <source>MiB</source>
       <translation>MiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1344"/>
+      <location filename="../mainwindow.cpp" line="1358"/>
       <source>GiB</source>
       <translation>GiB</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1348"/>
+      <location filename="../mainwindow.cpp" line="1362"/>
       <source>TiB</source>
       <translation>TiB
 
 Tebibyte</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1366"/>
+      <location filename="../mainwindow.cpp" line="1380"/>
       <source>Save file</source>
       <translation>파일 저장</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1367"/>
+      <location filename="../mainwindow.cpp" line="1381"/>
       <source>Untitled</source>
       <translation>제목 없음</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1368"/>
+      <location filename="../mainwindow.cpp" line="1382"/>
       <source>Save file "%1"?</source>
       <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
       <translation>%1 파일을 저장하시겠습니까?</translation>
