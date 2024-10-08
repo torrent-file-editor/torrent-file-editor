@@ -83,6 +83,10 @@ for lang in $langsmap; do
     echo "<img src=\"https://lipis.github.io/flag-icon-css/flags/4x3/$country.svg\" width=\"24\" height=\"24\">  $nativelang - $englishlang  " >> ../all_languages.txt
     echo "  - {country: \"$country\", nativelang: \"$nativelang\", englishlang: \"$englishlang\"}" >> ../all_languages.yaml
     cp "tmp/torrentfileeditor_$srclang.ts" "torrentfileeditor_$dstlang.ts"
+
+    # Fix country code. Crowdin make invalid for Qt6 .ts files.
+    # See https://community.crowdin.com/t/qt-ts-file-exporter-has-issues-with-plurals/5351
+    sed -i 's/language="\([a-zA-Z]\{2\}\)-\([a-zA-Z]\{2\}\)"/language="\1_\2"/; s/sourcelanguage="\([a-zA-Z]\{2\}\)-\([a-zA-Z]\{2\}\)"/sourcelanguage="\1_\2"/' "torrentfileeditor_$dstlang.ts"
 done
 unset IFS
 
