@@ -328,7 +328,13 @@ void MainWindow::showTranslations()
         QLocale locale(lang);
         locales += locale.name() + QLatin1String(" ");
 
-        QString item = QString::fromUtf8("%1 (%2) - %3 - %4").arg(QLocale::languageToString(locale.language()), QLocale::countryToString(locale.country()), locale.name(), lang);
+#if QT_VERSION >= QT_VERSION_CHECK(6, 2, 0)
+        QString territory = QLocale::territoryToString(locale.territory());
+#else
+        QString territory = QLocale::countryToString(locale.country());
+#endif
+
+        QString item = QString::fromUtf8("%1 (%2) - %3 - %4").arg(QLocale::languageToString(locale.language()), territory, locale.name(), lang);
         ui->cmbTranslation->addItem(item, locale.name());
     }
 
