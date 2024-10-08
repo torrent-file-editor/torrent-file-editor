@@ -132,6 +132,7 @@ endif()
 
 
 if(QT6_BUILD)
+  find_package(QT NAMES Qt6 REQUIRED)
   find_package(Qt6Core REQUIRED)
   find_package(Qt6Gui REQUIRED)
   find_package(Qt6Widgets REQUIRED)
@@ -154,6 +155,7 @@ if(QT6_BUILD)
     qt6_wrap_ui(${ARGN})
   endmacro()
 elseif(QT5_BUILD)
+  find_package(QT NAMES Qt5 REQUIRED)
   find_package(Qt5Core REQUIRED)
   find_package(Qt5Gui REQUIRED)
   find_package(Qt5Widgets REQUIRED)
@@ -321,6 +323,30 @@ set(RESOURCES
   resources.qrc
 )
 
+add_custom_target(lupdate)
+
+foreach(l ${LANGS})
+  add_custom_target(
+    lupdate_${l}
+    COMMAND Qt${QT_VERSION_MAJOR}::lupdate -no-obsolete -no-recursive ${CMAKE_SOURCE_DIR}  -ts "torrentfileeditor_${l}.ts"
+    WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/translations"
+    COMMENT "Updating .ts files"
+  )
+
+  add_custom_target(
+    fix_${l}
+    COMMAND "xmllint" "--noblanks" "torrentfileeditor_${l}.ts" "--output" "torrentfileeditor_${l}.ts"
+    COMMAND "perl" "-pi" "-e" "s|<context><name>QLineEdit.*?</context>||g" "torrentfileeditor_${l}.ts"
+    COMMAND "xmllint" "--format" "torrentfileeditor_${l}.ts" "--output" "torrentfileeditor_${l}.ts"
+    WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/translations"
+    VERBATIM
+    COMMENT "Fix .ts files formating"
+  )
+  add_dependencies(fix_${l} lupdate_${l})
+  add_dependencies(lupdate fix_${l})
+endforeach()
+
+
 if(WIN32)
   list(APPEND RESOURCES "${CMAKE_BINARY_DIR}/qt_translations.qrc")
 endif()
@@ -390,8 +416,6 @@ endif()
 if(APPLE)
   target_link_libraries(${EXE_NAME} ${SPARKLE_LIBRARY} "-framework AppKit")
 endif()
-
-add_subdirectory(translations)
 
 if(UNIX AND NOT APPLE)
   install(TARGETS ${EXE_NAME} DESTINATION bin)
