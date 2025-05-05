@@ -12,3 +12,6 @@ StartupNotify=false
 StartupWMClass=torrent-file-editor
 
 Comment[ru]=Редактируйте и создавайте .torrent файлы
+Keywords[ru]=торрент;редактор;создать;изменить;P2P;файл;
+Comment[es]=Editar y crear archivos .torrent
+Keywords[es]=torrent;editor;crear;modificar;P2P;archivo;
