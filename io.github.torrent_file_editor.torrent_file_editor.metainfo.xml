@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop">
-  <id>torrent-file-editor.desktop</id>
+<component type="desktop-application">
+  <id>io.github.torrent_file_editor.torrent_file_editor</id>
+  <launchable type="desktop-id">io.github.torrent_file_editor.torrent_file_editor.desktop</launchable>
   <name>Torrent File Editor</name>
   <summary>Edit and create .torrent files</summary>
   <summary xml:lang="ru">Редактируйте и создавайте .torrent файлы</summary>

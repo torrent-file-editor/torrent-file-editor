@@ -42,7 +42,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic")
 # If building a release version, make most warnings into errors
 if(CMAKE_BUILD_TYPE STREQUAL Release OR CMAKE_BUILD_TYPE STREQUAL RelWithDbInfo)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror")
-  
+
   # Earlier versions of GCC might not recognise certain pragma directives in the C++ code
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-error=pragmas")
 
@@ -342,8 +342,8 @@ add_subdirectory(translations)
 
 if(UNIX AND NOT APPLE)
   install(TARGETS ${EXE_NAME} DESTINATION bin)
-  install(FILES torrent-file-editor.desktop DESTINATION share/applications)
-  install(FILES torrent-file-editor.appdata.xml DESTINATION share/appdata)
+  install(FILES io.github.torrent_file_editor.torrent_file_editor.desktop DESTINATION share/applications)
+  install(FILES io.github.torrent_file_editor.torrent_file_editor.metainfo.xml DESTINATION share/metainfo)
   install(FILES icons/app_16.png DESTINATION share/icons/hicolor/16x16/apps RENAME torrent-file-editor.png)
   install(FILES icons/app_32.png DESTINATION share/icons/hicolor/32x32/apps RENAME torrent-file-editor.png)
   install(FILES icons/app_48.png DESTINATION share/icons/hicolor/48x48/apps RENAME torrent-file-editor.png)
