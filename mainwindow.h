@@ -32,6 +32,7 @@ class BencodeModel;
 class SearchDlg;
 class QShortcut;
 class QTranslator;
+class QPushButton;
 
 class Worker : public QObject
 {
@@ -79,6 +80,7 @@ public slots:
     void open();
     void save();
     void saveAs();
+    bool exportFileNameAndSizeToLocalTextFile() const;
     void showAbout();
     void copyMagnetLink();
     void copyMagnetExtra();
@@ -161,6 +163,8 @@ private:
     QShortcut *_showTranslations;
     QTranslator *_translator{};
     QTranslator *_translatorQt{};
+
+    QPushButton *mExportToLocalFile{nullptr};
 
     static MainWindow *_instance;
 };

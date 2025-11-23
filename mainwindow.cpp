@@ -27,6 +27,7 @@
 #include "mainwindow.h"
 #include "searchdlg.h"
 #include "ui_mainwindow.h"
+#include <QPushButton>
 
 #include <QFileDialog>
 #include <QFile>
@@ -185,6 +186,12 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    mExportToLocalFile = new QPushButton(tr("Export"), this);
+    mExportToLocalFile->setShortcut(QKeySequence(Qt::KeyboardModifier::ControlModifier | Qt::Key::Key_E));
+    mExportToLocalFile->setToolTip(tr("Export file names and size in torrent file to local text file"));
+    ui->horizontalLayout_8->insertWidget(0, mExportToLocalFile);
+
+
     _formatFilters << tr("Torrents (*.torrent)");
     _formatFilters << tr("uTorrent resume files (*.dat)");
 
@@ -297,6 +304,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(_bencodeModel, SIGNAL(layoutChanged()), SLOT(updateTitle()));
     connect(_bencodeModel, SIGNAL(modelReset()), SLOT(updateTitle()));
 
+    connect(mExportToLocalFile, &QPushButton::clicked, this, &MainWindow::exportFileNameAndSizeToLocalTextFile);
     ui->cmbTranslation->hide();
     _showTranslations = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_T), this, SLOT(showTranslations()));
 
@@ -477,6 +485,41 @@ void MainWindow::saveAs()
         _fileName = fileName;
         updateTitle();
     }
+}
+
+#include <QDebug>
+#include <QStatusBar>
+bool ByteArrayWriter(const QString& fileName, const QByteArray& ba) {
+  QFile fi{fileName};
+  if (!fi.open(QIODevice::WriteOnly)) {
+    qDebug("Open [%s] to write failed. fill will not update.", qPrintable(fileName));
+    return false;
+  }
+  QTextStream stream(&fi);
+  stream.setCodec("UTF-8");
+  stream << ba;
+  stream.flush();
+  fi.close();
+  return true;
+}
+
+bool MainWindow::exportFileNameAndSizeToLocalTextFile() const {
+  QStatusBar* pStatusBar = statusBar();
+  if (pStatusBar == nullptr) {
+    qWarning("pStatusBar is nullptr");
+    return false;
+  }
+  QFile fi{_fileName};
+  if (!fi.exists()) {
+    qWarning("Torrent file[%s] not exist", qPrintable(_fileName));
+    pStatusBar->showMessage(QString::fromUtf8("Torrent file[%1] not exist").arg(_fileName));
+    return false;
+  }
+  const QString textFileName{_fileName + QString::fromUtf8(".txt")};
+  const QByteArray& baContents = ui->viewFiles->GetFileNameAndSize();
+  const bool writeResult = ByteArrayWriter(textFileName, baContents);
+  pStatusBar->showMessage(QString::asprintf("Result:%d of Exporting [%s]", writeResult, qPrintable(_fileName)));
+  return writeResult;
 }
 
 void MainWindow::showAbout()
