@@ -1,0 +1,60 @@
+# SPDX-FileCopyrightText: NONE
+# SPDX-License-Identifier: CC0-1.0
+
+# Run as clang-tidy --load=ClazyClangTidy.so
+
+Checks:
+  - -*
+  - clang-*
+  - clazy-auto-unexpected-qstringbuilder
+  - clazy-child-event-qobject-cast
+  - clazy-connect-3arg-lambda
+  - clazy-connect-by-name
+  - clazy-connect-non-signal
+  - clazy-connect-not-normalized
+  - clazy-const-signal-or-slot
+  - clazy-container-anti-pattern
+  - clazy-detaching-temporary
+  - clazy-empty-qstringliteral
+  - clazy-foreach
+  - clazy-fully-qualified-moc-types
+  - clazy-incorrect-emit
+  - clazy-install-event-filter
+  - clazy-lambda-in-connect
+  - clazy-lambda-unique-connection
+  - clazy-lowercase-qml-type-name
+  - clazy-mutable-container-key
+  - clazy-no-module-include
+  - clazy-non-pod-global-static
+  - clazy-overloaded-signal
+  - clazy-overridden-signal
+  - clazy-post-event
+  - clazy-qcolor-from-literal
+  - clazy-qdatetime-utc
+  - clazy-qdeleteall
+  - clazy-qenums
+  - clazy-qfileinfo-exists
+  - clazy-qgetenv
+  - clazy-qhash-namespace
+  - clazy-qlatin1string-non-ascii
+  - clazy-qmap-with-pointer-key
+  - clazy-qstring-arg
+  - clazy-qstring-comparison-to-implicit-char
+  - clazy-qstring-insensitive-allocation
+  - clazy-qstring-left
+  - clazy-qstring-ref
+  - clazy-qt-macros
+  - clazy-range-loop-reference
+  - clazy-readlock-detaching
+  - clazy-returning-data-from-temporary
+  - clazy-rule-of-two-soft
+  - clazy-skipped-base-method
+  - clazy-strict-iterators
+  - clazy-temporary-iterator
+  - clazy-unused-non-trivial-variable
+  - clazy-use-static-qregularexpression
+  - clazy-virtual-signal
+  - clazy-writing-to-temporary
+  - clazy-wrong-qevent-cast
+  - clazy-wrong-qglobalstatic
+SystemHeaders: false
