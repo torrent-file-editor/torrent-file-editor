@@ -77,3 +77,6 @@ AllowShortLambdasOnASingleLine: Empty
 
 # We do not want clang-format to put all arguments on a new line
 AllowAllArgumentsOnNextLine: false
+
+# Insert braces after control statements (if, else, for, do, and while)
+InsertBraces: true
