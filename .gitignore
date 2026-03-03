@@ -53,3 +53,4 @@ Makefile*
 #QtCtreator Qml
 *.qmlproject.user
 *.qmlproject.user.*
+CMakeLists.txt.user

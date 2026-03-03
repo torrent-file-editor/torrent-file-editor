@@ -11,6 +11,7 @@ class TableView : public QTableView
 
 public:
     TableView(QWidget *parent = 0);
+    QByteArray GetFileNameAndSize() const;
 
 signals:
     void deleteRow();

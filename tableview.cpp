@@ -52,6 +52,23 @@ TableView::TableView(QWidget *parent)
     updateTranslations();
 }
 
+#include <QDebug>
+QByteArray TableView::GetFileNameAndSize() const {
+  QAbstractItemModel* pModel = model();
+  if (pModel == nullptr) {
+    qWarning("pModel is nullptr, cannot get file name and size");
+    return {};
+  }
+  QByteArray contents;
+  for (int i = 0; i < pModel->rowCount(); ++i) {
+    contents += pModel->index(i, 0).data(Qt::DisplayRole).toString().toUtf8();
+    contents += '\t';
+    contents += pModel->index(i, 1).data(Qt::DisplayRole).toString().toUtf8();
+    contents += '\n';
+  }
+  return contents;
+}
+
 void TableView::copy()
 {
     QItemSelectionModel *selection = selectionModel();
