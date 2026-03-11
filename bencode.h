@@ -45,6 +45,8 @@ public:
 
     inline void setString(const QByteArray &string)
     {
+        Q_ASSERT(!string.isNull());
+
         _string = string;
     }
     inline QByteArray string() const

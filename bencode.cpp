@@ -38,6 +38,7 @@ Bencode::Bencode(const QByteArray &string, const QByteArray &key)
     , _key(key)
     , _hex(false)
 {
+    Q_ASSERT(!string.isNull());
 }
 
 void Bencode::setType(Type type)
@@ -87,7 +88,7 @@ Bencode *Bencode::checkAndCreate(Type type, const QByteArray &key)
 
 void Bencode::appendMapItem(Bencode *item)
 {
-    Q_ASSERT(!item->_key.isEmpty());
+    Q_ASSERT(!item->_key.isNull());
     Q_ASSERT(isDictionary());
     Q_ASSERT(!item->parent());
 
@@ -275,7 +276,7 @@ Bencode *Bencode::clone() const
 QString Bencode::toString() const
 {
     QString res;
-    if (!_key.isEmpty()) {
+    if (!_key.isNull()) {
         res = QStringLiteral("key ") + QString::fromUtf8(_key) + QStringLiteral(" | ");
     }
 
@@ -469,7 +470,9 @@ Bencode *Bencode::parseDictionary(const QByteArray &raw, int &pos)
 
 QString Bencode::fromRawString(const QByteArray &raw)
 {
-    QString res;
+    Q_ASSERT(!raw.isNull());
+
+    QString res = QLatin1String("");
     for (int i = 0; i < raw.size(); ++i) {
         QChar c = QLatin1Char(raw[i]);
         // All normal ASCII symbols except '%'
@@ -486,8 +489,10 @@ QString Bencode::fromRawString(const QByteArray &raw)
 
 QByteArray Bencode::toRawString(const QString &string)
 {
+    Q_ASSERT(!string.isNull());
+
     QByteArray ba = string.toLatin1();
-    QByteArray res;
+    QByteArray res = "";
     for (int i = 0; i < ba.size(); ++i) {
         QChar c = string[i];
         if (c != QLatin1Char('%')) {
