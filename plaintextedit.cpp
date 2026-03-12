@@ -75,6 +75,7 @@ void PlainTextEdit::resizeEvent(QResizeEvent *e)
 {
     QPlainTextEdit::resizeEvent(e);
     _numberWidget->resize(_numberWidget->sizeHint());
+    updateWidth(0);
 }
 
 void PlainTextEdit::updateWidth(int blockCount)
