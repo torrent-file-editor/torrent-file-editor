@@ -266,7 +266,8 @@ set(PLAIN_HEADERS
   ${CMAKE_SOURCE_DIR}/abstracttreemodel.h
   ${CMAKE_SOURCE_DIR}/abstracttreenode.h
   ${CMAKE_SOURCE_DIR}/proxystyle.h
-  ${CMAKE_SOURCE_DIR}/json.hpp
+  ${CMAKE_SOURCE_DIR}/json-builder.h
+  ${CMAKE_SOURCE_DIR}/json-parser.h
   ${CMAKE_BINARY_DIR}/config.h
 )
 
@@ -301,6 +302,8 @@ set(SOURCES
   ${CMAKE_SOURCE_DIR}/combobox.cpp
   ${CMAKE_SOURCE_DIR}/searchdlg.cpp
   ${CMAKE_SOURCE_DIR}/plaintextedit.cpp
+  ${CMAKE_SOURCE_DIR}/json-builder.c
+  ${CMAKE_SOURCE_DIR}/json-parser.c
 )
 
 if(WIN32)

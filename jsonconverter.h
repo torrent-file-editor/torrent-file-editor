@@ -10,6 +10,9 @@
 class JsonConverter
 {
 public:
+    static QByteArray qStringToWtf8(const QString &string);
+    static QString wtf8toQString(const QByteArray &ba);
+
     static QVariant parse(const QString &str, int *byte = nullptr, QString *error = nullptr);
     static QString stringify(const QVariant &variant);
 };
