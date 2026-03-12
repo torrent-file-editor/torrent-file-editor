@@ -50,8 +50,9 @@ UrlEdit::UrlEdit(QWidget *parent)
 void UrlEdit::openUrl()
 {
     QUrl url(text());
-    if (url.isValid())
+    if (url.isValid()) {
         QDesktopServices::openUrl(url);
+    }
 }
 
 void UrlEdit::copyAll()

@@ -69,18 +69,20 @@ void SearchDlg::searchNext()
 
         if (ui->grpKey->isChecked()) {
             QString key = ui->lneKey->text();
-            if (key.isEmpty())
+            if (key.isEmpty()) {
                 return;
+            }
 
             Qt::MatchFlags matchFlags(Qt::MatchFlag::MatchRecursive);
-            if (ui->chkKeyCase->isChecked())
+            if (ui->chkKeyCase->isChecked()) {
                 matchFlags |= Qt::MatchCaseSensitive;
+            }
 
-            if (ui->rdKeyExactMatch->isChecked())
+            if (ui->rdKeyExactMatch->isChecked()) {
                 matchFlags |= Qt::MatchFlag::MatchFixedString;
-            else if (ui->rdKeyWildcards->isChecked())
+            } else if (ui->rdKeyWildcards->isChecked()) {
                 matchFlags |= Qt::MatchFlag::MatchWildcard;
-            else if (ui->rdKeyRegexp->isChecked())
+            } else if (ui->rdKeyRegexp->isChecked())
 #if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
                 matchFlags |= Qt::MatchFlag::MatchRegularExpression;
 #else
@@ -92,13 +94,15 @@ void SearchDlg::searchNext()
 
         if (ui->grpValue->isChecked()) {
             QString value = ui->lneValue->text();
-            if (value.isEmpty())
+            if (value.isEmpty()) {
                 return;
+            }
 
             Qt::ItemDataRole role = Qt::UserRole;
             Qt::MatchFlags matchFlags(Qt::MatchFlag::MatchRecursive);
-            if (ui->chkValueCase->isChecked())
+            if (ui->chkValueCase->isChecked()) {
                 matchFlags |= Qt::MatchCaseSensitive;
+            }
 
             if (ui->rdValueExactMatch->isChecked()) {
                 matchFlags |= Qt::MatchFlag::MatchFixedString;
@@ -149,15 +153,17 @@ void SearchDlg::updateSearchNext()
 {
     bool enabled = false;
 
-    if (ui->grpKey->isChecked() && !ui->lneKey->text().isEmpty())
+    if (ui->grpKey->isChecked() && !ui->lneKey->text().isEmpty()) {
         enabled = true;
-    else if (ui->grpValue->isChecked() && !ui->lneValue->text().isEmpty())
+    } else if (ui->grpValue->isChecked() && !ui->lneValue->text().isEmpty()) {
         enabled = true;
+    }
 
-    if (ui->grpKey->isChecked() && ui->lneKey->text().isEmpty())
+    if (ui->grpKey->isChecked() && ui->lneKey->text().isEmpty()) {
         enabled = false;
-    else if (ui->grpValue->isChecked() && ui->lneValue->text().isEmpty())
+    } else if (ui->grpValue->isChecked() && ui->lneValue->text().isEmpty()) {
         enabled = false;
+    }
 
     ui->btnSearchNext->setEnabled(enabled);
     ui->btnReplace->setEnabled(enabled);
@@ -183,11 +189,13 @@ void SearchDlg::replace()
 
 void SearchDlg::replaceAll()
 {
-    if (_searchList.isEmpty())
+    if (_searchList.isEmpty()) {
         searchNext();
+    }
 
-    if (_searchList.isEmpty())
+    if (_searchList.isEmpty()) {
         return;
+    }
 
     QString replaceStr = ui->lneReplace->text();
     for (const auto &item : _searchList) {

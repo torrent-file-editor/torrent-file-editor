@@ -372,8 +372,9 @@ void MainWindow::changeTranslation(int index)
 
 void MainWindow::create()
 {
-    if (!showNeedSaveFile())
+    if (!showNeedSaveFile()) {
         return;
+    }
 
     _bencodeModel->setRaw("");
     _bencodeModel->resetModified();
@@ -414,13 +415,15 @@ void MainWindow::open(const QString &fileName)
 
 void MainWindow::open()
 {
-    if (!showNeedSaveFile())
+    if (!showNeedSaveFile()) {
         return;
+    }
 
     QString fileName = QFileDialog::getOpenFileName(this, tr("Open"), _torrentLastFolder, _formatFilters.join(QStringLiteral(";;")));
 
-    if (fileName.isEmpty())
+    if (fileName.isEmpty()) {
         return;
+    }
 
     _torrentLastFolder = fileName.section(QLatin1Char('/'), 0, -2);
     open(fileName);
@@ -428,10 +431,11 @@ void MainWindow::open()
 
 void MainWindow::save()
 {
-    if (_fileName.isEmpty())
+    if (_fileName.isEmpty()) {
         saveAs();
-    else
+    } else {
         saveTo(_fileName);
+    }
 }
 
 void MainWindow::saveAs()
@@ -443,15 +447,17 @@ void MainWindow::saveAs()
 
     QString filter;
     QString fileName = QFileDialog::getSaveFileName(this, tr("Save As"), _torrentLastFolder, _formatFilters.join(QStringLiteral(";;")), &filter);
-    if (fileName.isEmpty())
+    if (fileName.isEmpty()) {
         return;
+    }
 
     _torrentLastFolder = fileName.section(QLatin1Char('/'), 0, -2);
 
-    if (_formatFilters.at(0) == filter && !fileName.endsWith(QLatin1String(".torrent")))
+    if (_formatFilters.at(0) == filter && !fileName.endsWith(QLatin1String(".torrent"))) {
         fileName += QLatin1String(".torrent");
-    else if (_formatFilters.at(1) == filter && !fileName.endsWith(QLatin1String(".dat")))
+    } else if (_formatFilters.at(1) == filter && !fileName.endsWith(QLatin1String(".dat"))) {
         fileName += QLatin1String(".dat");
+    }
 
     if (saveTo(fileName)) {
         _fileName = fileName;
@@ -491,8 +497,9 @@ void MainWindow::copyMagnetExtra()
 void MainWindow::openUrl()
 {
     QUrl url(ui->leUrl->text());
-    if (url.isValid())
+    if (url.isValid()) {
         QDesktopServices::openUrl(url);
+    }
 }
 
 void MainWindow::dragEnterEvent(QDragEnterEvent *event)
@@ -521,10 +528,11 @@ void MainWindow::dropEvent(QDropEvent *event)
 
 void MainWindow::closeEvent(QCloseEvent *event)
 {
-    if (showNeedSaveFile())
+    if (showNeedSaveFile()) {
         event->accept();
-    else
+    } else {
         event->ignore();
+    }
 }
 
 void MainWindow::changeEvent(QEvent *event)
@@ -669,8 +677,9 @@ void MainWindow::updateEncoding()
 void MainWindow::makeTorrent()
 {
     QStandardItemModel *model = qobject_cast<QStandardItemModel *>(ui->viewFiles->model());
-    if (!model->rowCount())
+    if (!model->rowCount()) {
         return;
+    }
 
     qulonglong totalSize = 0;
     QStringList files;
@@ -708,8 +717,9 @@ void MainWindow::makeTorrent()
         }
     } while (hasRelative);
 
-    if (hasRelative)
+    if (hasRelative) {
         return;
+    }
 
     if (model->rowCount() > 1) {
         if (baseDir.isRoot()) {
@@ -786,8 +796,9 @@ void MainWindow::addFile()
     // #else
     QStringList files = QFileDialog::getOpenFileNames(this, tr("Add File"), _lastFolder, QString());
     // #endif
-    if (files.isEmpty())
+    if (files.isEmpty()) {
         return;
+    }
 
     _lastFolder = QFileInfo(files.first()).absolutePath();
     ui->leBaseFolder->setFolder(_lastFolder);
@@ -806,8 +817,9 @@ void MainWindow::addFile()
 void MainWindow::addFolder()
 {
     QString path = QFileDialog::getExistingDirectory(this, tr("Add Folder"), _lastFolder);
-    if (path.isEmpty())
+    if (path.isEmpty()) {
         return;
+    }
 
     _lastFolder = QFileInfo(path).absolutePath();
     ui->leBaseFolder->setFolder(QDir::toNativeSeparators(_lastFolder));
@@ -819,8 +831,9 @@ void MainWindow::addFolder()
         it.next();
         QFileInfo fileInfo = it.fileInfo();
 
-        if (fileInfo.isFile())
+        if (fileInfo.isFile()) {
             files << fileInfo.absoluteFilePath();
+        }
     }
 
     files.sort();
@@ -829,8 +842,9 @@ void MainWindow::addFolder()
         addFilesRow(file, fileSize(file));
     }
 
-    if (ui->leBaseFolder->text().isEmpty())
+    if (ui->leBaseFolder->text().isEmpty()) {
         ui->leBaseFolder->setText(QDir::toNativeSeparators(path));
+    }
 
     updateFilesSize();
     ui->viewFiles->scrollToBottom();
@@ -841,8 +855,9 @@ void MainWindow::removeFile()
     QStandardItemModel *model = qobject_cast<QStandardItemModel *>(ui->viewFiles->model());
     QItemSelectionModel *selectionModel = ui->viewFiles->selectionModel();
 
-    if (!selectionModel->hasSelection())
+    if (!selectionModel->hasSelection()) {
         return;
+    }
 
     QModelIndexList indexes = selectionModel->selectedRows();
     int row = indexes.size() == 1 ? indexes.first().row() : -1;
@@ -859,12 +874,14 @@ void MainWindow::upFile()
 {
     QItemSelectionModel *selectionModel = ui->viewFiles->selectionModel();
 
-    if (!selectionModel->hasSelection())
+    if (!selectionModel->hasSelection()) {
         return;
+    }
 
     int row = selectionModel->selectedRows().at(0).row();
-    if (row == 0)
+    if (row == 0) {
         return;
+    }
 
     QStandardItemModel *model = qobject_cast<QStandardItemModel *>(ui->viewFiles->model());
     QList<QStandardItem *> list = model->takeRow(row);
@@ -876,13 +893,15 @@ void MainWindow::downFile()
 {
     QItemSelectionModel *selectionModel = ui->viewFiles->selectionModel();
 
-    if (!selectionModel->hasSelection())
+    if (!selectionModel->hasSelection()) {
         return;
+    }
 
     QStandardItemModel *model = qobject_cast<QStandardItemModel *>(ui->viewFiles->model());
     int row = selectionModel->selectedRows().at(0).row();
-    if (row == model->rowCount() - 1)
+    if (row == model->rowCount() - 1) {
         return;
+    }
 
     QList<QStandardItem *> list = model->takeRow(row);
     model->insertRow(row + 1, list);
@@ -899,8 +918,9 @@ void MainWindow::reloadFiles()
 void MainWindow::updateFiles()
 {
     QList<QPair<QString, qlonglong>> files = _bencodeModel->files();
-    if (files.isEmpty())
+    if (files.isEmpty()) {
         return;
+    }
 
     QStandardItemModel *model = qobject_cast<QStandardItemModel *>(ui->viewFiles->model());
 
@@ -911,27 +931,31 @@ void MainWindow::updateFiles()
         }
         qulonglong pieceSize = _bencodeModel->pieceSize();
         for (int i = 0; i < ui->cmbPieceSizes->count(); i++) {
-            if (pieceSize == ui->cmbPieceSizes->itemData(i).toULongLong())
+            if (pieceSize == ui->cmbPieceSizes->itemData(i).toULongLong()) {
                 ui->cmbPieceSizes->setCurrentIndex(i);
+            }
         }
     }
 
     QString dir = ui->leBaseFolder->text();
-    if (!QDir(dir).exists())
+    if (!QDir(dir).exists()) {
         return;
+    }
 
     _lastFolder = dir;
 
     // Try to find files on disk and set full path if exists
     for (int i = 0; i < model->rowCount(); ++i) {
         QString file = model->item(i)->text();
-        if (QFileInfo(file).isAbsolute())
+        if (QFileInfo(file).isAbsolute()) {
             continue;
+        }
 
         file.prepend(QLatin1String("/"));
         file.prepend(dir);
-        if (QFile::exists(file))
+        if (QFile::exists(file)) {
             model->item(i)->setText(QDir::toNativeSeparators(file));
+        }
     }
 
     updateFilesSize();
@@ -959,8 +983,9 @@ void MainWindow::filterFiles()
 {
     FilesFilters filter = static_cast<FilesFilters>(ui->cmbFilesFilter->currentIndex());
     QString pattern = ui->lneFilesFilter->text();
-    if (pattern.isEmpty())
+    if (pattern.isEmpty()) {
         return;
+    }
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
     if (filter == FilesFilters::TemplateFilter) {
@@ -991,13 +1016,15 @@ void MainWindow::filterFiles()
         bool removeFile = false;
         switch (filter) {
         case FilesFilters::NameFilter:
-            if (!fi.fileName().compare(pattern, cs))
+            if (!fi.fileName().compare(pattern, cs)) {
                 removeFile = true;
+            }
             break;
 
         case FilesFilters::ExtenstionFilter:
-            if (!fi.suffix().compare(pattern, cs))
+            if (!fi.suffix().compare(pattern, cs)) {
                 removeFile = true;
+            }
             break;
 
         case FilesFilters::TemplateFilter: {
@@ -1039,8 +1066,9 @@ void MainWindow::filterFiles()
 void MainWindow::addTreeItem()
 {
     QModelIndex index = ui->treeJson->currentIndex();
-    if (!index.isValid())
+    if (!index.isValid()) {
         return;
+    }
 
     index = index.sibling(index.row(), 0); // clazy:exclude=rule-of-two-soft
     _bencodeModel->appendRow(index);
@@ -1064,15 +1092,17 @@ void MainWindow::removeTreeItem()
 
     for (const QModelIndex &i : ui->treeJson->selectionModel()->selectedRows()) {
         // Skip root item
-        if (!i.parent().isValid())
+        if (!i.parent().isValid()) {
             continue;
+        }
 
         indexes << i;
     }
 
     for (const QPersistentModelIndex &i : indexes) {
-        if (i.isValid())
+        if (i.isValid()) {
             ui->treeJson->model()->removeRow(i.row(), i.parent());
+        }
     }
 
     if (row >= 0 && row < _bencodeModel->rowCount(parent)) {
@@ -1149,8 +1179,9 @@ void MainWindow::updateSimple()
 
 void MainWindow::updateBencodeFromRaw()
 {
-    if (!ui->pteEditor->document()->isModified())
+    if (!ui->pteEditor->document()->isModified()) {
         return;
+    }
 
     // Special case when no any text
     if (ui->pteEditor->toPlainText().trimmed().isEmpty()) {
@@ -1233,8 +1264,9 @@ qulonglong MainWindow::autoPieceSize() const
     if (!pieceSize) {
         for (int i = 1; i < ui->cmbPieceSizes->count(); ++i) {
             pieceSize = ui->cmbPieceSizes->itemData(i).toULongLong();
-            if (totalSize / pieceSize < 2000)
+            if (totalSize / pieceSize < 2000) {
                 break;
+            }
         }
     }
 
@@ -1276,8 +1308,9 @@ void MainWindow::addFilesRow(const QString &path, qulonglong size)
 void MainWindow::updateFilesPieces()
 {
     QStandardItemModel *model = qobject_cast<QStandardItemModel *>(ui->viewFiles->model());
-    if (!model)
+    if (!model) {
         return;
+    }
 
     qulonglong pieceSize = autoPieceSize();
     qulonglong totalSize = 0;
@@ -1304,11 +1337,13 @@ QString MainWindow::smartSize(qulonglong size)
     QString res = QLocale::system().toString(kb, 'g', 4);
 
     // Drop zeroes
-    while (res.contains(QLocale::system().decimalPoint()) && res.right(1) == QLatin1String("0"))
+    while (res.contains(QLocale::system().decimalPoint()) && res.right(1) == QLatin1String("0")) {
         res.chop(1);
+    }
 
-    if (res.right(1)[0] == QLocale::system().decimalPoint())
+    if (res.right(1)[0] == QLocale::system().decimalPoint()) {
         res.chop(1);
+    }
 
     switch (i) {
     case 0:
@@ -1338,8 +1373,9 @@ QString MainWindow::smartSize(qulonglong size)
 void MainWindow::processEvents()
 {
     // Hack to prevent processEvents when application is not starting yet
-    if (isVisible())
+    if (isVisible()) {
         qApp->processEvents();
+    }
 }
 
 bool MainWindow::showNeedSaveFile()

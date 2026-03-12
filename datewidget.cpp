@@ -16,8 +16,9 @@
 inline QString dateFormat()
 {
     QString format = QLocale().dateFormat(QLocale::ShortFormat) + QStringLiteral(" ") + QLocale().timeFormat(QLocale::LongFormat);
-    if (format.endsWith(QLatin1String(" t")))
+    if (format.endsWith(QLatin1String(" t"))) {
         format.chop(2);
+    }
 
     // Use the year as four digit number
     if (format.count(QLatin1Char('y')) == 2) {
@@ -98,10 +99,11 @@ QTime DateWidget::time() const
 
 void DateWidget::setDateTime(const QDateTime &dateTime)
 {
-    if (dateTime.isValid())
+    if (dateTime.isValid()) {
         setText(dateTime.toString(dateFormat()));
-    else
+    } else {
         clear();
+    }
 }
 
 QDateTime DateWidget::dateTime() const

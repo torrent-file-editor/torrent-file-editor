@@ -40,8 +40,9 @@ void FolderEdit::setFolder(const QString &path)
 void FolderEdit::openFolder()
 {
     QString path = QFileDialog::getExistingDirectory(this, tr("Add Folder"), _path);
-    if (path.isEmpty())
+    if (path.isEmpty()) {
         return;
+    }
 
     _path = path;
     setText(path);

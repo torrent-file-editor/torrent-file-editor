@@ -43,8 +43,9 @@ Bencode::Bencode(const QByteArray &string, const QByteArray &key)
 
 void Bencode::setType(Type type)
 {
-    if (type == _type)
+    if (type == _type) {
         return;
+    }
 
     qDeleteAll(children());
     _integer = 0;
@@ -92,8 +93,9 @@ void Bencode::appendMapItem(Bencode *item)
     Q_ASSERT(isDictionary());
     Q_ASSERT(!item->parent());
 
-    if (item->parent())
+    if (item->parent()) {
         item->parent()->removeChild(item);
+    }
 
     for (int i = 0; i < childCount(); i++) {
         if (item->_key < child(i)->_key) {
@@ -153,8 +155,9 @@ Bencode *Bencode::fromJson(const QVariant &json)
         foreach (const QString &key, keys) {
             Bencode *newItem = fromJson(variantMap.value(key));
             newItem->_key = toRawString(key);
-            if (hexKeys.contains(QString(key)))
+            if (hexKeys.contains(QString(key))) {
                 newItem->_hex = true;
+            }
 
             int pos = 0;
             while (pos < res->childCount() && newItem->_key > res->child(pos)->key()) {
@@ -218,30 +221,36 @@ QString Bencode::typeToStr(Type type)
 
 bool Bencode::compare(const Bencode *other) const
 {
-    if (!other)
+    if (!other) {
         return false;
+    }
 
-    if (_type != other->_type)
+    if (_type != other->_type) {
         return false;
+    }
 
-    if (parent() && static_cast<Bencode *>(parent())->_type == Type::Dictionary && other->parent() && _key != other->_key)
+    if (parent() && static_cast<Bencode *>(parent())->_type == Type::Dictionary && other->parent() && _key != other->_key) {
         return false;
+    }
 
     switch (_type) {
     case Type::String:
-        if (_string != other->_string)
+        if (_string != other->_string) {
             return false;
+        }
         break;
 
     case Type::Integer:
-        if (_integer != other->_integer)
+        if (_integer != other->_integer) {
             return false;
+        }
         break;
 
     case Type::Dictionary:
     case Type::List:
-        if (childCount() != other->childCount())
+        if (childCount() != other->childCount()) {
             return false;
+        }
 
         for (int i = 0; i < childCount(); i++) {
             bool res = child(i)->compare(other->child(i));
@@ -304,8 +313,9 @@ QString Bencode::toString() const
 Bencode *Bencode::parseItem(const QByteArray &raw, int &pos)
 {
     // it is ok to parse empty bencode
-    if (pos == 0 && raw.isEmpty())
+    if (pos == 0 && raw.isEmpty()) {
         return nullptr;
+    }
 
     // Integer
     if (raw[pos] == 'i') {
@@ -456,8 +466,9 @@ Bencode *Bencode::parseDictionary(const QByteArray &raw, int &pos)
         }
 
         value->_key = key;
-        if (hexKeys.contains(QString::fromUtf8(key)))
+        if (hexKeys.contains(QString::fromUtf8(key))) {
             value->_hex = true;
+        }
 
         res->appendMapItem(value);
     }

@@ -78,8 +78,9 @@ void winDebugHandler(QtMsgType type, const char *msg)
         OutputDebugString(debugMsg.toStdString().c_str());
 #endif
 
-        if (type == QtFatalMsg)
+        if (type == QtFatalMsg) {
             abort();
+        }
     }
 }
 #endif
@@ -88,8 +89,9 @@ void openWinConsole()
 {
 #ifdef Q_OS_WIN
     BOOL b = AllocConsole();
-    if (!b)
+    if (!b) {
         return;
+    }
 
     hConsole = GetStdHandle(STD_INPUT_HANDLE);
 
@@ -102,8 +104,9 @@ void openWinConsole()
 void closeWinConsole()
 {
 #ifdef Q_OS_WIN
-    if (!hConsole)
+    if (!hConsole) {
         return;
+    }
 
     printf("\nPress any key to close window...\n");
     getchar();
@@ -214,10 +217,11 @@ int main(int argc, char *argv[])
             if (!QFile::exists(source)) {
                 qDebug("Error: source file is not exist!");
                 retCode = -1;
-            } else if (command == QLatin1String("--to-json"))
+            } else if (command == QLatin1String("--to-json")) {
                 retCode = toJson(source, dest) ? 0 : -1;
-            else
+            } else {
                 retCode = fromJson(source, dest) ? 0 : -1;
+            }
 
             closeWinConsole();
             return retCode;
@@ -249,8 +253,9 @@ int main(int argc, char *argv[])
 
         if (argc == 2) {
             QString filename = QString::fromLocal8Bit(argv[1]);
-            if (QFile::exists(filename))
+            if (QFile::exists(filename)) {
                 w.open(filename);
+            }
         }
 
         returnCode = a.exec();

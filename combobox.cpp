@@ -16,16 +16,18 @@ ComboBox::ComboBox(QWidget *parent)
 
 void ComboBox::hidePopup()
 {
-    if (view()->isVisible())
+    if (view()->isVisible()) {
         QTimer::singleShot(0, this, SLOT(close()));
+    }
     QComboBox::hidePopup();
 }
 
 void ComboBox::leaveEvent(QEvent *event)
 {
     QComboBox::leaveEvent(event);
-    if (!view()->isVisible())
+    if (!view()->isVisible()) {
         close();
+    }
 }
 
 void ComboBox::wheelEvent(QWheelEvent *event)
