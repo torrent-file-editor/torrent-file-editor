@@ -514,7 +514,20 @@ if(APPLE)
       \"${APPS}/Contents/PlugIns/*.dylib\"
       \"${APPS}/Contents/PlugIns/*/*.dylib\"
     )
-    execute_process(COMMAND codesign --deep -f -s \"Ivan Romanov\" \${BINARIES} \"${APPS}\" WORKING_DIRECTORY \"${APPS}\")
+    execute_process(
+      COMMAND codesign --deep -f -s \"Ivan Romanov\" \${BINARIES} \"${APPS}\"
+      WORKING_DIRECTORY \"${APPS}\"
+      RESULT_VARIABLE CODESIGN_RESULT
+      OUTPUT_VARIABLE CODESIGN_OUT
+      ERROR_VARIABLE CODESIGN_ERR
+      OUTPUT_STRIP_TRAILING_WHITESPACE
+      ERROR_STRIP_TRAILING_WHITESPACE
+    )
+
+    if(NOT CODESIGN_RESULT EQUAL 0)
+      message(FATAL_ERROR \"Code signing failed with exit code \${CODESIGN_RESULT}\nstdout:\${CODESIGN_OUT}\nstderr:\${CODESIGN_ERR}\")
+    endif()
+
     " COMPONENT Runtime
   )
 
