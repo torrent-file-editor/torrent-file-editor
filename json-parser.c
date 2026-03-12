@@ -44,6 +44,9 @@
 #include <limits.h>
 #include <math.h>
 #include <locale.h>
+#ifdef __APPLE__
+   #include <xlocale.h>
+#endif
 
 #ifndef JSON_INT_T_OVERRIDDEN
    #if defined(_MSC_VER)
