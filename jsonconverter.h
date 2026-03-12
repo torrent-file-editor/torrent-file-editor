@@ -4,8 +4,10 @@
 #pragma once
 
 // Order is matter! First QString leads to strange building error on Fedora 31 MinGW
-#include <QString>
+// clang-format off
 #include <QVariant>
+#include <QString>
+// clang-format on
 
 class JsonConverter
 {
