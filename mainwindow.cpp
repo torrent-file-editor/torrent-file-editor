@@ -166,9 +166,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    _formatFilters << tr("Torrents (*.torrent)");
-    _formatFilters << tr("uTorrent resume files (*.dat)");
-
 #ifndef Q_OS_MAC
     // Show menu bar only on Mac OS X.
     // Menu bar on Mac OS is persistent. No sense to not use it.
@@ -1408,6 +1405,10 @@ void MainWindow::retranslateUi()
     ui->retranslateUi(this);
 
     ui->cmbPieceSizes->setItemText(0, tr("Auto"));
+
+    _formatFilters.clear();
+    _formatFilters << tr("Torrents (*.torrent)");
+    _formatFilters << tr("uTorrent resume files (*.dat)");
 
     QStandardItemModel *model = qobject_cast<QStandardItemModel *>(ui->viewFiles->model());
     QStringList headers;
