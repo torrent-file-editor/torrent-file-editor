@@ -4,6 +4,7 @@
 
 #include "application.h"
 #include "bencode.h"
+#include "config.h"
 #include "jsonconverter.h"
 #include "mainwindow.h"
 
@@ -177,11 +178,18 @@ bool fromJson(const QString &source, const QString &dest)
 
 int main(int argc, char *argv[])
 {
-    if (argc == 2 && !strcmp(argv[1], "--help")) {
-        openWinConsole();
-        printf("Usage: torrent-file-editor --to-json | --from-json  source dest\n");
-        closeWinConsole();
-        return 0;
+    if (argc == 2) {
+        if (!strcmp(argv[1], "--help") || !strcmp(argv[1], "-h")) {
+            openWinConsole();
+            printf("Usage: torrent-file-editor --to-json | --from-json  source dest\n");
+            closeWinConsole();
+            return 0;
+        } else if (!strcmp(argv[1], "--version")) {
+            openWinConsole();
+            printf("%s %s\n", APP_NAME, APP_VERSION);
+            closeWinConsole();
+            return 0;
+        }
     }
 
 #ifdef ENABLE_NVWA

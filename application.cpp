@@ -13,7 +13,7 @@ Application::Application(int &argc, char **argv)
     : QApplication(argc, argv)
     , _mainWindow(nullptr)
 {
-    setApplicationName(QStringLiteral("Torrent File Editor"));
+    setApplicationName(QStringLiteral(APP_NAME));
     setApplicationVersion(QStringLiteral(APP_VERSION));
 
     setStyle(new ProxyStyle());
