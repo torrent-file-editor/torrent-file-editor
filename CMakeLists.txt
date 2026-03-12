@@ -66,7 +66,11 @@ endif()
 
 add_custom_command(
   OUTPUT ${UPDATE_VERSION_OUTPUT}
-  COMMAND ${CMAKE_COMMAND} -DWIN32=${WIN32} -DAPP_VERSION="v${APP_VERSION}" -DAPP_NAME=${CMAKE_PROJECT_NAME} -P "${CMAKE_SOURCE_DIR}/cmake/Version.cmake"
+  COMMAND ${CMAKE_COMMAND}
+    -DWIN32=${WIN32}
+    -DAPP_VERSION="v${APP_VERSION}"
+    -DAPP_NAME=${CMAKE_PROJECT_NAME}
+    -P "${CMAKE_SOURCE_DIR}/cmake/Version.cmake"
   DEPENDS ${UPDATE_VERSION_DEPENDS}
   COMMENT "Generate config.h"
 )
@@ -208,7 +212,7 @@ configure_file(translations.qrc.in translations.qrc COPYONLY)
 set(LANGS af ar bn cs de en es fi fr he ko hu id it ja nl pl pt ro ru tr uk vi zh_CN zh_TW)
 
 foreach(l ${LANGS})
-  list(APPEND TRANSLATIONS ${CMAKE_SOURCE_DIR}/translations/torrentfileeditor_${l}.ts)
+  list(APPEND TRANSLATIONS translations/torrentfileeditor_${l}.ts)
 endforeach()
 
 if(WIN32)
@@ -238,36 +242,36 @@ if(WIN32)
 endif()
 
 set(HEADERS
-  ${CMAKE_SOURCE_DIR}/application.h
-  ${CMAKE_SOURCE_DIR}/mainwindow.h
-  ${CMAKE_SOURCE_DIR}/datewidget.h
-  ${CMAKE_SOURCE_DIR}/lineeditwidget.h
-  ${CMAKE_SOURCE_DIR}/urledit.h
-  ${CMAKE_SOURCE_DIR}/folderedit.h
-  ${CMAKE_SOURCE_DIR}/aboutdlg.h
-  ${CMAKE_SOURCE_DIR}/bencodemodel.h
-  ${CMAKE_SOURCE_DIR}/bencodedelegate.h
-  ${CMAKE_SOURCE_DIR}/tableview.h
-  ${CMAKE_SOURCE_DIR}/treeview.h
-  ${CMAKE_SOURCE_DIR}/combobox.h
-  ${CMAKE_SOURCE_DIR}/searchdlg.h
-  ${CMAKE_SOURCE_DIR}/plaintextedit.h
+  application.h
+  mainwindow.h
+  datewidget.h
+  lineeditwidget.h
+  urledit.h
+  folderedit.h
+  aboutdlg.h
+  bencodemodel.h
+  bencodedelegate.h
+  tableview.h
+  treeview.h
+  combobox.h
+  searchdlg.h
+  plaintextedit.h
 )
 
 if(WIN32)
   list(APPEND HEADERS
-    ${CMAKE_SOURCE_DIR}/checkupdate.h
+    checkupdate.h
   )
 endif()
 
 set(PLAIN_HEADERS
-  ${CMAKE_SOURCE_DIR}/bencode.h
-  ${CMAKE_SOURCE_DIR}/jsonconverter.h
-  ${CMAKE_SOURCE_DIR}/abstracttreemodel.h
-  ${CMAKE_SOURCE_DIR}/abstracttreenode.h
-  ${CMAKE_SOURCE_DIR}/proxystyle.h
-  ${CMAKE_SOURCE_DIR}/json-builder.h
-  ${CMAKE_SOURCE_DIR}/json-parser.h
+  bencode.h
+  jsonconverter.h
+  abstracttreemodel.h
+  abstracttreenode.h
+  proxystyle.h
+  json-builder.h
+  json-parser.h
   ${CMAKE_BINARY_DIR}/config.h
 )
 
@@ -278,44 +282,44 @@ set_source_files_properties(${CMAKE_BINARY_DIR}/config.h
 )
 
 set(FORMS
-  ${CMAKE_SOURCE_DIR}/mainwindow.ui
-  ${CMAKE_SOURCE_DIR}/aboutdlg.ui
-  ${CMAKE_SOURCE_DIR}/searchdlg.ui
+  mainwindow.ui
+  aboutdlg.ui
+  searchdlg.ui
 )
 
 set(SOURCES
-  ${CMAKE_SOURCE_DIR}/application.cpp
-  ${CMAKE_SOURCE_DIR}/jsonconverter.cpp
-  ${CMAKE_SOURCE_DIR}/main.cpp
-  ${CMAKE_SOURCE_DIR}/mainwindow.cpp
-  ${CMAKE_SOURCE_DIR}/bencode.cpp
-  ${CMAKE_SOURCE_DIR}/datewidget.cpp
-  ${CMAKE_SOURCE_DIR}/lineeditwidget.cpp
-  ${CMAKE_SOURCE_DIR}/urledit.cpp
-  ${CMAKE_SOURCE_DIR}/folderedit.cpp
-  ${CMAKE_SOURCE_DIR}/aboutdlg.cpp
-  ${CMAKE_SOURCE_DIR}/bencodemodel.cpp
-  ${CMAKE_SOURCE_DIR}/bencodedelegate.cpp
-  ${CMAKE_SOURCE_DIR}/proxystyle.cpp
-  ${CMAKE_SOURCE_DIR}/tableview.cpp
-  ${CMAKE_SOURCE_DIR}/treeview.cpp
-  ${CMAKE_SOURCE_DIR}/combobox.cpp
-  ${CMAKE_SOURCE_DIR}/searchdlg.cpp
-  ${CMAKE_SOURCE_DIR}/plaintextedit.cpp
-  ${CMAKE_SOURCE_DIR}/json-builder.c
-  ${CMAKE_SOURCE_DIR}/json-parser.c
+  application.cpp
+  jsonconverter.cpp
+  main.cpp
+  mainwindow.cpp
+  bencode.cpp
+  datewidget.cpp
+  lineeditwidget.cpp
+  urledit.cpp
+  folderedit.cpp
+  aboutdlg.cpp
+  bencodemodel.cpp
+  bencodedelegate.cpp
+  proxystyle.cpp
+  tableview.cpp
+  treeview.cpp
+  combobox.cpp
+  searchdlg.cpp
+  plaintextedit.cpp
+  json-builder.c
+  json-parser.c
 )
 
 if(WIN32)
   list(APPEND SOURCES
-    ${CMAKE_SOURCE_DIR}/checkupdate.cpp
+    checkupdate.cpp
   )
 endif()
 
 if(APPLE)
   list(APPEND SOURCES
-    ${CMAKE_SOURCE_DIR}/cocoainitializer.mm
-    ${CMAKE_SOURCE_DIR}/sparkleautoupdater.mm
+    cocoainitializer.mm
+    sparkleautoupdater.mm
   )
 
   find_package(Sparkle REQUIRED)
@@ -536,19 +540,19 @@ endif()
 # Based on macro posted here
 # http://lists.qt-project.org/pipermail/qt-creator/2012-August/001191.html [^]
 function(collect_info_files)
-	list(APPEND _all_found)
-	foreach(_it ${ARGN})
-		if(NOT IS_DIRECTORY ${_it})
-			get_filename_component(_path ${_it} ABSOLUTE)
-			if(EXISTS ${_path})
-				list(APPEND _all_found ${_it})
-				if(NOT ${_it} MATCHES "^/\\\\..*$;~$")
-					set_source_files_properties(${_it} PROPERTIES HEADER_FILE_ONLY TRUE)
-				endif()
-			endif()
-		endif()
-	endforeach()
-	set(INFO_FILES ${_all_found} PARENT_SCOPE)
+  list(APPEND _all_found)
+  foreach(_it ${ARGN})
+    if(NOT IS_DIRECTORY ${_it})
+      get_filename_component(_path ${_it} ABSOLUTE)
+      if(EXISTS ${_path})
+        list(APPEND _all_found ${_it})
+        if(NOT ${_it} MATCHES "^/\\\\..*$;~$")
+          set_source_files_properties(${_it} PROPERTIES HEADER_FILE_ONLY TRUE)
+        endif()
+      endif()
+    endif()
+  endforeach()
+  set(INFO_FILES ${_all_found} PARENT_SCOPE)
 endfunction()
 
 # List all non-source code files (documents, configuration files, etc.)
@@ -560,9 +564,7 @@ set(OTHER_FILES
   appcast.json.in
   appcast.xml.in
   build.sh
-  build.sh
   cmake/Dmg.cmake
-  cmake/Version.cmake
   cmake/Version.cmake
   qt_translations.qrc.in
   translations.qrc.in
