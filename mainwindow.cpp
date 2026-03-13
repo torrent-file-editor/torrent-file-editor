@@ -182,12 +182,7 @@ MainWindow::MainWindow(QWidget *parent)
 #endif
 
     _progressDialog->setWindowModality(Qt::ApplicationModal);
-    _progressDialog->setLabelText(tr("Need to calculate piece hashes"));
-    _progressDialog->setWindowTitle(tr("Please wait"));
     _progressDialog->setValue(_progressDialog->maximum());
-    _progressDialog->ensurePolished();
-    _progressDialog->adjustSize();
-    _progressDialog->setFixedSize(_progressDialog->size().width() * 2, _progressDialog->size().height());
 
     updateTitle();
 
@@ -1405,6 +1400,11 @@ void MainWindow::retranslateUi()
     ui->retranslateUi(this);
 
     ui->cmbPieceSizes->setItemText(0, tr("Auto"));
+    for (int i = 5, j = 1; i < 16; ++i, ++j) {
+        qulonglong pieceSize = 1024 * static_cast<qulonglong>(qPow(2, i));
+        ui->cmbPieceSizes->setItemText(j, smartSize(pieceSize));
+    }
+    ui->cmbPieceSizes->setCurrentIndex(0);
 
     _formatFilters.clear();
     _formatFilters << tr("Torrents (*.torrent)");
@@ -1414,4 +1414,11 @@ void MainWindow::retranslateUi()
     QStringList headers;
     headers << tr("Path") << tr("Size") << tr("# Pieces") << QString() /* dummy */;
     model->setHorizontalHeaderLabels(headers);
+
+    _progressDialog->setFixedSize(QSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX));
+    _progressDialog->setLabelText(tr("Need to calculate piece hashes"));
+    _progressDialog->setWindowTitle(tr("Please wait"));
+    _progressDialog->ensurePolished();
+    _progressDialog->adjustSize();
+    _progressDialog->setFixedSize(_progressDialog->size().width() * 2, _progressDialog->size().height());
 }
