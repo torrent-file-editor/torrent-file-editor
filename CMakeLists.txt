@@ -145,7 +145,7 @@ if(QT6_BUILD)
   find_package(Qt6Core5Compat REQUIRED)
 
   macro(QT4_ADD_TRANSLATION)
-    qt6_add_translation(${ARGN})
+    qt6_add_translation(${ARGN} OPTIONS "-no-obsolete" OPTIONS "-no-ui-lines")
   endmacro()
 
   macro(qt4_add_resources)
@@ -167,7 +167,7 @@ elseif(QT5_BUILD)
   find_package(Qt5LinguistTools REQUIRED)
 
   macro(QT4_ADD_TRANSLATION)
-    qt5_add_translation(${ARGN})
+    qt5_add_translation(${ARGN} OPTIONS "-no-obsolete" OPTIONS "-no-ui-lines")
   endmacro()
 
   macro(qt4_add_resources)
@@ -199,11 +199,11 @@ endif()
 
 macro(qt_add_translation ARG1 ARG2)
   if(QT6_BUILD)
-    qt6_add_translation(${ARG1} ${ARG2})
+    qt6_add_translation(${ARG1} ${ARG2}  OPTIONS "-no-obsolete" OPTIONS "-no-ui-lines")
   elseif(QT5_BUILD)
-    qt5_add_translation(${ARG1} ${ARG2})
+    qt5_add_translation(${ARG1} ${ARG2}  OPTIONS "-no-obsolete" OPTIONS "-no-ui-lines")
   else()
-    qt4_add_translation(${ARG1} ${ARG2})
+    qt4_add_translation(${ARG1} ${ARG2}  OPTIONS "-no-obsolete" OPTIONS "-no-ui-lines")
   endif()
 endmacro()
 
