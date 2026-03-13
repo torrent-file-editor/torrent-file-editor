@@ -47,34 +47,34 @@ Version parseVersion(const QString &version)
     QString part2 = version.section(QLatin1Char('-'), 1);
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
-    static QRegularExpression rx(QStringLiteral("^v?(\\d+)\\.(\\d+)\\.(\\d+)$"));
-    QRegularExpressionMatch match = rx.match(part1);
+    static QRegularExpression part1Rx(QStringLiteral("^v?(\\d+)\\.(\\d+)\\.(\\d+)$"));
+    QRegularExpressionMatch match = part1Rx.match(part1);
     if (match.hasMatch()) {
         ver.major = match.captured(1).toInt();
         ver.minor = match.captured(2).toInt();
         ver.patch = match.captured(3).toInt();
     }
 
-    rx.setPattern(QStringLiteral("^(\\d+)-g([0-9a-f]{7})(-dirty)?$"));
-    match = rx.match(part2);
+    static QRegularExpression part2Rx(QStringLiteral("^(\\d+)-g([0-9a-f]{7})(-dirty)?$"));
+    match = part2Rx.match(part2);
     if (match.hasMatch()) {
         ver.rev = match.captured(1).toInt();
         ver.gitHash = match.captured(2);
         ver.dirty = !match.captured(3).isEmpty();
     }
 #else
-    static QRegExp rx(QStringLiteral("^v?(\\d+)\\.(\\d+)\\.(\\d+)$"));
-    if (rx.indexIn(part1) != -1) {
-        ver.major = rx.cap(1).toInt();
-        ver.minor = rx.cap(2).toInt();
-        ver.patch = rx.cap(3).toInt();
+    static QRegExp part1Rx(QStringLiteral("^v?(\\d+)\\.(\\d+)\\.(\\d+)$"));
+    if (part1Rx.indexIn(part1) != -1) {
+        ver.major = part1Rx.cap(1).toInt();
+        ver.minor = part1Rx.cap(2).toInt();
+        ver.patch = part1Rx.cap(3).toInt();
     }
 
-    rx.setPattern(QStringLiteral("^(\\d+)-g([0-9a-f]{7})(-dirty)?$"));
-    if (rx.indexIn(part2) != -1) {
-        ver.rev = rx.cap(1).toInt();
-        ver.gitHash = rx.cap(2);
-        ver.dirty = !rx.cap(3).isEmpty();
+    static QRegExp part2Rx(QStringLiteral("^(\\d+)-g([0-9a-f]{7})(-dirty)?$"));
+    if (part2Rx.indexIn(part2) != -1) {
+        ver.rev = part2Rx.cap(1).toInt();
+        ver.gitHash = part2Rx.cap(2);
+        ver.dirty = !part2Rx.cap(3).isEmpty();
     }
 #endif
     return ver;
