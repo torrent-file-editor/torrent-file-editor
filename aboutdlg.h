@@ -7,8 +7,7 @@
 
 class QThread;
 
-namespace Ui
-{
+namespace Ui {
 class AboutDlg;
 }
 

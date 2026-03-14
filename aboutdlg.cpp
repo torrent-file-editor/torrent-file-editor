@@ -20,18 +20,19 @@
 #include <QRegExp>
 #endif
 
-#define VERSION_LABEL                                                                                                                                          \
-    "<style>"                                                                                                                                                  \
-    "h2 {"                                                                                                                                                     \
-    "margin-bottom: 0;"                                                                                                                                        \
-    "}"                                                                                                                                                        \
-    "p {"                                                                                                                                                      \
-    "margin-top: 0;"                                                                                                                                           \
-    "}"                                                                                                                                                        \
-    "</style>"                                                                                                                                                 \
+#define VERSION_LABEL                                                                                                  \
+    "<style>"                                                                                                          \
+    "h2 {"                                                                                                             \
+    "margin-bottom: 0;"                                                                                                \
+    "}"                                                                                                                \
+    "p {"                                                                                                              \
+    "margin-top: 0;"                                                                                                   \
+    "}"                                                                                                                \
+    "</style>"                                                                                                         \
     "<h2>%1</h2><p>%2 (%3)</p>"
 
-struct Version {
+struct Version
+{
     int major;
     int minor;
     int patch;
@@ -125,7 +126,9 @@ bool versionLessThan(const Version &left, const Version &right)
 
 AboutDlg::AboutDlg(QWidget *parent)
 #ifdef Q_OS_WIN
-    : QDialog(parent, Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint | Qt::MSWindowsFixedSizeDialogHint)
+    : QDialog(parent,
+              Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint
+                  | Qt::MSWindowsFixedSizeDialogHint)
 #else
     : QDialog(parent, Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint)
 #endif
@@ -136,7 +139,8 @@ AboutDlg::AboutDlg(QWidget *parent)
 
     QString buildDate = QLocale::system().toString(Application::buildDateTime().date());
 
-    ui->label->setText(QStringLiteral(VERSION_LABEL).arg(qApp->applicationName(), qApp->applicationVersion(), buildDate));
+    ui->label->setText(
+        QStringLiteral(VERSION_LABEL).arg(qApp->applicationName(), qApp->applicationVersion(), buildDate));
     setWindowTitle(QString(tr("About %1")).arg(qApp->applicationName()));
 
 #ifdef NO_DONATION
@@ -172,7 +176,9 @@ void AboutDlg::checkUpdate()
     CheckUpdate *cUpdate = new CheckUpdate;
     cUpdate->moveToThread(thread);
     connect(thread, SIGNAL(started()), cUpdate, SLOT(start()));
-    connect(cUpdate, SIGNAL(finished(const QString &, const QString &)), SLOT(showUpdate(const QString &, const QString &)));
+    connect(cUpdate,
+            SIGNAL(finished(const QString &, const QString &)),
+            SLOT(showUpdate(const QString &, const QString &)));
     thread->start();
 #endif
 }
@@ -195,7 +201,8 @@ void AboutDlg::showUpdate(const QString &version, const QString &url)
         ui->lbShowUpdate->setText(tr("Something went wrong"));
     } else {
         if (versionLessThan(parseVersion(qApp->applicationVersion()), parseVersion(version))) {
-            ui->lbShowUpdate->setText(QString(tr("New version <a href=\"%2\">%1</a> has been detected")).arg(version).arg(url));
+            ui->lbShowUpdate->setText(
+                QString(tr("New version <a href=\"%2\">%1</a> has been detected")).arg(version).arg(url));
         } else {
             ui->lbShowUpdate->setText(tr("The latest version is installed"));
         }

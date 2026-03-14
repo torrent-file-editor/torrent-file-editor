@@ -12,8 +12,7 @@ class BencodeModel;
 class QSizeGrip;
 #endif
 
-namespace Ui
-{
+namespace Ui {
 class SearchDlg;
 }
 

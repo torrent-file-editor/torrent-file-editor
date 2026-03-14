@@ -3,7 +3,10 @@
 
 #include "proxystyle.h"
 
-void ProxyStyle::drawPrimitive(PrimitiveElement element, const QStyleOption *option, QPainter *painter, const QWidget *widget) const
+void ProxyStyle::drawPrimitive(PrimitiveElement element,
+                               const QStyleOption *option,
+                               QPainter *painter,
+                               const QWidget *widget) const
 {
     if (PE_FrameFocusRect == element) {
         // do not draw focus rectangle

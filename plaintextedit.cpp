@@ -71,7 +71,10 @@ PlainTextEdit::PlainTextEdit(QWidget *parent)
     , _numberWidget(new PlainTextEditNumber(this))
 {
     connect(document(), SIGNAL(blockCountChanged(int)), this, SLOT(updateWidth(int)));
-    connect(this, SIGNAL(updateRequest(QRect, int)), _numberWidget, SLOT(update())); // clazy:exclude=connect-not-normalized
+    connect(this,
+            SIGNAL(updateRequest(QRect, int)),
+            _numberWidget,
+            SLOT(update())); // clazy:exclude=connect-not-normalized
     connect(this, SIGNAL(cursorPositionChanged()), this, SLOT(highlightCurrentLine()));
 
     document()->setDocumentMargin(0.);

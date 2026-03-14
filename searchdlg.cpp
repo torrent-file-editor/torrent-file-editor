@@ -11,7 +11,9 @@
 
 SearchDlg::SearchDlg(BencodeModel *model, QWidget *parent)
 #ifdef Q_OS_WIN
-    : QDialog(parent, Qt::Tool | Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint | Qt::MSWindowsFixedSizeDialogHint)
+    : QDialog(parent,
+              Qt::Tool | Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint
+                  | Qt::MSWindowsFixedSizeDialogHint)
 #else
     : QDialog(parent, Qt::Tool | Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint)
 #endif
@@ -24,8 +26,12 @@ SearchDlg::SearchDlg(BencodeModel *model, QWidget *parent)
 #endif
 {
     ui->setupUi(this);
-    connect(_model, SIGNAL(rowsRemoved(QModelIndex, int, int)), SLOT(resetSearchList())); // clazy:exclude=connect-not-normalized
-    connect(_model, SIGNAL(rowsMoved(QModelIndex, int, int, QModelIndex, int)), SLOT(resetSearchList())); // clazy:exclude=connect-not-normalized
+    connect(_model,
+            SIGNAL(rowsRemoved(QModelIndex, int, int)),
+            SLOT(resetSearchList())); // clazy:exclude=connect-not-normalized
+    connect(_model,
+            SIGNAL(rowsMoved(QModelIndex, int, int, QModelIndex, int)),
+            SLOT(resetSearchList())); // clazy:exclude=connect-not-normalized
 
 #ifdef Q_OS_MAC
     // Workaround. Qt has no size grip on Mac OS X. Bug?
@@ -59,7 +65,8 @@ void SearchDlg::searchNext()
 {
     _searchIndex += ui->rdDown->isChecked() ? +1 : -1;
 
-    if ((ui->rdDown->isChecked() && _searchIndex == _searchList.size()) || (ui->rdUp->isChecked() && _searchIndex == -1)) {
+    if ((ui->rdDown->isChecked() && _searchIndex == _searchList.size())
+        || (ui->rdUp->isChecked() && _searchIndex == -1)) {
         resetSearchList();
     }
 
@@ -117,7 +124,8 @@ void SearchDlg::searchNext()
             } else if (ui->rdValueHex->isChecked()) {
                 matchFlags |= Qt::MatchFlag::MatchContains;
                 matchFlags &= ~Qt::MatchFlag::MatchCaseSensitive;
-                role = static_cast<Qt::ItemDataRole>(Qt::UserRole + 1); // NOLINT(clang-analyzer-optin.core.EnumCastOutOfRange)
+                role = static_cast<Qt::ItemDataRole>(Qt::UserRole
+                                                     + 1); // NOLINT(clang-analyzer-optin.core.EnumCastOutOfRange)
             }
 
             values = _model->match(_model->index(0, 0), role, value, -1, matchFlags);

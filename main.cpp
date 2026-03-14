@@ -67,7 +67,10 @@ void winDebugHandler(QtMsgType type, const char *msg)
         }
 #if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
         debugMsg += msg;
-        debugMsg += QStringLiteral(" (%1:%2, %3)").arg(QString::fromUtf8(context.file), QString::number(context.line), QString::fromUtf8(context.function));
+        debugMsg += QStringLiteral(" (%1:%2, %3)")
+                        .arg(QString::fromUtf8(context.file),
+                             QString::number(context.line),
+                             QString::fromUtf8(context.function));
 #else
         debugMsg += QLatin1String(msg);
 #endif

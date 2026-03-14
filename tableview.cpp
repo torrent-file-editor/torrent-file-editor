@@ -13,15 +13,17 @@
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
 #include <QStyleHints>
-#define ACCEL_KEY(k)                                                                                                                                           \
-    ((!QCoreApplication::testAttribute(Qt::AA_DontShowIconsInMenus) && QGuiApplication::styleHints()->showShortcutsInContextMenus())                           \
-             && !QKeySequence(k).toString(QKeySequence::NativeText).isEmpty()                                                                                  \
-         ? QLatin1Char('\t') + QKeySequence(k).toString(QKeySequence::NativeText)                                                                              \
+#define ACCEL_KEY(k)                                                                                                   \
+    ((!QCoreApplication::testAttribute(Qt::AA_DontShowIconsInMenus)                                                    \
+      && QGuiApplication::styleHints()->showShortcutsInContextMenus())                                                 \
+             && !QKeySequence(k).toString(QKeySequence::NativeText).isEmpty()                                          \
+         ? QLatin1Char('\t') + QKeySequence(k).toString(QKeySequence::NativeText)                                      \
          : QString())
 #else
-#define ACCEL_KEY(k)                                                                                                                                           \
-    (!QCoreApplication::testAttribute(Qt::AA_DontShowIconsInMenus) && !QKeySequence(k).toString(QKeySequence::NativeText).isEmpty()                            \
-         ? QLatin1Char('\t') + QKeySequence(k).toString(QKeySequence::NativeText)                                                                              \
+#define ACCEL_KEY(k)                                                                                                   \
+    (!QCoreApplication::testAttribute(Qt::AA_DontShowIconsInMenus)                                                     \
+             && !QKeySequence(k).toString(QKeySequence::NativeText).isEmpty()                                          \
+         ? QLatin1Char('\t') + QKeySequence(k).toString(QKeySequence::NativeText)                                      \
          : QString())
 #endif
 

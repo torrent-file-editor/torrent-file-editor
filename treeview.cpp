@@ -25,7 +25,8 @@ void TreeView::mouseMoveEvent(QMouseEvent *event)
     }
 
     QModelIndex index = indexAt(event->pos());
-    if (static_cast<BencodeModel::Column>(index.column()) == BencodeModel::Column::Type && (index.flags() & Qt::ItemIsEditable)) {
+    if (static_cast<BencodeModel::Column>(index.column()) == BencodeModel::Column::Type
+        && (index.flags() & Qt::ItemIsEditable)) {
         edit(index);
     }
 }

@@ -13,7 +13,8 @@ BencodeDelegate::BencodeDelegate(QObject *parent)
 {
 }
 
-QWidget *BencodeDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
+QWidget *
+BencodeDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
     if (static_cast<BencodeModel::Column>(index.column()) != BencodeModel::Column::Type) {
         return QStyledItemDelegate::createEditor(parent, option, index);

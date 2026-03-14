@@ -12,7 +12,8 @@
 class Bencode : public AbstractTreeNode<Bencode>
 {
 public:
-    enum Type {
+    enum Type
+    {
         Invalid,
         // Not limited, can be signed. I use qlonglong
         Integer,

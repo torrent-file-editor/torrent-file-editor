@@ -15,7 +15,8 @@
 // Always use format of current locale
 inline QString dateFormat()
 {
-    QString format = QLocale().dateFormat(QLocale::ShortFormat) + QStringLiteral(" ") + QLocale().timeFormat(QLocale::LongFormat);
+    QString format =
+        QLocale().dateFormat(QLocale::ShortFormat) + QStringLiteral(" ") + QLocale().timeFormat(QLocale::LongFormat);
     if (format.endsWith(QLatin1String(" t"))) {
         format.chop(2);
     }

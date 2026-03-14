@@ -155,9 +155,12 @@ MainWindow::MainWindow(QWidget *parent)
     , _fileName(QString())
     , _bencodeModel(new BencodeModel(this))
 #ifdef Q_OS_WIN
-    , _progressDialog(new QProgressDialog(this, Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint | Qt::MSWindowsFixedSizeDialogHint))
+    , _progressDialog(new QProgressDialog(this,
+                                          Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint
+                                              | Qt::MSWindowsFixedSizeDialogHint))
 #else
-    , _progressDialog(new QProgressDialog(this, Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint))
+    , _progressDialog(
+          new QProgressDialog(this, Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint))
 #endif
     , _formatFilters(QStringList())
     , _lastFolder()
@@ -264,10 +267,18 @@ MainWindow::MainWindow(QWidget *parent)
     fillCoding();
     updateFilesSize();
 
-    connect(_bencodeModel, SIGNAL(dataChanged(QModelIndex, QModelIndex)), SLOT(updateTitle())); // clazy:exclude=connect-not-normalized
-    connect(_bencodeModel, SIGNAL(rowsMoved(QModelIndex, int, int, QModelIndex, int)), SLOT(updateTitle())); // clazy:exclude=connect-not-normalized
-    connect(_bencodeModel, SIGNAL(rowsRemoved(QModelIndex, int, int)), SLOT(updateTitle())); // clazy:exclude=connect-not-normalized
-    connect(_bencodeModel, SIGNAL(rowsInserted(QModelIndex, int, int)), SLOT(updateTitle())); // clazy:exclude=connect-not-normalized
+    connect(_bencodeModel,
+            SIGNAL(dataChanged(QModelIndex, QModelIndex)),
+            SLOT(updateTitle())); // clazy:exclude=connect-not-normalized
+    connect(_bencodeModel,
+            SIGNAL(rowsMoved(QModelIndex, int, int, QModelIndex, int)),
+            SLOT(updateTitle())); // clazy:exclude=connect-not-normalized
+    connect(_bencodeModel,
+            SIGNAL(rowsRemoved(QModelIndex, int, int)),
+            SLOT(updateTitle())); // clazy:exclude=connect-not-normalized
+    connect(_bencodeModel,
+            SIGNAL(rowsInserted(QModelIndex, int, int)),
+            SLOT(updateTitle())); // clazy:exclude=connect-not-normalized
     connect(_bencodeModel, SIGNAL(layoutChanged()), SLOT(updateTitle()));
     connect(_bencodeModel, SIGNAL(modelReset()), SLOT(updateTitle()));
 
@@ -308,7 +319,8 @@ void MainWindow::showTranslations()
         QString territory = QLocale::countryToString(locale.country());
 #endif
 
-        QString item = QString::fromUtf8("%1 (%2) - %3 - %4").arg(QLocale::languageToString(locale.language()), territory, locale.name(), lang);
+        QString item = QString::fromUtf8("%1 (%2) - %3 - %4")
+                           .arg(QLocale::languageToString(locale.language()), territory, locale.name(), lang);
         ui->cmbTranslation->addItem(item, locale.name());
     }
 
@@ -411,7 +423,8 @@ void MainWindow::open()
         return;
     }
 
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Open"), _torrentLastFolder, _formatFilters.join(QStringLiteral(";;")));
+    QString fileName =
+        QFileDialog::getOpenFileName(this, tr("Open"), _torrentLastFolder, _formatFilters.join(QStringLiteral(";;")));
 
     if (fileName.isEmpty()) {
         return;
@@ -438,7 +451,11 @@ void MainWindow::saveAs()
     }
 
     QString filter;
-    QString fileName = QFileDialog::getSaveFileName(this, tr("Save As"), _torrentLastFolder, _formatFilters.join(QStringLiteral(";;")), &filter);
+    QString fileName = QFileDialog::getSaveFileName(this,
+                                                    tr("Save As"),
+                                                    _torrentLastFolder,
+                                                    _formatFilters.join(QStringLiteral(";;")),
+                                                    &filter);
     if (fileName.isEmpty()) {
         return;
     }
@@ -694,10 +711,14 @@ void MainWindow::makeTorrent()
             QMessageBox::StandardButton button;
             button = QMessageBox::question(this,
                                            tr("Torrent root folder is not set"),
-                                           tr("Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.\n\n"
-                                              "If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root "
-                                              "folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root "
-                                              "folder with relative path from torrent file. If something files are missing then torrent can't be generated.\n\n"
+                                           tr("Path to files on the disk in not known. Torrent can be generated only "
+                                              "from fully downloaded files.\n\n"
+                                              "If you want to edit file list in the current torrent you need to set "
+                                              "torrent root folder. The torrent root "
+                                              "folder is a folder where all files can be located on the disk. Actual "
+                                              "file path on the disk is torrent root "
+                                              "folder with relative path from torrent file. If something files are "
+                                              "missing then torrent can't be generated.\n\n"
                                               "Do you want to set torrent root folder and try again?"),
                                            QMessageBox::Yes | QMessageBox::No);
             if (button == QMessageBox::Yes) {
@@ -715,7 +736,9 @@ void MainWindow::makeTorrent()
 
     if (model->rowCount() > 1) {
         if (baseDir.isRoot()) {
-            QMessageBox::warning(this, tr("Warning"), tr("The filesystem root can't be used as a torrent root folder."));
+            QMessageBox::warning(this,
+                                 tr("Warning"),
+                                 tr("The filesystem root can't be used as a torrent root folder."));
             return;
         } else if (ui->leBaseFolder->text().isEmpty()) {
             QMessageBox::warning(this, tr("Warning"), tr("The torrent root folder is not set."));
@@ -746,11 +769,20 @@ void MainWindow::makeTorrent()
     Worker *worker = new Worker;
     worker->moveToThread(thread);
     connect(thread, SIGNAL(finished()), worker, SLOT(deleteLater()));
-    connect(this, SIGNAL(needHash(QStringList, int)), worker, SLOT(doWork(QStringList, int))); // clazy:exclude=connect-not-normalized
+    connect(this,
+            SIGNAL(needHash(QStringList, int)),
+            worker,
+            SLOT(doWork(QStringList, int))); // clazy:exclude=connect-not-normalized
     connect(_progressDialog, SIGNAL(canceled()), worker, SLOT(cancel()));
-    connect(worker, SIGNAL(resultReady(QByteArray, QString)), this, SLOT(setPieces(QByteArray, QString))); // clazy:exclude=connect-not-normalized
+    connect(worker,
+            SIGNAL(resultReady(QByteArray, QString)),
+            this,
+            SLOT(setPieces(QByteArray, QString))); // clazy:exclude=connect-not-normalized
     connect(worker, SIGNAL(progress(int)), _progressDialog, SLOT(setValue(int)));
-    connect(worker, SIGNAL(resultReady(QByteArray, QString)), thread, SLOT(quit())); // clazy:exclude=connect-not-normalized
+    connect(worker,
+            SIGNAL(resultReady(QByteArray, QString)),
+            thread,
+            SLOT(quit())); // clazy:exclude=connect-not-normalized
     connect(thread, SIGNAL(finished()), thread, SLOT(deleteLater()));
     thread->start();
 
@@ -783,8 +815,8 @@ void MainWindow::addFile()
     // #ifdef Q_OS_WIN
     //     // On Windows symbolic link is real file. So use it.
     //     // Also native dialog always returns resolved path. So use Qt dialog.
-    //     QStringList files = QFileDialog::getOpenFileNames(this, tr("Add File"), _lastFolder, QString(), nullptr, QFileDialog::DontResolveSymlinks |
-    //     QFileDialog::DontUseNativeDialog);
+    //     QStringList files = QFileDialog::getOpenFileNames(this, tr("Add File"), _lastFolder, QString(), nullptr,
+    //     QFileDialog::DontResolveSymlinks | QFileDialog::DontUseNativeDialog);
     // #else
     QStringList files = QFileDialog::getOpenFileNames(this, tr("Add File"), _lastFolder, QString());
     // #endif
@@ -967,8 +999,10 @@ void MainWindow::setPieces(const QByteArray &pieces, const QString &errorString)
 void MainWindow::updateRawPosition()
 {
     QTextCursor textCursor = ui->pteEditor->textCursor();
-    ui->lblCursorPos->setText(
-        QString(tr("Line: %1 of %2 Col: %3")).arg(textCursor.blockNumber() + 1).arg(ui->pteEditor->blockCount()).arg(textCursor.positionInBlock() + 1));
+    ui->lblCursorPos->setText(QString(tr("Line: %1 of %2 Col: %3"))
+                                  .arg(textCursor.blockNumber() + 1)
+                                  .arg(ui->pteEditor->blockCount())
+                                  .arg(textCursor.positionInBlock() + 1));
 }
 
 void MainWindow::filterFiles()
@@ -1377,7 +1411,8 @@ bool MainWindow::showNeedSaveFile()
         QString title = tr("Save file");
         QString filename = _fileName.isEmpty() ? tr("Untitled") : _fileName;
         QString question = tr("Save file \"%1\"?").arg(QDir::toNativeSeparators(filename));
-        QMessageBox::StandardButton bt = QMessageBox::question(this, title, question, QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
+        QMessageBox::StandardButton bt =
+            QMessageBox::question(this, title, question, QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
         switch (bt) {
         case QMessageBox::StandardButton::Yes:
             save();

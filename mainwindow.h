@@ -34,8 +34,7 @@ private:
     bool _isCanceled;
 };
 
-namespace Ui
-{
+namespace Ui {
 class MainWindow;
 }
 
@@ -110,14 +109,16 @@ protected:
     void changeEvent(QEvent *event);
 
 private:
-    enum Tabs {
+    enum Tabs
+    {
         SimpleTab,
         FilesTab,
         JsonTreeTab,
         RawTab,
         LogTab
     };
-    enum class FilesFilters {
+    enum class FilesFilters
+    {
         NameFilter,
         ExtenstionFilter,
         TemplateFilter,

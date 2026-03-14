@@ -17,7 +17,8 @@ class BencodeModel : public AbstractTreeModel<Bencode>
     Q_OBJECT
 
 public:
-    enum class Column {
+    enum class Column
+    {
         Name,
         Type,
         Hex,

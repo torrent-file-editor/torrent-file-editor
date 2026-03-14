@@ -8,7 +8,10 @@
 #include <QMetaType>
 #include <QStringList>
 
-QStringList hexKeys{QStringLiteral("pieces"), QStringLiteral("originator"), QStringLiteral("certificate"), QStringLiteral("signature")};
+QStringList hexKeys{QStringLiteral("pieces"),
+                    QStringLiteral("originator"),
+                    QStringLiteral("certificate"),
+                    QStringLiteral("signature")};
 
 Bencode::Bencode(Type type, const QByteArray &key)
     : AbstractTreeNode(nullptr)
@@ -229,7 +232,8 @@ bool Bencode::compare(const Bencode *other) const
         return false;
     }
 
-    if (parent() && static_cast<Bencode *>(parent())->_type == Type::Dictionary && other->parent() && _key != other->_key) {
+    if (parent() && static_cast<Bencode *>(parent())->_type == Type::Dictionary && other->parent()
+        && _key != other->_key) {
         return false;
     }
 
@@ -601,7 +605,8 @@ QVariant Bencode::toJson(const Bencode *bencode)
     case Dictionary: {
         QVariantMap map;
         for (const auto *item : bencode->children()) {
-            map.insert(fromRawString(static_cast<const Bencode *>(item)->_key), toJson(static_cast<const Bencode *>(item)));
+            map.insert(fromRawString(static_cast<const Bencode *>(item)->_key),
+                       toJson(static_cast<const Bencode *>(item)));
         }
         res = map;
         break;

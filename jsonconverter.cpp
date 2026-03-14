@@ -198,7 +198,8 @@ static QVariant jsonToVariant(json_value *jsonValue)
         break;
 
     case json_string:
-        res = JsonConverter::wtf8toQString(QByteArray::fromRawData(jsonValue->u.string.ptr, static_cast<int>(jsonValue->u.string.length)));
+        res = JsonConverter::wtf8toQString(
+            QByteArray::fromRawData(jsonValue->u.string.ptr, static_cast<int>(jsonValue->u.string.length)));
         break;
 
     default:

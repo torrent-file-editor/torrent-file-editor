@@ -120,7 +120,9 @@ void BencodeModel::setName(const QString &name)
         }
     } else if (!name.isEmpty()) {
         emit layoutAboutToBeChanged();
-        _bencode->checkAndCreate(Bencode::Type::Dictionary, "info")->checkAndCreate(Bencode::Type::String, "name")->setString(fromUnicode(name));
+        _bencode->checkAndCreate(Bencode::Type::Dictionary, "info")
+            ->checkAndCreate(Bencode::Type::String, "name")
+            ->setString(fromUnicode(name));
         emit layoutChanged();
     }
 }
@@ -143,7 +145,9 @@ void BencodeModel::setPrivateTorrent(bool privateTorrent)
         }
     } else if (privateTorrent) {
         emit layoutAboutToBeChanged();
-        _bencode->checkAndCreate(Bencode::Type::Dictionary, "info")->checkAndCreate(Bencode::Type::Integer, "private")->setInteger(1);
+        _bencode->checkAndCreate(Bencode::Type::Dictionary, "info")
+            ->checkAndCreate(Bencode::Type::Integer, "private")
+            ->setInteger(1);
         emit layoutChanged();
     }
 }
@@ -223,7 +227,8 @@ void BencodeModel::setCreationTime(const QDateTime &creationTime)
         removeRow(_bencode->child("creation date")->row(), nodeToIndex(_bencode));
     } else if (creationTime.isValid()) {
         emit layoutAboutToBeChanged();
-        _bencode->checkAndCreate(Bencode::Type::Integer, "creation date")->setInteger(static_cast<qlonglong>(creationTime.toMSecsSinceEpoch() / 1000));
+        _bencode->checkAndCreate(Bencode::Type::Integer, "creation date")
+            ->setInteger(static_cast<qlonglong>(creationTime.toMSecsSinceEpoch() / 1000));
         emit layoutChanged();
     }
 }
@@ -246,7 +251,9 @@ void BencodeModel::setPieceSize(int pieceSize)
         }
     } else if (pieceSize) {
         emit layoutAboutToBeChanged();
-        _bencode->checkAndCreate(Bencode::Type::Dictionary, "info")->checkAndCreate(Bencode::Type::Integer, "piece length")->setInteger(pieceSize);
+        _bencode->checkAndCreate(Bencode::Type::Dictionary, "info")
+            ->checkAndCreate(Bencode::Type::Integer, "piece length")
+            ->setInteger(pieceSize);
         emit layoutChanged();
     }
 }
@@ -337,7 +344,8 @@ void BencodeModel::setTrackers(const QStringList &trackers)
     }
 
     if (_bencode->child("announce-list") && !_bencode->child("announce-list")->children().isEmpty()) {
-        _bencode->checkAndCreate(Bencode::Type::String, "announce")->setString(_bencode->child("announce-list")->child(0)->child(0)->string());
+        _bencode->checkAndCreate(Bencode::Type::String, "announce")
+            ->setString(_bencode->child("announce-list")->child(0)->child(0)->string());
     } else {
         delete _bencode->child("announce-list");
         delete _bencode->child("announce");
@@ -672,7 +680,8 @@ bool BencodeModel::setData(const QModelIndex &index, const QVariant &value, int 
             }
         }
         res = true;
-        emit dataChanged(index.sibling(index.row(), static_cast<int>(Column::Value)), index.sibling(index.row(), static_cast<int>(Column::Value)));
+        emit dataChanged(index.sibling(index.row(), static_cast<int>(Column::Value)),
+                         index.sibling(index.row(), static_cast<int>(Column::Value)));
         break;
 
     default:

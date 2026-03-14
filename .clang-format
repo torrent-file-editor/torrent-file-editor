@@ -14,14 +14,14 @@ Standard: Cpp11
 # 4 spaces indent
 TabWidth: 4
 
-# 2 * 80 wide lines
-ColumnLimit: 160
+# 1.5 * 80 wide lines
+ColumnLimit: 120
 
 # sort includes inside line separated groups
 SortIncludes: true
 
 # break before braces on function, namespace and class definitions.
-BreakBeforeBraces: Linux
+BreakBeforeBraces: Mozilla
 
 # CrlInstruction *a;
 PointerAlignment: Right
@@ -70,7 +70,18 @@ SpaceAfterTemplateKeyword: false
 AlwaysBreakTemplateDeclarations: true
 
 # macros for which the opening brace stays attached.
-ForEachMacros: [ foreach, Q_FOREACH, BOOST_FOREACH, forever, Q_FOREVER, QBENCHMARK, QBENCHMARK_ONCE , wl_resource_for_each, wl_resource_for_each_safe ]
+ForEachMacros:
+  [
+    foreach,
+    Q_FOREACH,
+    BOOST_FOREACH,
+    forever,
+    Q_FOREVER,
+    QBENCHMARK,
+    QBENCHMARK_ONCE,
+    wl_resource_for_each,
+    wl_resource_for_each_safe,
+  ]
 
 # keep lambda formatting multi-line if not empty
 AllowShortLambdasOnASingleLine: Empty
