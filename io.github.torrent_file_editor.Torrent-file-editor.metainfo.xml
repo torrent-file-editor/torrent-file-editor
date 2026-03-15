@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2026 Ivan Romanov -->
+<component type="desktop-application">
+  <id>io.github.torrent_file_editor.Torrent-file-editor</id>
+  <launchable type="desktop-id">io.github.torrent_file_editor.Torrent-file-editor.desktop</launchable>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <name>Torrent File Editor</name>
+  <name xml:lang="ru">Редактор Торрент Файлов</name>
+  <summary>Edit and create .torrent files</summary>
+  <summary xml:lang="ru">Редактируйте и создавайте .torrent файлы</summary>
+
+  <developer id="io.github.drizt">
+    <name>Ivan Romanov</name>
+    <name xml:lang="ru">Иван Романов</name>
+  </developer>
+  <update_contact>drizt72@zoho.eu</update_contact>
+
+  <icon type="stock">io.github.torrent_file_editor.Torrent-file-editor</icon>
+
+  <description>
+    <p>
+    Qt-based GUI tool designed to create and edit .torrent files.
+    It shows the full contents of a .torrent file and allows changing any fields.
+    </p>
+    <p xml:lang="ru">
+    Основаное на Qt приложение позволяет создавать и редактировать .torrent файлы.
+    Оно показывает полное содержание .torrent файлов и позволяет менять любые значения.
+    </p>
+    <p>
+    The main features.
+    </p>
+    <p xml:lang="ru">
+    Основные возможности.
+    </p>
+    <ul>
+      <li>Create .torrent files from scratch</li>
+      <li xml:lang="ru">Создание и редактирование .torrent файлов с нуля</li>
+
+      <li>Edit .torrent files in a user-friendly way</li>
+      <li xml:lang="ru">Редактирование .torrent файлов в древовидной структуре</li>
+
+      <li>Edit .torrent files in JSON format</li>
+      <li xml:lang="ru">Редактирование .torrent файлов в JSON-формате</li>
+
+      <li>Add, remove and reorder files in a .torrent</li>
+      <li xml:lang="ru">Добавление, удаление и изменение порядка файлов</li>
+
+      <li>Support for multiple encodings</li>
+      <li xml:lang="ru">Поддержка различных кодировок</li>
+    </ul>
+  </description>
+
+  <launchable type="desktop-id">io.github.torrent-file-editor.desktop</launchable>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>Main torrent properties</caption>
+      <image width="1024" height="576">https://torrent-file-editor.github.io/main.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Files in torrent</caption>
+      <image width="1024" height="576">https://torrent-file-editor.github.io/files.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Whole bencode data represented as tree</caption>
+      <image width="1024" height="576">https://torrent-file-editor.github.io/tree.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Whole bencode data converted to json format</caption>
+      <image width="1024" height="576">https://torrent-file-editor.github.io/raw.png</image>
+    </screenshot>
+  </screenshots>
+
+  <url type="bugtracker">https://github.com/torrent-file-editor/torrent-file-editor/issues</url>
+  <url type="homepage">https://torrent-file-editor.github.io</url>
+  <url type="vcs-browser">https://github.com/torrent-file-editor/torrent-file-editor</url>
+  <url type="translate">https://crowdin.com/project/torrent-file-editor</url>
+  <url type="contribute">https://github.com/torrent-file-editor/torrent-file-editor/pulls</url>
+
+  <kudos>
+    <kudo>HiDpiIcon</kudo>
+    <kudo>ModernToolkit</kudo>
+  </kudos>
+  <content_rating type="oars-1.0" />
+
+  <releases>
+    <release version="1.0.1" date="2026-03-12"/>
+    <release version="1.0.0" date="2024-10-08"/>
+  </releases>
+
+  <provides>
+    <mediatype>application/x-bittorrent</mediatype>
+    <binary>torrent-file-editor</binary>
+  </provides>
+</component>

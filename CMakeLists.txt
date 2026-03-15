@@ -8,6 +8,8 @@ include(cmake/QtMajorVersion.cmake)
 
 project("Torrent File Editor")
 set(EXE_NAME "torrent-file-editor")
+# AppStream component id
+set(CID "io.github.torrent_file_editor.Torrent-file-editor")
 
 # Fallback version. Will be used when compiling out of git repository.
 set(APP_VERSION "1.0.1")
@@ -427,14 +429,14 @@ endif()
 
 if(UNIX AND NOT APPLE)
   install(TARGETS ${EXE_NAME} DESTINATION bin)
-  install(FILES torrent-file-editor.desktop DESTINATION share/applications)
-  install(FILES torrent-file-editor.appdata.xml DESTINATION share/appdata)
-  install(FILES icons/app_16.png DESTINATION share/icons/hicolor/16x16/apps RENAME torrent-file-editor.png)
-  install(FILES icons/app_32.png DESTINATION share/icons/hicolor/32x32/apps RENAME torrent-file-editor.png)
-  install(FILES icons/app_48.png DESTINATION share/icons/hicolor/48x48/apps RENAME torrent-file-editor.png)
-  install(FILES icons/app_64.png DESTINATION share/icons/hicolor/64x64/apps RENAME torrent-file-editor.png)
-  install(FILES icons/app_128.png DESTINATION share/icons/hicolor/128x128/apps RENAME torrent-file-editor.png)
-  install(FILES icons/app_256.png DESTINATION share/icons/hicolor/256x256/apps RENAME torrent-file-editor.png)
+  install(FILES ${CID}.desktop DESTINATION share/applications)
+  install(FILES ${CID}.metainfo.xml DESTINATION share/appdata)
+  install(FILES icons/app_16.png DESTINATION share/icons/hicolor/16x16/apps RENAME ${CID}.png)
+  install(FILES icons/app_32.png DESTINATION share/icons/hicolor/32x32/apps RENAME ${CID}.png)
+  install(FILES icons/app_48.png DESTINATION share/icons/hicolor/48x48/apps RENAME ${CID}.png)
+  install(FILES icons/app_64.png DESTINATION share/icons/hicolor/64x64/apps RENAME ${CID}.png)
+  install(FILES icons/app_128.png DESTINATION share/icons/hicolor/128x128/apps RENAME ${CID}.png)
+  install(FILES icons/app_256.png DESTINATION share/icons/hicolor/256x256/apps RENAME ${CID}.png)
 endif()
 
 if(APPLE)
