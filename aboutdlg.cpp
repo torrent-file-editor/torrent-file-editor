@@ -10,8 +10,8 @@
 #include <QShortcut>
 
 #ifdef Q_OS_WIN
-#include "checkupdate.h"
 #include <QThread>
+#include "checkupdate.h"
 #endif
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)

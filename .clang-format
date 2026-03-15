@@ -91,3 +91,15 @@ AllowAllArgumentsOnNextLine: false
 
 # Insert braces after control statements (if, else, for, do, and while)
 InsertBraces: true
+
+# Fix windows header order
+IncludeBlocks: Preserve
+IncludeCategories:
+  - Regex: '^<objbase\.h>'
+    Priority: 1
+  - Regex: '^<(atlbase|initguid|mmdeviceapi|ocidl|ole2|shobjidl|tchar|unknwn|windows|winsock2|winternl|ws2tcpip)\.h>'
+    Priority: 2
+  - Regex: '^<.*>'
+    Priority: 3
+  - Regex: '".*"'
+    Priority: 4
