@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2026 Ivan Romanov -->
+<component type="desktop-application">
+  <id>io.github.torrent_file_editor.Torrent-file-editor</id>
+  <launchable type="desktop-id">io.github.torrent_file_editor.Torrent-file-editor.desktop</launchable>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later AND BSD-2-Clause</project_license>
+  <name>Torrent File Editor</name>
+  <summary>Edit and create torrent files</summary>
+
+  <developer id="io.github.drizt">
+    <name>Ivan Romanov</name>
+  </developer>
+  <update_contact>drizt72@zoho.eu</update_contact>
+
+  <description>
+    <p>
+    Tool designed to create and edit torrent files. It shows the full contents of a
+    torrent files or any bencode files and allows changing any fields.
+    </p>
+    <p>
+    The main features.
+    </p>
+    <ul>
+      <li>Create torrent files from scratch</li>
+      <li>Edit torrent files in a user-friendly way</li>
+      <li>Edit torrent files in JSON format</li>
+      <li>Add, remove and reorder files in a torrent</li>
+      <li>Support for multiple encodings</li>
+    </ul>
+  </description>
+
+  <branding>
+    <color type="primary" scheme_preference="light">#43d760</color>
+    <color type="primary" scheme_preference="dark">#28873b</color>
+  </branding>
+
+  <categories>
+    <category>Utility</category>
+    <category>Network</category>
+    <category>Qt</category>
+    <category>P2P</category>
+  </categories>
+
+  <screenshots>
+    <screenshot type="default">
+      <image width="858" height="678" env="plasma">https://torrent-file-editor.github.io/flathub/main.png</image>
+      <caption>Main torrent properties</caption>
+    </screenshot>
+    <screenshot>
+      <image width="858" height="678" env="plasma">https://torrent-file-editor.github.io/flathub/files.png</image>
+      <caption>Files in torrent</caption>
+    </screenshot>
+    <screenshot>
+      <image width="858" height="678" env="plasma">https://torrent-file-editor.github.io/flathub/tree.png</image>
+      <caption>Whole bencode data represented as tree</caption>
+    </screenshot>
+    <screenshot>
+      <image width="858" height="678" env="plasma">https://torrent-file-editor.github.io/flathub/raw.png</image>
+      <caption>Whole bencode data converted to json format</caption>
+    </screenshot>
+  </screenshots>
+
+  <url type="bugtracker">https://github.com/torrent-file-editor/torrent-file-editor/issues</url>
+  <url type="homepage">https://torrent-file-editor.github.io</url>
+  <url type="translate">https://crowdin.com/project/torrent-file-editor</url>
+  <url type="contribute">https://github.com/torrent-file-editor/torrent-file-editor/pulls</url>
+  <url type="vcs-browser">https://github.com/torrent-file-editor/torrent-file-editor</url>
+
+  <content_rating type="oars-1.0" />
+
+  <releases>
+    <release version="1.0.1" date="2026-03-12">
+      <url>https://github.com/torrent-file-editor/torrent-file-editor/releases/tag/v1.0.1</url>
+      <issues>
+        <issue url="https://github.com/torrent-file-editor/torrent-file-editor/issues/168">#168</issue>
+      </issues>
+      <description>
+        <ul>
+          <li>Update translations</li>
+          <li>Fix crash and hangs on Raw tab with very big files</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.0.0" date="2024-10-08">
+      <url>https://github.com/torrent-file-editor/torrent-file-editor/releases/tag/v1.0.0</url>
+      <issues>
+        <issue url="https://github.com/torrent-file-editor/torrent-file-editor/issues/161">#161</issue>
+        <issue url="https://github.com/torrent-file-editor/torrent-file-editor/issues/160">#160</issue>
+        <issue url="https://github.com/torrent-file-editor/torrent-file-editor/issues/147">#147</issue>
+      </issues>
+      <description>
+        <ul>
+          <li>Update translations</li>
+          <li>Fix only one tracker is shown</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.3.8" date="2024-06-27">
+      <url>https://github.com/torrent-file-editor/torrent-file-editor/releases/tag/v0.3.8</url>
+      <description>
+        <ul>
+          <li>Update translations</li>
+          <li>Various fixes</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+
+  <requires>
+    <internet>offline-only</internet>
+  </requires>
+
+  <provides>
+    <mediatype>application/x-bittorrent</mediatype>
+    <binary>torrent-file-editor</binary>
+  </provides>
+</component>
