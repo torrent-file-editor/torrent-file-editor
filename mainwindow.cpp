@@ -513,7 +513,7 @@ void MainWindow::openUrl()
 
 void MainWindow::dragEnterEvent(QDragEnterEvent *event)
 {
-    if (!event->mimeData()->urls().isEmpty() && event->mimeData()->urls().first().isLocalFile()) {
+    if (!event->mimeData()->urls().isEmpty() && event->mimeData()->urls().at(0).isLocalFile()) {
         event->acceptProposedAction();
     }
 }
