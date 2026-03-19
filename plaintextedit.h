@@ -28,6 +28,7 @@ public:
 
 protected:
     void resizeEvent(QResizeEvent *event) override;
+    void showEvent(QShowEvent *event) override;
 
 private slots:
     void updateWidth(int blockCount);
@@ -38,6 +39,7 @@ private:
     QColor bgColor() const;
 
     PlainTextEditNumber *_numberWidget;
+    bool _numberWidgetInitialized;
 
     friend class PlainTextEditNumber;
 };

@@ -69,16 +69,16 @@ void PlainTextEditNumber::paintEvent(QPaintEvent *event)
 PlainTextEdit::PlainTextEdit(QWidget *parent)
     : QPlainTextEdit(parent)
     , _numberWidget(new PlainTextEditNumber(this))
+    , _numberWidgetInitialized(false)
 {
     connect(document(), SIGNAL(blockCountChanged(int)), this, SLOT(updateWidth(int)));
+    connect(this, SIGNAL(cursorPositionChanged()), this, SLOT(highlightCurrentLine()));
+    document()->setDocumentMargin(0.);
+
     connect(this,
             SIGNAL(updateRequest(QRect, int)),
             _numberWidget,
             SLOT(update())); // clazy:exclude=connect-not-normalized
-    connect(this, SIGNAL(cursorPositionChanged()), this, SLOT(highlightCurrentLine()));
-
-    document()->setDocumentMargin(0.);
-    _numberWidget->move(viewport()->geometry().topLeft());
 }
 
 void PlainTextEdit::resizeEvent(QResizeEvent *e)
@@ -88,12 +88,26 @@ void PlainTextEdit::resizeEvent(QResizeEvent *e)
     updateWidth(0);
 }
 
+void PlainTextEdit::showEvent(QShowEvent *event)
+{
+    (void)event;
+
+    if (!_numberWidgetInitialized) {
+        _numberWidgetInitialized = true;
+        _numberWidget->show();
+        _numberWidget->move(viewport()->geometry().topLeft());
+        _numberWidget->update();
+    }
+}
+
 void PlainTextEdit::updateWidth(int blockCount)
 {
     Q_UNUSED(blockCount);
 
     QSize size = _numberWidget->sizeHint();
-    setViewportMargins(size.width(), 0, 0, 0);
+    if (_numberWidgetInitialized) {
+        setViewportMargins(size.width(), 0, 0, 0);
+    }
     _numberWidget->resize(size);
 }
 
