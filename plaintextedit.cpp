@@ -43,7 +43,6 @@ void PlainTextEditNumber::paintEvent(QPaintEvent *event)
 
     QTextBlock block = parent->firstVisibleBlock();
     int width = this->width();
-    int height = parent->fontMetrics().height();
     int currentBlock = parent->textCursor().block().blockNumber() + 1;
     QPointF contentOffset = parent->contentOffset();
     int widgetHeight = this->height();
@@ -54,6 +53,7 @@ void PlainTextEditNumber::paintEvent(QPaintEvent *event)
             break;
         }
 
+        int height = blockRect.height() / block.lineCount();
         QString lineNumber = QString::number(block.blockNumber() + 1);
         int top = qMax(0, blockRect.top());
         if (currentBlock == lineNumber.toInt()) {
