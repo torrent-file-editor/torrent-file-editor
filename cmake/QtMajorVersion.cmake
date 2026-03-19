@@ -12,7 +12,7 @@ endforeach()
 # Check if QT_QMAKE_EXECUTABLE is force to use this Qt version
 if(NOT QT_MAJOR_VERSION)
     if (!QT_QMAKE_EXECUTABLE OR NOT EXISTS ${QT_QMAKE_EXECUTABLE})
-        find_file(QT_QMAKE_EXECUTABLE NAMES qmake qmake6 qmake-qt5 qmake-qt4)
+        find_program(QT_QMAKE_EXECUTABLE NAMES qmake qmake6 qmake-qt5 qmake-qt4)
     endif()
 
     # Get the Qt version from qmake
