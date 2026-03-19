@@ -182,6 +182,15 @@ bool fromJson(const QString &source, const QString &dest)
     return true;
 }
 
+static void printVersion()
+{
+    openWinConsole();
+    printf("%s: %s\n", APP_NAME, APP_VERSION);
+    printf("Compiled with Qt version: %s\n", QT_VERSION_STR);
+    printf("Using Qt version: %s\n", qVersion());
+    closeWinConsole();
+}
+
 int main(int argc, char *argv[])
 {
     if (argc == 2) {
@@ -191,9 +200,7 @@ int main(int argc, char *argv[])
             closeWinConsole();
             return 0;
         } else if (!strcmp(argv[1], "--version")) {
-            openWinConsole();
-            printf("%s %s\n", APP_NAME, APP_VERSION);
-            closeWinConsole();
+            printVersion();
             return 0;
         }
     }
