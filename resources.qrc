@@ -6,8 +6,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
 <RCC version="1.0">
     <qresource>
         <!-- drawed special for Torrent File Editor and published for free -->
-        <file>./icons/app_32.png</file>
-        <file>./icons/app_64.png</file>
+        <file>./icons/app.svg</file>
+        <file>./icons/unix/app_32.png</file>
+        <file>./icons/unix/app_128.png</file>
 
         <!-- from Oxygen team http://www.oxygen-icons.org/ -->
         <!-- http://www.iconsearch.ru/detailed/19428/1/ -->

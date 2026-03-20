@@ -137,6 +137,10 @@ AboutDlg::AboutDlg(QWidget *parent)
 {
     ui->setupUi(this);
 
+#ifdef BUILD_STATIC
+    ui->lbAppLogo->setPixmap(QPixmap(QStringLiteral(":/icons/unix/app_128.png")));
+#endif
+
     QString buildDate = QLocale::system().toString(Application::buildDateTime().date());
 
     ui->label->setText(
@@ -208,6 +212,8 @@ void AboutDlg::showUpdate(const QString &version, const QString &url)
         }
     }
 
+    setMinimumSize(minimumSizeHint());
+    setMaximumSize(minimumSizeHint());
 #else
     Q_UNUSED(version);
     Q_UNUSED(url);

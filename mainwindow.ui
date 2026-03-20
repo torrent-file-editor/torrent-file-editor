@@ -22,7 +22,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
   </property>
   <property name="windowIcon">
    <iconset resource="resources.qrc">
-    <normaloff>:/icons/app_32.png</normaloff>:/icons/app_32.png</iconset>
+    <normaloff>:/icons/app.svg</normaloff>:/icons/app.svg</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout_7">

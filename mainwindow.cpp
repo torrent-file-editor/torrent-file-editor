@@ -25,6 +25,7 @@
 #include <QLocale>
 #include <QMessageBox>
 #include <QMimeData>
+#include <QPainter>
 #include <QPersistentModelIndex>
 #include <QProgressDialog>
 #include <QShortcut>
@@ -168,6 +169,10 @@ MainWindow::MainWindow(QWidget *parent)
     , _torrentLastFolder()
 {
     ui->setupUi(this);
+
+#ifdef BUILD_STATIC
+    setWindowIcon(QIcon(QStringLiteral(":/icons/unix/app_32.png")));
+#endif
 
 #ifndef Q_OS_MAC
     // Show menu bar only on Mac OS X.
