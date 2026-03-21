@@ -125,7 +125,7 @@ else()
   option(BUILD_SHARED "Link with shared libraries" ON)
 
   # FIXME: this policy fix static .exe liniking with Fedora MinGW
-  if(CMAKE_VERSION VERSION_LESS "4.0.0" AND BUILD_SHARED)
+  if(CMAKE_VERSION VERSION_LESS "4.0.0" AND NOT BUILD_SHARED)
     cmake_policy(SET CMP0060 OLD)
   endif()
 endif()
