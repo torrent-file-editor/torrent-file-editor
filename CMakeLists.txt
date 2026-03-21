@@ -2,7 +2,7 @@
 # SPDX-FileContributor: 2022 Daniel <daniel.d.k.1994@gmail.com>
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.17.4)
 
 include(cmake/QtMajorVersion.cmake)
 

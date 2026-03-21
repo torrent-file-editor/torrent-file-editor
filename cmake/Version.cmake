@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2019, 2023, 2026 Ivan Romanov <drizt72@zoho.eu>
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.17.4)
 
 macro(GET_DATE)
   #
