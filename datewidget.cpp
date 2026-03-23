@@ -15,16 +15,20 @@
 // Always use format of current locale
 inline QString dateFormat()
 {
-    QString format =
-        QLocale().dateFormat(QLocale::ShortFormat) + QStringLiteral(" ") + QLocale().timeFormat(QLocale::LongFormat);
-    if (format.endsWith(QLatin1String(" t"))) {
-        format.chop(2);
-    }
+    QString dateFormat = QLocale().dateFormat(QLocale::ShortFormat);
 
     // Use the year as four digit number
-    if (format.count(QLatin1Char('y')) == 2) {
-        format.replace(QLatin1Char('y'), QLatin1String("yy"));
+    if (dateFormat.count(QLatin1Char('y')) == 2) {
+        dateFormat.replace(QLatin1Char('y'), QLatin1String("yy"));
     }
+
+    QString timeFormat = QLocale().timeFormat(QLocale::LongFormat);
+
+    // Avoid time zone
+    timeFormat = timeFormat.replace(QLatin1Char('t'), QString()).trimmed();
+
+    QString format = dateFormat + QStringLiteral(" ") + timeFormat;
+
     return format;
 }
 
