@@ -12,7 +12,7 @@ set(EXE_NAME "torrent-file-editor")
 set(CID "io.github.torrent_file_editor.Torrent-file-editor")
 
 # Fallback version. Will be used when compiling out of git repository.
-set(APP_VERSION "1.0.1")
+set(APP_VERSION "1.0.2")
 
 set(MACOSX_BUNDLE_EXECUTABLE_NAME "${PROJECT_NAME}")
 set(MACOSX_BUNDLE_INFO_STRING "Torrent File Editor \${APP_VERSION}. This program is licensed under the GNU GPL.")

@@ -15,11 +15,11 @@
 
   <description>
     <p>
-    Tool designed to create and edit torrent files. It shows the full contents of a
-    torrent files or any bencode files and allows changing any fields.
+    A tool designed to create and edit torrent files. It shows the full contents of a
+    torrent files or any bencode file and allows changing any fields.
     </p>
     <p>
-    The main features.
+    The main features:
     </p>
     <ul>
       <li>Create torrent files from scratch</li>
@@ -70,6 +70,19 @@
   <content_rating type="oars-1.0" />
 
   <releases>
+    <release version="1.0.2" date="2026-03-23">
+      <url>https://github.com/torrent-file-editor/torrent-file-editor/releases/tag/v1.0.2</url>
+      <issues>
+        <issue url="https://github.com/torrent-file-editor/torrent-file-editor/issues/168">#168</issue>
+      </issues>
+      <description>
+        <ul>
+          <li>Update translations</li>
+          <li>Fix drawing glitches on Raw tab</li>
+          <li>Redraw application icon</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.1" date="2026-03-12">
       <url>https://github.com/torrent-file-editor/torrent-file-editor/releases/tag/v1.0.1</url>
       <issues>
