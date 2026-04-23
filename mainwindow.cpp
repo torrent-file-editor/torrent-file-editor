@@ -576,6 +576,11 @@ void MainWindow::fillCoding()
     for (int mib : QTextCodec::availableMibs()) {
         QTextCodec *codec = QTextCodec::codecForMib(mib);
 
+        // In some very rare case availableMibs returns mibs for unavaiabled codes
+        if (!codec) {
+            continue;
+        }
+
         QString sortKey = QString::fromUtf8(codec->name().toUpper());
         int rank;
 
