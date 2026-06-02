@@ -665,6 +665,7 @@ void MainWindow::updateBencodeFromSimple()
     _bencodeModel->setCreatedBy(ui->leCreatedBy->text());
     _bencodeModel->setCreationTime(ui->dateCreated->dateTime());
     _bencodeModel->setPrivateTorrent(ui->chkPrivateTorrent->isChecked());
+    _bencodeModel->setSource(ui->leSource->text());
     ui->leHash->setText(_bencodeModel->hash());
     ui->leMagnetLink->setText(_bencodeModel->magnetLink());
 }
@@ -1208,6 +1209,7 @@ void MainWindow::updateSimple()
 
     ui->dateCreated->setDateTime(_bencodeModel->creationTime());
     ui->chkPrivateTorrent->setChecked(_bencodeModel->privateTorrent());
+    ui->leSource->setText(_bencodeModel->source());
     ui->pteTrackers->setPlainText(_bencodeModel->trackers().join(QStringLiteral("\n")));
     ui->leHash->setText(_bencodeModel->hash());
     ui->leMagnetLink->setText(_bencodeModel->magnetLink());

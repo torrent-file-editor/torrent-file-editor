@@ -299,6 +299,16 @@ SPDX-License-Identifier: GPL-3.0-or-later
               </property>
              </widget>
             </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="label_19">
+              <property name="text">
+               <string>Source</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="1">
+             <widget class="QLineEdit" name="leSource"/>
+            </item>
             <item row="12" column="0">
              <spacer name="verticalSpacer">
               <property name="orientation">
@@ -998,6 +1008,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
   <tabstop>leCreatedBy</tabstop>
   <tabstop>dateCreated</tabstop>
   <tabstop>chkPrivateTorrent</tabstop>
+  <tabstop>leSource</tabstop>
   <tabstop>pteComment</tabstop>
   <tabstop>pteTrackers</tabstop>
   <tabstop>btnAbout</tabstop>
@@ -1535,6 +1546,22 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <hint type="sourcelabel">
      <x>244</x>
      <y>306</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leSource</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateBencodeFromSimple()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>467</x>
+     <y>341</y>
     </hint>
     <hint type="destinationlabel">
      <x>4</x>

@@ -48,6 +48,9 @@ public:
     void setPrivateTorrent(bool privateTorrent);
     bool privateTorrent() const;
 
+    void setSource(const QString &source);
+    QString source() const;
+
     void setUrl(const QString &url);
     QString url() const;
 
