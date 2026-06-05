@@ -6,13 +6,13 @@
     <message>
       <location filename="../aboutdlg.ui" line="176"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author: Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;License: GNU General Public License v3.0 or later&lt;/p&gt;&lt;p&gt;Home Page: &lt;a href="https://torrent-file-editor.github.io"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;https://torrent-file-editor.github.io&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;a href="https://github.com/torrent-file-editor/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;https://github.com/torrent-file-editor/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Thanks to &lt;a href="https://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; for application icon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
+      <translatorcomment>HTML 태그는 건드리지 마세요. 그대로 두어야 합니다. 또한 편집기에서 자동 수정 기능이 비활성화되어 있는지 확인하세요. 앞뒤 공백에 주의하세요.</translatorcomment>
       <translation>&lt;html&gt;
 &lt;head/&gt;
 &lt;body&gt;
 &lt;p&gt;제작자: Ivan Romanov &lt;a href="mailto:drizt72@zoho.eu"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;drizt72@zoho.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;라이선스: GNU General Public License v3.0 이상입니다&lt;/p&gt;
-&lt;p&gt;홈페이지: &lt;a href="https://torrent-file-editor.github.io"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;https://torrent-file-editor.github.io&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;홈페이지:  &lt;a href="https://torrent-file-editor.github.io"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;https://torrent-file-editor.github.io&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;소스: &lt;a href="https://github.com/torrent-file-editor/torrent-file-editor"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;https://github.com/torrent-file-editor/torrent-file-editor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;고마우신 분 &lt;a href="https://rutracker.org/forum/profile.php?mode=viewprofile&amp;amp;u=8465051"&gt;&lt;span style=" text-decoration: underline; color:#0057ae;"&gt;ALEX Krays&lt;/span&gt;&lt;/a&gt; 응용 프로그램용 아이콘&lt;/p&gt;
 &lt;/body&gt;
@@ -21,7 +21,7 @@
     <message>
       <location filename="../aboutdlg.ui" line="44"/>
       <source>&lt;h3&gt;Coffee for Developer&lt;/h3&gt;</source>
-      <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
+      <translatorcomment>HTML 태그는 건드리지 마세요. 그대로 두어야 합니다. 또한 편집기에서 자동 수정 기능이 비활성화되어 있는지 확인하세요. 앞뒤 공백에 주의하세요.</translatorcomment>
       <translation>&lt;h3&gt;개발자를 위한 커피&lt;/h3&gt;</translation>
     </message>
     <message>
@@ -32,8 +32,8 @@
     <message>
       <location filename="../aboutdlg.cpp" line="148"/>
       <source>About %1</source>
-      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
-      <translation>%1 정보</translation>
+      <translatorcomment>%1은 건드리지 마세요. 그대로 두어야 합니다.</translatorcomment>
+      <translation>%1 정보 - 한국어 번역: 비너스걸</translation>
     </message>
     <message>
       <location filename="../aboutdlg.cpp" line="205"/>
@@ -43,7 +43,7 @@
     <message>
       <location filename="../aboutdlg.cpp" line="209"/>
       <source>New version &lt;a href="%2"&gt;%1&lt;/a&gt; has been detected</source>
-      <translatorcomment>Do not touch %1 it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
+      <translatorcomment>%1은 건드리지 마세요. 그대로 두어야 합니다. HTML 태그도 건드리지 마세요. 그대로 두어야 합니다. 또한 편집기에서 자동 수정 기능이 비활성화되어 있는지 확인하세요. 앞뒤 공백에 주의하세요.</translatorcomment>
       <translation>새 버전 &lt;a href="%2"&gt;%1&lt;/a&gt; 이(가) 검색되었습니다</translation>
     </message>
     <message>
@@ -165,7 +165,7 @@
     <message>
       <location filename="../mainwindow.ui" line="121"/>
       <source>Private torrent</source>
-      <translation>개인 토런트</translation>
+      <translation>비공개 토렌트</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="223"/>
@@ -255,7 +255,7 @@
     &lt;p style="margin-left: 20px"&gt;full file path matches Perl-like regular expression&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;</source>
-      <translatorcomment>Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
+      <translatorcomment>HTML 태그를 만지지 마세요. 그대로여야 합니다. 또한 편집기에서 자동 수정 기능이 비활성화되어 있는지 확인하세요. 후행 및 선행 공백에 주의하세요.</translatorcomment>
       <translation>&lt;html&gt;
   &lt;head/&gt;
   &lt;body&gt;
@@ -263,10 +263,10 @@
     &lt;p style="margin-left: 20px"&gt;확장자가 있는 파일 이름이 패턴과 정확히 일치합니다&lt;/p&gt;
     &lt;br/&gt;
     &lt;p&gt;&lt;b&gt;확장자&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;마지막 점 뒤의 기호는 패턴과 정확히 일치합니다. 예를 들어 'gz'의 경우 'gz'가 됩니다&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;마지막 점 뒤의 기호는 패턴과 정확히 일치합니다. 예를 들어 'archive.tar.gz'의 경우 'gz'가 됩니다&lt;/p&gt;
     &lt;br/&gt;
     &lt;p&gt;&lt;b&gt;와일드 카드&lt;/b&gt;&lt;/p&gt;
-    &lt;p style="margin-left: 20px"&gt;확장명이 있는 파일 이름이 파일 글로브링과 일치일치합니다, 여기서 '?'는 임의의 기호 중 하나이고 '*'는 임의의 기호 숫자입니다.&lt;/p&gt;
+    &lt;p style="margin-left: 20px"&gt;확장자기 있는 파일 이름이 파일 글로브링과 일치합니다, 여기서 '?'는 임의의 기호 중 하나이고 '*'는 임의의 기호 숫자입니다.&lt;/p&gt;
     &lt;br/&gt;
     &lt;p&gt;&lt;b&gt;정규 표현식&lt;/b&gt;&lt;/p&gt;
     &lt;p style="margin-left: 20px"&gt;전체 파일 경로가 Perl과 같은 정규식과 일치일치합니다&lt;/p&gt;
@@ -484,13 +484,13 @@
       <location filename="../mainwindow.cpp" line="454"/>
       <location filename="../mainwindow.cpp" line="1268"/>
       <source>BEncoded data is not valid</source>
-      <translation>Bencoded 데이터는 유효하지 않습니다</translation>
+      <translation>BEncoded 데이터는 유효하지 않습니다</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="725"/>
       <source>Path to files on the disk in not known. Torrent can be generated only from fully downloaded files.
 
-If you want to edit file list in the current torrent you need to set torrent root folder. The torrent root folder is a folder where all files can be located on the disk. Actual file path on the disk is torrent root folder with relative path from torrent file. If something files are missing then torrent can't be generated.
+현재 토렌트의 파일 목록을 편집하려면 토렌트 루트 폴더를 설정해야 합니다. 토렌트 루트 폴더는 디스크에서 모든 파일이 저장되는 폴더입니다. 디스크상의 실제 파일 경로는 토렌트 루트 폴더에서 토렌트 파일까지의 상대 경로입니다. 파일이 누락되면 토렌트를 생성할 수 없습니다.
 
 Do you want to set torrent root folder and try again?</source>
       <translation>디스크에 있는 파일의 경로를 알 수 없습니다. 토렌트는 완전히 다운로드한 파일에서만 생성할 수 있습니다.
@@ -533,7 +533,7 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../mainwindow.cpp" line="1243"/>
       <source>Error on %1 line: %2</source>
-      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
+      <translatorcomment>%1은 건드리지 마세요. 그대로 두어야 합니다.</translatorcomment>
       <translation>%1줄 오류: %2</translation>
     </message>
     <message>
@@ -559,9 +559,9 @@ Do you want to set torrent root folder and try again?</source>
     <message>
       <location filename="../mainwindow.cpp" line="1404"/>
       <source>TiB</source>
-      <translation>TiB
+      <translation>
 
-Tebibyte</translation>
+테비바이트</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1423"/>
@@ -576,7 +576,7 @@ Tebibyte</translation>
     <message>
       <location filename="../mainwindow.cpp" line="1425"/>
       <source>Save file "%1"?</source>
-      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
+      <translatorcomment>%1은 건드리지 마세요. 그대로 두어야 합니다.</translatorcomment>
       <translation>%1 파일을 저장하시겠습니까?</translation>
     </message>
   </context>
@@ -708,16 +708,18 @@ Tebibyte</translation>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="156"/>
       <source>%1 of %n match(es)</source>
-      <translatorcomment>Do not touch %1 it must be as is. Make translations for both singular and plural forms. </translatorcomment>
+      <translatorcomment>%1은 건드리지 마세요. 그대로 두어야 합니다. 단수형과 복수형 모두에 대한 번역을 작성하세요.</translatorcomment>
       <translation>
-        <numerusform>%n의 %1 일치</numerusform>
+        <numerusform>%1 of %n match</numerusform>
+        <numerusform>%n개 중 %1개 일치</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../searchdlg.cpp" line="213"/>
       <source>%n value(s) was(were) replaced</source>
-      <translatorcomment>Do not touch %n it must be as is. Do not touch HTML tags. It must be as is. Also check that autocorrection is disabled in your editor. Be care with trailing and leading spaces.</translatorcomment>
+      <translatorcomment>%n은 건드리지 마세요. 그대로 두어야 합니다. HTML 태그도 건드리지 마세요. 그대로 두어야 합니다. 또한 편집기에서 자동 수정 기능이 비활성화되어 있는지 확인하세요. 앞뒤 공백에 주의하세요.</translatorcomment>
       <translation>
+        <numerusform>%n value was replaced</numerusform>
         <numerusform>%n 값이 대체되었습니다</numerusform>
       </translation>
     </message>
@@ -760,7 +762,7 @@ Tebibyte</translation>
     <message>
       <location filename="../mainwindow.cpp" line="97"/>
       <source>Can't open %1</source>
-      <translatorcomment>Do not touch %1 it must be as is.</translatorcomment>
+      <translatorcomment>%1은 건드리지 마세요. 그대로 두어야 합니다.</translatorcomment>
       <translation>%1을(를) 열 수 없습니다</translation>
     </message>
     <message>
