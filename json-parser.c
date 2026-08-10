@@ -149,6 +149,14 @@ static int new_value (json_state * state,
             if (value->u.array.length == 0)
                break;
 
+            /* Division by a runtime length, not a compile-time constant, so this
+               remains a real check instead of folding to a compile-time truth on
+               platforms where length can never reach SIZE_MAX / sizeof(entry). */
+            if (sizeof (json_value *) > ((size_t) -1) / value->u.array.length)
+            {
+               return 0;
+            }
+
             if (! (value->u.array.values = (json_value **) json_alloc
                (state, value->u.array.length * sizeof (json_value *), 0)) )
             {
@@ -162,6 +170,11 @@ static int new_value (json_state * state,
 
             if (value->u.object.length == 0)
                break;
+
+            if (sizeof (*value->u.object.values) > ((size_t) -1) / value->u.object.length)
+            {
+               return 0;
+            }
 
             values_size = sizeof (*value->u.object.values) * value->u.object.length;
 
