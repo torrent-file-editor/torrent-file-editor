@@ -413,6 +413,12 @@ void MainWindow::open(const QString &fileName)
     _bencodeModel->setRaw(file.readAll());
     file.close();
 
+    QString torrentEncoding = _bencodeModel->encoding();
+    QTextCodec* pTextCodec = QTextCodec::codecForName(torrentEncoding.toUtf8());
+    if (nullptr != pTextCodec) {
+        _bencodeModel->setTextCodec(pTextCodec);
+    }
+
     updateTab(ui->tabWidget->currentIndex());
     _bencodeModel->resetModified();
     updateTitle();

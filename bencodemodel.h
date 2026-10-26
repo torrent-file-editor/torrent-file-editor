@@ -42,6 +42,8 @@ public:
     void setTextCodec(QTextCodec *textCodec);
     QTextCodec *textCodec() const;
 
+    QString encoding() const;
+
     void setName(const QString &name);
     QString name() const;
 

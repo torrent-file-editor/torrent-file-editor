@@ -111,6 +111,15 @@ QTextCodec *BencodeModel::textCodec() const
     return _textCodec;
 }
 
+QString BencodeModel::encoding() const
+{
+    if (_bencode && _bencode->child("encoding")) {
+        return toUnicode(_bencode->child("encoding")->string());
+    } else {
+        return QStringLiteral("UTF-8");
+    }
+}
+
 void BencodeModel::setName(const QString &name)
 {
     if (name.isEmpty() && _bencode && _bencode->child("info") && _bencode->child("info")->child("name")) {
